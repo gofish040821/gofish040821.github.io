@@ -1,0 +1,8 @@
+{
+  "name": "gofish-personal-homepage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gofish 的个人主页：数学、智能体与真实世界。",
+  "scripts": { "build": "node scripts/build.mjs", "preview": "node scripts/serve.mjs" },
+  "engines": { "node": ">=20" }
+}
