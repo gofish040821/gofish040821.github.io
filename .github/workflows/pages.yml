@@ -1,0 +1,74 @@
+name: Deploy Gofish homepage
+on:
+  push:
+    branches: [main]
+    paths:
+      - content.json
+      - src/**
+      - scripts/**
+      - dist/**
+  workflow_dispatch:
+    inputs:
+      initialize:
+        description: 'One-time import of the uploaded website source'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+jobs:
+  import:
+    if: github.event_name == 'workflow_dispatch' && inputs.initialize
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Import website source
+        shell: bash
+        run: |
+          set -euo pipefail
+          test ! -e scripts/build.mjs
+          echo '38e12505adf50af4080d0e13c90c2cfd9861d05ae20a2f2ec8f10f4a9fb4760c  site-source.zip' | sha256sum --check
+          unzip -q site-source.zip -x '.github/workflows/*'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm site-source.zip
+          git add .gitignore README.md content.json package.json src scripts dist
+          git commit -m 'Import complete Gofish homepage source and photos'
+          git push origin HEAD:main
+  deploy:
+    needs: import
+    if: always() && (needs.import.result == 'success' || needs.import.result == 'skipped')
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build
+        run: node scripts/build.mjs
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
