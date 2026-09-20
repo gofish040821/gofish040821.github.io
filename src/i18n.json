@@ -1,0 +1,623 @@
+{
+  "default": "en",
+  "languages": [
+    { "code": "zh", "label": "中文", "lang": "zh-CN", "dir": "ltr" },
+    { "code": "en", "label": "English", "lang": "en", "dir": "ltr" },
+    { "code": "fr", "label": "Français", "lang": "fr", "dir": "ltr" },
+    { "code": "de", "label": "Deutsch", "lang": "de", "dir": "ltr" },
+    { "code": "es", "label": "Español", "lang": "es", "dir": "ltr" },
+    { "code": "ar", "label": "العربية", "lang": "ar", "dir": "rtl" },
+    { "code": "ja", "label": "日本語", "lang": "ja", "dir": "ltr" },
+    { "code": "ko", "label": "한국어", "lang": "ko", "dir": "ltr" }
+  ],
+  "translations": {
+    "en": {
+      "strings": {
+        "metaTitle": "Gofish — Mathematics, Intelligence & Life",
+        "skipLink": "Skip to content",
+        "navAbout": "About",
+        "navResearch": "Research",
+        "navEducation": "Education",
+        "navLife": "Life",
+        "menuOpen": "Open menu",
+        "menuClose": "Close menu",
+        "brandHome": "Gofish home",
+        "heroHello": "Hi, I'm",
+        "heroCtaExplore": "Explore my interests",
+        "heroCtaLife": "See my life",
+        "aboutTitle": "About",
+        "aboutAside": "Someone who thinks seriously<br>and lives seriously too.",
+        "researchTitle": "What I'm curious about",
+        "researchNote": "These are the questions I hope to dig into — the starting point of this research journey.",
+        "educationTitle": "Education",
+        "educationAside": "Step by step,<br>thinking more deeply.",
+        "lifeTitle": "Also living fully",
+        "galleryHeading": "Places passed, moments kept",
+        "galleryHint": "Click a photo to open",
+        "galleryExpand": "Show all {n} photos",
+        "galleryCollapse": "Collapse gallery",
+        "closingCta": "Find me on GitHub",
+        "footerTag": "Stay curious, keep exploring.",
+        "footerUpdated": "Updated",
+        "backToTop": "Back to top",
+        "lightboxClose": "Close photo",
+        "lightboxPrev": "Previous photo",
+        "lightboxNext": "Next photo",
+        "langLabel": "Switch language",
+        "profileNote": "22 · Male · Notes of 2026",
+        "headline": "Understanding intelligence through math,<br>exploring the world through curiosity.",
+        "intro": "A master's student in mathematics, focused on Agent RSI and Physical AI.<br>I like to ask how intelligence learns — and to walk into real mountains and everyday life.",
+        "heroCaption": "Give my steps to the wild, and my curiosity to the world.",
+        "researchIntro": "From abstract reasoning toward intelligence that can learn, act, and keep improving.",
+        "lifeIntro": "Life has more than one coordinate system. I wander into mountains, sweat on the badminton court, and find small surprises in the kitchen and on screen.",
+        "closing": "Stay curious, grow slowly.",
+        "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas."
+      },
+      "content": {
+        "about": [
+          "Hi, I'm Gofish. I'm currently pursuing a master's in mathematics at Southern University of Science and Technology, after studying Mathematical Foundation Science at Dalian University of Technology. Mathematics is where I begin to understand problems, and AI keeps bringing me new ones.",
+          "What fascinates me most is how agents improve themselves through experience, and how intelligence can truly enter the physical world through perception and action. I hope to find my own research direction between solid mathematical thinking and concrete experiments.",
+          "Off screen, I love traveling, badminton, cooking, and movies. To me, studying a problem seriously and cooking a meal seriously are both worth the effort."
+        ],
+        "research": [
+          { "number": "01", "title": "Agent RSI", "subtitle": "Agents · Recursive self-improvement", "description": "I'm interested in how agents accumulate experience through action, feedback, and reflection, gradually improving their strategies and abilities. I also want to understand: how can we reliably measure such improvement?", "tags": ["Self-learning", "Feedback & reflection", "Capability evaluation"], "process": ["Act", "Feedback", "Reflect", "Improve"], "className": "agent" },
+          { "number": "02", "title": "Physical AI", "subtitle": "Perception · Action · The real world", "description": "I'm curious about the questions that connect digital intelligence and the physical world: how to understand environments, build world models, and turn reasoning into reliable action?", "tags": ["Embodied intelligence", "World models", "Perception & decision"], "process": ["Perceive", "Understand", "Decide", "Act"], "className": "physical" }
+        ],
+        "education": [
+          { "dates": "2026 — 2029", "degree": "Mathematics · Master's", "school": "Southern University of Science and Technology", "english": "Southern University of Science and Technology", "note": "Enrolled · Expected to graduate in 2029", "current": true },
+          { "dates": "2022 — 2026", "degree": "Mathematical Foundation Science · Bachelor's", "school": "Dalian University of Technology", "english": "Dalian University of Technology", "note": "Between mathematics and physics, building the foundation for understanding the world.", "current": false }
+        ],
+        "hobbies": [
+          { "symbol": "↗", "title": "Badminton", "description": "Swing, run, sweat — a breath of fresh air for the mind." },
+          { "symbol": "⌁", "title": "Travel & wandering", "description": "Leaving familiar routes, collecting different scenery." },
+          { "symbol": "◡", "title": "Cooking", "description": "Taking three meals a day seriously, in the warmth of the kitchen." },
+          { "symbol": "▷", "title": "Film & stories", "description": "Living another life through a screen." }
+        ],
+        "gallery": [
+          { "image": "mountains", "title": "Among the mountains", "caption": "Look up at the mountains, and see a bigger world.", "alt": "Gofish sitting on a rock with mountain ranges behind", "position": "45% 60%" },
+          { "image": "blue-lake", "title": "Blue by the lake", "caption": "Slow your steps down a little.", "alt": "Gofish with a camera standing in front of a blue lake", "position": "50% 56%" },
+          { "image": "rooftops", "title": "Another side of the city", "caption": "Above the rooftops, a different view of everyday life.", "alt": "Gofish on a city rooftop terrace with classical architecture in the distance", "position": "52% 50%" },
+          { "image": "green-lake", "title": "Green and mountain breeze", "caption": "Leave yourself a little time close to nature.", "alt": "Gofish standing by a wooden fence beside a green mountain lake", "position": "50% 62%" },
+          { "image": "snow", "title": "A sunny day in the snow", "caption": "Sunshine, snow, and a journey worth remembering.", "alt": "Gofish on a snowy mountain holding a Jungfrau souvenir flag", "position": "50% 68%" },
+          { "image": "museum", "title": "Meeting art", "caption": "In the gallery, a passing glance at time.", "alt": "Gofish taking a selfie inside a museum hall", "position": "45% 50%" },
+          { "image": "evening", "title": "Waiting for sunset", "caption": "The city lights come on, one by one.", "alt": "Gofish posing with a city skyline at dusk", "position": "40% 55%" },
+          { "image": "colosseum", "title": "Walking into history", "caption": "Along the old stone walls, feeling the scale of time.", "alt": "Gofish taking a selfie outside the ancient Roman Colosseum", "position": "50% 57%" },
+          { "image": "summit", "title": "Clouds and distance", "caption": "The mountain wind passes, and the mood opens up.", "alt": "Gofish wearing sunglasses on a mountain viewpoint", "position": "50% 45%" },
+          { "image": "aircraft", "title": "Curious about flight", "caption": "Some things always make you stop and stare.", "alt": "Gofish standing in front of an aircraft on outdoor display", "position": "50% 50%" }
+        ]
+      }
+    },
+    "zh": {
+      "strings": {
+        "metaTitle": "Gofish — 数学、智能与生活",
+        "skipLink": "跳到主要内容",
+        "navAbout": "关于我",
+        "navResearch": "研究兴趣",
+        "navEducation": "求学之路",
+        "navLife": "生活切片",
+        "menuOpen": "展开导航",
+        "menuClose": "收起导航",
+        "brandHome": "Gofish 首页",
+        "heroHello": "你好，我是",
+        "heroCtaExplore": "探索我的兴趣",
+        "heroCtaLife": "去看看生活",
+        "aboutTitle": "关于我",
+        "aboutAside": "一个认真思考，<br>也认真生活的人。",
+        "researchTitle": "我正在好奇的事",
+        "researchNote": "这些是我希望深入探索的问题，也是这段研究旅程的起点。",
+        "educationTitle": "求学之路",
+        "educationAside": "一步一步，<br>把问题想得更深。",
+        "lifeTitle": "也在认真生活",
+        "galleryHeading": "一些路过，也一些记住",
+        "galleryHint": "点击照片，展开片刻",
+        "galleryExpand": "展开全部 {n} 张照片",
+        "galleryCollapse": "收起相册",
+        "closingCta": "在 GitHub 找到我",
+        "footerTag": "保持热爱，保持探索。",
+        "footerUpdated": "更新于",
+        "backToTop": "回到顶部",
+        "lightboxClose": "关闭照片",
+        "lightboxPrev": "上一张照片",
+        "lightboxNext": "下一张照片",
+        "langLabel": "切换语言",
+        "profileNote": "22 岁 · 男生 · 2026 年记",
+        "headline": "以数学理解智能，<br>以好奇探索世界。",
+        "intro": "数学专业硕士生，关注 Agent RSI 与 Physical AI。<br>喜欢追问智能如何学习，也喜欢走进真实的山川与日常。",
+        "heroCaption": "把脚步交给山野，把好奇留给世界。",
+        "researchIntro": "从抽象的推理出发，走向能够学习、行动与持续改进的智能。",
+        "lifeIntro": "生活不只有一个坐标系。去山野里走走，在球场上流汗，也在厨房和电影里寻找小小的惊喜。",
+        "closing": "保持好奇，慢慢生长。",
+        "closingText": "关于数学、AI，或者下一段旅程，期待遇见有趣的想法。"
+      },
+      "content": {
+        "about": [
+          "你好，我是 Gofish。目前在南方科技大学攻读数学硕士，本科就读于大连理工大学数理基础科学专业。数学是我理解问题的起点，而人工智能让我不断遇见新的问题。",
+          "我尤其感兴趣的是：智能体如何从经验中改进自己，以及智能如何通过感知与行动，真正走进物理世界。希望在扎实的数学思考和具体的实验之间，找到自己的研究方向。",
+          "屏幕之外，我喜欢旅行、打羽毛球、炒菜做饭和看电影。对我来说，认真研究一个问题，和认真做好一顿饭，都值得投入。"
+        ],
+        "research": [
+          { "number": "01", "title": "Agent RSI", "subtitle": "智能体 · 递归自我改进", "description": "我关注智能体如何在行动、反馈与反思中积累经验，逐步改进自己的策略与能力。也希望理解：我们该如何可靠地衡量这种改进？", "tags": ["自主学习", "反馈与反思", "能力评估"], "process": ["行动", "反馈", "反思", "改进"], "className": "agent" },
+          { "number": "02", "title": "Physical AI", "subtitle": "感知 · 行动 · 真实世界", "description": "我对连接数字智能与物理世界的问题充满好奇：如何理解环境、建立世界模型，并把推理转化为可靠的行动？", "tags": ["具身智能", "世界模型", "感知与决策"], "process": ["感知", "理解", "决策", "行动"], "className": "physical" }
+        ],
+        "education": [
+          { "dates": "2026 — 2029", "degree": "数学 · 硕士", "school": "南方科技大学", "english": "Southern University of Science and Technology", "note": "在读 · 预计 2029 年毕业", "current": true },
+          { "dates": "2022 — 2026", "degree": "数理基础科学 · 本科", "school": "大连理工大学", "english": "Dalian University of Technology", "note": "在数学与物理之间，建立理解世界的基础。", "current": false }
+        ],
+        "hobbies": [
+          { "symbol": "↗", "title": "羽毛球", "description": "挥拍、跑动、流汗，给思绪换口气。" },
+          { "symbol": "⌁", "title": "旅行与漫游", "description": "离开熟悉的路线，收藏不同的风景。" },
+          { "symbol": "◡", "title": "炒菜与做饭", "description": "在烟火气里，认真对待一日三餐。" },
+          { "symbol": "▷", "title": "电影与故事", "description": "借一块银幕，体验另一种人生。" }
+        ],
+        "gallery": [
+          { "image": "mountains", "title": "山野之间", "caption": "抬头看山，也看见更大的世界。", "alt": "Gofish 坐在岩石上，身后是连绵的山峰", "position": "45% 60%" },
+          { "image": "blue-lake", "title": "湖畔的蓝", "caption": "把脚步放慢一点。", "alt": "Gofish 背着相机站在蓝色湖水前", "position": "50% 56%" },
+          { "image": "rooftops", "title": "城市的另一面", "caption": "屋顶之上，换个角度看日常。", "alt": "Gofish 在城市屋顶露台上，远处是古典建筑", "position": "52% 50%" },
+          { "image": "green-lake", "title": "绿意与山风", "caption": "给自己留一点亲近自然的时间。", "alt": "Gofish 站在绿色山湖边的木栏旁", "position": "50% 62%" },
+          { "image": "snow", "title": "雪山晴日", "caption": "阳光、雪地和一次值得记住的远行。", "alt": "Gofish 在雪山上手持少女峰纪念旗", "position": "50% 68%" },
+          { "image": "museum", "title": "与艺术相遇", "caption": "在展厅里，和时间打个照面。", "alt": "Gofish 在博物馆展厅内的自拍", "position": "45% 50%" },
+          { "image": "evening", "title": "等一场日落", "caption": "城市的灯，一盏一盏亮起来。", "alt": "Gofish 与暮色中的城市天际线合影", "position": "40% 55%" },
+          { "image": "colosseum", "title": "走进历史", "caption": "沿着古老的石墙，感受时间的尺度。", "alt": "Gofish 在古罗马斗兽场外的自拍", "position": "50% 57%" },
+          { "image": "summit", "title": "云与远方", "caption": "山风经过，心情也变得开阔。", "alt": "Gofish 戴着墨镜站在山间观景台上", "position": "50% 45%" },
+          { "image": "aircraft", "title": "关于飞行的好奇", "caption": "总有一些事物，让人忍不住驻足。", "alt": "Gofish 站在户外展出的飞机前", "position": "50% 50%" }
+        ]
+      }
+    },
+    "fr": {
+      "strings": {
+        "metaTitle": "Gofish — Mathématiques, intelligence et vie",
+        "skipLink": "Aller au contenu",
+        "navAbout": "À propos",
+        "navResearch": "Recherche",
+        "navEducation": "Formation",
+        "navLife": "Vie",
+        "menuOpen": "Ouvrir le menu",
+        "menuClose": "Fermer le menu",
+        "brandHome": "Accueil Gofish",
+        "heroHello": "Bonjour, je suis",
+        "heroCtaExplore": "Découvrir mes intérêts",
+        "heroCtaLife": "Voir ma vie",
+        "aboutTitle": "À propos",
+        "aboutAside": "Quelqu'un qui pense sérieusement<br>et qui vit sérieusement aussi.",
+        "researchTitle": "Ce qui m'intrigue",
+        "researchNote": "Voici les questions que j'espère approfondir — le point de départ de ce parcours de recherche.",
+        "educationTitle": "Formation",
+        "educationAside": "Pas à pas,<br>penser plus loin.",
+        "lifeTitle": "Et vivre pleinement",
+        "galleryHeading": "Des lieux traversés, des instants gardés",
+        "galleryHint": "Cliquez sur une photo pour l'ouvrir",
+        "galleryExpand": "Afficher les {n} photos",
+        "galleryCollapse": "Réduire la galerie",
+        "closingCta": "Me trouver sur GitHub",
+        "footerTag": "Rester curieux, continuer d'explorer.",
+        "footerUpdated": "Mis à jour",
+        "backToTop": "Haut de page",
+        "lightboxClose": "Fermer la photo",
+        "lightboxPrev": "Photo précédente",
+        "lightboxNext": "Photo suivante",
+        "langLabel": "Changer de langue",
+        "profileNote": "22 ans · Homme · Notes de 2026",
+        "headline": "Comprendre l'intelligence par les maths,<br>explorer le monde par la curiosité.",
+        "intro": "Étudiant en master de mathématiques, passionné par l'Agent RSI et la Physical AI.<br>J'aime me demander comment l'intelligence apprend — et partir vers de vraies montagnes et le quotidien.",
+        "heroCaption": "Mes pas vers la montagne, ma curiosité vers le monde.",
+        "researchIntro": "Du raisonnement abstrait vers une intelligence qui apprend, agit et s'améliore.",
+        "lifeIntro": "La vie a plus d'un système de coordonnées. Je parcours les montagnes, je transpire sur le terrain de badminton et je trouve de petites surprises en cuisine comme à l'écran.",
+        "closing": "Rester curieux, grandir lentement.",
+        "closingText": "Sur les mathématiques, l'IA ou le prochain voyage — j'ai hâte d'échanger des idées intéressantes."
+      },
+      "content": {
+        "about": [
+          "Bonjour, je suis Gofish. Je prépare actuellement un master de mathématiques à la Southern University of Science and Technology, après une licence en sciences mathématiques fondamentales à la Dalian University of Technology. Les mathématiques sont mon point de départ pour comprendre les problèmes, et l'IA m'en apporte sans cesse de nouveaux.",
+          "Ce qui me fascine le plus, c'est comment les agents s'améliorent par l'expérience, et comment l'intelligence peut vraiment entrer dans le monde physique par la perception et l'action. J'espère trouver ma propre direction entre une pensée mathématique solide et des expériences concrètes.",
+          "Hors écran, j'aime voyager, le badminton, cuisiner et le cinéma. Pour moi, étudier sérieusement un problème et cuisiner sérieusement un repas méritent tous deux de l'attention."
+        ],
+        "research": [
+          { "number": "01", "title": "Agent RSI", "subtitle": "Agents · Auto-amélioration récursive", "description": "Je m'intéresse à la façon dont les agents accumulent de l'expérience par l'action, le retour et la réflexion, améliorant peu à peu leurs stratégies et leurs capacités. Je veux aussi comprendre : comment mesurer fiablement cette amélioration ?", "tags": ["Auto-apprentissage", "Retour & réflexion", "Évaluation des capacités"], "process": ["Agir", "Retour", "Réfléchir", "S'améliorer"], "className": "agent" },
+          { "number": "02", "title": "Physical AI", "subtitle": "Perception · Action · Le monde réel", "description": "Je m'interroge sur ce qui relie l'intelligence numérique au monde physique : comprendre l'environnement, construire des modèles du monde et transformer le raisonnement en action fiable.", "tags": ["Intelligence incarnée", "Modèles du monde", "Perception & décision"], "process": ["Percevoir", "Comprendre", "Décider", "Agir"], "className": "physical" }
+        ],
+        "education": [
+          { "dates": "2026 — 2029", "degree": "Mathématiques · Master", "school": "Southern University of Science and Technology", "english": "Southern University of Science and Technology", "note": "En cours · Diplôme prévu en 2029", "current": true },
+          { "dates": "2022 — 2026", "degree": "Sciences mathématiques fondamentales · Licence", "school": "Dalian University of Technology", "english": "Dalian University of Technology", "note": "Entre mathématiques et physique, poser les fondations pour comprendre le monde.", "current": false }
+        ],
+        "hobbies": [
+          { "symbol": "↗", "title": "Badminton", "description": "Frapper, courir, transpirer — une bouffée d'air pour l'esprit." },
+          { "symbol": "⌁", "title": "Voyages & flâneries", "description": "Quitter les routes familières, collectionner d'autres paysages." },
+          { "symbol": "◡", "title": "Cuisine", "description": "Prendre au sérieux les repas, dans la chaleur de la cuisine." },
+          { "symbol": "▷", "title": "Cinéma & histoires", "description": "Vivre une autre vie à travers un écran." }
+        ],
+        "gallery": [
+          { "image": "mountains", "title": "Au cœur des montagnes", "caption": "Lever les yeux vers les montagnes, et voir un monde plus grand.", "alt": "Gofish assis sur un rocher, des chaînes de montagnes derrière lui", "position": "45% 60%" },
+          { "image": "blue-lake", "title": "Bleu au bord du lac", "caption": "Ralentir un peu le pas.", "alt": "Gofish avec un appareil photo devant un lac bleu", "position": "50% 56%" },
+          { "image": "rooftops", "title": "Une autre face de la ville", "caption": "Au-dessus des toits, un autre regard sur le quotidien.", "alt": "Gofish sur une terrasse de toit avec une architecture classique au loin", "position": "52% 50%" },
+          { "image": "green-lake", "title": "Verdure et vent de montagne", "caption": "S'accorder un peu de temps près de la nature.", "alt": "Gofish debout près d'une barrière en bois au bord d'un lac de montagne", "position": "50% 62%" },
+          { "image": "snow", "title": "Journée ensoleillée sur la neige", "caption": "Soleil, neige et un voyage à retenir.", "alt": "Gofish sur une montagne enneigée tenant un drapeau souvenir de la Jungfrau", "position": "50% 68%" },
+          { "image": "museum", "title": "À la rencontre de l'art", "caption": "Dans la galerie, un regard échangé avec le temps.", "alt": "Gofish prenant un selfie dans une salle de musée", "position": "45% 50%" },
+          { "image": "evening", "title": "Attendre le coucher du soleil", "caption": "Les lumières de la ville s'allument, une à une.", "alt": "Gofish posant avec une skyline urbaine au crépuscule", "position": "40% 55%" },
+          { "image": "colosseum", "title": "Entrer dans l'histoire", "caption": "Le long des vieux murs de pierre, ressentir l'échelle du temps.", "alt": "Gofish prenant un selfie devant l'ancien Colisée romain", "position": "50% 57%" },
+          { "image": "summit", "title": "Nuages et lointain", "caption": "Le vent de montagne passe, et l'humeur s'éclaircit.", "alt": "Gofish portant des lunettes de soleil sur un belvédère de montagne", "position": "50% 45%" },
+          { "image": "aircraft", "title": "Curieux de vol", "caption": "Certaines choses donnent toujours envie de s'arrêter.", "alt": "Gofish debout devant un avion exposé en plein air", "position": "50% 50%" }
+        ]
+      }
+    },
+    "de": {
+      "strings": {
+        "metaTitle": "Gofish — Mathematik, Intelligenz & Leben",
+        "skipLink": "Zum Hauptinhalt springen",
+        "navAbout": "Über mich",
+        "navResearch": "Forschung",
+        "navEducation": "Werdegang",
+        "navLife": "Leben",
+        "menuOpen": "Menü öffnen",
+        "menuClose": "Menü schließen",
+        "brandHome": "Gofish Startseite",
+        "heroHello": "Hallo, ich bin",
+        "heroCtaExplore": "Meine Interessen entdecken",
+        "heroCtaLife": "Mein Leben ansehen",
+        "aboutTitle": "Über mich",
+        "aboutAside": "Jemand, der ernsthaft denkt<br>und ernsthaft lebt.",
+        "researchTitle": "Was mich neugierig macht",
+        "researchNote": "Das sind die Fragen, die ich vertiefen möchte — und der Ausgangspunkt dieser Forschungsreise.",
+        "educationTitle": "Werdegang",
+        "educationAside": "Schritt für Schritt,<br>tiefer denken.",
+        "lifeTitle": "Auch wirklich leben",
+        "galleryHeading": "Orte, die vorbeizogen, Momente, die bleiben",
+        "galleryHint": "Foto anklicken, um es zu öffnen",
+        "galleryExpand": "Alle {n} Fotos anzeigen",
+        "galleryCollapse": "Galerie einklappen",
+        "closingCta": "Finde mich auf GitHub",
+        "footerTag": "Neugierig bleiben, weiter erkunden.",
+        "footerUpdated": "Aktualisiert",
+        "backToTop": "Nach oben",
+        "lightboxClose": "Foto schließen",
+        "lightboxPrev": "Vorheriges Foto",
+        "lightboxNext": "Nächstes Foto",
+        "langLabel": "Sprache wechseln",
+        "profileNote": "22 · Männlich · Stand 2026",
+        "headline": "Intelligenz durch Mathematik verstehen,<br>die Welt mit Neugier erkunden.",
+        "intro": "Masterstudent der Mathematik, forscht zu Agent RSI und Physical AI.<br>Ich frage gern, wie Intelligenz lernt, und gehe gern hinaus in echte Berge und den Alltag.",
+        "heroCaption": "Meine Schritte der Wildnis, meine Neugier der Welt.",
+        "researchIntro": "Vom abstrakten Denken hin zu Intelligenz, die lernt, handelt und sich stetig verbessert.",
+        "lifeIntro": "Das Leben hat mehr als ein Koordinatensystem. Ich wandere in den Bergen, schwitze auf dem Badmintonplatz und finde kleine Überraschungen in Küche und Kino.",
+        "closing": "Neugierig bleiben, langsam wachsen.",
+        "closingText": "Über Mathematik, KI oder die nächste Reise — ich freue mich auf interessante Ideen."
+      },
+      "content": {
+        "about": [
+          "Hallo, ich bin Gofish. Ich studiere gerade im Master Mathematik an der Southern University of Science and Technology, nach einem Bachelor in Mathematik und Physik (Grundlagenwissenschaften) an der Dalian University of Technology. Mathematik ist mein Ausgangspunkt, um Probleme zu verstehen, und KI bringt mir immer wieder neue.",
+          "Am meisten interessiert mich: Wie sich Agenten durch Erfahrung selbst verbessern und wie Intelligenz durch Wahrnehmung und Handeln wirklich in die physische Welt eintreten kann. Ich hoffe, meine eigene Forschungsrichtung zwischen solidem mathematischem Denken und konkreten Experimenten zu finden.",
+          "Abseits des Bildschirms mag ich Reisen, Badminton, Kochen und Filme. Für mich lohnt es sich gleichermaßen, ein Problem ernsthaft zu untersuchen wie eine Mahlzeit ernsthaft zu kochen."
+        ],
+        "research": [
+          { "number": "01", "title": "Agent RSI", "subtitle": "Agenten · Rekursive Selbstverbesserung", "description": "Mich interessiert, wie Agenten durch Handeln, Feedback und Reflexion Erfahrung sammeln und ihre Strategien und Fähigkeiten nach und nach verbessern. Und ich möchte verstehen: Wie lässt sich diese Verbesserung zuverlässig messen?", "tags": ["Autonomes Lernen", "Feedback & Reflexion", "Fähigkeitsbewertung"], "process": ["Handeln", "Feedback", "Reflektieren", "Verbessern"], "className": "agent" },
+          { "number": "02", "title": "Physical AI", "subtitle": "Wahrnehmung · Handeln · Echte Welt", "description": "Mich beschäftigen die Fragen an der Schnittstelle von digitaler Intelligenz und physischer Welt: Wie verstehen wir Umgebungen, bauen Weltmodelle und verwandeln Denken in verlässliches Handeln?", "tags": ["Verkörperte Intelligenz", "Weltmodelle", "Wahrnehmung & Entscheidung"], "process": ["Wahrnehmen", "Verstehen", "Entscheiden", "Handeln"], "className": "physical" }
+        ],
+        "education": [
+          { "dates": "2026 — 2029", "degree": "Mathematik · Master", "school": "Southern University of Science and Technology", "english": "Southern University of Science and Technology", "note": "Laufend · Abschluss voraussichtlich 2029", "current": true },
+          { "dates": "2022 — 2026", "degree": "Mathematik & Physik (Grundlagen) · Bachelor", "school": "Dalian University of Technology", "english": "Dalian University of Technology", "note": "Zwischen Mathematik und Physik das Fundament legen, um die Welt zu verstehen.", "current": false }
+        ],
+        "hobbies": [
+          { "symbol": "↗", "title": "Badminton", "description": "Schwingen, bewegen, schwitzen — eine Atempause für den Kopf." },
+          { "symbol": "⌁", "title": "Reisen & Streifzüge", "description": "Vertraute Wege verlassen, andere Landschaften sammeln." },
+          { "symbol": "◡", "title": "Kochen", "description": "Im Dampf der Küche die drei Mahlzeiten des Tages ernst nehmen." },
+          { "symbol": "▷", "title": "Filme & Geschichten", "description": "Auf einer Leinwand ein anderes Leben leben." }
+        ],
+        "gallery": [
+          { "image": "mountains", "title": "Zwischen den Bergen", "caption": "Blick zu den Gipfeln, und die Welt wird größer.", "alt": "Gofish sitzt auf einem Felsen, dahinter endlose Gipfel", "position": "45% 60%" },
+          { "image": "blue-lake", "title": "Blau am See", "caption": "Den Schritt ein wenig verlangsamen.", "alt": "Gofish mit Kamera vor einem blauen See", "position": "50% 56%" },
+          { "image": "rooftops", "title": "Die andere Seite der Stadt", "caption": "Über den Dächern den Alltag aus neuem Winkel sehen.", "alt": "Gofish auf einer Dachterrasse, in der Ferne klassische Bauten", "position": "52% 50%" },
+          { "image": "green-lake", "title": "Grün und Bergwind", "caption": "Sich selbst etwas Zeit in der Natur gönnen.", "alt": "Gofish an einem Holzgeländer an einem grünen Bergsee", "position": "50% 62%" },
+          { "image": "snow", "title": "Schnee und Sonne", "caption": "Sonne, Schnee und eine Reise zum Erinnern.", "alt": "Gofish im Schnee mit einer Jungfrau-Andenkenfahne", "position": "50% 68%" },
+          { "image": "museum", "title": "Begegnung mit Kunst", "caption": "In der Ausstellung der Zeit begegnen.", "alt": "Gofish macht ein Selfie in einem Museumssaal", "position": "45% 50%" },
+          { "image": "evening", "title": "Auf den Sonnenuntergang warten", "caption": "Die Lichter der Stadt gehen eine nach der anderen an.", "alt": "Gofish mit der Stadtsilhouette in der Dämmerung", "position": "40% 55%" },
+          { "image": "colosseum", "title": "In die Geschichte eintreten", "caption": "Entlang der alten Mauern das Maß der Zeit spüren.", "alt": "Gofish macht ein Selfie vor dem Kolosseum in Rom", "position": "50% 57%" },
+          { "image": "summit", "title": "Wolken und Ferne", "caption": "Der Bergwind zieht vorbei, und die Stimmung weitet sich.", "alt": "Gofish mit Sonnenbrille auf einer Bergaussichtsplattform", "position": "50% 45%" },
+          { "image": "aircraft", "title": "Neugier aufs Fliegen", "caption": "Manche Dinge lassen einen innehalten.", "alt": "Gofish vor einem im Freien ausgestellten Flugzeug", "position": "50% 50%" }
+        ]
+      }
+    },
+    "es": {
+      "strings": {
+        "metaTitle": "Gofish — Matemáticas, inteligencia y vida",
+        "skipLink": "Ir al contenido",
+        "navAbout": "Sobre mí",
+        "navResearch": "Investigación",
+        "navEducation": "Formación",
+        "navLife": "Vida",
+        "menuOpen": "Abrir menú",
+        "menuClose": "Cerrar menú",
+        "brandHome": "Inicio de Gofish",
+        "heroHello": "Hola, soy",
+        "heroCtaExplore": "Explorar mis intereses",
+        "heroCtaLife": "Ver mi vida",
+        "aboutTitle": "Sobre mí",
+        "aboutAside": "Alguien que piensa en serio<br>y también vive en serio.",
+        "researchTitle": "Lo que me intriga",
+        "researchNote": "Estas son las preguntas en las que espero profundizar: el punto de partida de este camino de investigación.",
+        "educationTitle": "Formación",
+        "educationAside": "Paso a paso,<br>pensando más hondo.",
+        "lifeTitle": "Y viviendo a pleno",
+        "galleryHeading": "Lugares recorridos, momentos guardados",
+        "galleryHint": "Haz clic en una foto para abrirla",
+        "galleryExpand": "Mostrar las {n} fotos",
+        "galleryCollapse": "Contraer galería",
+        "closingCta": "Encuéntrame en GitHub",
+        "footerTag": "Sigue con curiosidad, sigue explorando.",
+        "footerUpdated": "Actualizado",
+        "backToTop": "Volver arriba",
+        "lightboxClose": "Cerrar foto",
+        "lightboxPrev": "Foto anterior",
+        "lightboxNext": "Foto siguiente",
+        "langLabel": "Cambiar idioma",
+        "profileNote": "22 años · Hombre · Notas de 2026",
+        "headline": "Entender la inteligencia con matemáticas,<br>explorar el mundo con curiosidad.",
+        "intro": "Estudiante de máster en matemáticas, centrado en Agent RSI y Physical AI.<br>Me gusta preguntarme cómo aprende la inteligencia, y caminar por montañas reales y por la vida cotidiana.",
+        "heroCaption": "Mis pasos a la montaña, mi curiosidad al mundo.",
+        "researchIntro": "Del razonamiento abstracto hacia una inteligencia que aprende, actúa y sigue mejorando.",
+        "lifeIntro": "La vida tiene más de un sistema de coordenadas. Recorro montañas, sudo en la pista de bádminton y encuentro pequeñas sorpresas en la cocina y en la pantalla.",
+        "closing": "Sigue con curiosidad, crece despacio.",
+        "closingText": "Sobre matemáticas, IA o el próximo viaje, espero encontrar ideas interesantes."
+      },
+      "content": {
+        "about": [
+          "Hola, soy Gofish. Actualmente curso un máster en matemáticas en la Southern University of Science and Technology, tras estudiar Ciencias de Base Matemática en la Dalian University of Technology. Las matemáticas son mi punto de partida para entender los problemas, y la IA no deja de traerme otros nuevos.",
+          "Lo que más me fascina es cómo los agentes se mejoran a sí mismos a través de la experiencia, y cómo la inteligencia puede entrar de verdad en el mundo físico mediante la percepción y la acción. Espero encontrar mi propia dirección entre un pensamiento matemático sólido y experimentos concretos.",
+          "Fuera de la pantalla, me encantan los viajes, el bádminton, cocinar y el cine. Para mí, estudiar un problema en serio y cocinar una comida en serio merecen ambas la pena."
+        ],
+        "research": [
+          { "number": "01", "title": "Agent RSI", "subtitle": "Agentes · Automejora recursiva", "description": "Me interesa cómo los agentes acumulan experiencia mediante la acción, la retroalimentación y la reflexión, mejorando poco a poco sus estrategias y capacidades. También quiero entender: ¿cómo medir esa mejora de forma fiable?", "tags": ["Autoaprendizaje", "Retroalimentación y reflexión", "Evaluación de capacidades"], "process": ["Actuar", "Retroalimentar", "Reflexionar", "Mejorar"], "className": "agent" },
+          { "number": "02", "title": "Physical AI", "subtitle": "Percepción · Acción · El mundo real", "description": "Me intrigan las preguntas que unen la inteligencia digital y el mundo físico: ¿cómo entender el entorno, construir modelos del mundo y convertir el razonamiento en acción fiable?", "tags": ["Inteligencia encarnada", "Modelos del mundo", "Percepción y decisión"], "process": ["Percibir", "Entender", "Decidir", "Actuar"], "className": "physical" }
+        ],
+        "education": [
+          { "dates": "2026 — 2029", "degree": "Matemáticas · Máster", "school": "Southern University of Science and Technology", "english": "Southern University of Science and Technology", "note": "Cursando · Graduación prevista en 2029", "current": true },
+          { "dates": "2022 — 2026", "degree": "Ciencias de Base Matemática · Grado", "school": "Dalian University of Technology", "english": "Dalian University of Technology", "note": "Entre las matemáticas y la física, construyendo las bases para entender el mundo.", "current": false }
+        ],
+        "hobbies": [
+          { "symbol": "↗", "title": "Bádminton", "description": "Golpear, correr, sudar: un respiro para la mente." },
+          { "symbol": "⌁", "title": "Viajes y paseos", "description": "Dejar rutas conocidas y coleccionar otros paisajes." },
+          { "symbol": "◡", "title": "Cocinar", "description": "Tomarse en serio las comidas, en el calor de la cocina." },
+          { "symbol": "▷", "title": "Cine e historias", "description": "Vivir otra vida a través de una pantalla." }
+        ],
+        "gallery": [
+          { "image": "mountains", "title": "Entre montañas", "caption": "Mira hacia las montañas y verás un mundo más grande.", "alt": "Gofish sentado en una roca con cordilleras detrás", "position": "45% 60%" },
+          { "image": "blue-lake", "title": "Azul junto al lago", "caption": "Afloja un poco el paso.", "alt": "Gofish con una cámara frente a un lago azul", "position": "50% 56%" },
+          { "image": "rooftops", "title": "Otra cara de la ciudad", "caption": "Sobre los tejados, otra mirada a lo cotidiano.", "alt": "Gofish en una azotea de la ciudad con arquitectura clásica a lo lejos", "position": "52% 50%" },
+          { "image": "green-lake", "title": "Verde y brisa de montaña", "caption": "Regálate un poco de tiempo cerca de la naturaleza.", "alt": "Gofish de pie junto a una valla de madera en un lago verde de montaña", "position": "50% 62%" },
+          { "image": "snow", "title": "Día soleado en la nieve", "caption": "Sol, nieve y un viaje digno de recordar.", "alt": "Gofish en una montaña nevada con una bandera de recuerdo de Jungfrau", "position": "50% 68%" },
+          { "image": "museum", "title": "Encuentro con el arte", "caption": "En la sala, una mirada fugaz al tiempo.", "alt": "Gofish haciéndose un selfi en una sala de museo", "position": "45% 50%" },
+          { "image": "evening", "title": "Esperando el atardecer", "caption": "Las luces de la ciudad se encienden una a una.", "alt": "Gofish posando con el horizonte de la ciudad al anochecer", "position": "40% 55%" },
+          { "image": "colosseum", "title": "Entrando en la historia", "caption": "Junto a los viejos muros de piedra, sintiendo la escala del tiempo.", "alt": "Gofish haciéndose un selfi frente al antiguo Coliseo romano", "position": "50% 57%" },
+          { "image": "summit", "title": "Nubes y lejanía", "caption": "Pasa el viento de montaña y el ánimo se abre.", "alt": "Gofish con gafas de sol en un mirador de montaña", "position": "50% 45%" },
+          { "image": "aircraft", "title": "Curiosidad por volar", "caption": "Hay cosas que siempre invitan a detenerse.", "alt": "Gofish de pie ante un avión en exposición al aire libre", "position": "50% 50%" }
+        ]
+      }
+    },
+    "ar": {
+      "strings": {
+        "metaTitle": "Gofish — الرياضيات والذكاء والحياة",
+        "skipLink": "انتقل إلى المحتوى",
+        "navAbout": "من أنا",
+        "navResearch": "البحث",
+        "navEducation": "التعليم",
+        "navLife": "الحياة",
+        "menuOpen": "فتح القائمة",
+        "menuClose": "إغلاق القائمة",
+        "brandHome": "صفحة Gofish الرئيسية",
+        "heroHello": "مرحبًا، أنا",
+        "heroCtaExplore": "اكتشف اهتماماتي",
+        "heroCtaLife": "شاهد حياتي",
+        "aboutTitle": "من أنا",
+        "aboutAside": "شخص يفكر بجدية<br>ويعيش بجدية أيضًا.",
+        "researchTitle": "ما يثير فضولي",
+        "researchNote": "هذه هي الأسئلة التي أتمنى التعمق فيها — نقطة انطلاق رحلة البحث هذه.",
+        "educationTitle": "التعليم",
+        "educationAside": "خطوة بخطوة،<br>تفكير أعمق.",
+        "lifeTitle": "وأعيش الحياة بكاملها",
+        "galleryHeading": "أماكن مررتُ بها، لحظات احتفظتُ بها",
+        "galleryHint": "انقر على الصورة لفتحها",
+        "galleryExpand": "عرض كل الصور ({n})",
+        "galleryCollapse": "طي المعرض",
+        "closingCta": "جدني على GitHub",
+        "footerTag": "ابقَ فضوليًا، واصل الاستكشاف.",
+        "footerUpdated": "حُدّثت",
+        "backToTop": "العودة إلى الأعلى",
+        "lightboxClose": "إغلاق الصورة",
+        "lightboxPrev": "الصورة السابقة",
+        "lightboxNext": "الصورة التالية",
+        "langLabel": "تغيير اللغة",
+        "profileNote": "22 عامًا · ذكر · ملاحظات 2026",
+        "headline": "فهم الذكاء عبر الرياضيات،<br>واستكشاف العالم عبر الفضول.",
+        "intro": "طالب ماجستير في الرياضيات، مهتم بموضوع Agent RSI والذكاء الفيزيائي Physical AI.<br>أحب أن أسأل كيف يتعلم الذكاء — وأن أمشي في جبال حقيقية وفي الحياة اليومية.",
+        "heroCaption": "أمنح خطواتي للبرية، وفضولي للعالم.",
+        "researchIntro": "من الاستدلال المجرد نحو ذكاء يستطيع التعلم والفعل والتحسن المستمر.",
+        "lifeIntro": "للحياة أكثر من نظام إحداثيات واحد. أتجول في الجبال، وأتعرق في ملعب الريشة الطائرة، وأجد مفاجآت صغيرة في المطبخ وعلى الشاشة.",
+        "closing": "ابقَ فضوليًا، وانهَم ببطء.",
+        "closingText": "عن الرياضيات أو الذكاء الاصطناعي أو الرحلة القادمة — أتطلع إلى أفكار مثيرة."
+      },
+      "content": {
+        "about": [
+          "مرحبًا، أنا Gofish. أدرس حاليًا للحصول على درجة الماجستير في الرياضيات في جامعة العلوم والتكنولوجيا الجنوبية، بعد أن درست العلوم الأساسية الرياضية في جامعة داليان للتكنولوجيا. الرياضيات هي نقطة انطلاقي لفهم المشكلات، والذكاء الاصطناعي يجلب لي مشكلات جديدة باستمرار.",
+          "أكثر ما يثير اهتمامي هو كيف تحسّن الوكلاء أنفسهم من خلال التجربة، وكيف يمكن للذكاء أن يدخل فعلًا إلى العالم الفيزيائي عبر الإدراك والفعل. أتمنى أن أجد اتجاهي البحثي الخاص بين التفكير الرياضي الراسخ والتجارب الملموسة.",
+          "بعيدًا عن الشاشات، أحب السفر وكرة الريشة والطبخ ومشاهدة الأفلام. بالنسبة لي، دراسة مشكلة بجدية وطهو وجبة بجدية يستحقان الاهتمام معًا."
+        ],
+        "research": [
+          { "number": "01", "title": "Agent RSI", "subtitle": "الوكلاء · التحسين الذاتي التكراري", "description": "أهتم بكيفية تراكم خبرة الوكلاء من خلال الفعل والتغذية الراجعة والتفكر، فيحسّنون تدريجيًا استراتيجياتهم وقدراتهم. وأريد أيضًا أن أفهم: كيف نقيس هذا التحسن بطريقة موثوقة؟", "tags": ["التعلم الذاتي", "التغذية الراجعة والتفكر", "تقييم القدرات"], "process": ["فعل", "تغذية راجعة", "تفكر", "تحسن"], "className": "agent" },
+          { "number": "02", "title": "Physical AI", "subtitle": "الإدراك · الفعل · العالم الحقيقي", "description": "أشعر بالفضول تجاه الأسئلة التي تربط الذكاء الرقمي بالعالم الفيزيائي: كيف نفهم البيئة، ونبني نماذج للعالم، ونحوّل الاستدلال إلى فعل موثوق؟", "tags": ["ذكاء متجسد", "نماذج العالم", "الإدراك والقرار"], "process": ["إدراك", "فهم", "قرار", "فعل"], "className": "physical" }
+        ],
+        "education": [
+          { "dates": "2026 — 2029", "degree": "الرياضيات · ماجستير", "school": "جامعة العلوم والتكنولوجيا الجنوبية", "english": "Southern University of Science and Technology", "note": "قيد الدراسة · التخرج المتوقع عام 2029", "current": true },
+          { "dates": "2022 — 2026", "degree": "العلوم الأساسية الرياضية · بكالوريوس", "school": "جامعة داليان للتكنولوجيا", "english": "Dalian University of Technology", "note": "بين الرياضيات والفيزياء، بناء الأساس لفهم العالم.", "current": false }
+        ],
+        "hobbies": [
+          { "symbol": "↗", "title": "كرة الريشة", "description": "ضرب وجري وتعرق — نَفَس من الهواء النقي للعقل." },
+          { "symbol": "⌁", "title": "السفر والتجوال", "description": "ترك الطرق المألوفة، وجمع مناظر مختلفة." },
+          { "symbol": "◡", "title": "الطبخ", "description": "أخذ الوجبات على محمل الجد، في دفء المطبخ." },
+          { "symbol": "▷", "title": "الأفلام والقصص", "description": "عيش حياة أخرى عبر شاشة." }
+        ],
+        "gallery": [
+          { "image": "mountains", "title": "بين الجبال", "caption": "ارفع عينيك إلى الجبال، وترَ عالمًا أكبر.", "alt": "Gofish يجلس على صخرة وخلفه سلاسل جبلية", "position": "45% 60%" },
+          { "image": "blue-lake", "title": "زرقة البحيرة", "caption": "أبطئ خطواتك قليلًا.", "alt": "Gofish يحمل كاميرا ويقف أمام بحيرة زرقاء", "position": "50% 56%" },
+          { "image": "rooftops", "title": "وجه آخر للمدينة", "caption": "فوق الأسطح، نظرة مختلفة إلى الحياة اليومية.", "alt": "Gofish على شرفة سطح في المدينة وعمارة كلاسيكية في الأفق", "position": "52% 50%" },
+          { "image": "green-lake", "title": "خضرة ونسيم الجبل", "caption": "امنح نفسك وقتًا قليلًا قرب الطبيعة.", "alt": "Gofish واقف بجوار سياج خشبي عند بحيرة جبلية خضراء", "position": "50% 62%" },
+          { "image": "snow", "title": "يوم مشمس على الثلج", "caption": "شمس وثلج ورحلة تستحق أن تُذكر.", "alt": "Gofish على جبل ثلجي يحمل علم تذكاري ليونغفراو", "position": "50% 68%" },
+          { "image": "museum", "title": "لقاء الفن", "caption": "في صالة العرض، نظرة عابرة إلى الزمن.", "alt": "Gofish يلتقط صورة سيلفي داخل قاعة متحف", "position": "45% 50%" },
+          { "image": "evening", "title": "انتظار الغروب", "caption": "أضواء المدينة تُضاء واحدة تلو الأخرى.", "alt": "Gofish يلتقط صورة مع أفق المدينة عند الغسق", "position": "40% 55%" },
+          { "image": "colosseum", "title": "الدخول إلى التاريخ", "caption": "على طول الجدران الحجرية القديمة، أُحسّ بمقياس الزمن.", "alt": "Gofish يلتقط صورة سيلفي خارج الكولوسيوم الروماني القديم", "position": "50% 57%" },
+          { "image": "summit", "title": "سُحب وأفق بعيد", "caption": "يمر نسيم الجبل، فينفتح المزاج.", "alt": "Gofish يرتدي نظارة شمسية على منصة مشاهدة جبلية", "position": "50% 45%" },
+          { "image": "aircraft", "title": "فضول حول الطيران", "caption": "بعض الأشياء تجعلك تتوقف وتتأمل دائمًا.", "alt": "Gofish واقف أمام طائرة معروضة في الهواء الطلق", "position": "50% 50%" }
+        ]
+      }
+    },
+    "ja": {
+      "strings": {
+        "metaTitle": "Gofish — 数学・知能・暮らし",
+        "skipLink": "本文へスキップ",
+        "navAbout": "私について",
+        "navResearch": "研究",
+        "navEducation": "学歴",
+        "navLife": "暮らし",
+        "menuOpen": "メニューを開く",
+        "menuClose": "メニューを閉じる",
+        "brandHome": "Gofish ホーム",
+        "heroHello": "こんにちは、私は",
+        "heroCtaExplore": "興味を探る",
+        "heroCtaLife": "暮らしを見る",
+        "aboutTitle": "私について",
+        "aboutAside": "真剣に考え、<br>真剣に生きる人。",
+        "researchTitle": "気になっていること",
+        "researchNote": "深めたい問いの数々——この研究の旅の出発点です。",
+        "educationTitle": "学歴",
+        "educationAside": "一歩ずつ、<br>より深く考える。",
+        "lifeTitle": "そして、しっかり生きる",
+        "galleryHeading": "通り過ぎた場所、覚えていたい瞬間",
+        "galleryHint": "写真をクリックして開く",
+        "galleryExpand": "全 {n} 枚を表示",
+        "galleryCollapse": "ギャラリーを閉じる",
+        "closingCta": "GitHub で見つけてください",
+        "footerTag": "好奇心を持ち続け、探求し続ける。",
+        "footerUpdated": "更新",
+        "backToTop": "上に戻る",
+        "lightboxClose": "写真を閉じる",
+        "lightboxPrev": "前の写真",
+        "lightboxNext": "次の写真",
+        "langLabel": "言語を切り替え",
+        "profileNote": "22歳 · 男性 · 2026年の記録",
+        "headline": "数学で知能を理解し、<br>好奇心で世界を探る。",
+        "intro": "数学の修士課程に在籍し、Agent RSI と Physical AI に関心を持つ学生です。<br>知能がどのように学ぶのかを問い、本物の山や日常の中を歩くのが好きです。",
+        "heroCaption": "足は山野へ、好奇心は世界へ。",
+        "researchIntro": "抽象的な推論から、学び・行動し・改善し続ける知能へ。",
+        "lifeIntro": "人生の座標軸は一つではありません。山を歩き、バドミントンのコートで汗を流し、キッチンや映画の中に小さな驚きを見つけます。",
+        "closing": "好奇心を持ち、ゆっくり育つ。",
+        "closingText": "数学や AI、あるいは次の旅について、面白いアイデアとの出会いを楽しみにしています。"
+      },
+      "content": {
+        "about": [
+          "こんにちは、Gofish です。大連理工大学で数理基礎科学を学んだ後、現在は南方科技大学で数学の修士課程に在籍しています。数学は私が問題を理解するための出発点であり、人工知能は私に次々と新しい問いをもたらしてくれます。",
+          "特に興味があるのは、エージェントが経験を通じて自らをどう改善していくのか、そして知能が知覚と行動を通じて物理世界に本当に入り込めるのか、ということです。確かな数学的思考と具体的な実験のあいだで、自分なりの研究の方向を見つけたいと考えています。",
+          "画面の外では、旅行、バドミントン、料理、映画が好きです。私にとって、問題を真剣に考えることと、食事を真剣につくることは、どちらも同じくらい大切です。"
+        ],
+        "research": [
+          { "number": "01", "title": "Agent RSI", "subtitle": "エージェント · 再帰的自己改善", "description": "エージェントが行動・フィードバック・内省を通じて経験を蓄え、自らの戦略と能力を少しずつ改善していく仕組みに興味があります。そして、その改善をどう確実に測れるのかも理解したいと思っています。", "tags": ["自己学習", "フィードバックと内省", "能力評価"], "process": ["行動", "フィードバック", "内省", "改善"], "className": "agent" },
+          { "number": "02", "title": "Physical AI", "subtitle": "知覚 · 行動 · 現実世界", "description": "デジタルの知能と物理世界をつなぐ問いに惹かれます。環境をどう理解し、世界モデルをどう構築し、推論を信頼できる行動へどう変えるのか。", "tags": ["身体性知能", "世界モデル", "知覚と意思決定"], "process": ["知覚", "理解", "意思決定", "行動"], "className": "physical" }
+        ],
+        "education": [
+          { "dates": "2026 — 2029", "degree": "数学 · 修士", "school": "南方科技大学", "english": "Southern University of Science and Technology", "note": "在学中 · 2029年卒業予定", "current": true },
+          { "dates": "2022 — 2026", "degree": "数理基礎科学 · 学士", "school": "大連理工大学", "english": "Dalian University of Technology", "note": "数学と物理のあいだで、世界を理解する土台を築く。", "current": false }
+        ],
+        "hobbies": [
+          { "symbol": "↗", "title": "バドミントン", "description": "振って、走って、汗をかいて、頭をリフレッシュ。" },
+          { "symbol": "⌁", "title": "旅と散策", "description": "慣れた道を離れて、別の風景を集める。" },
+          { "symbol": "◡", "title": "料理", "description": "台所の温もりのなかで、一日三食を大切に。" },
+          { "symbol": "▷", "title": "映画と物語", "description": "スクリーンを通して、もう一つの人生を味わう。" }
+        ],
+        "gallery": [
+          { "image": "mountains", "title": "山あいで", "caption": "山を見上げると、より大きな世界が見える。", "alt": "岩の上に座る Gofish、背後には連なる山々", "position": "45% 60%" },
+          { "image": "blue-lake", "title": "湖畔の青", "caption": "少しだけ、歩みをゆるめて。", "alt": "青い湖の前に立ち、カメラを持つ Gofish", "position": "50% 56%" },
+          { "image": "rooftops", "title": "街のもう一つの顔", "caption": "屋根の上から、日常を違う角度で見る。", "alt": "街の屋上テラスに立つ Gofish、遠くに古典建築", "position": "52% 50%" },
+          { "image": "green-lake", "title": "緑と山風", "caption": "自然に寄り添う時間を、少しだけ自分に。", "alt": "緑の山あいの湖の木柵のそばに立つ Gofish", "position": "50% 62%" },
+          { "image": "snow", "title": "雪山の晴れ日", "caption": "陽ざしと雪と、忘れたくない旅。", "alt": "ユングフラウの記念旗を持つ、雪山の Gofish", "position": "50% 68%" },
+          { "image": "museum", "title": "アートとの出会い", "caption": "展示室で、時間とすれ違う。", "alt": "美術館の展示室で自撮りする Gofish", "position": "45% 50%" },
+          { "image": "evening", "title": "夕暮れを待つ", "caption": "街の灯が、ひとつ、またひとつと点る。", "alt": "夕暮れの街のスカイラインを背景に立つ Gofish", "position": "40% 55%" },
+          { "image": "colosseum", "title": "歴史の中へ", "caption": "古い石壁に沿って、時間のスケールを感じる。", "alt": "古代ローマのコロッセオの前で自撮りする Gofish", "position": "50% 57%" },
+          { "image": "summit", "title": "雲と遠景", "caption": "山風が通り、気持ちもひらける。", "alt": "山の展望台でサングラスをかける Gofish", "position": "50% 45%" },
+          { "image": "aircraft", "title": "飛行への好奇心", "caption": "つい足を止めてしまうものがある。", "alt": "屋外展示の飛行機の前に立つ Gofish", "position": "50% 50%" }
+        ]
+      }
+    },
+    "ko": {
+      "strings": {
+        "metaTitle": "Gofish — 수학, 지능, 그리고 삶",
+        "skipLink": "본문으로 건너뛰기",
+        "navAbout": "소개",
+        "navResearch": "연구",
+        "navEducation": "학력",
+        "navLife": "생활",
+        "menuOpen": "메뉴 열기",
+        "menuClose": "메뉴 닫기",
+        "brandHome": "Gofish 홈",
+        "heroHello": "안녕하세요, 저는",
+        "heroCtaExplore": "관심사를 살펴보기",
+        "heroCtaLife": "내 삶 보기",
+        "aboutTitle": "소개",
+        "aboutAside": "진지하게 생각하고<br>진지하게 사는 사람.",
+        "researchTitle": "궁금한 것들",
+        "researchNote": "더 깊이 파고들고 싶은 질문들 — 이 연구 여정의 출발점입니다.",
+        "educationTitle": "학력",
+        "educationAside": "한 걸음씩,<br>더 깊이 생각하기.",
+        "lifeTitle": "그리고 온전히 살아가기",
+        "galleryHeading": "스쳐간 곳, 간직하고 싶은 순간",
+        "galleryHint": "사진을 클릭해 열기",
+        "galleryExpand": "사진 {n}장 모두 보기",
+        "galleryCollapse": "갤러리 접기",
+        "closingCta": "GitHub에서 만나기",
+        "footerTag": "호기심을 잃지 말고, 계속 탐구하기.",
+        "footerUpdated": "업데이트",
+        "backToTop": "맨 위로",
+        "lightboxClose": "사진 닫기",
+        "lightboxPrev": "이전 사진",
+        "lightboxNext": "다음 사진",
+        "langLabel": "언어 변경",
+        "profileNote": "22세 · 남성 · 2026년의 기록",
+        "headline": "수학으로 지능을 이해하고,<br>호기심으로 세계를 탐험하기.",
+        "intro": "수학 석사 과정에 재학 중이며, Agent RSI와 Physical AI에 관심을 두고 있습니다.<br>지능이 어떻게 학습하는지 묻고, 진짜 산과 일상 속을 걷는 것을 좋아합니다.",
+        "heroCaption": "발걸음은 산과 들로, 호기심은 세계로.",
+        "researchIntro": "추상적인 추론에서, 배우고 행동하며 계속 나아지는 지능으로.",
+        "lifeIntro": "삶의 좌표축은 하나가 아닙니다. 산을 걷고, 배드민턴 코트에서 땀을 흘리며, 부엌과 영화 속에서 작은 놀라움을 발견합니다.",
+        "closing": "호기심을 갖고, 천천히 자라기.",
+        "closingText": "수학, AI, 그리고 다음 여행에 대해 — 흥미로운 아이디어를 만나기를 기대합니다."
+      },
+      "content": {
+        "about": [
+          "안녕하세요, Gofish입니다. 다롄이공대학에서 수리기초과학을 전공한 뒤, 현재 남방과학기술대학에서 수학 석사 과정에 재학 중입니다. 수학은 제가 문제를 이해하는 출발점이고, 인공지능은 저에게 계속 새로운 질문을 안겨줍니다.",
+          "특히 흥미로운 것은 에이전트가 경험을 통해 스스로를 어떻게 개선하는지, 그리고 지능이 지각과 행동을 통해 물리 세계에 진짜로 들어갈 수 있는지입니다. 탄탄한 수학적 사고와 구체적인 실험 사이에서 저만의 연구 방향을 찾고 싶습니다.",
+          "화면 밖에서는 여행, 배드민턴, 요리, 영화를 좋아합니다. 저에게는 문제를 진지하게 연구하는 것과 한 끼를 진지하게 만드는 것이 모두 가치 있는 일입니다."
+        ],
+        "research": [
+          { "number": "01", "title": "Agent RSI", "subtitle": "에이전트 · 재귀적 자기 개선", "description": "에이전트가 행동·피드백·성찰을 통해 경험을 쌓고 전략과 능력을 조금씩 개선해 가는 방식에 관심이 있습니다. 그리고 그 개선을 어떻게 신뢰성 있게 측정할 수 있을지도 알고 싶습니다.", "tags": ["자기 학습", "피드백과 성찰", "능력 평가"], "process": ["행동", "피드백", "성찰", "개선"], "className": "agent" },
+          { "number": "02", "title": "Physical AI", "subtitle": "지각 · 행동 · 현실 세계", "description": "디지털 지능과 물리 세계를 잇는 질문들에 끌립니다. 환경을 어떻게 이해하고, 세계 모델을 어떻게 구축하며, 추론을 신뢰할 수 있는 행동으로 어떻게 바꿀 것인지.", "tags": ["체화된 지능", "세계 모델", "지각과 의사결정"], "process": ["지각", "이해", "결정", "행동"], "className": "physical" }
+        ],
+        "education": [
+          { "dates": "2026 — 2029", "degree": "수학 · 석사", "school": "남방과학기술대학", "english": "Southern University of Science and Technology", "note": "재학 중 · 2029년 졸업 예정", "current": true },
+          { "dates": "2022 — 2026", "degree": "수리기초과학 · 학사", "school": "다롄이공대학", "english": "Dalian University of Technology", "note": "수학과 물리 사이에서, 세계를 이해하는 토대를 다지다.", "current": false }
+        ],
+        "hobbies": [
+          { "symbol": "↗", "title": "배드민턴", "description": "치고, 달리고, 땀 흘리며 머리를 환기하기." },
+          { "symbol": "⌁", "title": "여행과 산책", "description": "익숙한 길을 떠나 다른 풍경을 모으기." },
+          { "symbol": "◡", "title": "요리", "description": "부엌의 온기 속에서 하루 세 끼를 소중히." },
+          { "symbol": "▷", "title": "영화와 이야기", "description": "스크린을 통해 또 다른 인생을 경험하기." }
+        ],
+        "gallery": [
+          { "image": "mountains", "title": "산골짜기에서", "caption": "산을 올려다보면 더 큰 세계가 보입니다.", "alt": "바위 위에 앉아 있는 Gofish, 뒤로는 이어진 산맥", "position": "45% 60%" },
+          { "image": "blue-lake", "title": "호숫가의 파랑", "caption": "발걸음을 조금 늦춰 보세요.", "alt": "파란 호수 앞에 서서 카메라를 든 Gofish", "position": "50% 56%" },
+          { "image": "rooftops", "title": "도시의 다른 얼굴", "caption": "지붕 위에서 일상을 다른 각도로 바라봅니다.", "alt": "도시 옥상 테라스에 선 Gofish, 저 멀리 고전 건축", "position": "52% 50%" },
+          { "image": "green-lake", "title": "초록과 산바람", "caption": "자연 곁에서 시간을 조금만 내어 보세요.", "alt": "초록빛 산 호수의 나무 난간 옆에 선 Gofish", "position": "50% 62%" },
+          { "image": "snow", "title": "설산의 맑은 날", "caption": "햇살과 눈, 그리고 기억할 만한 여행.", "alt": "융프라우 기념 깃발을 든 설산 위의 Gofish", "position": "50% 68%" },
+          { "image": "museum", "title": "예술과의 만남", "caption": "전시실에서 시간과 스쳐 지나갑니다.", "alt": "박물관 전시실에서 셀카를 찍는 Gofish", "position": "45% 50%" },
+          { "image": "evening", "title": "노을을 기다리며", "caption": "도시의 불빛이 하나둘 켜집니다.", "alt": "해 질 녘 도시 스카이라인을 배경으로 선 Gofish", "position": "40% 55%" },
+          { "image": "colosseum", "title": "역사 속으로", "caption": "오래된 돌벽을 따라 시간의 척도를 느낍니다.", "alt": "고대 로마 콜로세움 앞에서 셀카를 찍는 Gofish", "position": "50% 57%" },
+          { "image": "summit", "title": "구름과 먼 풍경", "caption": "산바람이 지나가면 마음도 트입니다.", "alt": "산 전망대에서 선글라스를 쓴 Gofish", "position": "50% 45%" },
+          { "image": "aircraft", "title": "비행에 대한 호기심", "caption": "언제나 발길을 멈추게 하는 것들이 있습니다.", "alt": "야외 전시된 비행기 앞에 선 Gofish", "position": "50% 50%" }
+        ]
+      }
+    }
+  }
+}

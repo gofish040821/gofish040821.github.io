@@ -11,3 +11,23 @@
 @media print{.site-header,.hero-actions,.gallery-toggle,.closing-links,.lightbox,.skip-link{display:none!important}body{background:white;color:black}.wrap{width:100%}.hero{min-height:0;padding:20px 0}.section,.life-section{padding:24px 0}.research-card,.education-item,.photo-card{break-inside:avoid}.photo-card[hidden]{display:block!important}.hero-figure{transform:none;box-shadow:none}.hero-footnote{display:none}.site-footer{padding:15px 0}.life-section{background:white}.photo-link{aspect-ratio:1}.closing{padding:24px 0}}
 
 .hero-footnote{flex-wrap:wrap;row-gap:5px}.hobby p{font-size:14px}.hero-description{font-size:16px}.hero-footnote{font-size:12px}.photo-card figcaption{font-size:14px}.photo-mat img{object-position:43% 65%}
+
+/* ---- language switcher ---- */
+.lang-switch{position:relative}
+.lang-toggle{display:flex;align-items:center;gap:8px;border:1px solid #c9c4ba;border-radius:4px;font-size:14px;padding:5px 12px;background:transparent;white-space:nowrap}
+.lang-toggle:hover{background:var(--soft)}
+.lang-toggle[aria-expanded="true"]{background:var(--soft)}
+.lang-caret{font-size:10px;line-height:1;color:var(--muted)}
+.lang-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:152px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 14px 34px #463c2522;padding:6px;z-index:40;display:grid;gap:2px}
+.lang-option{text-align:left;padding:7px 12px;border-radius:3px;font-size:14px;background:transparent;white-space:nowrap}
+.lang-option:hover{background:var(--soft)}
+.lang-option[aria-selected="true"]{color:var(--accent)}
+/* Arabic reads right to left — flip the pieces that are hard-coded to one side. */
+[dir="rtl"] .lang-menu{right:auto;left:0}
+[dir="rtl"] .lang-option{text-align:right}
+[dir="rtl"] .timeline{padding-left:0;padding-right:26px;border-left:0;border-right:1px solid #d7d0c4}
+[dir="rtl"] .education-item:before{left:auto;right:-32px}
+[dir="rtl"] .skip-link{left:auto;right:20px}
+@media(max-width:1050px){.header-inner{gap:18px}.lang-toggle{gap:6px;padding:5px 10px;font-size:13px}}
+@media(max-width:760px){.lang-toggle{padding:6px 10px;font-size:12px}.lang-menu{min-width:134px;padding:5px}.lang-option{font-size:13px;padding:8px 11px}}
+@media print{.lang-switch{display:none!important}}
