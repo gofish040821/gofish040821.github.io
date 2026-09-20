@@ -31,3 +31,61 @@
 @media(max-width:1050px){.header-inner{gap:18px}.lang-toggle{gap:6px;padding:5px 10px;font-size:13px}}
 @media(max-width:760px){.lang-toggle{padding:6px 10px;font-size:12px}.lang-menu{min-width:134px;padding:5px}.lang-option{font-size:13px;padding:8px 11px}}
 @media print{.lang-switch{display:none!important}}
+
+/* ---- theme toggle ---- */
+.theme-toggle{display:grid;place-items:center;width:38px;height:38px;border:1px solid #c9c4ba;border-radius:4px;background:transparent;font-size:17px;line-height:1;flex-shrink:0;color:var(--ink)}
+.theme-toggle:hover{background:var(--soft)}
+.theme-icon:before{content:"☾"}
+[data-theme="dark"] .theme-icon:before{content:"☀"}
+
+/* ---- visitor counter ----
+   The containers start hidden and Busuanzi reveals them with an inline
+   display:inline once it has a number, so a failed or blocked request leaves
+   the footer clean instead of showing an empty "Total visits". */
+.visit-stats{white-space:nowrap}
+.visit-stat{display:none}
+.visit-sep{margin:0 6px;color:#b5afa3}
+.visit-value{color:var(--ink);font-variant-numeric:tabular-nums}
+
+/* ---- dark theme ----
+   Deliberately additive: the light rules above are untouched so the approved
+   light design cannot regress. Only the six :root variables are redefined plus
+   the hard-coded colours those variables do not cover, overridden per selector. */
+[data-theme="dark"]{--paper:#191816;--ink:#e9e5dd;--muted:#9c968b;--accent:#e08a5f;--line:#33312c;--soft:#232220;color-scheme:dark}
+[data-theme="dark"] ::selection{background:#5c3a2c;color:#f2eee6}
+[data-theme="dark"] .skip-link{color:var(--paper)}
+[data-theme="dark"] .header-github,[data-theme="dark"] .lang-toggle,[data-theme="dark"] .theme-toggle,[data-theme="dark"] .button{border-color:#3d3a34}
+[data-theme="dark"] .button:hover{background:#2b2a27}
+[data-theme="dark"] .button.primary{color:#191816}
+[data-theme="dark"] .button.primary:hover{background:#c9754c;border-color:#c9754c}
+[data-theme="dark"] .lang-menu{box-shadow:0 14px 34px #0007}
+[data-theme="dark"] .hero-footnote{color:#8f8a80}
+[data-theme="dark"] .hero-footnote i{background:#5a5650}
+[data-theme="dark"] .hero-figure{background:#232220;box-shadow:0 8px 28px #0006,0 0 0 1px #34322d}
+[data-theme="dark"] .photo-label{background:#191816e8;color:#ded9d0}
+[data-theme="dark"] .interest-strip{color:#8f8a80}
+[data-theme="dark"] .interest-strip span+span:before{color:#4e4b45}
+[data-theme="dark"] .research-card{background:#201f1c}
+[data-theme="dark"] .research-card.physical{background:#26241f}
+[data-theme="dark"] .tags span{border-color:#3d3a34}
+[data-theme="dark"] .process{border-top-color:#3d3a34;color:#9c968b}
+[data-theme="dark"] .process i{color:#6f6a61}
+[data-theme="dark"] .timeline{border-left-color:#3d3a34}
+[data-theme="dark"] [dir="rtl"] .timeline{border-right-color:#3d3a34}
+[data-theme="dark"] .education-item:before{background:#5a5650}
+[data-theme="dark"] .life-section{border-top-color:#2b2925;border-bottom-color:#2b2925}
+[data-theme="dark"] .hobby{border-top-color:#3d3a34}
+[data-theme="dark"] .photo-link{background:#2a2825}
+[data-theme="dark"] .expand-icon{background:#191816e8}
+[data-theme="dark"] .photo-number{color:#8f8a80}
+[data-theme="dark"] .footer-separator,[data-theme="dark"] .visit-sep{color:#5a5650}
+[data-theme="dark"] .mobile-nav{box-shadow:0 18px 25px #0006}
+[data-theme="dark"] .mobile-nav a{border-bottom-color:#33312c}
+[data-theme="dark"] .icon-button{border-color:#3d3a34}
+[data-theme="dark"] .icon-button:hover{background:#2b2a27}
+[data-theme="dark"] .lightbox{box-shadow:0 20px 90px #0009}
+[data-theme="dark"] .lightbox::backdrop{background:#0a0b0ad9}
+@media(max-width:1050px){.theme-toggle{width:34px;height:34px;font-size:15px}}
+@media(max-width:760px){.theme-toggle{width:32px;height:32px;font-size:14px}.visit-sep{margin:0 4px}}
+/* Printing must never come out dark, and the counter is meaningless on paper. */
+@media print{[data-theme="dark"]{--paper:#fff;--ink:#000;--muted:#444;--accent:#8a4630;--line:#ccc;--soft:#fff;color-scheme:light}.theme-toggle,.visit-stats{display:none!important}}

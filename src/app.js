@@ -201,6 +201,7 @@
     closeLangMenu();
     bindGallery();
     buildLangMenu();
+    renderThemeToggle();
     try { localStorage.setItem(STORAGE_KEY, code); } catch (error) { /* private mode */ }
     // Keep the address bar shareable: ...?lang=ru stays in that language.
     try {
@@ -226,6 +227,39 @@
   document.addEventListener('click', event => { if (!langSwitch.contains(event.target)) closeLangMenu(); });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !langMenu.hidden) { closeLangMenu(); langToggle.focus(); }
+  });
+
+  /* ---------------- theme ---------------- */
+  // The inline <head> script already picked the initial theme before first paint.
+  // This handles switching, persistence, and the label the button announces.
+  const THEME_KEY = 'gofish-theme';
+  const themeToggle = document.querySelector('#theme-toggle');
+  const themeColorMeta = document.querySelector('#theme-color');
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+  const currentTheme = () => (root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+
+  function renderThemeToggle() {
+    const dark = currentTheme() === 'dark';
+    if (themeToggle) themeToggle.setAttribute('aria-label', t(dark ? 'themeToLight' : 'themeToDark', dark ? 'Switch to light mode' : 'Switch to dark mode'));
+    if (themeColorMeta) themeColorMeta.setAttribute('content', dark ? '#191816' : '#f7f5f0');
+  }
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    try { localStorage.setItem(THEME_KEY, theme); } catch (error) { /* private mode */ }
+    renderThemeToggle();
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => applyTheme(currentTheme() === 'dark' ? 'light' : 'dark'));
+  }
+  // Follow the OS only while the visitor has not made an explicit choice.
+  systemTheme.addEventListener('change', event => {
+    try {
+      if (localStorage.getItem(THEME_KEY)) return;
+      root.setAttribute('data-theme', event.matches ? 'dark' : 'light');
+      renderThemeToggle();
+    } catch (error) { /* private mode */ }
   });
 
   /* ---------------- init ---------------- */

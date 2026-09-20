@@ -67,7 +67,7 @@ for (const name of new Set(['avatar', data.heroImage, ...data.gallery.map(item =
   for (const small of [false, true]) await access(resolve(root, 'dist', photoPath(name, small)));
 }
 await writeFile(resolve(root, 'dist/index.html'), html);
-for (const file of ['style.css', 'app.js']) await copyFile(resolve(root, 'src', file), resolve(root, 'dist', file));
+for (const file of ['style.css', 'app.js', 'busuanzi.pure.mini.js']) await copyFile(resolve(root, 'src', file), resolve(root, 'dist', file));
 await writeFile(resolve(root, 'dist/.nojekyll'), '');
 await writeFile(resolve(root, 'dist/robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${data.siteUrl}/sitemap.xml\n`);
 await writeFile(resolve(root, 'dist/sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${escape(data.siteUrl)}/</loc></url></urlset>\n`);

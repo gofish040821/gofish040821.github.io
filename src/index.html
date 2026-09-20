@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f5f0">
+  <meta name="theme-color" id="theme-color" content="#f7f5f0">
   <meta name="description" content="Gofish's personal homepage. A master's student in mathematics at SUSTech, focused on Agent RSI and Physical AI. Loves badminton, travel, cooking and movies.">
   <meta property="og:title" content="Gofish — Math, Intelligence & Life">
   <meta property="og:description" content="Understanding intelligence through math, exploring the world through curiosity.">
@@ -12,8 +12,19 @@
   <link rel="canonical" href="{{siteUrl}}/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23bd6549'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='44' fill='%23f7f5f0'%3Eg%3C/text%3E%3C/svg%3E">
   <title>Gofish — Math, Intelligence & Life</title>
+  <script>
+    // Runs before first paint: a dark-mode visitor must never see a white flash.
+    (function () {
+      try {
+        var saved = localStorage.getItem('gofish-theme');
+        var dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      } catch (error) { /* private mode */ }
+    })();
+  </script>
   <link rel="stylesheet" href="./style.css">
   <script src="./app.js" defer></script>
+  <script src="./busuanzi.pure.mini.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main"><span data-i18n="skipLink">Skip to content</span></a>
@@ -24,6 +35,7 @@
         <a href="#about"><span data-i18n="navAbout">About</span></a><a href="#research"><span data-i18n="navResearch">Research</span></a><a href="#education"><span data-i18n="navEducation">Education</span></a><a href="#life"><span data-i18n="navLife">Life</span></a>
       </nav>
       <a class="header-github" href="{{github}}" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode"><span class="theme-icon" aria-hidden="true"></span></button>
       <div class="lang-switch" id="lang-switch">
         <button class="lang-toggle" type="button" aria-expanded="false" aria-haspopup="listbox" aria-label="Switch language" data-i18n-aria="langLabel">
           <span class="lang-current" aria-hidden="true">English</span>
@@ -74,7 +86,7 @@
     </section>
     <section class="closing wrap" aria-labelledby="closing-title"><span class="closing-mark" aria-hidden="true">✳</span><p class="eyebrow">STILL LEARNING. STILL EXPLORING.</p><h2 id="closing-title" data-i18n="closing">{{closing}}</h2><p data-i18n="closingText">{{closingText}}</p><div class="closing-links"><a class="button primary" href="{{github}}" target="_blank" rel="noopener noreferrer"><span data-i18n="closingCta">Find me on GitHub</span> <span aria-hidden="true">↗</span></a>{{emailLink}}</div></section>
   </main>
-  <footer class="wrap site-footer"><span>© <span id="year">2026</span> {{name}}<span class="footer-separator">/</span><span data-i18n="footerTag">Stay curious, keep exploring.</span></span><span><span data-i18n="footerUpdated">Updated</span> {{updated}} <a href="#home" aria-label="Back to top" data-i18n-aria="backToTop"><span data-i18n="backToTop">Back to top</span> ↑</a></span></footer>
+  <footer class="wrap site-footer"><span>© <span id="year">2026</span> {{name}}<span class="footer-separator">/</span><span data-i18n="footerTag">Stay curious, keep exploring.</span></span><span class="visit-stats"><span id="busuanzi_container_site_pv" class="visit-stat"><span data-i18n="statsViews">Total visits</span> <span id="busuanzi_value_site_pv" class="visit-value"></span></span><span id="busuanzi_container_site_uv" class="visit-stat"><span class="visit-sep" aria-hidden="true">&middot;</span> <span data-i18n="statsVisitors">Visitors</span> <span id="busuanzi_value_site_uv" class="visit-value"></span></span></span><span><span data-i18n="footerUpdated">Updated</span> {{updated}} <a href="#home" aria-label="Back to top" data-i18n-aria="backToTop"><span data-i18n="backToTop">Back to top</span> ↑</a></span></footer>
   <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-toolbar"><span id="lightbox-count" aria-live="polite"></span><button type="button" class="icon-button" id="lightbox-close" aria-label="Close photo" data-i18n-aria="lightboxClose">×</button></div><div class="lightbox-stage"><button type="button" class="icon-button lightbox-prev" id="lightbox-prev" aria-label="Previous photo" data-i18n-aria="lightboxPrev">←</button><img id="lightbox-image" alt="" width="1800" height="1350"><button type="button" class="icon-button lightbox-next" id="lightbox-next" aria-label="Next photo" data-i18n-aria="lightboxNext">→</button></div><div class="lightbox-caption"><h2 id="lightbox-title"></h2><p id="lightbox-description"></p></div></dialog>
 </body>
 </html>
