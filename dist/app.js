@@ -81,7 +81,7 @@
     galleryToggle.setAttribute('aria-expanded', String(galleryExpanded));
     applyGalleryVisibility();
     renderGalleryToggle();
-    if (!galleryExpanded) document.querySelector('.gallery-heading').scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    if (!galleryExpanded) document.querySelector('#gallery').scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   });
 
   /* ---------------- lightbox ---------------- */

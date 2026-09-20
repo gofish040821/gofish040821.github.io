@@ -5,7 +5,6 @@
   "siteUrl": "https://gofish040821.github.io",
   "updated": "2026.09",
   "profileNote": "22 · Male · Notes of 2026",
-  "eyebrow": "A PERSONAL CORNER OF THE INTERNET",
   "headline": "Understanding intelligence through math,<br>exploring the world through curiosity.",
   "intro": "A master's student in mathematics, focused on Agent RSI and Physical AI.<br>I like to ask how intelligence learns — and to walk into real mountains and everyday life.",
   "heroImage": "mountains",
@@ -15,7 +14,6 @@
     "What fascinates me most is how agents improve themselves through experience, and how intelligence can truly enter the physical world through perception and action. I hope to find my own research direction between solid mathematical thinking and concrete experiments.",
     "Off screen, I love traveling, badminton, cooking, and movies. To me, studying a problem seriously and cooking a meal seriously are both worth the effort."
   ],
-  "researchIntro": "From abstract reasoning toward intelligence that can learn, act, and keep improving.",
   "research": [
     {"number": "01", "title": "Agent RSI", "subtitle": "Agents · Recursive self-improvement", "description": "I'm interested in how agents accumulate experience through action, feedback, and reflection, gradually improving their strategies and abilities. I also want to understand: how can we reliably measure such improvement?", "tags": ["Self-learning", "Feedback & reflection", "Capability evaluation"], "process": ["Act", "Feedback", "Reflect", "Improve"], "className": "agent"},
     {"number": "02", "title": "Physical AI", "subtitle": "Perception · Action · The real world", "description": "I'm curious about the questions that connect digital intelligence and the physical world: how to understand environments, build world models, and turn reasoning into reliable action?", "tags": ["Embodied intelligence", "World models", "Perception & decision"], "process": ["Perceive", "Understand", "Decide", "Act"], "className": "physical"}
@@ -24,7 +22,6 @@
     {"dates": "2026 — 2029", "degree": "Mathematics · Master's", "school": "Southern University of Science and Technology", "english": "Southern University of Science and Technology", "note": "Enrolled · Expected to graduate in 2029", "current": true},
     {"dates": "2022 — 2026", "degree": "Mathematical Foundation Science · Bachelor's", "school": "Dalian University of Technology", "english": "Dalian University of Technology", "note": "Between mathematics and physics, building the foundation for understanding the world.", "current": false}
   ],
-  "lifeIntro": "Life has more than one coordinate system. I wander into mountains, sweat on the badminton court, and find small surprises in the kitchen and on screen.",
   "hobbies": [
     {"symbol": "↗", "title": "Badminton", "description": "Swing, run, sweat — a breath of fresh air for the mind."},
     {"symbol": "⌁", "title": "Travel & wandering", "description": "Leaving familiar routes, collecting different scenery."},
