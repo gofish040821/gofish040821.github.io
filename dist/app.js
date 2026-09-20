@@ -202,6 +202,14 @@
     bindGallery();
     buildLangMenu();
     try { localStorage.setItem(STORAGE_KEY, code); } catch (error) { /* private mode */ }
+    // Keep the address bar shareable: ...?lang=ru stays in that language.
+    try {
+      const url = new URL(window.location.href);
+      if (url.searchParams.get('lang') !== code) {
+        url.searchParams.set('lang', code);
+        window.history.replaceState(null, '', url);
+      }
+    } catch (error) { /* file:// or sandboxed */ }
   }
 
   langToggle.addEventListener('click', () => {
@@ -222,11 +230,18 @@
 
   /* ---------------- init ---------------- */
   // English is the default; only an explicit earlier choice overrides it.
-  let initial = I18N.default;
+  // Priority: ?lang= in the URL  >  a previously chosen language  >  English.
+  let initial = null;
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved && translations[saved]) initial = saved;
-  } catch (error) { /* private mode */ }
+    const fromUrl = new URL(window.location.href).searchParams.get('lang');
+    if (fromUrl && translations[fromUrl]) initial = fromUrl;
+  } catch (error) { /* file:// */ }
+  if (!initial) {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && translations[saved]) initial = saved;
+    } catch (error) { /* private mode */ }
+  }
   buildLangMenu();
-  applyLanguage(initial);
+  applyLanguage(initial || I18N.default);
 })();

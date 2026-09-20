@@ -71,4 +71,9 @@ for (const file of ['style.css', 'app.js']) await copyFile(resolve(root, 'src', 
 await writeFile(resolve(root, 'dist/.nojekyll'), '');
 await writeFile(resolve(root, 'dist/robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${data.siteUrl}/sitemap.xml\n`);
 await writeFile(resolve(root, 'dist/sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${escape(data.siteUrl)}/</loc></url></urlset>\n`);
+
+// A missing path (e.g. gofish040821.github.io/gofish040821/, which reads as a
+// repo name rather than a route) would otherwise land on Pages' bare 404 page.
+const notFound = (await readFile(resolve(root, 'src/404.html'), 'utf8')).replace(/__SITE_URL__/g, data.siteUrl);
+await writeFile(resolve(root, 'dist/404.html'), notFound);
 console.log(`Built Gofish homepage: ${data.gallery.length} photos, ${data.research.length} research interests, ${Object.keys(translations).length} languages.`);
