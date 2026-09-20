@@ -5,3 +5,9 @@ Thumbs.db
 .env
 .env.*
 .sites-runtime/
+
+# local scratch: per-language page dumps and a throwaway static server
+.dump-*.html
+.serve.mjs
+_*.cjs
+_patch.cjs
