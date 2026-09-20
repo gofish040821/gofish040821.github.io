@@ -59,7 +59,7 @@ let html = template.replace(/\{\{(\w+)\}\}/g, (_, key) => {
 });
 // Inline dictionary, emitted before the deferred app.js so it is always available.
 // "<" and ">" are escaped so the JSON can never terminate the script element early.
-const json = JSON.stringify(payload).replace(/</g, '\u003c').replace(/>/g, '\u003e');
+const json = JSON.stringify(payload).replace(/</g, '\u005cu003c').replace(/>/g, '\u005cu003e');
 html = html.replace('</body>', `<script>window.__I18N__=${json};</script></body>`);
 
 await mkdir(resolve(root, 'dist'), { recursive: true });
