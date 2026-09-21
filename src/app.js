@@ -235,7 +235,6 @@
   const THEME_KEY = 'gofish-theme';
   const themeToggle = document.querySelector('#theme-toggle');
   const themeColorMeta = document.querySelector('#theme-color');
-  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
   const currentTheme = () => (root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
 
   function renderThemeToggle() {
@@ -253,14 +252,6 @@
   if (themeToggle) {
     themeToggle.addEventListener('click', () => applyTheme(currentTheme() === 'dark' ? 'light' : 'dark'));
   }
-  // Follow the OS only while the visitor has not made an explicit choice.
-  systemTheme.addEventListener('change', event => {
-    try {
-      if (localStorage.getItem(THEME_KEY)) return;
-      root.setAttribute('data-theme', event.matches ? 'dark' : 'light');
-      renderThemeToggle();
-    } catch (error) { /* private mode */ }
-  });
 
   /* ---------------- init ---------------- */
   // English is the default; only an explicit earlier choice overrides it.

@@ -13,11 +13,11 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23bd6549'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='44' fill='%23f7f5f0'%3Eg%3C/text%3E%3C/svg%3E">
   <title>Gofish — Math, Intelligence & Life</title>
   <script>
-    // Runs before first paint: a dark-mode visitor must never see a white flash.
+    // Runs before first paint: the site opens light for everyone; only a visitor
+    // who explicitly chose dark gets it, and must never see a white flash.
     (function () {
       try {
-        var saved = localStorage.getItem('gofish-theme');
-        var dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        var dark = localStorage.getItem('gofish-theme') === 'dark';
         document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
       } catch (error) { /* private mode */ }
     })();
