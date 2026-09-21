@@ -19,8 +19,8 @@
     {"number": "02", "title": "Physical AI", "subtitle": "Perception · Action · The real world", "description": "I'm curious about the questions that connect digital intelligence and the physical world: how to understand environments, build world models, and turn reasoning into reliable action?", "tags": ["Embodied intelligence", "World models", "Perception & decision"], "className": "physical"}
   ],
   "education": [
-    {"dates": "2026 — 2029", "degree": "Mathematics · Master's", "school": "Southern University of Science and Technology", "abbr": "SUSTech", "logo": "sustech.png", "note": "Enrolled · Expected to graduate in 2029", "current": true},
-    {"dates": "2022 — 2026", "degree": "Mathematical Foundation Science · Bachelor's", "school": "Dalian University of Technology", "abbr": "DUT", "logo": "dut.svg", "note": "Between mathematics and physics, building the foundation for understanding the world.", "current": false}
+    {"dates": "2026 — 2029", "degree": "Mathematics · Master's", "school": "Southern University of Science and Technology", "abbr": "SUSTech", "note": "Enrolled · Expected to graduate in 2029", "current": true},
+    {"dates": "2022 — 2026", "degree": "Mathematical Foundation Science · Bachelor's", "school": "Dalian University of Technology", "abbr": "DUT", "note": "Between mathematics and physics, building the foundation for understanding the world.", "current": false}
   ],
   "hobbies": [
     {"symbol": "↗", "title": "Badminton", "description": "Swing, run, sweat — a breath of fresh air for the mind."},

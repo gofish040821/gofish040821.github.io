@@ -136,7 +136,6 @@
             "degree": "Mathematics · Master's",
             "school": "Southern University of Science and Technology",
             "abbr": "SUSTech",
-            "logo": "sustech.png",
             "note": "Enrolled · Expected to graduate in 2029",
             "current": true
           },
@@ -145,7 +144,6 @@
             "degree": "Mathematical Foundation Science · Bachelor's",
             "school": "Dalian University of Technology",
             "abbr": "DUT",
-            "logo": "dut.svg",
             "note": "Between mathematics and physics, building the foundation for understanding the world.",
             "current": false
           }
@@ -325,7 +323,6 @@
             "degree": "数学 · 硕士",
             "school": "南方科技大学",
             "abbr": "SUSTech",
-            "logo": "sustech.png",
             "note": "在读 · 预计 2029 年毕业",
             "current": true
           },
@@ -334,7 +331,6 @@
             "degree": "数理基础科学 · 本科",
             "school": "大连理工大学",
             "abbr": "DUT",
-            "logo": "dut.svg",
             "note": "在数学与物理之间，建立理解世界的基础。",
             "current": false
           }
@@ -514,7 +510,6 @@
             "degree": "Mathématiques · Master",
             "school": "Southern University of Science and Technology",
             "abbr": "SUSTech",
-            "logo": "sustech.png",
             "note": "En cours · Diplôme prévu en 2029",
             "current": true
           },
@@ -523,7 +518,6 @@
             "degree": "Sciences mathématiques fondamentales · Licence",
             "school": "Dalian University of Technology",
             "abbr": "DUT",
-            "logo": "dut.svg",
             "note": "Entre mathématiques et physique, poser les fondations pour comprendre le monde.",
             "current": false
           }
@@ -703,7 +697,6 @@
             "degree": "Mathematik · Master",
             "school": "Southern University of Science and Technology",
             "abbr": "SUSTech",
-            "logo": "sustech.png",
             "note": "Laufend · Abschluss voraussichtlich 2029",
             "current": true
           },
@@ -712,7 +705,6 @@
             "degree": "Mathematik & Physik (Grundlagen) · Bachelor",
             "school": "Dalian University of Technology",
             "abbr": "DUT",
-            "logo": "dut.svg",
             "note": "Zwischen Mathematik und Physik das Fundament legen, um die Welt zu verstehen.",
             "current": false
           }
@@ -892,7 +884,6 @@
             "degree": "Matemáticas · Máster",
             "school": "Southern University of Science and Technology",
             "abbr": "SUSTech",
-            "logo": "sustech.png",
             "note": "Cursando · Graduación prevista en 2029",
             "current": true
           },
@@ -901,7 +892,6 @@
             "degree": "Ciencias de Base Matemática · Grado",
             "school": "Dalian University of Technology",
             "abbr": "DUT",
-            "logo": "dut.svg",
             "note": "Entre las matemáticas y la física, construyendo las bases para entender el mundo.",
             "current": false
           }
@@ -1081,7 +1071,6 @@
             "degree": "الرياضيات · ماجستير",
             "school": "جامعة العلوم والتكنولوجيا الجنوبية",
             "abbr": "SUSTech",
-            "logo": "sustech.png",
             "note": "قيد الدراسة · التخرج المتوقع عام 2029",
             "current": true
           },
@@ -1090,7 +1079,6 @@
             "degree": "العلوم الأساسية الرياضية · بكالوريوس",
             "school": "جامعة داليان للتكنولوجيا",
             "abbr": "DUT",
-            "logo": "dut.svg",
             "note": "بين الرياضيات والفيزياء، بناء الأساس لفهم العالم.",
             "current": false
           }
@@ -1270,7 +1258,6 @@
             "degree": "数学 · 修士",
             "school": "南方科技大学",
             "abbr": "SUSTech",
-            "logo": "sustech.png",
             "note": "在学中 · 2029年卒業予定",
             "current": true
           },
@@ -1279,7 +1266,6 @@
             "degree": "数理基礎科学 · 学士",
             "school": "大連理工大学",
             "abbr": "DUT",
-            "logo": "dut.svg",
             "note": "数学と物理のあいだで、世界を理解する土台を築く。",
             "current": false
           }
@@ -1459,7 +1445,6 @@
             "degree": "수학 · 석사",
             "school": "남방과학기술대학",
             "abbr": "SUSTech",
-            "logo": "sustech.png",
             "note": "재학 중 · 2029년 졸업 예정",
             "current": true
           },
@@ -1468,7 +1453,6 @@
             "degree": "수리기초과학 · 학사",
             "school": "다롄이공대학",
             "abbr": "DUT",
-            "logo": "dut.svg",
             "note": "수학과 물리 사이에서, 세계를 이해하는 토대를 다지다.",
             "current": false
           }
@@ -1648,7 +1632,6 @@
             "degree": "Математика · Магистратура",
             "school": "Южный университет науки и технологий",
             "abbr": "SUSTech",
-            "logo": "sustech.png",
             "note": "Зачислен · Ожидаемое окончание в 2029",
             "current": true
           },
@@ -1657,7 +1640,6 @@
             "degree": "Фундаментальная математика · Бакалавриат",
             "school": "Даляньский технологический университет",
             "abbr": "DUT",
-            "logo": "dut.svg",
             "note": "Между математикой и физикой — фундамент для понимания мира.",
             "current": false
           }

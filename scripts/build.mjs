@@ -11,11 +11,6 @@ const photoPath = (name, small = false) => {
   if (!/^[a-z0-9-]+$/.test(name)) throw new Error(`Invalid photo name: ${name}`);
   return `./assets/photos/${name}${small ? '-small' : ''}.webp`;
 };
-// Crests live in dist/assets/logos and are committed as-is (svg or png).
-const logoPath = (name) => {
-  if (!/^[a-z0-9.-]+\.(svg|png)$/.test(name)) throw new Error(`Invalid logo name: ${name}`);
-  return `./assets/logos/${name}`;
-};
 for (const key of ['github', 'siteUrl']) {
   if (!/^https:\/\//.test(data[key])) throw new Error(`${key} should be an https URL`);
 }
@@ -24,7 +19,7 @@ for (const key of ['github', 'siteUrl']) {
 // --- exactly the same markup, so switching language never shifts the layout.
 const renderAbout = items => items.map(text => `<p>${escape(text)}</p>`).join('\n');
 const renderResearch = items => items.map(item => `<article class="research-card ${escape(item.className)}"><div class="research-card-top"><span class="card-marker">${escape(item.number)}</span><span class="research-type">A QUESTION TO EXPLORE</span></div><h3>${escape(item.title)}</h3><p class="research-subtitle">${escape(item.subtitle)}</p><p class="research-description">${escape(item.description)}</p><div class="tags">${item.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div></article>`).join('\n');
-const renderEducation = items => items.map(item => `<article class="education-item${item.current ? ' current' : ''}"><div class="education-meta"><span class="education-dates">${escape(item.dates)}</span><span class="education-degree">${escape(item.degree)}</span></div><div class="education-head">${item.logo ? `<span class="school-crest"><img src="${logoPath(item.logo)}" alt="" loading="lazy" decoding="async"></span>` : ''}<div><h3>${escape(item.school)}</h3><p class="school-abbr" lang="en">${escape(item.abbr)}</p></div></div><p class="education-note">${escape(item.note)}</p></article>`).join('\n');
+const renderEducation = items => items.map(item => `<article class="education-item${item.current ? ' current' : ''}"><div class="education-meta"><span class="education-dates">${escape(item.dates)}</span><span class="education-degree">${escape(item.degree)}</span></div><h3>${escape(item.school)}</h3><p class="school-abbr" lang="en">${escape(item.abbr)}</p><p class="education-note">${escape(item.note)}</p></article>`).join('\n');
 const renderHobbies = items => items.map(item => `<article class="hobby"><div class="hobby-title"><span class="hobby-symbol" aria-hidden="true">${escape(item.symbol)}</span><h3>${escape(item.title)}</h3></div><p>${escape(item.description)}</p></article>`).join('\n');
 const renderGallery = items => items.map((item, i) => `<figure class="photo-card"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" alt="${escape(item.alt)}" width="720" height="960" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">↗</span></a><figcaption><span>${escape(item.title)}</span><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`).join('\n');
 
@@ -71,7 +66,6 @@ await mkdir(resolve(root, 'dist'), { recursive: true });
 for (const name of new Set(['avatar', data.heroImage, ...data.gallery.map(item => item.image)])) {
   for (const small of [false, true]) await access(resolve(root, 'dist', photoPath(name, small)));
 }
-for (const item of data.education) if (item.logo) await access(resolve(root, 'dist', logoPath(item.logo)));
 await writeFile(resolve(root, 'dist/index.html'), html);
 for (const file of ['style.css', 'app.js', 'busuanzi.pure.mini.js']) await copyFile(resolve(root, 'src', file), resolve(root, 'dist', file));
 await writeFile(resolve(root, 'dist/.nojekyll'), '');
