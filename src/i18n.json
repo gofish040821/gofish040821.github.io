@@ -116,11 +116,11 @@
             "number": "01",
             "title": "Agent RSI",
             "subtitle": "Agents · Recursive self-improvement",
-            "description": "I'm interested in how agents accumulate experience through action, feedback, and reflection, gradually improving their strategies and abilities. I also want to understand: how can we reliably measure such improvement?",
+            "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
             "tags": [
-              "Self-learning",
-              "Feedback & reflection",
-              "Capability evaluation"
+              "Held-out evaluation",
+              "Failure analysis",
+              "Rollback"
             ],
             "className": "agent"
           },
@@ -128,11 +128,11 @@
             "number": "02",
             "title": "Physical AI",
             "subtitle": "Perception · Action · The real world",
-            "description": "I'm curious about the questions that connect digital intelligence and the physical world: how to understand environments, build world models, and turn reasoning into reliable action?",
+            "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
             "tags": [
-              "Embodied intelligence",
-              "World models",
-              "Perception & decision"
+              "Pick-and-place",
+              "Geometric priors",
+              "Uncertainty estimation"
             ],
             "className": "physical"
           }
@@ -310,11 +310,11 @@
             "number": "01",
             "title": "Agent RSI",
             "subtitle": "智能体 · 递归自我改进",
-            "description": "我关注智能体如何在行动、反馈与反思中积累经验，逐步改进自己的策略与能力。也希望理解：我们该如何可靠地衡量这种改进？",
+            "description": "如果智能体自行改写提示词、工具使用策略或记忆，怎样判断它真的变强了，而不是只记住了测试题？我想探索一个可验证的改进循环：在未见任务上比较前后表现，分析失败原因，再决定保留还是回滚改动。",
             "tags": [
-              "自主学习",
-              "反馈与反思",
-              "能力评估"
+              "未见任务评估",
+              "失败归因",
+              "改动回滚"
             ],
             "className": "agent"
           },
@@ -322,11 +322,11 @@
             "number": "02",
             "title": "Physical AI",
             "subtitle": "感知 · 行动 · 真实世界",
-            "description": "我对连接数字智能与物理世界的问题充满好奇：如何理解环境、建立世界模型，并把推理转化为可靠的行动？",
+            "description": "当摄像头视角不完整、仿真与现实存在偏差时，机器人怎样稳定地完成抓取和放置？我想探索几何约束与不确定性估计如何帮助它规划动作，并在执行后检查结果。",
             "tags": [
-              "具身智能",
-              "世界模型",
-              "感知与决策"
+              "抓取与放置",
+              "几何约束",
+              "不确定性估计"
             ],
             "className": "physical"
           }
@@ -504,11 +504,11 @@
             "number": "01",
             "title": "Agent RSI",
             "subtitle": "Agents · Auto-amélioration récursive",
-            "description": "Je m'intéresse à la façon dont les agents accumulent de l'expérience par l'action, le retour et la réflexion, améliorant peu à peu leurs stratégies et leurs capacités. Je veux aussi comprendre : comment mesurer fiablement cette amélioration ?",
+            "description": "Si un agent réécrit ses consignes, sa stratégie d'utilisation des outils ou sa mémoire, comment savoir s'il progresse vraiment au lieu de mémoriser les tâches de test ? J'aimerais explorer une boucle vérifiable : comparer les versions sur des tâches inédites, analyser les échecs, puis conserver ou annuler chaque changement.",
             "tags": [
-              "Auto-apprentissage",
-              "Retour & réflexion",
-              "Évaluation des capacités"
+              "Évaluation sur tâches inédites",
+              "Analyse des échecs",
+              "Retour arrière"
             ],
             "className": "agent"
           },
@@ -516,11 +516,11 @@
             "number": "02",
             "title": "Physical AI",
             "subtitle": "Perception · Action · Le monde réel",
-            "description": "Je m'interroge sur ce qui relie l'intelligence numérique au monde physique : comprendre l'environnement, construire des modèles du monde et transformer le raisonnement en action fiable.",
+            "description": "Quand la vue de la caméra est incomplète et que la simulation diffère du réel, comment un robot peut-il saisir et déposer des objets de façon fiable ? J'aimerais étudier comment les contraintes géométriques et l'estimation de l'incertitude guident la planification et la vérification du résultat.",
             "tags": [
-              "Intelligence incarnée",
-              "Modèles du monde",
-              "Perception & décision"
+              "Saisie et dépose",
+              "Contraintes géométriques",
+              "Estimation de l'incertitude"
             ],
             "className": "physical"
           }
@@ -698,11 +698,11 @@
             "number": "01",
             "title": "Agent RSI",
             "subtitle": "Agenten · Rekursive Selbstverbesserung",
-            "description": "Mich interessiert, wie Agenten durch Handeln, Feedback und Reflexion Erfahrung sammeln und ihre Strategien und Fähigkeiten nach und nach verbessern. Und ich möchte verstehen: Wie lässt sich diese Verbesserung zuverlässig messen?",
+            "description": "Wenn ein Agent seine Anweisungen, Werkzeugstrategie oder sein Gedächtnis selbst ändert, woher wissen wir, ob er sich wirklich verbessert statt nur Testaufgaben auswendig zu lernen? Ich möchte einen überprüfbaren Zyklus untersuchen: Versionen an unbekannten Aufgaben vergleichen, Fehler analysieren und Änderungen behalten oder zurücknehmen.",
             "tags": [
-              "Autonomes Lernen",
-              "Feedback & Reflexion",
-              "Fähigkeitsbewertung"
+              "Tests an neuen Aufgaben",
+              "Fehleranalyse",
+              "Änderungen zurücknehmen"
             ],
             "className": "agent"
           },
@@ -710,11 +710,11 @@
             "number": "02",
             "title": "Physical AI",
             "subtitle": "Wahrnehmung · Handeln · Echte Welt",
-            "description": "Mich beschäftigen die Fragen an der Schnittstelle von digitaler Intelligenz und physischer Welt: Wie verstehen wir Umgebungen, bauen Weltmodelle und verwandeln Denken in verlässliches Handeln?",
+            "description": "Wie kann ein Roboter Gegenstände zuverlässig greifen und ablegen, wenn die Kamerasicht unvollständig ist und Simulation und Realität voneinander abweichen? Ich möchte untersuchen, wie geometrische Bedingungen und Unsicherheitsschätzungen die Planung und Überprüfung von Handlungen unterstützen.",
             "tags": [
-              "Verkörperte Intelligenz",
-              "Weltmodelle",
-              "Wahrnehmung & Entscheidung"
+              "Greifen und Ablegen",
+              "Geometrische Bedingungen",
+              "Unsicherheitsschätzung"
             ],
             "className": "physical"
           }
@@ -892,11 +892,11 @@
             "number": "01",
             "title": "Agent RSI",
             "subtitle": "Agentes · Automejora recursiva",
-            "description": "Me interesa cómo los agentes acumulan experiencia mediante la acción, la retroalimentación y la reflexión, mejorando poco a poco sus estrategias y capacidades. También quiero entender: ¿cómo medir esa mejora de forma fiable?",
+            "description": "Si un agente modifica sus instrucciones, su estrategia de uso de herramientas o su memoria, ¿cómo sabemos si mejora de verdad en lugar de memorizar las tareas de prueba? Quiero explorar un ciclo verificable: comparar versiones en tareas no vistas, analizar fallos y conservar o revertir cada cambio.",
             "tags": [
-              "Autoaprendizaje",
-              "Retroalimentación y reflexión",
-              "Evaluación de capacidades"
+              "Evaluación en tareas nuevas",
+              "Análisis de fallos",
+              "Reversión de cambios"
             ],
             "className": "agent"
           },
@@ -904,11 +904,11 @@
             "number": "02",
             "title": "Physical AI",
             "subtitle": "Percepción · Acción · El mundo real",
-            "description": "Me intrigan las preguntas que unen la inteligencia digital y el mundo físico: ¿cómo entender el entorno, construir modelos del mundo y convertir el razonamiento en acción fiable?",
+            "description": "Cuando la cámara ofrece una vista incompleta y la simulación difiere de la realidad, ¿cómo puede un robot agarrar y colocar objetos con fiabilidad? Quiero explorar cómo las restricciones geométricas y las estimaciones de incertidumbre ayudan a planificar acciones y comprobar sus resultados.",
             "tags": [
-              "Inteligencia encarnada",
-              "Modelos del mundo",
-              "Percepción y decisión"
+              "Agarre y colocación",
+              "Restricciones geométricas",
+              "Estimación de incertidumbre"
             ],
             "className": "physical"
           }
@@ -1086,11 +1086,11 @@
             "number": "01",
             "title": "Agent RSI",
             "subtitle": "الوكلاء · التحسين الذاتي التكراري",
-            "description": "أهتم بكيفية تراكم خبرة الوكلاء من خلال الفعل والتغذية الراجعة والتفكر، فيحسّنون تدريجيًا استراتيجياتهم وقدراتهم. وأريد أيضًا أن أفهم: كيف نقيس هذا التحسن بطريقة موثوقة؟",
+            "description": "إذا عدّل الوكيل تعليماته أو طريقة استخدام أدواته أو ذاكرته بنفسه، فكيف نعرف أنه تحسّن فعلًا بدلًا من حفظ مهام الاختبار؟ أود استكشاف دورة تحسين قابلة للتحقق: مقارنة النسخ في مهام جديدة، وتحليل الإخفاقات، ثم الإبقاء على كل تعديل أو التراجع عنه.",
             "tags": [
-              "التعلم الذاتي",
-              "التغذية الراجعة والتفكر",
-              "تقييم القدرات"
+              "التقييم على مهام جديدة",
+              "تحليل الإخفاقات",
+              "التراجع عن التعديلات"
             ],
             "className": "agent"
           },
@@ -1098,11 +1098,11 @@
             "number": "02",
             "title": "Physical AI",
             "subtitle": "الإدراك · الفعل · العالم الحقيقي",
-            "description": "أشعر بالفضول تجاه الأسئلة التي تربط الذكاء الرقمي بالعالم الفيزيائي: كيف نفهم البيئة، ونبني نماذج للعالم، ونحوّل الاستدلال إلى فعل موثوق؟",
+            "description": "كيف يستطيع الروبوت إمساك الأشياء ووضعها بثبات حين تكون رؤية الكاميرا ناقصة وتختلف المحاكاة عن الواقع؟ أود دراسة كيف تساعد القيود الهندسية وتقديرات عدم اليقين في تخطيط الأفعال والتحقق من نتائجها.",
             "tags": [
-              "ذكاء متجسد",
-              "نماذج العالم",
-              "الإدراك والقرار"
+              "الإمساك والوضع",
+              "القيود الهندسية",
+              "تقدير عدم اليقين"
             ],
             "className": "physical"
           }
@@ -1280,11 +1280,11 @@
             "number": "01",
             "title": "Agent RSI",
             "subtitle": "エージェント · 再帰的自己改善",
-            "description": "エージェントが行動・フィードバック・内省を通じて経験を蓄え、自らの戦略と能力を少しずつ改善していく仕組みに興味があります。そして、その改善をどう確実に測れるのかも理解したいと思っています。",
+            "description": "エージェントがプロンプト、ツールの使い方、記憶を自ら書き換えたとき、テスト課題を覚えただけではなく本当に改善したとどう判断できるでしょうか。未見の課題で変更前後を比較し、失敗の原因を調べ、変更を採用するか元に戻すかを決める、検証可能な改善の循環を考えたいです。",
             "tags": [
-              "自己学習",
-              "フィードバックと内省",
-              "能力評価"
+              "未見課題での評価",
+              "失敗原因の分析",
+              "変更の差し戻し"
             ],
             "className": "agent"
           },
@@ -1292,11 +1292,11 @@
             "number": "02",
             "title": "Physical AI",
             "subtitle": "知覚 · 行動 · 現実世界",
-            "description": "デジタルの知能と物理世界をつなぐ問いに惹かれます。環境をどう理解し、世界モデルをどう構築し、推論を信頼できる行動へどう変えるのか。",
+            "description": "カメラで見える範囲が限られ、シミュレーションと現実にずれがあるとき、ロボットはどうすれば安定して物をつかみ、置けるでしょうか。幾何学的な制約と不確実性の推定を使って動作を計画し、結果を確かめる方法を考えたいです。",
             "tags": [
-              "身体性知能",
-              "世界モデル",
-              "知覚と意思決定"
+              "把持と配置",
+              "幾何学的制約",
+              "不確実性の推定"
             ],
             "className": "physical"
           }
@@ -1474,11 +1474,11 @@
             "number": "01",
             "title": "Agent RSI",
             "subtitle": "에이전트 · 재귀적 자기 개선",
-            "description": "에이전트가 행동·피드백·성찰을 통해 경험을 쌓고 전략과 능력을 조금씩 개선해 가는 방식에 관심이 있습니다. 그리고 그 개선을 어떻게 신뢰성 있게 측정할 수 있을지도 알고 싶습니다.",
+            "description": "에이전트가 프롬프트, 도구 사용 방식, 기억을 스스로 바꿀 때, 시험 문제를 외운 것이 아니라 실제로 나아졌는지 어떻게 알 수 있을까요? 보지 못한 과제에서 변경 전후를 비교하고 실패 원인을 분석한 뒤, 변경을 유지하거나 되돌리는 검증 가능한 개선 과정을 탐구하고 싶습니다.",
             "tags": [
-              "자기 학습",
-              "피드백과 성찰",
-              "능력 평가"
+              "새 과제에서 평가",
+              "실패 원인 분석",
+              "변경 되돌리기"
             ],
             "className": "agent"
           },
@@ -1486,11 +1486,11 @@
             "number": "02",
             "title": "Physical AI",
             "subtitle": "지각 · 행동 · 현실 세계",
-            "description": "디지털 지능과 물리 세계를 잇는 질문들에 끌립니다. 환경을 어떻게 이해하고, 세계 모델을 어떻게 구축하며, 추론을 신뢰할 수 있는 행동으로 어떻게 바꿀 것인지.",
+            "description": "카메라의 시야가 불완전하고 시뮬레이션과 현실이 다를 때, 로봇은 물체를 어떻게 안정적으로 집어 옮길 수 있을까요? 기하학적 제약과 불확실성 추정이 동작 계획과 결과 확인에 어떻게 도움이 되는지 탐구하고 싶습니다.",
             "tags": [
-              "체화된 지능",
-              "세계 모델",
-              "지각과 의사결정"
+              "집기와 놓기",
+              "기하학적 제약",
+              "불확실성 추정"
             ],
             "className": "physical"
           }
@@ -1668,11 +1668,11 @@
             "number": "01",
             "title": "Agent RSI",
             "subtitle": "Агенты · Рекурсивное самоулучшение",
-            "description": "Мне интересно, как агенты накапливают опыт через действие, обратную связь и рефлексию, постепенно улучшая свои стратегии и способности. И ещё: как надёжно измерить такое улучшение?",
+            "description": "Если агент сам меняет инструкции, способ работы с инструментами или память, как понять, что он действительно стал лучше, а не запомнил тестовые задания? Я хочу изучить проверяемый цикл: сравнивать версии на новых задачах, разбирать ошибки и сохранять либо отменять изменения.",
             "tags": [
-              "Самообучение",
-              "Обратная связь и рефлексия",
-              "Оценка способностей"
+              "Оценка на новых задачах",
+              "Анализ ошибок",
+              "Откат изменений"
             ],
             "className": "agent"
           },
@@ -1680,11 +1680,11 @@
             "number": "02",
             "title": "Physical AI",
             "subtitle": "Восприятие · Действие · Реальный мир",
-            "description": "Меня занимают вопросы, связывающие цифровой интеллект и физический мир: как понимать среду, строить модели мира и превращать рассуждения в надёжные действия?",
+            "description": "Как роботу надёжно захватывать и размещать предметы, если обзор камеры неполный, а симуляция отличается от реальности? Я хочу изучить, как геометрические ограничения и оценка неопределённости помогают планировать действия и проверять результат.",
             "tags": [
-              "Воплощённый интеллект",
-              "Модели мира",
-              "Восприятие и решение"
+              "Захват и размещение",
+              "Геометрические ограничения",
+              "Оценка неопределённости"
             ],
             "className": "physical"
           }
