@@ -56,31 +56,31 @@
         <div class="hero-actions"><a class="button primary" href="#research"><span data-i18n="heroCtaExplore">Explore my interests</span> <span aria-hidden="true">↗</span></a><a class="text-link" href="#life"><span data-i18n="heroCtaLife">See my life</span> <span aria-hidden="true">↓</span></a></div>
       </div>
       <figure class="hero-figure">
-        <div class="photo-mat"><img src="./assets/photos/{{heroImage}}.webp" alt="Gofish sitting on a rock with mountain ranges behind" width="1800" height="1350" fetchpriority="high"><span class="photo-label">SOMEWHERE OUT THERE</span></div>
+        <div class="photo-mat"><img src="./assets/photos/{{heroImage}}.webp" alt="Gofish sitting on a rock with mountain ranges behind" width="1800" height="1350" fetchpriority="high"><span class="photo-label" data-i18n="photoLabel">SOMEWHERE OUT THERE</span></div>
         <figcaption><span data-i18n="heroCaption">{{heroCaption}}</span><span class="figure-index" aria-hidden="true">01 / 10</span></figcaption>
       </figure>
     </section>
     <section class="about section wrap" id="about" aria-labelledby="about-title">
-      <div class="section-aside"><p class="section-number">01 / ABOUT</p><h2 id="about-title"><span data-i18n="aboutTitle">About</span><span class="accent">.</span></h2><p class="aside-note" data-i18n="aboutAside">Someone who thinks seriously<br>and lives seriously too.</p><p class="profile-note" data-i18n="profileNote">{{profileNote}}</p></div>
+      <div class="section-aside"><p class="section-number" data-i18n="sectionAbout">01 / ABOUT</p><h2 id="about-title"><span data-i18n="aboutTitle">About</span><span class="accent">.</span></h2><p class="aside-note" data-i18n="aboutAside">Someone who thinks seriously<br>and lives seriously too.</p><p class="profile-note" data-i18n="profileNote">{{profileNote}}</p></div>
       <div class="about-main"><div data-i18n-section="about">{{about}}</div></div>
     </section>
     <section class="research section wrap" id="research" aria-labelledby="research-title">
-      <div class="section-top"><div><p class="section-number">02 / RESEARCH INTERESTS</p><h2 id="research-title"><span data-i18n="researchTitle">What I'm curious about</span><span class="accent">.</span></h2></div></div>
+      <div class="section-top"><div><p class="section-number" data-i18n="sectionResearch">02 / RESEARCH INTERESTS</p><h2 id="research-title"><span data-i18n="researchTitle">What I'm curious about</span><span class="accent">.</span></h2></div></div>
       <div class="research-grid" data-i18n-section="research">{{research}}</div>
     </section>
     <section class="education section wrap" id="education" aria-labelledby="education-title">
-      <div class="section-aside"><p class="section-number">03 / EDUCATION</p><h2 id="education-title"><span data-i18n="educationTitle">Education</span><span class="accent">.</span></h2></div>
+      <div class="section-aside"><p class="section-number" data-i18n="sectionEducation">03 / EDUCATION</p><h2 id="education-title"><span data-i18n="educationTitle">Education</span><span class="accent">.</span></h2></div>
       <div class="timeline" data-i18n-section="education">{{education}}</div>
     </section>
     <section class="life-section" id="life" aria-labelledby="life-title">
       <div class="wrap">
-        <div class="section-top"><div><p class="section-number">04 / LIFE, IN FRAGMENTS</p><h2 id="life-title"><span data-i18n="lifeTitle">Also living fully</span><span class="accent">.</span></h2></div></div>
+        <div class="section-top"><div><p class="section-number" data-i18n="sectionLife">04 / LIFE, IN FRAGMENTS</p><h2 id="life-title"><span data-i18n="lifeTitle">Also living fully</span><span class="accent">.</span></h2></div></div>
         <div class="hobbies" data-i18n-section="hobbies">{{hobbies}}</div>
         <div class="gallery" id="gallery" data-i18n-section="gallery">{{gallery}}</div>
         <button id="gallery-toggle" class="button gallery-toggle" type="button" aria-expanded="false" aria-controls="gallery" hidden>Show all 10 photos <span aria-hidden="true">＋</span></button>
       </div>
     </section>
-    <section class="closing wrap" aria-labelledby="closing-title"><span class="closing-mark" aria-hidden="true">✳</span><p class="eyebrow">STILL LEARNING. STILL EXPLORING.</p><h2 id="closing-title" data-i18n="closing">{{closing}}</h2><p data-i18n="closingText">{{closingText}}</p><div class="closing-links"><a class="button primary" href="{{github}}" target="_blank" rel="noopener noreferrer"><span data-i18n="closingCta">Find me on GitHub</span> <span aria-hidden="true">↗</span></a>{{emailLink}}</div></section>
+    <section class="closing wrap" aria-labelledby="closing-title"><span class="closing-mark" aria-hidden="true">✳</span><p class="eyebrow" data-i18n="closingEyebrow">STILL LEARNING. STILL EXPLORING.</p><h2 id="closing-title" data-i18n="closing">{{closing}}</h2><p data-i18n="closingText">{{closingText}}</p><div class="closing-links"><a class="button primary" href="{{github}}" target="_blank" rel="noopener noreferrer"><span data-i18n="closingCta">Find me on GitHub</span> <span aria-hidden="true">↗</span></a>{{emailLink}}</div></section>
   </main>
   <footer class="wrap site-footer"><span>© <span id="year">2026</span> {{name}}<span class="footer-separator">/</span><span data-i18n="footerTag">Stay curious, keep exploring.</span></span><span class="visit-stats"><span id="busuanzi_container_site_pv" class="visit-stat"><span data-i18n="statsViews">Total visits</span> <span id="busuanzi_value_site_pv" class="visit-value"></span></span><span id="busuanzi_container_site_uv" class="visit-stat"><span class="visit-sep" aria-hidden="true">&middot;</span> <span data-i18n="statsVisitors">Visitors</span> <span id="busuanzi_value_site_uv" class="visit-value"></span></span></span><span><span data-i18n="footerUpdated">Updated</span> {{updated}} <a href="#home" aria-label="Back to top" data-i18n-aria="backToTop"><span data-i18n="backToTop">Back to top</span> ↑</a></span></footer>
   <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-toolbar"><span id="lightbox-count" aria-live="polite"></span><button type="button" class="icon-button" id="lightbox-close" aria-label="Close photo" data-i18n-aria="lightboxClose">×</button></div><div class="lightbox-stage"><button type="button" class="icon-button lightbox-prev" id="lightbox-prev" aria-label="Previous photo" data-i18n-aria="lightboxPrev">←</button><img id="lightbox-image" alt="" width="1800" height="1350"><button type="button" class="icon-button lightbox-next" id="lightbox-next" aria-label="Next photo" data-i18n-aria="lightboxNext">→</button></div><div class="lightbox-caption"><h2 id="lightbox-title"></h2><p id="lightbox-description"></p></div></dialog>

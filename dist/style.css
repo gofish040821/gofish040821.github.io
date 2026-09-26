@@ -141,3 +141,13 @@
  .lightbox-stage img{height:50dvh;max-height:50dvh;width:calc(100% - 112px)}
  .lightbox-prev,.lightbox-next{position:static}.lightbox-caption{padding-top:6px}
 }
+/* Quiet editorial research layout: fine rules and a little terracotta. */
+.research-grid{gap:clamp(24px,4vw,54px)}
+.research-card,.research-card.physical{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:25px 0 14px;overflow:visible}
+.research-card-top{margin-bottom:19px}
+.research-card h3{font-size:clamp(29px,3vw,36px)}
+.research-description{min-height:0}
+.research-card .tags span{background:transparent}
+[data-theme="dark"] .research-card,[data-theme="dark"] .research-card.physical{background:transparent}
+@media(max-width:760px){.research-card,.research-card.physical{padding:22px 0 16px}}
+@media(max-width:1050px){.hero-headline br,.hero-description br{display:initial}}
