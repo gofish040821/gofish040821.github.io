@@ -83,3 +83,61 @@
 @media(max-width:760px){.theme-toggle{width:32px;height:32px;font-size:14px}.visit-sep{margin:0 4px}}
 /* Printing must never come out dark, and the counter is meaningless on paper. */
 @media print{[data-theme="dark"]{--paper:#fff;--ink:#000;--muted:#444;--accent:#8a4630;--line:#ccc;--soft:#fff;color-scheme:light}.theme-toggle,.visit-stats{display:none!important}}
+
+/* Responsive layout: allow translated content to wrap without widening the page. */
+.hero>*,.about>*,.education>*,.research-grid>*,.hobbies>*,.section-top>*{min-width:0}
+.hero-headline,.hero-description,.about-main,.research-card,.education-item,.hobby,.photo-card figcaption,.closing{overflow-wrap:anywhere}
+.hero-actions,.closing-links,.education-meta,.site-footer{flex-wrap:wrap}
+.hero-actions>a{max-width:100%}
+.header-inner{gap:16px}.brand,.lang-switch,.menu-toggle{flex-shrink:0}
+.desktop-nav{margin-left:0;margin-inline-start:auto;gap:22px;white-space:nowrap}
+.lang-toggle,.theme-toggle,.menu-toggle,.lang-option{min-height:44px}
+.theme-toggle,.menu-toggle{min-width:44px}
+.lang-menu{max-height:min(420px,calc(100dvh - 100px));overflow-y:auto;max-width:calc(100vw - 32px)}
+.research-card-top{gap:12px}.research-type{overflow-wrap:anywhere}
+.site-footer>span{min-width:0}.visit-stats{white-space:normal}
+[dir="rtl"] .timeline{border-right-color:var(--line)}
+@media(max-width:1200px){
+ .site-header{height:auto;min-height:74px}.header-inner{min-height:74px;gap:12px}
+ .desktop-nav,.header-github{display:none}
+ .brand{margin-inline-end:auto}
+ .menu-toggle{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:transparent;width:44px;height:44px;border:1px solid var(--line);border-radius:4px}
+ .menu-toggle span{height:1px;width:19px;background:var(--ink);transition:transform .2s}
+ .menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(3.5px) rotate(45deg)}
+ .menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+ .mobile-nav{display:grid;position:absolute;top:100%;inset-inline:0;width:100%;padding:12px 24px 18px;box-shadow:0 18px 25px #463c2510}
+ .mobile-nav a{padding:10px 0;border-bottom:1px solid var(--line)}
+}
+@media(min-width:761px) and (max-width:1000px){
+ .hero{gap:28px;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+ .hero-actions{gap:16px}.hobbies{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+ .wrap{width:calc(100% - 32px)}.header-inner{gap:8px}
+ .brand{font-size:23px;gap:7px}.brand img{width:28px;height:28px}
+ .lang-toggle{font-size:13px;padding-inline:8px}
+ .hero{min-height:0;padding-block:32px 42px;gap:32px}
+ .hero h1{margin-top:12px}.name{font-size:clamp(64px,20vw,86px)}
+ .hero-headline{font-size:clamp(22px,5.8vw,27px);letter-spacing:0}
+ .hero-headline br{display:none}.hero-actions{gap:14px 20px}
+ .hero-actions .text-link{min-height:44px}.hero-figure{transform:none;margin:0;width:100%}
+ .research-card{padding:22px 18px}.research-type{font-size:11px;letter-spacing:1px}
+ .hobbies,.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}
+ .hobby-title{align-items:flex-start}.hobby-symbol{flex-shrink:0}
+ .photo-card:nth-child(n){padding-top:0}.photo-card figcaption{align-items:flex-start}
+ .photo-number{flex-shrink:0}.site-footer>span:last-child{flex-wrap:wrap;gap:10px}
+ .site-footer a{margin-left:0;margin-inline-start:12px}
+ [dir="rtl"] .timeline{padding-right:21px;margin-left:0;margin-right:5px}
+ [dir="rtl"] .education-item:before{right:-27px}
+ .lightbox .icon-button{width:44px;height:44px}
+}
+@media(max-width:360px){
+ .header-inner{gap:6px}.brand{font-size:21px}.brand img{display:none}
+ .hobbies{grid-template-columns:1fr}.hero-actions{align-items:stretch;flex-direction:column}
+ .hero-actions .text-link{justify-content:center}
+}
+@media(max-height:500px) and (orientation:landscape){
+ .lightbox{max-height:96dvh;padding:8px 16px}.lightbox-stage{padding-bottom:0;gap:12px}
+ .lightbox-stage img{height:50dvh;max-height:50dvh;width:calc(100% - 112px)}
+ .lightbox-prev,.lightbox-next{position:static}.lightbox-caption{padding-top:6px}
+}

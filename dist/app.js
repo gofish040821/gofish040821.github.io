@@ -30,7 +30,7 @@
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !menu.hidden) { closeMenu(); menuButton.focus(); }
   });
-  window.matchMedia('(min-width: 761px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+  window.matchMedia('(min-width: 1201px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
 
   /* ---------------- scrollspy ---------------- */
   const links = [...document.querySelectorAll('.desktop-nav a')];
