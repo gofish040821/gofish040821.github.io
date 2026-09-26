@@ -29,16 +29,16 @@
     {"symbol": "▷", "title": "Film & stories", "description": "Living another life through a screen."}
   ],
   "gallery": [
-    {"image": "mountains", "title": "Among the mountains", "caption": "Look up at the mountains, and see a bigger world.", "alt": "Gofish sitting on a rock with mountain ranges behind", "position": "45% 60%"},
-    {"image": "blue-lake", "title": "Blue by the lake", "caption": "Slow your steps down a little.", "alt": "Gofish with a camera standing in front of a blue lake", "position": "50% 56%"},
-    {"image": "rooftops", "title": "Another side of the city", "caption": "Above the rooftops, a different view of everyday life.", "alt": "Gofish on a city rooftop terrace with classical architecture in the distance", "position": "52% 50%"},
-    {"image": "green-lake", "title": "Green and mountain breeze", "caption": "Leave yourself a little time close to nature.", "alt": "Gofish standing by a wooden fence beside a green mountain lake", "position": "50% 62%"},
-    {"image": "snow", "title": "A sunny day in the snow", "caption": "Sunshine, snow, and a journey worth remembering.", "alt": "Gofish on a snowy mountain holding a Jungfrau souvenir flag", "position": "50% 68%"},
-    {"image": "museum", "title": "Meeting art", "caption": "In the gallery, a passing glance at time.", "alt": "Gofish taking a selfie inside a museum hall", "position": "45% 50%"},
-    {"image": "evening", "title": "Waiting for sunset", "caption": "The city lights come on, one by one.", "alt": "Gofish posing with a city skyline at dusk", "position": "40% 55%"},
-    {"image": "colosseum", "title": "Walking into history", "caption": "Along the old stone walls, feeling the scale of time.", "alt": "Gofish taking a selfie outside the ancient Roman Colosseum", "position": "50% 57%"},
-    {"image": "summit", "title": "Clouds and distance", "caption": "The mountain wind passes, and the mood opens up.", "alt": "Gofish wearing sunglasses on a mountain viewpoint", "position": "50% 45%"},
-    {"image": "aircraft", "title": "Curious about flight", "caption": "Some things always make you stop and stare.", "alt": "Gofish standing in front of an aircraft on outdoor display", "position": "50% 50%"}
+    {"image":"mountains","title":"Dolomites, Italy","caption":"A pause among the peaks.","alt":"Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind","position":"45% 60%"},
+    {"image":"blue-lake","title":"Lake Thun, Switzerland","caption":"Blue water, slower steps.","alt":"Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake","position":"50% 56%"},
+    {"image":"rooftops","title":"Paris Opera House","caption":"A moment in Paris.","alt":"Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance","position":"52% 50%"},
+    {"image":"green-lake","title":"Lake Carezza, Italy","caption":"Green water beneath the mountains.","alt":"Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake","position":"50% 62%"},
+    {"image":"snow","title":"Jungfrau summit","caption":"Above the snow and clouds.","alt":"Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag","position":"50% 68%"},
+    {"image":"museum","title":"Mona Lisa, Louvre","caption":"Face to face with a familiar portrait.","alt":"Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall","position":"45% 50%"},
+    {"image":"evening","title":"Piazzale Michelangelo","caption":"Florence at dusk.","alt":"Piazzale Michelangelo：Gofish posing with a city skyline at dusk","position":"40% 55%"},
+    {"image":"colosseum","title":"Roman Colosseum","caption":"Time held in stone.","alt":"Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum","position":"50% 57%"},
+    {"image":"summit","title":"Changbai Mountain Tianchi","caption":"A lake above the clouds.","alt":"Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint","position":"50% 45%"},
+    {"image":"aircraft","title":"Y-20 transport aircraft","caption":"A closer look at flight.","alt":"Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display","position":"50% 50%"}
   ],
   "closing": "Stay curious, grow slowly.",
   "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas."
