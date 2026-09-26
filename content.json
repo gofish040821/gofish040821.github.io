@@ -15,30 +15,170 @@
     "Off screen, I love traveling, badminton, cooking, and movies. To me, studying a problem seriously and cooking a meal seriously are both worth the effort."
   ],
   "research": [
-    {"number": "01", "title": "Agent RSI", "subtitle": "Agents · Recursive self-improvement", "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.", "tags": ["Held-out evaluation", "Failure analysis", "Rollback"], "className": "agent"},
-    {"number": "02", "title": "Physical AI", "subtitle": "Perception · Action · The real world", "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.", "tags": ["Pick-and-place", "Geometric priors", "Uncertainty estimation"], "className": "physical"}
+    {
+      "number": "01",
+      "title": "Agent RSI",
+      "subtitle": "Agents · Recursive self-improvement",
+      "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
+      "tags": [
+        "Held-out evaluation",
+        "Failure analysis",
+        "Rollback"
+      ],
+      "className": "agent"
+    },
+    {
+      "number": "02",
+      "title": "Physical AI",
+      "subtitle": "Perception · Action · The real world",
+      "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
+      "tags": [
+        "Pick-and-place",
+        "Geometric priors",
+        "Uncertainty estimation"
+      ],
+      "className": "physical"
+    }
   ],
   "education": [
-    {"dates": "2026 — 2029", "degree": "Mathematics · Master's", "school": "Southern University of Science and Technology", "abbr": "SUSTech", "note": "Enrolled · Expected to graduate in 2029", "current": true},
-    {"dates": "2022 — 2026", "degree": "Mathematical Foundation Science · Bachelor's", "school": "Dalian University of Technology", "abbr": "DUT", "note": "Between mathematics and physics, building the foundation for understanding the world.", "current": false}
+    {
+      "dates": "2026 — 2029",
+      "degree": "Mathematics · Master's",
+      "school": "Southern University of Science and Technology",
+      "abbr": "SUSTech",
+      "note": "Enrolled · Expected to graduate in 2029",
+      "current": true
+    },
+    {
+      "dates": "2022 — 2026",
+      "degree": "Mathematical Foundation Science · Bachelor's",
+      "school": "Dalian University of Technology",
+      "abbr": "DUT",
+      "note": "Between mathematics and physics, building the foundation for understanding the world.",
+      "current": false
+    }
   ],
   "hobbies": [
-    {"symbol": "↗", "title": "Badminton", "description": "Swing, run, sweat — a breath of fresh air for the mind."},
-    {"symbol": "⌁", "title": "Travel & wandering", "description": "Leaving familiar routes, collecting different scenery."},
-    {"symbol": "◡", "title": "Cooking", "description": "Taking three meals a day seriously, in the warmth of the kitchen."},
-    {"symbol": "▷", "title": "Film & stories", "description": "Living another life through a screen."}
+    {
+      "symbol": "↗",
+      "title": "Badminton",
+      "description": "Swing, run, sweat — a breath of fresh air for the mind."
+    },
+    {
+      "symbol": "⌁",
+      "title": "Travel & wandering",
+      "description": "Leaving familiar routes, collecting different scenery."
+    },
+    {
+      "symbol": "◡",
+      "title": "Cooking",
+      "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+    },
+    {
+      "symbol": "▷",
+      "title": "Film & stories",
+      "description": "Living another life through a screen."
+    }
   ],
   "gallery": [
-    {"image":"mountains","title":"Dolomites, Italy","caption":"A pause among the peaks.","alt":"Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind","position":"45% 60%"},
-    {"image":"blue-lake","title":"Lake Thun, Switzerland","caption":"Blue water, slower steps.","alt":"Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake","position":"50% 56%"},
-    {"image":"rooftops","title":"Paris Opera House","caption":"A moment in Paris.","alt":"Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance","position":"52% 50%"},
-    {"image":"green-lake","title":"Lake Carezza, Italy","caption":"Green water beneath the mountains.","alt":"Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake","position":"50% 62%"},
-    {"image":"snow","title":"Jungfrau summit","caption":"Above the snow and clouds.","alt":"Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag","position":"50% 68%"},
-    {"image":"museum","title":"Mona Lisa, Louvre","caption":"Face to face with a familiar portrait.","alt":"Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall","position":"45% 50%"},
-    {"image":"evening","title":"Piazzale Michelangelo","caption":"Florence at dusk.","alt":"Piazzale Michelangelo：Gofish posing with a city skyline at dusk","position":"40% 55%"},
-    {"image":"colosseum","title":"Roman Colosseum","caption":"Time held in stone.","alt":"Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum","position":"50% 57%"},
-    {"image":"summit","title":"Changbai Mountain Tianchi","caption":"A lake above the clouds.","alt":"Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint","position":"50% 45%"},
-    {"image":"aircraft","title":"Y-20 transport aircraft","caption":"A closer look at flight.","alt":"Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display","position":"50% 50%"}
+    {
+      "image": "mountains",
+      "title": "High enough for silence",
+      "caption": "In the Dolomites, even the noise learns to disappear.",
+      "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
+      "position": "45% 60%"
+    },
+    {
+      "image": "blue-lake",
+      "title": "The afternoon slowed down",
+      "caption": "Lake Thun kept the light a little longer.",
+      "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
+      "position": "50% 56%"
+    },
+    {
+      "image": "rooftops",
+      "title": "Paris, looking up",
+      "caption": "The Opera House rewards anyone who remembers to look above street level.",
+      "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
+      "position": "52% 50%"
+    },
+    {
+      "image": "green-lake",
+      "title": "A color the mountains kept",
+      "caption": "Lake Carezza, somewhere between emerald and reflection.",
+      "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
+      "position": "50% 62%"
+    },
+    {
+      "image": "snow",
+      "title": "Winter, almost weightless",
+      "caption": "At Jungfrau, the clouds felt close enough to touch.",
+      "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
+      "position": "50% 68%"
+    },
+    {
+      "image": "museum",
+      "title": "Everyone came for her",
+      "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
+      "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
+      "position": "45% 50%"
+    },
+    {
+      "image": "evening",
+      "title": "Florence before nightfall",
+      "caption": "From Piazzale Michelangelo, the city held on to the last light.",
+      "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
+      "position": "40% 55%"
+    },
+    {
+      "image": "colosseum",
+      "title": "Stone remembers",
+      "caption": "At the Colosseum, two thousand years felt strangely near.",
+      "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
+      "position": "50% 57%"
+    },
+    {
+      "image": "summit",
+      "title": "Above the clouds, another sky",
+      "caption": "Tianchi left the wind to finish the sentence.",
+      "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
+      "position": "50% 45%"
+    },
+    {
+      "image": "aircraft",
+      "title": "Childhood curiosity, full scale",
+      "caption": "The Y-20 made the idea of flight feel tangible.",
+      "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
+      "position": "50% 50%"
+    },
+    {
+      "image": "puppy-night",
+      "title": "The smallest guest",
+      "caption": "One summer night, trust weighed almost nothing.",
+      "alt": "Gofish holding a small puppy in a courtyard at night",
+      "position": "50% 44%"
+    },
+    {
+      "image": "graduation-family",
+      "title": "The people behind the milestone",
+      "caption": "A graduation photo, and the two people who made the long road possible.",
+      "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
+      "position": "50% 48%"
+    },
+    {
+      "image": "seaside-fishing",
+      "title": "Waiting on the blue",
+      "caption": "The sea kept its answer; I kept the line.",
+      "alt": "Gofish fishing from a wooden pier by the sea",
+      "position": "38% 50%"
+    },
+    {
+      "image": "flatbread",
+      "title": "Serious business",
+      "caption": "Some meals deserve full concentration.",
+      "alt": "Gofish tearing flatbread at a restaurant table",
+      "position": "50% 42%"
+    }
   ],
   "closing": "Stay curious, grow slowly.",
   "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas."

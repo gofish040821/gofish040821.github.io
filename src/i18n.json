@@ -179,73 +179,101 @@
         "gallery": [
           {
             "image": "mountains",
-            "title": "Dolomites, Italy",
-            "caption": "A pause among the peaks.",
+            "title": "High enough for silence",
+            "caption": "In the Dolomites, even the noise learns to disappear.",
             "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
             "position": "45% 60%"
           },
           {
             "image": "blue-lake",
-            "title": "Lake Thun, Switzerland",
-            "caption": "Blue water, slower steps.",
+            "title": "The afternoon slowed down",
+            "caption": "Lake Thun kept the light a little longer.",
             "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
             "position": "50% 56%"
           },
           {
             "image": "rooftops",
-            "title": "Paris Opera House",
-            "caption": "A moment in Paris.",
+            "title": "Paris, looking up",
+            "caption": "The Opera House rewards anyone who remembers to look above street level.",
             "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
             "position": "52% 50%"
           },
           {
             "image": "green-lake",
-            "title": "Lake Carezza, Italy",
-            "caption": "Green water beneath the mountains.",
+            "title": "A color the mountains kept",
+            "caption": "Lake Carezza, somewhere between emerald and reflection.",
             "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
             "position": "50% 62%"
           },
           {
             "image": "snow",
-            "title": "Jungfrau summit",
-            "caption": "Above the snow and clouds.",
+            "title": "Winter, almost weightless",
+            "caption": "At Jungfrau, the clouds felt close enough to touch.",
             "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
             "position": "50% 68%"
           },
           {
             "image": "museum",
-            "title": "Mona Lisa, Louvre",
-            "caption": "Face to face with a familiar portrait.",
+            "title": "Everyone came for her",
+            "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
             "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
             "position": "45% 50%"
           },
           {
             "image": "evening",
-            "title": "Piazzale Michelangelo",
-            "caption": "Florence at dusk.",
+            "title": "Florence before nightfall",
+            "caption": "From Piazzale Michelangelo, the city held on to the last light.",
             "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
             "position": "40% 55%"
           },
           {
             "image": "colosseum",
-            "title": "Roman Colosseum",
-            "caption": "Time held in stone.",
+            "title": "Stone remembers",
+            "caption": "At the Colosseum, two thousand years felt strangely near.",
             "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
             "position": "50% 57%"
           },
           {
             "image": "summit",
-            "title": "Changbai Mountain Tianchi",
-            "caption": "A lake above the clouds.",
+            "title": "Above the clouds, another sky",
+            "caption": "Tianchi left the wind to finish the sentence.",
             "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
             "position": "50% 45%"
           },
           {
             "image": "aircraft",
-            "title": "Y-20 transport aircraft",
-            "caption": "A closer look at flight.",
+            "title": "Childhood curiosity, full scale",
+            "caption": "The Y-20 made the idea of flight feel tangible.",
             "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
             "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "The smallest guest",
+            "caption": "One summer night, trust weighed almost nothing.",
+            "alt": "Gofish holding a small puppy in a courtyard at night",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "The people behind the milestone",
+            "caption": "A graduation photo, and the two people who made the long road possible.",
+            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Waiting on the blue",
+            "caption": "The sea kept its answer; I kept the line.",
+            "alt": "Gofish fishing from a wooden pier by the sea",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "Serious business",
+            "caption": "Some meals deserve full concentration.",
+            "alt": "Gofish tearing flatbread at a restaurant table",
+            "position": "50% 42%"
           }
         ]
       }
@@ -372,73 +400,101 @@
         "gallery": [
           {
             "image": "mountains",
-            "title": "意大利多洛米蒂",
-            "caption": "在群峰间歇一会儿。",
+            "title": "高到足够安静",
+            "caption": "在多洛米蒂，连喧闹也学会了消失。",
             "alt": "意大利多洛米蒂：Gofish 坐在岩石上，身后是连绵的山峰",
             "position": "45% 60%"
           },
           {
             "image": "blue-lake",
-            "title": "瑞士图恩湖",
-            "caption": "湖水湛蓝，脚步放慢。",
+            "title": "午后慢了下来",
+            "caption": "图恩湖把光多留了一会儿。",
             "alt": "瑞士图恩湖：Gofish 背着相机站在蓝色湖水前",
             "position": "50% 56%"
           },
           {
             "image": "rooftops",
-            "title": "巴黎歌剧院",
-            "caption": "留在巴黎的一刻。",
+            "title": "抬头看巴黎",
+            "caption": "歌剧院总会奖励那些记得仰望的人。",
             "alt": "巴黎歌剧院：Gofish 在城市屋顶露台上，远处是古典建筑",
             "position": "52% 50%"
           },
           {
             "image": "green-lake",
-            "title": "意大利卡莱扎湖",
-            "caption": "山下的一池碧绿。",
+            "title": "群山私藏的颜色",
+            "caption": "卡莱扎湖，在翡翠与倒影之间。",
             "alt": "意大利卡莱扎湖：Gofish 站在绿色山湖边的木栏旁",
             "position": "50% 62%"
           },
           {
             "image": "snow",
-            "title": "少女峰山顶",
-            "caption": "雪与云之上。",
+            "title": "冬天忽然很轻",
+            "caption": "在少女峰，云近得像伸手就能碰到。",
             "alt": "少女峰山顶：Gofish 在雪山上手持少女峰纪念旗",
             "position": "50% 68%"
           },
           {
             "image": "museum",
-            "title": "卢浮宫《蒙娜丽莎》",
-            "caption": "与熟悉的肖像相遇。",
+            "title": "大家都为她而来",
+            "caption": "安静的脸，喧闹的展厅——卢浮宫里的《蒙娜丽莎》。",
             "alt": "卢浮宫《蒙娜丽莎》：Gofish 在博物馆展厅内的自拍",
             "position": "45% 50%"
           },
           {
             "image": "evening",
-            "title": "佛罗伦萨米开朗基罗广场",
-            "caption": "黄昏里的佛罗伦萨。",
+            "title": "入夜前的佛罗伦萨",
+            "caption": "米开朗基罗广场上，城市留住最后一点光。",
             "alt": "佛罗伦萨米开朗基罗广场：Gofish 与暮色中的城市天际线合影",
             "position": "40% 55%"
           },
           {
             "image": "colosseum",
-            "title": "罗马斗兽场",
-            "caption": "石墙留下的时间。",
+            "title": "石头记得",
+            "caption": "站在斗兽场前，两千年忽然离得很近。",
             "alt": "罗马斗兽场：Gofish 在古罗马斗兽场外的自拍",
             "position": "50% 57%"
           },
           {
             "image": "summit",
-            "title": "长白山天池",
-            "caption": "云上的一汪湖水。",
+            "title": "云上还有一片天",
+            "caption": "长白山天池把没说完的话交给了风。",
             "alt": "长白山天池：Gofish 戴着墨镜站在山间观景台上",
             "position": "50% 45%"
           },
           {
             "image": "aircraft",
-            "title": "运-20运输机",
-            "caption": "近看飞行的力量。",
+            "title": "童年的好奇，等比例放大",
+            "caption": "运-20让“飞行”忽然变得可以触摸。",
             "alt": "运-20运输机：Gofish 站在户外展出的飞机前",
             "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "今晚最小的客人",
+            "caption": "一个夏夜，信任轻得可以单手托起。",
+            "alt": "Gofish 夜晚在院子里抱着一只小狗",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "里程碑背后的人",
+            "caption": "一张毕业照，和陪我走到这里的两个人。",
+            "alt": "Gofish 在大连理工大学与父母拍摄毕业照",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "等海的回信",
+            "caption": "海没有立刻回答，我也没有收线。",
+            "alt": "Gofish 坐在海边木栈桥上钓鱼",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "一件正经事",
+            "caption": "有些饭，值得全神贯注。",
+            "alt": "Gofish 在餐桌前认真掰馍",
+            "position": "50% 42%"
           }
         ]
       }
@@ -565,73 +621,101 @@
         "gallery": [
           {
             "image": "mountains",
-            "title": "Dolomites, Italie",
-            "caption": "Une pause parmi les sommets.",
+            "title": "Assez haut pour le silence",
+            "caption": "Dans les Dolomites, même le bruit apprend à disparaître.",
             "alt": "Dolomites, Italie：Gofish assis sur un rocher, des chaînes de montagnes derrière lui",
             "position": "45% 60%"
           },
           {
             "image": "blue-lake",
-            "title": "Lac de Thoune, Suisse",
-            "caption": "Eau bleue, pas plus lents.",
+            "title": "L’après-midi a ralenti",
+            "caption": "Le lac de Thoune a gardé la lumière un peu plus longtemps.",
             "alt": "Lac de Thoune, Suisse：Gofish avec un appareil photo devant un lac bleu",
             "position": "50% 56%"
           },
           {
             "image": "rooftops",
-            "title": "Opéra de Paris",
-            "caption": "Un instant à Paris.",
+            "title": "Paris, les yeux levés",
+            "caption": "L’Opéra récompense ceux qui pensent à regarder plus haut.",
             "alt": "Opéra de Paris：Gofish sur une terrasse de toit avec une architecture classique au loin",
             "position": "52% 50%"
           },
           {
             "image": "green-lake",
-            "title": "Lac de Carezza, Italie",
-            "caption": "Une eau verte au pied des montagnes.",
+            "title": "Une couleur gardée par les montagnes",
+            "caption": "Le lac de Carezza, entre émeraude et reflet.",
             "alt": "Lac de Carezza, Italie：Gofish debout près d'une barrière en bois au bord d'un lac de montagne",
             "position": "50% 62%"
           },
           {
             "image": "snow",
-            "title": "Sommet de la Jungfrau",
-            "caption": "Au-dessus de la neige et des nuages.",
+            "title": "Un hiver presque sans poids",
+            "caption": "À la Jungfrau, les nuages semblaient à portée de main.",
             "alt": "Sommet de la Jungfrau：Gofish sur une montagne enneigée tenant un drapeau souvenir de la Jungfrau",
             "position": "50% 68%"
           },
           {
             "image": "museum",
-            "title": "La Joconde, Louvre",
-            "caption": "Face à un portrait familier.",
+            "title": "Tout le monde venait pour elle",
+            "caption": "Un visage calme, une salle bruyante : la Joconde au Louvre.",
             "alt": "La Joconde, Louvre：Gofish prenant un selfie dans une salle de musée",
             "position": "45% 50%"
           },
           {
             "image": "evening",
-            "title": "Piazzale Michelangelo",
-            "caption": "Florence au crépuscule.",
+            "title": "Florence avant la nuit",
+            "caption": "Depuis la piazzale Michelangelo, la ville retenait la dernière lumière.",
             "alt": "Piazzale Michelangelo：Gofish posant avec une skyline urbaine au crépuscule",
             "position": "40% 55%"
           },
           {
             "image": "colosseum",
-            "title": "Colisée de Rome",
-            "caption": "Le temps gravé dans la pierre.",
+            "title": "La pierre se souvient",
+            "caption": "Au Colisée, deux mille ans semblaient soudain tout proches.",
             "alt": "Colisée de Rome：Gofish prenant un selfie devant l'ancien Colisée romain",
             "position": "50% 57%"
           },
           {
             "image": "summit",
-            "title": "Lac Tianchi, mont Changbai",
-            "caption": "Un lac au-dessus des nuages.",
+            "title": "Au-dessus des nuages, un autre ciel",
+            "caption": "Au lac Tianchi, le vent a terminé la phrase.",
             "alt": "Lac Tianchi, mont Changbai：Gofish portant des lunettes de soleil sur un belvédère de montagne",
             "position": "50% 45%"
           },
           {
             "image": "aircraft",
-            "title": "Avion de transport Y-20",
-            "caption": "Le vol vu de près.",
+            "title": "La curiosité d’enfance, grandeur nature",
+            "caption": "Le Y-20 a rendu le vol presque tangible.",
             "alt": "Avion de transport Y-20：Gofish debout devant un avion exposé en plein air",
             "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "Le plus petit invité",
+            "caption": "Un soir d’été, la confiance ne pesait presque rien.",
+            "alt": "Gofish tenant un petit chiot dans une cour la nuit",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "Ceux derrière cette étape",
+            "caption": "Une photo de diplôme, avec ceux qui ont rendu le chemin possible.",
+            "alt": "Gofish fête son diplôme avec ses parents à l’Université de technologie de Dalian",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Attendre la réponse du bleu",
+            "caption": "La mer gardait sa réponse ; je gardais la ligne.",
+            "alt": "Gofish pêche depuis un ponton en bois au bord de la mer",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "Une affaire sérieuse",
+            "caption": "Certains repas méritent toute notre attention.",
+            "alt": "Gofish émiette du pain à une table de restaurant",
+            "position": "50% 42%"
           }
         ]
       }
@@ -758,73 +842,101 @@
         "gallery": [
           {
             "image": "mountains",
-            "title": "Dolomiten, Italien",
-            "caption": "Eine Pause zwischen den Gipfeln.",
+            "title": "Hoch genug für Stille",
+            "caption": "In den Dolomiten lernt selbst der Lärm zu verschwinden.",
             "alt": "Dolomiten, Italien：Gofish sitzt auf einem Felsen, dahinter endlose Gipfel",
             "position": "45% 60%"
           },
           {
             "image": "blue-lake",
-            "title": "Thunersee, Schweiz",
-            "caption": "Blaues Wasser, langsame Schritte.",
+            "title": "Der Nachmittag wurde langsamer",
+            "caption": "Der Thunersee hielt das Licht etwas länger fest.",
             "alt": "Thunersee, Schweiz：Gofish mit Kamera vor einem blauen See",
             "position": "50% 56%"
           },
           {
             "image": "rooftops",
-            "title": "Pariser Oper",
-            "caption": "Ein Augenblick in Paris.",
+            "title": "Paris mit Blick nach oben",
+            "caption": "Die Oper belohnt alle, die über die Straßenhöhe hinausschauen.",
             "alt": "Pariser Oper：Gofish auf einer Dachterrasse, in der Ferne klassische Bauten",
             "position": "52% 50%"
           },
           {
             "image": "green-lake",
-            "title": "Karersee, Italien",
-            "caption": "Grünes Wasser unter den Bergen.",
+            "title": "Eine Farbe, die die Berge behielten",
+            "caption": "Der Karersee, irgendwo zwischen Smaragd und Spiegelbild.",
             "alt": "Karersee, Italien：Gofish an einem Holzgeländer an einem grünen Bergsee",
             "position": "50% 62%"
           },
           {
             "image": "snow",
-            "title": "Jungfraugipfel",
-            "caption": "Über Schnee und Wolken.",
+            "title": "Winter, beinahe schwerelos",
+            "caption": "Auf der Jungfrau schienen die Wolken zum Greifen nah.",
             "alt": "Jungfraugipfel：Gofish im Schnee mit einer Jungfrau-Andenkenfahne",
             "position": "50% 68%"
           },
           {
             "image": "museum",
-            "title": "Mona Lisa, Louvre",
-            "caption": "Vor einem vertrauten Porträt.",
+            "title": "Alle kamen ihretwegen",
+            "caption": "Ein stilles Gesicht, ein lauter Saal: die Mona Lisa im Louvre.",
             "alt": "Mona Lisa, Louvre：Gofish macht ein Selfie in einem Museumssaal",
             "position": "45% 50%"
           },
           {
             "image": "evening",
-            "title": "Piazzale Michelangelo",
-            "caption": "Florenz in der Abenddämmerung.",
+            "title": "Florenz vor Einbruch der Nacht",
+            "caption": "Vom Piazzale Michelangelo hielt die Stadt das letzte Licht fest.",
             "alt": "Piazzale Michelangelo：Gofish mit der Stadtsilhouette in der Dämmerung",
             "position": "40% 55%"
           },
           {
             "image": "colosseum",
-            "title": "Kolosseum, Rom",
-            "caption": "Zeit im Stein.",
+            "title": "Stein erinnert sich",
+            "caption": "Am Kolosseum fühlten sich zweitausend Jahre plötzlich nah an.",
             "alt": "Kolosseum, Rom：Gofish macht ein Selfie vor dem Kolosseum in Rom",
             "position": "50% 57%"
           },
           {
             "image": "summit",
-            "title": "Tianchi, Changbai-Gebirge",
-            "caption": "Ein See über den Wolken.",
+            "title": "Über den Wolken ein weiterer Himmel",
+            "caption": "Am Tianchi-See ließ der Wind den Satz zu Ende sprechen.",
             "alt": "Tianchi, Changbai-Gebirge：Gofish mit Sonnenbrille auf einer Bergaussichtsplattform",
             "position": "50% 45%"
           },
           {
             "image": "aircraft",
-            "title": "Transportflugzeug Y-20",
-            "caption": "Fliegen aus der Nähe.",
+            "title": "Kindliche Neugier in voller Größe",
+            "caption": "Die Y-20 machte den Gedanken ans Fliegen greifbar.",
             "alt": "Transportflugzeug Y-20：Gofish vor einem im Freien ausgestellten Flugzeug",
             "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "Der kleinste Gast",
+            "caption": "In einer Sommernacht wog Vertrauen fast nichts.",
+            "alt": "Gofish hält nachts in einem Hof einen kleinen Welpen",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "Die Menschen hinter dem Meilenstein",
+            "caption": "Ein Abschlussfoto mit den beiden, die den langen Weg möglich machten.",
+            "alt": "Gofish feiert seinen Abschluss mit seinen Eltern an der Technischen Universität Dalian",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Warten auf die Antwort des Meeres",
+            "caption": "Das Meer schwieg; die Leine blieb draußen.",
+            "alt": "Gofish angelt von einem Holzsteg am Meer",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "Eine ernste Angelegenheit",
+            "caption": "Manche Mahlzeiten verdienen volle Konzentration.",
+            "alt": "Gofish zerteilt Fladenbrot an einem Restauranttisch",
+            "position": "50% 42%"
           }
         ]
       }
@@ -951,73 +1063,101 @@
         "gallery": [
           {
             "image": "mountains",
-            "title": "Dolomitas, Italia",
-            "caption": "Una pausa entre las cumbres.",
+            "title": "Lo bastante alto para el silencio",
+            "caption": "En los Dolomitas, hasta el ruido aprende a desaparecer.",
             "alt": "Dolomitas, Italia：Gofish sentado en una roca con cordilleras detrás",
             "position": "45% 60%"
           },
           {
             "image": "blue-lake",
-            "title": "Lago de Thun, Suiza",
-            "caption": "Agua azul, pasos lentos.",
+            "title": "La tarde bajó el ritmo",
+            "caption": "El lago de Thun guardó la luz un poco más.",
             "alt": "Lago de Thun, Suiza：Gofish con una cámara frente a un lago azul",
             "position": "50% 56%"
           },
           {
             "image": "rooftops",
-            "title": "Ópera de París",
-            "caption": "Un momento en París.",
+            "title": "París, mirando hacia arriba",
+            "caption": "La Ópera premia a quien recuerda mirar sobre las calles.",
             "alt": "Ópera de París：Gofish en una azotea de la ciudad con arquitectura clásica a lo lejos",
             "position": "52% 50%"
           },
           {
             "image": "green-lake",
-            "title": "Lago di Carezza, Italia",
-            "caption": "Agua verde bajo las montañas.",
+            "title": "Un color guardado por las montañas",
+            "caption": "El lago de Carezza, entre esmeralda y reflejo.",
             "alt": "Lago di Carezza, Italia：Gofish de pie junto a una valla de madera en un lago verde de montaña",
             "position": "50% 62%"
           },
           {
             "image": "snow",
-            "title": "Cima del Jungfrau",
-            "caption": "Sobre la nieve y las nubes.",
+            "title": "Un invierno casi sin peso",
+            "caption": "En Jungfrau, las nubes parecían al alcance de la mano.",
             "alt": "Cima del Jungfrau：Gofish en una montaña nevada con una bandera de recuerdo de Jungfrau",
             "position": "50% 68%"
           },
           {
             "image": "museum",
-            "title": "La Gioconda, Louvre",
-            "caption": "Frente a un retrato conocido.",
+            "title": "Todos vinieron por ella",
+            "caption": "Un rostro sereno, una sala ruidosa: la Gioconda en el Louvre.",
             "alt": "La Gioconda, Louvre：Gofish haciéndose un selfi en una sala de museo",
             "position": "45% 50%"
           },
           {
             "image": "evening",
-            "title": "Piazzale Michelangelo",
-            "caption": "Florencia al atardecer.",
+            "title": "Florencia antes de la noche",
+            "caption": "Desde Piazzale Michelangelo, la ciudad retuvo la última luz.",
             "alt": "Piazzale Michelangelo：Gofish posando con el horizonte de la ciudad al anochecer",
             "position": "40% 55%"
           },
           {
             "image": "colosseum",
-            "title": "Coliseo de Roma",
-            "caption": "El tiempo en la piedra.",
+            "title": "La piedra recuerda",
+            "caption": "En el Coliseo, dos mil años parecían extrañamente cercanos.",
             "alt": "Coliseo de Roma：Gofish haciéndose un selfi frente al antiguo Coliseo romano",
             "position": "50% 57%"
           },
           {
             "image": "summit",
-            "title": "Lago Tianchi, monte Changbai",
-            "caption": "Un lago sobre las nubes.",
+            "title": "Sobre las nubes, otro cielo",
+            "caption": "En Tianchi, el viento terminó la frase.",
             "alt": "Lago Tianchi, monte Changbai：Gofish con gafas de sol en un mirador de montaña",
             "position": "50% 45%"
           },
           {
             "image": "aircraft",
-            "title": "Avión de transporte Y-20",
-            "caption": "El vuelo de cerca.",
+            "title": "Curiosidad de infancia a tamaño real",
+            "caption": "El Y-20 volvió tangible la idea de volar.",
             "alt": "Avión de transporte Y-20：Gofish de pie ante un avión en exposición al aire libre",
             "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "El invitado más pequeño",
+            "caption": "Una noche de verano, la confianza casi no pesaba.",
+            "alt": "Gofish sostiene un cachorro en un patio por la noche",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "Quienes están detrás del logro",
+            "caption": "Una foto de graduación con quienes hicieron posible el camino.",
+            "alt": "Gofish celebra su graduación con sus padres en la Universidad Tecnológica de Dalian",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Esperando la respuesta del mar",
+            "caption": "El mar guardó su respuesta; yo mantuve la línea.",
+            "alt": "Gofish pesca desde un muelle de madera junto al mar",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "Un asunto serio",
+            "caption": "Algunas comidas merecen toda la concentración.",
+            "alt": "Gofish desmenuza pan en la mesa de un restaurante",
+            "position": "50% 42%"
           }
         ]
       }
@@ -1144,73 +1284,101 @@
         "gallery": [
           {
             "image": "mountains",
-            "title": "دولوميت، إيطاليا",
-            "caption": "استراحة بين القمم.",
+            "title": "عالٍ بما يكفي للصمت",
+            "caption": "في الدولوميت، حتى الضجيج يتعلم كيف يختفي.",
             "alt": "دولوميت، إيطاليا：Gofish يجلس على صخرة وخلفه سلاسل جبلية",
             "position": "45% 60%"
           },
           {
             "image": "blue-lake",
-            "title": "بحيرة تون، سويسرا",
-            "caption": "ماء أزرق وخطوات هادئة.",
+            "title": "تباطأ وقت الظهيرة",
+            "caption": "احتفظت بحيرة تون بالضوء قليلاً أطول.",
             "alt": "بحيرة تون، سويسرا：Gofish يحمل كاميرا ويقف أمام بحيرة زرقاء",
             "position": "50% 56%"
           },
           {
             "image": "rooftops",
-            "title": "أوبرا باريس",
-            "caption": "لحظة في باريس.",
+            "title": "باريس بنظرة إلى الأعلى",
+            "caption": "تكافئ الأوبرا من يتذكر أن ينظر فوق مستوى الشارع.",
             "alt": "أوبرا باريس：Gofish على شرفة سطح في المدينة وعمارة كلاسيكية في الأفق",
             "position": "52% 50%"
           },
           {
             "image": "green-lake",
-            "title": "بحيرة كاريتسا، إيطاليا",
-            "caption": "ماء أخضر تحت الجبال.",
+            "title": "لون احتفظت به الجبال",
+            "caption": "بحيرة كاريتسا، بين الزمرد والانعكاس.",
             "alt": "بحيرة كاريتسا، إيطاليا：Gofish واقف بجوار سياج خشبي عند بحيرة جبلية خضراء",
             "position": "50% 62%"
           },
           {
             "image": "snow",
-            "title": "قمة يونغفراو",
-            "caption": "فوق الثلج والغيوم.",
+            "title": "شتاء يكاد بلا وزن",
+            "caption": "على يونغفراو، بدت الغيوم قريبة من اليد.",
             "alt": "قمة يونغفراو：Gofish على جبل ثلجي يحمل علم تذكاري ليونغفراو",
             "position": "50% 68%"
           },
           {
             "image": "museum",
-            "title": "الموناليزا، اللوفر",
-            "caption": "أمام لوحة مألوفة.",
+            "title": "جاء الجميع من أجلها",
+            "caption": "وجه هادئ وقاعة صاخبة: الموناليزا في اللوفر.",
             "alt": "الموناليزا، اللوفر：Gofish يلتقط صورة سيلفي داخل قاعة متحف",
             "position": "45% 50%"
           },
           {
             "image": "evening",
-            "title": "ساحة مايكل أنجلو",
-            "caption": "فلورنسا عند الغروب.",
+            "title": "فلورنسا قبل حلول الليل",
+            "caption": "من ساحة مايكل أنجلو، احتفظت المدينة بآخر الضوء.",
             "alt": "ساحة مايكل أنجلو：Gofish يلتقط صورة مع أفق المدينة عند الغسق",
             "position": "40% 55%"
           },
           {
             "image": "colosseum",
-            "title": "كولوسيوم روما",
-            "caption": "الزمن في الحجر.",
+            "title": "الحجر يتذكر",
+            "caption": "عند الكولوسيوم، بدا ألفا عام قريبين على نحو غريب.",
             "alt": "كولوسيوم روما：Gofish يلتقط صورة سيلفي خارج الكولوسيوم الروماني القديم",
             "position": "50% 57%"
           },
           {
             "image": "summit",
-            "title": "بحيرة تيانتشي، جبل تشانغباي",
-            "caption": "بحيرة فوق الغيوم.",
+            "title": "فوق الغيوم سماء أخرى",
+            "caption": "عند بحيرة تيانتشي، تركت للريح إكمال الجملة.",
             "alt": "بحيرة تيانتشي، جبل تشانغباي：Gofish يرتدي نظارة شمسية على منصة مشاهدة جبلية",
             "position": "50% 45%"
           },
           {
             "image": "aircraft",
-            "title": "طائرة النقل Y-20",
-            "caption": "نظرة عن قرب إلى الطيران.",
+            "title": "فضول الطفولة بالحجم الكامل",
+            "caption": "جعلت Y-20 فكرة الطيران قابلة للمس.",
             "alt": "طائرة النقل Y-20：Gofish واقف أمام طائرة معروضة في الهواء الطلق",
             "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "أصغر ضيف",
+            "caption": "في ليلة صيفية، كان وزن الثقة خفيفاً جداً.",
+            "alt": "غوفيش يحمل جرواً صغيراً في فناء ليلاً",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "من يقفون خلف المحطة",
+            "caption": "صورة تخرج مع من جعلا الطريق الطويل ممكناً.",
+            "alt": "غوفيش يحتفل بتخرجه مع والديه في جامعة داليان للتكنولوجيا",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "انتظار جواب البحر",
+            "caption": "احتفظ البحر بجوابه، وأبقيت أنا الخيط.",
+            "alt": "غوفيش يصطاد من رصيف خشبي بجانب البحر",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "أمر جاد",
+            "caption": "بعض الوجبات تستحق كامل التركيز.",
+            "alt": "غوفيش يفتت الخبز على طاولة مطعم",
+            "position": "50% 42%"
           }
         ]
       }
@@ -1337,73 +1505,101 @@
         "gallery": [
           {
             "image": "mountains",
-            "title": "イタリア・ドロミテ",
-            "caption": "山々の中でひと休み。",
+            "title": "静けさに届く高さ",
+            "caption": "ドロミテでは、喧騒さえ消え方を覚える。",
             "alt": "イタリア・ドロミテ：岩の上に座る Gofish、背後には連なる山々",
             "position": "45% 60%"
           },
           {
             "image": "blue-lake",
-            "title": "スイス・トゥーン湖",
-            "caption": "青い湖と、ゆっくりした足取り。",
+            "title": "午後がゆっくりになった",
+            "caption": "トゥーン湖は光を少し長く引き留めた。",
             "alt": "スイス・トゥーン湖：青い湖の前に立ち、カメラを持つ Gofish",
             "position": "50% 56%"
           },
           {
             "image": "rooftops",
-            "title": "パリ・オペラ座",
-            "caption": "パリでのひととき。",
+            "title": "見上げるパリ",
+            "caption": "オペラ座は、通りより上を見る人に応えてくれる。",
             "alt": "パリ・オペラ座：街の屋上テラスに立つ Gofish、遠くに古典建築",
             "position": "52% 50%"
           },
           {
             "image": "green-lake",
-            "title": "イタリア・カレッツァ湖",
-            "caption": "山のふもとの緑の湖。",
+            "title": "山がしまっておいた色",
+            "caption": "カレッツァ湖、エメラルドと映り込みのあいだ。",
             "alt": "イタリア・カレッツァ湖：緑の山あいの湖の木柵のそばに立つ Gofish",
             "position": "50% 62%"
           },
           {
             "image": "snow",
-            "title": "ユングフラウ山頂",
-            "caption": "雪と雲の上で。",
+            "title": "冬がふっと軽くなる",
+            "caption": "ユングフラウでは、雲に手が届きそうだった。",
             "alt": "ユングフラウ山頂：ユングフラウの記念旗を持つ、雪山の Gofish",
             "position": "50% 68%"
           },
           {
             "image": "museum",
-            "title": "ルーヴルのモナ・リザ",
-            "caption": "見慣れた肖像の前で。",
+            "title": "みんな彼女に会いに来た",
+            "caption": "静かな顔と賑やかな展示室。ルーヴルのモナ・リザ。",
             "alt": "ルーヴルのモナ・リザ：美術館の展示室で自撮りする Gofish",
             "position": "45% 50%"
           },
           {
             "image": "evening",
-            "title": "ミケランジェロ広場",
-            "caption": "夕暮れのフィレンツェ。",
+            "title": "夜になる前のフィレンツェ",
+            "caption": "ミケランジェロ広場から、街は最後の光を離さなかった。",
             "alt": "ミケランジェロ広場：夕暮れの街のスカイラインを背景に立つ Gofish",
             "position": "40% 55%"
           },
           {
             "image": "colosseum",
-            "title": "ローマのコロッセオ",
-            "caption": "石に刻まれた時間。",
+            "title": "石は覚えている",
+            "caption": "コロッセオの前では、二千年が不思議と近く感じられた。",
             "alt": "ローマのコロッセオ：古代ローマのコロッセオの前で自撮りする Gofish",
             "position": "50% 57%"
           },
           {
             "image": "summit",
-            "title": "長白山の天池",
-            "caption": "雲の上に広がる湖。",
+            "title": "雲の上に、もう一つの空",
+            "caption": "長白山の天池では、風が言葉の続きを引き受けた。",
             "alt": "長白山の天池：山の展望台でサングラスをかける Gofish",
             "position": "50% 45%"
           },
           {
             "image": "aircraft",
-            "title": "Y-20輸送機",
-            "caption": "飛行を間近に。",
+            "title": "子どもの好奇心を実物大で",
+            "caption": "Y-20が「飛ぶ」という考えを触れられるものにした。",
             "alt": "Y-20輸送機：屋外展示の飛行機の前に立つ Gofish",
             "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "いちばん小さな客",
+            "caption": "夏の夜、信頼は片手で持てるほど軽かった。",
+            "alt": "夜の中庭で小さな子犬を抱くGofish",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "節目の後ろにいる人たち",
+            "caption": "卒業写真と、ここまでの道を支えてくれた二人。",
+            "alt": "大連理工大学で両親と卒業を祝うGofish",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "海からの返事を待つ",
+            "caption": "海は黙ったまま。こちらも糸を上げなかった。",
+            "alt": "海辺の木製桟橋で釣りをするGofish",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "真剣な仕事",
+            "caption": "全神経を注ぐ価値のある食事もある。",
+            "alt": "食堂でパンを丁寧にちぎるGofish",
+            "position": "50% 42%"
           }
         ]
       }
@@ -1530,73 +1726,101 @@
         "gallery": [
           {
             "image": "mountains",
-            "title": "이탈리아 돌로미티",
-            "caption": "봉우리 사이에서 잠시 쉬어 가기.",
+            "title": "고요에 닿을 만큼 높이",
+            "caption": "돌로미티에서는 소음조차 사라지는 법을 배운다.",
             "alt": "이탈리아 돌로미티：바위 위에 앉아 있는 Gofish, 뒤로는 이어진 산맥",
             "position": "45% 60%"
           },
           {
             "image": "blue-lake",
-            "title": "스위스 툰 호수",
-            "caption": "푸른 물과 느린 걸음.",
+            "title": "오후가 천천히 흘렀다",
+            "caption": "툰 호수는 빛을 조금 더 오래 붙잡아 두었다.",
             "alt": "스위스 툰 호수：파란 호수 앞에 서서 카메라를 든 Gofish",
             "position": "50% 56%"
           },
           {
             "image": "rooftops",
-            "title": "파리 오페라 극장",
-            "caption": "파리에서의 한순간.",
+            "title": "위를 바라본 파리",
+            "caption": "오페라 극장은 거리 위를 올려다보는 사람에게 답한다.",
             "alt": "파리 오페라 극장：도시 옥상 테라스에 선 Gofish, 저 멀리 고전 건축",
             "position": "52% 50%"
           },
           {
             "image": "green-lake",
-            "title": "이탈리아 카레차 호수",
-            "caption": "산 아래 초록빛 호수.",
+            "title": "산이 간직한 색",
+            "caption": "카레차 호수, 에메랄드와 반영 사이.",
             "alt": "이탈리아 카레차 호수：초록빛 산 호수의 나무 난간 옆에 선 Gofish",
             "position": "50% 62%"
           },
           {
             "image": "snow",
-            "title": "융프라우 정상",
-            "caption": "눈과 구름 위에서.",
+            "title": "겨울이 문득 가벼워졌다",
+            "caption": "융프라우에서는 구름이 손에 닿을 듯했다.",
             "alt": "융프라우 정상：융프라우 기념 깃발을 든 설산 위의 Gofish",
             "position": "50% 68%"
           },
           {
             "image": "museum",
-            "title": "루브르의 모나리자",
-            "caption": "익숙한 초상화 앞에서.",
+            "title": "모두 그녀를 보러 왔다",
+            "caption": "고요한 얼굴과 소란스러운 전시장, 루브르의 모나리자.",
             "alt": "루브르의 모나리자：박물관 전시실에서 셀카를 찍는 Gofish",
             "position": "45% 50%"
           },
           {
             "image": "evening",
-            "title": "미켈란젤로 광장",
-            "caption": "해 질 녘 피렌체.",
+            "title": "밤이 오기 전의 피렌체",
+            "caption": "미켈란젤로 광장에서 도시는 마지막 빛을 붙들었다.",
             "alt": "미켈란젤로 광장：해 질 녘 도시 스카이라인을 배경으로 선 Gofish",
             "position": "40% 55%"
           },
           {
             "image": "colosseum",
-            "title": "로마 콜로세움",
-            "caption": "돌에 새겨진 시간.",
+            "title": "돌은 기억한다",
+            "caption": "콜로세움 앞에서는 이천 년이 이상하리만큼 가까웠다.",
             "alt": "로마 콜로세움：고대 로마 콜로세움 앞에서 셀카를 찍는 Gofish",
             "position": "50% 57%"
           },
           {
             "image": "summit",
-            "title": "창바이산 천지",
-            "caption": "구름 위의 호수.",
+            "title": "구름 위의 또 다른 하늘",
+            "caption": "창바이산 천지에서는 바람이 말을 마저 이었다.",
             "alt": "창바이산 천지：산 전망대에서 선글라스를 쓴 Gofish",
             "position": "50% 45%"
           },
           {
             "image": "aircraft",
-            "title": "Y-20 수송기",
-            "caption": "가까이서 본 비행.",
+            "title": "어린 시절의 호기심, 실물 크기로",
+            "caption": "Y-20은 비행이라는 생각을 손에 잡히게 했다.",
             "alt": "Y-20 수송기：야외 전시된 비행기 앞에 선 Gofish",
             "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "가장 작은 손님",
+            "caption": "어느 여름밤, 믿음은 한 손에 들 만큼 가벼웠다.",
+            "alt": "밤의 마당에서 작은 강아지를 안고 있는 Gofish",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "이정표 뒤의 사람들",
+            "caption": "졸업 사진 한 장, 그리고 여기까지 함께해 준 두 사람.",
+            "alt": "다롄이공대학교에서 부모님과 졸업을 축하하는 Gofish",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "바다의 답장을 기다리며",
+            "caption": "바다는 답을 미뤘고, 나도 낚싯줄을 거두지 않았다.",
+            "alt": "바닷가 나무 부두에서 낚시하는 Gofish",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "진지한 일",
+            "caption": "온전히 집중할 가치가 있는 식사도 있다.",
+            "alt": "식당에서 빵을 정성스럽게 뜯는 Gofish",
+            "position": "50% 42%"
           }
         ]
       }
@@ -1723,73 +1947,101 @@
         "gallery": [
           {
             "image": "mountains",
-            "title": "Доломиты, Италия",
-            "caption": "Пауза среди вершин.",
+            "title": "Достаточно высоко для тишины",
+            "caption": "В Доломитах даже шум учится исчезать.",
             "alt": "Доломиты, Италия：Gofish сидит на камне, позади горные хребты",
             "position": "45% 60%"
           },
           {
             "image": "blue-lake",
-            "title": "Тунское озеро, Швейцария",
-            "caption": "Синяя вода и неспешные шаги.",
+            "title": "Полдень замедлился",
+            "caption": "Тунское озеро задержало свет чуть дольше.",
             "alt": "Тунское озеро, Швейцария：Gofish с камерой стоит перед синим озером",
             "position": "50% 56%"
           },
           {
             "image": "rooftops",
-            "title": "Парижская опера",
-            "caption": "Мгновение в Париже.",
+            "title": "Париж, взгляд вверх",
+            "caption": "Опера вознаграждает тех, кто помнит смотреть выше улиц.",
             "alt": "Парижская опера：Gofish на террасе городской крыши, вдали классическая архитектура",
             "position": "52% 50%"
           },
           {
             "image": "green-lake",
-            "title": "Озеро Карецца, Италия",
-            "caption": "Зелёная вода у подножия гор.",
+            "title": "Цвет, сохранённый горами",
+            "caption": "Озеро Карецца — между изумрудом и отражением.",
             "alt": "Озеро Карецца, Италия：Gofish у деревянной ограды у зелёного горного озера",
             "position": "50% 62%"
           },
           {
             "image": "snow",
-            "title": "Вершина Юнгфрау",
-            "caption": "Над снегом и облаками.",
+            "title": "Почти невесомая зима",
+            "caption": "На Юнгфрау облака казались совсем близкими.",
             "alt": "Вершина Юнгфрау：Gofish на заснеженной горе с сувенирным флагом Юнгфрау",
             "position": "50% 68%"
           },
           {
             "image": "museum",
-            "title": "Мона Лиза, Лувр",
-            "caption": "Перед знакомым портретом.",
+            "title": "Все пришли ради неё",
+            "caption": "Тихое лицо и шумный зал: Мона Лиза в Лувре.",
             "alt": "Мона Лиза, Лувр：Gofish делает селфи в зале музея",
             "position": "45% 50%"
           },
           {
             "image": "evening",
-            "title": "Площадь Микеланджело",
-            "caption": "Флоренция на закате.",
+            "title": "Флоренция до наступления ночи",
+            "caption": "С площади Микеланджело город удерживал последний свет.",
             "alt": "Площадь Микеланджело：Gofish на фоне городского горизонта в сумерках",
             "position": "40% 55%"
           },
           {
             "image": "colosseum",
-            "title": "Римский Колизей",
-            "caption": "Время в камне.",
+            "title": "Камень помнит",
+            "caption": "У Колизея две тысячи лет вдруг казались совсем близкими.",
             "alt": "Римский Колизей：Gofish делает селфи у древнеримского Колизея",
             "position": "50% 57%"
           },
           {
             "image": "summit",
-            "title": "Озеро Тяньчи, гора Чанбайшань",
-            "caption": "Озеро над облаками.",
+            "title": "Над облаками ещё одно небо",
+            "caption": "У Тяньчи ветер закончил недосказанную фразу.",
             "alt": "Озеро Тяньчи, гора Чанбайшань：Gofish в солнечных очках на горной смотровой площадке",
             "position": "50% 45%"
           },
           {
             "image": "aircraft",
-            "title": "Транспортный самолёт Y-20",
-            "caption": "Полёт вблизи.",
+            "title": "Детское любопытство в натуральную величину",
+            "caption": "Y-20 сделал идею полёта почти осязаемой.",
             "alt": "Транспортный самолёт Y-20：Gofish стоит перед самолётом на открытой экспозиции",
             "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "Самый маленький гость",
+            "caption": "Летней ночью доверие почти ничего не весило.",
+            "alt": "Gofish держит маленького щенка ночью во дворе",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "Люди за важной вехой",
+            "caption": "Выпускное фото с теми, кто сделал этот долгий путь возможным.",
+            "alt": "Gofish отмечает выпуск с родителями в Даляньском технологическом университете",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "В ожидании ответа моря",
+            "caption": "Море молчало; я не сматывал леску.",
+            "alt": "Gofish рыбачит с деревянного пирса у моря",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "Серьёзное дело",
+            "caption": "Некоторые блюда требуют полной сосредоточенности.",
+            "alt": "Gofish разбирает лепёшку за столом в ресторане",
+            "position": "50% 42%"
           }
         ]
       }
