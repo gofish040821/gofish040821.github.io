@@ -104,7 +104,8 @@
         "closing": "Stay curious, grow slowly.",
         "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas.",
         "skillsTitle": "Skills & Tools",
-        "skillsIntro": "A small toolkit for questions, experiments, and things worth building."
+        "skillsIntro": "A small toolkit for questions, experiments, and things worth building.",
+        "skillsExploring": "Exploring LLM & agents"
       },
       "content": {
         "about": [
@@ -327,7 +328,8 @@
         "closing": "保持好奇，慢慢生长。",
         "closingText": "关于数学、AI，或者下一段旅程，期待遇见有趣的想法。",
         "skillsTitle": "技能与工具",
-        "skillsIntro": "用来提出问题、动手实验，也把想法做出来。"
+        "skillsIntro": "用来提出问题、动手实验，也把想法做出来。",
+        "skillsExploring": "正在探索 LLM 与 Agent"
       },
       "content": {
         "about": [
@@ -550,7 +552,8 @@
         "closing": "Rester curieux, grandir lentement.",
         "closingText": "Sur les mathématiques, l'IA ou le prochain voyage — j'ai hâte d'échanger des idées intéressantes.",
         "skillsTitle": "Compétences & outils",
-        "skillsIntro": "Quelques outils pour questionner, expérimenter et construire."
+        "skillsIntro": "Quelques outils pour questionner, expérimenter et construire.",
+        "skillsExploring": "J’explore les LLM et les agents"
       },
       "content": {
         "about": [
@@ -773,7 +776,8 @@
         "closing": "Neugierig bleiben, langsam wachsen.",
         "closingText": "Über Mathematik, KI oder die nächste Reise — ich freue mich auf interessante Ideen.",
         "skillsTitle": "Fähigkeiten & Werkzeuge",
-        "skillsIntro": "Werkzeuge, um Fragen zu stellen, zu experimentieren und Ideen umzusetzen."
+        "skillsIntro": "Werkzeuge, um Fragen zu stellen, zu experimentieren und Ideen umzusetzen.",
+        "skillsExploring": "Ich erkunde LLMs und Agenten"
       },
       "content": {
         "about": [
@@ -996,7 +1000,8 @@
         "closing": "Sigue con curiosidad, crece despacio.",
         "closingText": "Sobre matemáticas, IA o el próximo viaje, espero encontrar ideas interesantes.",
         "skillsTitle": "Habilidades y herramientas",
-        "skillsIntro": "Herramientas para preguntar, experimentar y construir."
+        "skillsIntro": "Herramientas para preguntar, experimentar y construir.",
+        "skillsExploring": "Explorando LLM y agentes"
       },
       "content": {
         "about": [
@@ -1219,7 +1224,8 @@
         "closing": "ابقَ فضوليًا، وانهَم ببطء.",
         "closingText": "عن الرياضيات أو الذكاء الاصطناعي أو الرحلة القادمة — أتطلع إلى أفكار مثيرة.",
         "skillsTitle": "المهارات والأدوات",
-        "skillsIntro": "أدوات لطرح الأسئلة والتجربة وتحويل الأفكار إلى مشاريع."
+        "skillsIntro": "أدوات لطرح الأسئلة والتجربة وتحويل الأفكار إلى مشاريع.",
+        "skillsExploring": "أستكشف النماذج اللغوية والوكلاء"
       },
       "content": {
         "about": [
@@ -1442,7 +1448,8 @@
         "closing": "好奇心を持ち、ゆっくり育つ。",
         "closingText": "数学や AI、あるいは次の旅について、面白いアイデアとの出会いを楽しみにしています。",
         "skillsTitle": "スキルとツール",
-        "skillsIntro": "問いを立て、試し、アイデアを形にするための道具。"
+        "skillsIntro": "問いを立て、試し、アイデアを形にするための道具。",
+        "skillsExploring": "LLM とエージェントを探求中"
       },
       "content": {
         "about": [
@@ -1665,7 +1672,8 @@
         "closing": "호기심을 갖고, 천천히 자라기.",
         "closingText": "수학, AI, 그리고 다음 여행에 대해 — 흥미로운 아이디어를 만나기를 기대합니다.",
         "skillsTitle": "기술과 도구",
-        "skillsIntro": "질문하고 실험하며 아이디어를 구현하는 데 쓰는 도구."
+        "skillsIntro": "질문하고 실험하며 아이디어를 구현하는 데 쓰는 도구.",
+        "skillsExploring": "LLM과 에이전트 탐구 중"
       },
       "content": {
         "about": [
@@ -1888,7 +1896,8 @@
         "closing": "Оставайся любопытным, расти не спеша.",
         "closingText": "О математике, ИИ или следующем путешествии — буду рад интересным идеям.",
         "skillsTitle": "Навыки и инструменты",
-        "skillsIntro": "Инструменты для вопросов, экспериментов и воплощения идей."
+        "skillsIntro": "Инструменты для вопросов, экспериментов и воплощения идей.",
+        "skillsExploring": "Изучаю LLM и агентов"
       },
       "content": {
         "about": [

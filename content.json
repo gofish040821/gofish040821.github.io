@@ -53,6 +53,14 @@
     {"name": "Vite", "badge": "vite"},
     {"name": "Vitest", "badge": "vitest"}
   ],
+  "agentSkills": [
+    {"name": "Hugging Face", "badge": "huggingface"},
+    {"name": "Transformers", "badge": "transformers"},
+    {"name": "LangChain", "badge": "langchain"},
+    {"name": "LangGraph", "badge": "langgraph"},
+    {"name": "RAG", "badge": "rag"},
+    {"name": "MCP", "badge": "mcp"}
+  ],
   "education": [
     {
       "dates": "2026 — 2029",

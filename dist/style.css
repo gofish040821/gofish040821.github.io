@@ -92,6 +92,7 @@
 .skill-badges{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:10px 8px;margin:0;padding:0}
 .skill-badges li{display:flex;max-width:100%}
 .skill-badges img{display:block;height:28px;width:auto;max-width:100%;border-radius:2px}
+.skills-track{font-size:12px;letter-spacing:.08em;color:var(--accent);margin:20px 0 11px}
 @media(max-width:760px){.research-skills{margin-top:32px;padding-top:22px}.research-skills-heading{display:block;margin-bottom:16px}.research-skills h3{font-size:23px}.research-skills-heading p{margin-top:5px}.skill-badges{gap:8px 7px}.skill-badges img{height:27px}}
 
 /* Responsive layout: allow translated content to wrap without widening the page. */

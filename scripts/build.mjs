@@ -34,6 +34,7 @@ const values = {
   about: renderAbout(data.about),
   research: renderResearch(data.research),
   skills: renderSkills(data.skills),
+  agentSkills: renderSkills(data.agentSkills),
   education: renderEducation(data.education),
   hobbies: renderHobbies(data.hobbies),
   gallery: renderGallery(data.gallery),
@@ -71,7 +72,7 @@ await mkdir(resolve(root, 'dist'), { recursive: true });
 for (const name of new Set(['avatar', data.heroImage, ...data.gallery.map(item => item.image)])) {
   for (const small of [false, true]) await access(resolve(root, 'dist', photoPath(name, small)));
 }
-for (const item of data.skills) await access(resolve(root, 'dist/assets/skills', `${item.badge}.svg`));
+for (const item of [...data.skills, ...data.agentSkills]) await access(resolve(root, 'dist/assets/skills', `${item.badge}.svg`));
 await writeFile(resolve(root, 'dist/index.html'), html);
 for (const file of ['style.css', 'app.js', 'busuanzi.pure.mini.js']) await copyFile(resolve(root, 'src', file), resolve(root, 'dist', file));
 await writeFile(resolve(root, 'dist/.nojekyll'), '');
