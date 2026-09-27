@@ -59,7 +59,7 @@
   "translations": {
     "en": {
       "strings": {
-        "metaTitle": "Gofish — Mathematics, Intelligence & Life",
+        "metaTitle": "Homepage[Gofish]",
         "sectionAbout": "01 / ABOUT",
         "sectionResearch": "02 / RESEARCH INTERESTS",
         "sectionEducation": "03 / EDUCATION",
@@ -282,7 +282,7 @@
     },
     "zh": {
       "strings": {
-        "metaTitle": "Gofish — 数学、智能与生活",
+        "metaTitle": "Homepage[Gofish]",
         "sectionAbout": "01 / 关于我",
         "sectionResearch": "02 / 研究兴趣",
         "sectionEducation": "03 / 求学经历",
@@ -505,7 +505,7 @@
     },
     "fr": {
       "strings": {
-        "metaTitle": "Gofish — Mathématiques, intelligence et vie",
+        "metaTitle": "Homepage[Gofish]",
         "sectionAbout": "01 / À PROPOS",
         "sectionResearch": "02 / RECHERCHE",
         "sectionEducation": "03 / FORMATION",
@@ -728,7 +728,7 @@
     },
     "de": {
       "strings": {
-        "metaTitle": "Gofish — Mathematik, Intelligenz & Leben",
+        "metaTitle": "Homepage[Gofish]",
         "sectionAbout": "01 / ÜBER MICH",
         "sectionResearch": "02 / FORSCHUNG",
         "sectionEducation": "03 / AUSBILDUNG",
@@ -951,7 +951,7 @@
     },
     "es": {
       "strings": {
-        "metaTitle": "Gofish — Matemáticas, inteligencia y vida",
+        "metaTitle": "Homepage[Gofish]",
         "sectionAbout": "01 / SOBRE MÍ",
         "sectionResearch": "02 / INVESTIGACIÓN",
         "sectionEducation": "03 / FORMACIÓN",
@@ -1174,7 +1174,7 @@
     },
     "ar": {
       "strings": {
-        "metaTitle": "Gofish — الرياضيات والذكاء والحياة",
+        "metaTitle": "Homepage[Gofish]",
         "sectionAbout": "٠١ / نبذة عني",
         "sectionResearch": "٠٢ / اهتمامات البحث",
         "sectionEducation": "٠٣ / الدراسة",
@@ -1397,7 +1397,7 @@
     },
     "ja": {
       "strings": {
-        "metaTitle": "Gofish — 数学・知能・暮らし",
+        "metaTitle": "Homepage[Gofish]",
         "sectionAbout": "01 / 私について",
         "sectionResearch": "02 / 研究分野",
         "sectionEducation": "03 / 学歴",
@@ -1620,7 +1620,7 @@
     },
     "ko": {
       "strings": {
-        "metaTitle": "Gofish — 수학, 지능, 그리고 삶",
+        "metaTitle": "Homepage[Gofish]",
         "sectionAbout": "01 / 소개",
         "sectionResearch": "02 / 연구 관심사",
         "sectionEducation": "03 / 학력",
@@ -1843,7 +1843,7 @@
     },
     "ru": {
       "strings": {
-        "metaTitle": "Gofish — Математика, интеллект и жизнь",
+        "metaTitle": "Homepage[Gofish]",
         "sectionAbout": "01 / ОБО МНЕ",
         "sectionResearch": "02 / ИССЛЕДОВАНИЯ",
         "sectionEducation": "03 / ОБРАЗОВАНИЕ",
