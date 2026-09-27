@@ -14,6 +14,12 @@
       "dir": "ltr"
     },
     {
+      "code": "it",
+      "label": "Italiano",
+      "lang": "it",
+      "dir": "ltr"
+    },
+    {
       "code": "fr",
       "label": "Français",
       "lang": "fr",
@@ -32,10 +38,34 @@
       "dir": "ltr"
     },
     {
+      "code": "pt",
+      "label": "Português",
+      "lang": "pt",
+      "dir": "ltr"
+    },
+    {
       "code": "ar",
       "label": "العربية",
       "lang": "ar",
       "dir": "rtl"
+    },
+    {
+      "code": "hi",
+      "label": "हिन्दी",
+      "lang": "hi",
+      "dir": "ltr"
+    },
+    {
+      "code": "ur",
+      "label": "اردو",
+      "lang": "ur",
+      "dir": "rtl"
+    },
+    {
+      "code": "bn",
+      "label": "বাংলা",
+      "lang": "bn",
+      "dir": "ltr"
     },
     {
       "code": "ja",
@@ -96,7 +126,7 @@
         "themeToLight": "Switch to light mode",
         "statsViews": "Total visits",
         "statsVisitors": "Visitors",
-        "profileNote": "22 · Male · Notes of 2026",
+        "profileNote": "{age} · Male · Notes of 2026",
         "headline": "Understanding intelligence through math,<br>exploring the world through curiosity.",
         "intro": "A master's student in mathematics, focused on Agent RSI and Physical AI.<br>I like to ask how intelligence learns — and to walk into real mountains and everyday life.",
         "heroCaption": "Give my steps to the wild, and my curiosity to the world.",
@@ -319,7 +349,7 @@
         "themeToLight": "切换到亮色模式",
         "statsViews": "总访问量",
         "statsVisitors": "访客数",
-        "profileNote": "22 岁 · 男生 · 2026 年记",
+        "profileNote": "{age} 岁 · 男生 · 2026 年记",
         "headline": "以数学理解智能，<br>以好奇探索世界。",
         "intro": "数学专业硕士生，关注 Agent RSI 与 Physical AI。<br>喜欢追问智能如何学习，也喜欢走进真实的山川与日常。",
         "heroCaption": "把脚步交给山野，把好奇留给世界。",
@@ -542,7 +572,7 @@
         "themeToLight": "Passer en mode clair",
         "statsViews": "Visites totales",
         "statsVisitors": "Visiteurs",
-        "profileNote": "22 ans · Homme · Notes de 2026",
+        "profileNote": "{age} ans · Homme · Notes de 2026",
         "headline": "Comprendre l'intelligence par les maths,<br>explorer le monde par la curiosité.",
         "intro": "Étudiant en master de mathématiques, passionné par l'Agent RSI et la Physical AI.<br>J'aime me demander comment l'intelligence apprend — et partir vers de vraies montagnes et le quotidien.",
         "heroCaption": "Mes pas vers la montagne, ma curiosité vers le monde.",
@@ -765,7 +795,7 @@
         "themeToLight": "Zum hellen Modus wechseln",
         "statsViews": "Seitenaufrufe gesamt",
         "statsVisitors": "Besucher",
-        "profileNote": "22 · Männlich · Stand 2026",
+        "profileNote": "{age} · Männlich · Notizen von 2026",
         "headline": "Intelligenz durch Mathematik verstehen,<br>die Welt mit Neugier erkunden.",
         "intro": "Masterstudent der Mathematik, forscht zu Agent RSI und Physical AI.<br>Ich frage gern, wie Intelligenz lernt, und gehe gern hinaus in echte Berge und den Alltag.",
         "heroCaption": "Meine Schritte der Wildnis, meine Neugier der Welt.",
@@ -988,7 +1018,7 @@
         "themeToLight": "Cambiar a modo claro",
         "statsViews": "Visitas totales",
         "statsVisitors": "Visitantes",
-        "profileNote": "22 años · Hombre · Notas de 2026",
+        "profileNote": "{age} · Hombre · Notas de 2026",
         "headline": "Entender la inteligencia con matemáticas,<br>explorar el mundo con curiosidad.",
         "intro": "Estudiante de máster en matemáticas, centrado en Agent RSI y Physical AI.<br>Me gusta preguntarme cómo aprende la inteligencia, y caminar por montañas reales y por la vida cotidiana.",
         "heroCaption": "Mis pasos a la montaña, mi curiosidad al mundo.",
@@ -1211,7 +1241,7 @@
         "themeToLight": "التبديل إلى الوضع الفاتح",
         "statsViews": "إجمالي الزيارات",
         "statsVisitors": "الزوار",
-        "profileNote": "22 عامًا · ذكر · ملاحظات 2026",
+        "profileNote": "{age} · ذكر · ملاحظات 2026",
         "headline": "فهم الذكاء عبر الرياضيات،<br>واستكشاف العالم عبر الفضول.",
         "intro": "طالب ماجستير في الرياضيات، مهتم بموضوع Agent RSI والذكاء الفيزيائي Physical AI.<br>أحب أن أسأل كيف يتعلم الذكاء — وأن أمشي في جبال حقيقية وفي الحياة اليومية.",
         "heroCaption": "أمنح خطواتي للبرية، وفضولي للعالم.",
@@ -1434,7 +1464,7 @@
         "themeToLight": "ライトモードに切り替え",
         "statsViews": "総訪問数",
         "statsVisitors": "訪問者数",
-        "profileNote": "22歳 · 男性 · 2026年の記録",
+        "profileNote": "{age}歳 · 男性 · 2026年の記録",
         "headline": "数学で知能を理解し、<br>好奇心で世界を探る。",
         "intro": "数学の修士課程に在籍し、Agent RSI と Physical AI に関心を持つ学生です。<br>知能がどのように学ぶのかを問い、本物の山や日常の中を歩くのが好きです。",
         "heroCaption": "足は山野へ、好奇心は世界へ。",
@@ -1657,7 +1687,7 @@
         "themeToLight": "라이트 모드로 전환",
         "statsViews": "총 방문수",
         "statsVisitors": "방문자 수",
-        "profileNote": "22세 · 남성 · 2026년의 기록",
+        "profileNote": "{age}세 · 남성 · 2026년 기록",
         "headline": "수학으로 지능을 이해하고,<br>호기심으로 세계를 탐험하기.",
         "intro": "수학 석사 과정에 재학 중이며, Agent RSI와 Physical AI에 관심을 두고 있습니다.<br>지능이 어떻게 학습하는지 묻고, 진짜 산과 일상 속을 걷는 것을 좋아합니다.",
         "heroCaption": "발걸음은 산과 들로, 호기심은 세계로.",
@@ -1880,7 +1910,7 @@
         "themeToLight": "Переключить на светлую тему",
         "statsViews": "Всего посещений",
         "statsVisitors": "Посетители",
-        "profileNote": "22 · Мужской · Заметки 2026",
+        "profileNote": "{age} · Мужчина · Заметки 2026",
         "headline": "Понимать интеллект через математику,<br>исследовать мир через любопытство.",
         "intro": "Магистрант математического направления, занимаюсь Agent RSI и Physical AI.<br>Люблю спрашивать, как интеллект учится, — и уходить в настоящие горы и повседневную жизнь.",
         "heroCaption": "Отдам шаги дикой природе, а любопытство — миру.",
@@ -2059,6 +2089,1121 @@
             "title": "Серьёзное дело",
             "caption": "Некоторые блюда требуют полной сосредоточенности.",
             "alt": "Gofish разбирает лепёшку за столом в ресторане",
+            "position": "50% 42%"
+          }
+        ]
+      }
+    },
+    "it": {
+      "strings": {
+        "metaTitle": "Homepage[Gofish]",
+        "sectionAbout": "01 / CHI SONO",
+        "sectionResearch": "02 / INTERESSI DI RICERCA",
+        "sectionEducation": "03 / FORMAZIONE",
+        "sectionLife": "04 / VITA, IN FRAMMENTI",
+        "photoLabel": "DA QUALCHE PARTE LÀ FUORI",
+        "skipLink": "Vai al contenuto",
+        "navAbout": "Chi sono",
+        "navResearch": "Ricerca",
+        "navEducation": "Formazione",
+        "navLife": "Vita",
+        "menuOpen": "Apri menu",
+        "menuClose": "Chiudi menu",
+        "brandHome": "Home di Gofish",
+        "heroHello": "Ciao, sono",
+        "heroCtaExplore": "Esplora i miei interessi",
+        "heroCtaLife": "Guarda la mia vita",
+        "aboutTitle": "Chi sono",
+        "aboutAside": "Pensare seriamente<br>e vivere seriamente.",
+        "researchTitle": "Ciò che mi incuriosisce",
+        "educationTitle": "Formazione",
+        "lifeTitle": "Vivere anche pienamente",
+        "galleryExpand": "Mostra tutte le {n} foto",
+        "galleryCollapse": "Chiudi galleria",
+        "closingCta": "Trovami su GitHub",
+        "closingEmail": "Scrivimi",
+        "footerTag": "Resta curioso, continua a esplorare.",
+        "footerUpdated": "Aggiornato",
+        "backToTop": "Torna su",
+        "lightboxClose": "Chiudi foto",
+        "lightboxPrev": "Foto precedente",
+        "lightboxNext": "Foto successiva",
+        "langLabel": "Cambia lingua",
+        "themeToDark": "Passa alla modalità scura",
+        "themeToLight": "Passa alla modalità chiara",
+        "statsViews": "Visite totali",
+        "statsVisitors": "Visitatori",
+        "profileNote": "{age} · Uomo · Note del 2026",
+        "headline": "Comprendere l’intelligenza con la matematica,<br>esplorare il mondo con curiosità.",
+        "intro": "Studente magistrale in matematica, interessato ad Agent RSI e Physical AI.<br>Mi piace chiedere come l’intelligenza impari — e camminare tra montagne reali e vita quotidiana.",
+        "heroCaption": "Affido i miei passi alla natura e la mia curiosità al mondo.",
+        "closing": "Restare curiosi, crescere lentamente.",
+        "closingText": "Sulla matematica, sull’AI o sul prossimo viaggio — aspetto idee interessanti.",
+        "skillsTitle": "Competenze e strumenti",
+        "skillsExpand": "Mostra tutte le competenze",
+        "skillsCollapse": "Mostra meno competenze"
+      },
+      "content": {
+        "about": [
+          "Ciao, sono Gofish. Sto frequentando un master in matematica alla Southern University of Science and Technology, dopo aver studiato Mathematical Foundation Science alla Dalian University of Technology. La matematica è il punto da cui parto per capire i problemi, e l’AI continua a portarmene di nuovi.",
+          "Mi affascina soprattutto il modo in cui gli agenti migliorano attraverso l’esperienza, e come l’intelligenza possa entrare davvero nel mondo fisico tramite percezione e azione. Vorrei trovare una mia direzione di ricerca tra pensiero matematico solido ed esperimenti concreti.",
+          "Fuori dallo schermo amo viaggiare, giocare a badminton, cucinare e guardare film. Per me studiare seriamente un problema e cucinare seriamente un pasto meritano entrambi attenzione."
+        ],
+        "research": [
+          {
+            "number": "01",
+            "title": "Agent RSI",
+            "subtitle": "Agents · Recursive self-improvement",
+            "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
+            "tags": [
+              "Held-out evaluation",
+              "Failure analysis",
+              "Rollback"
+            ],
+            "className": "agent"
+          },
+          {
+            "number": "02",
+            "title": "Physical AI",
+            "subtitle": "Perception · Action · The real world",
+            "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
+            "tags": [
+              "Pick-and-place",
+              "Geometric priors",
+              "Uncertainty estimation"
+            ],
+            "className": "physical"
+          }
+        ],
+        "education": [
+          {
+            "dates": "2026 — 2029",
+            "degree": "Mathematics · Master's",
+            "school": "Southern University of Science and Technology",
+            "abbr": "SUSTech",
+            "note": "Enrolled · Expected to graduate in 2029",
+            "current": true
+          },
+          {
+            "dates": "2022 — 2026",
+            "degree": "Mathematical Foundation Science · Bachelor's",
+            "school": "Dalian University of Technology",
+            "abbr": "DUT",
+            "note": "Between mathematics and physics, building the foundation for understanding the world.",
+            "current": false
+          }
+        ],
+        "hobbies": [
+          {
+            "symbol": "↗",
+            "title": "Badminton",
+            "description": "Swing, run, sweat — a breath of fresh air for the mind."
+          },
+          {
+            "symbol": "⌁",
+            "title": "Travel & wandering",
+            "description": "Leaving familiar routes, collecting different scenery."
+          },
+          {
+            "symbol": "◡",
+            "title": "Cooking",
+            "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+          },
+          {
+            "symbol": "▷",
+            "title": "Film & stories",
+            "description": "Living another life through a screen."
+          }
+        ],
+        "gallery": [
+          {
+            "image": "mountains",
+            "title": "High enough for silence",
+            "caption": "In the Dolomites, even the noise learns to disappear.",
+            "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
+            "position": "45% 60%"
+          },
+          {
+            "image": "blue-lake",
+            "title": "The afternoon slowed down",
+            "caption": "Lake Thun kept the light a little longer.",
+            "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
+            "position": "50% 56%"
+          },
+          {
+            "image": "rooftops",
+            "title": "Paris, looking up",
+            "caption": "The Opera House rewards anyone who remembers to look above street level.",
+            "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
+            "position": "52% 50%"
+          },
+          {
+            "image": "green-lake",
+            "title": "A color the mountains kept",
+            "caption": "Lake Carezza, somewhere between emerald and reflection.",
+            "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
+            "position": "50% 62%"
+          },
+          {
+            "image": "snow",
+            "title": "Winter, almost weightless",
+            "caption": "At Jungfrau, the clouds felt close enough to touch.",
+            "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
+            "position": "50% 68%"
+          },
+          {
+            "image": "museum",
+            "title": "Everyone came for her",
+            "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
+            "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
+            "position": "45% 50%"
+          },
+          {
+            "image": "evening",
+            "title": "Florence before nightfall",
+            "caption": "From Piazzale Michelangelo, the city held on to the last light.",
+            "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
+            "position": "40% 55%"
+          },
+          {
+            "image": "colosseum",
+            "title": "Stone remembers",
+            "caption": "At the Colosseum, two thousand years felt strangely near.",
+            "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
+            "position": "50% 57%"
+          },
+          {
+            "image": "summit",
+            "title": "Above the clouds, another sky",
+            "caption": "Tianchi left the wind to finish the sentence.",
+            "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
+            "position": "50% 45%"
+          },
+          {
+            "image": "aircraft",
+            "title": "Childhood curiosity, full scale",
+            "caption": "The Y-20 made the idea of flight feel tangible.",
+            "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
+            "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "The smallest guest",
+            "caption": "One summer night, trust weighed almost nothing.",
+            "alt": "Gofish holding a small puppy in a courtyard at night",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "The people behind the milestone",
+            "caption": "A graduation photo, and the two people who made the long road possible.",
+            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Waiting on the blue",
+            "caption": "The sea kept its answer; I kept the line.",
+            "alt": "Gofish fishing from a wooden pier by the sea",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "Serious business",
+            "caption": "Some meals deserve full concentration.",
+            "alt": "Gofish tearing flatbread at a restaurant table",
+            "position": "50% 42%"
+          }
+        ]
+      }
+    },
+    "pt": {
+      "strings": {
+        "metaTitle": "Homepage[Gofish]",
+        "sectionAbout": "01 / SOBRE",
+        "sectionResearch": "02 / INTERESSES DE PESQUISA",
+        "sectionEducation": "03 / FORMAÇÃO",
+        "sectionLife": "04 / VIDA, EM FRAGMENTOS",
+        "photoLabel": "EM ALGUM LUGAR LÁ FORA",
+        "skipLink": "Ir para o conteúdo",
+        "navAbout": "Sobre",
+        "navResearch": "Pesquisa",
+        "navEducation": "Formação",
+        "navLife": "Vida",
+        "menuOpen": "Abrir menu",
+        "menuClose": "Fechar menu",
+        "brandHome": "Início de Gofish",
+        "heroHello": "Oi, eu sou",
+        "heroCtaExplore": "Explorar meus interesses",
+        "heroCtaLife": "Ver minha vida",
+        "aboutTitle": "Sobre",
+        "aboutAside": "Alguém que pensa a sério<br>e também vive a sério.",
+        "researchTitle": "O que me desperta curiosidade",
+        "educationTitle": "Formação",
+        "lifeTitle": "Também vivendo plenamente",
+        "galleryExpand": "Mostrar todas as {n} fotos",
+        "galleryCollapse": "Recolher galeria",
+        "closingCta": "Encontre-me no GitHub",
+        "closingEmail": "Escreva para mim",
+        "footerTag": "Continue curioso, continue explorando.",
+        "footerUpdated": "Atualizado",
+        "backToTop": "Voltar ao topo",
+        "lightboxClose": "Fechar foto",
+        "lightboxPrev": "Foto anterior",
+        "lightboxNext": "Próxima foto",
+        "langLabel": "Alterar idioma",
+        "themeToDark": "Mudar para modo escuro",
+        "themeToLight": "Mudar para modo claro",
+        "statsViews": "Visitas totais",
+        "statsVisitors": "Visitantes",
+        "profileNote": "{age} · Masculino · Notas de 2026",
+        "headline": "Entender a inteligência pela matemática,<br>explorar o mundo pela curiosidade.",
+        "intro": "Mestrando em matemática, interessado em Agent RSI e Physical AI.<br>Gosto de perguntar como a inteligência aprende — e de caminhar por montanhas reais e pela vida cotidiana.",
+        "heroCaption": "Entrego meus passos à natureza e minha curiosidade ao mundo.",
+        "closing": "Mantenha a curiosidade, cresça devagar.",
+        "closingText": "Sobre matemática, IA ou a próxima viagem — espero ideias interessantes.",
+        "skillsTitle": "Habilidades e ferramentas",
+        "skillsExpand": "Mostrar todas as habilidades",
+        "skillsCollapse": "Mostrar menos habilidades"
+      },
+      "content": {
+        "about": [
+          "Oi, eu sou Gofish. Atualmente faço mestrado em matemática na Southern University of Science and Technology, depois de estudar Mathematical Foundation Science na Dalian University of Technology. A matemática é meu ponto de partida para entender problemas, e a IA continua trazendo novos.",
+          "O que mais me fascina é como agentes melhoram por meio da experiência, e como a inteligência pode entrar de verdade no mundo físico pela percepção e pela ação. Quero encontrar minha própria direção entre pensamento matemático sólido e experimentos concretos.",
+          "Fora da tela, gosto de viajar, jogar badminton, cozinhar e ver filmes. Para mim, estudar um problema com seriedade e cozinhar uma refeição com seriedade valem o mesmo cuidado."
+        ],
+        "research": [
+          {
+            "number": "01",
+            "title": "Agent RSI",
+            "subtitle": "Agents · Recursive self-improvement",
+            "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
+            "tags": [
+              "Held-out evaluation",
+              "Failure analysis",
+              "Rollback"
+            ],
+            "className": "agent"
+          },
+          {
+            "number": "02",
+            "title": "Physical AI",
+            "subtitle": "Perception · Action · The real world",
+            "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
+            "tags": [
+              "Pick-and-place",
+              "Geometric priors",
+              "Uncertainty estimation"
+            ],
+            "className": "physical"
+          }
+        ],
+        "education": [
+          {
+            "dates": "2026 — 2029",
+            "degree": "Mathematics · Master's",
+            "school": "Southern University of Science and Technology",
+            "abbr": "SUSTech",
+            "note": "Enrolled · Expected to graduate in 2029",
+            "current": true
+          },
+          {
+            "dates": "2022 — 2026",
+            "degree": "Mathematical Foundation Science · Bachelor's",
+            "school": "Dalian University of Technology",
+            "abbr": "DUT",
+            "note": "Between mathematics and physics, building the foundation for understanding the world.",
+            "current": false
+          }
+        ],
+        "hobbies": [
+          {
+            "symbol": "↗",
+            "title": "Badminton",
+            "description": "Swing, run, sweat — a breath of fresh air for the mind."
+          },
+          {
+            "symbol": "⌁",
+            "title": "Travel & wandering",
+            "description": "Leaving familiar routes, collecting different scenery."
+          },
+          {
+            "symbol": "◡",
+            "title": "Cooking",
+            "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+          },
+          {
+            "symbol": "▷",
+            "title": "Film & stories",
+            "description": "Living another life through a screen."
+          }
+        ],
+        "gallery": [
+          {
+            "image": "mountains",
+            "title": "High enough for silence",
+            "caption": "In the Dolomites, even the noise learns to disappear.",
+            "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
+            "position": "45% 60%"
+          },
+          {
+            "image": "blue-lake",
+            "title": "The afternoon slowed down",
+            "caption": "Lake Thun kept the light a little longer.",
+            "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
+            "position": "50% 56%"
+          },
+          {
+            "image": "rooftops",
+            "title": "Paris, looking up",
+            "caption": "The Opera House rewards anyone who remembers to look above street level.",
+            "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
+            "position": "52% 50%"
+          },
+          {
+            "image": "green-lake",
+            "title": "A color the mountains kept",
+            "caption": "Lake Carezza, somewhere between emerald and reflection.",
+            "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
+            "position": "50% 62%"
+          },
+          {
+            "image": "snow",
+            "title": "Winter, almost weightless",
+            "caption": "At Jungfrau, the clouds felt close enough to touch.",
+            "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
+            "position": "50% 68%"
+          },
+          {
+            "image": "museum",
+            "title": "Everyone came for her",
+            "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
+            "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
+            "position": "45% 50%"
+          },
+          {
+            "image": "evening",
+            "title": "Florence before nightfall",
+            "caption": "From Piazzale Michelangelo, the city held on to the last light.",
+            "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
+            "position": "40% 55%"
+          },
+          {
+            "image": "colosseum",
+            "title": "Stone remembers",
+            "caption": "At the Colosseum, two thousand years felt strangely near.",
+            "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
+            "position": "50% 57%"
+          },
+          {
+            "image": "summit",
+            "title": "Above the clouds, another sky",
+            "caption": "Tianchi left the wind to finish the sentence.",
+            "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
+            "position": "50% 45%"
+          },
+          {
+            "image": "aircraft",
+            "title": "Childhood curiosity, full scale",
+            "caption": "The Y-20 made the idea of flight feel tangible.",
+            "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
+            "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "The smallest guest",
+            "caption": "One summer night, trust weighed almost nothing.",
+            "alt": "Gofish holding a small puppy in a courtyard at night",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "The people behind the milestone",
+            "caption": "A graduation photo, and the two people who made the long road possible.",
+            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Waiting on the blue",
+            "caption": "The sea kept its answer; I kept the line.",
+            "alt": "Gofish fishing from a wooden pier by the sea",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "Serious business",
+            "caption": "Some meals deserve full concentration.",
+            "alt": "Gofish tearing flatbread at a restaurant table",
+            "position": "50% 42%"
+          }
+        ]
+      }
+    },
+    "hi": {
+      "strings": {
+        "metaTitle": "Homepage[Gofish]",
+        "sectionAbout": "01 / परिचय",
+        "sectionResearch": "02 / शोध रुचियाँ",
+        "sectionEducation": "03 / शिक्षा",
+        "sectionLife": "04 / जीवन के टुकड़े",
+        "photoLabel": "कहीं बाहर",
+        "skipLink": "मुख्य सामग्री पर जाएँ",
+        "navAbout": "परिचय",
+        "navResearch": "शोध",
+        "navEducation": "शिक्षा",
+        "navLife": "जीवन",
+        "menuOpen": "मेनू खोलें",
+        "menuClose": "मेनू बंद करें",
+        "brandHome": "Gofish होम",
+        "heroHello": "नमस्ते, मैं हूँ",
+        "heroCtaExplore": "मेरी रुचियाँ देखें",
+        "heroCtaLife": "मेरा जीवन देखें",
+        "aboutTitle": "परिचय",
+        "aboutAside": "गंभीरता से सोचता हूँ<br>और गंभीरता से जीता भी हूँ।",
+        "researchTitle": "मुझे किन बातों में जिज्ञासा है",
+        "educationTitle": "शिक्षा",
+        "lifeTitle": "जीवन भी पूरी तरह",
+        "galleryExpand": "सभी {n} तस्वीरें दिखाएँ",
+        "galleryCollapse": "गैलरी समेटें",
+        "closingCta": "GitHub पर मिलें",
+        "closingEmail": "मुझे लिखें",
+        "footerTag": "जिज्ञासु रहें, खोजते रहें।",
+        "footerUpdated": "अपडेट",
+        "backToTop": "ऊपर जाएँ",
+        "lightboxClose": "तस्वीर बंद करें",
+        "lightboxPrev": "पिछली तस्वीर",
+        "lightboxNext": "अगली तस्वीर",
+        "langLabel": "भाषा बदलें",
+        "themeToDark": "डार्क मोड",
+        "themeToLight": "लाइट मोड",
+        "statsViews": "कुल विज़िट",
+        "statsVisitors": "आगंतुक",
+        "profileNote": "{age} · पुरुष · 2026 के नोट्स",
+        "headline": "गणित से बुद्धिमत्ता को समझना,<br>जिज्ञासा से दुनिया को देखना।",
+        "intro": "गणित में मास्टर का छात्र, Agent RSI और Physical AI में रुचि।<br>मुझे पूछना पसंद है कि बुद्धिमत्ता कैसे सीखती है — और असली पहाड़ों व रोज़मर्रा की दुनिया में चलना भी।",
+        "heroCaption": "अपने कदम प्रकृति को, और अपनी जिज्ञासा दुनिया को।",
+        "closing": "जिज्ञासु रहें, धीरे-धीरे बढ़ें।",
+        "closingText": "गणित, AI या अगली यात्रा पर — रोचक विचारों की प्रतीक्षा है।",
+        "skillsTitle": "कौशल और उपकरण",
+        "skillsExpand": "सभी कौशल दिखाएँ",
+        "skillsCollapse": "कम कौशल दिखाएँ"
+      },
+      "content": {
+        "about": [
+          "नमस्ते, मैं Gofish हूँ। मैं अभी Southern University of Science and Technology में गणित में मास्टर कर रहा हूँ, इससे पहले Dalian University of Technology में Mathematical Foundation Science पढ़ा। गणित मेरे लिए समस्याओं को समझने की शुरुआत है, और AI लगातार नई समस्याएँ लाता रहता है।",
+          "मुझे सबसे अधिक यह आकर्षित करता है कि एजेंट अनुभव से खुद को कैसे बेहतर बनाते हैं, और बुद्धिमत्ता धारणा व क्रिया के माध्यम से भौतिक दुनिया में सचमुच कैसे प्रवेश कर सकती है। मैं ठोस गणितीय सोच और ठोस प्रयोगों के बीच अपनी शोध दिशा खोजना चाहता हूँ।",
+          "स्क्रीन से दूर मुझे यात्रा, बैडमिंटन, खाना बनाना और फिल्में पसंद हैं। मेरे लिए किसी समस्या को गंभीरता से पढ़ना और किसी भोजन को गंभीरता से पकाना दोनों ही मेहनत के योग्य हैं।"
+        ],
+        "research": [
+          {
+            "number": "01",
+            "title": "Agent RSI",
+            "subtitle": "Agents · Recursive self-improvement",
+            "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
+            "tags": [
+              "Held-out evaluation",
+              "Failure analysis",
+              "Rollback"
+            ],
+            "className": "agent"
+          },
+          {
+            "number": "02",
+            "title": "Physical AI",
+            "subtitle": "Perception · Action · The real world",
+            "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
+            "tags": [
+              "Pick-and-place",
+              "Geometric priors",
+              "Uncertainty estimation"
+            ],
+            "className": "physical"
+          }
+        ],
+        "education": [
+          {
+            "dates": "2026 — 2029",
+            "degree": "Mathematics · Master's",
+            "school": "Southern University of Science and Technology",
+            "abbr": "SUSTech",
+            "note": "Enrolled · Expected to graduate in 2029",
+            "current": true
+          },
+          {
+            "dates": "2022 — 2026",
+            "degree": "Mathematical Foundation Science · Bachelor's",
+            "school": "Dalian University of Technology",
+            "abbr": "DUT",
+            "note": "Between mathematics and physics, building the foundation for understanding the world.",
+            "current": false
+          }
+        ],
+        "hobbies": [
+          {
+            "symbol": "↗",
+            "title": "Badminton",
+            "description": "Swing, run, sweat — a breath of fresh air for the mind."
+          },
+          {
+            "symbol": "⌁",
+            "title": "Travel & wandering",
+            "description": "Leaving familiar routes, collecting different scenery."
+          },
+          {
+            "symbol": "◡",
+            "title": "Cooking",
+            "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+          },
+          {
+            "symbol": "▷",
+            "title": "Film & stories",
+            "description": "Living another life through a screen."
+          }
+        ],
+        "gallery": [
+          {
+            "image": "mountains",
+            "title": "High enough for silence",
+            "caption": "In the Dolomites, even the noise learns to disappear.",
+            "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
+            "position": "45% 60%"
+          },
+          {
+            "image": "blue-lake",
+            "title": "The afternoon slowed down",
+            "caption": "Lake Thun kept the light a little longer.",
+            "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
+            "position": "50% 56%"
+          },
+          {
+            "image": "rooftops",
+            "title": "Paris, looking up",
+            "caption": "The Opera House rewards anyone who remembers to look above street level.",
+            "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
+            "position": "52% 50%"
+          },
+          {
+            "image": "green-lake",
+            "title": "A color the mountains kept",
+            "caption": "Lake Carezza, somewhere between emerald and reflection.",
+            "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
+            "position": "50% 62%"
+          },
+          {
+            "image": "snow",
+            "title": "Winter, almost weightless",
+            "caption": "At Jungfrau, the clouds felt close enough to touch.",
+            "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
+            "position": "50% 68%"
+          },
+          {
+            "image": "museum",
+            "title": "Everyone came for her",
+            "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
+            "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
+            "position": "45% 50%"
+          },
+          {
+            "image": "evening",
+            "title": "Florence before nightfall",
+            "caption": "From Piazzale Michelangelo, the city held on to the last light.",
+            "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
+            "position": "40% 55%"
+          },
+          {
+            "image": "colosseum",
+            "title": "Stone remembers",
+            "caption": "At the Colosseum, two thousand years felt strangely near.",
+            "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
+            "position": "50% 57%"
+          },
+          {
+            "image": "summit",
+            "title": "Above the clouds, another sky",
+            "caption": "Tianchi left the wind to finish the sentence.",
+            "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
+            "position": "50% 45%"
+          },
+          {
+            "image": "aircraft",
+            "title": "Childhood curiosity, full scale",
+            "caption": "The Y-20 made the idea of flight feel tangible.",
+            "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
+            "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "The smallest guest",
+            "caption": "One summer night, trust weighed almost nothing.",
+            "alt": "Gofish holding a small puppy in a courtyard at night",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "The people behind the milestone",
+            "caption": "A graduation photo, and the two people who made the long road possible.",
+            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Waiting on the blue",
+            "caption": "The sea kept its answer; I kept the line.",
+            "alt": "Gofish fishing from a wooden pier by the sea",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "Serious business",
+            "caption": "Some meals deserve full concentration.",
+            "alt": "Gofish tearing flatbread at a restaurant table",
+            "position": "50% 42%"
+          }
+        ]
+      }
+    },
+    "ur": {
+      "strings": {
+        "metaTitle": "Homepage[Gofish]",
+        "sectionAbout": "01 / تعارف",
+        "sectionResearch": "02 / تحقیقی دلچسپیاں",
+        "sectionEducation": "03 / تعلیم",
+        "sectionLife": "04 / زندگی کے ٹکڑے",
+        "photoLabel": "کہیں باہر",
+        "skipLink": "مواد پر جائیں",
+        "navAbout": "تعارف",
+        "navResearch": "تحقیق",
+        "navEducation": "تعلیم",
+        "navLife": "زندگی",
+        "menuOpen": "مینو کھولیں",
+        "menuClose": "مینو بند کریں",
+        "brandHome": "Gofish ہوم",
+        "heroHello": "سلام، میں ہوں",
+        "heroCtaExplore": "میری دلچسپیاں دیکھیں",
+        "heroCtaLife": "میری زندگی دیکھیں",
+        "aboutTitle": "تعارف",
+        "aboutAside": "سنجیدگی سے سوچتا ہوں<br>اور سنجیدگی سے جیتا بھی ہوں۔",
+        "researchTitle": "مجھے کس چیز کا تجسس ہے",
+        "educationTitle": "تعلیم",
+        "lifeTitle": "زندگی بھی بھرپور",
+        "galleryExpand": "تمام {n} تصاویر دکھائیں",
+        "galleryCollapse": "گیلری سمیٹیں",
+        "closingCta": "GitHub پر ملیں",
+        "closingEmail": "مجھے لکھیں",
+        "footerTag": "متجسس رہیں، دریافت کرتے رہیں۔",
+        "footerUpdated": "اپ ڈیٹ",
+        "backToTop": "اوپر جائیں",
+        "lightboxClose": "تصویر بند کریں",
+        "lightboxPrev": "پچھلی تصویر",
+        "lightboxNext": "اگلی تصویر",
+        "langLabel": "زبان تبدیل کریں",
+        "themeToDark": "ڈارک موڈ",
+        "themeToLight": "لائٹ موڈ",
+        "statsViews": "کل وزٹس",
+        "statsVisitors": "زائرین",
+        "profileNote": "{age} · مرد · 2026 کے نوٹس",
+        "headline": "ریاضی کے ذریعے ذہانت کو سمجھنا،<br>تجسس کے ذریعے دنیا کو دیکھنا۔",
+        "intro": "ریاضی میں ماسٹر کا طالب علم، Agent RSI اور Physical AI میں دلچسپی رکھتا ہوں۔<br>مجھے یہ پوچھنا پسند ہے کہ ذہانت کیسے سیکھتی ہے — اور حقیقی پہاڑوں اور روزمرہ زندگی میں چلنا بھی۔",
+        "heroCaption": "اپنے قدم فطرت کے حوالے، اور اپنا تجسس دنیا کے نام۔",
+        "closing": "متجسس رہیں، آہستہ آہستہ بڑھیں۔",
+        "closingText": "ریاضی، AI یا اگلے سفر کے بارے میں — دلچسپ خیالات کا منتظر ہوں۔",
+        "skillsTitle": "مہارتیں اور اوزار",
+        "skillsExpand": "تمام مہارتیں دکھائیں",
+        "skillsCollapse": "کم مہارتیں دکھائیں"
+      },
+      "content": {
+        "about": [
+          "سلام، میں Gofish ہوں۔ میں اس وقت Southern University of Science and Technology میں ریاضی میں ماسٹر کر رہا ہوں، اس سے پہلے Dalian University of Technology میں Mathematical Foundation Science پڑھا۔ ریاضی میرے لیے مسائل کو سمجھنے کی ابتدا ہے، اور AI مسلسل نئے سوالات سامنے لاتا ہے۔",
+          "مجھے سب سے زیادہ یہ بات متوجہ کرتی ہے کہ ایجنٹس تجربے کے ذریعے خود کو کیسے بہتر بناتے ہیں، اور ذہانت ادراک اور عمل کے ذریعے مادی دنیا میں واقعی کیسے داخل ہو سکتی ہے۔ میں مضبوط ریاضیاتی سوچ اور ٹھوس تجربات کے درمیان اپنی تحقیقی سمت تلاش کرنا چاہتا ہوں۔",
+          "اسکرین سے دور مجھے سفر، بیڈمنٹن، کھانا پکانا اور فلمیں پسند ہیں۔ میرے لیے کسی مسئلے کو سنجیدگی سے پڑھنا اور ایک کھانا سنجیدگی سے پکانا دونوں قابل قدر ہیں۔"
+        ],
+        "research": [
+          {
+            "number": "01",
+            "title": "Agent RSI",
+            "subtitle": "Agents · Recursive self-improvement",
+            "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
+            "tags": [
+              "Held-out evaluation",
+              "Failure analysis",
+              "Rollback"
+            ],
+            "className": "agent"
+          },
+          {
+            "number": "02",
+            "title": "Physical AI",
+            "subtitle": "Perception · Action · The real world",
+            "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
+            "tags": [
+              "Pick-and-place",
+              "Geometric priors",
+              "Uncertainty estimation"
+            ],
+            "className": "physical"
+          }
+        ],
+        "education": [
+          {
+            "dates": "2026 — 2029",
+            "degree": "Mathematics · Master's",
+            "school": "Southern University of Science and Technology",
+            "abbr": "SUSTech",
+            "note": "Enrolled · Expected to graduate in 2029",
+            "current": true
+          },
+          {
+            "dates": "2022 — 2026",
+            "degree": "Mathematical Foundation Science · Bachelor's",
+            "school": "Dalian University of Technology",
+            "abbr": "DUT",
+            "note": "Between mathematics and physics, building the foundation for understanding the world.",
+            "current": false
+          }
+        ],
+        "hobbies": [
+          {
+            "symbol": "↗",
+            "title": "Badminton",
+            "description": "Swing, run, sweat — a breath of fresh air for the mind."
+          },
+          {
+            "symbol": "⌁",
+            "title": "Travel & wandering",
+            "description": "Leaving familiar routes, collecting different scenery."
+          },
+          {
+            "symbol": "◡",
+            "title": "Cooking",
+            "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+          },
+          {
+            "symbol": "▷",
+            "title": "Film & stories",
+            "description": "Living another life through a screen."
+          }
+        ],
+        "gallery": [
+          {
+            "image": "mountains",
+            "title": "High enough for silence",
+            "caption": "In the Dolomites, even the noise learns to disappear.",
+            "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
+            "position": "45% 60%"
+          },
+          {
+            "image": "blue-lake",
+            "title": "The afternoon slowed down",
+            "caption": "Lake Thun kept the light a little longer.",
+            "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
+            "position": "50% 56%"
+          },
+          {
+            "image": "rooftops",
+            "title": "Paris, looking up",
+            "caption": "The Opera House rewards anyone who remembers to look above street level.",
+            "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
+            "position": "52% 50%"
+          },
+          {
+            "image": "green-lake",
+            "title": "A color the mountains kept",
+            "caption": "Lake Carezza, somewhere between emerald and reflection.",
+            "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
+            "position": "50% 62%"
+          },
+          {
+            "image": "snow",
+            "title": "Winter, almost weightless",
+            "caption": "At Jungfrau, the clouds felt close enough to touch.",
+            "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
+            "position": "50% 68%"
+          },
+          {
+            "image": "museum",
+            "title": "Everyone came for her",
+            "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
+            "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
+            "position": "45% 50%"
+          },
+          {
+            "image": "evening",
+            "title": "Florence before nightfall",
+            "caption": "From Piazzale Michelangelo, the city held on to the last light.",
+            "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
+            "position": "40% 55%"
+          },
+          {
+            "image": "colosseum",
+            "title": "Stone remembers",
+            "caption": "At the Colosseum, two thousand years felt strangely near.",
+            "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
+            "position": "50% 57%"
+          },
+          {
+            "image": "summit",
+            "title": "Above the clouds, another sky",
+            "caption": "Tianchi left the wind to finish the sentence.",
+            "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
+            "position": "50% 45%"
+          },
+          {
+            "image": "aircraft",
+            "title": "Childhood curiosity, full scale",
+            "caption": "The Y-20 made the idea of flight feel tangible.",
+            "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
+            "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "The smallest guest",
+            "caption": "One summer night, trust weighed almost nothing.",
+            "alt": "Gofish holding a small puppy in a courtyard at night",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "The people behind the milestone",
+            "caption": "A graduation photo, and the two people who made the long road possible.",
+            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Waiting on the blue",
+            "caption": "The sea kept its answer; I kept the line.",
+            "alt": "Gofish fishing from a wooden pier by the sea",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "Serious business",
+            "caption": "Some meals deserve full concentration.",
+            "alt": "Gofish tearing flatbread at a restaurant table",
+            "position": "50% 42%"
+          }
+        ]
+      }
+    },
+    "bn": {
+      "strings": {
+        "metaTitle": "Homepage[Gofish]",
+        "sectionAbout": "01 / পরিচিতি",
+        "sectionResearch": "02 / গবেষণার আগ্রহ",
+        "sectionEducation": "03 / শিক্ষা",
+        "sectionLife": "04 / জীবনের টুকরো",
+        "photoLabel": "কোথাও বাইরে",
+        "skipLink": "মূল অংশে যান",
+        "navAbout": "পরিচিতি",
+        "navResearch": "গবেষণা",
+        "navEducation": "শিক্ষা",
+        "navLife": "জীবন",
+        "menuOpen": "মেনু খুলুন",
+        "menuClose": "মেনু বন্ধ করুন",
+        "brandHome": "Gofish হোম",
+        "heroHello": "হাই, আমি",
+        "heroCtaExplore": "আমার আগ্রহ দেখুন",
+        "heroCtaLife": "আমার জীবন দেখুন",
+        "aboutTitle": "পরিচিতি",
+        "aboutAside": "গভীরভাবে ভাবি<br>এবং গভীরভাবেই বাঁচি।",
+        "researchTitle": "যা আমাকে কৌতূহলী করে",
+        "educationTitle": "শিক্ষা",
+        "lifeTitle": "জীবনও পূর্ণভাবে",
+        "galleryExpand": "সব {n} ছবি দেখান",
+        "galleryCollapse": "গ্যালারি গুটিয়ে নিন",
+        "closingCta": "GitHub-এ আমাকে খুঁজুন",
+        "closingEmail": "আমাকে লিখুন",
+        "footerTag": "কৌতূহলী থাকুন, অনুসন্ধান চালিয়ে যান।",
+        "footerUpdated": "আপডেট",
+        "backToTop": "উপরে ফিরুন",
+        "lightboxClose": "ছবি বন্ধ করুন",
+        "lightboxPrev": "আগের ছবি",
+        "lightboxNext": "পরের ছবি",
+        "langLabel": "ভাষা বদলান",
+        "themeToDark": "ডার্ক মোডে যান",
+        "themeToLight": "লাইট মোডে যান",
+        "statsViews": "মোট ভিজিট",
+        "statsVisitors": "ভিজিটর",
+        "profileNote": "{age} · পুরুষ · ২০২৬-এর নোট",
+        "headline": "গণিত দিয়ে বুদ্ধিমত্তা বোঝা,<br>কৌতূহল দিয়ে পৃথিবী দেখা।",
+        "intro": "গণিতে মাস্টার্সের ছাত্র, Agent RSI এবং Physical AI নিয়ে আগ্রহী।<br>বুদ্ধিমত্তা কীভাবে শেখে তা জিজ্ঞেস করতে ভালোবাসি — আর বাস্তব পাহাড় ও দৈনন্দিন জীবনে হাঁটতেও।",
+        "heroCaption": "আমার পদক্ষেপ প্রকৃতির কাছে, আর কৌতূহল পৃথিবীর কাছে।",
+        "closing": "কৌতূহলী থাকুন, ধীরে ধীরে বাড়ুন।",
+        "closingText": "গণিত, AI, অথবা পরের যাত্রা নিয়ে — আকর্ষণীয় ভাবনার অপেক্ষায়।",
+        "skillsTitle": "দক্ষতা ও সরঞ্জাম",
+        "skillsExpand": "সব দক্ষতা দেখান",
+        "skillsCollapse": "কম দক্ষতা দেখান"
+      },
+      "content": {
+        "about": [
+          "হাই, আমি Gofish। আমি এখন Southern University of Science and Technology-তে গণিতে মাস্টার্স করছি, এর আগে Dalian University of Technology-তে Mathematical Foundation Science পড়েছি। গণিত থেকেই আমি সমস্যা বোঝা শুরু করি, আর AI আমাকে বারবার নতুন প্রশ্ন এনে দেয়।",
+          "আমাকে সবচেয়ে বেশি টানে এজেন্টরা কীভাবে অভিজ্ঞতা থেকে নিজেদের উন্নত করে, এবং বুদ্ধিমত্তা কীভাবে উপলব্ধি ও কাজের মাধ্যমে বাস্তব জগতে সত্যিই প্রবেশ করতে পারে। শক্ত গণিতচিন্তা ও নির্দিষ্ট পরীক্ষার মাঝখানে আমি নিজের গবেষণার দিশা খুঁজতে চাই।",
+          "স্ক্রিনের বাইরে আমি ভ্রমণ, ব্যাডমিন্টন, রান্না আর সিনেমা ভালোবাসি। আমার কাছে কোনো সমস্যা মন দিয়ে পড়া আর কোনো খাবার মন দিয়ে রান্না করা দুটোই যত্নের যোগ্য।"
+        ],
+        "research": [
+          {
+            "number": "01",
+            "title": "Agent RSI",
+            "subtitle": "Agents · Recursive self-improvement",
+            "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
+            "tags": [
+              "Held-out evaluation",
+              "Failure analysis",
+              "Rollback"
+            ],
+            "className": "agent"
+          },
+          {
+            "number": "02",
+            "title": "Physical AI",
+            "subtitle": "Perception · Action · The real world",
+            "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
+            "tags": [
+              "Pick-and-place",
+              "Geometric priors",
+              "Uncertainty estimation"
+            ],
+            "className": "physical"
+          }
+        ],
+        "education": [
+          {
+            "dates": "2026 — 2029",
+            "degree": "Mathematics · Master's",
+            "school": "Southern University of Science and Technology",
+            "abbr": "SUSTech",
+            "note": "Enrolled · Expected to graduate in 2029",
+            "current": true
+          },
+          {
+            "dates": "2022 — 2026",
+            "degree": "Mathematical Foundation Science · Bachelor's",
+            "school": "Dalian University of Technology",
+            "abbr": "DUT",
+            "note": "Between mathematics and physics, building the foundation for understanding the world.",
+            "current": false
+          }
+        ],
+        "hobbies": [
+          {
+            "symbol": "↗",
+            "title": "Badminton",
+            "description": "Swing, run, sweat — a breath of fresh air for the mind."
+          },
+          {
+            "symbol": "⌁",
+            "title": "Travel & wandering",
+            "description": "Leaving familiar routes, collecting different scenery."
+          },
+          {
+            "symbol": "◡",
+            "title": "Cooking",
+            "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+          },
+          {
+            "symbol": "▷",
+            "title": "Film & stories",
+            "description": "Living another life through a screen."
+          }
+        ],
+        "gallery": [
+          {
+            "image": "mountains",
+            "title": "High enough for silence",
+            "caption": "In the Dolomites, even the noise learns to disappear.",
+            "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
+            "position": "45% 60%"
+          },
+          {
+            "image": "blue-lake",
+            "title": "The afternoon slowed down",
+            "caption": "Lake Thun kept the light a little longer.",
+            "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
+            "position": "50% 56%"
+          },
+          {
+            "image": "rooftops",
+            "title": "Paris, looking up",
+            "caption": "The Opera House rewards anyone who remembers to look above street level.",
+            "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
+            "position": "52% 50%"
+          },
+          {
+            "image": "green-lake",
+            "title": "A color the mountains kept",
+            "caption": "Lake Carezza, somewhere between emerald and reflection.",
+            "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
+            "position": "50% 62%"
+          },
+          {
+            "image": "snow",
+            "title": "Winter, almost weightless",
+            "caption": "At Jungfrau, the clouds felt close enough to touch.",
+            "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
+            "position": "50% 68%"
+          },
+          {
+            "image": "museum",
+            "title": "Everyone came for her",
+            "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
+            "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
+            "position": "45% 50%"
+          },
+          {
+            "image": "evening",
+            "title": "Florence before nightfall",
+            "caption": "From Piazzale Michelangelo, the city held on to the last light.",
+            "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
+            "position": "40% 55%"
+          },
+          {
+            "image": "colosseum",
+            "title": "Stone remembers",
+            "caption": "At the Colosseum, two thousand years felt strangely near.",
+            "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
+            "position": "50% 57%"
+          },
+          {
+            "image": "summit",
+            "title": "Above the clouds, another sky",
+            "caption": "Tianchi left the wind to finish the sentence.",
+            "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
+            "position": "50% 45%"
+          },
+          {
+            "image": "aircraft",
+            "title": "Childhood curiosity, full scale",
+            "caption": "The Y-20 made the idea of flight feel tangible.",
+            "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
+            "position": "50% 50%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "The smallest guest",
+            "caption": "One summer night, trust weighed almost nothing.",
+            "alt": "Gofish holding a small puppy in a courtyard at night",
+            "position": "50% 44%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "The people behind the milestone",
+            "caption": "A graduation photo, and the two people who made the long road possible.",
+            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
+            "position": "50% 48%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Waiting on the blue",
+            "caption": "The sea kept its answer; I kept the line.",
+            "alt": "Gofish fishing from a wooden pier by the sea",
+            "position": "38% 50%"
+          },
+          {
+            "image": "flatbread",
+            "title": "Serious business",
+            "caption": "Some meals deserve full concentration.",
+            "alt": "Gofish tearing flatbread at a restaurant table",
             "position": "50% 42%"
           }
         ]

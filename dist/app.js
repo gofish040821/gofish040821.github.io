@@ -7,10 +7,19 @@
   const languages = I18N.languages || [];
   const STORAGE_KEY = 'gofish-language';
   const root = document.documentElement;
+  const BIRTH_DATE = '2004-08-21';
 
   let strings = {};
   const t = (key, fallback) => (strings[key] === undefined ? (fallback || '') : strings[key]);
   const currentCode = () => root.getAttribute('data-language') || I18N.default;
+  function currentAge() {
+    const today = new Date();
+    const birth = new Date(BIRTH_DATE + 'T00:00:00');
+    let age = today.getFullYear() - birth.getFullYear();
+    const birthdayPassed = today.getMonth() > birth.getMonth() || (today.getMonth() === birth.getMonth() && today.getDate() >= birth.getDate());
+    return birthdayPassed ? age : age - 1;
+  }
+  const renderText = value => String(value).replace(/\{age\}/g, String(currentAge()));
 
   /* ---------------- header nav (mobile) ---------------- */
   const menuButton = document.querySelector('.menu-toggle');
@@ -209,11 +218,11 @@
     const text = entry.strings || {};
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const value = text[el.dataset.i18n];
-      if (value !== undefined) el.innerHTML = value;
+      if (value !== undefined) el.innerHTML = renderText(value);
     });
     document.querySelectorAll('[data-i18n-aria]').forEach(el => {
       const value = text[el.dataset.i18nAria];
-      if (value !== undefined) el.setAttribute('aria-label', value);
+      if (value !== undefined) el.setAttribute('aria-label', renderText(value));
     });
     const sections = entry.sections || {};
     document.querySelectorAll('[data-i18n-section]').forEach(el => {

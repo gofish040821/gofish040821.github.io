@@ -7,6 +7,14 @@ const data = JSON.parse(await readFile(resolve(root, 'content.json'), 'utf8'));
 const i18n = JSON.parse(await readFile(resolve(root, 'src/i18n.json'), 'utf8'));
 const escape = (value) => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const paragraphs = value => escape(value).replace(/&lt;br\s*\/?&gt;/g, '<br>');
+const currentAge = () => {
+  const today = new Date();
+  const birth = new Date('2004-08-21T00:00:00');
+  let age = today.getFullYear() - birth.getFullYear();
+  const birthdayPassed = today.getMonth() > birth.getMonth() || (today.getMonth() === birth.getMonth() && today.getDate() >= birth.getDate());
+  return birthdayPassed ? age : age - 1;
+};
+const renderRuntimeText = value => String(value).replace(/\{age\}/g, String(currentAge()));
 const photoPath = (name, small = false) => {
   if (!/^[a-z0-9-]+$/.test(name)) throw new Error(`Invalid photo name: ${name}`);
   return `./assets/photos/${name}${small ? '-small' : ''}.webp`;
@@ -28,7 +36,7 @@ const renderHobbies = items => items.map(item => `<article class="hobby"><div cl
 const renderGallery = items => items.map((item, i) => `<figure class="photo-card"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" alt="${escape(item.alt)}" width="720" height="960" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">↗</span></a><figcaption><span>${escape(item.title)}</span><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`).join('\n');
 
 const values = {
-  ...Object.fromEntries(Object.entries(data).filter(([, value]) => typeof value === 'string').map(([key, value]) => [key, escape(value)])),
+  ...Object.fromEntries(Object.entries(data).filter(([, value]) => typeof value === 'string').map(([key, value]) => [key, escape(renderRuntimeText(value))])),
   headline: paragraphs(data.headline),
   intro: paragraphs(data.intro),
   about: renderAbout(data.about),
