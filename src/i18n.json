@@ -65,7 +65,6 @@
         "sectionEducation": "03 / EDUCATION",
         "sectionLife": "04 / LIFE, IN FRAGMENTS",
         "photoLabel": "SOMEWHERE OUT THERE",
-        "closingEyebrow": "STILL LEARNING. STILL EXPLORING.",
         "skipLink": "Skip to content",
         "navAbout": "About",
         "navResearch": "Research",
@@ -103,9 +102,7 @@
         "heroCaption": "Give my steps to the wild, and my curiosity to the world.",
         "closing": "Stay curious, grow slowly.",
         "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas.",
-        "skillsTitle": "Skills & Tools",
-        "skillsIntro": "A small toolkit for questions, experiments, and things worth building.",
-        "skillsExploring": "Exploring LLM & agents"
+        "skillsTitle": "Skills & Tools"
       },
       "content": {
         "about": [
@@ -289,7 +286,6 @@
         "sectionEducation": "03 / 求学经历",
         "sectionLife": "04 / 生活切片",
         "photoLabel": "在世界的某处",
-        "closingEyebrow": "持续学习，持续探索。",
         "skipLink": "跳到主要内容",
         "navAbout": "关于我",
         "navResearch": "研究兴趣",
@@ -327,9 +323,7 @@
         "heroCaption": "把脚步交给山野，把好奇留给世界。",
         "closing": "保持好奇，慢慢生长。",
         "closingText": "关于数学、AI，或者下一段旅程，期待遇见有趣的想法。",
-        "skillsTitle": "技能与工具",
-        "skillsIntro": "用来提出问题、动手实验，也把想法做出来。",
-        "skillsExploring": "正在探索 LLM 与 Agent"
+        "skillsTitle": "技能与工具"
       },
       "content": {
         "about": [
@@ -513,7 +507,6 @@
         "sectionEducation": "03 / FORMATION",
         "sectionLife": "04 / INSTANTS DE VIE",
         "photoLabel": "QUELQUE PART AILLEURS",
-        "closingEyebrow": "APPRENDRE ET EXPLORER, TOUJOURS.",
         "skipLink": "Aller au contenu",
         "navAbout": "À propos",
         "navResearch": "Recherche",
@@ -551,9 +544,7 @@
         "heroCaption": "Mes pas vers la montagne, ma curiosité vers le monde.",
         "closing": "Rester curieux, grandir lentement.",
         "closingText": "Sur les mathématiques, l'IA ou le prochain voyage — j'ai hâte d'échanger des idées intéressantes.",
-        "skillsTitle": "Compétences & outils",
-        "skillsIntro": "Quelques outils pour questionner, expérimenter et construire.",
-        "skillsExploring": "J’explore les LLM et les agents"
+        "skillsTitle": "Compétences & outils"
       },
       "content": {
         "about": [
@@ -737,7 +728,6 @@
         "sectionEducation": "03 / AUSBILDUNG",
         "sectionLife": "04 / LEBENSMOMENTE",
         "photoLabel": "IRGENDWO DA DRAUSSEN",
-        "closingEyebrow": "WEITER LERNEN. WEITER ENTDECKEN.",
         "skipLink": "Zum Hauptinhalt springen",
         "navAbout": "Über mich",
         "navResearch": "Forschung",
@@ -775,9 +765,7 @@
         "heroCaption": "Meine Schritte der Wildnis, meine Neugier der Welt.",
         "closing": "Neugierig bleiben, langsam wachsen.",
         "closingText": "Über Mathematik, KI oder die nächste Reise — ich freue mich auf interessante Ideen.",
-        "skillsTitle": "Fähigkeiten & Werkzeuge",
-        "skillsIntro": "Werkzeuge, um Fragen zu stellen, zu experimentieren und Ideen umzusetzen.",
-        "skillsExploring": "Ich erkunde LLMs und Agenten"
+        "skillsTitle": "Fähigkeiten & Werkzeuge"
       },
       "content": {
         "about": [
@@ -961,7 +949,6 @@
         "sectionEducation": "03 / FORMACIÓN",
         "sectionLife": "04 / MOMENTOS DE VIDA",
         "photoLabel": "EN ALGÚN LUGAR",
-        "closingEyebrow": "SEGUIR APRENDIENDO. SEGUIR EXPLORANDO.",
         "skipLink": "Ir al contenido",
         "navAbout": "Sobre mí",
         "navResearch": "Investigación",
@@ -999,9 +986,7 @@
         "heroCaption": "Mis pasos a la montaña, mi curiosidad al mundo.",
         "closing": "Sigue con curiosidad, crece despacio.",
         "closingText": "Sobre matemáticas, IA o el próximo viaje, espero encontrar ideas interesantes.",
-        "skillsTitle": "Habilidades y herramientas",
-        "skillsIntro": "Herramientas para preguntar, experimentar y construir.",
-        "skillsExploring": "Explorando LLM y agentes"
+        "skillsTitle": "Habilidades y herramientas"
       },
       "content": {
         "about": [
@@ -1185,7 +1170,6 @@
         "sectionEducation": "٠٣ / الدراسة",
         "sectionLife": "٠٤ / لقطات من الحياة",
         "photoLabel": "في مكان ما هناك",
-        "closingEyebrow": "أواصل التعلّم والاستكشاف.",
         "skipLink": "انتقل إلى المحتوى",
         "navAbout": "من أنا",
         "navResearch": "البحث",
@@ -1223,9 +1207,7 @@
         "heroCaption": "أمنح خطواتي للبرية، وفضولي للعالم.",
         "closing": "ابقَ فضوليًا، وانهَم ببطء.",
         "closingText": "عن الرياضيات أو الذكاء الاصطناعي أو الرحلة القادمة — أتطلع إلى أفكار مثيرة.",
-        "skillsTitle": "المهارات والأدوات",
-        "skillsIntro": "أدوات لطرح الأسئلة والتجربة وتحويل الأفكار إلى مشاريع.",
-        "skillsExploring": "أستكشف النماذج اللغوية والوكلاء"
+        "skillsTitle": "المهارات والأدوات"
       },
       "content": {
         "about": [
@@ -1409,7 +1391,6 @@
         "sectionEducation": "03 / 学歴",
         "sectionLife": "04 / 暮らしの一コマ",
         "photoLabel": "どこか遠くで",
-        "closingEyebrow": "学び続け、探し続ける。",
         "skipLink": "本文へスキップ",
         "navAbout": "私について",
         "navResearch": "研究",
@@ -1447,9 +1428,7 @@
         "heroCaption": "足は山野へ、好奇心は世界へ。",
         "closing": "好奇心を持ち、ゆっくり育つ。",
         "closingText": "数学や AI、あるいは次の旅について、面白いアイデアとの出会いを楽しみにしています。",
-        "skillsTitle": "スキルとツール",
-        "skillsIntro": "問いを立て、試し、アイデアを形にするための道具。",
-        "skillsExploring": "LLM とエージェントを探求中"
+        "skillsTitle": "スキルとツール"
       },
       "content": {
         "about": [
@@ -1633,7 +1612,6 @@
         "sectionEducation": "03 / 학력",
         "sectionLife": "04 / 일상의 조각",
         "photoLabel": "세상 어딘가에서",
-        "closingEyebrow": "계속 배우고, 계속 탐구합니다.",
         "skipLink": "본문으로 건너뛰기",
         "navAbout": "소개",
         "navResearch": "연구",
@@ -1671,9 +1649,7 @@
         "heroCaption": "발걸음은 산과 들로, 호기심은 세계로.",
         "closing": "호기심을 갖고, 천천히 자라기.",
         "closingText": "수학, AI, 그리고 다음 여행에 대해 — 흥미로운 아이디어를 만나기를 기대합니다.",
-        "skillsTitle": "기술과 도구",
-        "skillsIntro": "질문하고 실험하며 아이디어를 구현하는 데 쓰는 도구.",
-        "skillsExploring": "LLM과 에이전트 탐구 중"
+        "skillsTitle": "기술과 도구"
       },
       "content": {
         "about": [
@@ -1857,7 +1833,6 @@
         "sectionEducation": "03 / ОБРАЗОВАНИЕ",
         "sectionLife": "04 / МОМЕНТЫ ЖИЗНИ",
         "photoLabel": "ГДЕ-ТО ТАМ",
-        "closingEyebrow": "УЧИТЬСЯ И ИССЛЕДОВАТЬ ДАЛЬШЕ.",
         "skipLink": "Перейти к содержанию",
         "navAbout": "Обо мне",
         "navResearch": "Исследования",
@@ -1895,9 +1870,7 @@
         "heroCaption": "Отдам шаги дикой природе, а любопытство — миру.",
         "closing": "Оставайся любопытным, расти не спеша.",
         "closingText": "О математике, ИИ или следующем путешествии — буду рад интересным идеям.",
-        "skillsTitle": "Навыки и инструменты",
-        "skillsIntro": "Инструменты для вопросов, экспериментов и воплощения идей.",
-        "skillsExploring": "Изучаю LLM и агентов"
+        "skillsTitle": "Навыки и инструменты"
       },
       "content": {
         "about": [
