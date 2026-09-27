@@ -86,13 +86,13 @@
 
 /* GitHub-like technology badges, set inside the research section. */
 .research-skills{margin-top:48px;padding-top:26px;border-top:1px solid var(--line)}
-.research-skills-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:19px}
+.research-skills-heading{margin-bottom:19px}
 .research-skills h3{font:400 24px/1.4 var(--serif);letter-spacing:.2px}
 .skill-badges{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:10px 8px;margin:0;padding:0}
 .skill-badges li{display:flex;max-width:100%}
 .skill-badges img{display:block;height:28px;width:auto;max-width:100%;border-radius:2px}
-.skills-toggle{padding:7px 14px;font-size:13px;background:transparent;white-space:nowrap}
-@media(max-width:760px){.research-skills{margin-top:32px;padding-top:22px}.research-skills-heading{align-items:flex-start;flex-direction:column;gap:12px;margin-bottom:16px}.research-skills h3{font-size:23px}.skill-badges{gap:8px 7px}.skill-badges img{height:27px}.skills-toggle{width:100%}}
+.skills-toggle{margin-top:18px;padding:7px 14px;font-size:13px;background:transparent;white-space:nowrap}
+@media(max-width:760px){.research-skills{margin-top:32px;padding-top:22px}.research-skills-heading{display:block;margin-bottom:16px}.research-skills h3{font-size:23px}.skill-badges{gap:8px 7px}.skill-badges img{height:27px}.skills-toggle{margin-top:16px;width:100%}}
 
 /* Responsive layout: allow translated content to wrap without widening the page. */
 .hero>*,.about>*,.education>*,.research-grid>*,.hobbies>*,.section-top>*{min-width:0}
