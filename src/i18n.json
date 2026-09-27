@@ -62,8 +62,8 @@
         "metaTitle": "Gofish — Mathematics, Intelligence & Life",
         "sectionAbout": "01 / ABOUT",
         "sectionResearch": "02 / RESEARCH INTERESTS",
-        "sectionEducation": "03 / EDUCATION",
-        "sectionLife": "04 / LIFE, IN FRAGMENTS",
+        "sectionEducation": "04 / EDUCATION",
+        "sectionLife": "05 / LIFE, IN FRAGMENTS",
         "photoLabel": "SOMEWHERE OUT THERE",
         "closingEyebrow": "STILL LEARNING. STILL EXPLORING.",
         "skipLink": "Skip to content",
@@ -102,7 +102,11 @@
         "intro": "A master's student in mathematics, focused on Agent RSI and Physical AI.<br>I like to ask how intelligence learns — and to walk into real mountains and everyday life.",
         "heroCaption": "Give my steps to the wild, and my curiosity to the world.",
         "closing": "Stay curious, grow slowly.",
-        "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas."
+        "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas.",
+        "navSkills": "Skills",
+        "sectionSkills": "03 / SKILLS",
+        "skillsTitle": "Things I work with",
+        "skillsIntro": "A growing toolkit for questions worth asking and ideas worth building."
       },
       "content": {
         "about": [
@@ -275,6 +279,45 @@
             "alt": "Gofish tearing flatbread at a restaurant table",
             "position": "50% 42%"
           }
+        ],
+        "skills": [
+          {
+            "title": "Mathematical foundations",
+            "description": "Making questions precise before looking for answers.",
+            "tools": [
+              "Linear algebra",
+              "Probability & statistics",
+              "Mathematical modeling"
+            ]
+          },
+          {
+            "title": "AI experiments",
+            "description": "Learning through numerical work and small model experiments.",
+            "tools": [
+              "Python",
+              "NumPy",
+              "PyTorch"
+            ]
+          },
+          {
+            "title": "Software development",
+            "description": "Turning ideas into working projects on the web.",
+            "tools": [
+              "TypeScript",
+              "React",
+              "Node.js",
+              "Socket.IO"
+            ]
+          },
+          {
+            "title": "Research workflow",
+            "description": "Writing clearly, tracking changes, and checking results.",
+            "tools": [
+              "LaTeX",
+              "Git",
+              "Vitest"
+            ]
+          }
         ]
       }
     },
@@ -283,8 +326,8 @@
         "metaTitle": "Gofish — 数学、智能与生活",
         "sectionAbout": "01 / 关于我",
         "sectionResearch": "02 / 研究兴趣",
-        "sectionEducation": "03 / 求学经历",
-        "sectionLife": "04 / 生活切片",
+        "sectionEducation": "04 / 求学经历",
+        "sectionLife": "05 / 生活切片",
         "photoLabel": "在世界的某处",
         "closingEyebrow": "持续学习，持续探索。",
         "skipLink": "跳到主要内容",
@@ -323,7 +366,11 @@
         "intro": "数学专业硕士生，关注 Agent RSI 与 Physical AI。<br>喜欢追问智能如何学习，也喜欢走进真实的山川与日常。",
         "heroCaption": "把脚步交给山野，把好奇留给世界。",
         "closing": "保持好奇，慢慢生长。",
-        "closingText": "关于数学、AI，或者下一段旅程，期待遇见有趣的想法。"
+        "closingText": "关于数学、AI，或者下一段旅程，期待遇见有趣的想法。",
+        "navSkills": "技能",
+        "sectionSkills": "03 / 专业技能",
+        "skillsTitle": "正在使用的工具",
+        "skillsIntro": "从数学推导到动手实现，一套仍在生长的工具箱。"
       },
       "content": {
         "about": [
@@ -496,6 +543,45 @@
             "alt": "Gofish 在餐桌前认真掰馍",
             "position": "50% 42%"
           }
+        ],
+        "skills": [
+          {
+            "title": "数学基础",
+            "description": "先把问题说清楚，再寻找答案。",
+            "tools": [
+              "线性代数",
+              "概率与统计",
+              "数学建模"
+            ]
+          },
+          {
+            "title": "AI 实验",
+            "description": "在数值计算和模型实验中继续学习。",
+            "tools": [
+              "Python",
+              "NumPy",
+              "PyTorch"
+            ]
+          },
+          {
+            "title": "软件开发",
+            "description": "把想法做成能运行的网页项目。",
+            "tools": [
+              "TypeScript",
+              "React",
+              "Node.js",
+              "Socket.IO"
+            ]
+          },
+          {
+            "title": "研究工作流",
+            "description": "清楚地写下来，记录改动，检验结果。",
+            "tools": [
+              "LaTeX",
+              "Git",
+              "Vitest"
+            ]
+          }
         ]
       }
     },
@@ -504,8 +590,8 @@
         "metaTitle": "Gofish — Mathématiques, intelligence et vie",
         "sectionAbout": "01 / À PROPOS",
         "sectionResearch": "02 / RECHERCHE",
-        "sectionEducation": "03 / FORMATION",
-        "sectionLife": "04 / INSTANTS DE VIE",
+        "sectionEducation": "04 / FORMATION",
+        "sectionLife": "05 / INSTANTS DE VIE",
         "photoLabel": "QUELQUE PART AILLEURS",
         "closingEyebrow": "APPRENDRE ET EXPLORER, TOUJOURS.",
         "skipLink": "Aller au contenu",
@@ -544,7 +630,11 @@
         "intro": "Étudiant en master de mathématiques, passionné par l'Agent RSI et la Physical AI.<br>J'aime me demander comment l'intelligence apprend — et partir vers de vraies montagnes et le quotidien.",
         "heroCaption": "Mes pas vers la montagne, ma curiosité vers le monde.",
         "closing": "Rester curieux, grandir lentement.",
-        "closingText": "Sur les mathématiques, l'IA ou le prochain voyage — j'ai hâte d'échanger des idées intéressantes."
+        "closingText": "Sur les mathématiques, l'IA ou le prochain voyage — j'ai hâte d'échanger des idées intéressantes.",
+        "navSkills": "Compétences",
+        "sectionSkills": "03 / COMPÉTENCES",
+        "skillsTitle": "Mes outils de travail",
+        "skillsIntro": "Une boîte à outils qui grandit avec les questions et les projets."
       },
       "content": {
         "about": [
@@ -717,6 +807,45 @@
             "alt": "Gofish émiette du pain à une table de restaurant",
             "position": "50% 42%"
           }
+        ],
+        "skills": [
+          {
+            "title": "Fondements mathématiques",
+            "description": "Préciser les questions avant de chercher des réponses.",
+            "tools": [
+              "Algèbre linéaire",
+              "Probabilités et statistiques",
+              "Modélisation mathématique"
+            ]
+          },
+          {
+            "title": "Expériences en IA",
+            "description": "Apprendre par le calcul et de petites expériences de modèles.",
+            "tools": [
+              "Python",
+              "NumPy",
+              "PyTorch"
+            ]
+          },
+          {
+            "title": "Développement logiciel",
+            "description": "Transformer des idées en projets web fonctionnels.",
+            "tools": [
+              "TypeScript",
+              "React",
+              "Node.js",
+              "Socket.IO"
+            ]
+          },
+          {
+            "title": "Méthodes de recherche",
+            "description": "Écrire clairement, suivre les changements et vérifier les résultats.",
+            "tools": [
+              "LaTeX",
+              "Git",
+              "Vitest"
+            ]
+          }
         ]
       }
     },
@@ -725,8 +854,8 @@
         "metaTitle": "Gofish — Mathematik, Intelligenz & Leben",
         "sectionAbout": "01 / ÜBER MICH",
         "sectionResearch": "02 / FORSCHUNG",
-        "sectionEducation": "03 / AUSBILDUNG",
-        "sectionLife": "04 / LEBENSMOMENTE",
+        "sectionEducation": "04 / AUSBILDUNG",
+        "sectionLife": "05 / LEBENSMOMENTE",
         "photoLabel": "IRGENDWO DA DRAUSSEN",
         "closingEyebrow": "WEITER LERNEN. WEITER ENTDECKEN.",
         "skipLink": "Zum Hauptinhalt springen",
@@ -765,7 +894,11 @@
         "intro": "Masterstudent der Mathematik, forscht zu Agent RSI und Physical AI.<br>Ich frage gern, wie Intelligenz lernt, und gehe gern hinaus in echte Berge und den Alltag.",
         "heroCaption": "Meine Schritte der Wildnis, meine Neugier der Welt.",
         "closing": "Neugierig bleiben, langsam wachsen.",
-        "closingText": "Über Mathematik, KI oder die nächste Reise — ich freue mich auf interessante Ideen."
+        "closingText": "Über Mathematik, KI oder die nächste Reise — ich freue mich auf interessante Ideen.",
+        "navSkills": "Fähigkeiten",
+        "sectionSkills": "03 / FÄHIGKEITEN",
+        "skillsTitle": "Womit ich arbeite",
+        "skillsIntro": "Ein wachsender Werkzeugkasten für Fragen und Projekte."
       },
       "content": {
         "about": [
@@ -938,6 +1071,45 @@
             "alt": "Gofish zerteilt Fladenbrot an einem Restauranttisch",
             "position": "50% 42%"
           }
+        ],
+        "skills": [
+          {
+            "title": "Mathematische Grundlagen",
+            "description": "Fragen präzisieren, bevor ich nach Antworten suche.",
+            "tools": [
+              "Lineare Algebra",
+              "Wahrscheinlichkeit & Statistik",
+              "Mathematische Modellierung"
+            ]
+          },
+          {
+            "title": "KI-Experimente",
+            "description": "Lernen durch numerische Arbeit und kleine Modellexperimente.",
+            "tools": [
+              "Python",
+              "NumPy",
+              "PyTorch"
+            ]
+          },
+          {
+            "title": "Softwareentwicklung",
+            "description": "Ideen in funktionierende Webprojekte umsetzen.",
+            "tools": [
+              "TypeScript",
+              "React",
+              "Node.js",
+              "Socket.IO"
+            ]
+          },
+          {
+            "title": "Forschungswerkzeuge",
+            "description": "Klar schreiben, Änderungen verfolgen, Ergebnisse prüfen.",
+            "tools": [
+              "LaTeX",
+              "Git",
+              "Vitest"
+            ]
+          }
         ]
       }
     },
@@ -946,8 +1118,8 @@
         "metaTitle": "Gofish — Matemáticas, inteligencia y vida",
         "sectionAbout": "01 / SOBRE MÍ",
         "sectionResearch": "02 / INVESTIGACIÓN",
-        "sectionEducation": "03 / FORMACIÓN",
-        "sectionLife": "04 / MOMENTOS DE VIDA",
+        "sectionEducation": "04 / FORMACIÓN",
+        "sectionLife": "05 / MOMENTOS DE VIDA",
         "photoLabel": "EN ALGÚN LUGAR",
         "closingEyebrow": "SEGUIR APRENDIENDO. SEGUIR EXPLORANDO.",
         "skipLink": "Ir al contenido",
@@ -986,7 +1158,11 @@
         "intro": "Estudiante de máster en matemáticas, centrado en Agent RSI y Physical AI.<br>Me gusta preguntarme cómo aprende la inteligencia, y caminar por montañas reales y por la vida cotidiana.",
         "heroCaption": "Mis pasos a la montaña, mi curiosidad al mundo.",
         "closing": "Sigue con curiosidad, crece despacio.",
-        "closingText": "Sobre matemáticas, IA o el próximo viaje, espero encontrar ideas interesantes."
+        "closingText": "Sobre matemáticas, IA o el próximo viaje, espero encontrar ideas interesantes.",
+        "navSkills": "Habilidades",
+        "sectionSkills": "03 / HABILIDADES",
+        "skillsTitle": "Herramientas que uso",
+        "skillsIntro": "Una caja de herramientas que crece con cada pregunta y proyecto."
       },
       "content": {
         "about": [
@@ -1159,6 +1335,45 @@
             "alt": "Gofish desmenuza pan en la mesa de un restaurante",
             "position": "50% 42%"
           }
+        ],
+        "skills": [
+          {
+            "title": "Bases matemáticas",
+            "description": "Definir bien las preguntas antes de buscar respuestas.",
+            "tools": [
+              "Álgebra lineal",
+              "Probabilidad y estadística",
+              "Modelización matemática"
+            ]
+          },
+          {
+            "title": "Experimentos de IA",
+            "description": "Aprender mediante cálculo y pequeños experimentos con modelos.",
+            "tools": [
+              "Python",
+              "NumPy",
+              "PyTorch"
+            ]
+          },
+          {
+            "title": "Desarrollo de software",
+            "description": "Convertir ideas en proyectos web que funcionan.",
+            "tools": [
+              "TypeScript",
+              "React",
+              "Node.js",
+              "Socket.IO"
+            ]
+          },
+          {
+            "title": "Métodos de investigación",
+            "description": "Escribir con claridad, seguir cambios y comprobar resultados.",
+            "tools": [
+              "LaTeX",
+              "Git",
+              "Vitest"
+            ]
+          }
         ]
       }
     },
@@ -1167,8 +1382,8 @@
         "metaTitle": "Gofish — الرياضيات والذكاء والحياة",
         "sectionAbout": "٠١ / نبذة عني",
         "sectionResearch": "٠٢ / اهتمامات البحث",
-        "sectionEducation": "٠٣ / الدراسة",
-        "sectionLife": "٠٤ / لقطات من الحياة",
+        "sectionEducation": "٠٤ / الدراسة",
+        "sectionLife": "٠٥ / لقطات من الحياة",
         "photoLabel": "في مكان ما هناك",
         "closingEyebrow": "أواصل التعلّم والاستكشاف.",
         "skipLink": "انتقل إلى المحتوى",
@@ -1207,7 +1422,11 @@
         "intro": "طالب ماجستير في الرياضيات، مهتم بموضوع Agent RSI والذكاء الفيزيائي Physical AI.<br>أحب أن أسأل كيف يتعلم الذكاء — وأن أمشي في جبال حقيقية وفي الحياة اليومية.",
         "heroCaption": "أمنح خطواتي للبرية، وفضولي للعالم.",
         "closing": "ابقَ فضوليًا، وانهَم ببطء.",
-        "closingText": "عن الرياضيات أو الذكاء الاصطناعي أو الرحلة القادمة — أتطلع إلى أفكار مثيرة."
+        "closingText": "عن الرياضيات أو الذكاء الاصطناعي أو الرحلة القادمة — أتطلع إلى أفكار مثيرة.",
+        "navSkills": "المهارات",
+        "sectionSkills": "٠٣ / المهارات",
+        "skillsTitle": "الأدوات التي أستخدمها",
+        "skillsIntro": "مجموعة أدوات تنمو مع كل سؤال ومشروع."
       },
       "content": {
         "about": [
@@ -1380,6 +1599,45 @@
             "alt": "غوفيش يفتت الخبز على طاولة مطعم",
             "position": "50% 42%"
           }
+        ],
+        "skills": [
+          {
+            "title": "الأسس الرياضية",
+            "description": "تحديد السؤال بدقة قبل البحث عن الإجابة.",
+            "tools": [
+              "الجبر الخطي",
+              "الاحتمالات والإحصاء",
+              "النمذجة الرياضية"
+            ]
+          },
+          {
+            "title": "تجارب الذكاء الاصطناعي",
+            "description": "التعلم عبر الحسابات العددية وتجارب النماذج الصغيرة.",
+            "tools": [
+              "Python",
+              "NumPy",
+              "PyTorch"
+            ]
+          },
+          {
+            "title": "تطوير البرمجيات",
+            "description": "تحويل الأفكار إلى مشاريع ويب تعمل فعلاً.",
+            "tools": [
+              "TypeScript",
+              "React",
+              "Node.js",
+              "Socket.IO"
+            ]
+          },
+          {
+            "title": "أدوات البحث",
+            "description": "الكتابة بوضوح، وتتبع التغييرات، وفحص النتائج.",
+            "tools": [
+              "LaTeX",
+              "Git",
+              "Vitest"
+            ]
+          }
         ]
       }
     },
@@ -1388,8 +1646,8 @@
         "metaTitle": "Gofish — 数学・知能・暮らし",
         "sectionAbout": "01 / 私について",
         "sectionResearch": "02 / 研究分野",
-        "sectionEducation": "03 / 学歴",
-        "sectionLife": "04 / 暮らしの一コマ",
+        "sectionEducation": "04 / 学歴",
+        "sectionLife": "05 / 暮らしの一コマ",
         "photoLabel": "どこか遠くで",
         "closingEyebrow": "学び続け、探し続ける。",
         "skipLink": "本文へスキップ",
@@ -1428,7 +1686,11 @@
         "intro": "数学の修士課程に在籍し、Agent RSI と Physical AI に関心を持つ学生です。<br>知能がどのように学ぶのかを問い、本物の山や日常の中を歩くのが好きです。",
         "heroCaption": "足は山野へ、好奇心は世界へ。",
         "closing": "好奇心を持ち、ゆっくり育つ。",
-        "closingText": "数学や AI、あるいは次の旅について、面白いアイデアとの出会いを楽しみにしています。"
+        "closingText": "数学や AI、あるいは次の旅について、面白いアイデアとの出会いを楽しみにしています。",
+        "navSkills": "スキル",
+        "sectionSkills": "03 / スキル",
+        "skillsTitle": "使っている道具",
+        "skillsIntro": "問いを考え、形にするために育てている道具箱。"
       },
       "content": {
         "about": [
@@ -1601,6 +1863,45 @@
             "alt": "食堂でパンを丁寧にちぎるGofish",
             "position": "50% 42%"
           }
+        ],
+        "skills": [
+          {
+            "title": "数学の基礎",
+            "description": "答えを探す前に、問いを正確にする。",
+            "tools": [
+              "線形代数",
+              "確率・統計",
+              "数理モデリング"
+            ]
+          },
+          {
+            "title": "AI の実験",
+            "description": "数値計算と小さなモデル実験から学ぶ。",
+            "tools": [
+              "Python",
+              "NumPy",
+              "PyTorch"
+            ]
+          },
+          {
+            "title": "ソフトウェア開発",
+            "description": "アイデアを動くウェブプロジェクトにする。",
+            "tools": [
+              "TypeScript",
+              "React",
+              "Node.js",
+              "Socket.IO"
+            ]
+          },
+          {
+            "title": "研究の道具",
+            "description": "明確に書き、変更を追い、結果を確かめる。",
+            "tools": [
+              "LaTeX",
+              "Git",
+              "Vitest"
+            ]
+          }
         ]
       }
     },
@@ -1609,8 +1910,8 @@
         "metaTitle": "Gofish — 수학, 지능, 그리고 삶",
         "sectionAbout": "01 / 소개",
         "sectionResearch": "02 / 연구 관심사",
-        "sectionEducation": "03 / 학력",
-        "sectionLife": "04 / 일상의 조각",
+        "sectionEducation": "04 / 학력",
+        "sectionLife": "05 / 일상의 조각",
         "photoLabel": "세상 어딘가에서",
         "closingEyebrow": "계속 배우고, 계속 탐구합니다.",
         "skipLink": "본문으로 건너뛰기",
@@ -1649,7 +1950,11 @@
         "intro": "수학 석사 과정에 재학 중이며, Agent RSI와 Physical AI에 관심을 두고 있습니다.<br>지능이 어떻게 학습하는지 묻고, 진짜 산과 일상 속을 걷는 것을 좋아합니다.",
         "heroCaption": "발걸음은 산과 들로, 호기심은 세계로.",
         "closing": "호기심을 갖고, 천천히 자라기.",
-        "closingText": "수학, AI, 그리고 다음 여행에 대해 — 흥미로운 아이디어를 만나기를 기대합니다."
+        "closingText": "수학, AI, 그리고 다음 여행에 대해 — 흥미로운 아이디어를 만나기를 기대합니다.",
+        "navSkills": "기술",
+        "sectionSkills": "03 / 기술",
+        "skillsTitle": "함께 쓰는 도구들",
+        "skillsIntro": "질문을 다듬고 아이디어를 구현하며 키워 가는 도구 상자."
       },
       "content": {
         "about": [
@@ -1822,6 +2127,45 @@
             "alt": "식당에서 빵을 정성스럽게 뜯는 Gofish",
             "position": "50% 42%"
           }
+        ],
+        "skills": [
+          {
+            "title": "수학적 기초",
+            "description": "답을 찾기 전에 질문부터 정확히 한다.",
+            "tools": [
+              "선형대수",
+              "확률과 통계",
+              "수학적 모델링"
+            ]
+          },
+          {
+            "title": "AI 실험",
+            "description": "수치 계산과 작은 모델 실험을 통해 배운다.",
+            "tools": [
+              "Python",
+              "NumPy",
+              "PyTorch"
+            ]
+          },
+          {
+            "title": "소프트웨어 개발",
+            "description": "아이디어를 실제로 동작하는 웹 프로젝트로 만든다.",
+            "tools": [
+              "TypeScript",
+              "React",
+              "Node.js",
+              "Socket.IO"
+            ]
+          },
+          {
+            "title": "연구 도구",
+            "description": "명확히 기록하고 변경을 추적하며 결과를 확인한다.",
+            "tools": [
+              "LaTeX",
+              "Git",
+              "Vitest"
+            ]
+          }
         ]
       }
     },
@@ -1830,8 +2174,8 @@
         "metaTitle": "Gofish — Математика, интеллект и жизнь",
         "sectionAbout": "01 / ОБО МНЕ",
         "sectionResearch": "02 / ИССЛЕДОВАНИЯ",
-        "sectionEducation": "03 / ОБРАЗОВАНИЕ",
-        "sectionLife": "04 / МОМЕНТЫ ЖИЗНИ",
+        "sectionEducation": "04 / ОБРАЗОВАНИЕ",
+        "sectionLife": "05 / МОМЕНТЫ ЖИЗНИ",
         "photoLabel": "ГДЕ-ТО ТАМ",
         "closingEyebrow": "УЧИТЬСЯ И ИССЛЕДОВАТЬ ДАЛЬШЕ.",
         "skipLink": "Перейти к содержанию",
@@ -1870,7 +2214,11 @@
         "intro": "Магистрант математического направления, занимаюсь Agent RSI и Physical AI.<br>Люблю спрашивать, как интеллект учится, — и уходить в настоящие горы и повседневную жизнь.",
         "heroCaption": "Отдам шаги дикой природе, а любопытство — миру.",
         "closing": "Оставайся любопытным, расти не спеша.",
-        "closingText": "О математике, ИИ или следующем путешествии — буду рад интересным идеям."
+        "closingText": "О математике, ИИ или следующем путешествии — буду рад интересным идеям.",
+        "navSkills": "Навыки",
+        "sectionSkills": "03 / НАВЫКИ",
+        "skillsTitle": "С чем я работаю",
+        "skillsIntro": "Набор инструментов, который растёт вместе с вопросами и проектами."
       },
       "content": {
         "about": [
@@ -2042,6 +2390,45 @@
             "caption": "Некоторые блюда требуют полной сосредоточенности.",
             "alt": "Gofish разбирает лепёшку за столом в ресторане",
             "position": "50% 42%"
+          }
+        ],
+        "skills": [
+          {
+            "title": "Математическая база",
+            "description": "Сначала точно сформулировать вопрос, затем искать ответ.",
+            "tools": [
+              "Линейная алгебра",
+              "Теория вероятностей и статистика",
+              "Математическое моделирование"
+            ]
+          },
+          {
+            "title": "Эксперименты с ИИ",
+            "description": "Учиться через вычисления и небольшие эксперименты с моделями.",
+            "tools": [
+              "Python",
+              "NumPy",
+              "PyTorch"
+            ]
+          },
+          {
+            "title": "Разработка ПО",
+            "description": "Превращать идеи в работающие веб-проекты.",
+            "tools": [
+              "TypeScript",
+              "React",
+              "Node.js",
+              "Socket.IO"
+            ]
+          },
+          {
+            "title": "Рабочие инструменты",
+            "description": "Ясно писать, отслеживать изменения и проверять результаты.",
+            "tools": [
+              "LaTeX",
+              "Git",
+              "Vitest"
+            ]
           }
         ]
       }
