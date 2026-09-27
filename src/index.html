@@ -32,7 +32,7 @@
     <div class="header-inner wrap">
       <a class="brand" href="#home" aria-label="Gofish home" data-i18n-aria="brandHome"><img src="./assets/photos/avatar-small.webp" alt="Gofish avatar" width="38" height="38"><span>{{name}}<span class="brand-dot">.</span></span></a>
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#about"><span data-i18n="navAbout">About</span></a><a href="#research"><span data-i18n="navResearch">Research</span></a><a href="#skills"><span data-i18n="navSkills">Skills</span></a><a href="#education"><span data-i18n="navEducation">Education</span></a><a href="#life"><span data-i18n="navLife">Life</span></a>
+        <a href="#about"><span data-i18n="navAbout">About</span></a><a href="#research"><span data-i18n="navResearch">Research</span></a><a href="#education"><span data-i18n="navEducation">Education</span></a><a href="#life"><span data-i18n="navLife">Life</span></a>
       </nav>
       <a class="header-github" href="{{github}}" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode"><span class="theme-icon" aria-hidden="true"></span></button>
@@ -45,7 +45,7 @@
       </div>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span></button>
     </div>
-    <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Mobile navigation" hidden><a href="#about"><span data-i18n="navAbout">About</span></a><a href="#research"><span data-i18n="navResearch">Research</span></a><a href="#skills"><span data-i18n="navSkills">Skills</span></a><a href="#education"><span data-i18n="navEducation">Education</span></a><a href="#life"><span data-i18n="navLife">Life</span></a><a href="{{github}}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+    <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Mobile navigation" hidden><a href="#about"><span data-i18n="navAbout">About</span></a><a href="#research"><span data-i18n="navResearch">Research</span></a><a href="#education"><span data-i18n="navEducation">Education</span></a><a href="#life"><span data-i18n="navLife">Life</span></a><a href="{{github}}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
   </header>
   <main id="main">
     <section class="hero wrap" id="home" aria-labelledby="hero-title">
@@ -67,18 +67,15 @@
     <section class="research section wrap" id="research" aria-labelledby="research-title">
       <div class="section-top"><div><p class="section-number" data-i18n="sectionResearch">02 / RESEARCH INTERESTS</p><h2 id="research-title"><span data-i18n="researchTitle">What I'm curious about</span><span class="accent">.</span></h2></div></div>
       <div class="research-grid" data-i18n-section="research">{{research}}</div>
-    </section>
-    <section class="skills section wrap" id="skills" aria-labelledby="skills-title">
-      <div class="section-top"><div><p class="section-number" data-i18n="sectionSkills">03 / SKILLS</p><h2 id="skills-title"><span data-i18n="skillsTitle">Things I work with</span><span class="accent">.</span></h2></div><p class="skills-intro" data-i18n="skillsIntro">A growing toolkit for questions worth asking and ideas worth building.</p></div>
-      <div class="skill-list" data-i18n-section="skills">{{skills}}</div>
+      <div class="research-skills" aria-labelledby="skills-title"><div class="research-skills-heading"><h3 id="skills-title" data-i18n="skillsTitle">Skills &amp; Tools</h3><p data-i18n="skillsIntro">A small toolkit for questions, experiments, and things worth building.</p></div><ul class="skill-badges">{{skills}}</ul></div>
     </section>
     <section class="education section wrap" id="education" aria-labelledby="education-title">
-      <div class="section-aside"><p class="section-number" data-i18n="sectionEducation">04 / EDUCATION</p><h2 id="education-title"><span data-i18n="educationTitle">Education</span><span class="accent">.</span></h2></div>
+      <div class="section-aside"><p class="section-number" data-i18n="sectionEducation">03 / EDUCATION</p><h2 id="education-title"><span data-i18n="educationTitle">Education</span><span class="accent">.</span></h2></div>
       <div class="timeline" data-i18n-section="education">{{education}}</div>
     </section>
     <section class="life-section" id="life" aria-labelledby="life-title">
       <div class="wrap">
-        <div class="section-top"><div><p class="section-number" data-i18n="sectionLife">05 / LIFE, IN FRAGMENTS</p><h2 id="life-title"><span data-i18n="lifeTitle">Also living fully</span><span class="accent">.</span></h2></div></div>
+        <div class="section-top"><div><p class="section-number" data-i18n="sectionLife">04 / LIFE, IN FRAGMENTS</p><h2 id="life-title"><span data-i18n="lifeTitle">Also living fully</span><span class="accent">.</span></h2></div></div>
         <div class="hobbies" data-i18n-section="hobbies">{{hobbies}}</div>
         <div class="gallery" id="gallery" data-i18n-section="gallery">{{gallery}}</div>
         <button id="gallery-toggle" class="button gallery-toggle" type="button" aria-expanded="false" aria-controls="gallery" hidden>Show all 10 photos <span aria-hidden="true">＋</span></button>

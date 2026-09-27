@@ -19,7 +19,10 @@ for (const key of ['github', 'siteUrl']) {
 // --- exactly the same markup, so switching language never shifts the layout.
 const renderAbout = items => items.map(text => `<p>${escape(text)}</p>`).join('\n');
 const renderResearch = items => items.map(item => `<article class="research-card ${escape(item.className)}"><div class="research-card-top"><span class="card-marker">${escape(item.number)}</span></div><h3>${escape(item.title)}</h3><p class="research-subtitle">${escape(item.subtitle)}</p><p class="research-description">${escape(item.description)}</p><div class="tags">${item.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div></article>`).join('\n');
-const renderSkills = items => items.map((item, index) => `<article class="skill-row"><span class="skill-index" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span><div class="skill-copy"><h3>${escape(item.title)}</h3><p>${escape(item.description)}</p></div><ul class="skill-tools">${item.tools.map(tool => `<li>${escape(tool)}</li>`).join('')}</ul></article>`).join('\n');
+const renderSkills = items => items.map(item => {
+  if (!/^[a-z0-9-]+$/.test(item.badge)) throw new Error(`Invalid skill badge: ${item.badge}`);
+  return `<li><img src="./assets/skills/${item.badge}.svg" alt="${escape(item.name)}" height="28" loading="lazy"></li>`;
+}).join('\n');
 const renderEducation = items => items.map(item => `<article class="education-item${item.current ? ' current' : ''}"><div class="education-meta"><span class="education-dates">${escape(item.dates)}</span><span class="education-degree">${escape(item.degree)}</span></div><h3>${escape(item.school)}</h3><p class="school-abbr" lang="en">${escape(item.abbr)}</p><p class="education-note">${escape(item.note)}</p></article>`).join('\n');
 const renderHobbies = items => items.map(item => `<article class="hobby"><div class="hobby-title"><span class="hobby-symbol" aria-hidden="true">${escape(item.symbol)}</span><h3>${escape(item.title)}</h3></div><p>${escape(item.description)}</p></article>`).join('\n');
 const renderGallery = items => items.map((item, i) => `<figure class="photo-card"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" alt="${escape(item.alt)}" width="720" height="960" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">↗</span></a><figcaption><span>${escape(item.title)}</span><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`).join('\n');
@@ -46,7 +49,6 @@ for (const [code, entry] of Object.entries(i18n.translations || {})) {
     sections: {
       about: renderAbout(content.about || []),
       research: renderResearch(content.research || []),
-      skills: renderSkills(content.skills || []),
       education: renderEducation(content.education || []),
       hobbies: renderHobbies(content.hobbies || []),
       gallery: renderGallery(content.gallery || [])
@@ -69,6 +71,7 @@ await mkdir(resolve(root, 'dist'), { recursive: true });
 for (const name of new Set(['avatar', data.heroImage, ...data.gallery.map(item => item.image)])) {
   for (const small of [false, true]) await access(resolve(root, 'dist', photoPath(name, small)));
 }
+for (const item of data.skills) await access(resolve(root, 'dist/assets/skills', `${item.badge}.svg`));
 await writeFile(resolve(root, 'dist/index.html'), html);
 for (const file of ['style.css', 'app.js', 'busuanzi.pure.mini.js']) await copyFile(resolve(root, 'src', file), resolve(root, 'dist', file));
 await writeFile(resolve(root, 'dist/.nojekyll'), '');

@@ -41,10 +41,17 @@
     }
   ],
   "skills": [
-    {"title": "Mathematical foundations", "description": "Making questions precise before looking for answers.", "tools": ["Linear algebra", "Probability & statistics", "Mathematical modeling"]},
-    {"title": "AI experiments", "description": "Learning through numerical work and small model experiments.", "tools": ["Python", "NumPy", "PyTorch"]},
-    {"title": "Software development", "description": "Turning ideas into working projects on the web.", "tools": ["TypeScript", "React", "Node.js", "Socket.IO"]},
-    {"title": "Research workflow", "description": "Writing clearly, tracking changes, and checking results.", "tools": ["LaTeX", "Git", "Vitest"]}
+    {"name": "Python", "badge": "python"},
+    {"name": "PyTorch", "badge": "pytorch"},
+    {"name": "NumPy", "badge": "numpy"},
+    {"name": "LaTeX", "badge": "latex"},
+    {"name": "Git", "badge": "git"},
+    {"name": "TypeScript", "badge": "typescript"},
+    {"name": "React", "badge": "react"},
+    {"name": "Node.js", "badge": "nodejs"},
+    {"name": "Socket.IO", "badge": "socketio"},
+    {"name": "Vite", "badge": "vite"},
+    {"name": "Vitest", "badge": "vitest"}
   ],
   "education": [
     {
