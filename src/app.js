@@ -85,7 +85,7 @@
   });
 
   /* ---------------- skills ---------------- */
-  const initialSkillCount = 16;
+  const initialSkillCount = 10;
   const skillToggle = document.querySelector('#skills-toggle');
   const skillList = document.querySelector('#skill-badges');
   let skillItems = [];
