@@ -2153,11 +2153,11 @@
           {
             "number": "01",
             "title": "Agent RSI",
-            "subtitle": "Agents · Recursive self-improvement",
-            "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
+            "subtitle": "Agenti · Auto-miglioramento ricorsivo",
+            "description": "Se un agente riscrive i propri prompt, la politica d’uso degli strumenti o la memoria, come possiamo capire se migliora davvero invece di memorizzare i compiti di test? Voglio esplorare un ciclo verificabile: confrontare versioni su compiti non visti, analizzare gli errori e mantenere o annullare ogni cambiamento.",
             "tags": [
-              "Held-out evaluation",
-              "Failure analysis",
+              "Valutazione su compiti non visti",
+              "Analisi dei fallimenti",
               "Rollback"
             ],
             "className": "agent"
@@ -2165,12 +2165,12 @@
           {
             "number": "02",
             "title": "Physical AI",
-            "subtitle": "Perception · Action · The real world",
-            "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
+            "subtitle": "Percezione · Azione · Mondo reale",
+            "description": "Quando le viste della camera sono incomplete e la simulazione differisce dalla realtà, come può un robot afferrare e posizionare oggetti in modo affidabile? Voglio esplorare come vincoli geometrici e stime d’incertezza possano guidare la pianificazione delle azioni e verificarne l’esito.",
             "tags": [
               "Pick-and-place",
-              "Geometric priors",
-              "Uncertainty estimation"
+              "Priori geometrici",
+              "Stima dell’incertezza"
             ],
             "className": "physical"
           }
@@ -2178,18 +2178,18 @@
         "education": [
           {
             "dates": "2026 — 2029",
-            "degree": "Mathematics · Master's",
+            "degree": "Matematica · Master",
             "school": "Southern University of Science and Technology",
             "abbr": "SUSTech",
-            "note": "Enrolled · Expected to graduate in 2029",
+            "note": "Iscritto · Laurea prevista nel 2029",
             "current": true
           },
           {
             "dates": "2022 — 2026",
-            "degree": "Mathematical Foundation Science · Bachelor's",
+            "degree": "Scienze matematiche di base · Laurea triennale",
             "school": "Dalian University of Technology",
             "abbr": "DUT",
-            "note": "Between mathematics and physics, building the foundation for understanding the world.",
+            "note": "Tra matematica e fisica, costruire le basi per comprendere il mondo.",
             "current": false
           }
         ],
@@ -2197,122 +2197,122 @@
           {
             "symbol": "↗",
             "title": "Badminton",
-            "description": "Swing, run, sweat — a breath of fresh air for the mind."
+            "description": "Colpire, correre, sudare — una boccata d’aria per la mente."
           },
           {
             "symbol": "⌁",
-            "title": "Travel & wandering",
-            "description": "Leaving familiar routes, collecting different scenery."
+            "title": "Viaggi e vagabondaggi",
+            "description": "Uscire dai percorsi familiari e raccogliere paesaggi diversi."
           },
           {
             "symbol": "◡",
-            "title": "Cooking",
-            "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+            "title": "Cucina",
+            "description": "Prendere sul serio i tre pasti quotidiani, nel calore della cucina."
           },
           {
             "symbol": "▷",
-            "title": "Film & stories",
-            "description": "Living another life through a screen."
+            "title": "Cinema e storie",
+            "description": "Vivere un’altra vita attraverso uno schermo."
           }
         ],
         "gallery": [
           {
             "image": "mountains",
-            "title": "High enough for silence",
-            "caption": "In the Dolomites, even the noise learns to disappear.",
-            "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
-            "position": "45% 60%"
+            "position": "45% 60%",
+            "title": "Abbastanza in alto per il silenzio",
+            "caption": "Nelle Dolomiti, persino il rumore impara a sparire.",
+            "alt": "Dolomiti, Italia: Gofish seduto su una roccia con catene montuose sullo sfondo"
           },
           {
             "image": "blue-lake",
-            "title": "The afternoon slowed down",
-            "caption": "Lake Thun kept the light a little longer.",
-            "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
-            "position": "50% 56%"
+            "position": "50% 56%",
+            "title": "Il pomeriggio rallentò",
+            "caption": "Il Lago di Thun trattenne la luce un po’ più a lungo.",
+            "alt": "Lago di Thun, Svizzera: Gofish con una fotocamera davanti a un lago blu"
           },
           {
             "image": "rooftops",
-            "title": "Paris, looking up",
-            "caption": "The Opera House rewards anyone who remembers to look above street level.",
-            "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
-            "position": "52% 50%"
+            "position": "52% 50%",
+            "title": "Parigi, guardando in alto",
+            "caption": "L’Opéra premia chi ricorda di alzare lo sguardo oltre la strada.",
+            "alt": "Opéra di Parigi: Gofish su una terrazza urbana con architettura classica sullo sfondo"
           },
           {
             "image": "green-lake",
-            "title": "A color the mountains kept",
-            "caption": "Lake Carezza, somewhere between emerald and reflection.",
-            "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
-            "position": "50% 62%"
+            "position": "50% 62%",
+            "title": "Un colore custodito dalle montagne",
+            "caption": "Il Lago di Carezza, da qualche parte tra smeraldo e riflesso.",
+            "alt": "Lago di Carezza, Italia: Gofish vicino a una staccionata presso un lago alpino verde"
           },
           {
             "image": "snow",
-            "title": "Winter, almost weightless",
-            "caption": "At Jungfrau, the clouds felt close enough to touch.",
-            "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
-            "position": "50% 68%"
+            "position": "50% 68%",
+            "title": "Inverno, quasi senza peso",
+            "caption": "Sullo Jungfrau, le nuvole sembravano abbastanza vicine da toccare.",
+            "alt": "Cima dello Jungfrau: Gofish su una montagna innevata con una bandierina souvenir"
           },
           {
             "image": "museum",
-            "title": "Everyone came for her",
-            "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
-            "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
-            "position": "45% 50%"
+            "position": "45% 50%",
+            "title": "Tutti erano lì per lei",
+            "caption": "Un volto quieto, una sala rumorosa — la Monna Lisa al Louvre.",
+            "alt": "Monna Lisa, Louvre: Gofish fa un selfie in una sala del museo"
           },
           {
             "image": "evening",
-            "title": "Florence before nightfall",
-            "caption": "From Piazzale Michelangelo, the city held on to the last light.",
-            "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
-            "position": "40% 55%"
+            "position": "40% 55%",
+            "title": "Firenze prima della notte",
+            "caption": "Da Piazzale Michelangelo, la città tratteneva l’ultima luce.",
+            "alt": "Piazzale Michelangelo: Gofish davanti allo skyline cittadino al tramonto"
           },
           {
             "image": "colosseum",
-            "title": "Stone remembers",
-            "caption": "At the Colosseum, two thousand years felt strangely near.",
-            "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
-            "position": "50% 57%"
+            "position": "50% 57%",
+            "title": "La pietra ricorda",
+            "caption": "Al Colosseo, duemila anni sembravano stranamente vicini.",
+            "alt": "Colosseo romano: Gofish fa un selfie davanti all’antico Colosseo"
           },
           {
             "image": "summit",
-            "title": "Above the clouds, another sky",
-            "caption": "Tianchi left the wind to finish the sentence.",
-            "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
-            "position": "50% 45%"
+            "position": "50% 45%",
+            "title": "Sopra le nuvole, un altro cielo",
+            "caption": "Tianchi lasciò al vento il compito di finire la frase.",
+            "alt": "Tianchi del Monte Changbai: Gofish con occhiali da sole su un punto panoramico"
           },
           {
             "image": "aircraft",
-            "title": "Childhood curiosity, full scale",
-            "caption": "The Y-20 made the idea of flight feel tangible.",
-            "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
-            "position": "50% 50%"
+            "position": "50% 50%",
+            "title": "Curiosità d’infanzia, a grandezza naturale",
+            "caption": "Lo Y-20 rese quasi tangibile l’idea del volo.",
+            "alt": "Aereo da trasporto Y-20: Gofish davanti a un aereo in esposizione all’aperto"
           },
           {
             "image": "puppy-night",
-            "title": "The smallest guest",
-            "caption": "One summer night, trust weighed almost nothing.",
-            "alt": "Gofish holding a small puppy in a courtyard at night",
-            "position": "50% 44%"
+            "position": "50% 44%",
+            "title": "L’ospite più piccolo",
+            "caption": "In una notte d’estate, la fiducia pesava quasi nulla.",
+            "alt": "Gofish tiene in braccio un piccolo cucciolo in un cortile di notte"
           },
           {
             "image": "graduation-family",
-            "title": "The people behind the milestone",
-            "caption": "A graduation photo, and the two people who made the long road possible.",
-            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
-            "position": "50% 48%"
+            "position": "50% 48%",
+            "title": "Le persone dietro il traguardo",
+            "caption": "Una foto di laurea, e le due persone che hanno reso possibile il lungo cammino.",
+            "alt": "Gofish festeggia la laurea con i genitori alla Dalian University of Technology"
           },
           {
             "image": "seaside-fishing",
-            "title": "Waiting on the blue",
-            "caption": "The sea kept its answer; I kept the line.",
-            "alt": "Gofish fishing from a wooden pier by the sea",
-            "position": "38% 50%"
+            "position": "38% 50%",
+            "title": "Aspettando sul blu",
+            "caption": "Il mare tenne per sé la risposta; io tenni la lenza.",
+            "alt": "Gofish pesca da un molo di legno sul mare"
           },
           {
             "image": "flatbread",
-            "title": "Serious business",
-            "caption": "Some meals deserve full concentration.",
-            "alt": "Gofish tearing flatbread at a restaurant table",
-            "position": "50% 42%"
+            "position": "50% 42%",
+            "title": "Una cosa seria",
+            "caption": "Alcuni pasti meritano piena concentrazione.",
+            "alt": "Gofish spezza una focaccia al tavolo di un ristorante"
           }
         ]
       }
@@ -2376,11 +2376,11 @@
           {
             "number": "01",
             "title": "Agent RSI",
-            "subtitle": "Agents · Recursive self-improvement",
-            "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
+            "subtitle": "Agentes · Autoaperfeiçoamento recursivo",
+            "description": "Se um agente reescreve seus prompts, sua política de uso de ferramentas ou sua memória, como saber se ele realmente melhorou em vez de apenas memorizar as tarefas de teste? Quero explorar um ciclo verificável: comparar versões em tarefas não vistas, analisar falhas e manter ou reverter cada mudança.",
             "tags": [
-              "Held-out evaluation",
-              "Failure analysis",
+              "Avaliação em tarefas não vistas",
+              "Análise de falhas",
               "Rollback"
             ],
             "className": "agent"
@@ -2388,12 +2388,12 @@
           {
             "number": "02",
             "title": "Physical AI",
-            "subtitle": "Perception · Action · The real world",
-            "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
+            "subtitle": "Percepção · Ação · Mundo real",
+            "description": "Quando as visões da câmera são incompletas e a simulação difere da realidade, como um robô pode agarrar e posicionar objetos com confiabilidade? Quero explorar como restrições geométricas e estimativas de incerteza podem orientar o planejamento de ações e verificar o resultado.",
             "tags": [
               "Pick-and-place",
-              "Geometric priors",
-              "Uncertainty estimation"
+              "Priores geométricos",
+              "Estimativa de incerteza"
             ],
             "className": "physical"
           }
@@ -2401,18 +2401,18 @@
         "education": [
           {
             "dates": "2026 — 2029",
-            "degree": "Mathematics · Master's",
+            "degree": "Matemática · Mestrado",
             "school": "Southern University of Science and Technology",
             "abbr": "SUSTech",
-            "note": "Enrolled · Expected to graduate in 2029",
+            "note": "Matriculado · Conclusão prevista em 2029",
             "current": true
           },
           {
             "dates": "2022 — 2026",
-            "degree": "Mathematical Foundation Science · Bachelor's",
+            "degree": "Ciência Fundamental Matemática · Bacharelado",
             "school": "Dalian University of Technology",
             "abbr": "DUT",
-            "note": "Between mathematics and physics, building the foundation for understanding the world.",
+            "note": "Entre matemática e física, construindo a base para compreender o mundo.",
             "current": false
           }
         ],
@@ -2420,122 +2420,122 @@
           {
             "symbol": "↗",
             "title": "Badminton",
-            "description": "Swing, run, sweat — a breath of fresh air for the mind."
+            "description": "Bater, correr, suar — ar fresco para a mente."
           },
           {
             "symbol": "⌁",
-            "title": "Travel & wandering",
-            "description": "Leaving familiar routes, collecting different scenery."
+            "title": "Viagens e caminhadas",
+            "description": "Sair de rotas familiares e colecionar paisagens diferentes."
           },
           {
             "symbol": "◡",
-            "title": "Cooking",
-            "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+            "title": "Cozinhar",
+            "description": "Levar a sério as três refeições do dia, no calor da cozinha."
           },
           {
             "symbol": "▷",
-            "title": "Film & stories",
-            "description": "Living another life through a screen."
+            "title": "Filmes e histórias",
+            "description": "Viver outra vida através de uma tela."
           }
         ],
         "gallery": [
           {
             "image": "mountains",
-            "title": "High enough for silence",
-            "caption": "In the Dolomites, even the noise learns to disappear.",
-            "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
-            "position": "45% 60%"
+            "position": "45% 60%",
+            "title": "Alto o suficiente para o silêncio",
+            "caption": "Nas Dolomitas, até o ruído aprende a desaparecer.",
+            "alt": "Dolomitas, Itália: Gofish sentado em uma rocha com cadeias de montanhas ao fundo"
           },
           {
             "image": "blue-lake",
-            "title": "The afternoon slowed down",
-            "caption": "Lake Thun kept the light a little longer.",
-            "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
-            "position": "50% 56%"
+            "position": "50% 56%",
+            "title": "A tarde desacelerou",
+            "caption": "O Lago de Thun guardou a luz por mais um pouco.",
+            "alt": "Lago de Thun, Suíça: Gofish com uma câmera diante de um lago azul"
           },
           {
             "image": "rooftops",
-            "title": "Paris, looking up",
-            "caption": "The Opera House rewards anyone who remembers to look above street level.",
-            "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
-            "position": "52% 50%"
+            "position": "52% 50%",
+            "title": "Paris, olhando para cima",
+            "caption": "A Ópera recompensa quem lembra de olhar acima do nível da rua.",
+            "alt": "Ópera de Paris: Gofish em um terraço urbano com arquitetura clássica ao fundo"
           },
           {
             "image": "green-lake",
-            "title": "A color the mountains kept",
-            "caption": "Lake Carezza, somewhere between emerald and reflection.",
-            "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
-            "position": "50% 62%"
+            "position": "50% 62%",
+            "title": "Uma cor guardada pelas montanhas",
+            "caption": "O Lago Carezza, entre o esmeralda e o reflexo.",
+            "alt": "Lago Carezza, Itália: Gofish junto a uma cerca de madeira diante de um lago verde de montanha"
           },
           {
             "image": "snow",
-            "title": "Winter, almost weightless",
-            "caption": "At Jungfrau, the clouds felt close enough to touch.",
-            "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
-            "position": "50% 68%"
+            "position": "50% 68%",
+            "title": "Inverno, quase sem peso",
+            "caption": "No Jungfrau, as nuvens pareciam perto o bastante para tocar.",
+            "alt": "Cume do Jungfrau: Gofish em uma montanha nevada segurando uma bandeirinha souvenir"
           },
           {
             "image": "museum",
-            "title": "Everyone came for her",
-            "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
-            "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
-            "position": "45% 50%"
+            "position": "45% 50%",
+            "title": "Todos vieram por ela",
+            "caption": "Um rosto quieto, uma sala barulhenta — a Mona Lisa no Louvre.",
+            "alt": "Mona Lisa, Louvre: Gofish tirando selfie em uma sala de museu"
           },
           {
             "image": "evening",
-            "title": "Florence before nightfall",
-            "caption": "From Piazzale Michelangelo, the city held on to the last light.",
-            "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
-            "position": "40% 55%"
+            "position": "40% 55%",
+            "title": "Florença antes da noite",
+            "caption": "Do Piazzale Michelangelo, a cidade segurava a última luz.",
+            "alt": "Piazzale Michelangelo: Gofish com o horizonte da cidade ao entardecer"
           },
           {
             "image": "colosseum",
-            "title": "Stone remembers",
-            "caption": "At the Colosseum, two thousand years felt strangely near.",
-            "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
-            "position": "50% 57%"
+            "position": "50% 57%",
+            "title": "A pedra lembra",
+            "caption": "No Coliseu, dois mil anos pareceram estranhamente próximos.",
+            "alt": "Coliseu Romano: Gofish tirando selfie diante do antigo Coliseu"
           },
           {
             "image": "summit",
-            "title": "Above the clouds, another sky",
-            "caption": "Tianchi left the wind to finish the sentence.",
-            "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
-            "position": "50% 45%"
+            "position": "50% 45%",
+            "title": "Acima das nuvens, outro céu",
+            "caption": "Tianchi deixou o vento terminar a frase.",
+            "alt": "Tianchi da Montanha Changbai: Gofish de óculos escuros em um mirante"
           },
           {
             "image": "aircraft",
-            "title": "Childhood curiosity, full scale",
-            "caption": "The Y-20 made the idea of flight feel tangible.",
-            "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
-            "position": "50% 50%"
+            "position": "50% 50%",
+            "title": "Curiosidade de infância em tamanho real",
+            "caption": "O Y-20 tornou a ideia de voar quase palpável.",
+            "alt": "Avião de transporte Y-20: Gofish diante de uma aeronave em exposição ao ar livre"
           },
           {
             "image": "puppy-night",
-            "title": "The smallest guest",
-            "caption": "One summer night, trust weighed almost nothing.",
-            "alt": "Gofish holding a small puppy in a courtyard at night",
-            "position": "50% 44%"
+            "position": "50% 44%",
+            "title": "O menor visitante",
+            "caption": "Numa noite de verão, a confiança quase não pesava.",
+            "alt": "Gofish segurando um pequeno filhote em um pátio à noite"
           },
           {
             "image": "graduation-family",
-            "title": "The people behind the milestone",
-            "caption": "A graduation photo, and the two people who made the long road possible.",
-            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
-            "position": "50% 48%"
+            "position": "50% 48%",
+            "title": "As pessoas por trás do marco",
+            "caption": "Uma foto de formatura, e as duas pessoas que tornaram o longo caminho possível.",
+            "alt": "Gofish celebrando a formatura com os pais na Dalian University of Technology"
           },
           {
             "image": "seaside-fishing",
-            "title": "Waiting on the blue",
-            "caption": "The sea kept its answer; I kept the line.",
-            "alt": "Gofish fishing from a wooden pier by the sea",
-            "position": "38% 50%"
+            "position": "38% 50%",
+            "title": "Esperando no azul",
+            "caption": "O mar guardou sua resposta; eu mantive a linha.",
+            "alt": "Gofish pescando em um píer de madeira junto ao mar"
           },
           {
             "image": "flatbread",
-            "title": "Serious business",
-            "caption": "Some meals deserve full concentration.",
-            "alt": "Gofish tearing flatbread at a restaurant table",
-            "position": "50% 42%"
+            "position": "50% 42%",
+            "title": "Assunto sério",
+            "caption": "Algumas refeições merecem concentração total.",
+            "alt": "Gofish partindo pão achatado à mesa de um restaurante"
           }
         ]
       }
@@ -2599,10 +2599,10 @@
           {
             "number": "01",
             "title": "Agent RSI",
-            "subtitle": "Agents · Recursive self-improvement",
-            "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
+            "subtitle": "एजेंट · पुनरावर्ती आत्म-सुधार",
+            "description": "यदि कोई एजेंट अपने prompt, tool-use policy या memory को खुद बदलता है, तो हम कैसे जानें कि वह सचमुच बेहतर हुआ है, सिर्फ test tasks याद नहीं कर रहा? मैं एक जाँचने योग्य चक्र देखना चाहता हूँ: unseen tasks पर versions की तुलना करना, failures को trace करना, और हर बदलाव को रखना या rollback करना।",
             "tags": [
-              "Held-out evaluation",
+              "Unseen evaluation",
               "Failure analysis",
               "Rollback"
             ],
@@ -2611,8 +2611,8 @@
           {
             "number": "02",
             "title": "Physical AI",
-            "subtitle": "Perception · Action · The real world",
-            "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
+            "subtitle": "Perception · Action · वास्तविक दुनिया",
+            "description": "जब camera views अधूरे हों और simulation reality से अलग हो, तो robot objects को भरोसेमंद ढंग से grasp और place कैसे करे? मैं देखना चाहता हूँ कि geometric constraints और uncertainty estimates action planning को कैसे guide कर सकते हैं और outcome verify कर सकते हैं।",
             "tags": [
               "Pick-and-place",
               "Geometric priors",
@@ -2624,141 +2624,141 @@
         "education": [
           {
             "dates": "2026 — 2029",
-            "degree": "Mathematics · Master's",
+            "degree": "गणित · मास्टर",
             "school": "Southern University of Science and Technology",
             "abbr": "SUSTech",
-            "note": "Enrolled · Expected to graduate in 2029",
+            "note": "नामांकित · 2029 में स्नातक अपेक्षित",
             "current": true
           },
           {
             "dates": "2022 — 2026",
-            "degree": "Mathematical Foundation Science · Bachelor's",
+            "degree": "Mathematical Foundation Science · स्नातक",
             "school": "Dalian University of Technology",
             "abbr": "DUT",
-            "note": "Between mathematics and physics, building the foundation for understanding the world.",
+            "note": "गणित और भौतिकी के बीच, दुनिया को समझने की नींव बनाना।",
             "current": false
           }
         ],
         "hobbies": [
           {
             "symbol": "↗",
-            "title": "Badminton",
-            "description": "Swing, run, sweat — a breath of fresh air for the mind."
+            "title": "बैडमिंटन",
+            "description": "स्विंग, दौड़, पसीना — मन के लिए ताज़ी हवा।"
           },
           {
             "symbol": "⌁",
-            "title": "Travel & wandering",
-            "description": "Leaving familiar routes, collecting different scenery."
+            "title": "यात्रा और भटकना",
+            "description": "परिचित रास्तों से बाहर निकलना, अलग-अलग दृश्य संजोना।"
           },
           {
             "symbol": "◡",
-            "title": "Cooking",
-            "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+            "title": "खाना बनाना",
+            "description": "रसोई की गर्माहट में दिन के तीन भोजन को गंभीरता से लेना।"
           },
           {
             "symbol": "▷",
-            "title": "Film & stories",
-            "description": "Living another life through a screen."
+            "title": "फिल्में और कहानियाँ",
+            "description": "स्क्रीन के ज़रिये एक और जीवन जीना।"
           }
         ],
         "gallery": [
           {
             "image": "mountains",
-            "title": "High enough for silence",
-            "caption": "In the Dolomites, even the noise learns to disappear.",
-            "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
-            "position": "45% 60%"
+            "position": "45% 60%",
+            "title": "इतनी ऊँचाई कि शांति मिल जाए",
+            "caption": "Dolomites में शोर भी गायब होना सीख जाता है।",
+            "alt": "Dolomites, Italy: Gofish एक चट्टान पर बैठा है, पीछे पहाड़ों की श्रृंखला है"
           },
           {
             "image": "blue-lake",
-            "title": "The afternoon slowed down",
-            "caption": "Lake Thun kept the light a little longer.",
-            "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
-            "position": "50% 56%"
+            "position": "50% 56%",
+            "title": "दोपहर धीमी हो गई",
+            "caption": "Lake Thun ने रोशनी को थोड़ी देर और रोक लिया।",
+            "alt": "Lake Thun, Switzerland: Gofish कैमरे के साथ नीली झील के सामने"
           },
           {
             "image": "rooftops",
-            "title": "Paris, looking up",
-            "caption": "The Opera House rewards anyone who remembers to look above street level.",
-            "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
-            "position": "52% 50%"
+            "position": "52% 50%",
+            "title": "Paris, ऊपर देखते हुए",
+            "caption": "Opera House उन लोगों को इनाम देता है जो सड़क से ऊपर देखना याद रखते हैं।",
+            "alt": "Paris Opera House: Gofish शहर की छत पर, पीछे classical architecture"
           },
           {
             "image": "green-lake",
-            "title": "A color the mountains kept",
-            "caption": "Lake Carezza, somewhere between emerald and reflection.",
-            "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
-            "position": "50% 62%"
+            "position": "50% 62%",
+            "title": "पहाड़ों ने जो रंग बचाकर रखा",
+            "caption": "Lake Carezza, emerald और reflection के बीच कहीं।",
+            "alt": "Lake Carezza, Italy: Gofish लकड़ी की बाड़ के पास हरी mountain lake के सामने"
           },
           {
             "image": "snow",
-            "title": "Winter, almost weightless",
-            "caption": "At Jungfrau, the clouds felt close enough to touch.",
-            "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
-            "position": "50% 68%"
+            "position": "50% 68%",
+            "title": "सर्दी, लगभग भारहीन",
+            "caption": "Jungfrau पर clouds इतने पास लगे जैसे छू सकते हों।",
+            "alt": "Jungfrau summit: Gofish बर्फीले पहाड़ पर souvenir flag पकड़े हुए"
           },
           {
             "image": "museum",
-            "title": "Everyone came for her",
-            "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
-            "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
-            "position": "45% 50%"
+            "position": "45% 50%",
+            "title": "सब उसी के लिए आए थे",
+            "caption": "एक शांत चेहरा, एक शोर भरा कमरा — Louvre में Mona Lisa।",
+            "alt": "Mona Lisa, Louvre: Gofish museum hall में selfie ले रहा है"
           },
           {
             "image": "evening",
-            "title": "Florence before nightfall",
-            "caption": "From Piazzale Michelangelo, the city held on to the last light.",
-            "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
-            "position": "40% 55%"
+            "position": "40% 55%",
+            "title": "रात से पहले Florence",
+            "caption": "Piazzale Michelangelo से शहर ने आख़िरी रोशनी पकड़े रखी।",
+            "alt": "Piazzale Michelangelo: Gofish शाम के city skyline के साथ"
           },
           {
             "image": "colosseum",
-            "title": "Stone remembers",
-            "caption": "At the Colosseum, two thousand years felt strangely near.",
-            "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
-            "position": "50% 57%"
+            "position": "50% 57%",
+            "title": "पत्थर याद रखता है",
+            "caption": "Colosseum पर दो हज़ार साल अजीब तरह से पास लगे।",
+            "alt": "Roman Colosseum: Gofish ancient Colosseum के बाहर selfie ले रहा है"
           },
           {
             "image": "summit",
-            "title": "Above the clouds, another sky",
-            "caption": "Tianchi left the wind to finish the sentence.",
-            "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
-            "position": "50% 45%"
+            "position": "50% 45%",
+            "title": "बादलों के ऊपर, एक और आसमान",
+            "caption": "Tianchi ने वाक्य पूरा करने के लिए हवा को छोड़ दिया।",
+            "alt": "Changbai Mountain Tianchi: Gofish sunglasses में mountain viewpoint पर"
           },
           {
             "image": "aircraft",
-            "title": "Childhood curiosity, full scale",
-            "caption": "The Y-20 made the idea of flight feel tangible.",
-            "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
-            "position": "50% 50%"
+            "position": "50% 50%",
+            "title": "बचपन की जिज्ञासा, असली आकार में",
+            "caption": "Y-20 ने उड़ान के विचार को लगभग छूने लायक बना दिया।",
+            "alt": "Y-20 transport aircraft: Gofish outdoor display में aircraft के सामने"
           },
           {
             "image": "puppy-night",
-            "title": "The smallest guest",
-            "caption": "One summer night, trust weighed almost nothing.",
-            "alt": "Gofish holding a small puppy in a courtyard at night",
-            "position": "50% 44%"
+            "position": "50% 44%",
+            "title": "सबसे छोटा मेहमान",
+            "caption": "एक गर्मी की रात, भरोसा लगभग बिना वजन का था।",
+            "alt": "Gofish रात में courtyard में छोटे puppy को पकड़े हुए"
           },
           {
             "image": "graduation-family",
-            "title": "The people behind the milestone",
-            "caption": "A graduation photo, and the two people who made the long road possible.",
-            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
-            "position": "50% 48%"
+            "position": "50% 48%",
+            "title": "उस milestone के पीछे लोग",
+            "caption": "एक graduation photo, और वे दो लोग जिन्होंने लंबा रास्ता संभव बनाया।",
+            "alt": "Gofish Dalian University of Technology में माता-पिता के साथ graduation मना रहा है"
           },
           {
             "image": "seaside-fishing",
-            "title": "Waiting on the blue",
-            "caption": "The sea kept its answer; I kept the line.",
-            "alt": "Gofish fishing from a wooden pier by the sea",
-            "position": "38% 50%"
+            "position": "38% 50%",
+            "title": "नीले पर इंतज़ार",
+            "caption": "समुद्र ने जवाब अपने पास रखा; मैंने line पकड़े रखी।",
+            "alt": "Gofish समुद्र के पास wooden pier से fishing कर रहा है"
           },
           {
             "image": "flatbread",
-            "title": "Serious business",
-            "caption": "Some meals deserve full concentration.",
-            "alt": "Gofish tearing flatbread at a restaurant table",
-            "position": "50% 42%"
+            "position": "50% 42%",
+            "title": "गंभीर काम",
+            "caption": "कुछ meals पूरी concentration deserve करते हैं।",
+            "alt": "Gofish restaurant table पर flatbread तोड़ रहा है"
           }
         ]
       }
@@ -2822,10 +2822,10 @@
           {
             "number": "01",
             "title": "Agent RSI",
-            "subtitle": "Agents · Recursive self-improvement",
-            "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
+            "subtitle": "ایجنٹس · Recursive self-improvement",
+            "description": "اگر کوئی agent اپنے prompts، tool-use policy یا memory خود بدلتا ہے، تو ہم کیسے جانیں کہ وہ واقعی بہتر ہوا ہے، صرف test tasks یاد نہیں کر رہا؟ میں ایک قابلِ تصدیق loop دیکھنا چاہتا ہوں: unseen tasks پر versions کا موازنہ، failures کو trace کرنا، اور ہر تبدیلی کو رکھنا یا rollback کرنا۔",
             "tags": [
-              "Held-out evaluation",
+              "Unseen evaluation",
               "Failure analysis",
               "Rollback"
             ],
@@ -2834,8 +2834,8 @@
           {
             "number": "02",
             "title": "Physical AI",
-            "subtitle": "Perception · Action · The real world",
-            "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
+            "subtitle": "Perception · Action · حقیقی دنیا",
+            "description": "جب camera views نامکمل ہوں اور simulation حقیقت سے مختلف ہو، تو robot اشیا کو قابلِ اعتماد طریقے سے grasp اور place کیسے کرے؟ میں دیکھنا چاہتا ہوں کہ geometric constraints اور uncertainty estimates action planning کو کیسے guide کر سکتے ہیں اور outcome verify کر سکتے ہیں۔",
             "tags": [
               "Pick-and-place",
               "Geometric priors",
@@ -2847,141 +2847,141 @@
         "education": [
           {
             "dates": "2026 — 2029",
-            "degree": "Mathematics · Master's",
+            "degree": "ریاضی · ماسٹر",
             "school": "Southern University of Science and Technology",
             "abbr": "SUSTech",
-            "note": "Enrolled · Expected to graduate in 2029",
+            "note": "زیرِ تعلیم · 2029 میں تکمیل متوقع",
             "current": true
           },
           {
             "dates": "2022 — 2026",
-            "degree": "Mathematical Foundation Science · Bachelor's",
+            "degree": "Mathematical Foundation Science · بیچلر",
             "school": "Dalian University of Technology",
             "abbr": "DUT",
-            "note": "Between mathematics and physics, building the foundation for understanding the world.",
+            "note": "ریاضی اور طبیعیات کے درمیان، دنیا کو سمجھنے کی بنیاد بنانا۔",
             "current": false
           }
         ],
         "hobbies": [
           {
             "symbol": "↗",
-            "title": "Badminton",
-            "description": "Swing, run, sweat — a breath of fresh air for the mind."
+            "title": "بیڈمنٹن",
+            "description": "سوئنگ، دوڑ، پسینہ — ذہن کے لیے تازہ ہوا۔"
           },
           {
             "symbol": "⌁",
-            "title": "Travel & wandering",
-            "description": "Leaving familiar routes, collecting different scenery."
+            "title": "سفر اور آوارگی",
+            "description": "مانوس راستوں سے نکلنا، مختلف مناظر جمع کرنا۔"
           },
           {
             "symbol": "◡",
-            "title": "Cooking",
-            "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+            "title": "کھانا پکانا",
+            "description": "باورچی خانے کی گرمی میں دن کے تین کھانوں کو سنجیدگی سے لینا۔"
           },
           {
             "symbol": "▷",
-            "title": "Film & stories",
-            "description": "Living another life through a screen."
+            "title": "فلمیں اور کہانیاں",
+            "description": "اسکرین کے ذریعے ایک اور زندگی جینا۔"
           }
         ],
         "gallery": [
           {
             "image": "mountains",
-            "title": "High enough for silence",
-            "caption": "In the Dolomites, even the noise learns to disappear.",
-            "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
-            "position": "45% 60%"
+            "position": "45% 60%",
+            "title": "اتنی بلندی کہ خاموشی مل جائے",
+            "caption": "Dolomites میں شور بھی غائب ہونا سیکھ لیتا ہے۔",
+            "alt": "Dolomites, Italy: Gofish ایک چٹان پر بیٹھا ہے، پیچھے پہاڑی سلسلہ ہے"
           },
           {
             "image": "blue-lake",
-            "title": "The afternoon slowed down",
-            "caption": "Lake Thun kept the light a little longer.",
-            "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
-            "position": "50% 56%"
+            "position": "50% 56%",
+            "title": "دوپہر آہستہ ہو گئی",
+            "caption": "Lake Thun نے روشنی کو تھوڑی دیر اور روکے رکھا۔",
+            "alt": "Lake Thun, Switzerland: Gofish camera کے ساتھ نیلی جھیل کے سامنے"
           },
           {
             "image": "rooftops",
-            "title": "Paris, looking up",
-            "caption": "The Opera House rewards anyone who remembers to look above street level.",
-            "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
-            "position": "52% 50%"
+            "position": "52% 50%",
+            "title": "Paris، اوپر دیکھتے ہوئے",
+            "caption": "Opera House ان لوگوں کو انعام دیتا ہے جو street level سے اوپر دیکھنا یاد رکھتے ہیں۔",
+            "alt": "Paris Opera House: Gofish city rooftop terrace پر، پیچھے classical architecture"
           },
           {
             "image": "green-lake",
-            "title": "A color the mountains kept",
-            "caption": "Lake Carezza, somewhere between emerald and reflection.",
-            "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
-            "position": "50% 62%"
+            "position": "50% 62%",
+            "title": "وہ رنگ جو پہاڑوں نے سنبھال رکھا",
+            "caption": "Lake Carezza، emerald اور reflection کے درمیان کہیں۔",
+            "alt": "Lake Carezza, Italy: Gofish لکڑی کی باڑ کے پاس سبز mountain lake کے سامنے"
           },
           {
             "image": "snow",
-            "title": "Winter, almost weightless",
-            "caption": "At Jungfrau, the clouds felt close enough to touch.",
-            "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
-            "position": "50% 68%"
+            "position": "50% 68%",
+            "title": "سردی، تقریباً بے وزن",
+            "caption": "Jungfrau پر clouds اتنے قریب لگے جیسے چھو سکتے ہوں۔",
+            "alt": "Jungfrau summit: Gofish برفانی پہاڑ پر souvenir flag پکڑے ہوئے"
           },
           {
             "image": "museum",
-            "title": "Everyone came for her",
-            "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
-            "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
-            "position": "45% 50%"
+            "position": "45% 50%",
+            "title": "سب اسی کے لیے آئے تھے",
+            "caption": "ایک خاموش چہرہ، ایک شور بھرا کمرہ — Louvre میں Mona Lisa۔",
+            "alt": "Mona Lisa, Louvre: Gofish museum hall میں selfie لے رہا ہے"
           },
           {
             "image": "evening",
-            "title": "Florence before nightfall",
-            "caption": "From Piazzale Michelangelo, the city held on to the last light.",
-            "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
-            "position": "40% 55%"
+            "position": "40% 55%",
+            "title": "رات سے پہلے Florence",
+            "caption": "Piazzale Michelangelo سے شہر نے آخری روشنی تھام رکھی تھی۔",
+            "alt": "Piazzale Michelangelo: Gofish شام کے city skyline کے ساتھ"
           },
           {
             "image": "colosseum",
-            "title": "Stone remembers",
-            "caption": "At the Colosseum, two thousand years felt strangely near.",
-            "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
-            "position": "50% 57%"
+            "position": "50% 57%",
+            "title": "پتھر یاد رکھتا ہے",
+            "caption": "Colosseum پر دو ہزار سال عجیب طور پر قریب محسوس ہوئے۔",
+            "alt": "Roman Colosseum: Gofish ancient Colosseum کے باہر selfie لے رہا ہے"
           },
           {
             "image": "summit",
-            "title": "Above the clouds, another sky",
-            "caption": "Tianchi left the wind to finish the sentence.",
-            "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
-            "position": "50% 45%"
+            "position": "50% 45%",
+            "title": "بادلوں کے اوپر، ایک اور آسمان",
+            "caption": "Tianchi نے جملہ مکمل کرنے کے لیے ہوا کو چھوڑ دیا۔",
+            "alt": "Changbai Mountain Tianchi: Gofish sunglasses میں mountain viewpoint پر"
           },
           {
             "image": "aircraft",
-            "title": "Childhood curiosity, full scale",
-            "caption": "The Y-20 made the idea of flight feel tangible.",
-            "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
-            "position": "50% 50%"
+            "position": "50% 50%",
+            "title": "بچپن کا تجسس، اصل جسامت میں",
+            "caption": "Y-20 نے پرواز کے خیال کو تقریباً چھونے کے قابل بنا دیا۔",
+            "alt": "Y-20 transport aircraft: Gofish outdoor display میں aircraft کے سامنے"
           },
           {
             "image": "puppy-night",
-            "title": "The smallest guest",
-            "caption": "One summer night, trust weighed almost nothing.",
-            "alt": "Gofish holding a small puppy in a courtyard at night",
-            "position": "50% 44%"
+            "position": "50% 44%",
+            "title": "سب سے چھوٹا مہمان",
+            "caption": "گرمیوں کی ایک رات، اعتماد تقریباً بے وزن تھا۔",
+            "alt": "Gofish رات میں courtyard میں چھوٹا puppy پکڑے ہوئے"
           },
           {
             "image": "graduation-family",
-            "title": "The people behind the milestone",
-            "caption": "A graduation photo, and the two people who made the long road possible.",
-            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
-            "position": "50% 48%"
+            "position": "50% 48%",
+            "title": "اس milestone کے پیچھے لوگ",
+            "caption": "Graduation photo، اور وہ دو لوگ جنہوں نے طویل راستہ ممکن بنایا۔",
+            "alt": "Gofish Dalian University of Technology میں والدین کے ساتھ graduation منا رہا ہے"
           },
           {
             "image": "seaside-fishing",
-            "title": "Waiting on the blue",
-            "caption": "The sea kept its answer; I kept the line.",
-            "alt": "Gofish fishing from a wooden pier by the sea",
-            "position": "38% 50%"
+            "position": "38% 50%",
+            "title": "نیلے پر انتظار",
+            "caption": "سمندر نے اپنا جواب رکھا؛ میں نے line پکڑے رکھی۔",
+            "alt": "Gofish سمندر کے کنارے wooden pier سے fishing کر رہا ہے"
           },
           {
             "image": "flatbread",
-            "title": "Serious business",
-            "caption": "Some meals deserve full concentration.",
-            "alt": "Gofish tearing flatbread at a restaurant table",
-            "position": "50% 42%"
+            "position": "50% 42%",
+            "title": "سنجیدہ کام",
+            "caption": "کچھ meals پوری concentration کے مستحق ہوتے ہیں۔",
+            "alt": "Gofish restaurant table پر flatbread توڑ رہا ہے"
           }
         ]
       }
@@ -3045,10 +3045,10 @@
           {
             "number": "01",
             "title": "Agent RSI",
-            "subtitle": "Agents · Recursive self-improvement",
-            "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
+            "subtitle": "এজেন্ট · Recursive self-improvement",
+            "description": "যদি কোনো agent নিজের prompt, tool-use policy বা memory নিজে বদলায়, আমরা কীভাবে বুঝব সে সত্যিই উন্নত হয়েছে, শুধু test tasks মুখস্থ করেনি? আমি একটি যাচাইযোগ্য loop দেখতে চাই: unseen tasks-এ versions তুলনা করা, failures trace করা, এবং প্রতিটি পরিবর্তন রাখা বা rollback করা।",
             "tags": [
-              "Held-out evaluation",
+              "Unseen evaluation",
               "Failure analysis",
               "Rollback"
             ],
@@ -3057,8 +3057,8 @@
           {
             "number": "02",
             "title": "Physical AI",
-            "subtitle": "Perception · Action · The real world",
-            "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
+            "subtitle": "Perception · Action · বাস্তব জগৎ",
+            "description": "যখন camera views অসম্পূর্ণ এবং simulation বাস্তবতার থেকে আলাদা, তখন robot কীভাবে নির্ভরযোগ্যভাবে objects grasp ও place করবে? আমি দেখতে চাই geometric constraints ও uncertainty estimates কীভাবে action planning guide করতে পারে এবং outcome verify করতে পারে।",
             "tags": [
               "Pick-and-place",
               "Geometric priors",
@@ -3070,141 +3070,141 @@
         "education": [
           {
             "dates": "2026 — 2029",
-            "degree": "Mathematics · Master's",
+            "degree": "গণিত · মাস্টার্স",
             "school": "Southern University of Science and Technology",
             "abbr": "SUSTech",
-            "note": "Enrolled · Expected to graduate in 2029",
+            "note": "ভর্তি · ২০২৯ সালে স্নাতক প্রত্যাশিত",
             "current": true
           },
           {
             "dates": "2022 — 2026",
-            "degree": "Mathematical Foundation Science · Bachelor's",
+            "degree": "Mathematical Foundation Science · স্নাতক",
             "school": "Dalian University of Technology",
             "abbr": "DUT",
-            "note": "Between mathematics and physics, building the foundation for understanding the world.",
+            "note": "গণিত ও পদার্থবিজ্ঞানের মাঝখানে, পৃথিবী বোঝার ভিত্তি তৈরি করা।",
             "current": false
           }
         ],
         "hobbies": [
           {
             "symbol": "↗",
-            "title": "Badminton",
-            "description": "Swing, run, sweat — a breath of fresh air for the mind."
+            "title": "ব্যাডমিন্টন",
+            "description": "সুইং, দৌড়, ঘাম — মনের জন্য একটুখানি তাজা হাওয়া।"
           },
           {
             "symbol": "⌁",
-            "title": "Travel & wandering",
-            "description": "Leaving familiar routes, collecting different scenery."
+            "title": "ভ্রমণ ও ঘোরাঘুরি",
+            "description": "চেনা পথ ছেড়ে বের হওয়া, আলাদা দৃশ্য সংগ্রহ করা।"
           },
           {
             "symbol": "◡",
-            "title": "Cooking",
-            "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+            "title": "রান্না",
+            "description": "রান্নাঘরের উষ্ণতায় প্রতিদিনের তিন বেলার খাবারকে গুরুত্ব দেওয়া।"
           },
           {
             "symbol": "▷",
-            "title": "Film & stories",
-            "description": "Living another life through a screen."
+            "title": "সিনেমা ও গল্প",
+            "description": "স্ক্রিনের মাধ্যমে আরেকটি জীবন বেঁচে দেখা।"
           }
         ],
         "gallery": [
           {
             "image": "mountains",
-            "title": "High enough for silence",
-            "caption": "In the Dolomites, even the noise learns to disappear.",
-            "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
-            "position": "45% 60%"
+            "position": "45% 60%",
+            "title": "নীরবতার জন্য যথেষ্ট উঁচু",
+            "caption": "Dolomites-এ শব্দও হারিয়ে যেতে শেখে।",
+            "alt": "Dolomites, Italy: Gofish একটি পাথরে বসে আছে, পেছনে পাহাড়শ্রেণি"
           },
           {
             "image": "blue-lake",
-            "title": "The afternoon slowed down",
-            "caption": "Lake Thun kept the light a little longer.",
-            "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
-            "position": "50% 56%"
+            "position": "50% 56%",
+            "title": "বিকেল ধীরে হলো",
+            "caption": "Lake Thun আলোটাকে আরও একটু ধরে রেখেছিল।",
+            "alt": "Lake Thun, Switzerland: Gofish ক্যামেরা নিয়ে নীল হ্রদের সামনে"
           },
           {
             "image": "rooftops",
-            "title": "Paris, looking up",
-            "caption": "The Opera House rewards anyone who remembers to look above street level.",
-            "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
-            "position": "52% 50%"
+            "position": "52% 50%",
+            "title": "Paris, ওপরে তাকিয়ে",
+            "caption": "Opera House তাদের পুরস্কৃত করে যারা রাস্তার ওপরে তাকাতে ভুলে না।",
+            "alt": "Paris Opera House: Gofish শহরের ছাদে, পেছনে classical architecture"
           },
           {
             "image": "green-lake",
-            "title": "A color the mountains kept",
-            "caption": "Lake Carezza, somewhere between emerald and reflection.",
-            "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
-            "position": "50% 62%"
+            "position": "50% 62%",
+            "title": "পাহাড়ের রাখা এক রং",
+            "caption": "Lake Carezza, emerald আর reflection-এর মাঝামাঝি কোথাও।",
+            "alt": "Lake Carezza, Italy: Gofish কাঠের বেড়ার পাশে সবুজ mountain lake-এর সামনে"
           },
           {
             "image": "snow",
-            "title": "Winter, almost weightless",
-            "caption": "At Jungfrau, the clouds felt close enough to touch.",
-            "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
-            "position": "50% 68%"
+            "position": "50% 68%",
+            "title": "শীত, প্রায় ওজনহীন",
+            "caption": "Jungfrau-তে clouds এত কাছে মনে হয়েছিল যেন ছোঁয়া যায়।",
+            "alt": "Jungfrau summit: Gofish বরফঢাকা পাহাড়ে souvenir flag হাতে"
           },
           {
             "image": "museum",
-            "title": "Everyone came for her",
-            "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
-            "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
-            "position": "45% 50%"
+            "position": "45% 50%",
+            "title": "সবাই এসেছিল তার জন্য",
+            "caption": "একটি নীরব মুখ, একটি শব্দময় ঘর — Louvre-এ Mona Lisa।",
+            "alt": "Mona Lisa, Louvre: Gofish museum hall-এ selfie তুলছে"
           },
           {
             "image": "evening",
-            "title": "Florence before nightfall",
-            "caption": "From Piazzale Michelangelo, the city held on to the last light.",
-            "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
-            "position": "40% 55%"
+            "position": "40% 55%",
+            "title": "রাত নামার আগে Florence",
+            "caption": "Piazzale Michelangelo থেকে শহর শেষ আলো ধরে রেখেছিল।",
+            "alt": "Piazzale Michelangelo: Gofish সন্ধ্যার city skyline-এর সামনে"
           },
           {
             "image": "colosseum",
-            "title": "Stone remembers",
-            "caption": "At the Colosseum, two thousand years felt strangely near.",
-            "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
-            "position": "50% 57%"
+            "position": "50% 57%",
+            "title": "পাথর মনে রাখে",
+            "caption": "Colosseum-এ দুই হাজার বছর অদ্ভুতভাবে কাছে মনে হয়েছিল।",
+            "alt": "Roman Colosseum: Gofish প্রাচীন Colosseum-এর বাইরে selfie তুলছে"
           },
           {
             "image": "summit",
-            "title": "Above the clouds, another sky",
-            "caption": "Tianchi left the wind to finish the sentence.",
-            "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
-            "position": "50% 45%"
+            "position": "50% 45%",
+            "title": "মেঘের ওপরে, আরেক আকাশ",
+            "caption": "Tianchi বাকিটা বলার দায়িত্ব বাতাসকে দিয়েছিল।",
+            "alt": "Changbai Mountain Tianchi: Gofish sunglasses পরে mountain viewpoint-এ"
           },
           {
             "image": "aircraft",
-            "title": "Childhood curiosity, full scale",
-            "caption": "The Y-20 made the idea of flight feel tangible.",
-            "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
-            "position": "50% 50%"
+            "position": "50% 50%",
+            "title": "শৈশবের কৌতূহল, পূর্ণ আকারে",
+            "caption": "Y-20 উড়ানের ধারণাকে প্রায় ছোঁয়ার মতো করে দিল।",
+            "alt": "Y-20 transport aircraft: Gofish outdoor display-তে aircraft-এর সামনে"
           },
           {
             "image": "puppy-night",
-            "title": "The smallest guest",
-            "caption": "One summer night, trust weighed almost nothing.",
-            "alt": "Gofish holding a small puppy in a courtyard at night",
-            "position": "50% 44%"
+            "position": "50% 44%",
+            "title": "সবচেয়ে ছোট অতিথি",
+            "caption": "এক গ্রীষ্মরাতে, বিশ্বাসের প্রায় কোনো ওজন ছিল না।",
+            "alt": "Gofish রাতে courtyard-এ ছোট puppy ধরে আছে"
           },
           {
             "image": "graduation-family",
-            "title": "The people behind the milestone",
-            "caption": "A graduation photo, and the two people who made the long road possible.",
-            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
-            "position": "50% 48%"
+            "position": "50% 48%",
+            "title": "মাইলফলকের পেছনের মানুষ",
+            "caption": "একটি graduation photo, আর সেই দুই মানুষ যারা দীর্ঘ পথটি সম্ভব করেছিলেন।",
+            "alt": "Gofish Dalian University of Technology-তে বাবা-মায়ের সঙ্গে graduation উদযাপন করছে"
           },
           {
             "image": "seaside-fishing",
-            "title": "Waiting on the blue",
-            "caption": "The sea kept its answer; I kept the line.",
-            "alt": "Gofish fishing from a wooden pier by the sea",
-            "position": "38% 50%"
+            "position": "38% 50%",
+            "title": "নীলের ওপর অপেক্ষা",
+            "caption": "সমুদ্র তার উত্তর রেখে দিল; আমি line ধরে রইলাম।",
+            "alt": "Gofish সমুদ্রের পাশে wooden pier থেকে fishing করছে"
           },
           {
             "image": "flatbread",
-            "title": "Serious business",
-            "caption": "Some meals deserve full concentration.",
-            "alt": "Gofish tearing flatbread at a restaurant table",
-            "position": "50% 42%"
+            "position": "50% 42%",
+            "title": "গুরুতর ব্যাপার",
+            "caption": "কিছু meals সম্পূর্ণ concentration দাবি করে।",
+            "alt": "Gofish restaurant table-এ flatbread ছিঁড়ছে"
           }
         ]
       }
