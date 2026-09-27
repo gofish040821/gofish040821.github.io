@@ -102,7 +102,9 @@
         "heroCaption": "Give my steps to the wild, and my curiosity to the world.",
         "closing": "Stay curious, grow slowly.",
         "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas.",
-        "skillsTitle": "Skills & Tools"
+        "skillsTitle": "Skills & Tools",
+        "skillsExpand": "Show all skills",
+        "skillsCollapse": "Show fewer skills"
       },
       "content": {
         "about": [
@@ -323,7 +325,9 @@
         "heroCaption": "把脚步交给山野，把好奇留给世界。",
         "closing": "保持好奇，慢慢生长。",
         "closingText": "关于数学、AI，或者下一段旅程，期待遇见有趣的想法。",
-        "skillsTitle": "技能与工具"
+        "skillsTitle": "技能与工具",
+        "skillsExpand": "展开全部技能",
+        "skillsCollapse": "收起技能"
       },
       "content": {
         "about": [
@@ -544,7 +548,9 @@
         "heroCaption": "Mes pas vers la montagne, ma curiosité vers le monde.",
         "closing": "Rester curieux, grandir lentement.",
         "closingText": "Sur les mathématiques, l'IA ou le prochain voyage — j'ai hâte d'échanger des idées intéressantes.",
-        "skillsTitle": "Compétences & outils"
+        "skillsTitle": "Compétences & outils",
+        "skillsExpand": "Afficher toutes les compétences",
+        "skillsCollapse": "Afficher moins de compétences"
       },
       "content": {
         "about": [
@@ -765,7 +771,9 @@
         "heroCaption": "Meine Schritte der Wildnis, meine Neugier der Welt.",
         "closing": "Neugierig bleiben, langsam wachsen.",
         "closingText": "Über Mathematik, KI oder die nächste Reise — ich freue mich auf interessante Ideen.",
-        "skillsTitle": "Fähigkeiten & Werkzeuge"
+        "skillsTitle": "Fähigkeiten & Werkzeuge",
+        "skillsExpand": "Alle Skills anzeigen",
+        "skillsCollapse": "Weniger Skills anzeigen"
       },
       "content": {
         "about": [
@@ -986,7 +994,9 @@
         "heroCaption": "Mis pasos a la montaña, mi curiosidad al mundo.",
         "closing": "Sigue con curiosidad, crece despacio.",
         "closingText": "Sobre matemáticas, IA o el próximo viaje, espero encontrar ideas interesantes.",
-        "skillsTitle": "Habilidades y herramientas"
+        "skillsTitle": "Habilidades y herramientas",
+        "skillsExpand": "Mostrar todas las habilidades",
+        "skillsCollapse": "Mostrar menos habilidades"
       },
       "content": {
         "about": [
@@ -1207,7 +1217,9 @@
         "heroCaption": "أمنح خطواتي للبرية، وفضولي للعالم.",
         "closing": "ابقَ فضوليًا، وانهَم ببطء.",
         "closingText": "عن الرياضيات أو الذكاء الاصطناعي أو الرحلة القادمة — أتطلع إلى أفكار مثيرة.",
-        "skillsTitle": "المهارات والأدوات"
+        "skillsTitle": "المهارات والأدوات",
+        "skillsExpand": "عرض كل المهارات",
+        "skillsCollapse": "عرض مهارات أقل"
       },
       "content": {
         "about": [
@@ -1428,7 +1440,9 @@
         "heroCaption": "足は山野へ、好奇心は世界へ。",
         "closing": "好奇心を持ち、ゆっくり育つ。",
         "closingText": "数学や AI、あるいは次の旅について、面白いアイデアとの出会いを楽しみにしています。",
-        "skillsTitle": "スキルとツール"
+        "skillsTitle": "スキルとツール",
+        "skillsExpand": "すべてのスキルを表示",
+        "skillsCollapse": "スキルを少なく表示"
       },
       "content": {
         "about": [
@@ -1649,7 +1663,9 @@
         "heroCaption": "발걸음은 산과 들로, 호기심은 세계로.",
         "closing": "호기심을 갖고, 천천히 자라기.",
         "closingText": "수학, AI, 그리고 다음 여행에 대해 — 흥미로운 아이디어를 만나기를 기대합니다.",
-        "skillsTitle": "기술과 도구"
+        "skillsTitle": "기술과 도구",
+        "skillsExpand": "모든 기술 보기",
+        "skillsCollapse": "기술 줄이기"
       },
       "content": {
         "about": [
@@ -1870,7 +1886,9 @@
         "heroCaption": "Отдам шаги дикой природе, а любопытство — миру.",
         "closing": "Оставайся любопытным, расти не спеша.",
         "closingText": "О математике, ИИ или следующем путешествии — буду рад интересным идеям.",
-        "skillsTitle": "Навыки и инструменты"
+        "skillsTitle": "Навыки и инструменты",
+        "skillsExpand": "Показать все навыки",
+        "skillsCollapse": "Показать меньше навыков"
       },
       "content": {
         "about": [

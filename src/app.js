@@ -84,6 +84,43 @@
     if (!galleryExpanded) document.querySelector('#gallery').scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   });
 
+  /* ---------------- skills ---------------- */
+  const initialSkillCount = 16;
+  const skillToggle = document.querySelector('#skills-toggle');
+  const skillList = document.querySelector('#skill-badges');
+  let skillItems = [];
+  let skillsExpanded = false;
+
+  function renderSkillToggle() {
+    if (!skillToggle || skillItems.length <= initialSkillCount) return;
+    const label = skillsExpanded ? t('skillsCollapse', 'Show fewer skills') : t('skillsExpand', 'Show all skills');
+    const mark = skillsExpanded ? '&minus;' : '&#43;';
+    skillToggle.innerHTML = '<span>' + label + '</span> <span aria-hidden="true">' + mark + '</span>';
+  }
+
+  function applySkillVisibility() {
+    skillItems.forEach((item, i) => { item.hidden = i >= initialSkillCount && !skillsExpanded; });
+  }
+
+  function bindSkills() {
+    if (!skillToggle || !skillList) return;
+    skillItems = [...skillList.querySelectorAll('li')];
+    if (skillItems.length <= initialSkillCount) { skillToggle.hidden = true; return; }
+    skillToggle.hidden = false;
+    applySkillVisibility();
+    renderSkillToggle();
+  }
+
+  if (skillToggle) {
+    skillToggle.addEventListener('click', () => {
+      skillsExpanded = !skillsExpanded;
+      skillToggle.setAttribute('aria-expanded', String(skillsExpanded));
+      applySkillVisibility();
+      renderSkillToggle();
+      if (!skillsExpanded) document.querySelector('#skills-title').scrollIntoView({ block: 'center', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    });
+  }
+
   /* ---------------- lightbox ---------------- */
   const dialog = document.querySelector('#lightbox');
   const fullImage = document.querySelector('#lightbox-image');
@@ -200,6 +237,7 @@
     closeMenu();
     closeLangMenu();
     bindGallery();
+    bindSkills();
     buildLangMenu();
     renderThemeToggle();
     try { localStorage.setItem(STORAGE_KEY, code); } catch (error) { /* private mode */ }
