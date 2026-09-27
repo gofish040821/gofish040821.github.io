@@ -91,8 +91,8 @@
 .skill-badges{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:10px 8px;margin:0;padding:0}
 .skill-badges li{display:flex;max-width:100%}
 .skill-badges img{display:block;height:28px;width:auto;max-width:100%;border-radius:2px}
-.skills-toggle{margin-top:18px;padding:7px 14px;font-size:13px;background:transparent;white-space:nowrap}
-@media(max-width:760px){.research-skills{margin-top:32px;padding-top:22px}.research-skills-heading{display:block;margin-bottom:16px}.research-skills h3{font-size:23px}.skill-badges{gap:8px 7px}.skill-badges img{height:27px}.skills-toggle{margin-top:16px;width:100%}}
+.skills-toggle{display:flex;margin:20px auto 0;padding:7px 16px;font-size:13px;background:transparent;white-space:nowrap}
+@media(max-width:760px){.research-skills{margin-top:32px;padding-top:22px}.research-skills-heading{display:block;margin-bottom:16px}.research-skills h3{font-size:23px}.skill-badges{gap:8px 7px}.skill-badges img{height:27px}.skills-toggle{margin-top:18px}}
 
 /* Responsive layout: allow translated content to wrap without widening the page. */
 .hero>*,.about>*,.education>*,.research-grid>*,.hobbies>*,.section-top>*{min-width:0}
