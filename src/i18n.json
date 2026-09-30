@@ -136,7 +136,8 @@
         "skillsExpand": "Show all skills",
         "skillsCollapse": "Show fewer skills",
         "notesTitle": "Research notes",
-        "notesStatus": "Thinking aloud"
+        "notesStatus": "Thinking aloud",
+        "playfulBioTitle": "The unofficial CV"
       },
       "content": {
         "about": [
@@ -319,6 +320,10 @@
             "title": "An action is a hypothesis",
             "body": "The next observation should tell an agent whether to continue, correct course or ask for help."
           }
+        ],
+        "playfulBio": [
+          "A formidable academic record: several lifestyle “papers” in the prestigious “journals” XHS, INS, YouTube and bilibili, with over 10,000 views and 1,000 likes and saves. Full marks in Sesame Credit; my academic integrity mostly involves paying bills on time.",
+          "Also first author in RUBBISH, specializing in EAT, with IF=0—zero does come before one. Research interests include fried-chicken automation and hamburger structural engineering. Experiments are highly repeatable; the samples rarely survive until tomorrow."
         ]
       }
     },
@@ -371,7 +376,8 @@
         "skillsExpand": "展开全部技能",
         "skillsCollapse": "收起技能",
         "notesTitle": "研究笔记",
-        "notesStatus": "随手记下的思考"
+        "notesStatus": "随手记下的思考",
+        "playfulBioTitle": "不太严肃的履历"
       },
       "content": {
         "about": [
@@ -554,6 +560,10 @@
             "title": "行动，是一个待验证的假设",
             "body": "下一次观察，应当帮助智能体决定：继续、调整，还是请求帮助。"
           }
+        ],
+        "playfulBio": [
+          "本人学术能力较强，已在 XHS、INS、YouTube、bilibili 等“知名期刊”发表多篇生活 paper，累计浏览破万、点赞与收藏破千。芝麻信用满绩，学术诚信主要体现在按时还款。",
+          "另有 RUBBISH 一作（EAT 方向，IF=0——0 可是排在 1 前面的）。长期关注炸鸡自动化与汉堡建筑工程：实验重复性良好，但样品通常活不到第二天。"
         ]
       }
     },
@@ -606,7 +616,8 @@
         "skillsExpand": "Afficher toutes les compétences",
         "skillsCollapse": "Afficher moins de compétences",
         "notesTitle": "Notes de recherche",
-        "notesStatus": "Réflexions à voix haute"
+        "notesStatus": "Réflexions à voix haute",
+        "playfulBioTitle": "Un CV pas très sérieux"
       },
       "content": {
         "about": [
@@ -789,6 +800,10 @@
             "title": "Une action est une hypothèse",
             "body": "L’observation suivante devrait indiquer à l’agent s’il faut continuer, corriger sa trajectoire ou demander de l’aide."
           }
+        ],
+        "playfulBio": [
+          "Un parcours académique remarquable : plusieurs « papers » de vie quotidienne dans les prestigieuses « revues » XHS, INS, YouTube et bilibili, avec plus de 10 000 vues et 1 000 mentions J’aime et enregistrements. Note maximale chez Sesame Credit ; mon intégrité académique consiste surtout à payer à temps.",
+          "Également premier auteur dans RUBBISH, spécialité EAT, avec un IF=0 : le zéro vient bien avant le un. Mes recherches portent sur l’automatisation du poulet frit et l’ingénierie des hamburgers. Expériences reproductibles ; les échantillons survivent rarement jusqu’au lendemain."
         ]
       }
     },
@@ -841,7 +856,8 @@
         "skillsExpand": "Alle Skills anzeigen",
         "skillsCollapse": "Weniger Skills anzeigen",
         "notesTitle": "Forschungsnotizen",
-        "notesStatus": "Gedanken am Rand"
+        "notesStatus": "Gedanken am Rand",
+        "playfulBioTitle": "Ein nicht ganz ernst gemeinter Lebenslauf"
       },
       "content": {
         "about": [
@@ -1024,6 +1040,10 @@
             "title": "Eine Handlung ist eine Hypothese",
             "body": "Die nächste Beobachtung sollte dem Agenten zeigen, ob er fortfahren, den Kurs korrigieren oder um Hilfe bitten soll."
           }
+        ],
+        "playfulBio": [
+          "Eine beeindruckende akademische Bilanz: mehrere Alltags-„Paper“ in den renommierten „Zeitschriften“ XHS, INS, YouTube und bilibili, mit über 10.000 Aufrufen und 1.000 Likes und gespeicherten Beiträgen. Volle Punktzahl bei Sesame Credit; akademische Integrität heißt bei mir vor allem, pünktlich zu bezahlen.",
+          "Außerdem Erstautor bei RUBBISH, Fachgebiet EAT, mit IF=0: Null kommt schließlich vor Eins. Forschungsinteressen: Brathähnchen-Automatisierung und Hamburger-Bauingenieurwesen. Die Experimente sind gut reproduzierbar; die Proben überleben selten bis morgen."
         ]
       }
     },
@@ -1076,7 +1096,8 @@
         "skillsExpand": "Mostrar todas las habilidades",
         "skillsCollapse": "Mostrar menos habilidades",
         "notesTitle": "Notas de investigación",
-        "notesStatus": "Pensamientos en voz alta"
+        "notesStatus": "Pensamientos en voz alta",
+        "playfulBioTitle": "Un currículo poco serio"
       },
       "content": {
         "about": [
@@ -1259,6 +1280,10 @@
             "title": "Una acción es una hipótesis",
             "body": "La siguiente observación debería indicar al agente si continuar, corregir el rumbo o pedir ayuda."
           }
+        ],
+        "playfulBio": [
+          "Una trayectoria académica formidable: varios «papers» de vida cotidiana en las prestigiosas «revistas» XHS, INS, YouTube y bilibili, con más de 10.000 visitas y 1.000 me gusta y guardados. Nota máxima en Sesame Credit; mi integridad académica consiste sobre todo en pagar a tiempo.",
+          "También primer autor en RUBBISH, especialidad EAT, con IF=0: el cero va antes que el uno. Intereses de investigación: automatización del pollo frito e ingeniería estructural de hamburguesas. Experimentos muy reproducibles; las muestras rara vez sobreviven hasta mañana."
         ]
       }
     },
@@ -1311,7 +1336,8 @@
         "skillsExpand": "عرض كل المهارات",
         "skillsCollapse": "عرض مهارات أقل",
         "notesTitle": "ملاحظات بحثية",
-        "notesStatus": "تفكير بصوت عالٍ"
+        "notesStatus": "تفكير بصوت عالٍ",
+        "playfulBioTitle": "سيرة ذاتية غير جادة تمامًا"
       },
       "content": {
         "about": [
@@ -1494,6 +1520,10 @@
             "title": "الفعل فرضية",
             "body": "ينبغي أن تساعد الملاحظة التالية الوكيل على تحديد ما إذا كان سيواصل، أو يصحح المسار، أو يطلب المساعدة."
           }
+        ],
+        "playfulBio": [
+          "سجل أكاديمي مبهر: عدة «أوراق» عن الحياة اليومية في «الدوريات المرموقة» XHS وINS وYouTube وbilibili، بأكثر من 10,000 مشاهدة و1,000 إعجاب وحفظ. الدرجة الكاملة في Sesame Credit؛ نزاهتي الأكاديمية تعني غالبًا سداد الفواتير في موعدها.",
+          "ومؤلف أول في RUBBISH، بتخصص EAT ومعامل تأثير IF=0؛ فالصفر يأتي قبل الواحد! أهتم بأتمتة الدجاج المقلي والهندسة الإنشائية للبرغر. التجارب قابلة للتكرار جدًا، لكن العينات نادرًا ما تبقى إلى الغد."
         ]
       }
     },
@@ -1546,7 +1576,8 @@
         "skillsExpand": "すべてのスキルを表示",
         "skillsCollapse": "スキルを少なく表示",
         "notesTitle": "研究ノート",
-        "notesStatus": "思考のメモ"
+        "notesStatus": "思考のメモ",
+        "playfulBioTitle": "ちょっと真面目じゃない経歴"
       },
       "content": {
         "about": [
@@ -1729,6 +1760,10 @@
             "title": "行動は一つの仮説",
             "body": "次の観察から、エージェントが続行するか、軌道を修正するか、助けを求めるかを判断できるようにしたい。"
           }
+        ],
+        "playfulBio": [
+          "学術実績には自信あり。XHS、INS、YouTube、bilibiliなどの「著名な学術誌」に暮らしの「論文」を多数投稿し、閲覧数は1万超、いいね・保存は千超。芝麻信用も満点。研究倫理は主に、支払い期限を守ることで実践しています。",
+          "RUBBISHの筆頭著者でもあります。専門はEAT、IF=0——ゼロは一より先ですから。研究関心はフライドチキンの自動化とハンバーガーの構造工学。実験の再現性は良好ですが、試料はたいてい翌日まで残りません。"
         ]
       }
     },
@@ -1781,7 +1816,8 @@
         "skillsExpand": "모든 기술 보기",
         "skillsCollapse": "기술 줄이기",
         "notesTitle": "연구 노트",
-        "notesStatus": "생각을 적으며"
+        "notesStatus": "생각을 적으며",
+        "playfulBioTitle": "조금 덜 진지한 이력서"
       },
       "content": {
         "about": [
@@ -1964,6 +2000,10 @@
             "title": "행동은 하나의 가설이다",
             "body": "다음 관찰은 에이전트가 계속할지, 방향을 수정할지, 도움을 요청할지 판단하게 해야 한다."
           }
+        ],
+        "playfulBio": [
+          "학술 실적에는 자신이 있습니다. XHS, INS, YouTube, bilibili 같은 “유명 학술지”에 일상 “논문”을 다수 게재해 조회 수 1만 이상, 좋아요와 저장 1천 이상을 기록했습니다. Sesame Credit도 만점. 연구 윤리는 주로 제때 청구서를 납부하며 실천합니다.",
+          "RUBBISH의 제1저자이기도 합니다. 전공은 EAT, IF=0—0이 1보다 먼저 나오니까요. 관심 분야는 프라이드치킨 자동화와 햄버거 구조공학. 실험의 재현성은 좋지만, 시료는 대개 다음 날까지 남아 있지 않습니다."
         ]
       }
     },
@@ -2016,7 +2056,8 @@
         "skillsExpand": "Показать все навыки",
         "skillsCollapse": "Показать меньше навыков",
         "notesTitle": "Исследовательские заметки",
-        "notesStatus": "Мысли вслух"
+        "notesStatus": "Мысли вслух",
+        "playfulBioTitle": "Не совсем серьёзное резюме"
       },
       "content": {
         "about": [
@@ -2199,6 +2240,10 @@
             "title": "Действие — это гипотеза",
             "body": "Следующее наблюдение должно помочь агенту решить: продолжать, скорректировать курс или попросить помощи."
           }
+        ],
+        "playfulBio": [
+          "Впечатляющий академический послужной список: несколько бытовых «статей» в престижных «журналах» XHS, INS, YouTube и bilibili, более 10 000 просмотров и 1 000 лайков и сохранений. Высший балл в Sesame Credit; моя академическая честность чаще всего означает оплату счетов вовремя.",
+          "Также первый автор в RUBBISH, направление EAT, IF=0 — ведь ноль стоит перед единицей. Научные интересы: автоматизация жареной курицы и строительная инженерия гамбургеров. Эксперименты воспроизводимы; образцы редко доживают до завтра."
         ]
       }
     },
@@ -2251,7 +2296,8 @@
         "skillsExpand": "Mostra tutte le competenze",
         "skillsCollapse": "Mostra meno competenze",
         "notesTitle": "Note di ricerca",
-        "notesStatus": "Pensieri ad alta voce"
+        "notesStatus": "Pensieri ad alta voce",
+        "playfulBioTitle": "Un curriculum poco serio"
       },
       "content": {
         "about": [
@@ -2434,6 +2480,10 @@
             "title": "Un’azione è un’ipotesi",
             "body": "L’osservazione successiva dovrebbe indicare all’agente se continuare, correggere la rotta o chiedere aiuto."
           }
+        ],
+        "playfulBio": [
+          "Un curriculum accademico formidabile: diversi «paper» di vita quotidiana sulle prestigiose «riviste» XHS, INS, YouTube e bilibili, con oltre 10.000 visualizzazioni e 1.000 like e salvataggi. Pieni voti in Sesame Credit; la mia integrità accademica consiste soprattutto nel pagare puntualmente.",
+          "Anche primo autore su RUBBISH, settore EAT, con IF=0: lo zero viene pur sempre prima dell’uno. Interessi di ricerca: automazione del pollo fritto e ingegneria strutturale degli hamburger. Gli esperimenti sono ripetibili; i campioni raramente arrivano a domani."
         ]
       }
     },
@@ -2486,7 +2536,8 @@
         "skillsExpand": "Mostrar todas as habilidades",
         "skillsCollapse": "Mostrar menos habilidades",
         "notesTitle": "Notas de pesquisa",
-        "notesStatus": "Pensamentos em voz alta"
+        "notesStatus": "Pensamentos em voz alta",
+        "playfulBioTitle": "Um currículo pouco sério"
       },
       "content": {
         "about": [
@@ -2669,6 +2720,10 @@
             "title": "Uma ação é uma hipótese",
             "body": "A próxima observação deve indicar ao agente se deve continuar, corrigir o rumo ou pedir ajuda."
           }
+        ],
+        "playfulBio": [
+          "Uma trajetória acadêmica notável: vários «papers» sobre a vida cotidiana nas prestigiadas «revistas» XHS, INS, YouTube e bilibili, com mais de 10.000 visualizações e 1.000 curtidas e salvamentos. Nota máxima no Sesame Credit; minha integridade acadêmica consiste sobretudo em pagar em dia.",
+          "Também primeiro autor em RUBBISH, área EAT, com IF=0: afinal, zero vem antes de um. Interesses de pesquisa: automação de frango frito e engenharia estrutural de hambúrgueres. Experimentos bastante reproduzíveis; as amostras raramente sobrevivem até amanhã."
         ]
       }
     },
@@ -2721,7 +2776,8 @@
         "skillsExpand": "सभी कौशल दिखाएँ",
         "skillsCollapse": "कम कौशल दिखाएँ",
         "notesTitle": "शोध नोट्स",
-        "notesStatus": "खुलकर सोचते हुए"
+        "notesStatus": "खुलकर सोचते हुए",
+        "playfulBioTitle": "एक थोड़ी गैर-गंभीर परिचय-पत्रिका"
       },
       "content": {
         "about": [
@@ -2904,6 +2960,10 @@
             "title": "हर कार्रवाई एक परिकल्पना है",
             "body": "अगला अवलोकन एजेंट को तय करने में मदद करे कि आगे बढ़ना है, दिशा सुधारनी है या सहायता माँगनी है।"
           }
+        ],
+        "playfulBio": [
+          "शानदार अकादमिक रिकॉर्ड: XHS, INS, YouTube और bilibili जैसी प्रतिष्ठित “पत्रिकाओं” में रोज़मर्रा की ज़िंदगी पर कई “पेपर”, 10,000 से अधिक व्यू और 1,000 से अधिक लाइक व सेव। Sesame Credit में पूरे अंक; मेरी अकादमिक ईमानदारी मुख्यतः समय पर बिल चुकाने में दिखती है।",
+          "RUBBISH में प्रथम लेखक भी हूँ: विषय EAT, IF=0—आखिर शून्य एक से पहले आता है। शोध रुचियाँ: फ्राइड चिकन का स्वचालन और हैमबर्गर की संरचनात्मक इंजीनियरिंग। प्रयोग बार-बार दोहराए जा सकते हैं, लेकिन नमूने शायद ही अगले दिन तक बचते हैं।"
         ]
       }
     },
@@ -2956,7 +3016,8 @@
         "skillsExpand": "تمام مہارتیں دکھائیں",
         "skillsCollapse": "کم مہارتیں دکھائیں",
         "notesTitle": "تحقیقی نوٹس",
-        "notesStatus": "سوچ کی چند باتیں"
+        "notesStatus": "سوچ کی چند باتیں",
+        "playfulBioTitle": "ایک قدرے غیر سنجیدہ تعارف"
       },
       "content": {
         "about": [
@@ -3139,6 +3200,10 @@
             "title": "ہر عمل ایک مفروضہ ہے",
             "body": "اگلا مشاہدہ ایجنٹ کو فیصلہ کرنے میں مدد دے کہ آگے بڑھے، راستہ درست کرے یا مدد مانگے۔"
           }
+        ],
+        "playfulBio": [
+          "شاندار علمی ریکارڈ: XHS، INS، YouTube اور bilibili جیسے معتبر «جرائد» میں روزمرہ زندگی کے کئی «پیپر»، 10,000 سے زیادہ ویوز اور 1,000 سے زیادہ لائکس اور محفوظ کیے گئے اندراجات۔ Sesame Credit میں پورے نمبر؛ میری علمی دیانت زیادہ تر وقت پر بل ادا کرنے میں نظر آتی ہے۔",
+          "RUBBISH میں پہلے مصنف بھی ہوں: شعبہ EAT، IF=0—آخر صفر ایک سے پہلے آتا ہے۔ تحقیقی دلچسپیاں: فرائیڈ چکن کی خودکاری اور برگر کی ساختی انجینئرنگ۔ تجربات خوب دہرائے جا سکتے ہیں، مگر نمونے شاذ ہی اگلے دن تک بچتے ہیں۔"
         ]
       }
     },
@@ -3191,7 +3256,8 @@
         "skillsExpand": "সব দক্ষতা দেখান",
         "skillsCollapse": "কম দক্ষতা দেখান",
         "notesTitle": "গবেষণার নোট",
-        "notesStatus": "মনের কিছু ভাবনা"
+        "notesStatus": "মনের কিছু ভাবনা",
+        "playfulBioTitle": "একটি একটু কম গম্ভীর পরিচয়"
       },
       "content": {
         "about": [
@@ -3374,6 +3440,10 @@
             "title": "একটি কাজ একটি অনুমান",
             "body": "পরবর্তী পর্যবেক্ষণ এজেন্টকে বুঝতে সাহায্য করুক—এগিয়ে যাবে, পথ ঠিক করবে, না সাহায্য চাইবে।"
           }
+        ],
+        "playfulBio": [
+          "দুর্দান্ত একাডেমিক রেকর্ড: XHS, INS, YouTube ও bilibili-র মতো বিখ্যাত “জার্নালে” দৈনন্দিন জীবন নিয়ে একাধিক “পেপার”, ১০,০০০-এর বেশি ভিউ এবং ১,০০০-এর বেশি লাইক ও সেভ। Sesame Credit-এ পূর্ণ নম্বর; আমার একাডেমিক সততা মূলত সময়মতো বিল দেওয়ায় ফুটে ওঠে।",
+          "RUBBISH-এ প্রথম লেখকও বটে: বিষয় EAT, IF=0—শূন্য তো একের আগেই আসে। গবেষণার আগ্রহ: ফ্রায়েড চিকেনের স্বয়ংক্রিয়তা ও বার্গারের কাঠামোগত প্রকৌশল। পরীক্ষা বারবার করা যায়, তবে নমুনা পরদিন পর্যন্ত খুব কমই টেকে।"
         ]
       }
     }
