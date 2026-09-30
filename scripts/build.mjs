@@ -19,7 +19,7 @@ const photoPath = (name, small = false) => {
   if (!/^[a-z0-9-]+$/.test(name)) throw new Error(`Invalid photo name: ${name}`);
   return `./assets/photos/${name}${small ? '-small' : ''}.webp`;
 };
-for (const key of ['github', 'siteUrl']) {
+for (const key of ['github', 'linkedin', 'siteUrl']) {
   if (!/^https:\/\//.test(data[key])) throw new Error(`${key} should be an https URL`);
 }
 
