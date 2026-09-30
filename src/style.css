@@ -195,3 +195,78 @@ html[lang^="zh"] .hobby h3,html[lang="ja"] .hobby h3,html[lang="ko"] .hobby h3{f
  .hero-figure figcaption{font-size:14px}.hero-headline{line-height:1.6}
 }
 @media print{.illustration{--illustration-paper:#eee;--illustration-accent:#ba795e;color:#222}}
+/* A quieter reading rhythm: generous paper, small marks, consistent type. */
+:root{--badge-surface:#faf8f3;--badge-line:#d9d4c9;--reading-width:66ch}
+[data-theme="dark"]{--badge-surface:#24221e;--badge-line:#454037}
+body{line-height:1.85}
+h1,h2,h3,h4{font-weight:400}
+.hero h1{margin-top:16px}.name{letter-spacing:-.055em}
+.hero-description{max-width:50ch;line-height:1.9}
+.hero-headline{max-width:29ch;text-wrap:balance}
+.hero-figure{transform:rotate(.4deg)}
+.section-number{font-size:11px;letter-spacing:.13em;line-height:1.6}
+.section h2,.life-section h2{font-size:clamp(29px,2.7vw,36px);letter-spacing:-.025em}
+.illustrated-heading{display:grid;grid-template-columns:42px minmax(0,1fr);column-gap:13px}
+.illustrated-heading>.section-illustration{margin:0}
+.heading-text{min-width:0;text-wrap:balance}
+.about-main{max-width:var(--reading-width)}
+.about-main p{line-height:1.95}
+.research-description{line-height:1.85;max-width:60ch}
+.research-subtitle{font-size:13px;line-height:1.75}
+.research-card .tags{gap:7px;margin-top:22px}
+.research-card .tags span{border-color:var(--line);padding:3px 9px;font-size:11px}
+.illustration{stroke-width:2.15}
+.research-notes{margin-top:36px;padding-top:25px;border-top:1px solid var(--line)}
+.notes-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;margin-bottom:5px}
+.notes-heading h3{font:400 24px/1.4 var(--serif);letter-spacing:-.015em}
+.notes-status{font-size:12px;color:var(--muted)}
+.notes-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,4vw,54px)}
+.research-note{display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;padding-block:20px 5px}
+.note-index{font:italic 13px/1.9 var(--serif);color:var(--accent);padding-top:3px}
+.research-note h4{font:400 21px/1.45 var(--serif);margin:0;letter-spacing:-.015em;text-wrap:balance}
+.research-note p{font-size:14px;line-height:1.8;color:var(--muted);margin-top:9px;max-width:56ch;overflow-wrap:anywhere}
+.research-skills{margin-top:35px;padding-top:25px}
+.research-skills-heading{margin-bottom:17px}
+.skill-badges{gap:9px}
+.skill-badges .skill-badge{display:inline-flex;align-items:center;gap:8px;min-height:34px;padding:5px 11px;border:1px solid var(--badge-line);border-radius:4px;background:var(--badge-surface);color:var(--ink);font-size:13px;line-height:1.6;max-width:100%}
+.skill-badge svg{display:block;flex-shrink:0;color:var(--muted);width:17px;height:17px}
+.skill-badge span{overflow-wrap:anywhere}
+.button,.header-github,.lang-toggle,.theme-toggle,.menu-toggle{border-radius:4px}
+.button{min-height:44px;gap:18px}
+.button:hover{transform:none}
+.skills-toggle,.gallery-toggle{padding:8px 17px;font-size:13px}
+.text-link{min-height:44px;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:5px;text-decoration-thickness:1px;border:0}
+.text-link:hover{text-decoration-color:var(--accent);color:var(--accent);border:0}
+a:focus-visible,button:focus-visible{outline-width:2px;outline-offset:4px}
+.lang-option:focus-visible{outline-offset:-2px;background:var(--soft)}
+.hobbies{column-gap:32px}
+.hobby-illustration{width:90px;height:90px;margin-bottom:17px}
+.hobby p{max-width:27ch;line-height:1.85}
+.gallery{column-gap:22px;row-gap:38px}
+.photo-card:nth-child(4n+2){padding-top:14px}.photo-card:nth-child(4n+4){padding-top:28px}
+.photo-card figcaption{align-items:flex-start;margin-top:13px;gap:12px}
+.photo-caption-copy{min-width:0}
+.photo-title{display:block;font:400 17px/1.45 var(--serif)}
+.photo-caption{font-size:12px;line-height:1.75;color:var(--muted);margin-top:6px}
+.photo-number{line-height:1.8;padding-top:2px;flex-shrink:0}
+.closing>p{max-width:58ch;margin-inline:auto;line-height:1.85}
+.site-footer{font-size:11px;align-items:baseline}
+html[lang^="zh"] .heading-text,html[lang="ja"] .heading-text,html[lang="ko"] .heading-text,
+html[lang^="zh"] .research-note h4,html[lang="ja"] .research-note h4,html[lang="ko"] .research-note h4{letter-spacing:.015em}
+[dir="rtl"] .note-index{direction:ltr;text-align:start}
+@media(max-width:760px){
+ .illustrated-heading{grid-template-columns:36px minmax(0,1fr);column-gap:10px}
+ .section h2,.life-section h2{font-size:28px}
+ .hero h1{margin-top:12px}.hero-headline{max-width:100%}.hero-figure{transform:none}
+ .notes-list{grid-template-columns:1fr;gap:0}
+ .research-note{padding-block:18px 3px}.research-note+ .research-note{margin-top:15px;border-top:1px solid var(--line)}
+ .notes-heading h3{font-size:23px}.research-note h4{font-size:20px}
+ .research-notes{margin-top:25px;padding-top:22px}
+ .research-skills{margin-top:29px;padding-top:22px}
+ .skill-badges{gap:8px}.skill-badges .skill-badge{font-size:12px;padding-inline:9px;gap:7px}
+ .hobbies{column-gap:20px}.hobby-illustration{width:78px;height:78px;margin-bottom:13px}
+ .gallery{column-gap:16px;row-gap:27px}.photo-card:nth-child(n){padding-top:0}
+ .photo-title{font-size:16px}.photo-caption{font-size:12px;line-height:1.7}
+ .photo-card figcaption{gap:7px;margin-top:10px}
+}
+@media print{.skill-badges .skill-badge{background:white;color:black;border-color:#aaa}.skill-badge svg{color:#444}.research-note{break-inside:avoid}}

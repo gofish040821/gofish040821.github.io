@@ -4,7 +4,7 @@
   "linkedin": "https://www.linkedin.com/in/yiming-zeng-641056440/",
   "email": "gofish0821@gmail.com",
   "siteUrl": "https://gofish040821.github.io",
-  "updated": "2026.09",
+  "updated": "2026.10",
   "profileNote": "{age} · Male · Notes of 2026",
   "headline": "Understanding intelligence through math,<br>exploring the world through curiosity.",
   "intro": "A master's student in mathematics, focused on Agent RSI and Physical AI.<br>I like to ask how intelligence learns — and to walk into real mountains and everyday life.",
@@ -42,33 +42,108 @@
     }
   ],
   "skills": [
-    {"name": "Python", "badge": "python"},
-    {"name": "C/C++", "badge": "cpp"},
-    {"name": "Java", "badge": "java"},
-    {"name": "Go", "badge": "golang"},
-    {"name": "HTML", "badge": "html"},
-    {"name": "CSS", "badge": "css"},
-    {"name": "JavaScript", "badge": "javascript"},
-    {"name": "TypeScript", "badge": "typescript"},
-    {"name": "React", "badge": "react"},
-    {"name": "Node.js", "badge": "nodejs"},
-    {"name": "Spring Boot", "badge": "springboot"},
-    {"name": "Socket.IO", "badge": "socketio"},
-    {"name": "PyTorch", "badge": "pytorch"},
-    {"name": "NumPy", "badge": "numpy"},
-    {"name": "Docker", "badge": "docker"},
-    {"name": "Git", "badge": "git"},
-    {"name": "LaTeX", "badge": "latex"},
-    {"name": "Vite", "badge": "vite"},
-    {"name": "Vitest", "badge": "vitest"}
+    {
+      "name": "Python",
+      "badge": "python"
+    },
+    {
+      "name": "C/C++",
+      "badge": "cpp"
+    },
+    {
+      "name": "Java",
+      "badge": "java"
+    },
+    {
+      "name": "Go",
+      "badge": "golang"
+    },
+    {
+      "name": "HTML",
+      "badge": "html"
+    },
+    {
+      "name": "CSS",
+      "badge": "css"
+    },
+    {
+      "name": "JavaScript",
+      "badge": "javascript"
+    },
+    {
+      "name": "TypeScript",
+      "badge": "typescript"
+    },
+    {
+      "name": "React",
+      "badge": "react"
+    },
+    {
+      "name": "Node.js",
+      "badge": "nodejs"
+    },
+    {
+      "name": "Spring Boot",
+      "badge": "springboot"
+    },
+    {
+      "name": "Socket.IO",
+      "badge": "socketio"
+    },
+    {
+      "name": "PyTorch",
+      "badge": "pytorch"
+    },
+    {
+      "name": "NumPy",
+      "badge": "numpy"
+    },
+    {
+      "name": "Docker",
+      "badge": "docker"
+    },
+    {
+      "name": "Git",
+      "badge": "git"
+    },
+    {
+      "name": "LaTeX",
+      "badge": "latex"
+    },
+    {
+      "name": "Vite",
+      "badge": "vite"
+    },
+    {
+      "name": "Vitest",
+      "badge": "vitest"
+    }
   ],
   "agentSkills": [
-    {"name": "Hugging Face", "badge": "huggingface"},
-    {"name": "Transformers", "badge": "transformers"},
-    {"name": "LangChain", "badge": "langchain"},
-    {"name": "LangGraph", "badge": "langgraph"},
-    {"name": "RAG", "badge": "rag"},
-    {"name": "MCP", "badge": "mcp"}
+    {
+      "name": "Hugging Face",
+      "badge": "huggingface"
+    },
+    {
+      "name": "Transformers",
+      "badge": "transformers"
+    },
+    {
+      "name": "LangChain",
+      "badge": "langchain"
+    },
+    {
+      "name": "LangGraph",
+      "badge": "langgraph"
+    },
+    {
+      "name": "RAG",
+      "badge": "rag"
+    },
+    {
+      "name": "MCP",
+      "badge": "mcp"
+    }
   ],
   "education": [
     {
@@ -211,5 +286,15 @@
     }
   ],
   "closing": "Stay curious, grow slowly.",
-  "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas."
+  "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas.",
+  "researchNotes": [
+    {
+      "title": "A better answer needs a baseline",
+      "body": "Accuracy is one part of improvement. Cost, reliability and failure modes belong in the comparison too."
+    },
+    {
+      "title": "An action is a hypothesis",
+      "body": "The next observation should tell an agent whether to continue, correct course or ask for help."
+    }
+  ]
 }

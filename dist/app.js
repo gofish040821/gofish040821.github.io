@@ -208,7 +208,7 @@
     langMenu.innerHTML = languages.map(item => {
       const attrs = ' data-code="' + item.code + '" lang="' + (item.lang || item.code) + '"' + (item.dir === 'rtl' ? ' dir="rtl"' : '');
       const selected = item.code === currentCode() ? 'true' : 'false';
-      return '<button type="button" role="option" class="lang-option"' + attrs + ' aria-selected="' + selected + '">' + item.label + '</button>';
+      return '<button type="button" role="option" class="lang-option"' + attrs + ' aria-selected="' + selected + '" tabindex="' + (selected === 'true' ? '0' : '-1') + '">' + item.label + '</button>';
     }).join('');
   }
 
@@ -264,6 +264,28 @@
     const willOpen = langMenu.hidden;
     langMenu.hidden = !willOpen;
     langToggle.setAttribute('aria-expanded', String(willOpen));
+  });
+  // A listbox uses arrow keys; Tab leaves it without getting trapped.
+  langToggle.addEventListener('keydown', event => {
+    if (!['ArrowDown', 'ArrowUp'].includes(event.key)) return;
+    event.preventDefault();
+    langMenu.hidden = false;
+    langToggle.setAttribute('aria-expanded', 'true');
+    const options = [...langMenu.querySelectorAll('.lang-option')];
+    const selected = options.find(option => option.getAttribute('aria-selected') === 'true');
+    (selected || options[event.key === 'ArrowUp' ? options.length - 1 : 0])?.focus();
+  });
+  langMenu.addEventListener('keydown', event => {
+    const options = [...langMenu.querySelectorAll('.lang-option')];
+    const current = options.indexOf(document.activeElement);
+    if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+    event.preventDefault();
+    const index = event.key === 'Home' ? 0 : event.key === 'End' ? options.length - 1 : (current + (event.key === 'ArrowDown' ? 1 : -1) + options.length) % options.length;
+    options.forEach((option, i) => { option.tabIndex = i === index ? 0 : -1; });
+    options[index]?.focus();
+  });
+  langSwitch.addEventListener('focusout', () => {
+    queueMicrotask(() => { if (!langSwitch.contains(document.activeElement)) closeLangMenu(); });
   });
   langMenu.addEventListener('click', event => {
     const option = event.target.closest('.lang-option');

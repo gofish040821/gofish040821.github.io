@@ -134,7 +134,9 @@
         "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas.",
         "skillsTitle": "Skills & Tools",
         "skillsExpand": "Show all skills",
-        "skillsCollapse": "Show fewer skills"
+        "skillsCollapse": "Show fewer skills",
+        "notesTitle": "Research notes",
+        "notesStatus": "Thinking aloud"
       },
       "content": {
         "about": [
@@ -307,6 +309,16 @@
             "alt": "Gofish tearing flatbread at a restaurant table",
             "position": "50% 42%"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "A better answer needs a baseline",
+            "body": "Accuracy is one part of improvement. Cost, reliability and failure modes belong in the comparison too."
+          },
+          {
+            "title": "An action is a hypothesis",
+            "body": "The next observation should tell an agent whether to continue, correct course or ask for help."
+          }
         ]
       }
     },
@@ -357,7 +369,9 @@
         "closingText": "关于数学、AI，或者下一段旅程，期待遇见有趣的想法。",
         "skillsTitle": "技能与工具",
         "skillsExpand": "展开全部技能",
-        "skillsCollapse": "收起技能"
+        "skillsCollapse": "收起技能",
+        "notesTitle": "研究笔记",
+        "notesStatus": "随手记下的思考"
       },
       "content": {
         "about": [
@@ -530,6 +544,16 @@
             "alt": "Gofish 在餐桌前认真掰馍",
             "position": "50% 42%"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "进步，需要一个参照",
+            "body": "正确率只是进步的一部分。成本、可靠性和失败方式，也该一起比较。"
+          },
+          {
+            "title": "行动，是一个待验证的假设",
+            "body": "下一次观察，应当帮助智能体决定：继续、调整，还是请求帮助。"
+          }
         ]
       }
     },
@@ -580,7 +604,9 @@
         "closingText": "Sur les mathématiques, l'IA ou le prochain voyage — j'ai hâte d'échanger des idées intéressantes.",
         "skillsTitle": "Compétences & outils",
         "skillsExpand": "Afficher toutes les compétences",
-        "skillsCollapse": "Afficher moins de compétences"
+        "skillsCollapse": "Afficher moins de compétences",
+        "notesTitle": "Notes de recherche",
+        "notesStatus": "Réflexions à voix haute"
       },
       "content": {
         "about": [
@@ -753,6 +779,16 @@
             "alt": "Gofish émiette du pain à une table de restaurant",
             "position": "50% 42%"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "Une meilleure réponse exige un point de référence",
+            "body": "La précision ne suffit pas à mesurer le progrès. Le coût, la fiabilité et les modes d’échec comptent aussi."
+          },
+          {
+            "title": "Une action est une hypothèse",
+            "body": "L’observation suivante devrait indiquer à l’agent s’il faut continuer, corriger sa trajectoire ou demander de l’aide."
+          }
         ]
       }
     },
@@ -803,7 +839,9 @@
         "closingText": "Über Mathematik, KI oder die nächste Reise — ich freue mich auf interessante Ideen.",
         "skillsTitle": "Fähigkeiten & Werkzeuge",
         "skillsExpand": "Alle Skills anzeigen",
-        "skillsCollapse": "Weniger Skills anzeigen"
+        "skillsCollapse": "Weniger Skills anzeigen",
+        "notesTitle": "Forschungsnotizen",
+        "notesStatus": "Gedanken am Rand"
       },
       "content": {
         "about": [
@@ -976,6 +1014,16 @@
             "alt": "Gofish zerteilt Fladenbrot an einem Restauranttisch",
             "position": "50% 42%"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "Eine bessere Antwort braucht einen Vergleich",
+            "body": "Genauigkeit ist nur ein Teil des Fortschritts. Auch Kosten, Zuverlässigkeit und Fehlerarten gehören in den Vergleich."
+          },
+          {
+            "title": "Eine Handlung ist eine Hypothese",
+            "body": "Die nächste Beobachtung sollte dem Agenten zeigen, ob er fortfahren, den Kurs korrigieren oder um Hilfe bitten soll."
+          }
         ]
       }
     },
@@ -1026,7 +1074,9 @@
         "closingText": "Sobre matemáticas, IA o el próximo viaje, espero encontrar ideas interesantes.",
         "skillsTitle": "Habilidades y herramientas",
         "skillsExpand": "Mostrar todas las habilidades",
-        "skillsCollapse": "Mostrar menos habilidades"
+        "skillsCollapse": "Mostrar menos habilidades",
+        "notesTitle": "Notas de investigación",
+        "notesStatus": "Pensamientos en voz alta"
       },
       "content": {
         "about": [
@@ -1199,6 +1249,16 @@
             "alt": "Gofish desmenuza pan en la mesa de un restaurante",
             "position": "50% 42%"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "Una mejor respuesta necesita una referencia",
+            "body": "La precisión es solo una parte del progreso. También hay que comparar el coste, la fiabilidad y las formas de fallar."
+          },
+          {
+            "title": "Una acción es una hipótesis",
+            "body": "La siguiente observación debería indicar al agente si continuar, corregir el rumbo o pedir ayuda."
+          }
         ]
       }
     },
@@ -1249,7 +1309,9 @@
         "closingText": "عن الرياضيات أو الذكاء الاصطناعي أو الرحلة القادمة — أتطلع إلى أفكار مثيرة.",
         "skillsTitle": "المهارات والأدوات",
         "skillsExpand": "عرض كل المهارات",
-        "skillsCollapse": "عرض مهارات أقل"
+        "skillsCollapse": "عرض مهارات أقل",
+        "notesTitle": "ملاحظات بحثية",
+        "notesStatus": "تفكير بصوت عالٍ"
       },
       "content": {
         "about": [
@@ -1422,6 +1484,16 @@
             "alt": "غوفيش يفتت الخبز على طاولة مطعم",
             "position": "50% 42%"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "الإجابة الأفضل تحتاج إلى مرجع للمقارنة",
+            "body": "الدقة جزء من التحسن فقط. ينبغي أن تشمل المقارنة التكلفة والموثوقية وأنواع الإخفاق أيضًا."
+          },
+          {
+            "title": "الفعل فرضية",
+            "body": "ينبغي أن تساعد الملاحظة التالية الوكيل على تحديد ما إذا كان سيواصل، أو يصحح المسار، أو يطلب المساعدة."
+          }
         ]
       }
     },
@@ -1472,7 +1544,9 @@
         "closingText": "数学や AI、あるいは次の旅について、面白いアイデアとの出会いを楽しみにしています。",
         "skillsTitle": "スキルとツール",
         "skillsExpand": "すべてのスキルを表示",
-        "skillsCollapse": "スキルを少なく表示"
+        "skillsCollapse": "スキルを少なく表示",
+        "notesTitle": "研究ノート",
+        "notesStatus": "思考のメモ"
       },
       "content": {
         "about": [
@@ -1645,6 +1719,16 @@
             "alt": "食堂でパンを丁寧にちぎるGofish",
             "position": "50% 42%"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "より良い答えには比較の基準が必要",
+            "body": "正確さは改善の一部にすぎない。コスト、信頼性、失敗の仕方も比較に含めたい。"
+          },
+          {
+            "title": "行動は一つの仮説",
+            "body": "次の観察から、エージェントが続行するか、軌道を修正するか、助けを求めるかを判断できるようにしたい。"
+          }
         ]
       }
     },
@@ -1695,7 +1779,9 @@
         "closingText": "수학, AI, 그리고 다음 여행에 대해 — 흥미로운 아이디어를 만나기를 기대합니다.",
         "skillsTitle": "기술과 도구",
         "skillsExpand": "모든 기술 보기",
-        "skillsCollapse": "기술 줄이기"
+        "skillsCollapse": "기술 줄이기",
+        "notesTitle": "연구 노트",
+        "notesStatus": "생각을 적으며"
       },
       "content": {
         "about": [
@@ -1868,6 +1954,16 @@
             "alt": "식당에서 빵을 정성스럽게 뜯는 Gofish",
             "position": "50% 42%"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "더 나은 답에는 비교 기준이 필요하다",
+            "body": "정확도는 개선의 한 부분이다. 비용, 신뢰성, 실패 유형도 함께 비교해야 한다."
+          },
+          {
+            "title": "행동은 하나의 가설이다",
+            "body": "다음 관찰은 에이전트가 계속할지, 방향을 수정할지, 도움을 요청할지 판단하게 해야 한다."
+          }
         ]
       }
     },
@@ -1918,7 +2014,9 @@
         "closingText": "О математике, ИИ или следующем путешествии — буду рад интересным идеям.",
         "skillsTitle": "Навыки и инструменты",
         "skillsExpand": "Показать все навыки",
-        "skillsCollapse": "Показать меньше навыков"
+        "skillsCollapse": "Показать меньше навыков",
+        "notesTitle": "Исследовательские заметки",
+        "notesStatus": "Мысли вслух"
       },
       "content": {
         "about": [
@@ -2091,6 +2189,16 @@
             "alt": "Gofish разбирает лепёшку за столом в ресторане",
             "position": "50% 42%"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "Лучшему ответу нужна точка сравнения",
+            "body": "Точность — лишь часть улучшения. Стоимость, надёжность и типы ошибок тоже нужно сравнивать."
+          },
+          {
+            "title": "Действие — это гипотеза",
+            "body": "Следующее наблюдение должно помочь агенту решить: продолжать, скорректировать курс или попросить помощи."
+          }
         ]
       }
     },
@@ -2141,7 +2249,9 @@
         "closingText": "Sulla matematica, sull’AI o sul prossimo viaggio — aspetto idee interessanti.",
         "skillsTitle": "Competenze e strumenti",
         "skillsExpand": "Mostra tutte le competenze",
-        "skillsCollapse": "Mostra meno competenze"
+        "skillsCollapse": "Mostra meno competenze",
+        "notesTitle": "Note di ricerca",
+        "notesStatus": "Pensieri ad alta voce"
       },
       "content": {
         "about": [
@@ -2314,6 +2424,16 @@
             "caption": "Alcuni pasti meritano piena concentrazione.",
             "alt": "Gofish spezza una focaccia al tavolo di un ristorante"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "Una risposta migliore richiede un riferimento",
+            "body": "L’accuratezza è solo una parte del progresso. Nel confronto contano anche costi, affidabilità e modalità di errore."
+          },
+          {
+            "title": "Un’azione è un’ipotesi",
+            "body": "L’osservazione successiva dovrebbe indicare all’agente se continuare, correggere la rotta o chiedere aiuto."
+          }
         ]
       }
     },
@@ -2364,7 +2484,9 @@
         "closingText": "Sobre matemática, IA ou a próxima viagem — espero ideias interessantes.",
         "skillsTitle": "Habilidades e ferramentas",
         "skillsExpand": "Mostrar todas as habilidades",
-        "skillsCollapse": "Mostrar menos habilidades"
+        "skillsCollapse": "Mostrar menos habilidades",
+        "notesTitle": "Notas de pesquisa",
+        "notesStatus": "Pensamentos em voz alta"
       },
       "content": {
         "about": [
@@ -2537,6 +2659,16 @@
             "caption": "Algumas refeições merecem concentração total.",
             "alt": "Gofish partindo pão achatado à mesa de um restaurante"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "Uma resposta melhor precisa de uma referência",
+            "body": "A precisão é apenas uma parte do progresso. O custo, a confiabilidade e os tipos de falha também entram na comparação."
+          },
+          {
+            "title": "Uma ação é uma hipótese",
+            "body": "A próxima observação deve indicar ao agente se deve continuar, corrigir o rumo ou pedir ajuda."
+          }
         ]
       }
     },
@@ -2587,7 +2719,9 @@
         "closingText": "गणित, AI या अगली यात्रा पर — रोचक विचारों की प्रतीक्षा है।",
         "skillsTitle": "कौशल और उपकरण",
         "skillsExpand": "सभी कौशल दिखाएँ",
-        "skillsCollapse": "कम कौशल दिखाएँ"
+        "skillsCollapse": "कम कौशल दिखाएँ",
+        "notesTitle": "शोध नोट्स",
+        "notesStatus": "खुलकर सोचते हुए"
       },
       "content": {
         "about": [
@@ -2760,6 +2894,16 @@
             "caption": "कुछ meals पूरी concentration deserve करते हैं।",
             "alt": "Gofish restaurant table पर flatbread तोड़ रहा है"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "बेहतर उत्तर के लिए तुलना का आधार चाहिए",
+            "body": "सटीकता सुधार का केवल एक हिस्सा है। लागत, विश्वसनीयता और विफलता के तरीकों की भी तुलना होनी चाहिए।"
+          },
+          {
+            "title": "हर कार्रवाई एक परिकल्पना है",
+            "body": "अगला अवलोकन एजेंट को तय करने में मदद करे कि आगे बढ़ना है, दिशा सुधारनी है या सहायता माँगनी है।"
+          }
         ]
       }
     },
@@ -2810,7 +2954,9 @@
         "closingText": "ریاضی، AI یا اگلے سفر کے بارے میں — دلچسپ خیالات کا منتظر ہوں۔",
         "skillsTitle": "مہارتیں اور اوزار",
         "skillsExpand": "تمام مہارتیں دکھائیں",
-        "skillsCollapse": "کم مہارتیں دکھائیں"
+        "skillsCollapse": "کم مہارتیں دکھائیں",
+        "notesTitle": "تحقیقی نوٹس",
+        "notesStatus": "سوچ کی چند باتیں"
       },
       "content": {
         "about": [
@@ -2983,6 +3129,16 @@
             "caption": "کچھ meals پوری concentration کے مستحق ہوتے ہیں۔",
             "alt": "Gofish restaurant table پر flatbread توڑ رہا ہے"
           }
+        ],
+        "researchNotes": [
+          {
+            "title": "بہتر جواب کے لیے موازنے کی بنیاد چاہیے",
+            "body": "درستگی بہتری کا صرف ایک حصہ ہے۔ لاگت، قابلِ اعتماد ہونا اور ناکامی کی صورتیں بھی موازنے میں شامل ہونی چاہییں۔"
+          },
+          {
+            "title": "ہر عمل ایک مفروضہ ہے",
+            "body": "اگلا مشاہدہ ایجنٹ کو فیصلہ کرنے میں مدد دے کہ آگے بڑھے، راستہ درست کرے یا مدد مانگے۔"
+          }
         ]
       }
     },
@@ -3033,7 +3189,9 @@
         "closingText": "গণিত, AI, অথবা পরের যাত্রা নিয়ে — আকর্ষণীয় ভাবনার অপেক্ষায়।",
         "skillsTitle": "দক্ষতা ও সরঞ্জাম",
         "skillsExpand": "সব দক্ষতা দেখান",
-        "skillsCollapse": "কম দক্ষতা দেখান"
+        "skillsCollapse": "কম দক্ষতা দেখান",
+        "notesTitle": "গবেষণার নোট",
+        "notesStatus": "মনের কিছু ভাবনা"
       },
       "content": {
         "about": [
@@ -3205,6 +3363,16 @@
             "title": "গুরুতর ব্যাপার",
             "caption": "কিছু meals সম্পূর্ণ concentration দাবি করে।",
             "alt": "Gofish restaurant table-এ flatbread ছিঁড়ছে"
+          }
+        ],
+        "researchNotes": [
+          {
+            "title": "ভালো উত্তরের জন্য তুলনার ভিত্তি দরকার",
+            "body": "নির্ভুলতা উন্নতির একটি অংশ মাত্র। খরচ, নির্ভরযোগ্যতা ও ব্যর্থতার ধরনও তুলনায় থাকা উচিত।"
+          },
+          {
+            "title": "একটি কাজ একটি অনুমান",
+            "body": "পরবর্তী পর্যবেক্ষণ এজেন্টকে বুঝতে সাহায্য করুক—এগিয়ে যাবে, পথ ঠিক করবে, না সাহায্য চাইবে।"
           }
         ]
       }

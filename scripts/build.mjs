@@ -2,10 +2,15 @@ import { readFile, writeFile, mkdir, copyFile, access } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { illustration } from './illustrations.mjs';
+import { loadSkillIcons } from './skill-icons.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const data = JSON.parse(await readFile(resolve(root, 'content.json'), 'utf8'));
 const i18n = JSON.parse(await readFile(resolve(root, 'src/i18n.json'), 'utf8'));
+const allSkills = [...data.skills, ...data.agentSkills];
+const skillIcons = await loadSkillIcons(root, allSkills);
+const skillOrder = ['python','pytorch','numpy','huggingface','transformers','langchain','langgraph','rag','mcp','git','latex','docker','cpp','java','golang','springboot','typescript','javascript','react','nodejs','html','css','socketio','vite','vitest'];
+const orderedSkills = [...allSkills].sort((a,b) => skillOrder.indexOf(a.badge)-skillOrder.indexOf(b.badge));
 const escape = (value) => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const paragraphs = value => escape(value).replace(/&lt;br\s*\/?&gt;/g, '<br>');
 const currentAge = () => {
@@ -28,14 +33,12 @@ for (const key of ['github', 'linkedin', 'siteUrl']) {
 // --- exactly the same markup, so switching language never shifts the layout.
 const renderAbout = items => items.map(text => `<p>${escape(text)}</p>`).join('\n');
 const renderResearch = items => items.map(item => `<article class="research-card ${escape(item.className)}"><div class="research-card-top"><span class="card-marker">${escape(item.number)}</span>${illustration(item.className, 'research-illustration')}</div><h3>${escape(item.title)}</h3><p class="research-subtitle">${escape(item.subtitle)}</p><p class="research-description">${escape(item.description)}</p><div class="tags">${item.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div></article>`).join('\n');
-const renderSkills = items => items.map(item => {
-  if (!/^[a-z0-9-]+$/.test(item.badge)) throw new Error(`Invalid skill badge: ${item.badge}`);
-  return `<li><img src="./assets/skills/${item.badge}.svg" alt="${escape(item.name)}" height="28" loading="lazy"></li>`;
-}).join('\n');
+const renderSkills = items => items.map(item => `<li class="skill-badge">${skillIcons.get(item.badge)}<span lang="en" dir="ltr">${escape(item.name)}</span></li>`).join('\n');
+const renderNotes = items => items.map((item,i) => `<article class="research-note"><span class="note-index" aria-hidden="true">${String(i+1).padStart(2,'0')}</span><div><h4>${escape(item.title)}</h4><p>${escape(item.body)}</p></div></article>`).join('\n');
 const renderEducation = items => items.map(item => `<article class="education-item${item.current ? ' current' : ''}"><div class="education-meta"><span class="education-dates">${escape(item.dates)}</span><span class="education-degree">${escape(item.degree)}</span></div><h3>${escape(item.school)}</h3><p class="school-abbr" lang="en">${escape(item.abbr)}</p><p class="education-note">${escape(item.note)}</p></article>`).join('\n');
 const hobbyIllustrations = { '↗': 'badminton', '⌁': 'travel', '◡': 'cooking', '▷': 'film' };
 const renderHobbies = items => items.map(item => `<article class="hobby">${illustration(hobbyIllustrations[item.symbol], 'hobby-illustration')}<div class="hobby-title"><h3>${escape(item.title)}</h3></div><p>${escape(item.description)}</p></article>`).join('\n');
-const renderGallery = items => items.map((item, i) => `<figure class="photo-card"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" alt="${escape(item.alt)}" width="720" height="960" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">↗</span></a><figcaption><span>${escape(item.title)}</span><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`).join('\n');
+const renderGallery = items => items.map((item, i) => `<figure class="photo-card"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" alt="${escape(item.alt)}" width="720" height="960" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">↗</span></a><figcaption><div class="photo-caption-copy"><span class="photo-title">${escape(item.title)}</span><p class="photo-caption">${escape(item.caption)}</p></div><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`).join('\n');
 
 const values = {
   aboutIllustration: illustration('notebook', 'section-illustration'),
@@ -48,8 +51,8 @@ const values = {
   intro: paragraphs(data.intro),
   about: renderAbout(data.about),
   research: renderResearch(data.research),
-  skills: renderSkills(data.skills),
-  agentSkills: renderSkills(data.agentSkills),
+  skills: renderSkills(orderedSkills),
+  researchNotes: renderNotes(data.researchNotes),
   education: renderEducation(data.education),
   hobbies: renderHobbies(data.hobbies),
   gallery: renderGallery(data.gallery),
@@ -60,11 +63,13 @@ const values = {
 const translations = {};
 for (const [code, entry] of Object.entries(i18n.translations || {})) {
   const content = entry.content || {};
+  if (!entry.strings.notesTitle || !entry.strings.notesStatus || content.researchNotes?.length !== data.researchNotes.length) throw new Error(`Incomplete research notes translation: ${code}`);
   translations[code] = {
     strings: entry.strings || {},
     sections: {
       about: renderAbout(content.about || []),
       research: renderResearch(content.research || []),
+      researchNotes: renderNotes(content.researchNotes || []),
       education: renderEducation(content.education || []),
       hobbies: renderHobbies(content.hobbies || []),
       gallery: renderGallery(content.gallery || [])

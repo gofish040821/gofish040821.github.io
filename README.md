@@ -1,6 +1,6 @@
 # Gofish 的个人主页
 
-暖米白、陶土橙与深灰配色。包括个人介绍、Agent RSI / Physical AI 研究兴趣、教育经历、兴趣爱好和 10 张旅行照片。支持手机布局、相册展开、图片放大、键盘左右切换、Esc 关闭和手机滑动切换。
+暖米白、陶土橙与深灰配色。包括个人介绍、Agent RSI / Physical AI 研究兴趣、教育经历、兴趣爱好和 14 张生活照片。支持手机布局、相册展开、图片放大、键盘左右切换、Esc 关闭和手机滑动切换。
 
 ## 先看网页
 
@@ -40,20 +40,21 @@ git push -u origin main
 
 ## 以后如何更新
 
-**日常内容只需修改 `content.json`。** 在 GitHub 网页中打开该文件并编辑，提交后自动发布。请保留 JSON 中的英文双引号和逗号。
+**英文内容编辑 `content.json`，各语言版本同步编辑 `src/i18n.json`。** 在 GitHub 网页中打开该文件并编辑，提交后自动发布。请保留 JSON 中的英文双引号和逗号。
 
 | 想改什么 | 对应字段 |
 | --- | --- |
 | 个人简介与首页文案 | `about`、`headline`、`intro` |
 | GitHub / 公开邮箱 | `github`、`email`（留空则不展示邮箱入口） |
-| 研究兴趣 | `research` |
+| 研究兴趣与思考笔记 | `research`、`researchNotes` |
+| 技术栈 | `skills`、`agentSkills` |
 | 学历与在读状态 | `education` |
 | 兴趣爱好 | `hobbies` |
 | 相册顺序、标题、说明 | `gallery` |
 | 首页大图 | `heroImage` |
 | 年龄说明和更新时间 | `profileNote`、`updated` |
 
-年龄标为“22 岁 · 2026 年记”，未推测生日，也不会自动增龄。硕士经历标为在读、预计 2029 年毕业。没有添加未经提供的论文、成果或项目经历。
+年龄根据已提供的生日自动计算，主页不展示生日。硕士经历标为在读、预计 2029 年毕业。没有添加未经提供的论文、成果或项目经历。
 
 本地修改内容或样式后，运行以下命令更新网页：
 
@@ -84,6 +85,8 @@ src/index.html               网页结构模板
 src/style.css                配色与响应式排版
 src/app.js                   导航和相册交互
 scripts/build.mjs            无依赖静态构建
+scripts/illustrations.mjs    原创模块插画
+scripts/skill-icons.mjs      本地技术图标与单色徽章
 scripts/serve.mjs            本地预览
 dist/                       可直接上线的静态网站（照片也保存在这里）
 .github/workflows/pages.yml  GitHub Pages 自动部署
@@ -94,3 +97,5 @@ dist/                       可直接上线的静态网站（照片也保存在�
 如使用自定义域名或项目子路径，更新 `siteUrl` 后重新构建，以更新 canonical 和 sitemap。网站资源采用相对路径，也可迁移到其他静态托管服务。
 
 配色集中在 `src/style.css` 顶部 `:root` 中。字体采用系统字体，无需访问外部字体服务。网站没有统计追踪、外部图片请求或第三方脚本。
+
+研究笔记只表达方法上的思考，不代表已经完成的实验或发表的成果。新增笔记时，请在 `src/i18n.json` 的每种语言中补齐 `researchNotes`；构建会检查数量是否一致。默认展示的 10 项技术栈优先排列数学、AI 与 Agent 工具，其余项目可在徽章下方展开。
