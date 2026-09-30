@@ -284,8 +284,11 @@
     options.forEach((option, i) => { option.tabIndex = i === index ? 0 : -1; });
     options[index]?.focus();
   });
-  langSwitch.addEventListener('focusout', () => {
-    queueMicrotask(() => { if (!langSwitch.contains(document.activeElement)) closeLangMenu(); });
+  // During native pointer focus transitions activeElement can briefly be body.
+  // Use the actual destination so choosing an option cannot dismiss it before click.
+  // A null destination is handled by the outside-click listener below.
+  langSwitch.addEventListener('focusout', event => {
+    if (event.relatedTarget && !langSwitch.contains(event.relatedTarget)) closeLangMenu();
   });
   langMenu.addEventListener('click', event => {
     const option = event.target.closest('.lang-option');

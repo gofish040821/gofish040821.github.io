@@ -42,7 +42,7 @@ const renderGallery = items => items.map((item, i) => `<figure class="photo-card
 
 const values = {
   aboutIllustration: illustration('notebook', 'section-illustration'),
-  researchIllustration: illustration('agent', 'section-illustration'),
+  researchIllustration: illustration('curiosity', 'section-illustration'),
   educationIllustration: illustration('education', 'section-illustration'),
   lifeIllustration: illustration('travel', 'section-illustration'),
   toolsIllustration: illustration('tools', 'tools-illustration'),

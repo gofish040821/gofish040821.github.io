@@ -1,6 +1,8 @@
 // Original small illustrations: irregular outlines, paper shapes and terracotta.
 // Inline SVG inherits the page palette in both themes; no embedded text or IDs.
 const drawings = {
+  curiosity: `<path class="illustration-paper" d="m16 22 55-5 7 66-57 4Z"/><path class="illustration-accent" d="m47 37 15 4 2 15-16 4-9-12Z"/><path d="m17 22 53-5 2 12M21 88l36-3M28 35l9-1M28 46l6 1M29 70l13-1M30 78l21-1"/><path d="M81 52c0 15-10 26-25 26S30 68 31 53s10-26 25-25 26 10 25 24ZM74 72l26 28 7-7-28-26M39 48c1-8 7-13 14-13"/>`,
+
   notebook: `<path class="illustration-paper" d="M30 21 85 18 89 99 31 101Z"/><path class="illustration-accent" d="m76 21 15-2 3 80-16 1Z"/><path d="m34 22 48-2 3 75-50 3ZM42 39l29-1M43 49l22 1M43 61l28-1M44 72h17M25 29c-10-5-11 8 4 9m-4 6c-10-5-11 8 4 9m-4 6c-10-5-11 8 4 9m-4 6c-10-5-11 8 4 9"/><path d="m90 65 9-13 5 3-9 14-8 5Z"/>`,
   agent: `<path class="illustration-paper" d="m48 21 32 2 8 26-24 17-24-20Z"/><path class="illustration-accent" d="m17 69 27-5 12 28-29 7Z"/><path d="m33 78 26-38 37 42-63-4M88 29c-7-14-29-16-43-6M42 15l2 9 10-1M99 54c10 20 2 42-17 48m13 1-14-1 3-12"/><circle cx="59" cy="40" r="5" fill="currentColor" stroke="none"/><circle cx="33" cy="78" r="5" fill="currentColor" stroke="none"/><circle cx="96" cy="82" r="5" fill="currentColor" stroke="none"/>`,
   physical: `<path class="illustration-paper" d="m17 84 38-3 6 22-45 1Zm63-47 23-2 2 23-23 2Z"/><path class="illustration-accent" d="m77 77 23-2 5 26-28 2Z"/><path d="m18 104 88-1M38 84l-2-29 25-28 25 15M31 57l9 2 23-24 17 13M89 39l7 9-9 15m0-16-9 10M79 78l20-2 2 24-22 2Z"/><circle cx="36" cy="56" r="6" class="illustration-paper"/><circle cx="61" cy="30" r="6" class="illustration-paper"/><path d="M83 22l3-7m13 14 7-2"/>`,
