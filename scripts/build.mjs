@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir, copyFile, access } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { illustration } from './illustrations.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const data = JSON.parse(await readFile(resolve(root, 'content.json'), 'utf8'));
@@ -26,16 +27,22 @@ for (const key of ['github', 'linkedin', 'siteUrl']) {
 // --- Section renderers. The default content and every translation go through
 // --- exactly the same markup, so switching language never shifts the layout.
 const renderAbout = items => items.map(text => `<p>${escape(text)}</p>`).join('\n');
-const renderResearch = items => items.map(item => `<article class="research-card ${escape(item.className)}"><div class="research-card-top"><span class="card-marker">${escape(item.number)}</span></div><h3>${escape(item.title)}</h3><p class="research-subtitle">${escape(item.subtitle)}</p><p class="research-description">${escape(item.description)}</p><div class="tags">${item.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div></article>`).join('\n');
+const renderResearch = items => items.map(item => `<article class="research-card ${escape(item.className)}"><div class="research-card-top"><span class="card-marker">${escape(item.number)}</span>${illustration(item.className, 'research-illustration')}</div><h3>${escape(item.title)}</h3><p class="research-subtitle">${escape(item.subtitle)}</p><p class="research-description">${escape(item.description)}</p><div class="tags">${item.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div></article>`).join('\n');
 const renderSkills = items => items.map(item => {
   if (!/^[a-z0-9-]+$/.test(item.badge)) throw new Error(`Invalid skill badge: ${item.badge}`);
   return `<li><img src="./assets/skills/${item.badge}.svg" alt="${escape(item.name)}" height="28" loading="lazy"></li>`;
 }).join('\n');
 const renderEducation = items => items.map(item => `<article class="education-item${item.current ? ' current' : ''}"><div class="education-meta"><span class="education-dates">${escape(item.dates)}</span><span class="education-degree">${escape(item.degree)}</span></div><h3>${escape(item.school)}</h3><p class="school-abbr" lang="en">${escape(item.abbr)}</p><p class="education-note">${escape(item.note)}</p></article>`).join('\n');
-const renderHobbies = items => items.map(item => `<article class="hobby"><div class="hobby-title"><span class="hobby-symbol" aria-hidden="true">${escape(item.symbol)}</span><h3>${escape(item.title)}</h3></div><p>${escape(item.description)}</p></article>`).join('\n');
+const hobbyIllustrations = { '↗': 'badminton', '⌁': 'travel', '◡': 'cooking', '▷': 'film' };
+const renderHobbies = items => items.map(item => `<article class="hobby">${illustration(hobbyIllustrations[item.symbol], 'hobby-illustration')}<div class="hobby-title"><h3>${escape(item.title)}</h3></div><p>${escape(item.description)}</p></article>`).join('\n');
 const renderGallery = items => items.map((item, i) => `<figure class="photo-card"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" alt="${escape(item.alt)}" width="720" height="960" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">↗</span></a><figcaption><span>${escape(item.title)}</span><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`).join('\n');
 
 const values = {
+  aboutIllustration: illustration('notebook', 'section-illustration'),
+  researchIllustration: illustration('agent', 'section-illustration'),
+  educationIllustration: illustration('education', 'section-illustration'),
+  lifeIllustration: illustration('travel', 'section-illustration'),
+  toolsIllustration: illustration('tools', 'tools-illustration'),
   ...Object.fromEntries(Object.entries(data).filter(([, value]) => typeof value === 'string').map(([key, value]) => [key, escape(renderRuntimeText(value))])),
   headline: paragraphs(data.headline),
   intro: paragraphs(data.intro),
