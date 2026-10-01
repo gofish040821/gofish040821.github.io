@@ -1,8 +1,9 @@
 import { readFile, writeFile, mkdir, copyFile, access } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { illustration } from './illustrations.mjs';
-import { loadSkillIcons } from './skill-icons.mjs';
+import { illustration, illustrationSprite } from './illustrations.mjs';
+import { loadSkillIcons, skillIllustrationSprite } from './skill-icons.mjs';
+import { uiIcon, uiIllustrationSprite } from './ui-icons.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const data = JSON.parse(await readFile(resolve(root, 'content.json'), 'utf8'));
@@ -38,9 +39,21 @@ const renderNotes = items => items.map((item,i) => `<article class="research-not
 const renderEducation = items => items.map(item => `<article class="education-item${item.current ? ' current' : ''}"><div class="education-meta"><span class="education-dates">${escape(item.dates)}</span><span class="education-degree">${escape(item.degree)}</span></div><h3>${escape(item.school)}</h3><p class="school-abbr" lang="en">${escape(item.abbr)}</p><p class="education-note">${escape(item.note)}</p></article>`).join('\n');
 const hobbyIllustrations = { '↗': 'badminton', '⌁': 'travel', '◡': 'cooking', '▷': 'film' };
 const renderHobbies = items => items.map(item => `<article class="hobby">${illustration(hobbyIllustrations[item.symbol], 'hobby-illustration')}<div class="hobby-title"><h3>${escape(item.title)}</h3></div><p>${escape(item.description)}</p></article>`).join('\n');
-const renderGallery = items => items.map((item, i) => `<figure class="photo-card"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" alt="${escape(item.alt)}" width="720" height="960" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">↗</span></a><figcaption><div class="photo-caption-copy"><span class="photo-title">${escape(item.title)}</span><p class="photo-caption">${escape(item.caption)}</p></div><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`).join('\n');
+const renderGallery = items => items.map((item, i) => `<figure class="photo-card"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" alt="${escape(item.alt)}" width="720" height="960" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">${uiIcon('external')}</span></a><figcaption><div class="photo-caption-copy"><span class="photo-title">${escape(item.title)}</span><p class="photo-caption">${escape(item.caption)}</p></div><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`).join('\n');
 
 const values = {
+  illustrationLibrary: illustrationSprite() + skillIllustrationSprite() + uiIllustrationSprite(),
+  externalIcon: uiIcon('external'),
+  downIcon: uiIcon('down'),
+  upIcon: uiIcon('up'),
+  leftIcon: uiIcon('left'),
+  rightIcon: uiIcon('right'),
+  chevronIcon: uiIcon('chevron'),
+  plusIcon: uiIcon('plus'),
+  closeIcon: uiIcon('close'),
+  menuIcon: uiIcon('menu'),
+  moonIcon: uiIcon('moon'),
+  sunIcon: uiIcon('sun'),
   aboutIllustration: illustration('notebook', 'section-illustration'),
   researchIllustration: illustration('curiosity', 'section-illustration'),
   educationIllustration: illustration('education', 'section-illustration'),
@@ -56,7 +69,7 @@ const values = {
   education: renderEducation(data.education),
   hobbies: renderHobbies(data.hobbies),
   gallery: renderGallery(data.gallery),
-  emailLink: data.email ? `<a class="text-link" href="mailto:${escape(data.email)}"><span data-i18n="closingEmail">Write me</span> <span aria-hidden="true">↗</span></a>` : ''
+  emailLink: data.email ? `<a class="text-link" href="mailto:${escape(data.email)}"><span data-i18n="closingEmail">Write me</span> ${uiIcon('external')}</a>` : ''
 };
 
 // --- Runtime dictionary: per language, the UI strings plus pre-rendered sections.

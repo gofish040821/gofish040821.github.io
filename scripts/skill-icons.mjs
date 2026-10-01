@@ -1,34 +1,50 @@
-import { readFile } from 'node:fs/promises';
-import { resolve } from 'node:path';
+import { pen as p, dot } from './hand-drawn.mjs';
 
-// Reuse the local brand symbols; text-only badges get quiet, original pictograms.
-const fallback = {
- cpp: '<path d="m8 6-6 6 6 6m8-12 6 6-6 6M13 4l-2 16"/>',
- java: '<path d="M5 10h12v8c0 4-12 4-12 0Zm12 1h2c4 0 4 6 0 6h-2M8 7c-4-3 4-3 1-6m4 6c-4-3 4-3 1-6M4 23h15"/>',
- golang: '<path d="M10 7H7a5 5 0 0 0 0 10h4v-5H8M17 7c-6 0-6 10 0 10s6-10 0-10ZM1 9h2m-3 6h3"/>',
- html: '<path d="m4 2 2 18 6 2 6-2 2-18ZM16 7H8l1 5h6l-1 5-2 1-3-1"/>',
- css: '<path d="m4 2 2 18 6 2 6-2 2-18ZM8 7h8l-1 5H9m6 0-1 5-2 1-3-1"/>',
- javascript: '<path d="M3 3h18v18H3ZM11 9v8c0 3-5 3-5 0m12-6c-3-4-6 2-2 3s3 6-1 4"/>',
- springboot: '<path d="M19 4C5 2 1 8 6 17s16 0 13-13ZM6 19 17 7m-5 2v6h4"/>',
- docker: '<path d="M2 12h16c2 0 4-2 4-4l-3 1-1-3-1 6M3 12c-1 10 15 10 17 0M5 11V7h4v4m0-4h4v4m0-4V3h4v8"/>',
- rag: '<path d="M4 3h11v15H4ZM7 6h5M7 9h5m2 5 7 7"/><circle cx="16" cy="15" r="4"/>',
- mcp: '<path d="M8 9V3m8 6V3M5 9h14v4c0 5-14 5-14 0ZM12 17v5"/>'
+// Tiny, legible pen sketches for the skill labels; the name remains the identifier.
+const ring = (cx, cy, rx, ry = rx, angle = 0, weight = 1.5) => p(Array.from({length:17}, (_,i) => {
+  const a = i * Math.PI / 8, x = rx * Math.cos(a), y = ry * Math.sin(a);
+  return [cx + x * Math.cos(angle) - y * Math.sin(angle), cy + x * Math.sin(angle) + y * Math.cos(angle)];
+}), weight);
+const square = () => p([[3,3],[12,2.7],[21,3.2],[20.7,13],[21,21],[11,20.7],[3,21],[3.3,11],[3,3]],1.3,.72);
+const j = () => p([[10,9],[10,15],[9,18],[6,18],[5,16]],1.6);
+const s = () => p([[18,10],[15,9],[13.5,11],[15.5,13],[18,15],[17,18],[14,18],[12.5,16.5]],1.5);
+const shield = () => p([[4,3],[12,2.8],[20,3],[18,20],[12,22],[6,20],[4,4]],1.5);
+const drawings = {
+  python: p([[5,10],[5,5],[8,3],[15,3],[17,5],[17,12],[10,12]],1.8) + p([[19,14],[19,19],[16,21],[9,21],[7,19],[7,12],[14,12]],1.6) + p([[6,8],[3,9],[2,15],[5,17]],1.5) + p([[18,16],[21,15],[22,9],[19,7]],1.5) + dot(9,6,.8) + dot(15,18,.8),
+  pytorch: p([[11,3],[6,8],[4,13],[6,18],[11,21],[17,19],[20,15],[20,10],[17,7]],1.9) + dot(18,4,1.5),
+  numpy: p([[3,7],[12,3],[21,7],[21,17],[12,22],[3,17],[3,7],[12,12],[21,7]],1.6) + p([[12,12],[12,22]],1.7) + p([[8,5],[16,9],[16,19]],1.1,.65) + p([[7,10],[7,19]],1,.55),
+  huggingface: ring(12,11,7.5,7,0,1.5) + dot(9,9,.8) + dot(15,9,.8) + p([[8,12],[10,15],[13,15.5],[16,12]],1.4) + p([[3,12],[2,17],[5,20],[8,19],[7,16],[5,14]],1.4) + p([[21,12],[22,17],[19,20],[16,19],[17,16],[19,14]],1.4),
+  transformers: p([[4,6],[12,12],[20,5],[12,12],[19,20],[12,12],[4,19]],1.6) + dot(4,6,2) + dot(20,5,2) + dot(19,20,2) + dot(4,19,2) + ring(12,12,3,2.8,0,1.3),
+  langchain: p([[9,15],[5,16],[2,13],[3,8],[7,4],[11,4],[13,7],[12,10]],1.8) + p([[15,9],[19,8],[22,11],[21,16],[17,20],[13,20],[11,17],[12,14]],1.6) + p([[8,16],[12,12],[16,8]],1.5),
+  langgraph: p([[5,4],[5,18],[12,12],[19,5],[19,19]],1.7) + p([[5,5],[12,12],[19,19]],1.3,.66) + dot(5,4,2) + dot(5,19,2) + dot(19,5,2) + dot(19,19,2) + dot(12,12,2),
+  rag: p([[4,3],[13,3],[14,10]],1.6) + p([[4,5],[4,18],[10,18]],1.4) + p([[7,7],[11,7]],1.1,.65) + p([[7,11],[10,11]],1.1,.55) + ring(15,14,4.4,4,0,1.7) + p([[18,17],[22,22]],1.8),
+  mcp: p([[3,14],[11,6],[15,5],[19,8],[17,12],[10,19]],1.8) + p([[6,16],[13,9],[15,9],[16,11],[12,15],[17,20],[17,23]],1.5),
+  git: p([[12,2],[22,12],[12,22],[2,12],[12,2]],1.6) + p([[8,7],[16,15]],1.7) + p([[11,10],[11,18]],1.5) + dot(8,7,1.6) + dot(16,15,1.6) + dot(11,18,1.5),
+  latex: p([[3,5],[8,5],[5,5],[5,19],[11,19]],1.6) + p([[10,7],[21,7],[16,7],[16,19]],1.5) + p([[13,19],[19,19]],1.2,.75),
+  docker: p([[2,13],[7,13],[14,13],[18,12],[21,9],[21,13],[18,17],[12,20],[6,19],[3,16],[2,13]],1.6) + p([[4,11],[4,7],[8,7],[8,11],[12,11],[12,7],[16,7],[16,11]],1.3) + p([[12,7],[12,3],[16,3],[16,7]],1.5) + dot(7,16,.65),
+  cpp: p([[12,5],[7,4],[3,8],[2,13],[5,19],[11,20],[14,18]],1.8) + p([[14,9],[14,15]],1.6) + p([[11,12],[17,12]],1.6) + p([[21,9],[21,15]],1.6) + p([[18,12],[24,12]],1.4),
+  java: p([[4,11],[16,11],[15,18],[12,20],[7,19],[5,17],[4,11]],1.6) + p([[17,12],[20,12],[21,15],[18,18],[16,17]],1.4) + p([[9,8],[7,5],[10,2]],1.4) + p([[13,8],[14,5],[12,2]],1.6) + p([[4,23],[12,22.5],[20,23]],1.3,.72),
+  golang: p([[10,7],[6,6],[3,8],[2,13],[5,17],[10,16],[10,12],[7,12]],1.7) + ring(17,11.5,4,5.3,0,1.8) + p([[1,4],[5,4]],1.1,.6) + p([[1,20],[7,20]],1.2,.6),
+  springboot: p([[20,3],[10,4],[4,8],[3,14],[6,19],[12,20],[18,16],[20,10],[20,3]],1.7) + p([[5,22],[9,16],[15,10],[18,6]],1.5) + p([[9,10],[10,15],[16,16]],1.2,.66),
+  typescript: square() + p([[5,9],[12,9],[8.5,9],[8.5,18]],1.5) + s(),
+  javascript: square() + j() + s(),
+  react: ring(12,12,10,3.8,0,1.3) + ring(12,12,10,3.8,1.06,1.5) + ring(12,12,10,3.8,-1.06,1.3) + dot(12,12,1.5),
+  nodejs: p([[12,2],[21,7],[21,17],[12,22],[3,17],[3,7],[12,2]],1.5) + p([[8,17],[8,8],[12,7],[16,9],[16,17]],1.7),
+  html: shield() + p([[16,7],[8,7],[9,12],[15,12],[14,17],[12,18],[9,17]],1.6),
+  css: shield() + p([[8,7],[16,7],[15,12],[9,12]],1.6) + p([[15,12],[14,17],[12,18],[9,17]],1.5),
+  socketio: ring(12,12,9,9.4,0,1.5) + p([[15,5],[8,13],[12,12],[9,19],[16,10],[12,11],[15,5]],1.8),
+  vite: p([[3,4],[11,21],[21,4]],1.7) + p([[14,2],[8,11],[12,10],[10,18],[17,8],[13,9],[14,2]],1.8),
+  vitest: p([[2,13],[7,18],[19,6]],1.8) + p([[12,4],[16,2],[15,7],[20,7],[15,12]],1.5)
 };
+
+export function skillIllustrationSprite() {
+  return `<svg class="illustration-library" width="0" height="0" aria-hidden="true" focusable="false"><defs>${Object.entries(drawings).map(([name, drawing]) => `<symbol id="skill-sketch-${name}" viewBox="0 0 24 24">${drawing}</symbol>`).join('')}</defs></svg>`;
+}
 export async function loadSkillIcons(root, items) {
   const icons = new Map();
   for (const item of items) {
-    if (!/^[a-z0-9-]+$/.test(item.badge)) throw new Error(`Invalid skill badge: ${item.badge}`);
-    const source = await readFile(resolve(root, 'dist/assets/skills', `${item.badge}.svg`), 'utf8');
-    const match = source.match(/href="data:image\/svg\+xml;base64,([^"]+)"/);
-    let drawing;
-    if (match) {
-      const decoded = Buffer.from(match[1], 'base64').toString('utf8');
-      drawing = decoded.replace(/^<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '').replace(/<title>[\s\S]*?<\/title>/g, '').replace(/fill="(?:white|#fff|#ffffff)"/gi, 'fill="currentColor"');
-    } else {
-      if (!fallback[item.badge]) throw new Error(`Missing skill icon: ${item.badge}`);
-      drawing = `<g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${fallback[item.badge]}</g>`;
-    }
-    icons.set(item.badge, `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">${drawing}</svg>`);
+    if (!drawings[item.badge]) throw new Error(`Missing skill sketch: ${item.badge}`);
+    icons.set(item.badge, `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true" focusable="false"><use href="#skill-sketch-${item.badge}"/></svg>`);
   }
   return icons;
 }

@@ -9,6 +9,7 @@
   const root = document.documentElement;
   const BIRTH_DATE = '2004-08-21';
 
+  const uiIcon = name => '<svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true" focusable="false"><use href="#ui-sketch-' + name + '"/></svg>';
   let strings = {};
   const t = (key, fallback) => (strings[key] === undefined ? (fallback || '') : strings[key]);
   const currentCode = () => root.getAttribute('data-language') || I18N.default;
@@ -69,7 +70,7 @@
     const label = galleryExpanded
       ? t('galleryCollapse', 'Collapse gallery')
       : t('galleryExpand', 'Show all {n} photos').replace('{n}', photoCards.length);
-    const mark = galleryExpanded ? '&minus;' : '&#43;';
+    const mark = uiIcon(galleryExpanded ? 'minus' : 'plus');
     galleryToggle.innerHTML = label + ' <span aria-hidden="true">' + mark + '</span>';
   }
 
@@ -103,7 +104,7 @@
   function renderSkillToggle() {
     if (!skillToggle || skillItems.length <= initialSkillCount) return;
     const label = skillsExpanded ? t('skillsCollapse', 'Show fewer skills') : t('skillsExpand', 'Show all skills');
-    const mark = skillsExpanded ? '&minus;' : '&#43;';
+    const mark = uiIcon(skillsExpanded ? 'minus' : 'plus');
     skillToggle.innerHTML = '<span>' + label + '</span> <span aria-hidden="true">' + mark + '</span>';
   }
 
