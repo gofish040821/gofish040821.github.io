@@ -270,9 +270,3 @@ html[lang^="zh"] .research-note h4,html[lang="ja"] .research-note h4,html[lang="
  .photo-card figcaption{gap:7px;margin-top:10px}
 }
 @media print{.skill-badges .skill-badge{background:white;color:black;border-color:#aaa}.skill-badge svg{color:#444}.research-note{break-inside:avoid}}
-/* A small, deliberately unserious footnote to the formal biography. */
-.about-playful{margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
-.about-playful h3{font:400 19px/1.5 var(--serif);margin-bottom:12px;letter-spacing:-.015em}
-.about-playful p,.about-playful p:first-child{font-size:14px;line-height:1.9;color:var(--muted);margin-bottom:12px}
-.about-playful p:last-child{margin-bottom:0}
-@media(max-width:760px){.about-playful{margin-top:22px;padding-top:18px}.about-playful h3{font-size:18px}}

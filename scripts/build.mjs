@@ -44,13 +44,12 @@ const values = {
   aboutIllustration: illustration('notebook', 'section-illustration'),
   researchIllustration: illustration('curiosity', 'section-illustration'),
   educationIllustration: illustration('education', 'section-illustration'),
-  lifeIllustration: illustration('travel', 'section-illustration'),
+  lifeIllustration: illustration('life', 'section-illustration'),
   toolsIllustration: illustration('tools', 'tools-illustration'),
   ...Object.fromEntries(Object.entries(data).filter(([, value]) => typeof value === 'string').map(([key, value]) => [key, escape(renderRuntimeText(value))])),
   headline: paragraphs(data.headline),
   intro: paragraphs(data.intro),
   about: renderAbout(data.about),
-  playfulBio: renderAbout(data.playfulBio),
   research: renderResearch(data.research),
   skills: renderSkills(orderedSkills),
   researchNotes: renderNotes(data.researchNotes),
@@ -64,13 +63,11 @@ const values = {
 const translations = {};
 for (const [code, entry] of Object.entries(i18n.translations || {})) {
   const content = entry.content || {};
-  if (!entry.strings.playfulBioTitle || content.playfulBio?.length !== data.playfulBio.length) throw new Error(`Incomplete playful bio translation: ${code}`);
   if (!entry.strings.notesTitle || !entry.strings.notesStatus || content.researchNotes?.length !== data.researchNotes.length) throw new Error(`Incomplete research notes translation: ${code}`);
   translations[code] = {
     strings: entry.strings || {},
     sections: {
       about: renderAbout(content.about || []),
-      playfulBio: renderAbout(content.playfulBio || []),
       research: renderResearch(content.research || []),
       researchNotes: renderNotes(content.researchNotes || []),
       education: renderEducation(content.education || []),
