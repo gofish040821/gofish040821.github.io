@@ -93,6 +93,42 @@
 
   /* ---------------- one-time section reveals ---------------- */
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* ---------------- brief, local sketch gestures ---------------- */
+  const sketchMotion = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+  // Delegation also covers the illustrations replaced by language switching.
+  document.addEventListener('pointerover', event => {
+    if (event.pointerType !== 'mouse' || !sketchMotion.matches) return;
+    const sketch = event.target.closest?.('.illustration[data-illustration]');
+    if (!sketch || sketch.contains(event.relatedTarget) || sketch.classList.contains('is-sketch-playing')) return;
+    if (typeof sketch.getAnimations !== 'function') return;
+
+    // Keep the shared sprite until first use. Local copies let each illustration
+    // animate its own parts without changing another instance or its ink paths.
+    const use = sketch.querySelector('use');
+    if (use) {
+      const symbol = document.getElementById(use.getAttribute('href').slice(1));
+      if (!symbol) return;
+      use.replaceWith(...Array.from(symbol.childNodes, node => node.cloneNode(true)));
+      for (const part of ['agent-node', 'cooking-steam']) {
+        sketch.querySelectorAll(`[data-sketch-part="${part}"]`).forEach((node, index) => {
+          node.style.setProperty('--sketch-delay', `${index * 70}ms`);
+        });
+      }
+    }
+
+    sketch.classList.add('is-sketch-playing');
+    // Finish the gesture even if the pointer leaves; re-entry during playback
+    // does not stack animations, and resting on an icon never starts a loop.
+    Promise.all(sketch.getAnimations({ subtree: true }).map(animation => animation.finished.catch(() => {})))
+      .then(() => sketch.classList.remove('is-sketch-playing'));
+  });
+  sketchMotion.addEventListener('change', () => {
+    if (!sketchMotion.matches) {
+      document.querySelectorAll('.is-sketch-playing').forEach(sketch => sketch.classList.remove('is-sketch-playing'));
+    }
+  });
+
   function initReveals() {
     if (reducedMotion.matches || !('IntersectionObserver' in window)) return;
     const selectors = [

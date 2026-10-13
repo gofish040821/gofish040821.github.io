@@ -311,3 +311,43 @@ html[lang^="zh"] .research-note h4,html[lang="ja"] .research-note h4,html[lang="
   [data-theme="dark"] .hero-figure:hover{box-shadow:0 14px 30px #0009,0 0 0 1px var(--line)}
 }
 @media print{.reading-progress{display:none!important}}
+
+/* A stable SVG hit area keeps moving ink from repeatedly retriggering hover. */
+.illustration[data-illustration]{pointer-events:all}
+.illustration[data-illustration]>*{pointer-events:none}
+@media screen and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .illustration [data-sketch-part]{transform-box:view-box;transform-origin:60px 60px}
+  .illustration.is-sketch-playing [data-sketch-part]{
+    animation:sketch-gesture .82s cubic-bezier(.45,0,.25,1) var(--sketch-delay,0ms) 1;
+  }
+  .illustration [data-sketch-part="notebook-pencil"]{transform-origin:89px 78px;--sketch-out:translate(2px,-3px) rotate(-9deg);--sketch-back:translate(-1px,1px) rotate(3deg)}
+  .illustration [data-sketch-part="notebook-lines"]{--sketch-out:translateX(2px);--sketch-back:translateX(-.5px);--sketch-delay:60ms}
+  .illustration [data-sketch-part="curiosity-lens"]{transform-origin:54px 52px;--sketch-out:translate(4px,-3px) rotate(6deg);--sketch-back:translate(-1px,1px) rotate(-2deg)}
+  .illustration [data-sketch-part="agent-arrows"]{--sketch-out:rotate(13deg);--sketch-back:rotate(-3deg)}
+  .illustration [data-sketch-part="agent-node"]{transform-box:fill-box;transform-origin:center;--sketch-out:scale(1.22);--sketch-back:scale(.94)}
+  .illustration [data-sketch-part="physical-arm"]{transform-origin:36px 80px;--sketch-out:rotate(6deg);--sketch-back:rotate(-2deg)}
+  .illustration [data-sketch-part="physical-spark"]{--sketch-out:translate(2px,-2px);--sketch-back:translate(-.5px,.5px);--sketch-delay:80ms}
+  .illustration [data-sketch-part="life-plant"]{transform-origin:57px 79px;--sketch-out:rotate(-7deg);--sketch-back:rotate(3deg)}
+  .illustration [data-sketch-part="life-sun"]{transform-origin:91px 21px;--sketch-out:rotate(16deg) scale(1.06);--sketch-back:rotate(-4deg)}
+  .illustration [data-sketch-part="badminton-racket"]{transform-origin:15px 97px;--sketch-out:rotate(11deg);--sketch-back:rotate(-4deg)}
+  .illustration [data-sketch-part="badminton-shuttle"]{transform-origin:92px 62px;--sketch-out:translate(5px,-7px) rotate(12deg);--sketch-back:translate(-1px,2px) rotate(-3deg);--sketch-delay:70ms}
+  .illustration [data-sketch-part="travel-flag"]{transform-origin:79px 31px;--sketch-out:rotate(9deg);--sketch-back:rotate(-4deg)}
+  .illustration [data-sketch-part="travel-sun"]{transform-origin:22px 24px;--sketch-out:translateY(-3px) scale(1.08);--sketch-back:translateY(1px)}
+  .illustration.is-sketch-playing [data-sketch-part="cooking-steam"]{animation-name:sketch-steam}
+  .illustration [data-sketch-part="cooking-spoon"]{transform-origin:81px 56px;--sketch-out:rotate(-9deg);--sketch-back:rotate(4deg)}
+  .illustration [data-sketch-part="film-clapper"]{transform-origin:23px 44px;--sketch-out:rotate(-11deg);--sketch-back:rotate(3deg)}
+  .illustration [data-sketch-part="film-play"]{transform-origin:54px 70px;--sketch-out:scale(1.12);--sketch-back:scale(.97);--sketch-delay:100ms}
+  .illustration [data-sketch-part="education-page"]{transform-origin:63px 40px;--sketch-out:skewY(-6deg) scaleX(.94);--sketch-back:skewY(2deg)}
+  .illustration [data-sketch-part="education-marks"]{--sketch-out:translateY(-2px);--sketch-back:translateY(.5px);--sketch-delay:70ms}
+  .illustration [data-sketch-part="tools-code"]{transform-origin:60px 66px;--sketch-out:translateY(-3px) scale(1.06);--sketch-back:translateY(1px)}
+}
+@keyframes sketch-gesture{
+  0%,100%{transform:none}
+  32%{transform:var(--sketch-out)}
+  68%{transform:var(--sketch-back)}
+}
+@keyframes sketch-steam{
+  0%,100%{transform:none;opacity:1}
+  40%{transform:translate(1px,-6px);opacity:.45}
+  70%{transform:translate(-1px,-2px);opacity:.8}
+}
