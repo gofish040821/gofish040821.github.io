@@ -17,7 +17,7 @@
 }
 
 /* Header: one aligned tool group, without three competing boxes. */
-.site-header .header-inner { gap: 24px; }
+.site-header .header-inner { gap: 24px; direction: ltr; }
 .site-header .desktop-nav { gap: 4px; align-items: center; }
 .desktop-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 12px; border-radius: 7px; color: var(--muted); font-size: 14px; }
 .desktop-nav a:after { inset-inline: 12px; bottom: 5px; background: var(--accent); }
@@ -27,8 +27,8 @@
 .site-header .theme-toggle,
 .site-header .lang-toggle,
 .site-header .menu-toggle {
-  min-height: 44px;
-  height: 44px;
+  min-height: 36px;
+  height: 36px;
   border: 1px solid transparent;
   border-radius: 7px;
   background: transparent;
@@ -37,10 +37,10 @@
 .site-header .header-github { padding: 0 11px; gap: 8px; font-size: 14px; line-height: 1; }
 .header-github .control-icon { width: 16px; height: 16px; color: var(--muted); }
 .site-header .theme-toggle,
-.site-header .menu-toggle { width: 44px; min-width: 44px; padding: 0; }
+.site-header .menu-toggle { width: 36px; min-width: 36px; padding: 0; }
 .theme-icon { display: grid; place-items: center; }
-.theme-icon .control-icon { width: 19px; height: 19px; }
-.site-header .menu-toggle .control-icon { width: 21px; height: 21px; }
+.theme-icon .control-icon { width: 18px; height: 18px; }
+.site-header .menu-toggle .control-icon { width: 17px; height: 17px; }
 .site-header .lang-toggle { padding: 0 11px; gap: 9px; font-size: 14px; line-height: 1.4; }
 .lang-caret { display: grid; place-items: center; }
 .lang-caret .control-icon { width: 14px; height: 14px; }
@@ -49,9 +49,10 @@
 .lang-toggle[aria-expanded="true"] .lang-caret { transform: rotate(180deg); }
 
 /* The language list stays native to the page and retains its keyboard controls. */
-.site-header .lang-menu { top: calc(100% + 9px); min-width: 184px; padding: 7px; gap: 2px; border-radius: 10px; border-color: var(--line); box-shadow: 0 10px 30px #29251d12, 0 2px 5px #29251d08; }
+.site-header .lang-menu { direction: ltr; right: 0; left: auto; top: calc(100% + 9px); min-width: 184px; padding: 7px; gap: 2px; border-radius: 10px; border-color: var(--line); box-shadow: 0 10px 30px #29251d12, 0 2px 5px #29251d08; }
 [data-theme="dark"] .site-header .lang-menu { box-shadow: 0 12px 32px #0004; }
-.site-header .lang-option { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 40px; padding: 8px 11px; border-radius: 6px; line-height: 1.4; color: var(--muted); }
+.site-header .lang-option { direction: ltr; text-align: left; font-weight: 400; display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 40px; padding: 8px 11px; border-radius: 6px; line-height: 1.4; color: var(--muted); }
+.lang-option-label { flex: 1; min-width: 0; text-align: left; }
 .site-header .lang-option:after { content: ''; width: 12px; flex-shrink: 0; }
 .site-header .lang-option[aria-selected="true"] { color: var(--ink); background: var(--control-surface); }
 .site-header .lang-option[aria-selected="true"]:after { content: '\2713'; color: var(--accent); font-size: 12px; }
@@ -70,7 +71,8 @@
   border-radius: var(--control-radius);
   background: transparent;
   color: var(--ink);
-  font: 500 14px/1.6 var(--sans);
+  font: 400 15px/1.6 var(--serif);
+  letter-spacing: .005em;
   text-align: center;
   text-decoration: none;
   max-width: 100%;
@@ -88,7 +90,7 @@
 /* Small state changes, with no delay to clicks or keyboard navigation. */
 @media (prefers-reduced-motion:no-preference) {
   .action-link,
-  .site-header :is(.header-github,.theme-toggle,.lang-toggle,.menu-toggle,.desktop-nav a,.lang-option) { transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 140ms ease; }
+  .site-header :is(.header-github,.theme-toggle,.lang-toggle,.menu-toggle,.desktop-nav a,.lang-option,.mobile-nav a) { transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 140ms ease; }
   .action-link .control-icon,
   .header-github .control-icon,
   .lang-caret { transition: transform 180ms ease, opacity 180ms ease; }
@@ -101,7 +103,8 @@
 @media (hover:hover) and (pointer:fine) {
   .desktop-nav a:hover,
   .site-header :is(.header-github,.theme-toggle,.lang-toggle,.menu-toggle):hover { background: var(--control-surface); color: var(--ink); }
-  .site-header .lang-option:hover { background: var(--control-surface); color: var(--ink); }
+  .site-header .lang-option:hover,
+  .site-header .mobile-nav a:hover { background: var(--control-surface); color: var(--ink); }
   .action-secondary:hover,
   .contact-link:hover { background: var(--control-surface); border-color: var(--muted); }
   .action-primary:hover { background: var(--control-primary-hover); border-color: var(--control-primary-hover); }
@@ -118,12 +121,37 @@
   .site-header .header-inner { gap: 12px; }
   .header-tools { padding-inline-start: 0; border: 0; margin-inline-start: auto; }
   .site-header .header-github { display: none; }
-  .site-header .mobile-nav { padding: 8px 24px 18px; box-shadow: 0 12px 24px #29251d0c; }
-  .mobile-nav a { display: flex; align-items: center; justify-content: space-between; min-height: 44px; }
+  .site-header .mobile-nav {
+    position: absolute;
+    top: calc(100% + 8px);
+    inset-inline: auto;
+    left: auto;
+    right: 50px;
+    width: 216px;
+    max-width: calc(100vw - 32px);
+    max-height: calc(100dvh - 96px);
+    overflow-y: auto;
+    margin: 0;
+    padding: 6px;
+    gap: 2px;
+    direction: ltr;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--paper);
+    box-shadow: 0 10px 30px #29251d12, 0 2px 5px #29251d08;
+  }
+  [data-theme="dark"] .site-header .mobile-nav { box-shadow: 0 12px 32px #0004; }
+  .site-header .mobile-nav a { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 38px; padding: 8px 11px; border: 0; border-radius: 6px; color: var(--muted); font: 400 14px/1.5 var(--sans); text-align: left; }
+  .mobile-nav a span { unicode-bidi: plaintext; }
+  .mobile-nav .control-icon { width: 15px; height: 15px; }
+}
+@media(max-width:1050px) {
+  .site-header .mobile-nav { right: 32px; }
 }
 @media(max-width:760px) {
   .site-header .header-inner { gap: 6px; }
   .header-tools { gap: 2px; }
+  .site-header .mobile-nav { right: 16px; }
   .site-header .lang-toggle { font-size: 13px; padding-inline: 8px; gap: 5px; }
   .hero-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
   .action-link { padding-inline: 15px; }

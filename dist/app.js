@@ -53,8 +53,24 @@
     menuButton.setAttribute('aria-expanded', String(expanded));
     menuButton.setAttribute('aria-label', expanded ? t('menuClose', 'Close menu') : t('menuOpen', 'Open menu'));
     menu.hidden = !expanded;
+    if (expanded) closeLangMenu();
   });
   menu.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
+  menuButton.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowDown') return;
+    event.preventDefault();
+    menu.hidden = false;
+    menuButton.setAttribute('aria-expanded', 'true');
+    menuButton.setAttribute('aria-label', t('menuClose', 'Close menu'));
+    closeLangMenu();
+    menu.querySelector('a')?.focus();
+  });
+  document.addEventListener('click', event => {
+    if (!menu.hidden && !menu.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+  });
+  document.querySelector('.site-header').addEventListener('focusout', event => {
+    if (event.relatedTarget && !menu.hidden && !menu.contains(event.relatedTarget) && !menuButton.contains(event.relatedTarget)) closeMenu();
+  });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !menu.hidden) { closeMenu(); menuButton.focus(); }
   });
@@ -291,9 +307,9 @@
 
   function buildLangMenu() {
     langMenu.innerHTML = languages.map(item => {
-      const attrs = ' data-code="' + item.code + '" lang="' + (item.lang || item.code) + '"' + (item.dir === 'rtl' ? ' dir="rtl"' : '');
+      const attrs = ' data-code="' + item.code + '" lang="' + (item.lang || item.code) + '"';
       const selected = item.code === currentCode() ? 'true' : 'false';
-      return '<button type="button" role="option" class="lang-option"' + attrs + ' aria-selected="' + selected + '" tabindex="' + (selected === 'true' ? '0' : '-1') + '">' + item.label + '</button>';
+      return '<button type="button" role="option" class="lang-option"' + attrs + ' aria-selected="' + selected + '" tabindex="' + (selected === 'true' ? '0' : '-1') + '"><bdi class="lang-option-label" dir="' + (item.dir || 'ltr') + '">' + item.label + '</bdi></button>';
     }).join('');
   }
 
@@ -351,6 +367,10 @@
     const willOpen = langMenu.hidden;
     langMenu.hidden = !willOpen;
     langToggle.setAttribute('aria-expanded', String(willOpen));
+    if (willOpen) {
+      closeMenu();
+      langMenu.scrollTop = 0;
+    }
   });
   // A listbox uses arrow keys; Tab leaves it without getting trapped.
   langToggle.addEventListener('keydown', event => {
@@ -358,6 +378,7 @@
     event.preventDefault();
     langMenu.hidden = false;
     langToggle.setAttribute('aria-expanded', 'true');
+    closeMenu();
     const options = [...langMenu.querySelectorAll('.lang-option')];
     const selected = options.find(option => option.getAttribute('aria-selected') === 'true');
     (selected || options[event.key === 'ArrowUp' ? options.length - 1 : 0])?.focus();
