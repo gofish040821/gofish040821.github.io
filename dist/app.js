@@ -8,6 +8,24 @@
   const STORAGE_KEY = 'gofish-language';
   const root = document.documentElement;
   const BIRTH_DATE = '2004-08-21';
+  const progressBar = document.querySelector('#reading-progress');
+  let progressQueued = false;
+
+  function scheduleProgress() {
+    if (progressQueued || !progressBar) return;
+    progressQueued = true;
+    requestAnimationFrame(() => {
+      const scrollable = Math.max(root.scrollHeight, document.body.scrollHeight) - root.clientHeight;
+      const progress = scrollable > 0 ? Math.max(0, Math.min(1, window.scrollY / scrollable)) : 0;
+      progressBar.style.setProperty('--reading-progress', String(progress));
+      progressQueued = false;
+    });
+  }
+
+  window.addEventListener('scroll', scheduleProgress, { passive: true });
+  window.addEventListener('resize', scheduleProgress, { passive: true });
+  if ('ResizeObserver' in window) new ResizeObserver(scheduleProgress).observe(document.body);
+  scheduleProgress();
 
   const uiIcon = name => '<svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true" focusable="false"><use href="#ui-sketch-' + name + '"/></svg>';
   let strings = {};
@@ -57,6 +75,46 @@
     links.forEach(link => observer.observe(document.querySelector(link.hash)));
   }
 
+  /* ---------------- one-time section reveals ---------------- */
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function initReveals() {
+    if (reducedMotion.matches || !('IntersectionObserver' in window)) return;
+    const selectors = [
+      ['.about .section-aside', 0], ['.about-main', 60],
+      ['.research .section-top', 0], ['.research-grid', 60],
+      ['.research-notes', 0], ['.research-skills', 0],
+      ['.education .section-aside', 0], ['.timeline', 60],
+      ['.life-section .section-top', 0], ['.hobbies', 60],
+      ['.gallery', 0], ['.closing', 0]
+    ];
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('reveal-pending');
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
+    selectors.forEach(([selector, delay]) => {
+      const element = document.querySelector(selector);
+      if (!element) return;
+      const rect = element.getBoundingClientRect();
+      // Never hide content already visible on load or reached by a deep link.
+      if (rect.top < window.innerHeight * 0.88) return;
+      element.style.setProperty('--reveal-delay', `${delay}ms`);
+      element.classList.add('reveal-item', 'reveal-pending');
+      observer.observe(element);
+    });
+    document.addEventListener('focusin', event => {
+      const element = event.target.closest?.('.reveal-pending');
+      if (element) { element.classList.remove('reveal-pending'); observer.unobserve(element); }
+    });
+    reducedMotion.addEventListener('change', event => {
+      if (!event.matches) return;
+      observer.disconnect();
+      document.querySelectorAll('.reveal-pending').forEach(element => element.classList.remove('reveal-pending'));
+    });
+  }
+
   /* ---------------- gallery ---------------- */
   const initialCount = 4;
   let photoCards = [];
@@ -91,6 +149,7 @@
     galleryToggle.setAttribute('aria-expanded', String(galleryExpanded));
     applyGalleryVisibility();
     renderGalleryToggle();
+    scheduleProgress();
     if (!galleryExpanded) document.querySelector('#gallery').scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   });
 
@@ -127,6 +186,7 @@
       skillToggle.setAttribute('aria-expanded', String(skillsExpanded));
       applySkillVisibility();
       renderSkillToggle();
+      scheduleProgress();
       if (!skillsExpanded) document.querySelector('#skills-title').scrollIntoView({ block: 'center', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
     });
   }
@@ -194,6 +254,30 @@
     }, { passive: true });
   }
 
+  /* ---------------- research details ---------------- */
+  const researchGrid = document.querySelector('.research-grid');
+  const expandedResearch = new Set();
+
+  function syncResearchDetails() {
+    researchGrid.querySelectorAll('.research-more').forEach(button => {
+      const expanded = expandedResearch.has(button.dataset.researchKey);
+      const panel = document.getElementById(button.getAttribute('aria-controls'));
+      button.setAttribute('aria-expanded', String(expanded));
+      if (panel) panel.hidden = !expanded;
+      button.querySelector('[data-research-label]').textContent = t(expanded ? 'researchLess' : 'researchMore');
+    });
+  }
+
+  researchGrid.addEventListener('click', event => {
+    const button = event.target.closest('.research-more');
+    if (!button) return;
+    const key = button.dataset.researchKey;
+    if (expandedResearch.has(key)) expandedResearch.delete(key);
+    else expandedResearch.add(key);
+    syncResearchDetails();
+    scheduleProgress();
+  });
+
   /* ---------------- language switcher ---------------- */
   const langSwitch = document.querySelector('#lang-switch');
   const langToggle = document.querySelector('.lang-toggle');
@@ -248,8 +332,10 @@
     closeLangMenu();
     bindGallery();
     bindSkills();
+    syncResearchDetails();
     buildLangMenu();
     renderThemeToggle();
+    scheduleProgress();
     try { localStorage.setItem(STORAGE_KEY, code); } catch (error) { /* private mode */ }
     // Keep the address bar shareable: ...?lang=ru stays in that language.
     try {
@@ -342,4 +428,5 @@
   }
   buildLangMenu();
   applyLanguage(initial || I18N.default);
+  initReveals();
 })();

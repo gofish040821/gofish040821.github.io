@@ -136,7 +136,11 @@
         "skillsExpand": "Show all skills",
         "skillsCollapse": "Show fewer skills",
         "notesTitle": "Research notes",
-        "notesStatus": "Thinking aloud"
+        "notesStatus": "Thinking aloud",
+        "researchMore": "Explore further",
+        "researchLess": "Show less",
+        "researchApproach": "Possible approach",
+        "researchEvaluation": "How I would evaluate it"
       },
       "content": {
         "about": [
@@ -155,7 +159,11 @@
               "Failure analysis",
               "Rollback"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "I would compare changes to prompts, memory and tool use against a fixed baseline on unseen tasks, recording each failure.",
+              "evaluation": "I would look for gains across task types while tracking cost and reliability; changes that do not generalize should be rolled back."
+            }
           },
           {
             "number": "02",
@@ -167,7 +175,11 @@
               "Geometric priors",
               "Uncertainty estimation"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "I would test pick-and-place under incomplete views, using geometry and uncertainty to decide when to act or observe again.",
+              "evaluation": "I would compare task completion and recovery under occlusion and simulation-to-real gaps, and check whether failed actions are detected."
+            }
           }
         ],
         "education": [
@@ -371,7 +383,11 @@
         "skillsExpand": "展开全部技能",
         "skillsCollapse": "收起技能",
         "notesTitle": "研究笔记",
-        "notesStatus": "随手记下的思考"
+        "notesStatus": "随手记下的思考",
+        "researchMore": "进一步了解",
+        "researchLess": "收起内容",
+        "researchApproach": "可能的探索方式",
+        "researchEvaluation": "如何判断是否有效"
       },
       "content": {
         "about": [
@@ -390,7 +406,11 @@
               "失败归因",
               "改动回滚"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "我想在未见任务上，把提示词、记忆或工具策略的每次改动与固定基线比较，并记录失败案例。",
+              "evaluation": "除了不同任务上的表现，还应比较成本与可靠性；无法泛化的改动应当回滚。"
+            }
           },
           {
             "number": "02",
@@ -402,7 +422,11 @@
               "几何约束",
               "不确定性估计"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "我想在视角不完整的抓取与放置任务中，利用几何约束和不确定性判断何时行动、何时再观察。",
+              "evaluation": "可以比较遮挡和仿真现实差异下的完成率与恢复能力，并检查机器人能否识别失败的动作。"
+            }
           }
         ],
         "education": [
@@ -606,7 +630,11 @@
         "skillsExpand": "Afficher toutes les compétences",
         "skillsCollapse": "Afficher moins de compétences",
         "notesTitle": "Notes de recherche",
-        "notesStatus": "Réflexions à voix haute"
+        "notesStatus": "Réflexions à voix haute",
+        "researchMore": "En savoir plus",
+        "researchLess": "Réduire",
+        "researchApproach": "Piste à explorer",
+        "researchEvaluation": "Comment l'évaluer"
       },
       "content": {
         "about": [
@@ -625,7 +653,11 @@
               "Analyse des échecs",
               "Retour arrière"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "J'aimerais comparer chaque changement de consigne, de mémoire ou d'usage des outils à une version de référence sur des tâches inédites, en relevant les échecs.",
+              "evaluation": "Je regarderais les progrès sur différents types de tâches, mais aussi le coût et la fiabilité ; un changement qui ne se généralise pas devrait être annulé."
+            }
           },
           {
             "number": "02",
@@ -637,7 +669,11 @@
               "Contraintes géométriques",
               "Estimation de l'incertitude"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "J'aimerais tester la saisie et la dépose avec des vues partielles, en utilisant géométrie et incertitude pour décider s'il faut agir ou observer encore.",
+              "evaluation": "Je comparerais réussite et récupération malgré les occultations et l'écart simulation-réalité, puis vérifierais si les actions ratées sont détectées."
+            }
           }
         ],
         "education": [
@@ -841,7 +877,11 @@
         "skillsExpand": "Alle Skills anzeigen",
         "skillsCollapse": "Weniger Skills anzeigen",
         "notesTitle": "Forschungsnotizen",
-        "notesStatus": "Gedanken am Rand"
+        "notesStatus": "Gedanken am Rand",
+        "researchMore": "Mehr erfahren",
+        "researchLess": "Weniger anzeigen",
+        "researchApproach": "Möglicher Ansatz",
+        "researchEvaluation": "So würde ich es prüfen"
       },
       "content": {
         "about": [
@@ -860,7 +900,11 @@
               "Fehleranalyse",
               "Änderungen zurücknehmen"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "Ich würde Änderungen an Anweisungen, Gedächtnis und Werkzeugnutzung bei unbekannten Aufgaben mit einer festen Ausgangsversion vergleichen und Fehler erfassen.",
+              "evaluation": "Ich würde Fortschritte bei verschiedenen Aufgabentypen sowie Kosten und Zuverlässigkeit prüfen; Änderungen ohne Übertragbarkeit sollten zurückgenommen werden."
+            }
           },
           {
             "number": "02",
@@ -872,7 +916,11 @@
               "Geometrische Bedingungen",
               "Unsicherheitsschätzung"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "Ich würde Greifen und Ablegen bei unvollständiger Sicht testen und anhand von Geometrie und Unsicherheit entscheiden, ob der Roboter handelt oder erneut beobachtet.",
+              "evaluation": "Ich würde Erfolg und Erholung bei Verdeckung und Unterschieden zwischen Simulation und Realität vergleichen und prüfen, ob Fehlschläge erkannt werden."
+            }
           }
         ],
         "education": [
@@ -1076,7 +1124,11 @@
         "skillsExpand": "Mostrar todas las habilidades",
         "skillsCollapse": "Mostrar menos habilidades",
         "notesTitle": "Notas de investigación",
-        "notesStatus": "Pensamientos en voz alta"
+        "notesStatus": "Pensamientos en voz alta",
+        "researchMore": "Explorar más",
+        "researchLess": "Mostrar menos",
+        "researchApproach": "Posible enfoque",
+        "researchEvaluation": "Cómo lo evaluaría"
       },
       "content": {
         "about": [
@@ -1095,7 +1147,11 @@
               "Análisis de fallos",
               "Reversión de cambios"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "Compararía cada cambio en instrucciones, memoria o uso de herramientas con una versión de referencia en tareas no vistas y registraría los fallos.",
+              "evaluation": "Examinaría mejoras en distintos tipos de tareas junto con el coste y la fiabilidad; los cambios que no se generalicen deberían revertirse."
+            }
           },
           {
             "number": "02",
@@ -1107,7 +1163,11 @@
               "Restricciones geométricas",
               "Estimación de incertidumbre"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "Probaría tareas de agarre y colocación con vistas parciales, usando geometría e incertidumbre para decidir cuándo actuar y cuándo observar de nuevo.",
+              "evaluation": "Compararía éxito y recuperación ante oclusiones y diferencias entre simulación y realidad, y comprobaría si se detectan las acciones fallidas."
+            }
           }
         ],
         "education": [
@@ -1311,7 +1371,11 @@
         "skillsExpand": "عرض كل المهارات",
         "skillsCollapse": "عرض مهارات أقل",
         "notesTitle": "ملاحظات بحثية",
-        "notesStatus": "تفكير بصوت عالٍ"
+        "notesStatus": "تفكير بصوت عالٍ",
+        "researchMore": "معرفة المزيد",
+        "researchLess": "عرض أقل",
+        "researchApproach": "نهج محتمل",
+        "researchEvaluation": "كيف يمكن تقييمه"
       },
       "content": {
         "about": [
@@ -1330,7 +1394,11 @@
               "تحليل الإخفاقات",
               "التراجع عن التعديلات"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "أود مقارنة كل تغيير في التعليمات أو الذاكرة أو استخدام الأدوات بنسخة مرجعية في مهام لم يرها الوكيل من قبل، مع تسجيل الإخفاقات.",
+              "evaluation": "سأنظر إلى التحسن عبر أنواع مختلفة من المهام، وإلى التكلفة والموثوقية أيضًا؛ وينبغي التراجع عن التغييرات التي لا تعمم نتائجها."
+            }
           },
           {
             "number": "02",
@@ -1342,7 +1410,11 @@
               "القيود الهندسية",
               "تقدير عدم اليقين"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "أود اختبار الإمساك بالأشياء ووضعها عند نقص الرؤية، باستخدام الهندسة وعدم اليقين لتحديد متى يتصرف الروبوت ومتى يعيد الملاحظة.",
+              "evaluation": "يمكن مقارنة نجاح المهام والتعافي من الإخفاق تحت الحجب والفجوة بين المحاكاة والواقع، والتحقق من اكتشاف الأفعال الفاشلة."
+            }
           }
         ],
         "education": [
@@ -1546,7 +1618,11 @@
         "skillsExpand": "すべてのスキルを表示",
         "skillsCollapse": "スキルを少なく表示",
         "notesTitle": "研究ノート",
-        "notesStatus": "思考のメモ"
+        "notesStatus": "思考のメモ",
+        "researchMore": "詳しく見る",
+        "researchLess": "閉じる",
+        "researchApproach": "考えられる進め方",
+        "researchEvaluation": "有効性の確かめ方"
       },
       "content": {
         "about": [
@@ -1565,7 +1641,11 @@
               "失敗原因の分析",
               "変更の差し戻し"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "プロンプト、記憶、ツールの使い方を変えるたびに、未見の課題で固定した基準版と比較し、失敗を記録したいと考えています。",
+              "evaluation": "課題の種類をまたいだ改善に加え、コストと安定性も確認します。一般化しない変更は元に戻すべきだと考えています。"
+            }
           },
           {
             "number": "02",
@@ -1577,7 +1657,11 @@
               "幾何学的制約",
               "不確実性の推定"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "視界が不完全な把持・配置課題で、幾何学と不確実性を使い、動くべきか再観察すべきかを判断する方法を試したいです。",
+              "evaluation": "遮蔽やシミュレーションと実環境のずれがある場面で成功率と復帰能力を比較し、失敗を検知できるか確かめたいです。"
+            }
           }
         ],
         "education": [
@@ -1781,7 +1865,11 @@
         "skillsExpand": "모든 기술 보기",
         "skillsCollapse": "기술 줄이기",
         "notesTitle": "연구 노트",
-        "notesStatus": "생각을 적으며"
+        "notesStatus": "생각을 적으며",
+        "researchMore": "더 알아보기",
+        "researchLess": "접기",
+        "researchApproach": "가능한 탐구 방법",
+        "researchEvaluation": "효과를 판단하는 방법"
       },
       "content": {
         "about": [
@@ -1800,7 +1888,11 @@
               "실패 원인 분석",
               "변경 되돌리기"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "프롬프트, 기억, 도구 사용 방식을 바꿀 때마다 처음 보는 과제에서 고정된 기준 버전과 비교하고 실패 사례를 기록해 보고 싶습니다.",
+              "evaluation": "여러 유형의 과제에서 개선되는지와 함께 비용과 안정성도 살펴보고, 일반화되지 않는 변경은 되돌려야 한다고 생각합니다."
+            }
           },
           {
             "number": "02",
@@ -1812,7 +1904,11 @@
               "기하학적 제약",
               "불확실성 추정"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "시야가 불완전한 집기·놓기 과제에서 기하학과 불확실성을 활용해 언제 행동하고 언제 다시 관찰할지 판단하는 방법을 시험해 보고 싶습니다.",
+              "evaluation": "가림과 시뮬레이션-현실 차이 속에서 성공과 복구 능력을 비교하고 실패한 행동을 알아차리는지도 확인해 보고 싶습니다."
+            }
           }
         ],
         "education": [
@@ -2016,7 +2112,11 @@
         "skillsExpand": "Показать все навыки",
         "skillsCollapse": "Показать меньше навыков",
         "notesTitle": "Исследовательские заметки",
-        "notesStatus": "Мысли вслух"
+        "notesStatus": "Мысли вслух",
+        "researchMore": "Подробнее",
+        "researchLess": "Свернуть",
+        "researchApproach": "Возможный подход",
+        "researchEvaluation": "Как оценить результат"
       },
       "content": {
         "about": [
@@ -2035,7 +2135,11 @@
               "Анализ ошибок",
               "Откат изменений"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "Я бы сравнивал каждое изменение инструкций, памяти и работы с инструментами с фиксированной исходной версией на новых задачах и записывал ошибки.",
+              "evaluation": "Я бы проверял улучшения на разных типах задач вместе со стоимостью и надёжностью; изменения без переноса на новые задачи стоило бы откатить."
+            }
           },
           {
             "number": "02",
@@ -2047,7 +2151,11 @@
               "Геометрические ограничения",
               "Оценка неопределённости"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "Я бы проверял захват и размещение при неполном обзоре, используя геометрию и неопределённость, чтобы выбирать между действием и повторным наблюдением.",
+              "evaluation": "Я бы сравнивал успех и восстановление при перекрытии обзора и расхождении симуляции с реальностью, а также проверял обнаружение неудачных действий."
+            }
           }
         ],
         "education": [
@@ -2251,7 +2359,11 @@
         "skillsExpand": "Mostra tutte le competenze",
         "skillsCollapse": "Mostra meno competenze",
         "notesTitle": "Note di ricerca",
-        "notesStatus": "Pensieri ad alta voce"
+        "notesStatus": "Pensieri ad alta voce",
+        "researchMore": "Approfondisci",
+        "researchLess": "Mostra meno",
+        "researchApproach": "Possibile approccio",
+        "researchEvaluation": "Come valutarlo"
       },
       "content": {
         "about": [
@@ -2270,7 +2382,11 @@
               "Analisi dei fallimenti",
               "Rollback"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "Vorrei confrontare ogni modifica a prompt, memoria e uso degli strumenti con una versione di riferimento su compiti mai visti, registrando gli errori.",
+              "evaluation": "Valuterei i progressi su diversi compiti insieme a costi e affidabilità; le modifiche che non si generalizzano andrebbero annullate."
+            }
           },
           {
             "number": "02",
@@ -2282,7 +2398,11 @@
               "Priori geometrici",
               "Stima dell’incertezza"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "Vorrei provare compiti di presa e posizionamento con viste parziali, usando geometria e incertezza per decidere se agire o osservare ancora.",
+              "evaluation": "Confronterei completamento e recupero con occlusioni e differenze tra simulazione e realtà, verificando il riconoscimento delle azioni fallite."
+            }
           }
         ],
         "education": [
@@ -2486,7 +2606,11 @@
         "skillsExpand": "Mostrar todas as habilidades",
         "skillsCollapse": "Mostrar menos habilidades",
         "notesTitle": "Notas de pesquisa",
-        "notesStatus": "Pensamentos em voz alta"
+        "notesStatus": "Pensamentos em voz alta",
+        "researchMore": "Saiba mais",
+        "researchLess": "Mostrar menos",
+        "researchApproach": "Possível abordagem",
+        "researchEvaluation": "Como eu avaliaria"
       },
       "content": {
         "about": [
@@ -2505,7 +2629,11 @@
               "Análise de falhas",
               "Rollback"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "Eu compararia mudanças em prompts, memória e uso de ferramentas com uma versão de referência em tarefas inéditas, registrando cada falha.",
+              "evaluation": "Eu observaria ganhos em diferentes tarefas, além de custo e confiabilidade; mudanças que não se generalizem deveriam ser revertidas."
+            }
           },
           {
             "number": "02",
@@ -2517,7 +2645,11 @@
               "Priores geométricos",
               "Estimativa de incerteza"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "Eu testaria tarefas de pegar e posicionar com visões parciais, usando geometria e incerteza para decidir quando agir ou observar novamente.",
+              "evaluation": "Eu compararia sucesso e recuperação com oclusões e diferenças entre simulação e realidade, verificando se ações malsucedidas são detectadas."
+            }
           }
         ],
         "education": [
@@ -2721,7 +2853,11 @@
         "skillsExpand": "सभी कौशल दिखाएँ",
         "skillsCollapse": "कम कौशल दिखाएँ",
         "notesTitle": "शोध नोट्स",
-        "notesStatus": "खुलकर सोचते हुए"
+        "notesStatus": "खुलकर सोचते हुए",
+        "researchMore": "और जानें",
+        "researchLess": "कम दिखाएँ",
+        "researchApproach": "संभावित तरीका",
+        "researchEvaluation": "मूल्यांकन कैसे करूँगा"
       },
       "content": {
         "about": [
@@ -2740,7 +2876,11 @@
               "Failure analysis",
               "Rollback"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "मैं prompts, memory और tool use में हर बदलाव की तुलना unseen tasks पर एक तय baseline से करना और हर failure दर्ज करना चाहूँगा।",
+              "evaluation": "अलग-अलग tasks में सुधार के साथ लागत और भरोसेमंदी भी देखूँगा; जो बदलाव सामान्य रूप से काम न करे, उसे वापस करना चाहिए।"
+            }
           },
           {
             "number": "02",
@@ -2752,7 +2892,11 @@
               "Geometric priors",
               "Uncertainty estimation"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "मैं अधूरे camera views में pick-and-place आज़माऊँगा और geometry व uncertainty से तय करूँगा कि कब कार्रवाई करनी है और कब फिर देखना है।",
+              "evaluation": "Occlusion और simulation-reality gap में सफलता व recovery की तुलना करूँगा और जाँचूँगा कि असफल actions पहचाने जाते हैं या नहीं।"
+            }
           }
         ],
         "education": [
@@ -2956,7 +3100,11 @@
         "skillsExpand": "تمام مہارتیں دکھائیں",
         "skillsCollapse": "کم مہارتیں دکھائیں",
         "notesTitle": "تحقیقی نوٹس",
-        "notesStatus": "سوچ کی چند باتیں"
+        "notesStatus": "سوچ کی چند باتیں",
+        "researchMore": "مزید جانیں",
+        "researchLess": "کم دکھائیں",
+        "researchApproach": "ممکنہ طریقہ",
+        "researchEvaluation": "اسے کیسے پرکھوں گا"
       },
       "content": {
         "about": [
@@ -2975,7 +3123,11 @@
               "Failure analysis",
               "Rollback"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "میں prompts، memory اور tool use کی ہر تبدیلی کو unseen tasks پر ایک مقررہ baseline سے ملا کر ناکامیوں کو درج کرنا چاہوں گا۔",
+              "evaluation": "مختلف tasks میں بہتری کے ساتھ لاگت اور اعتماد کو بھی دیکھوں گا؛ جو تبدیلی عام حالات میں فائدہ نہ دے اسے واپس کرنا چاہیے۔"
+            }
           },
           {
             "number": "02",
@@ -2987,7 +3139,11 @@
               "Geometric priors",
               "Uncertainty estimation"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "میں نامکمل camera views میں اشیا کو پکڑنے اور رکھنے کا تجربہ کروں گا، اور geometry و uncertainty سے طے کروں گا کہ کب عمل کرنا ہے اور کب دوبارہ دیکھنا ہے۔",
+              "evaluation": "Occlusion اور simulation و حقیقت کے فرق میں کامیابی اور بحالی کا موازنہ کروں گا، اور دیکھوں گا کہ ناکام عمل پہچانا جاتا ہے یا نہیں۔"
+            }
           }
         ],
         "education": [
@@ -3191,7 +3347,11 @@
         "skillsExpand": "সব দক্ষতা দেখান",
         "skillsCollapse": "কম দক্ষতা দেখান",
         "notesTitle": "গবেষণার নোট",
-        "notesStatus": "মনের কিছু ভাবনা"
+        "notesStatus": "মনের কিছু ভাবনা",
+        "researchMore": "আরও জানুন",
+        "researchLess": "কম দেখান",
+        "researchApproach": "সম্ভাব্য পদ্ধতি",
+        "researchEvaluation": "কীভাবে যাচাই করব"
       },
       "content": {
         "about": [
@@ -3210,7 +3370,11 @@
               "Failure analysis",
               "Rollback"
             ],
-            "className": "agent"
+            "className": "agent",
+            "details": {
+              "approach": "Prompt, memory ও tool use-এর প্রতিটি পরিবর্তন unseen tasks-এ একটি নির্দিষ্ট baseline-এর সঙ্গে তুলনা করে ব্যর্থতাগুলো নথিবদ্ধ করতে চাই।",
+              "evaluation": "বিভিন্ন কাজে উন্নতির পাশাপাশি খরচ ও নির্ভরযোগ্যতা দেখব; যে পরিবর্তন নতুন পরিস্থিতিতে কাজ করে না, তা ফিরিয়ে নেওয়া উচিত।"
+            }
           },
           {
             "number": "02",
@@ -3222,7 +3386,11 @@
               "Geometric priors",
               "Uncertainty estimation"
             ],
-            "className": "physical"
+            "className": "physical",
+            "details": {
+              "approach": "অসম্পূর্ণ camera view-তে বস্তু ধরা ও রাখার কাজ পরীক্ষা করব; geometry ও uncertainty দিয়ে কখন কাজ করতে হবে আর কখন আবার দেখতে হবে তা নির্ধারণ করব।",
+              "evaluation": "আড়াল ও simulation-reality পার্থক্যে কাজের সাফল্য এবং পুনরুদ্ধার তুলনা করব, এবং ব্যর্থ কাজ শনাক্ত হয় কি না যাচাই করব।"
+            }
           }
         ],
         "education": [

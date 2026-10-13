@@ -26,6 +26,10 @@
         "Failure analysis",
         "Rollback"
       ],
+      "details": {
+        "approach": "I would compare changes to prompts, memory and tool use against a fixed baseline on unseen tasks, recording each failure.",
+        "evaluation": "I would look for gains across task types while tracking cost and reliability; changes that do not generalize should be rolled back."
+      },
       "className": "agent"
     },
     {
@@ -38,6 +42,10 @@
         "Geometric priors",
         "Uncertainty estimation"
       ],
+      "details": {
+        "approach": "I would test pick-and-place under incomplete views, using geometry and uncertainty to decide when to act or observe again.",
+        "evaluation": "I would compare task completion and recovery under occlusion and simulation-to-real gaps, and check whether failed actions are detected."
+      },
       "className": "physical"
     }
   ],
