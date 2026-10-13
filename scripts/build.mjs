@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { illustration, illustrationSprite } from './illustrations.mjs';
 import { loadSkillIcons, skillIllustrationSprite } from './skill-icons.mjs';
 import { uiIcon, uiIllustrationSprite } from './ui-icons.mjs';
+import { controlIcon } from './control-icons.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const data = JSON.parse(await readFile(resolve(root, 'content.json'), 'utf8'));
@@ -47,6 +48,7 @@ const renderHobbies = items => items.map(item => `<article class="hobby">${illus
 const renderGallery = items => items.map((item, i) => `<figure class="photo-card"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" alt="${escape(item.alt)}" width="720" height="960" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">${uiIcon('external')}</span></a><figcaption><div class="photo-caption-copy"><span class="photo-title">${escape(item.title)}</span><p class="photo-caption">${escape(item.caption)}</p></div><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`).join('\n');
 
 const values = {
+  ...Object.fromEntries(['external','down','chevron','moon','sun','menu','close','mail'].map(name => ['control' + name[0].toUpperCase() + name.slice(1) + 'Icon', controlIcon(name)])),
   illustrationLibrary: illustrationSprite() + skillIllustrationSprite() + uiIllustrationSprite(),
   externalIcon: uiIcon('external'),
   downIcon: uiIcon('down'),
@@ -74,7 +76,7 @@ const values = {
   education: renderEducation(data.education),
   hobbies: renderHobbies(data.hobbies),
   gallery: renderGallery(data.gallery),
-  emailLink: data.email ? `<a class="text-link" href="mailto:${escape(data.email)}"><span data-i18n="closingEmail">Write me</span> ${uiIcon('external')}</a>` : ''
+  emailLink: data.email ? `<a class="action-link contact-link" href="mailto:${escape(data.email)}"><span data-i18n="closingEmail">Write me</span> ${controlIcon('mail')}</a>` : ''
 };
 
 // --- Runtime dictionary: per language, the UI strings plus pre-rendered sections.
@@ -116,7 +118,7 @@ for (const name of new Set(['avatar', data.heroImage, ...data.gallery.map(item =
 }
 for (const item of [...data.skills, ...data.agentSkills]) await access(resolve(root, 'dist/assets/skills', `${item.badge}.svg`));
 await writeFile(resolve(root, 'dist/index.html'), html);
-for (const file of ['style.css', 'app.js', 'busuanzi.pure.mini.js']) await copyFile(resolve(root, 'src', file), resolve(root, 'dist', file));
+for (const file of ['style.css', 'controls.css', 'app.js', 'busuanzi.pure.mini.js']) await copyFile(resolve(root, 'src', file), resolve(root, 'dist', file));
 await writeFile(resolve(root, 'dist/.nojekyll'), '');
 await writeFile(resolve(root, 'dist/robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${data.siteUrl}/sitemap.xml\n`);
 await writeFile(resolve(root, 'dist/sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${escape(data.siteUrl)}/</loc></url></urlset>\n`);
