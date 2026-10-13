@@ -6,8 +6,8 @@
   "siteUrl": "https://gofish040821.github.io",
   "updated": "2026.10",
   "profileNote": "{age} · Male · Notes of 2026",
-  "headline": "Understanding intelligence through math,<br>exploring the world through curiosity.",
-  "intro": "A master's student in mathematics, focused on Agent RSI and Physical AI.<br>I like to ask how intelligence learns — and to walk into real mountains and everyday life.",
+  "headline": "Mathematics master's student exploring Agent RSI and Physical AI.",
+  "intro": "I turn to mathematics for clarity, and to mountains and daily life for perspective.",
   "heroImage": "mountains",
   "heroCaption": "Give my steps to the wild, and my curiosity to the world.",
   "about": [
@@ -195,6 +195,34 @@
   ],
   "gallery": [
     {
+      "image": "summit",
+      "title": "Above the clouds, another sky",
+      "caption": "Tianchi left the wind to finish the sentence.",
+      "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
+      "position": "50% 45%"
+    },
+    {
+      "image": "graduation-family",
+      "title": "The people behind the milestone",
+      "caption": "A graduation photo, and the two people who made the long road possible.",
+      "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
+      "position": "50% 48%"
+    },
+    {
+      "image": "puppy-night",
+      "title": "The smallest guest",
+      "caption": "One summer night, trust weighed almost nothing.",
+      "alt": "Gofish holding a small puppy in a courtyard at night",
+      "position": "50% 44%"
+    },
+    {
+      "image": "seaside-fishing",
+      "title": "Waiting on the blue",
+      "caption": "The sea kept its answer; I kept the line.",
+      "alt": "Gofish fishing from a wooden pier by the sea",
+      "position": "38% 50%"
+    },
+    {
       "image": "mountains",
       "title": "High enough for silence",
       "caption": "In the Dolomites, even the noise learns to disappear.",
@@ -251,39 +279,11 @@
       "position": "50% 57%"
     },
     {
-      "image": "summit",
-      "title": "Above the clouds, another sky",
-      "caption": "Tianchi left the wind to finish the sentence.",
-      "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
-      "position": "50% 45%"
-    },
-    {
       "image": "aircraft",
       "title": "Childhood curiosity, full scale",
       "caption": "The Y-20 made the idea of flight feel tangible.",
       "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
       "position": "50% 50%"
-    },
-    {
-      "image": "puppy-night",
-      "title": "The smallest guest",
-      "caption": "One summer night, trust weighed almost nothing.",
-      "alt": "Gofish holding a small puppy in a courtyard at night",
-      "position": "50% 44%"
-    },
-    {
-      "image": "graduation-family",
-      "title": "The people behind the milestone",
-      "caption": "A graduation photo, and the two people who made the long road possible.",
-      "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
-      "position": "50% 48%"
-    },
-    {
-      "image": "seaside-fishing",
-      "title": "Waiting on the blue",
-      "caption": "The sea kept its answer; I kept the line.",
-      "alt": "Gofish fishing from a wooden pier by the sea",
-      "position": "38% 50%"
     },
     {
       "image": "flatbread",

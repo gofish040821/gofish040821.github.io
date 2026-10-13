@@ -1,0 +1,225 @@
+/* Locally hosted Adobe Source fonts; OFL licenses live beside the font files. */
+@font-face{font-family:"Source Serif 4";src:url("./assets/fonts/source-serif-4-regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("./assets/fonts/source-sans-3-regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+:root{
+  --serif:"Source Serif 4",Georgia,"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,serif;
+  --sans:"Source Sans 3","Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --reading-width:62ch;
+}
+body{font-size:17px;line-height:1.8}
+.wrap{width:min(1160px,calc(100% - 96px))}
+.brand{font-family:var(--serif);letter-spacing:-.035em}
+.desktop-nav a,.site-header .header-github,.site-header .lang-toggle{font-size:15px}
+.hero{
+  direction:ltr;grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);
+  gap:clamp(42px,5vw,76px);min-height:0;padding-block:88px 100px;
+}
+.hero-copy{min-width:0}
+.hero h1{margin-top:0}
+.hello{font:400 17px/1.6 var(--sans);letter-spacing:0;color:var(--muted);margin-bottom:10px}
+.name{display:inline-block;direction:ltr;unicode-bidi:isolate;font:400 clamp(88px,8vw,118px)/1.06 var(--serif);letter-spacing:-.065em}
+.hero-headline{
+  font:400 clamp(24px,2.1vw,28px)/1.45 var(--serif);letter-spacing:-.015em;
+  margin-top:28px;max-width:29ch;text-wrap:pretty;overflow-wrap:normal;
+}
+.hero-description{font-size:17px;line-height:1.8;max-width:43ch;margin-top:18px;text-wrap:pretty;overflow-wrap:break-word}
+.research-name{white-space:nowrap;font-family:"Source Serif 4",Georgia,serif;letter-spacing:normal}
+.hero-actions{margin-top:30px;gap:12px}
+.action-link{font-family:var(--sans);font-size:16px;letter-spacing:0;border-radius:7px}
+.hero-figure{margin:0;transform:rotate(.35deg);padding:10px 10px 0;box-shadow:0 5px 18px #4a3e2208,0 0 0 1px var(--line)}
+.photo-mat{aspect-ratio:1.04}
+.photo-mat img{object-position:43% 65%}
+.hero-figure figcaption{font:400 15px/1.7 var(--serif);padding:16px 5px 17px;text-wrap:pretty}
+.photo-label{font-size:10px;letter-spacing:.12em;left:14px;top:14px}
+
+/* Sections have distinct rhythms, with rules reserved for major boundaries. */
+.section{padding-block:76px}
+.section-number{font-size:12px;letter-spacing:.12em;margin-bottom:17px;line-height:1.5}
+.section h2,.life-section h2{font:400 clamp(30px,2.7vw,37px)/1.25 var(--serif);letter-spacing:-.03em}
+.illustrated-heading{grid-template-columns:36px minmax(0,1fr);column-gap:13px}
+.illustrated-heading>.section-illustration{width:36px;height:36px}
+.about,.education{grid-template-columns:minmax(0,.85fr) minmax(0,1.7fr);gap:72px}
+.about-main{max-width:62ch}
+.about-main p,.about-main p:first-child{font-size:17px;line-height:1.85;margin-bottom:18px}
+.about-main p:last-child{margin-bottom:0}
+.aside-note{font-size:15px;line-height:1.8;max-width:27ch;margin-top:20px}
+.profile-note{font-size:13px;margin-top:22px}
+.section-top{margin-bottom:38px}
+.research-grid{gap:54px}
+.research-card,.research-card.physical{padding:0 0 10px;border:0;display:flex;flex-direction:column}
+.research-card-top{min-height:80px;margin-bottom:18px;align-items:center}
+.research-illustration{width:88px;height:88px;margin:0 8px 0 0}
+.card-marker{font-size:18px;padding:0}
+.research-card h3{font:400 29px/1.3 var(--serif);letter-spacing:-.025em}
+.research-subtitle{font-size:14px;line-height:1.7;margin-top:7px}
+.research-description{font-size:17px;line-height:1.8;margin-top:20px;max-width:55ch;text-wrap:pretty}
+.research-card .tags{margin-top:20px;gap:7px 16px;margin-bottom:24px}
+.research-card .tags span{font-size:12px;line-height:1.7;padding:0;border:0;border-radius:0;color:var(--muted)}
+.research-more{margin-top:auto;padding-top:13px;min-height:44px;font-size:14px}
+.research-details{margin-top:10px;padding:18px}
+.research-detail h4{margin:0;font-size:14px}
+.research-detail p{font-size:15px;line-height:1.8}
+.research-notes{margin-top:44px;padding-top:30px}
+.notes-heading{margin-bottom:6px}
+.notes-heading h3{font-size:23px;line-height:1.4}
+.notes-status{font-size:13px}
+.notes-list{column-gap:54px}
+.research-note{padding-top:20px;grid-template-columns:20px minmax(0,1fr);gap:12px}
+.research-note h4{font-size:21px;line-height:1.45;letter-spacing:-.015em}
+.research-note p{font-size:15px;line-height:1.8;margin-top:10px}
+.note-index{font-size:13px}
+.research-skills{border:0;margin-top:38px;padding-top:0}
+.research-skills-heading{gap:10px;margin-bottom:14px}
+.tools-illustration{width:29px;height:29px}
+.research-skills h3{font:400 17px/1.5 var(--sans);letter-spacing:0;color:var(--muted)}
+.skill-badges{gap:8px}
+.skill-badges .skill-badge{background:transparent;min-height:32px;padding:4px 10px;font-size:13px;border-color:var(--line)}
+.skills-toggle{margin:14px 0 0;min-height:40px;padding:5px 0;border:0;white-space:normal;font-size:14px;gap:12px}
+.skills-toggle:hover{background:transparent;text-decoration:underline;text-underline-offset:5px}
+.education{padding-block:60px 66px}
+.timeline{margin-top:0;padding-inline-start:24px;padding-inline-end:0;border:0;border-inline-start:1px solid var(--line)}
+.education-item{padding-bottom:24px}
+.education-item:last-child{border:0;padding-top:8px}
+.education-item:before,.education-item:last-child:before{left:auto;right:auto;inset-inline-start:-30px;top:9px}
+.education-item:last-child:before{top:17px}
+.education-meta{margin-bottom:7px;gap:5px 16px}
+.education-dates{font-size:18px;letter-spacing:0;direction:ltr;unicode-bidi:isolate}
+.education-degree,.education-note{font-size:14px;line-height:1.75}
+.education-item h3{font-size:24px;line-height:1.4;letter-spacing:-.015em}
+.school-abbr{font-size:12px;line-height:1.7;margin-top:5px}
+.education-note{margin-top:9px}
+
+/* Photographs keep their native proportions and their complete subjects. */
+.life-section{padding-block:76px 70px;border-bottom:0}
+.hobbies{gap:32px;margin:34px 0 55px}
+.hobby{border:0;padding:0}
+.hobby-illustration{width:80px;height:80px;margin-bottom:17px}
+.hobby h3{font:400 22px/1.4 var(--serif);letter-spacing:-.015em}
+.hobby p{font-size:15px;line-height:1.8;max-width:26ch;margin-top:9px}
+.gallery{grid-template-columns:repeat(12,minmax(0,1fr));gap:44px 32px;align-items:center}
+.photo-card{grid-column:span 4}
+.photo-card:nth-child(n){padding-top:0}
+.photo-card:nth-child(-n+4){grid-column:span 5}
+.photo-card:nth-child(2),.photo-card:nth-child(4){grid-column:span 7}
+.photo-link{aspect-ratio:auto;border-radius:2px;background:transparent}
+.photo-link img{width:100%;height:auto;object-fit:contain;transform:none;transition:opacity .2s ease}
+.photo-link:hover img{transform:none;opacity:.94}
+.photo-card figcaption{gap:16px;margin-top:14px}
+.photo-title{font:400 21px/1.4 var(--serif);letter-spacing:-.012em;text-wrap:pretty}
+.photo-caption{font-size:14px;line-height:1.75;margin-top:7px;max-width:56ch}
+.photo-number{font-size:12px;padding-top:4px;direction:ltr;unicode-bidi:isolate}
+.gallery-toggle{margin-top:38px;font-size:15px}
+.closing{padding-block:78px 72px}
+.closing h2{font-size:34px;line-height:1.4;letter-spacing:-.025em}
+.closing>p{font-size:16px;max-width:58ch;margin-top:16px}
+.closing-links{margin-top:28px}
+.site-footer{font-size:13px;gap:20px;padding-block:24px;align-items:center}
+.footer-signature{display:flex;align-items:center;gap:13px;max-width:100%}
+.fish-mark{display:block;width:38px;height:auto;flex-shrink:0;color:var(--ink)}
+.footer-separator{margin-inline:8px}
+
+/* Script-specific spacing: do not track or break connected scripts. */
+html:lang(zh){--serif:"Source Serif 4","Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,serif}
+html:lang(ja){--serif:"Source Serif 4","Noto Serif JP","Yu Mincho","Hiragino Mincho ProN",serif;--sans:"Source Sans 3","Yu Gothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif}
+html:lang(ko){--serif:"Source Serif 4","Noto Serif KR","Batang",serif;--sans:"Source Sans 3","Malgun Gothic","Apple SD Gothic Neo",sans-serif;word-break:keep-all}
+html:lang(ar){--serif:"Noto Naskh Arabic","Traditional Arabic","Geeza Pro",serif;--sans:"Segoe UI","Noto Sans Arabic",Tahoma,sans-serif}
+html:lang(ur){--serif:"Noto Nastaliq Urdu","Urdu Typesetting","Traditional Arabic",serif;--sans:"Segoe UI","Noto Sans Arabic",Tahoma,sans-serif}
+html:lang(hi){--serif:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;--sans:"Nirmala UI","Noto Sans Devanagari",Mangal,sans-serif}
+html:lang(bn){--serif:"Noto Serif Bengali","Nirmala UI",Vrinda,serif;--sans:"Nirmala UI","Noto Sans Bengali",Vrinda,sans-serif}
+.brand,.name{font-family:"Source Serif 4",Georgia,serif}
+html:is(:lang(zh),:lang(ja),:lang(ko)) :is(.hero-headline,.section h2,.life-section h2,.research-card h3,.research-note h4,.hobby h3,.photo-title,.closing h2){letter-spacing:0;line-height:1.55;line-break:strict;word-break:normal}
+html:is(:lang(zh),:lang(ja),:lang(ko)) :is(.hero-description,.about-main p,.research-description,.hobby p,.photo-caption){line-height:1.95}
+html:is(:lang(ar),:lang(ur),:lang(hi),:lang(bn)) :is(.hero-headline,.section h2,.life-section h2,.research-card h3,.research-note h4,.education-item h3,.hobby h3,.photo-title,.closing h2){letter-spacing:0;line-height:1.7;overflow-wrap:break-word}
+html:is(:lang(ar),:lang(ur),:lang(hi),:lang(bn)) :is(.hero-description,.about-main p,.research-description,.research-note p,.photo-caption,.action-link){line-height:1.95;letter-spacing:0}
+html:lang(ur) :is(.hero-headline,.section h2,.life-section h2,.research-note h4,.photo-title){line-height:2}
+html:is(:lang(ar),:lang(ur)) .hero-copy,html:is(:lang(ar),:lang(ur)) .hero-figure figcaption{direction:rtl;text-align:right}
+[dir="rtl"] .timeline{padding-right:0;margin-right:0;margin-left:0;padding-inline-start:24px}
+[dir="rtl"] .education-item:before{right:auto;inset-inline-start:-30px}
+[dir="rtl"] .research-illustration{margin-inline-start:0;margin-inline-end:8px}
+[dir="rtl"] .section-number{letter-spacing:0}
+
+@media(max-width:1100px){
+  .wrap{width:calc(100% - 64px)}
+  .hero{gap:38px;padding-block:60px 74px}
+  .about,.education{gap:40px;grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr)}
+  .research-grid,.notes-list{column-gap:36px}
+  .hobbies{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
+  .gallery{gap:34px 24px}
+}
+@media(max-width:760px){
+  body{font-size:16px}
+  .wrap{width:calc(100% - 40px)}
+  .hero{display:flex;padding-block:44px 54px;gap:36px}
+  .hero-copy{width:100%}
+  .hello{font-size:16px;margin-bottom:8px}
+  .name{font-size:clamp(76px,18vw,100px)}
+  .hero-headline{font-size:25px;line-height:1.45;max-width:30ch;margin-top:24px}
+  .hero-description{font-size:16px;line-height:1.85;max-width:44ch;margin-top:16px}
+  .hero-actions{margin-top:24px}
+  .hero-figure{width:100%;max-width:520px;transform:none;padding:8px 8px 0}
+  .photo-mat{aspect-ratio:1.15}
+  .hero-figure figcaption{font-size:14px;padding:13px 4px 14px}
+  .section{padding-block:48px}
+  .section-number{font-size:11px;margin-bottom:13px}
+  .section h2,.life-section h2{font-size:30px}
+  .illustrated-heading{grid-template-columns:32px minmax(0,1fr);column-gap:11px}
+  .illustrated-heading>.section-illustration{width:32px;height:32px}
+  .about,.education{display:block}
+  .about-main{margin-top:27px}
+  .about-main p,.about-main p:first-child{font-size:16px;line-height:1.9}
+  .profile-note{margin-top:15px}
+  .section-top{margin-bottom:28px}
+  .research-grid{grid-template-columns:1fr;gap:28px}
+  .research-card,.research-card.physical{padding:0 0 5px}
+  .research-card+.research-card{padding-top:25px;border-top:1px solid var(--line)}
+  .research-card h3{font-size:28px}
+  .research-card-top{min-height:70px;margin-bottom:10px}
+  .research-illustration{width:80px;height:80px}
+  .research-description{font-size:16px;margin-top:16px}
+  .research-card .tags{margin-bottom:17px}
+  .research-notes{margin-top:30px;padding-top:25px}
+  .notes-list{grid-template-columns:1fr;gap:0}
+  .research-note{padding-top:18px}
+  .research-note+.research-note{margin-top:16px}
+  .research-note h4{font-size:21px}
+  .research-skills{margin-top:28px}
+  .skill-badges .skill-badge{font-size:13px}
+  .timeline{margin-top:28px}
+  .education-item h3{font-size:23px}
+  .education-degree{font-size:14px}
+  .life-section{padding-block:48px}
+  .hobbies{gap:27px 22px;margin:29px 0 38px}
+  .hobby-illustration{width:72px;height:72px;margin-bottom:12px}
+  .hobby h3{font-size:21px}
+  .hobby p{font-size:14px}
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 20px;align-items:start}
+  .photo-card:nth-child(n){grid-column:auto}
+  .photo-card figcaption{gap:10px;margin-top:12px}
+  .photo-title{font-size:19px}
+  .photo-caption{font-size:14px}
+  .closing{padding-block:52px}
+  .closing h2{font-size:30px}
+  .closing>p:not(.eyebrow){max-width:36ch;font-size:16px}
+  .site-footer{align-items:flex-start;font-size:12px;gap:14px;padding-block:22px}
+  .fish-mark{width:34px}
+  .footer-signature{gap:10px}
+}
+@media(max-width:520px){
+  .gallery{grid-template-columns:1fr;gap:34px}
+  .photo-title{font-size:21px}
+  .photo-caption{max-width:none}
+  .hero-actions{grid-template-columns:1fr}
+}
+@media(max-width:360px){
+  .wrap{width:calc(100% - 32px)}
+  .hobbies{grid-template-columns:1fr 1fr;gap:25px 16px}
+  .hobby h3{font-size:20px}
+  .site-header .lang-toggle{padding-inline:6px}
+  .hero-headline{font-size:24px}
+}
+@media print{
+  .hero{padding-block:25px}
+  .section,.life-section{padding-block:25px}
+  .photo-card{break-inside:avoid}
+  .photo-link img{opacity:1}
+}

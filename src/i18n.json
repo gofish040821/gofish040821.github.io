@@ -127,8 +127,8 @@
         "statsViews": "Total visits",
         "statsVisitors": "Visitors",
         "profileNote": "{age} · Male · Notes of 2026",
-        "headline": "Understanding intelligence through math,<br>exploring the world through curiosity.",
-        "intro": "A master's student in mathematics, focused on Agent RSI and Physical AI.<br>I like to ask how intelligence learns — and to walk into real mountains and everyday life.",
+        "headline": "Mathematics master's student exploring Agent RSI and Physical AI.",
+        "intro": "I turn to mathematics for clarity, and to mountains and daily life for perspective.",
         "heroCaption": "Give my steps to the wild, and my curiosity to the world.",
         "closing": "Stay curious, grow slowly.",
         "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas.",
@@ -224,6 +224,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "title": "Above the clouds, another sky",
+            "caption": "Tianchi left the wind to finish the sentence.",
+            "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
+            "position": "50% 45%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "The people behind the milestone",
+            "caption": "A graduation photo, and the two people who made the long road possible.",
+            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
+            "position": "50% 48%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "The smallest guest",
+            "caption": "One summer night, trust weighed almost nothing.",
+            "alt": "Gofish holding a small puppy in a courtyard at night",
+            "position": "50% 44%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Waiting on the blue",
+            "caption": "The sea kept its answer; I kept the line.",
+            "alt": "Gofish fishing from a wooden pier by the sea",
+            "position": "38% 50%"
+          },
+          {
             "image": "mountains",
             "title": "High enough for silence",
             "caption": "In the Dolomites, even the noise learns to disappear.",
@@ -280,39 +308,11 @@
             "position": "50% 57%"
           },
           {
-            "image": "summit",
-            "title": "Above the clouds, another sky",
-            "caption": "Tianchi left the wind to finish the sentence.",
-            "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
-            "position": "50% 45%"
-          },
-          {
             "image": "aircraft",
             "title": "Childhood curiosity, full scale",
             "caption": "The Y-20 made the idea of flight feel tangible.",
             "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
             "position": "50% 50%"
-          },
-          {
-            "image": "puppy-night",
-            "title": "The smallest guest",
-            "caption": "One summer night, trust weighed almost nothing.",
-            "alt": "Gofish holding a small puppy in a courtyard at night",
-            "position": "50% 44%"
-          },
-          {
-            "image": "graduation-family",
-            "title": "The people behind the milestone",
-            "caption": "A graduation photo, and the two people who made the long road possible.",
-            "alt": "Gofish celebrating graduation with his parents at Dalian University of Technology",
-            "position": "50% 48%"
-          },
-          {
-            "image": "seaside-fishing",
-            "title": "Waiting on the blue",
-            "caption": "The sea kept its answer; I kept the line.",
-            "alt": "Gofish fishing from a wooden pier by the sea",
-            "position": "38% 50%"
           },
           {
             "image": "flatbread",
@@ -374,8 +374,8 @@
         "statsViews": "总访问量",
         "statsVisitors": "访客数",
         "profileNote": "{age} 岁 · 男生 · 2026 年记",
-        "headline": "以数学理解智能，<br>以好奇探索世界。",
-        "intro": "数学专业硕士生，关注 Agent RSI 与 Physical AI。<br>喜欢追问智能如何学习，也喜欢走进真实的山川与日常。",
+        "headline": "数学硕士生，关注 Agent RSI 与 Physical AI。",
+        "intro": "用数学梳理问题，也从山川与日常中获得新的视角。",
         "heroCaption": "把脚步交给山野，把好奇留给世界。",
         "closing": "保持好奇，慢慢生长。",
         "closingText": "关于数学、AI，或者下一段旅程，期待遇见有趣的想法。",
@@ -471,6 +471,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "title": "云上还有一片天",
+            "caption": "长白山天池把没说完的话交给了风。",
+            "alt": "长白山天池：Gofish 戴着墨镜站在山间观景台上",
+            "position": "50% 45%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "里程碑背后的人",
+            "caption": "一张毕业照，和陪我走到这里的两个人。",
+            "alt": "Gofish 在大连理工大学与父母拍摄毕业照",
+            "position": "50% 48%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "今晚最小的客人",
+            "caption": "一个夏夜，信任轻得可以单手托起。",
+            "alt": "Gofish 夜晚在院子里抱着一只小狗",
+            "position": "50% 44%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "等海的回信",
+            "caption": "海没有立刻回答，我也没有收线。",
+            "alt": "Gofish 坐在海边木栈桥上钓鱼",
+            "position": "38% 50%"
+          },
+          {
             "image": "mountains",
             "title": "高到足够安静",
             "caption": "在多洛米蒂，连喧闹也学会了消失。",
@@ -527,39 +555,11 @@
             "position": "50% 57%"
           },
           {
-            "image": "summit",
-            "title": "云上还有一片天",
-            "caption": "长白山天池把没说完的话交给了风。",
-            "alt": "长白山天池：Gofish 戴着墨镜站在山间观景台上",
-            "position": "50% 45%"
-          },
-          {
             "image": "aircraft",
             "title": "童年的好奇，等比例放大",
             "caption": "运-20让“飞行”忽然变得可以触摸。",
             "alt": "运-20运输机：Gofish 站在户外展出的飞机前",
             "position": "50% 50%"
-          },
-          {
-            "image": "puppy-night",
-            "title": "今晚最小的客人",
-            "caption": "一个夏夜，信任轻得可以单手托起。",
-            "alt": "Gofish 夜晚在院子里抱着一只小狗",
-            "position": "50% 44%"
-          },
-          {
-            "image": "graduation-family",
-            "title": "里程碑背后的人",
-            "caption": "一张毕业照，和陪我走到这里的两个人。",
-            "alt": "Gofish 在大连理工大学与父母拍摄毕业照",
-            "position": "50% 48%"
-          },
-          {
-            "image": "seaside-fishing",
-            "title": "等海的回信",
-            "caption": "海没有立刻回答，我也没有收线。",
-            "alt": "Gofish 坐在海边木栈桥上钓鱼",
-            "position": "38% 50%"
           },
           {
             "image": "flatbread",
@@ -621,8 +621,8 @@
         "statsViews": "Visites totales",
         "statsVisitors": "Visiteurs",
         "profileNote": "{age} ans · Homme · Notes de 2026",
-        "headline": "Comprendre l'intelligence par les maths,<br>explorer le monde par la curiosité.",
-        "intro": "Étudiant en master de mathématiques, passionné par l'Agent RSI et la Physical AI.<br>J'aime me demander comment l'intelligence apprend — et partir vers de vraies montagnes et le quotidien.",
+        "headline": "Étudiant en master de mathématiques, intéressé par Agent RSI et Physical AI.",
+        "intro": "Les mathématiques m’aident à y voir clair ; la montagne et le quotidien m’offrent d’autres perspectives.",
         "heroCaption": "Mes pas vers la montagne, ma curiosité vers le monde.",
         "closing": "Rester curieux, grandir lentement.",
         "closingText": "Sur les mathématiques, l'IA ou le prochain voyage — j'ai hâte d'échanger des idées intéressantes.",
@@ -718,6 +718,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "title": "Au-dessus des nuages, un autre ciel",
+            "caption": "Au lac Tianchi, le vent a terminé la phrase.",
+            "alt": "Lac Tianchi, mont Changbai：Gofish portant des lunettes de soleil sur un belvédère de montagne",
+            "position": "50% 45%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "Ceux derrière cette étape",
+            "caption": "Une photo de diplôme, avec ceux qui ont rendu le chemin possible.",
+            "alt": "Gofish fête son diplôme avec ses parents à l’Université de technologie de Dalian",
+            "position": "50% 48%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "Le plus petit invité",
+            "caption": "Un soir d’été, la confiance ne pesait presque rien.",
+            "alt": "Gofish tenant un petit chiot dans une cour la nuit",
+            "position": "50% 44%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Attendre la réponse du bleu",
+            "caption": "La mer gardait sa réponse ; je gardais la ligne.",
+            "alt": "Gofish pêche depuis un ponton en bois au bord de la mer",
+            "position": "38% 50%"
+          },
+          {
             "image": "mountains",
             "title": "Assez haut pour le silence",
             "caption": "Dans les Dolomites, même le bruit apprend à disparaître.",
@@ -774,39 +802,11 @@
             "position": "50% 57%"
           },
           {
-            "image": "summit",
-            "title": "Au-dessus des nuages, un autre ciel",
-            "caption": "Au lac Tianchi, le vent a terminé la phrase.",
-            "alt": "Lac Tianchi, mont Changbai：Gofish portant des lunettes de soleil sur un belvédère de montagne",
-            "position": "50% 45%"
-          },
-          {
             "image": "aircraft",
             "title": "La curiosité d’enfance, grandeur nature",
             "caption": "Le Y-20 a rendu le vol presque tangible.",
             "alt": "Avion de transport Y-20：Gofish debout devant un avion exposé en plein air",
             "position": "50% 50%"
-          },
-          {
-            "image": "puppy-night",
-            "title": "Le plus petit invité",
-            "caption": "Un soir d’été, la confiance ne pesait presque rien.",
-            "alt": "Gofish tenant un petit chiot dans une cour la nuit",
-            "position": "50% 44%"
-          },
-          {
-            "image": "graduation-family",
-            "title": "Ceux derrière cette étape",
-            "caption": "Une photo de diplôme, avec ceux qui ont rendu le chemin possible.",
-            "alt": "Gofish fête son diplôme avec ses parents à l’Université de technologie de Dalian",
-            "position": "50% 48%"
-          },
-          {
-            "image": "seaside-fishing",
-            "title": "Attendre la réponse du bleu",
-            "caption": "La mer gardait sa réponse ; je gardais la ligne.",
-            "alt": "Gofish pêche depuis un ponton en bois au bord de la mer",
-            "position": "38% 50%"
           },
           {
             "image": "flatbread",
@@ -868,8 +868,8 @@
         "statsViews": "Seitenaufrufe gesamt",
         "statsVisitors": "Besucher",
         "profileNote": "{age} · Männlich · Notizen von 2026",
-        "headline": "Intelligenz durch Mathematik verstehen,<br>die Welt mit Neugier erkunden.",
-        "intro": "Masterstudent der Mathematik, forscht zu Agent RSI und Physical AI.<br>Ich frage gern, wie Intelligenz lernt, und gehe gern hinaus in echte Berge und den Alltag.",
+        "headline": "Mathematik-Masterstudent mit Interesse an Agent RSI und Physical AI.",
+        "intro": "Mathematik hilft mir, Fragen zu klären; in den Bergen und im Alltag finde ich neue Perspektiven.",
         "heroCaption": "Meine Schritte der Wildnis, meine Neugier der Welt.",
         "closing": "Neugierig bleiben, langsam wachsen.",
         "closingText": "Über Mathematik, KI oder die nächste Reise — ich freue mich auf interessante Ideen.",
@@ -965,6 +965,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "title": "Über den Wolken ein weiterer Himmel",
+            "caption": "Am Tianchi-See ließ der Wind den Satz zu Ende sprechen.",
+            "alt": "Tianchi, Changbai-Gebirge：Gofish mit Sonnenbrille auf einer Bergaussichtsplattform",
+            "position": "50% 45%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "Die Menschen hinter dem Meilenstein",
+            "caption": "Ein Abschlussfoto mit den beiden, die den langen Weg möglich machten.",
+            "alt": "Gofish feiert seinen Abschluss mit seinen Eltern an der Technischen Universität Dalian",
+            "position": "50% 48%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "Der kleinste Gast",
+            "caption": "In einer Sommernacht wog Vertrauen fast nichts.",
+            "alt": "Gofish hält nachts in einem Hof einen kleinen Welpen",
+            "position": "50% 44%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Warten auf die Antwort des Meeres",
+            "caption": "Das Meer schwieg; die Leine blieb draußen.",
+            "alt": "Gofish angelt von einem Holzsteg am Meer",
+            "position": "38% 50%"
+          },
+          {
             "image": "mountains",
             "title": "Hoch genug für Stille",
             "caption": "In den Dolomiten lernt selbst der Lärm zu verschwinden.",
@@ -1021,39 +1049,11 @@
             "position": "50% 57%"
           },
           {
-            "image": "summit",
-            "title": "Über den Wolken ein weiterer Himmel",
-            "caption": "Am Tianchi-See ließ der Wind den Satz zu Ende sprechen.",
-            "alt": "Tianchi, Changbai-Gebirge：Gofish mit Sonnenbrille auf einer Bergaussichtsplattform",
-            "position": "50% 45%"
-          },
-          {
             "image": "aircraft",
             "title": "Kindliche Neugier in voller Größe",
             "caption": "Die Y-20 machte den Gedanken ans Fliegen greifbar.",
             "alt": "Transportflugzeug Y-20：Gofish vor einem im Freien ausgestellten Flugzeug",
             "position": "50% 50%"
-          },
-          {
-            "image": "puppy-night",
-            "title": "Der kleinste Gast",
-            "caption": "In einer Sommernacht wog Vertrauen fast nichts.",
-            "alt": "Gofish hält nachts in einem Hof einen kleinen Welpen",
-            "position": "50% 44%"
-          },
-          {
-            "image": "graduation-family",
-            "title": "Die Menschen hinter dem Meilenstein",
-            "caption": "Ein Abschlussfoto mit den beiden, die den langen Weg möglich machten.",
-            "alt": "Gofish feiert seinen Abschluss mit seinen Eltern an der Technischen Universität Dalian",
-            "position": "50% 48%"
-          },
-          {
-            "image": "seaside-fishing",
-            "title": "Warten auf die Antwort des Meeres",
-            "caption": "Das Meer schwieg; die Leine blieb draußen.",
-            "alt": "Gofish angelt von einem Holzsteg am Meer",
-            "position": "38% 50%"
           },
           {
             "image": "flatbread",
@@ -1115,8 +1115,8 @@
         "statsViews": "Visitas totales",
         "statsVisitors": "Visitantes",
         "profileNote": "{age} · Hombre · Notas de 2026",
-        "headline": "Entender la inteligencia con matemáticas,<br>explorar el mundo con curiosidad.",
-        "intro": "Estudiante de máster en matemáticas, centrado en Agent RSI y Physical AI.<br>Me gusta preguntarme cómo aprende la inteligencia, y caminar por montañas reales y por la vida cotidiana.",
+        "headline": "Estudiante de máster en matemáticas, interesado en Agent RSI y Physical AI.",
+        "intro": "Las matemáticas me ayudan a aclarar ideas; las montañas y la vida cotidiana, a verlas de otra manera.",
         "heroCaption": "Mis pasos a la montaña, mi curiosidad al mundo.",
         "closing": "Sigue con curiosidad, crece despacio.",
         "closingText": "Sobre matemáticas, IA o el próximo viaje, espero encontrar ideas interesantes.",
@@ -1212,6 +1212,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "title": "Sobre las nubes, otro cielo",
+            "caption": "En Tianchi, el viento terminó la frase.",
+            "alt": "Lago Tianchi, monte Changbai：Gofish con gafas de sol en un mirador de montaña",
+            "position": "50% 45%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "Quienes están detrás del logro",
+            "caption": "Una foto de graduación con quienes hicieron posible el camino.",
+            "alt": "Gofish celebra su graduación con sus padres en la Universidad Tecnológica de Dalian",
+            "position": "50% 48%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "El invitado más pequeño",
+            "caption": "Una noche de verano, la confianza casi no pesaba.",
+            "alt": "Gofish sostiene un cachorro en un patio por la noche",
+            "position": "50% 44%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "Esperando la respuesta del mar",
+            "caption": "El mar guardó su respuesta; yo mantuve la línea.",
+            "alt": "Gofish pesca desde un muelle de madera junto al mar",
+            "position": "38% 50%"
+          },
+          {
             "image": "mountains",
             "title": "Lo bastante alto para el silencio",
             "caption": "En los Dolomitas, hasta el ruido aprende a desaparecer.",
@@ -1268,39 +1296,11 @@
             "position": "50% 57%"
           },
           {
-            "image": "summit",
-            "title": "Sobre las nubes, otro cielo",
-            "caption": "En Tianchi, el viento terminó la frase.",
-            "alt": "Lago Tianchi, monte Changbai：Gofish con gafas de sol en un mirador de montaña",
-            "position": "50% 45%"
-          },
-          {
             "image": "aircraft",
             "title": "Curiosidad de infancia a tamaño real",
             "caption": "El Y-20 volvió tangible la idea de volar.",
             "alt": "Avión de transporte Y-20：Gofish de pie ante un avión en exposición al aire libre",
             "position": "50% 50%"
-          },
-          {
-            "image": "puppy-night",
-            "title": "El invitado más pequeño",
-            "caption": "Una noche de verano, la confianza casi no pesaba.",
-            "alt": "Gofish sostiene un cachorro en un patio por la noche",
-            "position": "50% 44%"
-          },
-          {
-            "image": "graduation-family",
-            "title": "Quienes están detrás del logro",
-            "caption": "Una foto de graduación con quienes hicieron posible el camino.",
-            "alt": "Gofish celebra su graduación con sus padres en la Universidad Tecnológica de Dalian",
-            "position": "50% 48%"
-          },
-          {
-            "image": "seaside-fishing",
-            "title": "Esperando la respuesta del mar",
-            "caption": "El mar guardó su respuesta; yo mantuve la línea.",
-            "alt": "Gofish pesca desde un muelle de madera junto al mar",
-            "position": "38% 50%"
           },
           {
             "image": "flatbread",
@@ -1362,8 +1362,8 @@
         "statsViews": "إجمالي الزيارات",
         "statsVisitors": "الزوار",
         "profileNote": "{age} · ذكر · ملاحظات 2026",
-        "headline": "فهم الذكاء عبر الرياضيات،<br>واستكشاف العالم عبر الفضول.",
-        "intro": "طالب ماجستير في الرياضيات، مهتم بموضوع Agent RSI والذكاء الفيزيائي Physical AI.<br>أحب أن أسأل كيف يتعلم الذكاء — وأن أمشي في جبال حقيقية وفي الحياة اليومية.",
+        "headline": "طالب ماجستير في الرياضيات، مهتم بـ Agent RSI وPhysical AI.",
+        "intro": "أستعين بالرياضيات لتوضيح الأفكار، وأجد في الجبال والحياة اليومية زوايا جديدة للنظر.",
         "heroCaption": "أمنح خطواتي للبرية، وفضولي للعالم.",
         "closing": "ابقَ فضوليًا، وانهَم ببطء.",
         "closingText": "عن الرياضيات أو الذكاء الاصطناعي أو الرحلة القادمة — أتطلع إلى أفكار مثيرة.",
@@ -1459,6 +1459,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "title": "فوق الغيوم سماء أخرى",
+            "caption": "عند بحيرة تيانتشي، تركت للريح إكمال الجملة.",
+            "alt": "بحيرة تيانتشي، جبل تشانغباي：Gofish يرتدي نظارة شمسية على منصة مشاهدة جبلية",
+            "position": "50% 45%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "من يقفون خلف المحطة",
+            "caption": "صورة تخرج مع من جعلا الطريق الطويل ممكناً.",
+            "alt": "غوفيش يحتفل بتخرجه مع والديه في جامعة داليان للتكنولوجيا",
+            "position": "50% 48%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "أصغر ضيف",
+            "caption": "في ليلة صيفية، كان وزن الثقة خفيفاً جداً.",
+            "alt": "غوفيش يحمل جرواً صغيراً في فناء ليلاً",
+            "position": "50% 44%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "انتظار جواب البحر",
+            "caption": "احتفظ البحر بجوابه، وأبقيت أنا الخيط.",
+            "alt": "غوفيش يصطاد من رصيف خشبي بجانب البحر",
+            "position": "38% 50%"
+          },
+          {
             "image": "mountains",
             "title": "عالٍ بما يكفي للصمت",
             "caption": "في الدولوميت، حتى الضجيج يتعلم كيف يختفي.",
@@ -1515,39 +1543,11 @@
             "position": "50% 57%"
           },
           {
-            "image": "summit",
-            "title": "فوق الغيوم سماء أخرى",
-            "caption": "عند بحيرة تيانتشي، تركت للريح إكمال الجملة.",
-            "alt": "بحيرة تيانتشي، جبل تشانغباي：Gofish يرتدي نظارة شمسية على منصة مشاهدة جبلية",
-            "position": "50% 45%"
-          },
-          {
             "image": "aircraft",
             "title": "فضول الطفولة بالحجم الكامل",
             "caption": "جعلت Y-20 فكرة الطيران قابلة للمس.",
             "alt": "طائرة النقل Y-20：Gofish واقف أمام طائرة معروضة في الهواء الطلق",
             "position": "50% 50%"
-          },
-          {
-            "image": "puppy-night",
-            "title": "أصغر ضيف",
-            "caption": "في ليلة صيفية، كان وزن الثقة خفيفاً جداً.",
-            "alt": "غوفيش يحمل جرواً صغيراً في فناء ليلاً",
-            "position": "50% 44%"
-          },
-          {
-            "image": "graduation-family",
-            "title": "من يقفون خلف المحطة",
-            "caption": "صورة تخرج مع من جعلا الطريق الطويل ممكناً.",
-            "alt": "غوفيش يحتفل بتخرجه مع والديه في جامعة داليان للتكنولوجيا",
-            "position": "50% 48%"
-          },
-          {
-            "image": "seaside-fishing",
-            "title": "انتظار جواب البحر",
-            "caption": "احتفظ البحر بجوابه، وأبقيت أنا الخيط.",
-            "alt": "غوفيش يصطاد من رصيف خشبي بجانب البحر",
-            "position": "38% 50%"
           },
           {
             "image": "flatbread",
@@ -1609,8 +1609,8 @@
         "statsViews": "総訪問数",
         "statsVisitors": "訪問者数",
         "profileNote": "{age}歳 · 男性 · 2026年の記録",
-        "headline": "数学で知能を理解し、<br>好奇心で世界を探る。",
-        "intro": "数学の修士課程に在籍し、Agent RSI と Physical AI に関心を持つ学生です。<br>知能がどのように学ぶのかを問い、本物の山や日常の中を歩くのが好きです。",
+        "headline": "数学の修士課程に在籍し、Agent RSI と Physical AI に関心があります。",
+        "intro": "数学で問いを整理し、山や日々の暮らしの中で新しい視点を見つけています。",
         "heroCaption": "足は山野へ、好奇心は世界へ。",
         "closing": "好奇心を持ち、ゆっくり育つ。",
         "closingText": "数学や AI、あるいは次の旅について、面白いアイデアとの出会いを楽しみにしています。",
@@ -1706,6 +1706,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "title": "雲の上に、もう一つの空",
+            "caption": "長白山の天池では、風が言葉の続きを引き受けた。",
+            "alt": "長白山の天池：山の展望台でサングラスをかける Gofish",
+            "position": "50% 45%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "節目の後ろにいる人たち",
+            "caption": "卒業写真と、ここまでの道を支えてくれた二人。",
+            "alt": "大連理工大学で両親と卒業を祝うGofish",
+            "position": "50% 48%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "いちばん小さな客",
+            "caption": "夏の夜、信頼は片手で持てるほど軽かった。",
+            "alt": "夜の中庭で小さな子犬を抱くGofish",
+            "position": "50% 44%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "海からの返事を待つ",
+            "caption": "海は黙ったまま。こちらも糸を上げなかった。",
+            "alt": "海辺の木製桟橋で釣りをするGofish",
+            "position": "38% 50%"
+          },
+          {
             "image": "mountains",
             "title": "静けさに届く高さ",
             "caption": "ドロミテでは、喧騒さえ消え方を覚える。",
@@ -1762,39 +1790,11 @@
             "position": "50% 57%"
           },
           {
-            "image": "summit",
-            "title": "雲の上に、もう一つの空",
-            "caption": "長白山の天池では、風が言葉の続きを引き受けた。",
-            "alt": "長白山の天池：山の展望台でサングラスをかける Gofish",
-            "position": "50% 45%"
-          },
-          {
             "image": "aircraft",
             "title": "子どもの好奇心を実物大で",
             "caption": "Y-20が「飛ぶ」という考えを触れられるものにした。",
             "alt": "Y-20輸送機：屋外展示の飛行機の前に立つ Gofish",
             "position": "50% 50%"
-          },
-          {
-            "image": "puppy-night",
-            "title": "いちばん小さな客",
-            "caption": "夏の夜、信頼は片手で持てるほど軽かった。",
-            "alt": "夜の中庭で小さな子犬を抱くGofish",
-            "position": "50% 44%"
-          },
-          {
-            "image": "graduation-family",
-            "title": "節目の後ろにいる人たち",
-            "caption": "卒業写真と、ここまでの道を支えてくれた二人。",
-            "alt": "大連理工大学で両親と卒業を祝うGofish",
-            "position": "50% 48%"
-          },
-          {
-            "image": "seaside-fishing",
-            "title": "海からの返事を待つ",
-            "caption": "海は黙ったまま。こちらも糸を上げなかった。",
-            "alt": "海辺の木製桟橋で釣りをするGofish",
-            "position": "38% 50%"
           },
           {
             "image": "flatbread",
@@ -1856,8 +1856,8 @@
         "statsViews": "총 방문수",
         "statsVisitors": "방문자 수",
         "profileNote": "{age}세 · 남성 · 2026년 기록",
-        "headline": "수학으로 지능을 이해하고,<br>호기심으로 세계를 탐험하기.",
-        "intro": "수학 석사 과정에 재학 중이며, Agent RSI와 Physical AI에 관심을 두고 있습니다.<br>지능이 어떻게 학습하는지 묻고, 진짜 산과 일상 속을 걷는 것을 좋아합니다.",
+        "headline": "수학 석사과정생으로, Agent RSI와 Physical AI에 관심이 있습니다.",
+        "intro": "수학으로 생각을 정리하고, 산과 일상에서 새로운 관점을 얻습니다.",
         "heroCaption": "발걸음은 산과 들로, 호기심은 세계로.",
         "closing": "호기심을 갖고, 천천히 자라기.",
         "closingText": "수학, AI, 그리고 다음 여행에 대해 — 흥미로운 아이디어를 만나기를 기대합니다.",
@@ -1953,6 +1953,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "title": "구름 위의 또 다른 하늘",
+            "caption": "창바이산 천지에서는 바람이 말을 마저 이었다.",
+            "alt": "창바이산 천지：산 전망대에서 선글라스를 쓴 Gofish",
+            "position": "50% 45%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "이정표 뒤의 사람들",
+            "caption": "졸업 사진 한 장, 그리고 여기까지 함께해 준 두 사람.",
+            "alt": "다롄이공대학교에서 부모님과 졸업을 축하하는 Gofish",
+            "position": "50% 48%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "가장 작은 손님",
+            "caption": "어느 여름밤, 믿음은 한 손에 들 만큼 가벼웠다.",
+            "alt": "밤의 마당에서 작은 강아지를 안고 있는 Gofish",
+            "position": "50% 44%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "바다의 답장을 기다리며",
+            "caption": "바다는 답을 미뤘고, 나도 낚싯줄을 거두지 않았다.",
+            "alt": "바닷가 나무 부두에서 낚시하는 Gofish",
+            "position": "38% 50%"
+          },
+          {
             "image": "mountains",
             "title": "고요에 닿을 만큼 높이",
             "caption": "돌로미티에서는 소음조차 사라지는 법을 배운다.",
@@ -2009,39 +2037,11 @@
             "position": "50% 57%"
           },
           {
-            "image": "summit",
-            "title": "구름 위의 또 다른 하늘",
-            "caption": "창바이산 천지에서는 바람이 말을 마저 이었다.",
-            "alt": "창바이산 천지：산 전망대에서 선글라스를 쓴 Gofish",
-            "position": "50% 45%"
-          },
-          {
             "image": "aircraft",
             "title": "어린 시절의 호기심, 실물 크기로",
             "caption": "Y-20은 비행이라는 생각을 손에 잡히게 했다.",
             "alt": "Y-20 수송기：야외 전시된 비행기 앞에 선 Gofish",
             "position": "50% 50%"
-          },
-          {
-            "image": "puppy-night",
-            "title": "가장 작은 손님",
-            "caption": "어느 여름밤, 믿음은 한 손에 들 만큼 가벼웠다.",
-            "alt": "밤의 마당에서 작은 강아지를 안고 있는 Gofish",
-            "position": "50% 44%"
-          },
-          {
-            "image": "graduation-family",
-            "title": "이정표 뒤의 사람들",
-            "caption": "졸업 사진 한 장, 그리고 여기까지 함께해 준 두 사람.",
-            "alt": "다롄이공대학교에서 부모님과 졸업을 축하하는 Gofish",
-            "position": "50% 48%"
-          },
-          {
-            "image": "seaside-fishing",
-            "title": "바다의 답장을 기다리며",
-            "caption": "바다는 답을 미뤘고, 나도 낚싯줄을 거두지 않았다.",
-            "alt": "바닷가 나무 부두에서 낚시하는 Gofish",
-            "position": "38% 50%"
           },
           {
             "image": "flatbread",
@@ -2103,8 +2103,8 @@
         "statsViews": "Всего посещений",
         "statsVisitors": "Посетители",
         "profileNote": "{age} · Мужчина · Заметки 2026",
-        "headline": "Понимать интеллект через математику,<br>исследовать мир через любопытство.",
-        "intro": "Магистрант математического направления, занимаюсь Agent RSI и Physical AI.<br>Люблю спрашивать, как интеллект учится, — и уходить в настоящие горы и повседневную жизнь.",
+        "headline": "Магистрант по математике, интересуюсь Agent RSI и Physical AI.",
+        "intro": "Математика помогает мне мыслить яснее, а горы и повседневная жизнь — смотреть на вещи иначе.",
         "heroCaption": "Отдам шаги дикой природе, а любопытство — миру.",
         "closing": "Оставайся любопытным, расти не спеша.",
         "closingText": "О математике, ИИ или следующем путешествии — буду рад интересным идеям.",
@@ -2200,6 +2200,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "title": "Над облаками ещё одно небо",
+            "caption": "У Тяньчи ветер закончил недосказанную фразу.",
+            "alt": "Озеро Тяньчи, гора Чанбайшань：Gofish в солнечных очках на горной смотровой площадке",
+            "position": "50% 45%"
+          },
+          {
+            "image": "graduation-family",
+            "title": "Люди за важной вехой",
+            "caption": "Выпускное фото с теми, кто сделал этот долгий путь возможным.",
+            "alt": "Gofish отмечает выпуск с родителями в Даляньском технологическом университете",
+            "position": "50% 48%"
+          },
+          {
+            "image": "puppy-night",
+            "title": "Самый маленький гость",
+            "caption": "Летней ночью доверие почти ничего не весило.",
+            "alt": "Gofish держит маленького щенка ночью во дворе",
+            "position": "50% 44%"
+          },
+          {
+            "image": "seaside-fishing",
+            "title": "В ожидании ответа моря",
+            "caption": "Море молчало; я не сматывал леску.",
+            "alt": "Gofish рыбачит с деревянного пирса у моря",
+            "position": "38% 50%"
+          },
+          {
             "image": "mountains",
             "title": "Достаточно высоко для тишины",
             "caption": "В Доломитах даже шум учится исчезать.",
@@ -2256,39 +2284,11 @@
             "position": "50% 57%"
           },
           {
-            "image": "summit",
-            "title": "Над облаками ещё одно небо",
-            "caption": "У Тяньчи ветер закончил недосказанную фразу.",
-            "alt": "Озеро Тяньчи, гора Чанбайшань：Gofish в солнечных очках на горной смотровой площадке",
-            "position": "50% 45%"
-          },
-          {
             "image": "aircraft",
             "title": "Детское любопытство в натуральную величину",
             "caption": "Y-20 сделал идею полёта почти осязаемой.",
             "alt": "Транспортный самолёт Y-20：Gofish стоит перед самолётом на открытой экспозиции",
             "position": "50% 50%"
-          },
-          {
-            "image": "puppy-night",
-            "title": "Самый маленький гость",
-            "caption": "Летней ночью доверие почти ничего не весило.",
-            "alt": "Gofish держит маленького щенка ночью во дворе",
-            "position": "50% 44%"
-          },
-          {
-            "image": "graduation-family",
-            "title": "Люди за важной вехой",
-            "caption": "Выпускное фото с теми, кто сделал этот долгий путь возможным.",
-            "alt": "Gofish отмечает выпуск с родителями в Даляньском технологическом университете",
-            "position": "50% 48%"
-          },
-          {
-            "image": "seaside-fishing",
-            "title": "В ожидании ответа моря",
-            "caption": "Море молчало; я не сматывал леску.",
-            "alt": "Gofish рыбачит с деревянного пирса у моря",
-            "position": "38% 50%"
           },
           {
             "image": "flatbread",
@@ -2350,8 +2350,8 @@
         "statsViews": "Visite totali",
         "statsVisitors": "Visitatori",
         "profileNote": "{age} · Uomo · Note del 2026",
-        "headline": "Comprendere l’intelligenza con la matematica,<br>esplorare il mondo con curiosità.",
-        "intro": "Studente magistrale in matematica, interessato ad Agent RSI e Physical AI.<br>Mi piace chiedere come l’intelligenza impari — e camminare tra montagne reali e vita quotidiana.",
+        "headline": "Studente magistrale in matematica, interessato ad Agent RSI e Physical AI.",
+        "intro": "La matematica mi aiuta a fare chiarezza; la montagna e la vita quotidiana mi offrono nuove prospettive.",
         "heroCaption": "Affido i miei passi alla natura e la mia curiosità al mondo.",
         "closing": "Restare curiosi, crescere lentamente.",
         "closingText": "Sulla matematica, sull’AI o sul prossimo viaggio — aspetto idee interessanti.",
@@ -2447,6 +2447,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "position": "50% 45%",
+            "title": "Sopra le nuvole, un altro cielo",
+            "caption": "Tianchi lasciò al vento il compito di finire la frase.",
+            "alt": "Tianchi del Monte Changbai: Gofish con occhiali da sole su un punto panoramico"
+          },
+          {
+            "image": "graduation-family",
+            "position": "50% 48%",
+            "title": "Le persone dietro il traguardo",
+            "caption": "Una foto di laurea, e le due persone che hanno reso possibile il lungo cammino.",
+            "alt": "Gofish festeggia la laurea con i genitori alla Dalian University of Technology"
+          },
+          {
+            "image": "puppy-night",
+            "position": "50% 44%",
+            "title": "L’ospite più piccolo",
+            "caption": "In una notte d’estate, la fiducia pesava quasi nulla.",
+            "alt": "Gofish tiene in braccio un piccolo cucciolo in un cortile di notte"
+          },
+          {
+            "image": "seaside-fishing",
+            "position": "38% 50%",
+            "title": "Aspettando sul blu",
+            "caption": "Il mare tenne per sé la risposta; io tenni la lenza.",
+            "alt": "Gofish pesca da un molo di legno sul mare"
+          },
+          {
             "image": "mountains",
             "position": "45% 60%",
             "title": "Abbastanza in alto per il silenzio",
@@ -2503,39 +2531,11 @@
             "alt": "Colosseo romano: Gofish fa un selfie davanti all’antico Colosseo"
           },
           {
-            "image": "summit",
-            "position": "50% 45%",
-            "title": "Sopra le nuvole, un altro cielo",
-            "caption": "Tianchi lasciò al vento il compito di finire la frase.",
-            "alt": "Tianchi del Monte Changbai: Gofish con occhiali da sole su un punto panoramico"
-          },
-          {
             "image": "aircraft",
             "position": "50% 50%",
             "title": "Curiosità d’infanzia, a grandezza naturale",
             "caption": "Lo Y-20 rese quasi tangibile l’idea del volo.",
             "alt": "Aereo da trasporto Y-20: Gofish davanti a un aereo in esposizione all’aperto"
-          },
-          {
-            "image": "puppy-night",
-            "position": "50% 44%",
-            "title": "L’ospite più piccolo",
-            "caption": "In una notte d’estate, la fiducia pesava quasi nulla.",
-            "alt": "Gofish tiene in braccio un piccolo cucciolo in un cortile di notte"
-          },
-          {
-            "image": "graduation-family",
-            "position": "50% 48%",
-            "title": "Le persone dietro il traguardo",
-            "caption": "Una foto di laurea, e le due persone che hanno reso possibile il lungo cammino.",
-            "alt": "Gofish festeggia la laurea con i genitori alla Dalian University of Technology"
-          },
-          {
-            "image": "seaside-fishing",
-            "position": "38% 50%",
-            "title": "Aspettando sul blu",
-            "caption": "Il mare tenne per sé la risposta; io tenni la lenza.",
-            "alt": "Gofish pesca da un molo di legno sul mare"
           },
           {
             "image": "flatbread",
@@ -2597,8 +2597,8 @@
         "statsViews": "Visitas totais",
         "statsVisitors": "Visitantes",
         "profileNote": "{age} · Masculino · Notas de 2026",
-        "headline": "Entender a inteligência pela matemática,<br>explorar o mundo pela curiosidade.",
-        "intro": "Mestrando em matemática, interessado em Agent RSI e Physical AI.<br>Gosto de perguntar como a inteligência aprende — e de caminhar por montanhas reais e pela vida cotidiana.",
+        "headline": "Mestrando em matemática, interessado em Agent RSI e Physical AI.",
+        "intro": "A matemática me ajuda a clarear ideias; as montanhas e a vida cotidiana me trazem novas perspectivas.",
         "heroCaption": "Entrego meus passos à natureza e minha curiosidade ao mundo.",
         "closing": "Mantenha a curiosidade, cresça devagar.",
         "closingText": "Sobre matemática, IA ou a próxima viagem — espero ideias interessantes.",
@@ -2694,6 +2694,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "position": "50% 45%",
+            "title": "Acima das nuvens, outro céu",
+            "caption": "Tianchi deixou o vento terminar a frase.",
+            "alt": "Tianchi da Montanha Changbai: Gofish de óculos escuros em um mirante"
+          },
+          {
+            "image": "graduation-family",
+            "position": "50% 48%",
+            "title": "As pessoas por trás do marco",
+            "caption": "Uma foto de formatura, e as duas pessoas que tornaram o longo caminho possível.",
+            "alt": "Gofish celebrando a formatura com os pais na Dalian University of Technology"
+          },
+          {
+            "image": "puppy-night",
+            "position": "50% 44%",
+            "title": "O menor visitante",
+            "caption": "Numa noite de verão, a confiança quase não pesava.",
+            "alt": "Gofish segurando um pequeno filhote em um pátio à noite"
+          },
+          {
+            "image": "seaside-fishing",
+            "position": "38% 50%",
+            "title": "Esperando no azul",
+            "caption": "O mar guardou sua resposta; eu mantive a linha.",
+            "alt": "Gofish pescando em um píer de madeira junto ao mar"
+          },
+          {
             "image": "mountains",
             "position": "45% 60%",
             "title": "Alto o suficiente para o silêncio",
@@ -2750,39 +2778,11 @@
             "alt": "Coliseu Romano: Gofish tirando selfie diante do antigo Coliseu"
           },
           {
-            "image": "summit",
-            "position": "50% 45%",
-            "title": "Acima das nuvens, outro céu",
-            "caption": "Tianchi deixou o vento terminar a frase.",
-            "alt": "Tianchi da Montanha Changbai: Gofish de óculos escuros em um mirante"
-          },
-          {
             "image": "aircraft",
             "position": "50% 50%",
             "title": "Curiosidade de infância em tamanho real",
             "caption": "O Y-20 tornou a ideia de voar quase palpável.",
             "alt": "Avião de transporte Y-20: Gofish diante de uma aeronave em exposição ao ar livre"
-          },
-          {
-            "image": "puppy-night",
-            "position": "50% 44%",
-            "title": "O menor visitante",
-            "caption": "Numa noite de verão, a confiança quase não pesava.",
-            "alt": "Gofish segurando um pequeno filhote em um pátio à noite"
-          },
-          {
-            "image": "graduation-family",
-            "position": "50% 48%",
-            "title": "As pessoas por trás do marco",
-            "caption": "Uma foto de formatura, e as duas pessoas que tornaram o longo caminho possível.",
-            "alt": "Gofish celebrando a formatura com os pais na Dalian University of Technology"
-          },
-          {
-            "image": "seaside-fishing",
-            "position": "38% 50%",
-            "title": "Esperando no azul",
-            "caption": "O mar guardou sua resposta; eu mantive a linha.",
-            "alt": "Gofish pescando em um píer de madeira junto ao mar"
           },
           {
             "image": "flatbread",
@@ -2844,8 +2844,8 @@
         "statsViews": "कुल विज़िट",
         "statsVisitors": "आगंतुक",
         "profileNote": "{age} · पुरुष · 2026 के नोट्स",
-        "headline": "गणित से बुद्धिमत्ता को समझना,<br>जिज्ञासा से दुनिया को देखना।",
-        "intro": "गणित में मास्टर का छात्र, Agent RSI और Physical AI में रुचि।<br>मुझे पूछना पसंद है कि बुद्धिमत्ता कैसे सीखती है — और असली पहाड़ों व रोज़मर्रा की दुनिया में चलना भी।",
+        "headline": "गणित में स्नातकोत्तर छात्र, Agent RSI और Physical AI में रुचि।",
+        "intro": "गणित से विचारों को स्पष्ट करता हूँ; पहाड़ों और रोज़मर्रा की ज़िंदगी में नए नज़रिए पाता हूँ।",
         "heroCaption": "अपने कदम प्रकृति को, और अपनी जिज्ञासा दुनिया को।",
         "closing": "जिज्ञासु रहें, धीरे-धीरे बढ़ें।",
         "closingText": "गणित, AI या अगली यात्रा पर — रोचक विचारों की प्रतीक्षा है।",
@@ -2941,6 +2941,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "position": "50% 45%",
+            "title": "बादलों के ऊपर, एक और आसमान",
+            "caption": "Tianchi ने वाक्य पूरा करने के लिए हवा को छोड़ दिया।",
+            "alt": "Changbai Mountain Tianchi: Gofish sunglasses में mountain viewpoint पर"
+          },
+          {
+            "image": "graduation-family",
+            "position": "50% 48%",
+            "title": "उस milestone के पीछे लोग",
+            "caption": "एक graduation photo, और वे दो लोग जिन्होंने लंबा रास्ता संभव बनाया।",
+            "alt": "Gofish Dalian University of Technology में माता-पिता के साथ graduation मना रहा है"
+          },
+          {
+            "image": "puppy-night",
+            "position": "50% 44%",
+            "title": "सबसे छोटा मेहमान",
+            "caption": "एक गर्मी की रात, भरोसा लगभग बिना वजन का था।",
+            "alt": "Gofish रात में courtyard में छोटे puppy को पकड़े हुए"
+          },
+          {
+            "image": "seaside-fishing",
+            "position": "38% 50%",
+            "title": "नीले पर इंतज़ार",
+            "caption": "समुद्र ने जवाब अपने पास रखा; मैंने line पकड़े रखी।",
+            "alt": "Gofish समुद्र के पास wooden pier से fishing कर रहा है"
+          },
+          {
             "image": "mountains",
             "position": "45% 60%",
             "title": "इतनी ऊँचाई कि शांति मिल जाए",
@@ -2997,39 +3025,11 @@
             "alt": "Roman Colosseum: Gofish ancient Colosseum के बाहर selfie ले रहा है"
           },
           {
-            "image": "summit",
-            "position": "50% 45%",
-            "title": "बादलों के ऊपर, एक और आसमान",
-            "caption": "Tianchi ने वाक्य पूरा करने के लिए हवा को छोड़ दिया।",
-            "alt": "Changbai Mountain Tianchi: Gofish sunglasses में mountain viewpoint पर"
-          },
-          {
             "image": "aircraft",
             "position": "50% 50%",
             "title": "बचपन की जिज्ञासा, असली आकार में",
             "caption": "Y-20 ने उड़ान के विचार को लगभग छूने लायक बना दिया।",
             "alt": "Y-20 transport aircraft: Gofish outdoor display में aircraft के सामने"
-          },
-          {
-            "image": "puppy-night",
-            "position": "50% 44%",
-            "title": "सबसे छोटा मेहमान",
-            "caption": "एक गर्मी की रात, भरोसा लगभग बिना वजन का था।",
-            "alt": "Gofish रात में courtyard में छोटे puppy को पकड़े हुए"
-          },
-          {
-            "image": "graduation-family",
-            "position": "50% 48%",
-            "title": "उस milestone के पीछे लोग",
-            "caption": "एक graduation photo, और वे दो लोग जिन्होंने लंबा रास्ता संभव बनाया।",
-            "alt": "Gofish Dalian University of Technology में माता-पिता के साथ graduation मना रहा है"
-          },
-          {
-            "image": "seaside-fishing",
-            "position": "38% 50%",
-            "title": "नीले पर इंतज़ार",
-            "caption": "समुद्र ने जवाब अपने पास रखा; मैंने line पकड़े रखी।",
-            "alt": "Gofish समुद्र के पास wooden pier से fishing कर रहा है"
           },
           {
             "image": "flatbread",
@@ -3091,8 +3091,8 @@
         "statsViews": "کل وزٹس",
         "statsVisitors": "زائرین",
         "profileNote": "{age} · مرد · 2026 کے نوٹس",
-        "headline": "ریاضی کے ذریعے ذہانت کو سمجھنا،<br>تجسس کے ذریعے دنیا کو دیکھنا۔",
-        "intro": "ریاضی میں ماسٹر کا طالب علم، Agent RSI اور Physical AI میں دلچسپی رکھتا ہوں۔<br>مجھے یہ پوچھنا پسند ہے کہ ذہانت کیسے سیکھتی ہے — اور حقیقی پہاڑوں اور روزمرہ زندگی میں چلنا بھی۔",
+        "headline": "ریاضی میں ماسٹرز کا طالب علم، Agent RSI اور Physical AI میں دلچسپی۔",
+        "intro": "ریاضی سے سوالوں کو سمجھتا ہوں، اور پہاڑوں اور روزمرہ کی زندگی میں نئے زاویے پاتا ہوں۔",
         "heroCaption": "اپنے قدم فطرت کے حوالے، اور اپنا تجسس دنیا کے نام۔",
         "closing": "متجسس رہیں، آہستہ آہستہ بڑھیں۔",
         "closingText": "ریاضی، AI یا اگلے سفر کے بارے میں — دلچسپ خیالات کا منتظر ہوں۔",
@@ -3188,6 +3188,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "position": "50% 45%",
+            "title": "بادلوں کے اوپر، ایک اور آسمان",
+            "caption": "Tianchi نے جملہ مکمل کرنے کے لیے ہوا کو چھوڑ دیا۔",
+            "alt": "Changbai Mountain Tianchi: Gofish sunglasses میں mountain viewpoint پر"
+          },
+          {
+            "image": "graduation-family",
+            "position": "50% 48%",
+            "title": "اس milestone کے پیچھے لوگ",
+            "caption": "Graduation photo، اور وہ دو لوگ جنہوں نے طویل راستہ ممکن بنایا۔",
+            "alt": "Gofish Dalian University of Technology میں والدین کے ساتھ graduation منا رہا ہے"
+          },
+          {
+            "image": "puppy-night",
+            "position": "50% 44%",
+            "title": "سب سے چھوٹا مہمان",
+            "caption": "گرمیوں کی ایک رات، اعتماد تقریباً بے وزن تھا۔",
+            "alt": "Gofish رات میں courtyard میں چھوٹا puppy پکڑے ہوئے"
+          },
+          {
+            "image": "seaside-fishing",
+            "position": "38% 50%",
+            "title": "نیلے پر انتظار",
+            "caption": "سمندر نے اپنا جواب رکھا؛ میں نے line پکڑے رکھی۔",
+            "alt": "Gofish سمندر کے کنارے wooden pier سے fishing کر رہا ہے"
+          },
+          {
             "image": "mountains",
             "position": "45% 60%",
             "title": "اتنی بلندی کہ خاموشی مل جائے",
@@ -3244,39 +3272,11 @@
             "alt": "Roman Colosseum: Gofish ancient Colosseum کے باہر selfie لے رہا ہے"
           },
           {
-            "image": "summit",
-            "position": "50% 45%",
-            "title": "بادلوں کے اوپر، ایک اور آسمان",
-            "caption": "Tianchi نے جملہ مکمل کرنے کے لیے ہوا کو چھوڑ دیا۔",
-            "alt": "Changbai Mountain Tianchi: Gofish sunglasses میں mountain viewpoint پر"
-          },
-          {
             "image": "aircraft",
             "position": "50% 50%",
             "title": "بچپن کا تجسس، اصل جسامت میں",
             "caption": "Y-20 نے پرواز کے خیال کو تقریباً چھونے کے قابل بنا دیا۔",
             "alt": "Y-20 transport aircraft: Gofish outdoor display میں aircraft کے سامنے"
-          },
-          {
-            "image": "puppy-night",
-            "position": "50% 44%",
-            "title": "سب سے چھوٹا مہمان",
-            "caption": "گرمیوں کی ایک رات، اعتماد تقریباً بے وزن تھا۔",
-            "alt": "Gofish رات میں courtyard میں چھوٹا puppy پکڑے ہوئے"
-          },
-          {
-            "image": "graduation-family",
-            "position": "50% 48%",
-            "title": "اس milestone کے پیچھے لوگ",
-            "caption": "Graduation photo، اور وہ دو لوگ جنہوں نے طویل راستہ ممکن بنایا۔",
-            "alt": "Gofish Dalian University of Technology میں والدین کے ساتھ graduation منا رہا ہے"
-          },
-          {
-            "image": "seaside-fishing",
-            "position": "38% 50%",
-            "title": "نیلے پر انتظار",
-            "caption": "سمندر نے اپنا جواب رکھا؛ میں نے line پکڑے رکھی۔",
-            "alt": "Gofish سمندر کے کنارے wooden pier سے fishing کر رہا ہے"
           },
           {
             "image": "flatbread",
@@ -3338,8 +3338,8 @@
         "statsViews": "মোট ভিজিট",
         "statsVisitors": "ভিজিটর",
         "profileNote": "{age} · পুরুষ · ২০২৬-এর নোট",
-        "headline": "গণিত দিয়ে বুদ্ধিমত্তা বোঝা,<br>কৌতূহল দিয়ে পৃথিবী দেখা।",
-        "intro": "গণিতে মাস্টার্সের ছাত্র, Agent RSI এবং Physical AI নিয়ে আগ্রহী।<br>বুদ্ধিমত্তা কীভাবে শেখে তা জিজ্ঞেস করতে ভালোবাসি — আর বাস্তব পাহাড় ও দৈনন্দিন জীবনে হাঁটতেও।",
+        "headline": "গণিতে স্নাতকোত্তরের ছাত্র, Agent RSI ও Physical AI নিয়ে আগ্রহী।",
+        "intro": "গণিত দিয়ে ভাবনাকে স্পষ্ট করি; পাহাড় আর দৈনন্দিন জীবনে খুঁজে পাই নতুন দৃষ্টিভঙ্গি।",
         "heroCaption": "আমার পদক্ষেপ প্রকৃতির কাছে, আর কৌতূহল পৃথিবীর কাছে।",
         "closing": "কৌতূহলী থাকুন, ধীরে ধীরে বাড়ুন।",
         "closingText": "গণিত, AI, অথবা পরের যাত্রা নিয়ে — আকর্ষণীয় ভাবনার অপেক্ষায়।",
@@ -3435,6 +3435,34 @@
         ],
         "gallery": [
           {
+            "image": "summit",
+            "position": "50% 45%",
+            "title": "মেঘের ওপরে, আরেক আকাশ",
+            "caption": "Tianchi বাকিটা বলার দায়িত্ব বাতাসকে দিয়েছিল।",
+            "alt": "Changbai Mountain Tianchi: Gofish sunglasses পরে mountain viewpoint-এ"
+          },
+          {
+            "image": "graduation-family",
+            "position": "50% 48%",
+            "title": "মাইলফলকের পেছনের মানুষ",
+            "caption": "একটি graduation photo, আর সেই দুই মানুষ যারা দীর্ঘ পথটি সম্ভব করেছিলেন।",
+            "alt": "Gofish Dalian University of Technology-তে বাবা-মায়ের সঙ্গে graduation উদযাপন করছে"
+          },
+          {
+            "image": "puppy-night",
+            "position": "50% 44%",
+            "title": "সবচেয়ে ছোট অতিথি",
+            "caption": "এক গ্রীষ্মরাতে, বিশ্বাসের প্রায় কোনো ওজন ছিল না।",
+            "alt": "Gofish রাতে courtyard-এ ছোট puppy ধরে আছে"
+          },
+          {
+            "image": "seaside-fishing",
+            "position": "38% 50%",
+            "title": "নীলের ওপর অপেক্ষা",
+            "caption": "সমুদ্র তার উত্তর রেখে দিল; আমি line ধরে রইলাম।",
+            "alt": "Gofish সমুদ্রের পাশে wooden pier থেকে fishing করছে"
+          },
+          {
             "image": "mountains",
             "position": "45% 60%",
             "title": "নীরবতার জন্য যথেষ্ট উঁচু",
@@ -3491,39 +3519,11 @@
             "alt": "Roman Colosseum: Gofish প্রাচীন Colosseum-এর বাইরে selfie তুলছে"
           },
           {
-            "image": "summit",
-            "position": "50% 45%",
-            "title": "মেঘের ওপরে, আরেক আকাশ",
-            "caption": "Tianchi বাকিটা বলার দায়িত্ব বাতাসকে দিয়েছিল।",
-            "alt": "Changbai Mountain Tianchi: Gofish sunglasses পরে mountain viewpoint-এ"
-          },
-          {
             "image": "aircraft",
             "position": "50% 50%",
             "title": "শৈশবের কৌতূহল, পূর্ণ আকারে",
             "caption": "Y-20 উড়ানের ধারণাকে প্রায় ছোঁয়ার মতো করে দিল।",
             "alt": "Y-20 transport aircraft: Gofish outdoor display-তে aircraft-এর সামনে"
-          },
-          {
-            "image": "puppy-night",
-            "position": "50% 44%",
-            "title": "সবচেয়ে ছোট অতিথি",
-            "caption": "এক গ্রীষ্মরাতে, বিশ্বাসের প্রায় কোনো ওজন ছিল না।",
-            "alt": "Gofish রাতে courtyard-এ ছোট puppy ধরে আছে"
-          },
-          {
-            "image": "graduation-family",
-            "position": "50% 48%",
-            "title": "মাইলফলকের পেছনের মানুষ",
-            "caption": "একটি graduation photo, আর সেই দুই মানুষ যারা দীর্ঘ পথটি সম্ভব করেছিলেন।",
-            "alt": "Gofish Dalian University of Technology-তে বাবা-মায়ের সঙ্গে graduation উদযাপন করছে"
-          },
-          {
-            "image": "seaside-fishing",
-            "position": "38% 50%",
-            "title": "নীলের ওপর অপেক্ষা",
-            "caption": "সমুদ্র তার উত্তর রেখে দিল; আমি line ধরে রইলাম।",
-            "alt": "Gofish সমুদ্রের পাশে wooden pier থেকে fishing করছে"
           },
           {
             "image": "flatbread",

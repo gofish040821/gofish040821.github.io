@@ -206,7 +206,7 @@
   });
 
   /* ---------------- skills ---------------- */
-  const initialSkillCount = 10;
+  const initialSkillCount = 6;
   const skillToggle = document.querySelector('#skills-toggle');
   const skillList = document.querySelector('#skill-badges');
   let skillItems = [];
@@ -355,7 +355,12 @@
     const text = entry.strings || {};
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const value = text[el.dataset.i18n];
-      if (value !== undefined) el.innerHTML = renderText(value);
+      if (value !== undefined) {
+        const text = renderText(value);
+        el.innerHTML = el.dataset.i18n === 'headline'
+          ? text.replace(/\b(Agent RSI|Physical AI)\b/g, '<bdi class="research-name" dir="ltr" lang="en">$1</bdi>')
+          : text;
+      }
     });
     document.querySelectorAll('[data-i18n-aria]').forEach(el => {
       const value = text[el.dataset.i18nAria];

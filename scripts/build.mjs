@@ -5,6 +5,7 @@ import { illustration, illustrationSprite } from './illustrations.mjs';
 import { loadSkillIcons, skillIllustrationSprite } from './skill-icons.mjs';
 import { uiIcon, uiIllustrationSprite } from './ui-icons.mjs';
 import { controlIcon } from './control-icons.mjs';
+import { fishMark } from './fish-mark.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const data = JSON.parse(await readFile(resolve(root, 'content.json'), 'utf8'));
@@ -15,6 +16,7 @@ const skillOrder = ['python','pytorch','numpy','huggingface','transformers','lan
 const orderedSkills = [...allSkills].sort((a,b) => skillOrder.indexOf(a.badge)-skillOrder.indexOf(b.badge));
 const escape = (value) => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const paragraphs = value => escape(value).replace(/&lt;br\s*\/?&gt;/g, '<br>');
+const heroHeadline = value => escape(value).replace(/\b(Agent RSI|Physical AI)\b/g, '<bdi class="research-name" dir="ltr" lang="en">$1</bdi>');
 const currentAge = () => {
   const today = new Date();
   const birth = new Date('2004-08-21T00:00:00');
@@ -27,6 +29,40 @@ const photoPath = (name, small = false) => {
   if (!/^[a-z0-9-]+$/.test(name)) throw new Error(`Invalid photo name: ${name}`);
   return `./assets/photos/${name}${small ? '-small' : ''}.webp`;
 };
+
+// Read intrinsic thumbnail dimensions so mixed portrait/landscape photos can
+// keep their full framing without shifting the page as lazy images arrive.
+async function photoSize(name) {
+  const image = await readFile(resolve(root, 'dist', photoPath(name, true)));
+  if (image.toString('ascii', 0, 4) !== 'RIFF' || image.toString('ascii', 8, 12) !== 'WEBP') {
+    throw new Error(`Invalid WebP photo: ${name}`);
+  }
+  for (let offset = 12; offset + 8 <= image.length;) {
+    const type = image.toString('ascii', offset, offset + 4);
+    const size = image.readUInt32LE(offset + 4);
+    const start = offset + 8;
+    if (start + size > image.length) break;
+    if (type === 'VP8X' && size >= 10) return [1 + image.readUIntLE(start + 4, 3), 1 + image.readUIntLE(start + 7, 3)];
+    if (type === 'VP8 ' && size >= 10) return [image.readUInt16LE(start + 6) & 0x3fff, image.readUInt16LE(start + 8) & 0x3fff];
+    if (type === 'VP8L' && size >= 5) {
+      const bits = image.readUInt32LE(start + 1);
+      return [1 + (bits & 0x3fff), 1 + ((bits >>> 14) & 0x3fff)];
+    }
+    offset = start + size + (size % 2);
+  }
+  throw new Error(`Cannot read photo dimensions: ${name}`);
+}
+const photoSizes = new Map(await Promise.all(data.gallery.map(async item => [item.image, await photoSize(item.image)])));
+const galleryOrder = data.gallery.map(item => item.image);
+
+// Translations follow image identity, never an independent positional index.
+function orderedGallery(items, language) {
+  const byImage = new Map(items.map(item => [item.image, item]));
+  if (items.length !== galleryOrder.length || byImage.size !== items.length || galleryOrder.some(name => !byImage.has(name))) {
+    throw new Error(`Gallery images do not match the source: ${language}`);
+  }
+  return galleryOrder.map(name => byImage.get(name));
+}
 for (const key of ['github', 'linkedin', 'siteUrl']) {
   if (!/^https:\/\//.test(data[key])) throw new Error(`${key} should be an https URL`);
 }
@@ -45,9 +81,13 @@ const renderNotes = items => items.map((item,i) => `<article class="research-not
 const renderEducation = items => items.map(item => `<article class="education-item${item.current ? ' current' : ''}"><div class="education-meta"><span class="education-dates">${escape(item.dates)}</span><span class="education-degree">${escape(item.degree)}</span></div><h3>${escape(item.school)}</h3><p class="school-abbr" lang="en">${escape(item.abbr)}</p><p class="education-note">${escape(item.note)}</p></article>`).join('\n');
 const hobbyIllustrations = { '↗': 'badminton', '⌁': 'travel', '◡': 'cooking', '▷': 'film' };
 const renderHobbies = items => items.map(item => `<article class="hobby">${illustration(hobbyIllustrations[item.symbol], 'hobby-illustration')}<div class="hobby-title"><h3>${escape(item.title)}</h3></div><p>${escape(item.description)}</p></article>`).join('\n');
-const renderGallery = items => items.map((item, i) => `<figure class="photo-card"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" alt="${escape(item.alt)}" width="720" height="960" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">${uiIcon('external')}</span></a><figcaption><div class="photo-caption-copy"><span class="photo-title">${escape(item.title)}</span><p class="photo-caption">${escape(item.caption)}</p></div><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`).join('\n');
+const renderGallery = items => items.map((item, i) => {
+  const [width, height] = photoSizes.get(item.image);
+  return `<figure class="photo-card" data-photo="${escape(item.image)}"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" alt="${escape(item.alt)}" width="${width}" height="${height}" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">${uiIcon('external')}</span></a><figcaption><div class="photo-caption-copy"><span class="photo-title">${escape(item.title)}</span><p class="photo-caption">${escape(item.caption)}</p></div><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`;
+}).join('\n');
 
 const values = {
+  fishMark: fishMark(),
   ...Object.fromEntries(['external','down','chevron','moon','sun','menu','close','mail'].map(name => ['control' + name[0].toUpperCase() + name.slice(1) + 'Icon', controlIcon(name)])),
   illustrationLibrary: illustrationSprite() + skillIllustrationSprite() + uiIllustrationSprite(),
   externalIcon: uiIcon('external'),
@@ -67,7 +107,7 @@ const values = {
   lifeIllustration: illustration('life', 'section-illustration'),
   toolsIllustration: illustration('tools', 'tools-illustration'),
   ...Object.fromEntries(Object.entries(data).filter(([, value]) => typeof value === 'string').map(([key, value]) => [key, escape(renderRuntimeText(value))])),
-  headline: paragraphs(data.headline),
+  headline: heroHeadline(data.headline),
   intro: paragraphs(data.intro),
   about: renderAbout(data.about),
   research: renderResearch(data.research, i18n.translations.en.strings),
@@ -96,7 +136,7 @@ for (const [code, entry] of Object.entries(i18n.translations || {})) {
       researchNotes: renderNotes(content.researchNotes || []),
       education: renderEducation(content.education || []),
       hobbies: renderHobbies(content.hobbies || []),
-      gallery: renderGallery(content.gallery || [])
+      gallery: renderGallery(orderedGallery(content.gallery || [], code))
     }
   };
 }
@@ -118,7 +158,8 @@ for (const name of new Set(['avatar', data.heroImage, ...data.gallery.map(item =
 }
 for (const item of [...data.skills, ...data.agentSkills]) await access(resolve(root, 'dist/assets/skills', `${item.badge}.svg`));
 await writeFile(resolve(root, 'dist/index.html'), html);
-for (const file of ['style.css', 'controls.css', 'app.js', 'busuanzi.pure.mini.js']) await copyFile(resolve(root, 'src', file), resolve(root, 'dist', file));
+for (const file of ['style.css', 'controls.css', 'editorial.css', 'app.js', 'busuanzi.pure.mini.js']) await copyFile(resolve(root, 'src', file), resolve(root, 'dist', file));
+await copyFile(resolve(root, 'src/assets/fish.svg'), resolve(root, 'dist/assets/fish.svg'));
 await writeFile(resolve(root, 'dist/.nojekyll'), '');
 await writeFile(resolve(root, 'dist/robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${data.siteUrl}/sitemap.xml\n`);
 await writeFile(resolve(root, 'dist/sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${escape(data.siteUrl)}/</loc></url></urlset>\n`);

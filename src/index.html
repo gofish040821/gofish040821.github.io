@@ -10,8 +10,9 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <link rel="canonical" href="{{siteUrl}}/">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="./assets/favicon-512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/fish-32.png">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="./assets/fish.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/fish-180.png">
   <title>Homepage[Gofish]</title>
   <script>
     // Runs before first paint: the site opens light for everyone; only a visitor
@@ -25,8 +26,9 @@
   </script>
   <link rel="stylesheet" href="./style.css?v=20261013-sketch-motion">
   <link rel="stylesheet" href="./controls.css?v=20261013-controls-refined">
+  <link rel="stylesheet" href="./editorial.css?v=20261014">
   <noscript><style>.research-more{display:none!important}.research-details[hidden]{display:block!important}</style></noscript>
-  <script src="./app.js?v=20261013-sketch-motion" defer></script>
+  <script src="./app.js?v=20261014-editorial" defer></script>
   <script src="./busuanzi.pure.mini.js" defer></script>
 </head>
 <body>
@@ -58,7 +60,7 @@
     <section class="hero wrap" id="home" aria-labelledby="hero-title">
       <div class="hero-copy">
         <h1 id="hero-title"><span class="hello" data-i18n="heroHello">Hi, I'm</span><span class="name">{{name}}<span class="accent">.</span></span></h1>
-        <h2 class="hero-headline" data-i18n="headline">{{headline}}</h2>
+        <p class="hero-headline" data-i18n="headline">{{headline}}</p>
         <p class="hero-description" data-i18n="intro">{{intro}}</p>
         <div class="hero-actions"><a class="action-link action-primary" href="#research"><span data-i18n="heroCtaExplore">Explore my interests</span> {{controlDownIcon}}</a><a class="action-link action-secondary" href="#life"><span data-i18n="heroCtaLife">See my life</span> {{controlDownIcon}}</a></div>
       </div>
@@ -91,7 +93,7 @@
     </section>
     <section class="closing wrap" aria-labelledby="closing-title"><h2 id="closing-title" data-i18n="closing">{{closing}}</h2><p data-i18n="closingText">{{closingText}}</p><div class="closing-links"><a class="action-link contact-link" href="{{github}}" target="_blank" rel="noopener noreferrer"><span data-i18n="closingCta">Find me on GitHub</span> {{controlExternalIcon}}</a><a class="action-link contact-link" href="{{linkedin}}" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span> {{controlExternalIcon}}</a>{{emailLink}}</div></section>
   </main>
-  <footer class="wrap site-footer"><span>© <span id="year">2026</span> {{name}}<span class="footer-separator">/</span><span data-i18n="footerTag">Stay curious, keep exploring.</span></span><span class="visit-stats"><span id="busuanzi_container_site_pv" class="visit-stat"><span data-i18n="statsViews">Total visits</span> <span id="busuanzi_value_site_pv" class="visit-value"></span></span><span id="busuanzi_container_site_uv" class="visit-stat"><span class="visit-sep" aria-hidden="true">&middot;</span> <span data-i18n="statsVisitors">Visitors</span> <span id="busuanzi_value_site_uv" class="visit-value"></span></span></span><span><span data-i18n="footerUpdated">Updated</span> {{updated}} <a href="#home" aria-label="Back to top" data-i18n-aria="backToTop"><span data-i18n="backToTop">Back to top</span> {{upIcon}}</a></span></footer>
+  <footer class="wrap site-footer"><span class="footer-signature">{{fishMark}}<span>© <span id="year">2026</span> {{name}}<span class="footer-separator">/</span><span data-i18n="footerTag">Stay curious, keep exploring.</span></span></span><span class="visit-stats"><span id="busuanzi_container_site_pv" class="visit-stat"><span data-i18n="statsViews">Total visits</span> <span id="busuanzi_value_site_pv" class="visit-value"></span></span><span id="busuanzi_container_site_uv" class="visit-stat"><span class="visit-sep" aria-hidden="true">&middot;</span> <span data-i18n="statsVisitors">Visitors</span> <span id="busuanzi_value_site_uv" class="visit-value"></span></span></span><span><span data-i18n="footerUpdated">Updated</span> {{updated}} <a href="#home" aria-label="Back to top" data-i18n-aria="backToTop"><span data-i18n="backToTop">Back to top</span> {{upIcon}}</a></span></footer>
   <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-toolbar"><span id="lightbox-count" aria-live="polite"></span><button type="button" class="icon-button" id="lightbox-close" aria-label="Close photo" data-i18n-aria="lightboxClose">{{closeIcon}}</button></div><div class="lightbox-stage"><button type="button" class="icon-button lightbox-prev" id="lightbox-prev" aria-label="Previous photo" data-i18n-aria="lightboxPrev">{{leftIcon}}</button><img id="lightbox-image" alt="" width="1800" height="1350"><button type="button" class="icon-button lightbox-next" id="lightbox-next" aria-label="Next photo" data-i18n-aria="lightboxNext">{{rightIcon}}</button></div><div class="lightbox-caption"><h2 id="lightbox-title"></h2><p id="lightbox-description"></p></div></dialog>
 </body>
 </html>

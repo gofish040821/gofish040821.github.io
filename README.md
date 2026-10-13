@@ -83,12 +83,16 @@ node scripts/build.mjs
 content.json                 日常编辑的全部个人内容
 src/index.html               网页结构模板
 src/style.css                配色与响应式排版
+src/editorial.css            字体层级、阅读节奏与完整比例照片排版
 src/app.js                   导航和相册交互
 scripts/build.mjs            无依赖静态构建
 scripts/illustrations.mjs    原创模块插画
+scripts/fish-mark.mjs        页脚小鱼 SVG 标识
+src/assets/fish.svg          适配深浅主题的小鱼网站图标
 scripts/skill-icons.mjs      本地技术图标与单色徽章
 scripts/serve.mjs            本地预览
 dist/                       可直接上线的静态网站（照片也保存在这里）
+dist/assets/fonts/          本地字体及 SIL Open Font License
 .github/workflows/pages.yml  GitHub Pages 自动部署
 ```
 
@@ -96,6 +100,8 @@ dist/                       可直接上线的静态网站（照片也保存在�
 
 如使用自定义域名或项目子路径，更新 `siteUrl` 后重新构建，以更新 canonical 和 sitemap。网站资源采用相对路径，也可迁移到其他静态托管服务。
 
-配色集中在 `src/style.css` 顶部 `:root` 中。字体采用系统字体，无需访问外部字体服务。网站没有统计追踪、外部图片请求或第三方脚本。
+配色集中在 `src/style.css` 顶部 `:root` 中；排版精修放在最后加载的 `src/editorial.css`。Source Serif 4 与 Source Sans 3 的常规字重以 WOFF2 本地托管，两份合计约 182 KiB，许可证保存在字体目录。中文、日文、韩文及阿拉伯、乌尔都、印地和孟加拉文字采用相应系统字体回退，无需请求外部字体服务。
 
-研究笔记只表达方法上的思考，不代表已经完成的实验或发表的成果。新增笔记时，请在 `src/i18n.json` 的每种语言中补齐 `researchNotes`；构建会检查数量是否一致。默认展示的 10 项技术栈优先排列数学、AI 与 Agent 工具，其余项目可在徽章下方展开。
+研究笔记只表达方法上的思考，不代表已经完成的实验或发表的成果。新增笔记时，请在 `src/i18n.json` 的每种语言中补齐 `researchNotes`；构建会检查数量是否一致。默认展示的 6 项技术栈优先排列数学、AI 与 Agent 工具，其余项目可在徽章下方展开。
+
+图库的展示顺序以 `content.json` 为准。构建按 `image` 标识匹配每种语言的完整照片记录，并检查缺失或重复项，避免调序后配文错位。缩略图使用实际宽高与原始比例，完整显示人物；标题、配文、替代文本和原有照片文件均保留。小鱼图标的 PNG 兼容版本保存在 `dist/assets/fish-32.png` 与 `fish-180.png`，SVG 源在 `src/assets/fish.svg`。
