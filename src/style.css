@@ -327,6 +327,13 @@ html[lang^="zh"] .research-note h4,html[lang="ja"] .research-note h4,html[lang="
   .illustration [data-sketch-part="agent-node"]{transform-box:fill-box;transform-origin:center;--sketch-out:scale(1.22);--sketch-back:scale(.94)}
   .illustration [data-sketch-part="physical-arm"]{transform-origin:36px 80px;--sketch-out:rotate(6deg);--sketch-back:rotate(-2deg)}
   .illustration [data-sketch-part="physical-spark"]{--sketch-out:translate(2px,-2px);--sketch-back:translate(-.5px,.5px);--sketch-delay:80ms}
+  .illustration [data-sketch-part="chicken-piece"]{transform-origin:28px 96px;--sketch-out:rotate(-7deg);--sketch-back:rotate(2deg)}
+  .illustration [data-sketch-part="chicken-cycle"]{--sketch-out:rotate(10deg);--sketch-back:rotate(-3deg);--sketch-delay:40ms}
+  .illustration [data-sketch-part="chicken-drop"]{--sketch-out:translateY(5px) scale(.94);--sketch-back:translateY(-1px);--sketch-delay:80ms}
+  .illustration [data-sketch-part="burger-top"]{--sketch-out:translateY(-4px);--sketch-back:translateY(1px)}
+  .illustration [data-sketch-part="burger-middle"]{transform-origin:60px 72px;--sketch-out:translate(10px,-1px) rotate(-2deg);--sketch-back:translate(-2px,0) rotate(1deg);--sketch-delay:65ms}
+  .illustration [data-sketch-part="burger-base"]{--sketch-out:translateY(3px);--sketch-back:translateY(-1px)}
+  .illustration [data-sketch-part="burger-guide"]{--sketch-out:translateX(2px);--sketch-back:translateX(-1px);--sketch-delay:65ms}
   .illustration [data-sketch-part="life-plant"]{transform-origin:57px 79px;--sketch-out:rotate(-7deg);--sketch-back:rotate(3deg)}
   .illustration [data-sketch-part="life-sun"]{transform-origin:91px 21px;--sketch-out:rotate(16deg) scale(1.06);--sketch-back:rotate(-4deg)}
   .illustration [data-sketch-part="badminton-racket"]{transform-origin:15px 97px;--sketch-out:rotate(11deg);--sketch-back:rotate(-4deg)}

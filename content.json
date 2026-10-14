@@ -18,35 +18,35 @@
   "research": [
     {
       "number": "01",
-      "title": "Agent RSI",
-      "subtitle": "Agents · Recursive self-improvement",
-      "description": "If an agent rewrites its prompts, tool-use policy or memory, how can we tell whether it truly improves rather than memorizing the test tasks? I want to explore a verifiable loop: compare versions on unseen tasks, trace failures, and keep or roll back each change.",
+      "title": "To lick, or not to lick?",
+      "subtitle": "KFC Original Recipe · Reinforcement learning",
+      "description": "When is the best moment to lick your fingers? I want to model grease buildup, cooling chicken and the reward of a lick, then compare licking after every bite, waiting until the end and adaptive policies. An advertising slogan becomes a sequential decision problem.",
       "tags": [
-        "Held-out evaluation",
-        "Failure analysis",
-        "Rollback"
+        "Reinforcement learning",
+        "Reward design",
+        "Dynamic programming"
       ],
       "details": {
-        "approach": "I would compare changes to prompts, memory and tool use against a fixed baseline on unseen tasks, recording each failure.",
-        "evaluation": "I would look for gains across task types while tracking cost and reliability; changes that do not generalize should be rolled back."
+        "approach": "Represent the state with grease, remaining chicken and temperature; choose to eat, lick or wipe. Solve a small model with dynamic programming, then see whether Q-learning approaches its optimal policy.",
+        "evaluation": "Compare reward, time and accumulated discomfort under the same conditions, then vary preferences. Reward only grease actually removed, so endless licking cannot become a shortcut to a high score."
       },
-      "className": "agent"
+      "className": "chicken"
     },
     {
       "number": "02",
-      "title": "Physical AI",
-      "subtitle": "Perception · Action · The real world",
-      "description": "When camera views are incomplete and simulation differs from reality, how can a robot reliably grasp and place objects? I want to explore how geometric constraints and uncertainty estimates can guide action planning and verify the outcome.",
+      "title": "Is the middle bun a redundant token?",
+      "subtitle": "McDonald’s Big Mac · LLMs & structured ablation",
+      "description": "Is a Big Mac still a Big Mac with one less bun? Borrowing from context compression and ablation studies, I want to separate the middle bun’s contribution by quantity from its role in the stack, and test whether LLMs can predict the changes in taste and stability.",
       "tags": [
-        "Pick-and-place",
-        "Geometric priors",
-        "Uncertainty estimation"
+        "Context compression",
+        "Ablation studies",
+        "Multimodal evaluation"
       ],
       "details": {
-        "approach": "I would test pick-and-place under incomplete views, using geometry and uncertainty to decide when to act or observe again.",
-        "evaluation": "I would compare task completion and recovery under occlusion and simulation-to-real gaps, and check whether failed actions are detected."
+        "approach": "Compare the original, middle-bun removal, an equal bread reduction from the outer buns and reordered layers. Ask an LLM to predict performance from ingredient descriptions and cross-section images before tasting.",
+        "evaluation": "Rate flavor similarity, Big Mac identity, structural stability and personal preference separately, then compare them with model predictions. Tasting better and resembling the original are separate objectives."
       },
-      "className": "physical"
+      "className": "burger"
     }
   ],
   "skills": [
