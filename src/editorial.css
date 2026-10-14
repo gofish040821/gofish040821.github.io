@@ -45,29 +45,20 @@ body{font-size:17px;line-height:1.8}
 .aside-note{font-size:15px;line-height:1.8;max-width:27ch;margin-top:20px}
 .profile-note{font-size:13px;margin-top:22px}
 .section-top{margin-bottom:38px}
-.research-grid{gap:54px}
+.research-grid{gap:54px;align-items:start}
 .research-card,.research-card.physical{padding:0 0 10px;border:0;display:flex;flex-direction:column}
-.research-card-top{min-height:80px;margin-bottom:18px;align-items:center}
+.research-card-top{min-height:80px;margin-bottom:18px;align-items:center;gap:20px}
+.research-brand{min-width:0;color:var(--muted);font:600 14px/1.5 var(--sans);letter-spacing:.01em}
 .research-illustration{width:88px;height:88px;margin:0 8px 0 0}
-.card-marker{font-size:18px;padding:0}
+
 .research-card h3{font:400 29px/1.3 var(--serif);letter-spacing:-.025em}
 .research-subtitle{font-size:14px;line-height:1.7;margin-top:7px}
 .research-description{font-size:17px;line-height:1.8;margin-top:20px;max-width:55ch;text-wrap:pretty}
 .research-card .tags{margin-top:20px;gap:7px 16px;margin-bottom:24px}
 .research-card .tags span{font-size:12px;line-height:1.7;padding:0;border:0;border-radius:0;color:var(--muted)}
-.research-more{margin-top:auto;padding-top:13px;min-height:44px;font-size:14px}
-.research-details{margin-top:10px;padding:18px}
 .research-detail h4{margin:0;font-size:14px}
 .research-detail p{font-size:15px;line-height:1.8}
-.research-notes{margin-top:44px;padding-top:30px}
-.notes-heading{margin-bottom:6px}
-.notes-heading h3{font-size:23px;line-height:1.4}
-.notes-status{font-size:13px}
-.notes-list{column-gap:54px}
-.research-note{padding-top:20px;grid-template-columns:20px minmax(0,1fr);gap:12px}
-.research-note h4{font-size:21px;line-height:1.45;letter-spacing:-.015em}
-.research-note p{font-size:15px;line-height:1.8;margin-top:10px}
-.note-index{font-size:13px}
+
 .research-skills{border:0;margin-top:38px;padding-top:0}
 .research-skills-heading{gap:10px;margin-bottom:14px}
 .tools-illustration{width:29px;height:29px}
@@ -127,11 +118,11 @@ html:lang(ur){--serif:"Noto Nastaliq Urdu","Urdu Typesetting","Traditional Arabi
 html:lang(hi){--serif:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;--sans:"Nirmala UI","Noto Sans Devanagari",Mangal,sans-serif}
 html:lang(bn){--serif:"Noto Serif Bengali","Nirmala UI",Vrinda,serif;--sans:"Nirmala UI","Noto Sans Bengali",Vrinda,sans-serif}
 .brand,.name{font-family:"Source Serif 4",Georgia,serif}
-html:is(:lang(zh),:lang(ja),:lang(ko)) :is(.hero-headline,.section h2,.life-section h2,.research-card h3,.research-note h4,.hobby h3,.photo-title,.closing h2){letter-spacing:0;line-height:1.55;line-break:strict;word-break:normal}
+html:is(:lang(zh),:lang(ja),:lang(ko)) :is(.hero-headline,.section h2,.life-section h2,.research-card h3,.hobby h3,.photo-title,.closing h2){letter-spacing:0;line-height:1.55;line-break:strict;word-break:normal}
 html:is(:lang(zh),:lang(ja),:lang(ko)) :is(.hero-description,.about-main p,.research-description,.hobby p,.photo-caption){line-height:1.95}
-html:is(:lang(ar),:lang(ur),:lang(hi),:lang(bn)) :is(.hero-headline,.section h2,.life-section h2,.research-card h3,.research-note h4,.education-item h3,.hobby h3,.photo-title,.closing h2){letter-spacing:0;line-height:1.7;overflow-wrap:break-word}
-html:is(:lang(ar),:lang(ur),:lang(hi),:lang(bn)) :is(.hero-description,.about-main p,.research-description,.research-note p,.photo-caption,.action-link){line-height:1.95;letter-spacing:0}
-html:lang(ur) :is(.hero-headline,.section h2,.life-section h2,.research-note h4,.photo-title){line-height:2}
+html:is(:lang(ar),:lang(ur),:lang(hi),:lang(bn)) :is(.hero-headline,.section h2,.life-section h2,.research-card h3,.education-item h3,.hobby h3,.photo-title,.closing h2){letter-spacing:0;line-height:1.7;overflow-wrap:break-word}
+html:is(:lang(ar),:lang(ur),:lang(hi),:lang(bn)) :is(.hero-description,.about-main p,.research-description,.photo-caption,.action-link){line-height:1.95;letter-spacing:0}
+html:lang(ur) :is(.hero-headline,.section h2,.life-section h2,.photo-title){line-height:2}
 html:is(:lang(ar),:lang(ur)) .hero-copy,html:is(:lang(ar),:lang(ur)) .hero-figure figcaption{direction:rtl;text-align:right}
 [dir="rtl"] .timeline{padding-right:0;margin-right:0;margin-left:0;padding-inline-start:24px}
 [dir="rtl"] .education-item:before{right:auto;inset-inline-start:-30px}
@@ -142,7 +133,7 @@ html:is(:lang(ar),:lang(ur)) .hero-copy,html:is(:lang(ar),:lang(ur)) .hero-figur
   .wrap{width:calc(100% - 64px)}
   .hero{gap:38px;padding-block:60px 74px}
   .about,.education{gap:40px;grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr)}
-  .research-grid,.notes-list{column-gap:36px}
+  .research-grid{column-gap:36px}
   .hobbies{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
   .gallery{gap:34px 24px}
 }
@@ -177,11 +168,6 @@ html:is(:lang(ar),:lang(ur)) .hero-copy,html:is(:lang(ar),:lang(ur)) .hero-figur
   .research-illustration{width:80px;height:80px}
   .research-description{font-size:16px;margin-top:16px}
   .research-card .tags{margin-bottom:17px}
-  .research-notes{margin-top:30px;padding-top:25px}
-  .notes-list{grid-template-columns:1fr;gap:0}
-  .research-note{padding-top:18px}
-  .research-note+.research-note{margin-top:16px}
-  .research-note h4{font-size:21px}
   .research-skills{margin-top:28px}
   .skill-badges .skill-badge{font-size:13px}
   .timeline{margin-top:28px}

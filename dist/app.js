@@ -134,7 +134,7 @@
     const selectors = [
       ['.about .section-aside', 0], ['.about-main', 60],
       ['.research .section-top', 0], ['.research-grid', 60],
-      ['.research-notes', 0], ['.research-skills', 0],
+      ['.research-skills', 0],
       ['.education .section-aside', 0], ['.timeline', 60],
       ['.life-section .section-top', 0], ['.hobbies', 60],
       ['.gallery', 0], ['.closing', 0]
@@ -310,14 +310,16 @@
   const researchGrid = document.querySelector('.research-grid');
   const expandedResearch = new Set();
 
+  function updateResearchDetails(button) {
+    const expanded = expandedResearch.has(button.dataset.researchKey);
+    const panel = document.getElementById(button.getAttribute('aria-controls'));
+    button.setAttribute('aria-expanded', String(expanded));
+    if (panel) panel.hidden = !expanded;
+    button.querySelector('[data-research-label]').textContent = t(expanded ? 'researchLess' : 'researchMore');
+  }
+
   function syncResearchDetails() {
-    researchGrid.querySelectorAll('.research-more').forEach(button => {
-      const expanded = expandedResearch.has(button.dataset.researchKey);
-      const panel = document.getElementById(button.getAttribute('aria-controls'));
-      button.setAttribute('aria-expanded', String(expanded));
-      if (panel) panel.hidden = !expanded;
-      button.querySelector('[data-research-label]').textContent = t(expanded ? 'researchLess' : 'researchMore');
-    });
+    researchGrid.querySelectorAll('.research-more').forEach(updateResearchDetails);
   }
 
   researchGrid.addEventListener('click', event => {
@@ -326,7 +328,7 @@
     const key = button.dataset.researchKey;
     if (expandedResearch.has(key)) expandedResearch.delete(key);
     else expandedResearch.add(key);
-    syncResearchDetails();
+    updateResearchDetails(button);
     scheduleProgress();
   });
 

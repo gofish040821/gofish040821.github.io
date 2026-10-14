@@ -70,14 +70,14 @@ for (const key of ['github', 'linkedin', 'siteUrl']) {
 // --- Section renderers. The default content and every translation go through
 // --- exactly the same markup, so switching language never shifts the layout.
 const renderAbout = items => items.map(text => `<p>${escape(text)}</p>`).join('\n');
-const renderResearch = (items, strings) => items.map(item => {
+const renderResearch = (items, strings, language = 'en') => items.map(item => {
   const key = escape(item.className);
   const details = item.details;
   if (!details?.approach || !details?.evaluation) throw new Error(`Missing research details: ${item.title}`);
-  return `<article class="research-card ${key}"><div class="research-card-top"><span class="card-marker">${escape(item.number)}</span>${illustration(item.className, 'research-illustration')}</div><h3>${escape(item.title)}</h3><p class="research-subtitle">${escape(item.subtitle)}</p><p class="research-description">${escape(item.description)}</p><div class="tags">${item.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div><button class="research-more" type="button" data-research-key="${key}" aria-expanded="false" aria-controls="research-details-${key}"><span data-research-label>${escape(strings.researchMore)}</span>${uiIcon('chevron')}</button><div class="research-details" id="research-details-${key}" hidden><div class="research-detail"><h4>${escape(strings.researchApproach)}</h4><p>${escape(details.approach)}</p></div><div class="research-detail"><h4>${escape(strings.researchEvaluation)}</h4><p>${escape(details.evaluation)}</p></div></div></article>`;
+  if (!item.brand) throw new Error(`Missing research brand: ${item.title}`);
+  return `<article class="research-card ${key}"><div class="research-card-top"><span class="research-brand"><bdi lang="${language === 'zh' ? 'zh-CN' : 'en'}" dir="ltr">${escape(item.brand)}</bdi></span>${illustration(item.className, 'research-illustration')}</div><h3 id="research-title-${key}">${escape(item.title)}</h3><p class="research-subtitle">${escape(item.subtitle)}</p><p class="research-description">${escape(item.description)}</p><div class="tags">${item.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div><button class="research-more" type="button" data-research-key="${key}" aria-expanded="false" aria-controls="research-details-${key}" aria-describedby="research-title-${key}"><span data-research-label>${escape(strings.researchMore)}</span><span class="research-more-icon" aria-hidden="true"></span></button><div class="research-details" id="research-details-${key}" role="region" aria-labelledby="research-title-${key}" hidden><div class="research-detail"><h4>${escape(strings.researchApproach)}</h4><p>${escape(details.approach)}</p></div><div class="research-detail"><h4>${escape(strings.researchEvaluation)}</h4><p>${escape(details.evaluation)}</p></div></div></article>`;
 }).join('\n');
 const renderSkills = items => items.map(item => `<li class="skill-badge">${skillIcons.get(item.badge)}<span lang="en" dir="ltr">${escape(item.name)}</span></li>`).join('\n');
-const renderNotes = items => items.map((item,i) => `<article class="research-note"><span class="note-index" aria-hidden="true">${String(i+1).padStart(2,'0')}</span><div><h4>${escape(item.title)}</h4><p>${escape(item.body)}</p></div></article>`).join('\n');
 const renderEducation = items => items.map(item => `<article class="education-item${item.current ? ' current' : ''}"><div class="education-meta"><span class="education-dates">${escape(item.dates)}</span><span class="education-degree">${escape(item.degree)}</span></div><h3>${escape(item.school)}</h3><p class="school-abbr" lang="en">${escape(item.abbr)}</p><p class="education-note">${escape(item.note)}</p></article>`).join('\n');
 const hobbyIllustrations = { '↗': 'badminton', '⌁': 'travel', '◡': 'cooking', '▷': 'film' };
 const renderHobbies = items => items.map(item => `<article class="hobby">${illustration(hobbyIllustrations[item.symbol], 'hobby-illustration')}<div class="hobby-title"><h3>${escape(item.title)}</h3></div><p>${escape(item.description)}</p></article>`).join('\n');
@@ -112,7 +112,6 @@ const values = {
   about: renderAbout(data.about),
   research: renderResearch(data.research, i18n.translations.en.strings),
   skills: renderSkills(orderedSkills),
-  researchNotes: renderNotes(data.researchNotes),
   education: renderEducation(data.education),
   hobbies: renderHobbies(data.hobbies),
   gallery: renderGallery(data.gallery),
@@ -123,7 +122,6 @@ const values = {
 const translations = {};
 for (const [code, entry] of Object.entries(i18n.translations || {})) {
   const content = entry.content || {};
-  if (!entry.strings.notesTitle || !entry.strings.notesStatus || content.researchNotes?.length !== data.researchNotes.length) throw new Error(`Incomplete research notes translation: ${code}`);
   for (const key of ['researchMore', 'researchLess', 'researchApproach', 'researchEvaluation']) {
     if (!entry.strings[key]) throw new Error(`Missing ${key} translation: ${code}`);
   }
@@ -132,8 +130,7 @@ for (const [code, entry] of Object.entries(i18n.translations || {})) {
     strings: entry.strings || {},
     sections: {
       about: renderAbout(content.about || []),
-      research: renderResearch(content.research, entry.strings),
-      researchNotes: renderNotes(content.researchNotes || []),
+      research: renderResearch(content.research, entry.strings, code),
       education: renderEducation(content.education || []),
       hobbies: renderHobbies(content.hobbies || []),
       gallery: renderGallery(orderedGallery(content.gallery || [], code))

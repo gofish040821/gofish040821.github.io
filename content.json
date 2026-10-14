@@ -17,9 +17,8 @@
   ],
   "research": [
     {
-      "number": "01",
       "title": "To lick, or not to lick?",
-      "subtitle": "KFC Original Recipe · Reinforcement learning",
+      "subtitle": "Original Recipe · Reinforcement learning",
       "description": "When is the best moment to lick your fingers? I want to model grease buildup, cooling chicken and the reward of a lick, then compare licking after every bite, waiting until the end and adaptive policies. An advertising slogan becomes a sequential decision problem.",
       "tags": [
         "Reinforcement learning",
@@ -30,12 +29,12 @@
         "approach": "Represent the state with grease, remaining chicken and temperature; choose to eat, lick or wipe. Solve a small model with dynamic programming, then see whether Q-learning approaches its optimal policy.",
         "evaluation": "Compare reward, time and accumulated discomfort under the same conditions, then vary preferences. Reward only grease actually removed, so endless licking cannot become a shortcut to a high score."
       },
-      "className": "chicken"
+      "className": "chicken",
+      "brand": "Kentucky Fried Chicken"
     },
     {
-      "number": "02",
       "title": "Is the middle bun a redundant token?",
-      "subtitle": "McDonald’s Big Mac · LLMs & structured ablation",
+      "subtitle": "Big Mac · LLMs & structured ablation",
       "description": "Is a Big Mac still a Big Mac with one less bun? Borrowing from context compression and ablation studies, I want to separate the middle bun’s contribution by quantity from its role in the stack, and test whether LLMs can predict the changes in taste and stability.",
       "tags": [
         "Context compression",
@@ -46,7 +45,8 @@
         "approach": "Compare the original, middle-bun removal, an equal bread reduction from the outer buns and reordered layers. Ask an LLM to predict performance from ingredient descriptions and cross-section images before tasting.",
         "evaluation": "Rate flavor similarity, Big Mac identity, structural stability and personal preference separately, then compare them with model predictions. Tasting better and resembling the original are separate objectives."
       },
-      "className": "burger"
+      "className": "burger",
+      "brand": "McDonald's"
     }
   ],
   "skills": [
@@ -294,15 +294,5 @@
     }
   ],
   "closing": "Stay curious, grow slowly.",
-  "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas.",
-  "researchNotes": [
-    {
-      "title": "A better answer needs a baseline",
-      "body": "Accuracy is one part of improvement. Cost, reliability and failure modes belong in the comparison too."
-    },
-    {
-      "title": "An action is a hypothesis",
-      "body": "The next observation should tell an agent whether to continue, correct course or ask for help."
-    }
-  ]
+  "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas."
 }
