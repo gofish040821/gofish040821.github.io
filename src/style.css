@@ -284,16 +284,15 @@ html[lang^="zh"] .heading-text,html[lang="ja"] .heading-text,html[lang="ko"] .he
 .research-more-icon::before,.research-more-icon::after{content:"";position:absolute;inset:9px 4px auto;height:1.5px;border-radius:1px;background:currentColor}
 .research-more-icon::after{transform:rotate(90deg)}
 .research-more[aria-expanded="true"] .research-more-icon::after{transform:rotate(0deg)}
-.research-details{margin-top:14px;padding:18px 20px;border:1px solid var(--line);border-inline-start:2px solid var(--accent);border-radius:8px;background:var(--soft)}
+.research-details{margin-top:14px;overflow:hidden}
+.research-details-content{padding:18px 20px;border:1px solid var(--line);border-inline-start:2px solid var(--accent);border-radius:8px;background:var(--soft)}
 @media (prefers-reduced-motion:no-preference){
   .research-more{transition:background-color .18s ease,border-color .18s ease,color .18s ease}
   .research-more-icon::after{transition:transform .2s ease}
-  .research-details:not([hidden]){animation:research-details-in .22s ease both}
 }
 .research-detail h4{font-size:12px;font-weight:600;line-height:1.5;color:var(--accent)}
 .research-detail p{font-size:14px;line-height:1.8;color:var(--muted);margin-top:5px}
 .research-detail+.research-detail{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
-@keyframes research-details-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
 
 @media (prefers-reduced-motion:no-preference){
   .reveal-item{transition:opacity .36s ease var(--reveal-delay,0ms),transform .36s ease var(--reveal-delay,0ms)}

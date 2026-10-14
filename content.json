@@ -18,8 +18,8 @@
   "research": [
     {
       "title": "To lick, or not to lick?",
-      "subtitle": "Original Recipe · Reinforcement learning",
-      "description": "When is the best moment to lick your fingers? I want to model grease buildup, cooling chicken and the reward of a lick, then compare licking after every bite, waiting until the end and adaptive policies. An advertising slogan becomes a sequential decision problem.",
+      "subtitle": "Kentucky Fried Chicken Original Recipe · Reinforcement learning",
+      "description": "When should you lick your fingers while eating Kentucky Fried Chicken's Original Recipe chicken? I want to model grease buildup, cooling chicken and the reward of a lick, then compare licking after every bite, waiting until the end and adaptive policies. An advertising slogan becomes a sequential decision problem.",
       "tags": [
         "Reinforcement learning",
         "Reward design",
@@ -29,13 +29,12 @@
         "approach": "Represent the state with grease, remaining chicken and temperature; choose to eat, lick or wipe. Solve a small model with dynamic programming, then see whether Q-learning approaches its optimal policy.",
         "evaluation": "Compare reward, time and accumulated discomfort under the same conditions, then vary preferences. Reward only grease actually removed, so endless licking cannot become a shortcut to a high score."
       },
-      "className": "chicken",
-      "brand": "Kentucky Fried Chicken"
+      "className": "chicken"
     },
     {
       "title": "Is the middle bun a redundant token?",
-      "subtitle": "Big Mac · LLMs & structured ablation",
-      "description": "Is a Big Mac still a Big Mac with one less bun? Borrowing from context compression and ablation studies, I want to separate the middle bun’s contribution by quantity from its role in the stack, and test whether LLMs can predict the changes in taste and stability.",
+      "subtitle": "McDonald's Big Mac · LLMs & structured ablation",
+      "description": "Is a McDonald's Big Mac still a Big Mac with one less bun? Borrowing from context compression and ablation studies, I want to separate the middle bun’s contribution by quantity from its role in the stack, and test whether LLMs can predict the changes in taste and stability.",
       "tags": [
         "Context compression",
         "Ablation studies",
@@ -45,8 +44,7 @@
         "approach": "Compare the original, middle-bun removal, an equal bread reduction from the outer buns and reordered layers. Ask an LLM to predict performance from ingredient descriptions and cross-section images before tasting.",
         "evaluation": "Rate flavor similarity, Big Mac identity, structural stability and personal preference separately, then compare them with model predictions. Tasting better and resembling the original are separate objectives."
       },
-      "className": "burger",
-      "brand": "McDonald's"
+      "className": "burger"
     }
   ],
   "skills": [

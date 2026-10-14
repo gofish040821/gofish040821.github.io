@@ -309,17 +309,39 @@
   /* ---------------- research details ---------------- */
   const researchGrid = document.querySelector('.research-grid');
   const expandedResearch = new Set();
+  const researchAnimations = new WeakMap();
 
-  function updateResearchDetails(button) {
+  function updateResearchDetails(button, animate = false) {
     const expanded = expandedResearch.has(button.dataset.researchKey);
     const panel = document.getElementById(button.getAttribute('aria-controls'));
     button.setAttribute('aria-expanded', String(expanded));
-    if (panel) panel.hidden = !expanded;
     button.querySelector('[data-research-label]').textContent = t(expanded ? 'researchLess' : 'researchMore');
+    if (!panel) return;
+
+    const startHeight = panel.hidden ? 0 : panel.getBoundingClientRect().height;
+    researchAnimations.get(panel)?.cancel();
+    panel.inert = !expanded;
+    if (!animate || reducedMotion.matches || typeof panel.animate !== 'function') {
+      panel.hidden = !expanded;
+      return;
+    }
+
+    panel.hidden = false;
+    const endHeight = expanded ? panel.firstElementChild.getBoundingClientRect().height : 0;
+    const animation = panel.animate([
+      { height: `${startHeight}px`, opacity: startHeight ? 1 : 0 },
+      { height: `${endHeight}px`, opacity: expanded ? 1 : 0 }
+    ], { duration: 260, easing: 'cubic-bezier(.2,.7,.2,1)' });
+    researchAnimations.set(panel, animation);
+    animation.finished.then(() => {
+      if (researchAnimations.get(panel) !== animation) return;
+      panel.hidden = !expanded;
+      researchAnimations.delete(panel);
+    }).catch(() => { /* A second click reverses the current animation. */ });
   }
 
   function syncResearchDetails() {
-    researchGrid.querySelectorAll('.research-more').forEach(updateResearchDetails);
+    researchGrid.querySelectorAll('.research-more').forEach(button => updateResearchDetails(button));
   }
 
   researchGrid.addEventListener('click', event => {
@@ -328,7 +350,7 @@
     const key = button.dataset.researchKey;
     if (expandedResearch.has(key)) expandedResearch.delete(key);
     else expandedResearch.add(key);
-    updateResearchDetails(button);
+    updateResearchDetails(button, true);
     scheduleProgress();
   });
 

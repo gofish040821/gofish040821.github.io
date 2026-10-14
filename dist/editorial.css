@@ -46,9 +46,8 @@ body{font-size:17px;line-height:1.8}
 .profile-note{font-size:13px;margin-top:22px}
 .section-top{margin-bottom:38px}
 .research-grid{gap:54px;align-items:start}
-.research-card,.research-card.physical{padding:0 0 10px;border:0;display:flex;flex-direction:column}
-.research-card-top{min-height:80px;margin-bottom:18px;align-items:center;gap:20px}
-.research-brand{min-width:0;color:var(--muted);font:600 14px/1.5 var(--sans);letter-spacing:.01em}
+.research-card,.research-card.physical{padding:0 0 10px;border:0;display:flex;flex-direction:column;align-self:start}
+.research-card-top{min-height:80px;margin-bottom:18px;align-items:center;justify-content:flex-end}
 .research-illustration{width:88px;height:88px;margin:0 8px 0 0}
 
 .research-card h3{font:400 29px/1.3 var(--serif);letter-spacing:-.025em}

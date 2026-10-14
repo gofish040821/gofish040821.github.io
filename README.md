@@ -46,7 +46,7 @@ git push -u origin main
 | --- | --- |
 | 个人简介与首页文案 | `about`、`headline`、`intro` |
 | GitHub / 公开邮箱 | `github`、`email`（留空则不展示邮箱入口） |
-| 研究兴趣与品牌名称 | `research`（品牌为 `brand`，展开内容为 `details`） |
+| 研究兴趣与展开内容 | `research`（副标题为 `subtitle`，正文为 `description`，展开内容为 `details`） |
 | 技术栈 | `skills`、`agentSkills` |
 | 学历与在读状态 | `education` |
 | 兴趣爱好 | `hobbies` |
@@ -102,6 +102,6 @@ dist/assets/fonts/          本地字体及 SIL Open Font License
 
 配色集中在 `src/style.css` 顶部 `:root` 中；排版精修放在最后加载的 `src/editorial.css`。Source Serif 4 与 Source Sans 3 的常规字重以 WOFF2 本地托管，两份合计约 182 KiB，许可证保存在字体目录。中文、日文、韩文及阿拉伯、乌尔都、印地和孟加拉文字采用相应系统字体回退，无需请求外部字体服务。
 
-研究兴趣展示待探索的问题与方法，不代表已经完成的实验或发表的成果。品牌中文显示“肯德基”“麦当劳”，英文及其他语言显示“Kentucky Fried Chicken”“McDonald's”。两张研究卡片独立展开，图标保留悬停动效。默认展示的 6 项技术栈优先排列数学、AI 与 Agent 工具，其余项目可在徽章下方展开。
+研究兴趣展示待探索的问题与方法，不代表已经完成的实验或发表的成果。正文与副标题中的品牌中文使用“肯德基”“麦当劳”，英文及其他语言使用“Kentucky Fried Chicken”“McDonald's”。两张研究卡片的详情在各自按钮下方展开，桌面上另一张卡片的位置保持不变，图标保留悬停动效。构建会根据样式与脚本的内容自动生成资源版本，避免更新后继续加载旧缓存。默认展示的 6 项技术栈优先排列数学、AI 与 Agent 工具，其余项目可在徽章下方展开。
 
 图库的展示顺序以 `content.json` 为准。构建按 `image` 标识匹配每种语言的完整照片记录，并检查缺失或重复项，避免调序后配文错位。缩略图使用实际宽高与原始比例，完整显示人物；标题、配文、替代文本和原有照片文件均保留。小鱼图标的 PNG 兼容版本保存在 `dist/assets/fish-32.png` 与 `fish-180.png`，SVG 源在 `src/assets/fish.svg`。

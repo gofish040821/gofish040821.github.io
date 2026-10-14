@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir, copyFile, access } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import { illustration, illustrationSprite } from './illustrations.mjs';
 import { loadSkillIcons, skillIllustrationSprite } from './skill-icons.mjs';
 import { uiIcon, uiIllustrationSprite } from './ui-icons.mjs';
@@ -10,6 +11,11 @@ import { fishMark } from './fish-mark.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const data = JSON.parse(await readFile(resolve(root, 'content.json'), 'utf8'));
 const i18n = JSON.parse(await readFile(resolve(root, 'src/i18n.json'), 'utf8'));
+// Content-based versions prevent HTML updates from reusing stale CSS or JS.
+const assetVersions = Object.fromEntries(await Promise.all(
+  [['styleVersion', 'style.css'], ['controlsVersion', 'controls.css'], ['editorialVersion', 'editorial.css'], ['appVersion', 'app.js']]
+    .map(async ([key, file]) => [key, createHash('sha256').update(await readFile(resolve(root, 'src', file))).digest('hex').slice(0, 12)])
+));
 const allSkills = [...data.skills, ...data.agentSkills];
 const skillIcons = await loadSkillIcons(root, allSkills);
 const skillOrder = ['python','pytorch','numpy','huggingface','transformers','langchain','langgraph','rag','mcp','git','latex','docker','cpp','java','golang','springboot','typescript','javascript','react','nodejs','html','css','socketio','vite','vitest'];
@@ -70,12 +76,11 @@ for (const key of ['github', 'linkedin', 'siteUrl']) {
 // --- Section renderers. The default content and every translation go through
 // --- exactly the same markup, so switching language never shifts the layout.
 const renderAbout = items => items.map(text => `<p>${escape(text)}</p>`).join('\n');
-const renderResearch = (items, strings, language = 'en') => items.map(item => {
+const renderResearch = (items, strings) => items.map(item => {
   const key = escape(item.className);
   const details = item.details;
   if (!details?.approach || !details?.evaluation) throw new Error(`Missing research details: ${item.title}`);
-  if (!item.brand) throw new Error(`Missing research brand: ${item.title}`);
-  return `<article class="research-card ${key}"><div class="research-card-top"><span class="research-brand"><bdi lang="${language === 'zh' ? 'zh-CN' : 'en'}" dir="ltr">${escape(item.brand)}</bdi></span>${illustration(item.className, 'research-illustration')}</div><h3 id="research-title-${key}">${escape(item.title)}</h3><p class="research-subtitle">${escape(item.subtitle)}</p><p class="research-description">${escape(item.description)}</p><div class="tags">${item.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div><button class="research-more" type="button" data-research-key="${key}" aria-expanded="false" aria-controls="research-details-${key}" aria-describedby="research-title-${key}"><span data-research-label>${escape(strings.researchMore)}</span><span class="research-more-icon" aria-hidden="true"></span></button><div class="research-details" id="research-details-${key}" role="region" aria-labelledby="research-title-${key}" hidden><div class="research-detail"><h4>${escape(strings.researchApproach)}</h4><p>${escape(details.approach)}</p></div><div class="research-detail"><h4>${escape(strings.researchEvaluation)}</h4><p>${escape(details.evaluation)}</p></div></div></article>`;
+  return `<article class="research-card ${key}"><div class="research-card-top">${illustration(item.className, 'research-illustration')}</div><h3 id="research-title-${key}">${escape(item.title)}</h3><p class="research-subtitle">${escape(item.subtitle)}</p><p class="research-description">${escape(item.description)}</p><div class="tags">${item.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div><button class="research-more" type="button" data-research-key="${key}" aria-expanded="false" aria-controls="research-details-${key}" aria-describedby="research-title-${key}"><span data-research-label>${escape(strings.researchMore)}</span><span class="research-more-icon" aria-hidden="true"></span></button><div class="research-details" id="research-details-${key}" role="region" aria-labelledby="research-title-${key}" hidden><div class="research-details-content"><div class="research-detail"><h4>${escape(strings.researchApproach)}</h4><p>${escape(details.approach)}</p></div><div class="research-detail"><h4>${escape(strings.researchEvaluation)}</h4><p>${escape(details.evaluation)}</p></div></div></div></article>`;
 }).join('\n');
 const renderSkills = items => items.map(item => `<li class="skill-badge">${skillIcons.get(item.badge)}<span lang="en" dir="ltr">${escape(item.name)}</span></li>`).join('\n');
 const renderEducation = items => items.map(item => `<article class="education-item${item.current ? ' current' : ''}"><div class="education-meta"><span class="education-dates">${escape(item.dates)}</span><span class="education-degree">${escape(item.degree)}</span></div><h3>${escape(item.school)}</h3><p class="school-abbr" lang="en">${escape(item.abbr)}</p><p class="education-note">${escape(item.note)}</p></article>`).join('\n');
@@ -87,6 +92,7 @@ const renderGallery = items => items.map((item, i) => {
 }).join('\n');
 
 const values = {
+  ...assetVersions,
   fishMark: fishMark(),
   ...Object.fromEntries(['external','down','chevron','moon','sun','menu','close','mail'].map(name => ['control' + name[0].toUpperCase() + name.slice(1) + 'Icon', controlIcon(name)])),
   illustrationLibrary: illustrationSprite() + skillIllustrationSprite() + uiIllustrationSprite(),
@@ -130,7 +136,7 @@ for (const [code, entry] of Object.entries(i18n.translations || {})) {
     strings: entry.strings || {},
     sections: {
       about: renderAbout(content.about || []),
-      research: renderResearch(content.research, entry.strings, code),
+      research: renderResearch(content.research, entry.strings),
       education: renderEducation(content.education || []),
       hobbies: renderHobbies(content.hobbies || []),
       gallery: renderGallery(orderedGallery(content.gallery || [], code))

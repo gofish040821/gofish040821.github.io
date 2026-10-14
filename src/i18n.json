@@ -149,8 +149,8 @@
         "research": [
           {
             "title": "To lick, or not to lick?",
-            "subtitle": "Original Recipe · Reinforcement learning",
-            "description": "When is the best moment to lick your fingers? I want to model grease buildup, cooling chicken and the reward of a lick, then compare licking after every bite, waiting until the end and adaptive policies. An advertising slogan becomes a sequential decision problem.",
+            "subtitle": "Kentucky Fried Chicken Original Recipe · Reinforcement learning",
+            "description": "When should you lick your fingers while eating Kentucky Fried Chicken's Original Recipe chicken? I want to model grease buildup, cooling chicken and the reward of a lick, then compare licking after every bite, waiting until the end and adaptive policies. An advertising slogan becomes a sequential decision problem.",
             "tags": [
               "Reinforcement learning",
               "Reward design",
@@ -160,13 +160,12 @@
             "details": {
               "approach": "Represent the state with grease, remaining chicken and temperature; choose to eat, lick or wipe. Solve a small model with dynamic programming, then see whether Q-learning approaches its optimal policy.",
               "evaluation": "Compare reward, time and accumulated discomfort under the same conditions, then vary preferences. Reward only grease actually removed, so endless licking cannot become a shortcut to a high score."
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "Is the middle bun a redundant token?",
-            "subtitle": "Big Mac · LLMs & structured ablation",
-            "description": "Is a Big Mac still a Big Mac with one less bun? Borrowing from context compression and ablation studies, I want to separate the middle bun’s contribution by quantity from its role in the stack, and test whether LLMs can predict the changes in taste and stability.",
+            "subtitle": "McDonald's Big Mac · LLMs & structured ablation",
+            "description": "Is a McDonald's Big Mac still a Big Mac with one less bun? Borrowing from context compression and ablation studies, I want to separate the middle bun’s contribution by quantity from its role in the stack, and test whether LLMs can predict the changes in taste and stability.",
             "tags": [
               "Context compression",
               "Ablation studies",
@@ -176,8 +175,7 @@
             "details": {
               "approach": "Compare the original, middle-bun removal, an equal bread reduction from the outer buns and reordered layers. Ask an LLM to predict performance from ingredient descriptions and cross-section images before tasting.",
               "evaluation": "Rate flavor similarity, Big Mac identity, structural stability and personal preference separately, then compare them with model predictions. Tasting better and resembling the original are separate objectives."
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
@@ -384,8 +382,8 @@
         "research": [
           {
             "title": "舔，还是不舔？",
-            "subtitle": "吮指原味鸡 · 强化学习与序列决策",
-            "description": "吃原味鸡时，什么时候舔手指才是最优决策？我想把油污累积、食物冷却和吮指收益放进同一个模型，比较每口必舔、最后统一舔与动态策略，看看一句广告语能否成为一道强化学习题。",
+            "subtitle": "肯德基吮指原味鸡 · 强化学习与序列决策",
+            "description": "吃肯德基吮指原味鸡时，什么时候舔手指才是最优决策？我想把油污累积、食物冷却和吮指收益放进同一个模型，比较每口必舔、最后统一舔与动态策略，看看一句广告语能否成为一道强化学习题。",
             "tags": [
               "强化学习",
               "奖励设计",
@@ -395,13 +393,12 @@
             "details": {
               "approach": "用油污量、剩余鸡肉和温度描述状态，让智能体选择吃、舔或擦。先用动态规划求解小模型，再比较 Q-learning 能否学到接近最优的策略。",
               "evaluation": "在相同条件下比较收益、耗时和累计油腻感，再改变偏好权重。奖励只来自实际移除的油脂，避免智能体为了刷分而无限舔手指。"
-            },
-            "brand": "肯德基"
+            }
           },
           {
             "title": "中间面包是冗余 Token 吗？",
-            "subtitle": "巨无霸 · LLM 与结构化消融",
-            "description": "少一片面包，巨无霸还是巨无霸吗？我想借用上下文压缩与消融实验的思路，研究中层面包的作用究竟来自用量还是位置，并检验 LLM 能否预测删减后的风味与结构变化。",
+            "subtitle": "麦当劳巨无霸 · LLM 与结构化消融",
+            "description": "少一片面包，麦当劳的巨无霸还是巨无霸吗？我想借用上下文压缩与消融实验的思路，研究中层面包的作用究竟来自用量还是位置，并检验 LLM 能否预测删减后的风味与结构变化。",
             "tags": [
               "上下文压缩",
               "消融实验",
@@ -411,8 +408,7 @@
             "details": {
               "approach": "比较原版、删除中层、外层等量减面包和层序调整，区分用量与位置的作用。让 LLM 根据食材说明与截面图，在试吃前预测各版本的表现。",
               "evaluation": "分别记录风味相似度、巨无霸辨识度、结构稳定性和个人偏好，再与模型预测对照。更好吃与更像原版，作为两个独立目标评价。"
-            },
-            "brand": "麦当劳"
+            }
           }
         ],
         "education": [
@@ -619,8 +615,8 @@
         "research": [
           {
             "title": "Se lécher les doigts, ou attendre ?",
-            "subtitle": "Original Recipe · Apprentissage par renforcement",
-            "description": "Quand faut-il se lécher les doigts ? Je voudrais modéliser la graisse accumulée, le refroidissement du poulet et le plaisir de ce geste, puis comparer une action après chaque bouchée, à la fin ou selon une stratégie adaptative.",
+            "subtitle": "Kentucky Fried Chicken Original Recipe · Apprentissage par renforcement",
+            "description": "Quand faut-il se lécher les doigts en mangeant le poulet Original Recipe de Kentucky Fried Chicken ? Je voudrais modéliser la graisse accumulée, le refroidissement du poulet et le plaisir de ce geste, puis comparer une action après chaque bouchée, à la fin ou selon une stratégie adaptative.",
             "tags": [
               "Apprentissage par renforcement",
               "Conception de récompenses",
@@ -630,13 +626,12 @@
             "details": {
               "approach": "Décrire l’état par la graisse, le poulet restant et la température ; choisir de manger, de lécher ou d’essuyer. Résoudre un petit modèle par programmation dynamique, puis le comparer au Q-learning.",
               "evaluation": "Comparer récompense, durée et inconfort cumulé à conditions égales, puis varier les préférences. Seule la graisse réellement retirée rapporte une récompense, pour éviter de lécher sans fin."
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "Le pain du milieu est-il un token redondant ?",
-            "subtitle": "Big Mac · LLM et ablation structurée",
-            "description": "Un Big Mac reste-t-il un Big Mac sans son pain central ? Je voudrais emprunter à la compression de contexte et aux études d’ablation pour distinguer quantité et position, puis tester si les LLM prédisent les changements de goût et de stabilité.",
+            "subtitle": "McDonald's Big Mac · LLM et ablation structurée",
+            "description": "Un Big Mac de McDonald's reste-t-il un Big Mac sans le pain central ? Je voudrais emprunter à la compression de contexte et aux études d’ablation pour distinguer quantité et position, puis tester si les LLM prédisent les changements de goût et de stabilité.",
             "tags": [
               "Compression de contexte",
               "Études d’ablation",
@@ -646,8 +641,7 @@
             "details": {
               "approach": "Comparer l’original, le retrait du pain central, une réduction équivalente des pains extérieurs et des couches réordonnées. Faire prédire les résultats au LLM à partir des ingrédients et de vues en coupe avant dégustation.",
               "evaluation": "Évaluer séparément la similitude du goût, l’identité Big Mac, la stabilité et les préférences, puis les confronter aux prédictions. Un meilleur goût ne signifie pas forcément une meilleure fidélité à l’original."
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
@@ -854,8 +848,8 @@
         "research": [
           {
             "title": "Finger ablecken oder warten?",
-            "subtitle": "Original Recipe · Reinforcement Learning",
-            "description": "Wann sollte man sich die Finger ablecken? Ich möchte Fettansammlung, abkühlendes Hähnchen und den Genuss des Ableckens modellieren. Verglichen werden Ablecken nach jedem Bissen, erst am Ende und eine adaptive Strategie.",
+            "subtitle": "Kentucky Fried Chicken Original Recipe · Reinforcement Learning",
+            "description": "Wann sollte man sich beim Essen von Original Recipe von Kentucky Fried Chicken die Finger ablecken? Ich möchte Fettansammlung, abkühlendes Hähnchen und den Genuss des Ableckens modellieren. Verglichen werden Ablecken nach jedem Bissen, erst am Ende und eine adaptive Strategie.",
             "tags": [
               "Reinforcement Learning",
               "Belohnungsdesign",
@@ -865,13 +859,12 @@
             "details": {
               "approach": "Fettmenge, übriges Hähnchen und Temperatur bilden den Zustand; mögliche Aktionen sind Essen, Ablecken und Abwischen. Ein kleines Modell wird dynamisch gelöst und anschließend mit Q-Learning verglichen.",
               "evaluation": "Belohnung, Zeit und angesammeltes Unbehagen unter gleichen Bedingungen vergleichen, danach Präferenzen variieren. Nur tatsächlich entferntes Fett wird belohnt, damit endloses Ablecken keine Punkte bringt."
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "Ist das mittlere Brötchen ein redundantes Token?",
-            "subtitle": "Big Mac · LLMs und strukturierte Ablation",
-            "description": "Bleibt ein Big Mac ohne seine mittlere Brotscheibe ein Big Mac? Mit Ideen aus Kontextkompression und Ablationsstudien möchte ich Menge und Position getrennt untersuchen und prüfen, ob LLMs Geschmack und Stabilität vorhersagen können.",
+            "subtitle": "McDonald's Big Mac · LLMs und strukturierte Ablation",
+            "description": "Bleibt ein Big Mac von McDonald's ohne seine mittlere Brotscheibe ein Big Mac? Mit Ideen aus Kontextkompression und Ablationsstudien möchte ich Menge und Position getrennt untersuchen und prüfen, ob LLMs Geschmack und Stabilität vorhersagen können.",
             "tags": [
               "Kontextkompression",
               "Ablationsstudien",
@@ -881,8 +874,7 @@
             "details": {
               "approach": "Original, Entfernen der Mitte, gleiche Brotreduktion außen und geänderte Schichtenfolge vergleichen. Ein LLM sagt anhand von Zutaten und Querschnittsbildern vor der Verkostung die Ergebnisse voraus.",
               "evaluation": "Geschmacksähnlichkeit, Big-Mac-Identität, Stabilität und persönliche Vorlieben getrennt bewerten und mit den Vorhersagen vergleichen. Besserer Geschmack und größere Originaltreue sind unterschiedliche Ziele."
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
@@ -1089,8 +1081,8 @@
         "research": [
           {
             "title": "¿Chuparse los dedos o esperar?",
-            "subtitle": "Original Recipe · Aprendizaje por refuerzo",
-            "description": "¿Cuándo conviene chuparse los dedos? Quiero modelar la grasa acumulada, el enfriamiento del pollo y el placer de ese gesto, y comparar hacerlo después de cada bocado, al final o siguiendo una estrategia adaptativa.",
+            "subtitle": "Kentucky Fried Chicken Original Recipe · Aprendizaje por refuerzo",
+            "description": "¿Cuándo conviene chuparse los dedos al comer el pollo Original Recipe de Kentucky Fried Chicken? Quiero modelar la grasa acumulada, el enfriamiento del pollo y el placer de ese gesto, y comparar hacerlo después de cada bocado, al final o siguiendo una estrategia adaptativa.",
             "tags": [
               "Aprendizaje por refuerzo",
               "Diseño de recompensas",
@@ -1100,13 +1092,12 @@
             "details": {
               "approach": "Representar el estado con grasa, pollo restante y temperatura; elegir entre comer, chupar o limpiar. Resolver un modelo pequeño con programación dinámica y compararlo con Q-learning.",
               "evaluation": "Comparar recompensa, tiempo e incomodidad acumulada en iguales condiciones, y después variar preferencias. Solo se recompensa la grasa realmente retirada, evitando ganar puntos por chuparse los dedos sin fin."
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "¿El pan central es un token redundante?",
-            "subtitle": "Big Mac · LLM y ablación estructurada",
-            "description": "¿Sigue siendo un Big Mac sin el pan del medio? Quiero aplicar ideas de compresión de contexto y ablación para separar el efecto de la cantidad y la posición, y comprobar si los LLM predicen los cambios de sabor y estabilidad.",
+            "subtitle": "McDonald's Big Mac · LLM y ablación estructurada",
+            "description": "¿Sigue siendo un Big Mac de McDonald's sin el pan del medio? Quiero aplicar ideas de compresión de contexto y ablación para separar el efecto de la cantidad y la posición, y comprobar si los LLM predicen los cambios de sabor y estabilidad.",
             "tags": [
               "Compresión de contexto",
               "Estudios de ablación",
@@ -1116,8 +1107,7 @@
             "details": {
               "approach": "Comparar el original, quitar el pan central, reducir la misma cantidad de pan exterior y reordenar capas. Pedir predicciones al LLM a partir de ingredientes e imágenes de corte antes de probarlos.",
               "evaluation": "Evaluar por separado similitud de sabor, identidad Big Mac, estabilidad y preferencia personal, y contrastarlas con las predicciones. Saber mejor y parecerse más al original son objetivos distintos."
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
@@ -1324,8 +1314,8 @@
         "research": [
           {
             "title": "أألعق أصابعي أم أنتظر؟",
-            "subtitle": "الوصفة الأصلية · التعلم المعزز",
-            "description": "متى يكون لعق الأصابع هو القرار الأفضل؟ أريد نمذجة تراكم الدهون وبرودة الدجاج ومتعة اللعق، ثم مقارنة اللعق بعد كل لقمة، والانتظار حتى النهاية، واتباع سياسة تتكيف مع الحالة.",
+            "subtitle": "Kentucky Fried Chicken الوصفة الأصلية · التعلم المعزز",
+            "description": "متى يكون لعق الأصابع هو القرار الأفضل عند تناول دجاج الوصفة الأصلية من Kentucky Fried Chicken؟ أريد نمذجة تراكم الدهون وبرودة الدجاج ومتعة اللعق، ثم مقارنة اللعق بعد كل لقمة، والانتظار حتى النهاية، واتباع سياسة تتكيف مع الحالة.",
             "tags": [
               "التعلم المعزز",
               "تصميم المكافآت",
@@ -1335,13 +1325,12 @@
             "details": {
               "approach": "تمثيل الحالة بكمية الدهون والدجاج المتبقي ودرجة الحرارة، مع اختيار الأكل أو اللعق أو المسح. حل نموذج صغير بالبرمجة الديناميكية، ثم مقارنة سياسة Q-learning بالحل الأمثل.",
               "evaluation": "مقارنة المكافأة والوقت والانزعاج المتراكم في الظروف نفسها، ثم تغيير التفضيلات. تُمنح المكافأة فقط للدهون التي أُزيلت فعلاً، لمنع اللعق المتكرر بلا نهاية لجمع النقاط."
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "هل الخبز الأوسط رمز زائد؟",
-            "subtitle": "بيغ ماك · النماذج اللغوية وتجارب الحذف",
-            "description": "هل يبقى بيغ ماك كما هو من دون الخبز الأوسط؟ أريد استعارة أفكار ضغط السياق وتجارب الحذف لفصل أثر كمية الخبز عن موضعه، واختبار قدرة النماذج اللغوية على توقع تغير الطعم والثبات.",
+            "subtitle": "McDonald's بيغ ماك · النماذج اللغوية وتجارب الحذف",
+            "description": "هل يبقى بيغ ماك من McDonald's كما هو من دون الخبز الأوسط؟ أريد استعارة أفكار ضغط السياق وتجارب الحذف لفصل أثر كمية الخبز عن موضعه، واختبار قدرة النماذج اللغوية على توقع تغير الطعم والثبات.",
             "tags": [
               "ضغط السياق",
               "تجارب الحذف",
@@ -1351,8 +1340,7 @@
             "details": {
               "approach": "مقارنة الأصل، وحذف الخبز الأوسط، وتقليل المقدار نفسه من الخبز الخارجي، وتغيير ترتيب الطبقات. طلب تنبؤات النموذج من وصف المكونات وصور المقطع قبل التذوق.",
               "evaluation": "تقييم تشابه النكهة وهوية بيغ ماك والثبات والتفضيل الشخصي كل على حدة، ثم مقارنتها بالتنبؤات. الطعم الأفضل والتشابه مع الأصل هدفان مستقلان."
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
@@ -1559,8 +1547,8 @@
         "research": [
           {
             "title": "指をなめるか、待つべきか？",
-            "subtitle": "オリジナルチキン · 強化学習と逐次意思決定",
-            "description": "チキンを食べる途中、いつ指をなめるのが最適なのか。指にたまる油、冷めていくチキン、指をなめる満足感をモデル化し、一口ごと・最後にまとめて・状況に応じて行う戦略を比較したいと考えています。",
+            "subtitle": "Kentucky Fried Chicken オリジナルチキン · 強化学習と逐次意思決定",
+            "description": "Kentucky Fried Chickenのオリジナルチキンを食べる途中、いつ指をなめるのが最適なのか。指にたまる油、冷めていくチキン、指をなめる満足感をモデル化し、一口ごと・最後にまとめて・状況に応じて行う戦略を比較したいと考えています。",
             "tags": [
               "強化学習",
               "報酬設計",
@@ -1570,13 +1558,12 @@
             "details": {
               "approach": "油の量、残りのチキン、温度を状態とし、食べる・なめる・拭くを選びます。小さなモデルを動的計画法で解き、Q学習がその最適方策に近づけるかを調べます。",
               "evaluation": "同じ条件で報酬、時間、油による不快感の累積を比較し、好みの重みを変えます。実際に取り除いた油だけに報酬を与え、無限になめ続ける報酬の抜け道を防ぎます。"
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "真ん中のバンズは冗長なトークン？",
-            "subtitle": "ビッグマック · LLMと構造的アブレーション",
-            "description": "バンズが一枚減っても、ビッグマックはビッグマックなのか。文脈圧縮とアブレーションの発想を借りて、中段のバンズの量と位置の役割を分け、味や安定性の変化をLLMが予測できるか調べたいと考えています。",
+            "subtitle": "McDonald's ビッグマック · LLMと構造的アブレーション",
+            "description": "McDonald'sのビッグマックは、バンズが一枚減ってもビッグマックなのか。文脈圧縮とアブレーションの発想を借りて、中段のバンズの量と位置の役割を分け、味や安定性の変化をLLMが予測できるか調べたいと考えています。",
             "tags": [
               "文脈圧縮",
               "アブレーション実験",
@@ -1586,8 +1573,7 @@
             "details": {
               "approach": "原版、中段の除去、上下のバンズから同量を減らした版、層の順序を変えた版を比較します。試食前に、材料の説明と断面画像からLLMに結果を予測させます。",
               "evaluation": "味の類似度、ビッグマックらしさ、構造の安定性、個人の好みを別々に評価し、予測と照合します。よりおいしいことと、原版に近いことは独立した目標として扱います。"
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
@@ -1794,8 +1780,8 @@
         "research": [
           {
             "title": "손가락을 핥을까, 기다릴까?",
-            "subtitle": "오리지널 치킨 · 강화학습과 순차 의사결정",
-            "description": "치킨을 먹다가 언제 손가락을 핥는 것이 최선일까요? 쌓이는 기름, 식어 가는 치킨, 손가락을 핥을 때의 만족을 모델링해 한 입마다, 마지막에 한 번에, 상황에 따라 행동하는 전략을 비교하고 싶습니다.",
+            "subtitle": "Kentucky Fried Chicken 오리지널 치킨 · 강화학습과 순차 의사결정",
+            "description": "Kentucky Fried Chicken의 오리지널 치킨을 먹다가 언제 손가락을 핥는 것이 최선일까요? 쌓이는 기름, 식어 가는 치킨, 손가락을 핥을 때의 만족을 모델링해 한 입마다, 마지막에 한 번에, 상황에 따라 행동하는 전략을 비교하고 싶습니다.",
             "tags": [
               "강화학습",
               "보상 설계",
@@ -1805,13 +1791,12 @@
             "details": {
               "approach": "기름의 양, 남은 치킨, 온도를 상태로 두고 먹기·핥기·닦기를 선택합니다. 작은 모델을 동적 계획법으로 풀고 Q-learning이 최적 정책에 얼마나 가까워지는지 살펴봅니다.",
               "evaluation": "같은 조건에서 보상, 시간, 누적 불편함을 비교하고 선호 가중치를 바꿉니다. 실제 제거한 기름에만 보상을 주어 끝없이 핥아 점수를 얻는 허점을 막습니다."
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "가운데 빵은 중복 토큰일까?",
-            "subtitle": "빅맥 · LLM과 구조적 제거 실험",
-            "description": "가운데 빵을 빼도 빅맥은 빅맥일까요? 문맥 압축과 제거 실험의 발상을 빌려 빵의 양과 위치가 하는 역할을 구분하고, LLM이 맛과 안정성의 변화를 예측할 수 있는지 알아보고 싶습니다.",
+            "subtitle": "McDonald's 빅맥 · LLM과 구조적 제거 실험",
+            "description": "McDonald's 빅맥에서 가운데 빵을 빼도 빅맥은 빅맥일까요? 문맥 압축과 제거 실험의 발상을 빌려 빵의 양과 위치가 하는 역할을 구분하고, LLM이 맛과 안정성의 변화를 예측할 수 있는지 알아보고 싶습니다.",
             "tags": [
               "문맥 압축",
               "제거 실험",
@@ -1821,8 +1806,7 @@
             "details": {
               "approach": "원본, 가운데 빵 제거, 바깥 빵에서 같은 양 제거, 층 순서 변경을 비교합니다. 시식 전에 재료 설명과 단면 사진으로 LLM의 예측을 받습니다.",
               "evaluation": "맛의 유사성, 빅맥다운 느낌, 구조 안정성, 개인 선호를 각각 기록해 예측과 비교합니다. 더 맛있는 것과 원본에 더 가까운 것은 별개의 목표로 평가합니다."
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
@@ -2029,8 +2013,8 @@
         "research": [
           {
             "title": "Облизать пальцы или подождать?",
-            "subtitle": "Original Recipe · Обучение с подкреплением",
-            "description": "Когда лучше облизать пальцы? Я хочу смоделировать накопление жира, остывание курицы и удовольствие от этого действия, сравнив стратегии после каждого укуса, в самом конце и по ситуации.",
+            "subtitle": "Kentucky Fried Chicken Original Recipe · Обучение с подкреплением",
+            "description": "Когда лучше облизать пальцы, если ешь Original Recipe от Kentucky Fried Chicken? Я хочу смоделировать накопление жира, остывание курицы и удовольствие от этого действия, сравнив стратегии после каждого укуса, в самом конце и по ситуации.",
             "tags": [
               "Обучение с подкреплением",
               "Проектирование награды",
@@ -2040,13 +2024,12 @@
             "details": {
               "approach": "Состояние задают жир, оставшаяся курица и температура; действия — есть, облизывать или вытирать. Сначала решить небольшую модель динамическим программированием, затем сравнить с Q-learning.",
               "evaluation": "Сравнить награду, время и накопленный дискомфорт при одинаковых условиях, затем менять предпочтения. Награждать только за действительно удалённый жир, исключив бесконечное облизывание ради очков."
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "Средняя булочка — лишний токен?",
-            "subtitle": "Биг Мак · LLM и структурная абляция",
-            "description": "Останется ли Биг Мак Биг Маком без средней булочки? Используя идеи сжатия контекста и абляции, я хочу разделить влияние количества хлеба и его положения и проверить прогнозы LLM о вкусе и устойчивости.",
+            "subtitle": "McDonald's Биг Мак · LLM и структурная абляция",
+            "description": "Останется ли Биг Мак от McDonald's Биг Маком без средней булочки? Используя идеи сжатия контекста и абляции, я хочу разделить влияние количества хлеба и его положения и проверить прогнозы LLM о вкусе и устойчивости.",
             "tags": [
               "Сжатие контекста",
               "Абляционные эксперименты",
@@ -2056,8 +2039,7 @@
             "details": {
               "approach": "Сравнить оригинал, удаление средней булочки, равное уменьшение внешних булочек и перестановку слоёв. До дегустации получить прогнозы LLM по описаниям ингредиентов и фотографиям разреза.",
               "evaluation": "Отдельно оценить сходство вкуса, узнаваемость Биг Мака, устойчивость и личные предпочтения, затем сопоставить с прогнозами. Более вкусный и более похожий на оригинал — разные цели."
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
@@ -2264,8 +2246,8 @@
         "research": [
           {
             "title": "Leccarsi le dita o aspettare?",
-            "subtitle": "Original Recipe · Apprendimento per rinforzo",
-            "description": "Qual è il momento migliore per leccarsi le dita? Vorrei modellare il grasso accumulato, il pollo che si raffredda e il piacere del gesto, confrontando una leccata dopo ogni boccone, solo alla fine e una strategia adattiva.",
+            "subtitle": "Kentucky Fried Chicken Original Recipe · Apprendimento per rinforzo",
+            "description": "Qual è il momento migliore per leccarsi le dita mangiando il pollo Original Recipe di Kentucky Fried Chicken? Vorrei modellare il grasso accumulato, il pollo che si raffredda e il piacere del gesto, confrontando una leccata dopo ogni boccone, solo alla fine e una strategia adattiva.",
             "tags": [
               "Apprendimento per rinforzo",
               "Progettazione delle ricompense",
@@ -2275,13 +2257,12 @@
             "details": {
               "approach": "Descrivere lo stato con grasso, pollo rimasto e temperatura; scegliere se mangiare, leccare o pulire. Risolvere un piccolo modello con programmazione dinamica, poi confrontarlo con Q-learning.",
               "evaluation": "Confrontare ricompensa, tempo e fastidio cumulato a parità di condizioni, poi variare le preferenze. Premiare solo il grasso effettivamente rimosso, così leccarsi le dita senza fine non produce punti."
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "Il pane centrale è un token ridondante?",
-            "subtitle": "Big Mac · LLM e ablazione strutturata",
-            "description": "Un Big Mac resta tale senza il pane centrale? Vorrei usare idee di compressione del contesto e ablazione per distinguere quantità e posizione, verificando se i LLM sanno prevedere i cambiamenti di gusto e stabilità.",
+            "subtitle": "McDonald's Big Mac · LLM e ablazione strutturata",
+            "description": "Un Big Mac di McDonald's resta tale senza il pane centrale? Vorrei usare idee di compressione del contesto e ablazione per distinguere quantità e posizione, verificando se i LLM sanno prevedere i cambiamenti di gusto e stabilità.",
             "tags": [
               "Compressione del contesto",
               "Studi di ablazione",
@@ -2291,8 +2272,7 @@
             "details": {
               "approach": "Confrontare l’originale, la rimozione del pane centrale, una riduzione equivalente dei pani esterni e strati riordinati. Chiedere al LLM previsioni basate su ingredienti e immagini in sezione prima dell’assaggio.",
               "evaluation": "Valutare separatamente somiglianza del gusto, identità Big Mac, stabilità e preferenza personale, poi confrontarle con le previsioni. Un gusto migliore e una maggiore fedeltà all’originale sono obiettivi distinti."
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
@@ -2499,8 +2479,8 @@
         "research": [
           {
             "title": "Lamber os dedos ou esperar?",
-            "subtitle": "Original Recipe · Aprendizagem por reforço",
-            "description": "Qual é o melhor momento para lamber os dedos? Quero modelar a gordura acumulada, o arrefecimento do frango e o prazer desse gesto, comparando fazê-lo após cada dentada, no fim ou segundo uma estratégia adaptativa.",
+            "subtitle": "Kentucky Fried Chicken Original Recipe · Aprendizagem por reforço",
+            "description": "Qual é o melhor momento para lamber os dedos ao comer o frango Original Recipe da Kentucky Fried Chicken? Quero modelar a gordura acumulada, o arrefecimento do frango e o prazer desse gesto, comparando fazê-lo após cada dentada, no fim ou segundo uma estratégia adaptativa.",
             "tags": [
               "Aprendizagem por reforço",
               "Desenho de recompensas",
@@ -2510,13 +2490,12 @@
             "details": {
               "approach": "Representar o estado pela gordura, pelo frango restante e pela temperatura; escolher comer, lamber ou limpar. Resolver um pequeno modelo por programação dinâmica e compará-lo com Q-learning.",
               "evaluation": "Comparar recompensa, tempo e desconforto acumulado nas mesmas condições e depois variar preferências. Recompensar apenas a gordura realmente removida, para impedir pontos por lamber os dedos sem fim."
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "O pão do meio é um token redundante?",
-            "subtitle": "Big Mac · LLM e ablação estruturada",
-            "description": "Um Big Mac continua a ser um Big Mac sem o pão central? Quero usar ideias de compressão de contexto e ablação para separar quantidade e posição, e testar se os LLM preveem alterações de sabor e estabilidade.",
+            "subtitle": "McDonald's Big Mac · LLM e ablação estruturada",
+            "description": "Um Big Mac da McDonald's continua a ser um Big Mac sem o pão central? Quero usar ideias de compressão de contexto e ablação para separar quantidade e posição, e testar se os LLM preveem alterações de sabor e estabilidade.",
             "tags": [
               "Compressão de contexto",
               "Estudos de ablação",
@@ -2526,8 +2505,7 @@
             "details": {
               "approach": "Comparar o original, a remoção do pão central, uma redução igual nos pães exteriores e camadas reordenadas. Pedir previsões ao LLM com base nos ingredientes e em imagens de corte antes da prova.",
               "evaluation": "Avaliar separadamente semelhança do sabor, identidade Big Mac, estabilidade e preferência pessoal, comparando com as previsões. Melhor sabor e maior fidelidade ao original são objetivos diferentes."
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
@@ -2734,8 +2712,8 @@
         "research": [
           {
             "title": "उँगलियाँ चाटें या इंतज़ार करें?",
-            "subtitle": "Original Recipe · रीइन्फोर्समेंट लर्निंग",
-            "description": "उँगलियाँ चाटने का सबसे अच्छा समय कब है? मैं जमा होती चिकनाई, ठंडे होते चिकन और चाटने से मिलने वाले आनंद का मॉडल बनाना चाहता हूँ, फिर हर कौर के बाद, अंत में और स्थिति के अनुसार अपनाई गई रणनीतियों की तुलना करना चाहता हूँ।",
+            "subtitle": "Kentucky Fried Chicken Original Recipe · रीइन्फोर्समेंट लर्निंग",
+            "description": "Kentucky Fried Chicken का Original Recipe चिकन खाते समय उँगलियाँ चाटने का सबसे अच्छा समय कब है? मैं जमा होती चिकनाई, ठंडे होते चिकन और चाटने से मिलने वाले आनंद का मॉडल बनाना चाहता हूँ, फिर हर कौर के बाद, अंत में और स्थिति के अनुसार अपनाई गई रणनीतियों की तुलना करना चाहता हूँ।",
             "tags": [
               "रीइन्फोर्समेंट लर्निंग",
               "रिवॉर्ड डिज़ाइन",
@@ -2745,13 +2723,12 @@
             "details": {
               "approach": "चिकनाई, बचा चिकन और तापमान स्थिति को बताएँ; क्रियाएँ हों खाना, चाटना या पोंछना। पहले छोटे मॉडल को डायनेमिक प्रोग्रामिंग से हल करें, फिर Q-learning की नीति से तुलना करें।",
               "evaluation": "समान परिस्थितियों में रिवॉर्ड, समय और जमा असुविधा की तुलना करें, फिर पसंद बदलें। केवल वास्तव में हटाई गई चिकनाई पर रिवॉर्ड दें, ताकि लगातार चाटना अंक कमाने का रास्ता न बने।"
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "क्या बीच का बन एक अनावश्यक टोकन है?",
-            "subtitle": "बिग मैक · LLM और संरचित एब्लेशन",
-            "description": "बीच का बन हटाने पर भी क्या बिग मैक, बिग मैक रहता है? संदर्भ संपीड़न और एब्लेशन के विचारों से मैं मात्रा और स्थान की भूमिका अलग करना चाहता हूँ, और जाँचना चाहता हूँ कि LLM स्वाद तथा स्थिरता के बदलाव का अनुमान लगा सकते हैं या नहीं।",
+            "subtitle": "McDonald's बिग मैक · LLM और संरचित एब्लेशन",
+            "description": "क्या McDonald's के बिग मैक का बीच का बन हटाने पर भी वह बिग मैक रहता है? संदर्भ संपीड़न और एब्लेशन के विचारों से मैं मात्रा और स्थान की भूमिका अलग करना चाहता हूँ, और जाँचना चाहता हूँ कि LLM स्वाद तथा स्थिरता के बदलाव का अनुमान लगा सकते हैं या नहीं।",
             "tags": [
               "संदर्भ संपीड़न",
               "एब्लेशन प्रयोग",
@@ -2761,8 +2738,7 @@
             "details": {
               "approach": "मूल रूप, बीच का बन हटाना, बाहरी बन से उतनी ही मात्रा घटाना और परतों का क्रम बदलना—इनकी तुलना करें। चखने से पहले सामग्री के विवरण और कटे हुए हिस्से की तस्वीरों से LLM के अनुमान लें।",
               "evaluation": "स्वाद की समानता, बिग मैक की पहचान, संरचना की स्थिरता और निजी पसंद को अलग-अलग आँकें, फिर अनुमानों से तुलना करें। बेहतर स्वाद और मूल जैसा होना अलग लक्ष्य हैं।"
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
@@ -2969,8 +2945,8 @@
         "research": [
           {
             "title": "انگلیاں چاٹوں یا انتظار کروں؟",
-            "subtitle": "Original Recipe · تقویتی تعلم",
-            "description": "انگلیاں چاٹنے کا بہترین وقت کب ہے؟ میں جمع ہوتی چکنائی، ٹھنڈے ہوتے چکن اور چاٹنے کی لذت کا ماڈل بنانا چاہتا ہوں، پھر ہر لقمے کے بعد، آخر میں اور صورتِ حال کے مطابق عمل کرنے کی حکمتِ عملیوں کا موازنہ کرنا چاہتا ہوں۔",
+            "subtitle": "Kentucky Fried Chicken Original Recipe · تقویتی تعلم",
+            "description": "Kentucky Fried Chicken کا Original Recipe چکن کھاتے وقت انگلیاں چاٹنے کا بہترین وقت کب ہے؟ میں جمع ہوتی چکنائی، ٹھنڈے ہوتے چکن اور چاٹنے کی لذت کا ماڈل بنانا چاہتا ہوں، پھر ہر لقمے کے بعد، آخر میں اور صورتِ حال کے مطابق عمل کرنے کی حکمتِ عملیوں کا موازنہ کرنا چاہتا ہوں۔",
             "tags": [
               "تقویتی تعلم",
               "انعام کی تشکیل",
@@ -2980,13 +2956,12 @@
             "details": {
               "approach": "چکنائی، باقی چکن اور درجۂ حرارت کو حالت بنائیں؛ کھانے، چاٹنے یا پونچھنے کا انتخاب کریں۔ پہلے چھوٹے ماڈل کو ڈائنامک پروگرامنگ سے حل کریں، پھر Q-learning سے موازنہ کریں۔",
               "evaluation": "یکساں حالات میں انعام، وقت اور مجموعی بے آرامی کا موازنہ کریں، پھر ترجیحات بدلیں۔ صرف واقعی ہٹائی گئی چکنائی پر انعام دیں تاکہ مسلسل چاٹنا پوائنٹ کمانے کا راستہ نہ بنے۔"
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "کیا درمیان والا بن غیر ضروری ٹوکن ہے؟",
-            "subtitle": "بگ میک · LLM اور ساختی حذف کے تجربات",
-            "description": "درمیان والا بن نکال دیں تو کیا بگ میک، بگ میک رہتا ہے؟ سیاق کی فشردگی اور حذف کے تجربات سے میں مقدار اور جگہ کا کردار الگ کرنا چاہتا ہوں، اور جانچنا چاہتا ہوں کہ LLM ذائقے اور استحکام کی تبدیلی کی پیش گوئی کر سکتے ہیں یا نہیں۔",
+            "subtitle": "McDonald's بگ میک · LLM اور ساختی حذف کے تجربات",
+            "description": "کیا McDonald's کے بگ میک سے درمیان والا بن نکال دیں تو وہ بگ میک رہتا ہے؟ سیاق کی فشردگی اور حذف کے تجربات سے میں مقدار اور جگہ کا کردار الگ کرنا چاہتا ہوں، اور جانچنا چاہتا ہوں کہ LLM ذائقے اور استحکام کی تبدیلی کی پیش گوئی کر سکتے ہیں یا نہیں۔",
             "tags": [
               "سیاق کی فشردگی",
               "حذف کے تجربات",
@@ -2996,8 +2971,7 @@
             "details": {
               "approach": "اصل، درمیانی بن ہٹانے، بیرونی بن سے اتنی ہی مقدار گھٹانے اور تہوں کی ترتیب بدلنے کا موازنہ کریں۔ چکھنے سے پہلے اجزا کی تفصیل اور اندرونی مقطع کی تصاویر سے LLM کی پیش گوئیاں لیں۔",
               "evaluation": "ذائقے کی مماثلت، بگ میک کی شناخت، ساختی استحکام اور ذاتی پسند الگ جانچیں، پھر پیش گوئیوں سے موازنہ کریں۔ بہتر ذائقہ اور اصل سے زیادہ مماثلت الگ مقاصد ہیں۔"
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
@@ -3204,8 +3178,8 @@
         "research": [
           {
             "title": "আঙুল চাটব, না অপেক্ষা করব?",
-            "subtitle": "Original Recipe · রিইনফোর্সমেন্ট লার্নিং",
-            "description": "কখন আঙুল চাটা সবচেয়ে ভালো সিদ্ধান্ত? জমতে থাকা তেল, ঠান্ডা হতে থাকা চিকেন এবং আঙুল চাটার আনন্দের মডেল তৈরি করে প্রতি কামড়ের পরে, একেবারে শেষে এবং পরিস্থিতি অনুযায়ী নেওয়া সিদ্ধান্তের তুলনা করতে চাই।",
+            "subtitle": "Kentucky Fried Chicken Original Recipe · রিইনফোর্সমেন্ট লার্নিং",
+            "description": "Kentucky Fried Chicken-এর Original Recipe চিকেন খাওয়ার সময় কখন আঙুল চাটা সবচেয়ে ভালো সিদ্ধান্ত? জমতে থাকা তেল, ঠান্ডা হতে থাকা চিকেন এবং আঙুল চাটার আনন্দের মডেল তৈরি করে প্রতি কামড়ের পরে, একেবারে শেষে এবং পরিস্থিতি অনুযায়ী নেওয়া সিদ্ধান্তের তুলনা করতে চাই।",
             "tags": [
               "রিইনফোর্সমেন্ট লার্নিং",
               "পুরস্কার নকশা",
@@ -3215,13 +3189,12 @@
             "details": {
               "approach": "তেলের পরিমাণ, বাকি চিকেন ও তাপমাত্রা দিয়ে অবস্থা বোঝাব; কাজ হবে খাওয়া, চাটা বা মোছা। ছোট মডেলটি ডাইনামিক প্রোগ্রামিং দিয়ে সমাধান করে Q-learning-এর নীতির সঙ্গে তুলনা করব।",
               "evaluation": "একই পরিস্থিতিতে পুরস্কার, সময় ও জমা অস্বস্তির তুলনা করে পছন্দের ওজন বদলাব। শুধু সত্যিই সরানো তেলের জন্য পুরস্কার দেব, যাতে অবিরাম চেটে পয়েন্ট পাওয়া না যায়।"
-            },
-            "brand": "Kentucky Fried Chicken"
+            }
           },
           {
             "title": "মাঝের বান কি অপ্রয়োজনীয় টোকেন?",
-            "subtitle": "বিগ ম্যাক · LLM ও কাঠামোগত অ্যাবলেশন",
-            "description": "মাঝের বান বাদ দিলেও কি বিগ ম্যাক, বিগ ম্যাক থাকে? প্রসঙ্গ সংকোচন ও অ্যাবলেশনের ধারণা দিয়ে পরিমাণ ও অবস্থানের ভূমিকা আলাদা করতে চাই, আর LLM স্বাদ ও স্থিতিশীলতার পরিবর্তন অনুমান করতে পারে কি না পরীক্ষা করতে চাই।",
+            "subtitle": "McDonald's বিগ ম্যাক · LLM ও কাঠামোগত অ্যাবলেশন",
+            "description": "McDonald's-এর বিগ ম্যাকের মাঝের বান বাদ দিলেও কি সেটি বিগ ম্যাক থাকে? প্রসঙ্গ সংকোচন ও অ্যাবলেশনের ধারণা দিয়ে পরিমাণ ও অবস্থানের ভূমিকা আলাদা করতে চাই, আর LLM স্বাদ ও স্থিতিশীলতার পরিবর্তন অনুমান করতে পারে কি না পরীক্ষা করতে চাই।",
             "tags": [
               "প্রসঙ্গ সংকোচন",
               "অ্যাবলেশন পরীক্ষা",
@@ -3231,8 +3204,7 @@
             "details": {
               "approach": "মূল সংস্করণ, মাঝের বান বাদ দেওয়া, বাইরের বান থেকে সমান পরিমাণ কমানো এবং স্তরের ক্রম বদলানোর তুলনা করব। চেখে দেখার আগে উপকরণের বিবরণ ও ভেতরের কাটাছবি থেকে LLM-এর অনুমান নেব।",
               "evaluation": "স্বাদের মিল, বিগ ম্যাকের পরিচিতি, কাঠামোর স্থিতিশীলতা ও ব্যক্তিগত পছন্দ আলাদা মেপে অনুমানের সঙ্গে তুলনা করব। বেশি সুস্বাদু হওয়া আর মূলের মতো থাকা আলাদা লক্ষ্য।"
-            },
-            "brand": "McDonald's"
+            }
           }
         ],
         "education": [
