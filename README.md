@@ -1,113 +1,89 @@
 # Gofish 的个人主页
 
-暖米白、陶土橙与深灰配色。包括个人介绍、KFC 最优吮指策略 / 巨无霸结构化消融研究兴趣、教育经历、兴趣爱好和 14 张生活照片。支持手机布局、相册展开、图片放大、键盘左右切换、Esc 关闭和手机滑动切换。
+已上线：[中文主页](https://gofish040821.github.io/?lang=zh) · [English](https://gofish040821.github.io/?lang=en)
 
-## 先看网页
+个人介绍、研究兴趣、教育经历、兴趣爱好与生活照片。页面采用暖米白、陶土橙和深灰配色，搭配衬线标题、手绘插画与轻量动效，支持手机布局和深浅主题。英文个人介绍模块标题为 **About me**，导航保留 **About**。
 
-直接打开 `dist/index.html` 即可查看完整网站，无需安装任何依赖。也可以安装 Node.js 20 或更新版本，在本目录运行：
+## 页面功能
 
-```sh
-node scripts/serve.mjs
-```
+- 支持 14 种语言：中文、英语、意大利语、法语、德语、西班牙语、葡萄牙语、阿拉伯语、印地语、乌尔都语、孟加拉语、日语、韩语和俄语；阿拉伯语、乌尔都语适配从右到左阅读。
+- 两项研究兴趣分别围绕肯德基吮指原味鸡的序贯决策与强化学习、麦当劳巨无霸中层面包的结构化消融展开，展示待探索的问题与方法，不代表已完成实验或发表成果。
+- 研究详情在各自按钮下方向下展开；桌面双栏中，操作一侧不会移动另一侧卡片或按钮。两幅研究插画保留悬停动效，并尊重减少动态效果的系统设置。
+- 技术栈默认展示 6 项，其余项目可展开。相册包含 14 张照片，支持展开、放大、键盘左右切换、Esc 关闭和手机滑动切换。
 
-然后访问 http://127.0.0.1:4173 。退出预览按 Ctrl+C。
+品牌名称直接写在文中：中文使用“肯德基”“麦当劳”，英文及其他语言使用“Kentucky Fried Chicken”“McDonald's”。
 
-## 发布到你的 GitHub Pages
+## 字体
 
-目标账号：**gofish040821**。账号主页仓库应命名为 **gofish040821.github.io**。只有发布成功后，网站才会出现在 **https://gofish040821.github.io/**。
+标题使用 **Anthropic Serif**，正文与界面使用 **Anthropic Sans**，章节标注、日期和照片序号使用 **Anthropic Mono**。五份官方 WOFF2 字体以本地文件提供，支持 300–800 可变字重；Serif / Sans 包含真实斜体并启用光学字号。首屏预加载 Serif / Sans 常规体，其余样式按需加载。
 
-1. 登录 GitHub，创建公开仓库 `gofish040821.github.io`。如果同名仓库已存在，先检查并备份已有内容，再合并本项目；不要直接覆盖旧主页。
-2. 将**本文件所在文件夹内的内容**上传到仓库根目录，包含 `content.json`、`src/`、`scripts/`、`dist/`、`.github/` 等。不要额外嵌套一层 `gofish-homepage/`。代码推送到 `main` 分支。
-3. 打开仓库 **Settings → Pages → Build and deployment → Source**，选择 **GitHub Actions**。
-4. 在 **Actions → Deploy Gofish homepage → Run workflow** 中运行一次；之后每次更新 `main` 分支都会自动重新生成并发布网站。
-5. 等待任务成功，在 **Settings → Pages** 查看实际发布地址。
+站点所有者已确认具有网页使用授权。字体来源与说明见 [Anthropic-FONTS.md](dist/assets/fonts/Anthropic-FONTS.md)，不适用目录中原有 Source 字体的 SIL Open Font License。
 
-Git 命令示例（前提：仓库已创建且本机已登录 GitHub）：
+Anthropic 字体不包含中文、日文、韩文、阿拉伯文等字形，这些文字由对应语言的系统字体补足；各语言版本中的拉丁文字仍优先使用 Anthropic 字体，无需请求外部字体服务。
 
-```sh
-git init -b main
-git add .
-git commit -m "Create Gofish personal homepage"
-git remote add origin https://github.com/gofish040821/gofish040821.github.io.git
-git push -u origin main
-```
+## 本地构建与预览
 
-如果本机未配置 Git 作者信息，请先填写自己的 `user.name` 和 `user.email`。不要将密码、Token 或任何私钥写入项目文件。
-
-不使用 Git 命令时，可在 GitHub 网页上传文件。请确认 `.github/workflows/pages.yml` 没有因隐藏文件显示设置而被遗漏。也可以使用 GitHub Desktop 上传整个项目。
-
-官方说明：[创建 GitHub Pages 站点](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)。
-
-## 以后如何更新
-
-**英文内容编辑 `content.json`，各语言版本同步编辑 `src/i18n.json`。** 在 GitHub 网页中打开该文件并编辑，提交后自动发布。请保留 JSON 中的英文双引号和逗号。
-
-| 想改什么 | 对应字段 |
-| --- | --- |
-| 个人简介与首页文案 | `about`、`headline`、`intro` |
-| GitHub / 公开邮箱 | `github`、`email`（留空则不展示邮箱入口） |
-| 研究兴趣与展开内容 | `research`（副标题为 `subtitle`，正文为 `description`，展开内容为 `details`） |
-| 技术栈 | `skills`、`agentSkills` |
-| 学历与在读状态 | `education` |
-| 兴趣爱好 | `hobbies` |
-| 相册顺序、标题、说明 | `gallery` |
-| 首页大图 | `heroImage` |
-| 年龄说明和更新时间 | `profileNote`、`updated` |
-
-年龄根据已提供的生日自动计算，主页不展示生日。硕士经历标为在读、预计 2029 年毕业。没有添加未经提供的论文、成果或项目经历。
-
-本地修改内容或样式后，运行以下命令更新网页：
+使用 Node.js 20 或更新版本，无需安装第三方依赖。在仓库根目录依次运行：
 
 ```sh
 node scripts/build.mjs
+node scripts/serve.mjs
 ```
 
-本项目没有第三方运行依赖，不需要 `npm install`。构建只是将内容填入 HTML 模板，网站上线后完全由静态文件组成。关闭 JavaScript 仍可阅读正文、查看全部照片并打开原图。
+访问 [http://127.0.0.1:4173](http://127.0.0.1:4173)，按 Ctrl+C 结束预览。修改内容或样式后，重新构建并刷新页面。生成后的网页位于 `dist/`；关闭 JavaScript 仍可阅读正文、查看全部照片并打开原图。
+
+## 部署
+
+本仓库通过 [Deploy Gofish homepage](https://github.com/gofish040821/gofish040821.github.io/actions/workflows/pages.yml) 工作流发布到 GitHub Pages。`main` 分支中的 `content.json`、`src/`、`scripts/` 或 `dist/` 更新会自动触发构建与发布；仅修改 README 不会重新部署。也可在 Actions 页面手动运行工作流。
+
+工作流使用 Node.js 22 执行构建，再发布 `dist/`。构建会根据 CSS 和 JavaScript 内容生成资源版本，避免页面更新后继续加载旧缓存。
+
+`dist/` 内的照片、字体和徽章是项目资源，必须保留并提交，不要删除整个目录或将其加入 `.gitignore`。生成的 `dist/index.html`、CSS 和 JavaScript 应通过构建更新，不要直接编辑。更改域名或部署子路径时，先更新 `content.json` 的 `siteUrl`，再构建。
+
+## 内容维护
+
+`content.json` 保存基础内容和相册顺序；`src/i18n.json` 保存各语言的界面文字与内容，**包括英文版本**。修改文案时同步对应翻译，避免首次加载与切换语言后的内容不同。
+
+| 想改什么 | 对应位置 |
+| --- | --- |
+| 个人简介与首页文案 | `content.json` 的 `about`、`headline`、`intro`，以及各语言对应内容 |
+| 模块标题与导航 | `src/i18n.json` 的 `strings`；英文 `aboutTitle` 为 `About me`，`navAbout` 为 `About`；同时维护模板默认文字 |
+| GitHub、LinkedIn、公开邮箱 | `github`、`linkedin`、`email`；邮箱留空时不展示入口 |
+| 研究兴趣与展开内容 | `research` 的 `subtitle`、`description`、`details` |
+| 技术栈 | `skills`、`agentSkills`；默认排序在构建脚本中维护 |
+| 教育经历与兴趣爱好 | `education`、`hobbies` |
+| 相册与首页大图 | `gallery`、`heroImage`、`heroCaption` |
+| 个人信息说明与更新时间 | `profileNote`、`updated`；`{age}` 在构建时替换为年龄 |
+
+配色在 `src/style.css` 顶部，按钮和菜单样式在 `src/controls.css`，字体与排版精修在最后加载的 `src/editorial.css`。维护多语种排版时，保留各文字系统的字体回退、字距、行高和阅读方向规则。
 
 ## 照片维护
 
-已提供的照片全部保存为 WebP 网页副本，放在 `dist/assets/photos/`，原始照片不被修改。每张照片有正常版和 `-small` 缩略版，所有照片合计约 3 MB。副本不保留原文件 EXIF 信息。
+照片位于 `dist/assets/photos/`，使用 WebP 正常版及 `-small` 缩略版。新增照片时：
 
-第一张所提供图片实际是一只海鸟，因此当前用作导航头像。首页人物照片使用山间生活照。更换证件照时，可用新头像替换 `avatar.webp` 和 `avatar-small.webp`；无需改变网页布局。
+1. 准备 `new-trip.webp` 与 `new-trip-small.webp`，放入照片目录；建议长边分别为 1800 和 720 像素，并移除 EXIF 信息。
+2. 在 `content.json` 的 `gallery` 中添加记录，`image` 填写不含扩展名的 `new-trip`，补全 `title`、`caption`、`alt`、`position`，并同步各语言的照片记录。
+3. 重新构建并检查布局。相册按 `content.json` 排序，构建通过 `image` 匹配翻译并检查缺失、重复项，避免调序后配文错位。
 
-新增相册照片时：
-
-1. 使用简短的英文文件名，如 `new-trip.webp`，再准备同名的缩略版 `new-trip-small.webp`，两者均放入 `dist/assets/photos/`。
-2. 在 `content.json` 的 `gallery` 数组中增加一项，`image` 填写不带扩展名的 `new-trip`，并填写 `title`、`caption`、`alt`、`position`。
-3. 照片建议长边 1800 像素，缩略版长边 720 像素。人物在照片中的位置可以通过 `position`（例如 `50% 60%`）调整；放大查看始终显示完整照片。
-4. 重新构建或提交至 GitHub。相册数量自动更新。
+缩略图保留照片原始比例，放大后显示完整照片。更换导航头像时，替换 `avatar.webp` 和 `avatar-small.webp`。
 
 ## 文件结构
 
 ```text
-content.json                 日常编辑的全部个人内容
+content.json                 基础内容与相册顺序
+src/i18n.json                14 种语言的界面文字与内容
 src/index.html               网页结构模板
-src/style.css                配色与响应式排版
-src/editorial.css            字体层级、阅读节奏与完整比例照片排版
-src/app.js                   导航和相册交互
+src/style.css                配色、响应式布局与插画动效
+src/controls.css             按钮、导航和菜单样式
+src/editorial.css            字体、阅读节奏与照片排版
+src/app.js                   语言、主题、展开和相册交互
 scripts/build.mjs            无依赖静态构建
-scripts/illustrations.mjs    原创模块插画
-scripts/fish-mark.mjs        页脚小鱼 SVG 标识
-src/assets/fish.svg          适配深浅主题的小鱼网站图标
-scripts/skill-icons.mjs      本地技术图标与单色徽章
 scripts/serve.mjs            本地预览
-dist/                       可直接上线的静态网站（照片也保存在这里）
-dist/assets/fonts/          官方 Anthropic 字体、来源说明及保留的原有字体
-.github/workflows/pages.yml  GitHub Pages 自动部署
+scripts/illustrations.mjs    模块手绘插画
+scripts/skill-icons.mjs      技术图标与徽章
+scripts/fish-mark.mjs        页脚小鱼标识
+src/assets/fish.svg          小鱼 SVG 源文件
+dist/                       生成的网页与必需静态资源
+dist/assets/fonts/          字体文件及来源、许可说明
+.github/workflows/pages.yml  GitHub Pages 构建与部署
 ```
-
-`dist/` 必须一并上传，因为照片存放于该目录。不要把它加入 `.gitignore`。无需手动修改生成的 `dist/index.html`、`dist/style.css` 或 `dist/app.js`，构建时会以 `src/` 和 `content.json` 为准更新。
-
-## 字体
-
-标题使用 Anthropic Serif，正文与界面使用 Anthropic Sans，章节标注、日期和照片序号使用 Anthropic Mono。字体文件自托管，包含真实可变字重和 Serif / Sans 斜体，并启用光学字号。站点所有者已确认具有网页使用授权；这些字体不适用目录中原有 Source 字体的 SIL Open Font License，来源见 `dist/assets/fonts/Anthropic-FONTS.md`。
-
-Anthropic 字体不含中文、日文、韩文、阿拉伯文等字形，这些文字由对应语言的系统字体补足；各语言版本中的拉丁文字仍优先使用 Anthropic 字体。
-
-如使用自定义域名或项目子路径，更新 `siteUrl` 后重新构建，以更新 canonical 和 sitemap。网站资源采用相对路径，也可迁移到其他静态托管服务。
-
-配色集中在 `src/style.css` 顶部 `:root` 中；排版精修放在最后加载的 `src/editorial.css`。五份 Anthropic 可变字体以 WOFF2 本地托管，合计约 641 KiB；首屏预加载 Serif / Sans 常规体，其他样式按需加载。中文、日文、韩文及阿拉伯、乌尔都、印地和孟加拉文字采用相应系统字体回退，无需请求外部字体服务。
-
-研究兴趣展示待探索的问题与方法，不代表已经完成的实验或发表的成果。正文与副标题中的品牌中文使用“肯德基”“麦当劳”，英文及其他语言使用“Kentucky Fried Chicken”“McDonald's”。两张研究卡片的详情在各自按钮下方展开，桌面上另一张卡片的位置保持不变，图标保留悬停动效。构建会根据样式与脚本的内容自动生成资源版本，避免更新后继续加载旧缓存。默认展示的 6 项技术栈优先排列数学、AI 与 Agent 工具，其余项目可在徽章下方展开。
-
-图库的展示顺序以 `content.json` 为准。构建按 `image` 标识匹配每种语言的完整照片记录，并检查缺失或重复项，避免调序后配文错位。缩略图使用实际宽高与原始比例，完整显示人物；标题、配文、替代文本和原有照片文件均保留。小鱼图标的 PNG 兼容版本保存在 `dist/assets/fish-32.png` 与 `fish-180.png`，SVG 源在 `src/assets/fish.svg`。
