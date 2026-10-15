@@ -92,15 +92,21 @@ src/assets/fish.svg          适配深浅主题的小鱼网站图标
 scripts/skill-icons.mjs      本地技术图标与单色徽章
 scripts/serve.mjs            本地预览
 dist/                       可直接上线的静态网站（照片也保存在这里）
-dist/assets/fonts/          本地字体及 SIL Open Font License
+dist/assets/fonts/          官方 Anthropic 字体、来源说明及保留的原有字体
 .github/workflows/pages.yml  GitHub Pages 自动部署
 ```
 
 `dist/` 必须一并上传，因为照片存放于该目录。不要把它加入 `.gitignore`。无需手动修改生成的 `dist/index.html`、`dist/style.css` 或 `dist/app.js`，构建时会以 `src/` 和 `content.json` 为准更新。
 
+## 字体
+
+标题使用 Anthropic Serif，正文与界面使用 Anthropic Sans，章节标注、日期和照片序号使用 Anthropic Mono。字体文件自托管，包含真实可变字重和 Serif / Sans 斜体，并启用光学字号。站点所有者已确认具有网页使用授权；这些字体不适用目录中原有 Source 字体的 SIL Open Font License，来源见 `dist/assets/fonts/Anthropic-FONTS.md`。
+
+Anthropic 字体不含中文、日文、韩文、阿拉伯文等字形，这些文字由对应语言的系统字体补足；各语言版本中的拉丁文字仍优先使用 Anthropic 字体。
+
 如使用自定义域名或项目子路径，更新 `siteUrl` 后重新构建，以更新 canonical 和 sitemap。网站资源采用相对路径，也可迁移到其他静态托管服务。
 
-配色集中在 `src/style.css` 顶部 `:root` 中；排版精修放在最后加载的 `src/editorial.css`。Source Serif 4 与 Source Sans 3 的常规字重以 WOFF2 本地托管，两份合计约 182 KiB，许可证保存在字体目录。中文、日文、韩文及阿拉伯、乌尔都、印地和孟加拉文字采用相应系统字体回退，无需请求外部字体服务。
+配色集中在 `src/style.css` 顶部 `:root` 中；排版精修放在最后加载的 `src/editorial.css`。五份 Anthropic 可变字体以 WOFF2 本地托管，合计约 641 KiB；首屏预加载 Serif / Sans 常规体，其他样式按需加载。中文、日文、韩文及阿拉伯、乌尔都、印地和孟加拉文字采用相应系统字体回退，无需请求外部字体服务。
 
 研究兴趣展示待探索的问题与方法，不代表已经完成的实验或发表的成果。正文与副标题中的品牌中文使用“肯德基”“麦当劳”，英文及其他语言使用“Kentucky Fried Chicken”“McDonald's”。两张研究卡片的详情在各自按钮下方展开，桌面上另一张卡片的位置保持不变，图标保留悬停动效。构建会根据样式与脚本的内容自动生成资源版本，避免更新后继续加载旧缓存。默认展示的 6 项技术栈优先排列数学、AI 与 Agent 工具，其余项目可在徽章下方展开。
 

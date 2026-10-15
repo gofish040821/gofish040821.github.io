@@ -156,6 +156,9 @@ const json = JSON.stringify(payload).replace(/</g, '\u005cu003c').replace(/>/g, 
 html = html.replace('</body>', `<script>window.__I18N__=${json};</script></body>`);
 
 await mkdir(resolve(root, 'dist'), { recursive: true });
+for (const font of ['anthropic-serif-roman', 'anthropic-serif-italic', 'anthropic-sans-roman', 'anthropic-sans-italic', 'anthropic-mono-roman']) {
+  await access(resolve(root, 'dist/assets/fonts', `${font}.woff2`));
+}
 for (const name of new Set(['avatar', data.heroImage, ...data.gallery.map(item => item.image)])) {
   for (const small of [false, true]) await access(resolve(root, 'dist', photoPath(name, small)));
 }
