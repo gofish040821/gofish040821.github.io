@@ -27,7 +27,7 @@
   if ('ResizeObserver' in window) new ResizeObserver(scheduleProgress).observe(document.body);
   scheduleProgress();
 
-  const uiIcon = name => '<svg class="ui-icon" data-ui-icon="' + name + '" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true" focusable="false"><use href="#ui-sketch-' + name + '"/></svg>';
+  const uiIcon = name => '<svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true" focusable="false"><use href="#ui-sketch-' + name + '"/></svg>';
   let strings = {};
   const t = (key, fallback) => (strings[key] === undefined ? (fallback || '') : strings[key]);
   const currentCode = () => root.getAttribute('data-language') || I18N.default;
@@ -94,65 +94,39 @@
   /* ---------------- one-time section reveals ---------------- */
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  /* ---------------- local icon gestures ---------------- */
-  const motionIcons = '.illustration[data-illustration], .ui-icon, .skill-badge svg, .fish-mark, .research-more-icon';
-  const motionOwners = 'a, button, .skill-badge, .illustrated-heading, .hobby, .research-card-top, .research-skills-heading, .footer-signature';
-  const iconGestures = new WeakMap();
+  /* ---------------- brief, local sketch gestures ---------------- */
+  const sketchMotion = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+  // Delegation also covers the illustrations replaced by language switching.
+  document.addEventListener('pointerover', event => {
+    if (event.pointerType !== 'mouse' || !sketchMotion.matches) return;
+    const sketch = event.target.closest?.('.illustration[data-illustration]');
+    if (!sketch || sketch.contains(event.relatedTarget) || sketch.classList.contains('is-sketch-playing')) return;
+    if (typeof sketch.getAnimations !== 'function') return;
 
-  function playIcon(icon) {
-    if (iconGestures.has(icon) || !icon.getClientRects().length || typeof icon.getAnimations !== 'function') return;
-    const isSketch = icon.matches('.illustration[data-illustration]');
-    // Copy sprite parts locally so another instance keeps its own motion state.
-    const use = isSketch && icon.querySelector('use');
+    // Keep the shared sprite until first use. Local copies let each illustration
+    // animate its own parts without changing another instance or its ink paths.
+    const use = sketch.querySelector('use');
     if (use) {
       const symbol = document.getElementById(use.getAttribute('href').slice(1));
       if (!symbol) return;
       use.replaceWith(...Array.from(symbol.childNodes, node => node.cloneNode(true)));
       for (const part of ['agent-node', 'cooking-steam']) {
-        icon.querySelectorAll(`[data-sketch-part="${part}"]`).forEach((node, index) => {
-          node.style.setProperty('--sketch-delay', `${index * 100}ms`);
+        sketch.querySelectorAll(`[data-sketch-part="${part}"]`).forEach((node, index) => {
+          node.style.setProperty('--sketch-delay', `${index * 70}ms`);
         });
       }
     }
-    const playingClass = isSketch ? 'is-sketch-playing' : 'is-icon-playing';
-    const gesture = {};
-    iconGestures.set(icon, gesture);
-    icon.classList.add(playingClass);
-    // Finish once even after pointer exit. Re-entry never stacks or loops;
-    // cleanup follows actual CSS timing, including each part's stagger.
-    Promise.all(icon.getAnimations({ subtree: true }).map(animation => animation.finished.catch(() => {})))
-      .then(() => {
-        if (iconGestures.get(icon) !== gesture) return;
-        icon.classList.remove(playingClass);
-        iconGestures.delete(icon);
-      });
-  }
 
-  function playOwnerIcons(event, entering = false) {
-    if (reducedMotion.matches) return;
-    // The click target may be detached after a toggle replaces its label/icon.
-    const path = event.composedPath().filter(node => node instanceof Element && node.isConnected);
-    const owner = path.find(node => node.matches(motionOwners)) || path.find(node => node.matches(motionIcons));
-    if (!owner || (entering && owner.contains(event.relatedTarget))) return;
-    if (owner.matches(motionIcons)) playIcon(owner);
-    else owner.querySelectorAll(motionIcons).forEach(playIcon);
-  }
-  // Delegation survives language changes and dynamically replaced toggle icons.
-  document.addEventListener('pointerover', event => {
-    if (event.pointerType === 'mouse') playOwnerIcons(event, true);
+    sketch.classList.add('is-sketch-playing');
+    // Finish the gesture even if the pointer leaves; re-entry during playback
+    // does not stack animations, and resting on an icon never starts a loop.
+    Promise.all(sketch.getAnimations({ subtree: true }).map(animation => animation.finished.catch(() => {})))
+      .then(() => sketch.classList.remove('is-sketch-playing'));
   });
-  document.addEventListener('pointerdown', event => {
-    if (event.pointerType === 'touch' || event.pointerType === 'pen') playOwnerIcons(event);
-  }, { passive: true });
-  document.addEventListener('focusin', event => playOwnerIcons(event, true));
-  // Theme/menu switches and expand buttons may reveal a different icon on click.
-  document.addEventListener('click', event => playOwnerIcons(event));
-  reducedMotion.addEventListener('change', event => {
-    if (!event.matches) return;
-    document.querySelectorAll('.is-sketch-playing, .is-icon-playing').forEach(icon => {
-      icon.classList.remove('is-sketch-playing', 'is-icon-playing');
-      iconGestures.delete(icon);
-    });
+  sketchMotion.addEventListener('change', () => {
+    if (!sketchMotion.matches) {
+      document.querySelectorAll('.is-sketch-playing').forEach(sketch => sketch.classList.remove('is-sketch-playing'));
+    }
   });
 
   function initReveals() {
