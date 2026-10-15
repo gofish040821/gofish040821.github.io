@@ -288,7 +288,7 @@ html[lang^="zh"] .heading-text,html[lang="ja"] .heading-text,html[lang="ko"] .he
 .research-details-content{padding:18px 20px;border:1px solid var(--line);border-inline-start:2px solid var(--accent);border-radius:8px;background:var(--soft)}
 @media (prefers-reduced-motion:no-preference){
   .research-more{transition:background-color .18s ease,border-color .18s ease,color .18s ease}
-  .research-more-icon::after{transition:transform .2s ease}
+  .research-more-icon::after{transition:transform .48s ease}
 }
 .research-detail h4{font-size:12px;font-weight:600;line-height:1.5;color:var(--accent)}
 .research-detail p{font-size:14px;line-height:1.8;color:var(--muted);margin-top:5px}
@@ -308,46 +308,67 @@ html[lang^="zh"] .heading-text,html[lang="ja"] .heading-text,html[lang="ko"] .he
 /* A stable SVG hit area keeps moving ink from repeatedly retriggering hover. */
 .illustration[data-illustration]{pointer-events:all}
 .illustration[data-illustration]>*{pointer-events:none}
-@media screen and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+@media screen and (prefers-reduced-motion:no-preference){
   .illustration [data-sketch-part]{transform-box:view-box;transform-origin:60px 60px}
   .illustration.is-sketch-playing [data-sketch-part]{
-    animation:sketch-gesture .82s cubic-bezier(.45,0,.25,1) var(--sketch-delay,0ms) 1;
+    animation:sketch-gesture 1.8s cubic-bezier(.4,0,.2,1) var(--sketch-delay,0ms) 1;
   }
-  .illustration [data-sketch-part="notebook-pencil"]{transform-origin:89px 78px;--sketch-out:translate(2px,-3px) rotate(-9deg);--sketch-back:translate(-1px,1px) rotate(3deg)}
-  .illustration [data-sketch-part="notebook-lines"]{--sketch-out:translateX(2px);--sketch-back:translateX(-.5px);--sketch-delay:60ms}
-  .illustration [data-sketch-part="curiosity-lens"]{transform-origin:54px 52px;--sketch-out:translate(4px,-3px) rotate(6deg);--sketch-back:translate(-1px,1px) rotate(-2deg)}
-  .illustration [data-sketch-part="agent-arrows"]{--sketch-out:rotate(13deg);--sketch-back:rotate(-3deg)}
-  .illustration [data-sketch-part="agent-node"]{transform-box:fill-box;transform-origin:center;--sketch-out:scale(1.22);--sketch-back:scale(.94)}
-  .illustration [data-sketch-part="physical-arm"]{transform-origin:36px 80px;--sketch-out:rotate(6deg);--sketch-back:rotate(-2deg)}
-  .illustration [data-sketch-part="physical-spark"]{--sketch-out:translate(2px,-2px);--sketch-back:translate(-.5px,.5px);--sketch-delay:80ms}
-  .illustration [data-sketch-part="chicken-piece"]{transform-origin:28px 96px;--sketch-out:rotate(-7deg);--sketch-back:rotate(2deg)}
-  .illustration [data-sketch-part="chicken-cycle"]{--sketch-out:rotate(10deg);--sketch-back:rotate(-3deg);--sketch-delay:40ms}
-  .illustration [data-sketch-part="chicken-drop"]{--sketch-out:translateY(5px) scale(.94);--sketch-back:translateY(-1px);--sketch-delay:80ms}
-  .illustration [data-sketch-part="burger-top"]{--sketch-out:translateY(-4px);--sketch-back:translateY(1px)}
-  .illustration [data-sketch-part="burger-middle"]{transform-origin:60px 72px;--sketch-out:translate(10px,-1px) rotate(-2deg);--sketch-back:translate(-2px,0) rotate(1deg);--sketch-delay:65ms}
-  .illustration [data-sketch-part="burger-base"]{--sketch-out:translateY(3px);--sketch-back:translateY(-1px)}
-  .illustration [data-sketch-part="burger-guide"]{--sketch-out:translateX(2px);--sketch-back:translateX(-1px);--sketch-delay:65ms}
-  .illustration [data-sketch-part="life-plant"]{transform-origin:57px 79px;--sketch-out:rotate(-7deg);--sketch-back:rotate(3deg)}
-  .illustration [data-sketch-part="life-sun"]{transform-origin:91px 21px;--sketch-out:rotate(16deg) scale(1.06);--sketch-back:rotate(-4deg)}
-  .illustration [data-sketch-part="badminton-racket"]{transform-origin:15px 97px;--sketch-out:rotate(11deg);--sketch-back:rotate(-4deg)}
-  .illustration [data-sketch-part="badminton-shuttle"]{transform-origin:92px 62px;--sketch-out:translate(5px,-7px) rotate(12deg);--sketch-back:translate(-1px,2px) rotate(-3deg);--sketch-delay:70ms}
-  .illustration [data-sketch-part="travel-flag"]{transform-origin:79px 31px;--sketch-out:rotate(9deg);--sketch-back:rotate(-4deg)}
-  .illustration [data-sketch-part="travel-sun"]{transform-origin:22px 24px;--sketch-out:translateY(-3px) scale(1.08);--sketch-back:translateY(1px)}
+  .illustration [data-sketch-part="notebook-pencil"]{transform-origin:89px 78px;--sketch-out:translate(3px,-5px) rotate(-16deg);--sketch-back:translate(-2px,2px) rotate(6deg)}
+  .illustration [data-sketch-part="notebook-lines"]{--sketch-out:translateX(4px);--sketch-back:translateX(-1px);--sketch-delay:90ms}
+  .illustration [data-sketch-part="curiosity-lens"]{transform-origin:54px 52px;--sketch-out:translate(7px,-5px) rotate(12deg);--sketch-back:translate(-2px,2px) rotate(-4deg)}
+  .illustration [data-sketch-part="agent-arrows"]{--sketch-out:rotate(24deg);--sketch-back:rotate(-6deg)}
+  .illustration [data-sketch-part="agent-node"]{transform-box:fill-box;transform-origin:center;--sketch-out:scale(1.35);--sketch-back:scale(.9)}
+  .illustration [data-sketch-part="physical-arm"]{transform-origin:36px 80px;--sketch-out:rotate(11deg);--sketch-back:rotate(-4deg)}
+  .illustration [data-sketch-part="physical-spark"]{--sketch-out:translate(4px,-4px) scale(1.12);--sketch-back:translate(-1px,1px);--sketch-delay:120ms}
+  .illustration [data-sketch-part="chicken-piece"]{transform-origin:28px 96px;--sketch-out:rotate(-12deg);--sketch-back:rotate(4deg)}
+  .illustration [data-sketch-part="chicken-cycle"]{--sketch-out:rotate(19deg);--sketch-back:rotate(-6deg);--sketch-delay:70ms}
+  .illustration [data-sketch-part="chicken-drop"]{--sketch-out:translateY(9px) scale(.88);--sketch-back:translateY(-2px);--sketch-delay:120ms}
+  .illustration [data-sketch-part="burger-top"]{--sketch-out:translateY(-8px);--sketch-back:translateY(2px)}
+  .illustration [data-sketch-part="burger-middle"]{transform-origin:60px 72px;--sketch-out:translate(16px,-2px) rotate(-4deg);--sketch-back:translate(-4px,1px) rotate(2deg);--sketch-delay:100ms}
+  .illustration [data-sketch-part="burger-base"]{--sketch-out:translateY(6px);--sketch-back:translateY(-2px)}
+  .illustration [data-sketch-part="burger-guide"]{--sketch-out:translateX(4px);--sketch-back:translateX(-2px);--sketch-delay:100ms}
+  .illustration [data-sketch-part="life-plant"]{transform-origin:57px 79px;--sketch-out:rotate(-13deg);--sketch-back:rotate(6deg)}
+  .illustration [data-sketch-part="life-sun"]{transform-origin:91px 21px;--sketch-out:rotate(30deg) scale(1.14);--sketch-back:rotate(-8deg)}
+  .illustration [data-sketch-part="badminton-racket"]{transform-origin:15px 97px;--sketch-out:rotate(19deg);--sketch-back:rotate(-7deg)}
+  .illustration [data-sketch-part="badminton-shuttle"]{transform-origin:92px 62px;--sketch-out:translate(8px,-12px) rotate(22deg);--sketch-back:translate(-2px,3px) rotate(-6deg);--sketch-delay:100ms}
+  .illustration [data-sketch-part="travel-flag"]{transform-origin:79px 31px;--sketch-out:rotate(17deg);--sketch-back:rotate(-7deg)}
+  .illustration [data-sketch-part="travel-sun"]{transform-origin:22px 24px;--sketch-out:translateY(-6px) scale(1.16);--sketch-back:translateY(2px)}
   .illustration.is-sketch-playing [data-sketch-part="cooking-steam"]{animation-name:sketch-steam}
-  .illustration [data-sketch-part="cooking-spoon"]{transform-origin:81px 56px;--sketch-out:rotate(-9deg);--sketch-back:rotate(4deg)}
-  .illustration [data-sketch-part="film-clapper"]{transform-origin:23px 44px;--sketch-out:rotate(-11deg);--sketch-back:rotate(3deg)}
-  .illustration [data-sketch-part="film-play"]{transform-origin:54px 70px;--sketch-out:scale(1.12);--sketch-back:scale(.97);--sketch-delay:100ms}
-  .illustration [data-sketch-part="education-page"]{transform-origin:63px 40px;--sketch-out:skewY(-6deg) scaleX(.94);--sketch-back:skewY(2deg)}
-  .illustration [data-sketch-part="education-marks"]{--sketch-out:translateY(-2px);--sketch-back:translateY(.5px);--sketch-delay:70ms}
-  .illustration [data-sketch-part="tools-code"]{transform-origin:60px 66px;--sketch-out:translateY(-3px) scale(1.06);--sketch-back:translateY(1px)}
+  .illustration [data-sketch-part="cooking-spoon"]{transform-origin:81px 56px;--sketch-out:rotate(-17deg);--sketch-back:rotate(7deg)}
+  .illustration [data-sketch-part="film-clapper"]{transform-origin:23px 44px;--sketch-out:rotate(-20deg);--sketch-back:rotate(6deg)}
+  .illustration [data-sketch-part="film-play"]{transform-origin:54px 70px;--sketch-out:scale(1.24);--sketch-back:scale(.94);--sketch-delay:140ms}
+  .illustration [data-sketch-part="education-page"]{transform-origin:63px 40px;--sketch-out:skewY(-11deg) scaleX(.88);--sketch-back:skewY(4deg)}
+  .illustration [data-sketch-part="education-marks"]{--sketch-out:translateY(-4px);--sketch-back:translateY(1px);--sketch-delay:100ms}
+  .illustration [data-sketch-part="tools-code"]{transform-origin:60px 66px;--sketch-out:translateY(-6px) scale(1.14);--sketch-back:translateY(2px)}
 }
 @keyframes sketch-gesture{
   0%,100%{transform:none}
-  32%{transform:var(--sketch-out)}
-  68%{transform:var(--sketch-back)}
+  24%,74%{transform:var(--sketch-out)}
+  49%{transform:var(--sketch-back)}
 }
 @keyframes sketch-steam{
   0%,100%{transform:none;opacity:1}
-  40%{transform:translate(1px,-6px);opacity:.45}
-  70%{transform:translate(-1px,-2px);opacity:.8}
+  24%{transform:translate(2px,-10px);opacity:.35}
+  49%{transform:translate(-2px,-3px);opacity:.85}
+  74%{transform:translate(1px,-8px);opacity:.45}
+}
+
+/* Animate the ink inside each fixed control, never the surrounding layout. */
+.ui-icon,.skill-badge svg,.fish-mark{overflow:visible;pointer-events:all}
+.ui-icon>*,.skill-badge svg>*,.fish-mark>*{pointer-events:none}
+@media screen and (prefers-reduced-motion:no-preference){
+  .ui-icon:not(.control-icon),.skill-badge svg,.fish-mark,.research-more-icon{transform-box:fill-box;transform-origin:center;--icon-out:rotate(16deg) scale(1.22);--icon-back:rotate(-7deg) scale(.96)}
+  .ui-icon:not(.control-icon).is-icon-playing,.skill-badge svg.is-icon-playing,.fish-mark.is-icon-playing,.research-more-icon.is-icon-playing{animation:ink-icon-gesture 1.4s cubic-bezier(.4,0,.2,1) 1}
+  .ui-icon[data-ui-icon="up"]{--icon-out:translateY(-5px) scale(1.12);--icon-back:translateY(2px)}
+  .ui-icon[data-ui-icon="left"]{--icon-out:translateX(-5px) scale(1.12);--icon-back:translateX(2px)}
+  .ui-icon[data-ui-icon="right"]{--icon-out:translateX(5px) scale(1.12);--icon-back:translateX(-2px)}
+  .ui-icon[data-ui-icon="external"]{--icon-out:translate(4px,-4px) scale(1.12);--icon-back:translate(-1px,1px)}
+  .ui-icon[data-ui-icon="close"]{--icon-out:rotate(90deg) scale(1.18);--icon-back:rotate(-12deg)}
+  .skill-badge svg{--icon-out:rotate(-12deg) scale(1.28);--icon-back:rotate(6deg) scale(.96)}
+  .fish-mark{--icon-out:translate(6px,-2px) rotate(-8deg);--icon-back:translate(-3px,1px) rotate(5deg)}
+}
+@keyframes ink-icon-gesture{
+  0%,100%{transform:none}
+  24%,74%{transform:var(--icon-out)}
+  49%{transform:var(--icon-back)}
 }

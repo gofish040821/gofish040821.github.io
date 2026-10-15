@@ -87,19 +87,34 @@
 .action-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .site-header :is(.header-github,.theme-toggle,.lang-toggle,.menu-toggle,.desktop-nav a):focus-visible { background: var(--control-surface); outline: 2px solid var(--accent); outline-offset: 3px; }
 
-/* Small state changes, with no delay to clicks or keyboard navigation. */
+/* Longer icon gestures stay inside fixed, immediately responsive controls. */
 @media (prefers-reduced-motion:no-preference) {
   .action-link,
-  .site-header :is(.header-github,.theme-toggle,.lang-toggle,.menu-toggle,.desktop-nav a,.lang-option,.mobile-nav a) { transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 140ms ease; }
-  .action-link .control-icon,
-  .header-github .control-icon,
-  .lang-caret { transition: transform 180ms ease, opacity 180ms ease; }
-  .site-header .lang-menu:not([hidden]) { animation: control-menu-in 160ms ease-out both; }
-  .site-header .mobile-nav:not([hidden]) { animation: control-menu-in 160ms ease-out both; }
-  .theme-icon .control-icon { animation: control-icon-in 180ms ease-out both; }
+  .site-header :is(.header-github,.theme-toggle,.lang-toggle,.menu-toggle,.desktop-nav a,.lang-option,.mobile-nav a) { transition: background-color 280ms ease, border-color 280ms ease, color 280ms ease; }
+  .desktop-nav a:after { transition: transform 420ms ease; }
+  .control-icon { transition: opacity 320ms ease; transform-box:fill-box; transform-origin:center; animation:var(--control-icon-entry,none),var(--control-icon-action,none); --control-icon-out:scale(1.16) rotate(8deg); --control-icon-back:scale(.98) rotate(-5deg); --control-icon-repeat:scale(1.1) rotate(5deg); }
+  .lang-caret { transition: transform 520ms cubic-bezier(.22,.68,.25,1); }
+  .site-header .lang-menu:not([hidden]),
+  .site-header .mobile-nav:not([hidden]) { animation: control-menu-in 300ms ease-out both; }
+  .theme-icon .control-icon { --control-icon-entry:control-icon-in 600ms cubic-bezier(.22,.68,.25,1) both; }
+  .control-icon.is-icon-playing { --control-icon-action:control-icon-gesture 1400ms cubic-bezier(.4,0,.2,1) 1; }
+  .control-icon[data-ui-icon="external"] { --control-icon-out:translate(4px,-4px) scale(1.14); --control-icon-back:translate(-1px,1px) scale(.98); --control-icon-repeat:translate(3px,-3px) scale(1.08); }
+  .control-icon[data-ui-icon="down"] { --control-icon-out:translateY(5px) scale(1.13); --control-icon-back:translateY(-2px) scale(.98); --control-icon-repeat:translateY(4px) scale(1.08); }
+  .control-icon[data-ui-icon="chevron"] { --control-icon-out:translateY(3px) scale(1.2); --control-icon-back:translateY(-1px) scale(.98); --control-icon-repeat:translateY(2px) scale(1.12); }
+  .control-icon[data-ui-icon="moon"] { --control-icon-out:rotate(-24deg) scale(1.18); --control-icon-back:rotate(9deg) scale(.98); --control-icon-repeat:rotate(-16deg) scale(1.1); }
+  .control-icon[data-ui-icon="sun"] { --control-icon-out:rotate(55deg) scale(1.17); --control-icon-back:rotate(-12deg) scale(.98); --control-icon-repeat:rotate(32deg) scale(1.1); }
+  .control-icon[data-ui-icon="menu"] { --control-icon-out:rotate(9deg) scale(1.2); --control-icon-back:rotate(-6deg) scale(.98); --control-icon-repeat:rotate(6deg) scale(1.12); }
+  .control-icon[data-ui-icon="close"] { --control-icon-out:rotate(90deg) scale(1.16); --control-icon-back:rotate(-12deg) scale(.98); --control-icon-repeat:rotate(45deg) scale(1.08); }
+  .control-icon[data-ui-icon="mail"] { --control-icon-out:translateY(-4px) rotate(-10deg) scale(1.12); --control-icon-back:translateY(1px) rotate(5deg) scale(.98); --control-icon-repeat:translateY(-3px) rotate(-6deg) scale(1.07); }
 }
-@keyframes control-menu-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes control-icon-in { from { opacity: .3; transform: rotate(-12deg) scale(.9); } to { opacity: 1; transform: rotate(0) scale(1); } }
+@keyframes control-menu-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes control-icon-in { 0% { opacity: .3; transform: rotate(-32deg) scale(.72); } 65% { opacity: 1; transform: rotate(8deg) scale(1.12); } 100% { opacity: 1; transform: none; } }
+@keyframes control-icon-gesture {
+  0%,100% { transform:none; }
+  24% { transform:var(--control-icon-out); }
+  49% { transform:var(--control-icon-back); }
+  73% { transform:var(--control-icon-repeat); }
+}
 @media (hover:hover) and (pointer:fine) {
   .desktop-nav a:hover,
   .site-header :is(.header-github,.theme-toggle,.lang-toggle,.menu-toggle):hover { background: var(--control-surface); color: var(--ink); }
@@ -109,13 +124,6 @@
   .contact-link:hover { background: var(--control-surface); border-color: var(--muted); }
   .action-primary:hover { background: var(--control-primary-hover); border-color: var(--control-primary-hover); }
   .action-link:hover .control-icon { opacity: 1; }
-}
-@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
-  .hero-actions .action-link:hover .control-icon { transform: translateY(2px); }
-  .contact-link:hover [data-ui-icon="external"],
-  .header-github:hover .control-icon { transform: translate(2px,-2px); }
-  .contact-link:hover [data-ui-icon="mail"] { transform: translateY(-1px); }
-  .action-link:active { transform: translateY(1px); }
 }
 @media(max-width:1200px) {
   .site-header .header-inner { gap: 12px; }
@@ -166,5 +174,5 @@
   .hero-actions .action-link { justify-content: space-between; padding-inline: 18px; }
 }
 @media(prefers-reduced-motion:reduce) {
-  .action-link,.action-link .control-icon,.header-tools *,.desktop-nav a { animation: none!important; transition: none!important; }
+  .action-link,.control-icon,.header-tools *,.desktop-nav a,.desktop-nav a:after,.site-header .mobile-nav { animation: none!important; transition: none!important; }
 }
