@@ -23,7 +23,7 @@ body{font-size:17px;line-height:1.75;font-optical-sizing:auto;font-synthesis:non
 .hero-copy{min-width:0}
 .hero h1{margin-top:0}
 .hello{font:400 17px/1.6 var(--sans);letter-spacing:0;color:var(--muted);margin-bottom:10px}
-.name{display:inline-block;direction:ltr;unicode-bidi:isolate;font:400 clamp(88px,8vw,118px)/1.06 var(--serif);letter-spacing:-.035em}
+.name{display:inline-block;direction:ltr;unicode-bidi:isolate;font:400 clamp(88px,8vw,118px)/1.06 var(--serif);letter-spacing:.01em;font-kerning:normal;font-variant-ligatures:none;white-space:nowrap}
 .hero-headline{
   font:300 clamp(24px,2.1vw,28px)/1.45 var(--serif);letter-spacing:-.015em;
   margin-top:28px;max-width:29ch;text-wrap:pretty;overflow-wrap:normal;
