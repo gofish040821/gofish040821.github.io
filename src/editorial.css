@@ -106,6 +106,26 @@ html:is(:lang(en),:lang(es),:lang(fr),:lang(de),:lang(pt),:lang(id)) .hero-figur
 .photo-caption{font-size:14px;line-height:1.75;margin-top:7px;max-width:56ch}
 .photo-number{font-family:var(--mono);font-style:normal;font-size:11px;padding-top:4px;direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
 .gallery-toggle{margin-top:38px;font-size:15px}
+html{scrollbar-gutter:stable}
+.lightbox{overflow-x:hidden}
+.lightbox.is-photo-zooming{overflow:visible}
+.lightbox-visual{position:relative;flex:1;min-width:0;height:69dvh;transform-origin:center;touch-action:pan-y pinch-zoom}
+.lightbox-stage .lightbox-visual img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;pointer-events:none;user-select:none}
+.lightbox-visual img[hidden]{display:none}
+.lightbox-outgoing{z-index:2}
+#lightbox-count{direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+@media(prefers-reduced-motion:no-preference){
+  .lightbox[open]{animation:photo-dialog-in .2s ease both}
+  .lightbox[open]::backdrop{animation:photo-backdrop-in .25s ease both}
+  .lightbox.is-closing{animation:photo-dialog-out .26s ease both}
+  .lightbox.is-closing::backdrop{animation:photo-backdrop-out .26s ease both}
+}
+@keyframes photo-dialog-in{from{opacity:0}to{opacity:1}}
+@keyframes photo-dialog-out{from{opacity:1}to{opacity:0}}
+@keyframes photo-backdrop-in{from{opacity:0}to{opacity:1}}
+@keyframes photo-backdrop-out{from{opacity:1}to{opacity:0}}
+@media(max-width:760px){.lightbox-visual{height:58dvh;flex-basis:100%}}
+@media(max-height:500px) and (orientation:landscape){.lightbox-visual{height:50dvh}}
 .closing{padding-block:78px 72px}
 .closing h2{font-weight:300;font-size:34px;line-height:1.4;letter-spacing:-.025em}
 .closing>p{font-size:16px;max-width:58ch;margin-top:16px}

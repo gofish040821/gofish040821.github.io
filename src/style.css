@@ -305,49 +305,83 @@ html[lang^="zh"] .heading-text,html[lang="ja"] .heading-text,html[lang="ko"] .he
 }
 @media print{.reading-progress{display:none!important}}
 
-/* A stable SVG hit area keeps moving ink from repeatedly retriggering hover. */
+/* Each illustration tells one short story inside a stable, touchable canvas. */
 .illustration[data-illustration]{pointer-events:all}
 .illustration[data-illustration]>*{pointer-events:none}
-@media screen and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
-  .illustration [data-sketch-part]{transform-box:view-box;transform-origin:60px 60px}
-  .illustration.is-sketch-playing [data-sketch-part]{
-    animation:sketch-gesture .82s cubic-bezier(.45,0,.25,1) var(--sketch-delay,0ms) 1;
-  }
-  .illustration [data-sketch-part="notebook-pencil"]{transform-origin:89px 78px;--sketch-out:translate(2px,-3px) rotate(-9deg);--sketch-back:translate(-1px,1px) rotate(3deg)}
-  .illustration [data-sketch-part="notebook-lines"]{--sketch-out:translateX(2px);--sketch-back:translateX(-.5px);--sketch-delay:60ms}
-  .illustration [data-sketch-part="curiosity-lens"]{transform-origin:54px 52px;--sketch-out:translate(4px,-3px) rotate(6deg);--sketch-back:translate(-1px,1px) rotate(-2deg)}
-  .illustration [data-sketch-part="agent-arrows"]{--sketch-out:rotate(13deg);--sketch-back:rotate(-3deg)}
-  .illustration [data-sketch-part="agent-node"]{transform-box:fill-box;transform-origin:center;--sketch-out:scale(1.22);--sketch-back:scale(.94)}
-  .illustration [data-sketch-part="physical-arm"]{transform-origin:36px 80px;--sketch-out:rotate(6deg);--sketch-back:rotate(-2deg)}
-  .illustration [data-sketch-part="physical-spark"]{--sketch-out:translate(2px,-2px);--sketch-back:translate(-.5px,.5px);--sketch-delay:80ms}
-  .illustration [data-sketch-part="chicken-piece"]{transform-origin:28px 96px;--sketch-out:rotate(-7deg);--sketch-back:rotate(2deg)}
-  .illustration [data-sketch-part="chicken-cycle"]{--sketch-out:rotate(10deg);--sketch-back:rotate(-3deg);--sketch-delay:40ms}
-  .illustration [data-sketch-part="chicken-drop"]{--sketch-out:translateY(5px) scale(.94);--sketch-back:translateY(-1px);--sketch-delay:80ms}
-  .illustration [data-sketch-part="burger-top"]{--sketch-out:translateY(-4px);--sketch-back:translateY(1px)}
-  .illustration [data-sketch-part="burger-middle"]{transform-origin:60px 72px;--sketch-out:translate(10px,-1px) rotate(-2deg);--sketch-back:translate(-2px,0) rotate(1deg);--sketch-delay:65ms}
-  .illustration [data-sketch-part="burger-base"]{--sketch-out:translateY(3px);--sketch-back:translateY(-1px)}
-  .illustration [data-sketch-part="burger-guide"]{--sketch-out:translateX(2px);--sketch-back:translateX(-1px);--sketch-delay:65ms}
-  .illustration [data-sketch-part="life-plant"]{transform-origin:57px 79px;--sketch-out:rotate(-7deg);--sketch-back:rotate(3deg)}
-  .illustration [data-sketch-part="life-sun"]{transform-origin:91px 21px;--sketch-out:rotate(16deg) scale(1.06);--sketch-back:rotate(-4deg)}
-  .illustration [data-sketch-part="badminton-racket"]{transform-origin:15px 97px;--sketch-out:rotate(11deg);--sketch-back:rotate(-4deg)}
-  .illustration [data-sketch-part="badminton-shuttle"]{transform-origin:92px 62px;--sketch-out:translate(5px,-7px) rotate(12deg);--sketch-back:translate(-1px,2px) rotate(-3deg);--sketch-delay:70ms}
-  .illustration [data-sketch-part="travel-flag"]{transform-origin:79px 31px;--sketch-out:rotate(9deg);--sketch-back:rotate(-4deg)}
-  .illustration [data-sketch-part="travel-sun"]{transform-origin:22px 24px;--sketch-out:translateY(-3px) scale(1.08);--sketch-back:translateY(1px)}
-  .illustration.is-sketch-playing [data-sketch-part="cooking-steam"]{animation-name:sketch-steam}
-  .illustration [data-sketch-part="cooking-spoon"]{transform-origin:81px 56px;--sketch-out:rotate(-9deg);--sketch-back:rotate(4deg)}
-  .illustration [data-sketch-part="film-clapper"]{transform-origin:23px 44px;--sketch-out:rotate(-11deg);--sketch-back:rotate(3deg)}
-  .illustration [data-sketch-part="film-play"]{transform-origin:54px 70px;--sketch-out:scale(1.12);--sketch-back:scale(.97);--sketch-delay:100ms}
-  .illustration [data-sketch-part="education-page"]{transform-origin:63px 40px;--sketch-out:skewY(-6deg) scaleX(.94);--sketch-back:skewY(2deg)}
-  .illustration [data-sketch-part="education-marks"]{--sketch-out:translateY(-2px);--sketch-back:translateY(.5px);--sketch-delay:70ms}
-  .illustration [data-sketch-part="tools-code"]{transform-origin:60px 66px;--sketch-out:translateY(-3px) scale(1.06);--sketch-back:translateY(1px)}
+.illustration [data-scene-part]{transform-box:view-box;transform-origin:60px 60px}
+@media screen and (prefers-reduced-motion:no-preference){
+  .is-scene-playing [data-scene-part]{animation-duration:var(--scene-duration,1250ms);animation-timing-function:cubic-bezier(.22,.61,.36,1);animation-iteration-count:1;animation-fill-mode:both}
+  .is-scene-playing [data-scene-part="pencil"]{transform-origin:79px 87px;animation-name:scene-pencil;--scene-duration:1450ms}
+  .is-scene-playing [data-scene-part="writing"]{stroke-dasharray:45;animation-name:scene-write;--scene-duration:1450ms}
+  .is-scene-playing [data-scene-part="lens"]{transform-origin:58px 55px;animation-name:scene-search}
+  .is-scene-playing [data-scene-part="discovery"]{transform-origin:58px 55px;animation-name:scene-discover}
+  .is-scene-playing [data-scene-part="curiosity-spark"]{animation-name:scene-spark}
+  .is-scene-playing [data-scene-part="chicken-piece"],.is-scene-playing [data-scene-part="chicken-bone"]{transform-origin:32px 88px;animation-name:scene-pickup;--scene-duration:1350ms}
+  .is-scene-playing [data-scene-part="crumb-a"]{transform-origin:94px 76px;animation-name:scene-crumb}
+  .is-scene-playing [data-scene-part="crumb-b"]{transform-origin:79px 88px;animation-name:scene-crumb;animation-delay:75ms}
+  .is-scene-playing [data-scene-part="chicken-aroma"]{animation-name:scene-aroma;--scene-duration:1500ms}
+  .is-scene-playing [data-scene-part="burger-top"]{animation-name:scene-bun;--scene-duration:1500ms}
+  .is-scene-playing [data-scene-part="burger-middle"]{animation-name:scene-ablation;--scene-duration:1500ms}
+  .is-scene-playing [data-scene-part="burger-base"]{transform-origin:60px 102px;animation-name:scene-burger-base;--scene-duration:1500ms}
+  .is-scene-playing [data-scene-part="burger-note"]{animation-name:scene-annotation;--scene-duration:1500ms}
+  .is-scene-playing [data-scene-part="book-page"]{transform-origin:61px 65px;animation-name:scene-page;--scene-duration:1400ms}
+  .is-scene-playing [data-scene-part="book-star"]{transform-origin:40px 82px;animation-name:scene-discover;--scene-duration:1400ms}
+  .is-scene-playing [data-scene-part="plant-stem"]{transform-origin:60px 79px;animation-name:scene-stem;--scene-duration:1550ms}
+  .is-scene-playing [data-scene-part="leaf-left"]{transform-origin:58px 63px;animation-name:scene-leaf-left;--scene-duration:1550ms}
+  .is-scene-playing [data-scene-part="leaf-right"]{transform-origin:60px 71px;animation-name:scene-leaf-right;--scene-duration:1550ms}
+  .is-scene-playing [data-scene-part="flower"]{transform-origin:63px 37px;animation-name:scene-bloom;--scene-duration:1550ms}
+  .is-scene-playing [data-scene-part="code-left"]{animation-name:scene-code-left;--scene-duration:1000ms}
+  .is-scene-playing [data-scene-part="code-right"]{animation-name:scene-code-right;--scene-duration:1000ms}
+  .is-scene-playing [data-scene-part="code-cursor"]{animation-name:scene-cursor;--scene-duration:1000ms}
+  .is-scene-playing [data-scene-part="code-line"]{stroke-dasharray:40;animation-name:scene-code-line;--scene-duration:1000ms}
+  .is-scene-playing [data-scene-part="racket"]{transform-origin:35px 94px;animation-name:scene-racket;--scene-duration:1250ms}
+  .is-scene-playing [data-scene-part="shuttle"]{transform-origin:89px 39px;animation-name:scene-shuttle;--scene-duration:1250ms}
+  .is-scene-playing [data-scene-part="shuttle-trail"]{animation-name:scene-shuttle-trail;--scene-duration:1250ms}
+  .is-scene-playing [data-scene-part="flag"]{transform-origin:80px 32px;animation-name:scene-flag;--scene-duration:1600ms}
+  .is-scene-playing [data-scene-part="sun"]{transform-origin:32px 28px;animation-name:scene-sun;--scene-duration:1600ms}
+  .is-scene-playing [data-scene-part="trail"]{stroke-dasharray:95;animation-name:scene-trail;--scene-duration:1600ms}
+  .is-scene-playing [data-scene-part="spoon"]{transform-origin:80px 66px;animation-name:scene-stir;--scene-duration:1600ms}
+  .is-scene-playing [data-scene-part="steam-a"]{transform-origin:44px 58px;animation-name:scene-steam;--scene-duration:1600ms}
+  .is-scene-playing [data-scene-part="steam-b"]{transform-origin:60px 55px;animation-name:scene-steam;--scene-duration:1450ms;animation-delay:150ms}
+  .is-scene-playing [data-scene-part="clapper"]{transform-origin:24px 49px;animation-name:scene-clap;--scene-duration:1200ms}
+  .is-scene-playing [data-scene-part="film-light"]{transform-origin:104px 54px;animation-name:scene-flash;--scene-duration:1200ms}
 }
-@keyframes sketch-gesture{
+@keyframes scene-pencil{
   0%,100%{transform:none}
-  32%{transform:var(--sketch-out)}
-  68%{transform:var(--sketch-back)}
+  14%{transform:translate(-39px,-10px) rotate(-11deg)}
+  24%{transform:translate(-35px,-9px) rotate(-9deg)}
+  37%{transform:translate(-29px,-14px) rotate(-13deg)}
+  49%{transform:translate(-24px,-10px) rotate(-10deg)}
+  62%{transform:translate(-12px,-10px) rotate(-13deg)}
+  76%{transform:translate(-9px,-17px) rotate(-6deg)}
 }
-@keyframes sketch-steam{
-  0%,100%{transform:none;opacity:1}
-  40%{transform:translate(1px,-6px);opacity:.45}
-  70%{transform:translate(-1px,-2px);opacity:.8}
-}
+@keyframes scene-write{0%,14%{stroke-dashoffset:45;opacity:0}20%{opacity:1}64%,100%{stroke-dashoffset:0;opacity:1}}
+@keyframes scene-search{0%,100%{transform:none}18%{transform:translate(-5px,4px) rotate(-6deg)}42%{transform:translate(4px,-3px) rotate(4deg)}64%{transform:translate(0,-1px) scale(1.04)}}
+@keyframes scene-discover{0%,25%,100%{transform:none;opacity:1}38%{transform:scale(.72);opacity:.45}59%{transform:scale(1.22);opacity:1}76%{transform:scale(.97)}}
+@keyframes scene-spark{0%,100%{opacity:1;transform:none}20%,35%{opacity:.2}58%,72%{opacity:1;transform:translate(2px,-2px)}}
+@keyframes scene-pickup{0%,100%{transform:none}16%{transform:rotate(3deg)}43%{transform:translate(1px,-5px) rotate(-9deg)}67%{transform:translate(0,-4px) rotate(-8deg)}85%{transform:rotate(1.5deg)}}
+@keyframes scene-crumb{0%,30%,100%{transform:none}49%{transform:translate(3px,-5px) rotate(24deg)}66%{transform:translate(5px,3px) rotate(40deg)}78%{transform:translate(4px,0) rotate(30deg)}}
+@keyframes scene-aroma{0%,100%{opacity:1;transform:none}45%{opacity:0;transform:translate(1px,-7px)}46%{opacity:0;transform:translate(-1px,3px)}80%{opacity:1;transform:none}}
+@keyframes scene-bun{0%,100%{transform:none}15%{transform:translateY(2px)}34%,60%{transform:translateY(-10px) rotate(-2deg)}84%{transform:translateY(1px)}}
+@keyframes scene-ablation{0%,19%,100%{transform:none;opacity:1}43%,57%{transform:translate(13px,-1px);opacity:.65}79%{transform:translate(-1px,0);opacity:1}}
+@keyframes scene-burger-base{0%,100%{transform:none}15%{transform:scaleY(.95)}36%,65%{transform:translateY(3px)}85%{transform:scaleY(1.025)}}
+@keyframes scene-annotation{0%,100%{opacity:1;transform:none}20%{opacity:.6}42%,60%{opacity:1;transform:translateX(3px)}}
+@keyframes scene-page{0%,100%{transform:none}18%{transform:scaleX(.96) skewY(-3deg)}48%{transform:scaleX(.08) skewY(-12deg)}60%{transform:scaleX(.12) skewY(8deg)}84%{transform:scaleX(1.03) skewY(1deg)}}
+@keyframes scene-stem{0%,100%{transform:none}25%{transform:rotate(-3deg)}57%{transform:rotate(2deg)}80%{transform:rotate(-.5deg)}}
+@keyframes scene-leaf-left{0%,100%{transform:none}20%{transform:rotate(6deg) scale(.97)}51%{transform:rotate(-8deg) scale(1.04)}76%{transform:rotate(2deg)}}
+@keyframes scene-leaf-right{0%,100%{transform:none}28%{transform:rotate(-5deg)}62%{transform:rotate(7deg) scale(1.04)}85%{transform:rotate(-1deg)}}
+@keyframes scene-bloom{0%,100%{transform:none}24%{transform:scale(.9) rotate(-7deg)}58%{transform:scale(1.11) rotate(6deg)}82%{transform:scale(.99) rotate(-1deg)}}
+@keyframes scene-code-left{0%,100%{transform:none}30%,58%{transform:translateX(-3px)}}
+@keyframes scene-code-right{0%,100%{transform:none}30%,58%{transform:translateX(3px)}}
+@keyframes scene-cursor{0%,15%,45%,75%,100%{opacity:1}25%,55%{opacity:0}}
+@keyframes scene-code-line{0%,20%{stroke-dashoffset:40}80%,100%{stroke-dashoffset:0}}
+@keyframes scene-racket{0%,100%{transform:none}21%{transform:rotate(-9deg)}38%{transform:rotate(17deg)}61%{transform:rotate(-4deg)}81%{transform:rotate(1deg)}}
+@keyframes scene-shuttle{0%,100%{transform:none;opacity:1}27%{transform:translate(-10px,11px) rotate(-16deg)}50%{transform:translate(4px,-10px) rotate(14deg)}67%{transform:translate(7px,-14px) rotate(21deg);opacity:0}70%{transform:translate(3px,-7px);opacity:0}94%{transform:none;opacity:1}}
+@keyframes scene-shuttle-trail{0%,100%{opacity:1;transform:none}22%{opacity:.3}39%{opacity:1;transform:translate(1px,-3px)}63%{opacity:0;transform:translate(3px,-8px)}}
+@keyframes scene-flag{0%,100%{transform:none}24%{transform:skewY(-7deg) scaleX(.92)}46%{transform:skewY(4deg) scaleX(1.03)}66%{transform:skewY(-3deg)}85%{transform:skewY(1deg)}}
+@keyframes scene-sun{0%,100%{transform:none}45%{transform:translateY(-3px) rotate(6deg)}}
+@keyframes scene-trail{0%{stroke-dashoffset:95;opacity:.25}72%,100%{stroke-dashoffset:0;opacity:1}}
+@keyframes scene-stir{0%,100%{transform:none}22%{transform:rotate(-10deg) translateY(1px)}45%{transform:rotate(8deg) translateY(-2px)}68%{transform:rotate(-5deg) translateY(1px)}86%{transform:rotate(2deg)}}
+@keyframes scene-steam{0%,100%{transform:none;opacity:1}35%{transform:translate(2px,-6px) scaleX(1.1);opacity:.4}58%{transform:translate(-2px,-11px) scaleX(.92);opacity:0}59%{transform:translate(-1px,3px);opacity:0}83%{transform:none;opacity:.85}}
+@keyframes scene-clap{0%,100%{transform:none}22%{transform:rotate(-12deg)}39%{transform:rotate(10deg)}47%{transform:rotate(8deg)}67%{transform:rotate(-3deg)}84%{transform:rotate(1deg)}}
+@keyframes scene-flash{0%,100%{transform:none;opacity:1}20%,30%{transform:scale(.8);opacity:.35}43%{transform:scale(1.25);opacity:1}58%{transform:scale(.95);opacity:.8}}

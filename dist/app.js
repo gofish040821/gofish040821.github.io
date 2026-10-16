@@ -94,39 +94,66 @@
   /* ---------------- one-time section reveals ---------------- */
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  /* ---------------- brief, local sketch gestures ---------------- */
-  const sketchMotion = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
-  // Delegation also covers the illustrations replaced by language switching.
-  document.addEventListener('pointerover', event => {
-    if (event.pointerType !== 'mouse' || !sketchMotion.matches) return;
-    const sketch = event.target.closest?.('.illustration[data-illustration]');
-    if (!sketch || sketch.contains(event.relatedTarget) || sketch.classList.contains('is-sketch-playing')) return;
-    if (typeof sketch.getAnimations !== 'function') return;
+  /* ---------------- small illustrated scenes ---------------- */
+  const activeScenes = new Map();
+  const introducedScenes = new WeakSet();
 
-    // Keep the shared sprite until first use. Local copies let each illustration
-    // animate its own parts without changing another instance or its ink paths.
-    const use = sketch.querySelector('use');
+  function playScene(scene) {
+    if (reducedMotion.matches || activeScenes.has(scene) || !scene.getClientRects().length || typeof scene.getAnimations !== 'function') return;
+    // Local parts keep every scene independent of the shared SVG sprite.
+    const use = scene.querySelector('use');
     if (use) {
       const symbol = document.getElementById(use.getAttribute('href').slice(1));
       if (!symbol) return;
       use.replaceWith(...Array.from(symbol.childNodes, node => node.cloneNode(true)));
-      for (const part of ['agent-node', 'cooking-steam']) {
-        sketch.querySelectorAll(`[data-sketch-part="${part}"]`).forEach((node, index) => {
-          node.style.setProperty('--sketch-delay', `${index * 70}ms`);
-        });
-      }
     }
+    const token = {};
+    activeScenes.set(scene, token);
+    scene.classList.add('is-scene-playing');
+    Promise.all(scene.getAnimations({ subtree: true }).map(animation => animation.finished.catch(() => {})))
+      .then(() => {
+        if (activeScenes.get(scene) !== token) return;
+        scene.classList.remove('is-scene-playing');
+        activeScenes.delete(scene);
+      });
+  }
 
-    sketch.classList.add('is-sketch-playing');
-    // Finish the gesture even if the pointer leaves; re-entry during playback
-    // does not stack animations, and resting on an icon never starts a loop.
-    Promise.all(sketch.getAnimations({ subtree: true }).map(animation => animation.finished.catch(() => {})))
-      .then(() => sketch.classList.remove('is-sketch-playing'));
-  });
-  sketchMotion.addEventListener('change', () => {
-    if (!sketchMotion.matches) {
-      document.querySelectorAll('.is-sketch-playing').forEach(sketch => sketch.classList.remove('is-sketch-playing'));
+  function settleScenes() {
+    activeScenes.forEach((_, scene) => scene.classList.remove('is-scene-playing'));
+    activeScenes.clear();
+  }
+  const sceneObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting || reducedMotion.matches) continue;
+      introducedScenes.add(entry.target);
+      sceneObserver.unobserve(entry.target);
+      playScene(entry.target);
     }
+  }, { threshold: .6, rootMargin: '0px 0px -8% 0px' }) : null;
+
+  function observeScenes() {
+    sceneObserver?.disconnect();
+    if (reducedMotion.matches) return;
+    document.querySelectorAll('.illustration[data-illustration]').forEach(scene => {
+      if (!introducedScenes.has(scene)) sceneObserver?.observe(scene);
+    });
+  }
+  // A scene introduces itself once on arrival. Hover or touch can replay it;
+  // a resting pointer never loops it and moving away never cuts a gesture short.
+  document.addEventListener('pointerover', event => {
+    if (event.pointerType === 'touch') return;
+    const scene = event.target.closest?.('.illustration[data-illustration]');
+    if (scene && !scene.contains(event.relatedTarget)) playScene(scene);
+  });
+  document.addEventListener('pointerdown', event => {
+    if (event.pointerType === 'mouse') return;
+    const scene = event.target.closest?.('.illustration[data-illustration]');
+    if (scene) playScene(scene);
+  }, { passive: true });
+  document.addEventListener('visibilitychange', () => { if (document.hidden) settleScenes(); });
+  reducedMotion.addEventListener('change', () => {
+    if (reducedMotion.matches) settleScenes();
+    observeScenes();
   });
 
   function initReveals() {
@@ -246,35 +273,200 @@
   /* ---------------- lightbox ---------------- */
   const dialog = document.querySelector('#lightbox');
   const fullImage = document.querySelector('#lightbox-image');
+  const previewImage = document.querySelector('#lightbox-preview');
+  const photoVisual = document.querySelector('.lightbox-visual');
   const closeButton = document.querySelector('#lightbox-close');
   const lightboxTitle = document.querySelector('#lightbox-title');
   const lightboxDescription = document.querySelector('#lightbox-description');
   const lightboxCount = document.querySelector('#lightbox-count');
+  const photoCache = new Map();
   let activeIndex = 0;
   let opener = null;
+  let photoRequest = 0;
+  let closingPhoto = false;
+  let zoomAnimation = null;
+  let detailAnimation = null;
+  let outgoingImage = null;
+  let intentTimer = null;
 
-  function showPhoto(index) {
+  function canPrefetchPhotos() {
+    const connection = navigator.connection;
+    return !connection?.saveData && !/(^|-)2g$/.test(connection?.effectiveType || '');
+  }
+
+  // Keep a small decoded cache; simultaneous hover/open requests share one load.
+  function loadPhoto(url, priority = 'low') {
+    const cached = photoCache.get(url);
+    if (cached) {
+      if (priority === 'high') cached.image.fetchPriority = 'high';
+      photoCache.delete(url);
+      photoCache.set(url, cached);
+      return cached.promise;
+    }
+    const image = new Image();
+    image.decoding = 'async';
+    image.fetchPriority = priority;
+    const entry = { image, ready: false, promise: null };
+    entry.promise = new Promise((resolve, reject) => {
+      image.onload = async () => {
+        try { await image.decode(); } catch { /* Loaded images can still be displayed without decode(). */ }
+        entry.ready = true;
+        for (const [key, value] of photoCache) {
+          if (photoCache.size <= 6) break;
+          if (key !== url && value.ready) photoCache.delete(key);
+        }
+        resolve(image);
+      };
+      image.onerror = () => { photoCache.delete(url); reject(new Error('Photo unavailable')); };
+    });
+    photoCache.set(url, entry);
+    image.src = url;
+    return entry.promise;
+  }
+
+  function prefetchNeighbours(request) {
+    if (!canPrefetchPhotos()) return;
+    const warm = () => {
+      if (!dialog.open || closingPhoto || request !== photoRequest || !canPrefetchPhotos()) return;
+      for (const offset of [-1, 1]) {
+        const link = photoLinks[(activeIndex + offset + photoLinks.length) % photoLinks.length];
+        loadPhoto(link.href).catch(() => {});
+      }
+    };
+    if ('requestIdleCallback' in window) requestIdleCallback(warm, { timeout: 900 });
+    else setTimeout(warm, 180);
+  }
+
+  function stopPhotoAnimations(keepPendingPreview = false) {
+    zoomAnimation?.cancel();
+    zoomAnimation = null;
+    detailAnimation?.cancel();
+    detailAnimation = null;
+    // A preference change must not remove the only decoded image while the
+    // next thumbnail is still loading. Its reveal callback will clear it.
+    if (!keepPendingPreview || (previewImage.complete && previewImage.naturalWidth) || !fullImage.hidden) {
+      outgoingImage?.remove();
+      outgoingImage = null;
+    }
+    dialog.classList.remove('is-photo-zooming');
+  }
+
+  function photoTransform(source) {
+    const target = photoVisual.getBoundingClientRect();
+    const width = Number(previewImage.getAttribute('width')) || 1;
+    const height = Number(previewImage.getAttribute('height')) || 1;
+    const fit = Math.min(target.width / width, target.height / height);
+    const dx = source.left + source.width / 2 - target.left - target.width / 2;
+    const dy = source.top + source.height / 2 - target.top - target.height / 2;
+    return `translate(${dx}px, ${dy}px) scale(${source.width / (width * fit)}, ${source.height / (height * fit)})`;
+  }
+
+  function zoomPhoto(source, reverse = false) {
+    if (reducedMotion.matches || !source || source.width <= 0 || source.height <= 0) return null;
+    zoomAnimation?.cancel();
+    const from = { transform: photoTransform(source) };
+    const to = { transform: 'none' };
+    dialog.classList.add('is-photo-zooming');
+    const animation = photoVisual.animate(reverse ? [to, from] : [from, to], {
+      duration: reverse ? 260 : 420,
+      easing: reverse ? 'cubic-bezier(.4,0,.5,1)' : 'cubic-bezier(.2,.75,.25,1)',
+      fill: 'none'
+    });
+    zoomAnimation = animation;
+    animation.finished.catch(() => {}).then(() => { if (zoomAnimation === animation) dialog.classList.remove('is-photo-zooming'); });
+    return animation;
+  }
+
+  function showPhoto(index, opening = false) {
     if (!photoLinks.length) return;
+    if (closingPhoto) return;
+    const previous = !opening && dialog.open ? (outgoingImage || (fullImage.hidden ? previewImage : fullImage)).cloneNode() : null;
+    stopPhotoAnimations();
+    const request = ++photoRequest;
     activeIndex = (index + photoLinks.length) % photoLinks.length;
     const link = photoLinks[activeIndex];
     const thumbnail = link.querySelector('img');
-    fullImage.src = link.href;
-    fullImage.alt = thumbnail ? thumbnail.alt : '';
+    // The already downloaded thumbnail appears in this same frame, even offline.
+    previewImage.width = thumbnail.naturalWidth || Number(thumbnail.getAttribute('width'));
+    previewImage.height = thumbnail.naturalHeight || Number(thumbnail.getAttribute('height'));
+    previewImage.src = thumbnail.currentSrc || thumbnail.src;
+    photoVisual.setAttribute('aria-label', thumbnail.alt);
+    fullImage.hidden = true;
+    fullImage.removeAttribute('src');
     lightboxTitle.textContent = link.dataset.title || '';
     lightboxDescription.textContent = link.dataset.caption || '';
     lightboxCount.textContent = String(activeIndex + 1).padStart(2, '0') + ' / ' + String(photoLinks.length).padStart(2, '0');
+    let revealPreview = () => {};
+    if (previous) {
+      previous.removeAttribute('id');
+      previous.className = 'lightbox-outgoing';
+      previous.setAttribute('aria-hidden', 'true');
+      photoVisual.append(previous);
+      outgoingImage = previous;
+      let revealing = false;
+      revealPreview = () => {
+        if (request !== photoRequest || outgoingImage !== previous || revealing) return;
+        revealing = true;
+        const remove = () => { previous.remove(); if (outgoingImage === previous) outgoingImage = null; };
+        if (reducedMotion.matches) { remove(); return; }
+        const fade = previous.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 180, easing: 'ease-out', fill: 'forwards' });
+        fade.finished.catch(() => {}).then(remove);
+      };
+      if (previewImage.complete && previewImage.naturalWidth) revealPreview();
+      else previewImage.decode().then(revealPreview).catch(() => {});
+    }
+    loadPhoto(link.href, 'high').then(image => {
+      if (request !== photoRequest || !dialog.open || closingPhoto) return;
+      fullImage.src = image.src;
+      fullImage.hidden = false;
+      revealPreview();
+      if (!reducedMotion.matches) {
+        detailAnimation = fullImage.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 180, easing: 'ease-out' });
+      }
+      prefetchNeighbours(request);
+    }).catch(() => { /* Keep the usable preview when a full-size request fails. */ });
+  }
+
+  function closePhoto() {
+    if (!dialog.open || closingPhoto) return;
+    closingPhoto = true;
+    ++photoRequest;
+    stopPhotoAnimations();
+    const source = photoLinks[activeIndex]?.querySelector('img');
+    const rect = source?.getBoundingClientRect();
+    const onScreen = rect && rect.top < window.innerHeight && rect.bottom > 0 && rect.width > 0;
+    if (reducedMotion.matches) { dialog.close(); return; }
+    dialog.classList.add('is-closing');
+    const animation = onScreen ? zoomPhoto(rect, true) : dialog.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 180 });
+    if (animation) animation.finished.catch(() => {}).then(() => { if (closingPhoto && dialog.open) dialog.close(); });
+    else dialog.close();
   }
 
   function bindPhotoLinks() {
     photoLinks.forEach((link, i) => {
+      const warm = () => { if (canPrefetchPhotos()) loadPhoto(link.href).catch(() => {}); };
+      link.addEventListener('pointerenter', event => {
+        if (event.pointerType === 'touch') return;
+        clearTimeout(intentTimer);
+        intentTimer = setTimeout(warm, 120);
+      });
+      link.addEventListener('pointerleave', () => clearTimeout(intentTimer));
+      link.addEventListener('focus', warm);
+      link.addEventListener('pointerdown', event => { if (event.pointerType === 'touch') warm(); }, { passive: true });
       link.addEventListener('click', event => {
         if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+        if (typeof dialog.showModal !== 'function') return;
         event.preventDefault();
+        clearTimeout(intentTimer);
         opener = link;
-        showPhoto(i);
+        const source = link.querySelector('img').getBoundingClientRect();
+        closingPhoto = false;
+        dialog.classList.remove('is-closing');
+        showPhoto(i, true);
         dialog.showModal();
         document.body.classList.add('modal-open');
-        closeButton.focus();
+        closeButton.focus({ preventScroll: true });
+        zoomPhoto(source);
       });
     });
   }
@@ -282,28 +474,41 @@
   if (typeof dialog.showModal === 'function') {
     document.querySelector('#lightbox-prev').addEventListener('click', () => showPhoto(activeIndex - 1));
     document.querySelector('#lightbox-next').addEventListener('click', () => showPhoto(activeIndex + 1));
-    closeButton.addEventListener('click', () => dialog.close());
-    dialog.addEventListener('close', () => { document.body.classList.remove('modal-open'); if (opener) opener.focus(); });
+    closeButton.addEventListener('click', closePhoto);
+    dialog.addEventListener('cancel', event => { event.preventDefault(); closePhoto(); });
+    dialog.addEventListener('close', () => {
+      ++photoRequest;
+      closingPhoto = false;
+      stopPhotoAnimations();
+      dialog.classList.remove('is-closing');
+      document.body.classList.remove('modal-open');
+      if (opener?.isConnected) opener.focus({ preventScroll: true });
+    });
     dialog.addEventListener('click', event => {
       if (event.target !== dialog) return;
       const box = dialog.getBoundingClientRect();
-      if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
+      if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) closePhoto();
     });
     dialog.addEventListener('keydown', event => {
       if (event.key === 'ArrowRight') { event.preventDefault(); showPhoto(activeIndex + 1); }
       if (event.key === 'ArrowLeft') { event.preventDefault(); showPhoto(activeIndex - 1); }
     });
     let touchStart = null;
-    fullImage.addEventListener('touchstart', event => {
+    photoVisual.addEventListener('touchstart', event => {
       touchStart = event.touches.length === 1 ? [event.touches[0].clientX, event.touches[0].clientY] : null;
     }, { passive: true });
-    fullImage.addEventListener('touchend', event => {
+    photoVisual.addEventListener('touchend', event => {
       if (!touchStart || event.changedTouches.length !== 1) return;
       const dx = event.changedTouches[0].clientX - touchStart[0];
       const dy = event.changedTouches[0].clientY - touchStart[1];
       if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) showPhoto(activeIndex + (dx < 0 ? 1 : -1));
       touchStart = null;
     }, { passive: true });
+    reducedMotion.addEventListener('change', event => {
+      if (!event.matches) return;
+      stopPhotoAnimations(true);
+      if (closingPhoto && dialog.open) dialog.close();
+    });
   }
 
   /* ---------------- research details ---------------- */
@@ -414,6 +619,7 @@
     bindGallery();
     bindSkills();
     syncResearchDetails();
+    observeScenes();
     buildLangMenu();
     renderThemeToggle();
     scheduleProgress();
