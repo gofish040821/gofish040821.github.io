@@ -7,6 +7,7 @@
   const languages = I18N.languages || [];
   const STORAGE_KEY = 'gofish-language';
   const root = document.documentElement;
+  const BIRTH_DATE = '2004-08-21';
   const progressBar = document.querySelector('#reading-progress');
   let progressQueued = false;
 
@@ -30,6 +31,14 @@
   let strings = {};
   const t = (key, fallback) => (strings[key] === undefined ? (fallback || '') : strings[key]);
   const currentCode = () => root.getAttribute('data-language') || I18N.default;
+  function currentAge() {
+    const today = new Date();
+    const birth = new Date(BIRTH_DATE + 'T00:00:00');
+    let age = today.getFullYear() - birth.getFullYear();
+    const birthdayPassed = today.getMonth() > birth.getMonth() || (today.getMonth() === birth.getMonth() && today.getDate() >= birth.getDate());
+    return birthdayPassed ? age : age - 1;
+  }
+  const renderText = value => String(value).replace(/\{age\}/g, String(currentAge()));
 
   /* ---------------- header nav (mobile) ---------------- */
   const menuButton = document.querySelector('.menu-toggle');
@@ -554,6 +563,7 @@
   const langSwitch = document.querySelector('#lang-switch');
   const langToggle = document.querySelector('.lang-toggle');
   const langMenu = document.querySelector('.lang-menu');
+  const langCurrent = document.querySelector('.lang-current');
 
   function closeLangMenu() {
     langMenu.hidden = true;
@@ -568,12 +578,41 @@
     }).join('');
   }
 
+  // Swap every node the template marked: plain strings, aria labels, and the
+  // pre-rendered content sections. Runs on init and on every switch.
+  function translateStatic(entry) {
+    const text = entry.strings || {};
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const value = text[el.dataset.i18n];
+      if (value !== undefined) {
+        const text = renderText(value);
+        el.innerHTML = el.dataset.i18n === 'headline'
+          ? text.replace(/\b(Agent RSI|Physical AI)\b/g, '<bdi class="research-name" dir="ltr" lang="en">$1</bdi>')
+          : text;
+      }
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+      const value = text[el.dataset.i18nAria];
+      if (value !== undefined) el.setAttribute('aria-label', renderText(value));
+    });
+    const sections = entry.sections || {};
+    document.querySelectorAll('[data-i18n-section]').forEach(el => {
+      const value = sections[el.dataset.i18nSection];
+      if (value !== undefined) el.innerHTML = value;
+    });
+  }
+
   function applyLanguage(code) {
-    if (!translations[code]) code = I18N.default;
     const entry = translations[code] || translations[I18N.default];
     if (!entry) return;
+    const meta = languages.find(item => item.code === code) || { code: code, label: code, lang: code, dir: 'ltr' };
+    root.setAttribute('data-language', code);
+    root.setAttribute('lang', meta.lang || code);
+    root.setAttribute('dir', meta.dir || 'ltr');
     strings = entry.strings || {};
-    window.gofishI18n.apply(code);
+    if (langCurrent) langCurrent.textContent = meta.label || code;
+    translateStatic(entry);
+    if (strings.metaTitle) document.title = strings.metaTitle;
     if (dialog.open) dialog.close();
     closeMenu();
     closeLangMenu();
@@ -651,10 +690,7 @@
 
   function renderThemeToggle() {
     const dark = currentTheme() === 'dark';
-    if (themeToggle) {
-      themeToggle.dataset.i18nAria = dark ? 'themeToLight' : 'themeToDark';
-      themeToggle.setAttribute('aria-label', t(themeToggle.dataset.i18nAria));
-    }
+    if (themeToggle) themeToggle.setAttribute('aria-label', t(dark ? 'themeToLight' : 'themeToDark', dark ? 'Switch to light mode' : 'Switch to dark mode'));
     if (themeColorMeta) themeColorMeta.setAttribute('content', dark ? '#191816' : '#f7f5f0');
   }
 
