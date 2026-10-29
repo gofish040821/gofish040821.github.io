@@ -38,8 +38,8 @@ const photoPath = (name, small = false) => {
 
 // Read intrinsic thumbnail dimensions so mixed portrait/landscape photos can
 // keep their full framing without shifting the page as lazy images arrive.
-async function photoSize(name) {
-  const image = await readFile(resolve(root, 'dist', photoPath(name, true)));
+async function photoSize(name, small = true) {
+  const image = await readFile(resolve(root, 'dist', photoPath(name, small)));
   if (image.toString('ascii', 0, 4) !== 'RIFF' || image.toString('ascii', 8, 12) !== 'WEBP') {
     throw new Error(`Invalid WebP photo: ${name}`);
   }
@@ -59,6 +59,15 @@ async function photoSize(name) {
   throw new Error(`Cannot read photo dimensions: ${name}`);
 }
 const photoSizes = new Map(await Promise.all(data.gallery.map(async item => [item.image, await photoSize(item.image)])));
+const fullPhotoSizes = new Map(await Promise.all(data.gallery.map(async item => [item.image, await photoSize(item.image, false)])));
+const photoSrcset = name => `${photoPath(name, true)} ${photoSizes.get(name)[0]}w, ${photoPath(name)} ${fullPhotoSizes.get(name)[0]}w`;
+const heroSizes = await photoSize(data.heroImage, false);
+const heroSrcset = `${photoPath(data.heroImage, true)} ${(await photoSize(data.heroImage))[0]}w, ./assets/photos/${data.heroImage}-medium.webp 1200w, ${photoPath(data.heroImage)} ${heroSizes[0]}w`;
+const gallerySizes = index => {
+  const span = index < 4 ? (index % 2 ? 7 : 5) : 4;
+  const fraction = span / 12;
+  return `(max-width:520px) calc(100vw - 40px), (max-width:760px) calc((100vw - 60px) / 2), (max-width:1100px) calc(${(fraction * 100).toFixed(3)}vw - ${(fraction * 40 + 24).toFixed(3)}px), (max-width:1256px) calc(${(fraction * 100).toFixed(3)}vw - ${(fraction * 64 + 32).toFixed(3)}px), ${(fraction * 1192 - 32).toFixed(3)}px`;
+};
 const galleryOrder = data.gallery.map(item => item.image);
 
 // Translations follow image identity, never an independent positional index.
@@ -88,11 +97,22 @@ const hobbyIllustrations = { '↗': 'badminton', '⌁': 'travel', '◡': 'cookin
 const renderHobbies = items => items.map(item => `<article class="hobby">${illustration(hobbyIllustrations[item.symbol], 'hobby-illustration')}<div class="hobby-title"><h3>${escape(item.title)}</h3></div><p>${escape(item.description)}</p></article>`).join('\n');
 const renderGallery = items => items.map((item, i) => {
   const [width, height] = photoSizes.get(item.image);
-  return `<figure class="photo-card" data-photo="${escape(item.image)}"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" alt="${escape(item.alt)}" width="${width}" height="${height}" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">${uiIcon('external')}</span></a><figcaption><div class="photo-caption-copy"><span class="photo-title">${escape(item.title)}</span><p class="photo-caption">${escape(item.caption)}</p></div><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`;
+  const sizes = gallerySizes(i);
+  return `<figure class="photo-card" data-photo="${escape(item.image)}"><a class="photo-link" href="${photoPath(item.image)}" data-caption="${escape(item.caption)}" data-title="${escape(item.title)}" aria-label="${escape(item.title)}"><img src="${photoPath(item.image, true)}" srcset="${photoSrcset(item.image)}" sizes="${sizes}" alt="${escape(item.alt)}" width="${width}" height="${height}" style="object-position:${escape(item.position)}" loading="lazy" decoding="async"><span class="expand-icon" aria-hidden="true">${uiIcon('external')}</span></a><figcaption><div class="photo-caption-copy"><span class="photo-title">${escape(item.title)}</span><p class="photo-caption">${escape(item.caption)}</p></div><span class="photo-number">${String(i+1).padStart(2,'0')}</span></figcaption></figure>`;
 }).join('\n');
 
 const values = {
   ...assetVersions,
+  heroSrcset,
+  heroWidth: heroSizes[0],
+  heroHeight: heroSizes[1],
+  alternateLinks: [...i18n.languages.map(({ code }) => `<link rel="alternate" hreflang="${code}" href="${escape(data.siteUrl)}/?lang=${code}">`), `<link rel="alternate" hreflang="x-default" href="${escape(data.siteUrl)}/?lang=en">`].join('\n  '),
+  personJson: JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'Person', name: 'Yiming Zeng', alternateName: ['Gofish', '曾一鸣'],
+    jobTitle: "Master's student in mathematics",
+    affiliation: { '@type': 'CollegeOrUniversity', name: 'Southern University of Science and Technology' },
+    url: data.siteUrl + '/', sameAs: [data.github, data.linkedin], email: data.email
+  }).replace(/</g, '\\u003c'),
   fishMark: fishMark(),
   ...Object.fromEntries(['external','down','chevron','moon','sun','menu','close','mail'].map(name => ['control' + name[0].toUpperCase() + name.slice(1) + 'Icon', controlIcon(name)])),
   illustrationLibrary: illustrationSprite() + skillIllustrationSprite() + uiIllustrationSprite(),
@@ -143,7 +163,7 @@ for (const [code, entry] of Object.entries(i18n.translations || {})) {
     }
   };
 }
-const payload = { default: i18n.default || 'en', languages: i18n.languages || [], translations };
+const payload = { default: i18n.default || 'en', siteUrl: data.siteUrl, languages: i18n.languages || [], translations };
 
 const template = await readFile(resolve(root, 'src/index.html'), 'utf8');
 let html = template.replace(/\{\{(\w+)\}\}/g, (_, key) => {
@@ -153,7 +173,8 @@ let html = template.replace(/\{\{(\w+)\}\}/g, (_, key) => {
 // Inline dictionary, emitted before the deferred app.js so it is always available.
 // "<" and ">" are escaped so the JSON can never terminate the script element early.
 const json = JSON.stringify(payload).replace(/</g, '\u005cu003c').replace(/>/g, '\u005cu003e');
-html = html.replace('</body>', `<script>window.__I18N__=${json};</script></body>`);
+const bootstrap = await readFile(resolve(root, 'src/i18n-bootstrap.js'), 'utf8');
+html = html.replace('</body>', `<script>window.__I18N__=${json};</script><script>${bootstrap}</script></body>`);
 
 await mkdir(resolve(root, 'dist'), { recursive: true });
 for (const font of ['anthropic-serif-roman', 'anthropic-serif-italic', 'anthropic-sans-roman', 'anthropic-sans-italic', 'anthropic-mono-roman']) {
@@ -162,13 +183,15 @@ for (const font of ['anthropic-serif-roman', 'anthropic-serif-italic', 'anthropi
 for (const name of new Set(['avatar', data.heroImage, ...data.gallery.map(item => item.image)])) {
   for (const small of [false, true]) await access(resolve(root, 'dist', photoPath(name, small)));
 }
+await access(resolve(root, `dist/assets/photos/${data.heroImage}-medium.webp`));
+await access(resolve(root, 'dist/assets/og-cover.jpg'));
 for (const item of [...data.skills, ...data.agentSkills]) await access(resolve(root, 'dist/assets/skills', `${item.badge}.svg`));
 await writeFile(resolve(root, 'dist/index.html'), html);
 for (const file of ['style.css', 'controls.css', 'editorial.css', 'app.js', 'busuanzi.pure.mini.js']) await copyFile(resolve(root, 'src', file), resolve(root, 'dist', file));
 await copyFile(resolve(root, 'src/assets/fish.svg'), resolve(root, 'dist/assets/fish.svg'));
 await writeFile(resolve(root, 'dist/.nojekyll'), '');
 await writeFile(resolve(root, 'dist/robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${data.siteUrl}/sitemap.xml\n`);
-await writeFile(resolve(root, 'dist/sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${escape(data.siteUrl)}/</loc></url></urlset>\n`);
+await writeFile(resolve(root, 'dist/sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${i18n.languages.map(({ code }) => `<url><loc>${escape(data.siteUrl)}/?lang=${code}</loc></url>`).join('')}</urlset>\n`);
 
 // A missing path (e.g. gofish040821.github.io/gofish040821/, which reads as a
 // repo name rather than a route) would otherwise land on Pages' bare 404 page.

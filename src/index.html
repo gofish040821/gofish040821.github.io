@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +9,19 @@
   <meta property="og:description" content="{{metaDescription}}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
-  <link rel="canonical" href="{{siteUrl}}/">
+  <meta property="og:url" content="{{siteUrl}}/?lang=en">
+  <meta property="og:image" content="{{siteUrl}}/assets/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gofish sitting on a rock in the Dolomites">
+  <meta name="twitter:card" content="summary_large_image">
+  {{alternateLinks}}
+  <script type="application/ld+json">{{personJson}}</script>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png?v=restored">
   <link rel="apple-touch-icon" sizes="512x512" href="./assets/favicon-512.png?v=restored">
   <title>{{metaTitle}}</title>
   <script>
+    document.documentElement.setAttribute('data-i18n-pending', '');
     // Runs before first paint: the site opens light for everyone; only a visitor
     // who explicitly chose dark gets it, and must never see a white flash.
     (function () {
@@ -23,13 +31,14 @@
       } catch (error) { /* private mode */ }
     })();
   </script>
+  <style>html[data-i18n-pending] body{visibility:hidden}</style>
   <link rel="preload" href="./assets/fonts/anthropic-serif-roman.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./assets/fonts/anthropic-sans-roman.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./style.css?v={{styleVersion}}">
   <link rel="stylesheet" href="./controls.css?v={{controlsVersion}}">
   <link rel="stylesheet" href="./editorial.css?v={{editorialVersion}}">
-  <noscript><style>.research-more{display:none!important}.research-details[hidden]{display:block!important}</style></noscript>
-  <script src="./app.js?v={{appVersion}}" defer></script>
+  <noscript><link rel="canonical" href="{{siteUrl}}/?lang=en"><style>.research-more,.menu-toggle,.theme-toggle,.lang-switch,#skills-toggle,#gallery-toggle{display:none!important}.research-details[hidden]{display:block!important}.skill-badges .skill-badge[hidden]{display:inline-flex!important}@media(max-width:1200px){.site-header{height:auto}.header-inner{min-height:74px}.site-header #mobile-nav[hidden]{display:grid!important;position:static;width:auto;margin:0;padding:12px 20px;box-shadow:none}}</style></noscript>
+  <script src="./app.js?v={{appVersion}}" defer onerror="window.gofishAppFailed=true;window.gofishI18n?.showAll()"></script>
   <script src="./busuanzi.pure.mini.js" defer></script>
 </head>
 <body>
@@ -44,7 +53,7 @@
       </nav>
       <div class="header-tools">
         <a class="header-github" href="{{github}}" target="_blank" rel="noopener noreferrer">GitHub {{controlExternalIcon}}</a>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode"><span class="theme-icon" aria-hidden="true">{{controlMoonIcon}}{{controlSunIcon}}</span></button>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" data-i18n-aria="themeToDark"><span class="theme-icon" aria-hidden="true">{{controlMoonIcon}}{{controlSunIcon}}</span></button>
         <div class="lang-switch" id="lang-switch">
           <button class="lang-toggle" type="button" aria-expanded="false" aria-haspopup="listbox" aria-label="Switch language" data-i18n-aria="langLabel">
             <span class="lang-current" aria-hidden="true">English</span>
@@ -57,7 +66,7 @@
     </div>
     <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Mobile navigation" hidden><a href="#about"><span data-i18n="navAbout">About</span></a><a href="#research"><span data-i18n="navResearch">Research</span></a><a href="#education"><span data-i18n="navEducation">Education</span></a><a href="#life"><span data-i18n="navLife">Life</span></a><a href="{{github}}" target="_blank" rel="noopener noreferrer">GitHub {{controlExternalIcon}}</a><a href="{{linkedin}}" target="_blank" rel="noopener noreferrer">LinkedIn {{controlExternalIcon}}</a></nav>
   </header>
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="hero wrap" id="home" aria-labelledby="hero-title">
       <div class="hero-copy">
         <h1 id="hero-title"><span class="hello" data-i18n="heroHello">Hi, I'm</span><span class="name">{{name}}<span class="accent">.</span></span></h1>
@@ -66,7 +75,7 @@
         <div class="hero-actions"><a class="action-link action-primary" href="#research"><span data-i18n="heroCtaExplore">Explore my interests</span> {{controlDownIcon}}</a><a class="action-link action-secondary" href="#life"><span data-i18n="heroCtaLife">See my life</span> {{controlDownIcon}}</a></div>
       </div>
       <figure class="hero-figure">
-        <div class="photo-mat"><img src="./assets/photos/{{heroImage}}.webp" alt="Gofish sitting on a rock with mountain ranges behind" width="1800" height="1350" fetchpriority="high"><span class="photo-label" data-i18n="photoLabel">SOMEWHERE OUT THERE</span></div>
+        <div class="photo-mat"><img src="./assets/photos/{{heroImage}}-small.webp" srcset="{{heroSrcset}}" sizes="(max-width:760px) min(504px, calc(100vw - 56px)), (max-width:1100px) calc(51vw - 72px), (max-width:1256px) calc(48.5vw - 69px), 536px" alt="Gofish sitting on a rock with mountain ranges behind" width="{{heroWidth}}" height="{{heroHeight}}" fetchpriority="high"><span class="photo-label" data-i18n="photoLabel">SOMEWHERE OUT THERE</span></div>
         <figcaption><span data-i18n="heroCaption">{{heroCaption}}</span></figcaption>
       </figure>
     </section>
@@ -77,7 +86,7 @@
     <section class="research section wrap" id="research" aria-labelledby="research-title">
       <div class="section-top"><div><p class="section-number" data-i18n="sectionResearch">02 / RESEARCH INTERESTS</p><h2 id="research-title" class="illustrated-heading">{{researchIllustration}}<span class="heading-text"><span data-i18n="researchTitle">What I'm curious about</span><span class="accent">.</span></span></h2></div></div>
       <div class="research-grid" data-i18n-section="research">{{research}}</div>
-      <div class="research-skills" aria-labelledby="skills-title"><div class="research-skills-heading">{{toolsIllustration}}<h3 id="skills-title" data-i18n="skillsTitle">Skills &amp; Tools</h3></div><ul class="skill-badges" id="skill-badges">{{skills}}</ul><button id="skills-toggle" class="button skills-toggle" type="button" aria-expanded="false" aria-controls="skill-badges" hidden><span data-i18n="skillsExpand">Show all skills</span> {{plusIcon}}</button></div>
+      <div class="research-skills" role="group" aria-labelledby="skills-title"><div class="research-skills-heading">{{toolsIllustration}}<h3 id="skills-title" data-i18n="skillsTitle">Skills &amp; Tools</h3></div><ul class="skill-badges" id="skill-badges">{{skills}}</ul><button id="skills-toggle" class="button skills-toggle" type="button" aria-expanded="false" aria-controls="skill-badges" hidden><span data-i18n="skillsExpand">Show all skills</span> {{plusIcon}}</button></div>
     </section>
     <section class="education section wrap" id="education" aria-labelledby="education-title">
       <div class="section-aside"><p class="section-number" data-i18n="sectionEducation">03 / EDUCATION</p><h2 id="education-title" class="illustrated-heading">{{educationIllustration}}<span class="heading-text"><span data-i18n="educationTitle">Education</span><span class="accent">.</span></span></h2></div>
@@ -94,6 +103,6 @@
     <section class="closing wrap" aria-labelledby="closing-title"><h2 id="closing-title" data-i18n="closing">{{closing}}</h2><p data-i18n="closingText">{{closingText}}</p><div class="closing-links"><a class="action-link contact-link" href="{{github}}" target="_blank" rel="noopener noreferrer"><span data-i18n="closingCta">Find me on GitHub</span> {{controlExternalIcon}}</a><a class="action-link contact-link" href="{{linkedin}}" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span> {{controlExternalIcon}}</a>{{emailLink}}</div></section>
   </main>
   <footer class="wrap site-footer"><span class="footer-signature">{{fishMark}}<span>© <span id="year">2026</span> {{name}}<span class="footer-separator">/</span><span data-i18n="footerTag">Stay curious, keep exploring.</span></span></span><span class="visit-stats"><span id="busuanzi_container_site_pv" class="visit-stat"><span data-i18n="statsViews">Total visits</span> <span id="busuanzi_value_site_pv" class="visit-value"></span></span><span id="busuanzi_container_site_uv" class="visit-stat"><span class="visit-sep" aria-hidden="true">&middot;</span> <span data-i18n="statsVisitors">Visitors</span> <span id="busuanzi_value_site_uv" class="visit-value"></span></span></span><span><span data-i18n="footerUpdated">Updated</span> {{updated}} <a href="#home" aria-label="Back to top" data-i18n-aria="backToTop"><span data-i18n="backToTop">Back to top</span> {{upIcon}}</a></span></footer>
-  <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-toolbar"><span id="lightbox-count" aria-live="polite"></span><button type="button" class="icon-button" id="lightbox-close" aria-label="Close photo" data-i18n-aria="lightboxClose">{{closeIcon}}</button></div><div class="lightbox-stage"><button type="button" class="icon-button lightbox-prev" id="lightbox-prev" aria-label="Previous photo" data-i18n-aria="lightboxPrev">{{leftIcon}}</button><div class="lightbox-visual" role="img" aria-label=""><img id="lightbox-preview" alt="" aria-hidden="true" decoding="async"><img id="lightbox-image" alt="" aria-hidden="true" decoding="async" hidden></div><button type="button" class="icon-button lightbox-next" id="lightbox-next" aria-label="Next photo" data-i18n-aria="lightboxNext">{{rightIcon}}</button></div><div class="lightbox-caption"><h2 id="lightbox-title"></h2><p id="lightbox-description"></p></div></dialog>
+  <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-toolbar"><span id="lightbox-count" aria-live="polite"></span><button type="button" class="icon-button" id="lightbox-close" aria-label="Close photo" data-i18n-aria="lightboxClose">{{closeIcon}}</button></div><div class="lightbox-stage"><button type="button" class="icon-button lightbox-prev" id="lightbox-prev" aria-label="Previous photo" data-i18n-aria="lightboxPrev">{{leftIcon}}</button><div class="lightbox-visual" role="img" aria-label=""><img id="lightbox-preview" src="./assets/photos/{{heroImage}}-small.webp" loading="lazy" alt="" aria-hidden="true" decoding="async"><img id="lightbox-image" src="./assets/photos/{{heroImage}}-small.webp" loading="lazy" alt="" aria-hidden="true" decoding="async" hidden></div><button type="button" class="icon-button lightbox-next" id="lightbox-next" aria-label="Next photo" data-i18n-aria="lightboxNext">{{rightIcon}}</button></div><div class="lightbox-caption"><h2 id="lightbox-title"></h2><p id="lightbox-description"></p></div></dialog>
 </body>
 </html>

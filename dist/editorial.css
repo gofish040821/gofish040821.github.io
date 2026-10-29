@@ -135,6 +135,12 @@ html{scrollbar-gutter:stable}
 .fish-mark{display:block;width:38px;height:auto;flex-shrink:0;color:var(--ink)}
 .footer-separator{margin-inline:8px}
 
+/* Keep the static page usable if the interaction script cannot be fetched. */
+@media(max-width:1200px){
+  html[data-app-unavailable] .site-header{height:auto}
+  html[data-app-unavailable] .site-header #mobile-nav{position:static;width:auto;margin:0;padding:12px 20px;box-shadow:none}
+}
+
 /* Anthropic's fonts cover Latin, not these scripts. Preserve native fallbacks. */
 html:lang(zh){--serif:var(--latin-serif),"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,serif}
 html:lang(ja){--serif:var(--latin-serif),"Noto Serif JP","Yu Mincho","Hiragino Mincho ProN",serif;--sans:var(--latin-sans),"Yu Gothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif}
