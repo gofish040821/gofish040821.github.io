@@ -1,5 +1,5 @@
-// Small, authored pencil drawings. Pressure and graphite density follow each
-// gesture, with a fixed seed: builds never change the marks or need SVG filters.
+// Small, authored drawings with solid ink and flat colour. A fixed seed keeps
+// gentle width changes and tapered ends consistent without tonal shading.
 const f = n => Number(n.toFixed(2));
 const pts = points => typeof points === 'string'
   ? points.trim().split(/\s+/).map(pair => pair.split(',').map(Number)) : points;
@@ -23,10 +23,10 @@ function samples(points) {
   result.push(points.at(-1));
   return result;
 }
-function mark(points, weight, opacity, tone) {
+function mark(points, weight, tone) {
   points = pts(points);
   const random = seedFor(points), center = samples(points), left = [], right = [];
-  const pressures = Array.from({length: 7}, () => .4 + random() * 1.1);
+  const pressures = Array.from({length: 7}, () => .82 + random() * .36);
   for (let i = 0; i < center.length; i++) {
     const a = center[Math.max(0,i-1)], b = center[Math.min(center.length-1,i+1)], p = center[i];
     const length = Math.hypot(b[0]-a[0],b[1]-a[1]) || 1;
@@ -39,26 +39,19 @@ function mark(points, weight, opacity, tone) {
     left.push([p[0]+nx*(radius+edge),p[1]+ny*(radius+edge)]);
     right.push([p[0]-nx*(radius-edge),p[1]-ny*(radius-edge)]);
   }
-  const pieces = [], count = Math.max(1,Math.min(5,Math.ceil(center.length/13)));
-  let density = .68 + random()*.24;
-  for (let chunk = 0; chunk < count; chunk++) {
-    const start = Math.floor(chunk*(center.length-1)/count), end = Math.floor((chunk+1)*(center.length-1)/count)+1;
-    const outline = [...left.slice(start,end), ...right.slice(start,end).reverse()];
-    // Density drifts gently along one gesture; it must not look like five
-    // differently coloured pieces joined end to end.
-    density = Math.max(.5,Math.min(.98,density+(random()-.5)*.14));
-    pieces.push(`<path class="${tone}" fill="currentColor" stroke="none" opacity="${f(opacity*density)}" d="${path(outline)}Z"/>`);
-  }
-  return pieces.join('');
+  // One opaque ribbon per gesture: crossings cannot accumulate darker ink,
+  // and there are no separately shaded segments or seams along the stroke.
+  const outline = [...left, ...right.reverse()];
+  return `<path class="${tone}" fill="currentColor" stroke="none" d="${path(outline)}Z"/>`;
 }
-export const pencil = (points, weight = 3.1, opacity = 1) => mark(points,weight,opacity,'illustration-ink');
-export const crayon = (points, weight = 6, opacity = .72) => mark(points,weight,opacity,'illustration-accent');
-export const paper = points => `<path class="illustration-paper" opacity=".55" d="${path(pts(points))}Z"/>`;
+export const pencil = (points, weight = 3.1) => mark(points,weight,'illustration-ink');
+export const crayon = (points, weight = 6) => mark(points,weight,'illustration-accent');
+export const paper = points => `<path class="illustration-paper" d="${path(pts(points))}Z"/>`;
 export const part = (name, drawing) => `<g data-scene-part="${name}">${Array.isArray(drawing) ? drawing.join('') : drawing}</g>`;
 
-// These three gestures retain a real centerline for their stroke-reveal motion.
+// Animated gestures retain a real centerline for their stroke-reveal motion.
 // Authored changes of direction keep the revealed line informal, too.
-export function drawnLine(points, weight = 2.4, opacity = .75) {
+export function drawnLine(points, weight = 2.4) {
   const coordinates = samples(pts(points));
-  return `<path d="${path(coordinates)}" fill="none" stroke="currentColor" stroke-width="${weight}" opacity="${opacity}" stroke-linecap="round" stroke-linejoin="round"/>`;
+  return `<path d="${path(coordinates)}" fill="none" stroke="currentColor" stroke-width="${weight}" stroke-linecap="round" stroke-linejoin="round"/>`;
 }

@@ -162,9 +162,9 @@
 @media(max-width:760px){.research-card,.research-card.physical{padding:22px 0 16px}}
 @media(max-width:1050px){.hero-headline br,.hero-description br{display:initial}}
 
-/* Original editorial illustrations, sharing one palette in all languages. */
-:root{--illustration-paper:#e6e1d6;--illustration-accent:#cf7958}
-[data-theme="dark"]{--illustration-paper:#504b41;--illustration-accent:#d78a65}
+/* Solid illustration colours; overlapping gestures keep the same tone. */
+:root{--illustration-paper:#eeeae2;--illustration-accent:#cf7958}
+[data-theme="dark"]{--illustration-paper:#37342e;--illustration-accent:#d78a65}
 .illustration{display:block;flex-shrink:0;color:var(--ink);overflow:visible}
 .illustration-paper{fill:var(--illustration-paper);stroke:none}
 .illustration-accent{fill:var(--illustration-accent);stroke:none}
