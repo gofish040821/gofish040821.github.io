@@ -49,7 +49,7 @@ html:is(:lang(en),:lang(es),:lang(fr),:lang(de),:lang(pt),:lang(id)) .hero-figur
 .about-main{max-width:62ch}
 .about-main p,.about-main p:first-child{font-size:17px;line-height:1.85;margin-bottom:18px}
 .about-main p:last-child{margin-bottom:0}
-.aside-note{font-size:15px;line-height:1.8;max-width:27ch;margin-top:20px}
+
 .profile-note{font-size:13px;margin-top:22px}
 .section-top{margin-bottom:38px}
 .research-grid{gap:54px;align-items:start}
