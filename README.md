@@ -46,6 +46,8 @@ node scripts/serve.mjs
 
 `content.json` 保存基础内容和相册顺序；`src/i18n.json` 保存各语言的界面文字与内容，**包括英文版本**。修改文案时同步对应翻译，避免首次加载与切换语言后的内容不同。
 
+首屏翻译由构建时内联的 `src/i18n-bootstrap.js` 在首次显示前完成。页面描述、Open Graph 描述、语言方向和 canonical 随所选语言同步。词典仍全量内联；按语言拆分的建议与 SEO 限制见 [按语言加载方案](docs/i18n-loading-plan.md)。
+
 | 想改什么 | 对应位置 |
 | --- | --- |
 | 个人简介与首页文案 | `content.json` 的 `about`、`headline`、`intro`，以及各语言对应内容 |
@@ -68,6 +70,14 @@ node scripts/serve.mjs
 3. 重新构建并检查布局。相册按 `content.json` 排序，构建通过 `image` 匹配翻译并检查缺失、重复项，避免调序后配文错位。
 
 缩略图保留照片原始比例，放大后显示完整照片。更换导航头像时，替换 `avatar.webp` 和 `avatar-small.webp`。
+
+首屏另有 `mountains-medium.webp`（1200×900）；社交分享使用由原图裁切的 `dist/assets/og-cover.jpg`（1200×630）。修改首屏照片时同步更新这两个文件。响应式图片的宽度描述来自图片实际尺寸，`sizes` 与现有相册列宽对应。
+
+## 验证
+
+构建后运行 `node scripts/check-i18n.mjs`，检查全部语言的文字键和内容区块、静态英文与词典一致性，以及本轮英文和中文文案的句长。
+
+浏览器检查使用 Python 的 `playwright`、`html5lib`、`Pillow`，这些包仅供本地验证，部署构建不需要。安装后启动 `python -m http.server 4173 --bind 127.0.0.1 --directory dist`，在另一终端运行 `python scripts/check-site.py`。默认使用 Windows 安装的 Chrome；其他位置可设置 `CHROME_PATH`。脚本检查英、中、阿拉伯语的首次显示、布局偏移、键盘操作、主题、元信息、图片路径及无脚本兜底；可在 URL 后追加截图输出目录。
 
 ## 文件结构
 

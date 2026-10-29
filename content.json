@@ -5,15 +5,15 @@
   "email": "gofish0821@gmail.com",
   "siteUrl": "https://gofish040821.github.io",
   "updated": "2026.10",
-  "profileNote": "{age} · Male · Notes of 2026",
+  "profileNote": "Shenzhen, CN · 2026",
   "headline": "Mathematics master's student exploring Agent RSI and Physical AI.",
-  "intro": "I turn to mathematics for clarity, and to mountains and daily life for perspective.",
+  "intro": "I do mathematics because I like problems that won't let me lie to myself. The rest of the time I'm on a mountain, in a kitchen, or on a badminton court.",
   "heroImage": "mountains",
-  "heroCaption": "Give my steps to the wild, and my curiosity to the world.",
+  "heroCaption": "The Dolomites. The fog cleared for about four minutes.",
   "about": [
-    "Hi, I'm Gofish. I'm currently pursuing a master's in mathematics at Southern University of Science and Technology, after studying Mathematical Foundation Science at Dalian University of Technology. Mathematics is where I begin to understand problems, and AI keeps bringing me new ones.",
-    "What fascinates me most is how agents improve themselves through experience, and how intelligence can truly enter the physical world through perception and action. I hope to find my own research direction between solid mathematical thinking and concrete experiments.",
-    "Off screen, I love traveling, badminton, cooking, and movies. To me, studying a problem seriously and cooking a meal seriously are both worth the effort."
+    "Hi, I'm Gofish. I'm studying for a master's in mathematics at Southern University of Science and Technology. Before that, I studied Mathematical Foundation Science at Dalian University of Technology.",
+    "Two questions I keep coming back to: how does an agent get better from its own experience? What does a model need to act in the world instead of only describing it? I don't have a thesis yet — that's what the next three years are for.",
+    "Away from a screen: badminton, cooking, film, and any mountain with a trail. I take cooking far too seriously for my skill level."
   ],
   "research": [
     {
@@ -173,30 +173,30 @@
     {
       "symbol": "↗",
       "title": "Badminton",
-      "description": "Swing, run, sweat — a breath of fresh air for the mind."
+      "description": "Doubles, mostly. I'm usually the one who miscounts the score."
     },
     {
       "symbol": "⌁",
       "title": "Travel & wandering",
-      "description": "Leaving familiar routes, collecting different scenery."
+      "description": "I plan trips around one mountain and figure out the rest on the way."
     },
     {
       "symbol": "◡",
       "title": "Cooking",
-      "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+      "description": "The only thing I do where the feedback is immediate."
     },
     {
       "symbol": "▷",
       "title": "Film & stories",
-      "description": "Living another life through a screen."
+      "description": "I keep a list. Most of it is rewatches."
     }
   ],
   "gallery": [
     {
       "image": "summit",
       "title": "Above the clouds, another sky",
-      "caption": "Tianchi left the wind to finish the sentence.",
-      "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
+      "caption": "Wind at the rim. I sat there until my hands went numb.",
+      "alt": "Changbai Mountain Tianchi:Gofish wearing sunglasses on a mountain viewpoint",
       "position": "50% 45%"
     },
     {
@@ -216,7 +216,7 @@
     {
       "image": "seaside-fishing",
       "title": "Waiting on the blue",
-      "caption": "The sea kept its answer; I kept the line.",
+      "caption": "Fishing from a wooden pier by the sea.",
       "alt": "Gofish fishing from a wooden pier by the sea",
       "position": "38% 50%"
     },
@@ -224,63 +224,63 @@
       "image": "mountains",
       "title": "High enough for silence",
       "caption": "In the Dolomites, even the noise learns to disappear.",
-      "alt": "Dolomites, Italy：Gofish sitting on a rock with mountain ranges behind",
+      "alt": "Dolomites, Italy:Gofish sitting on a rock with mountain ranges behind",
       "position": "45% 60%"
     },
     {
       "image": "blue-lake",
       "title": "The afternoon slowed down",
       "caption": "Lake Thun kept the light a little longer.",
-      "alt": "Lake Thun, Switzerland：Gofish with a camera standing in front of a blue lake",
+      "alt": "Lake Thun, Switzerland:Gofish with a camera standing in front of a blue lake",
       "position": "50% 56%"
     },
     {
       "image": "rooftops",
       "title": "Paris, looking up",
       "caption": "The Opera House rewards anyone who remembers to look above street level.",
-      "alt": "Paris Opera House：Gofish on a city rooftop terrace with classical architecture in the distance",
+      "alt": "Paris Opera House:Gofish on a city rooftop terrace with classical architecture in the distance",
       "position": "52% 50%"
     },
     {
       "image": "green-lake",
       "title": "A color the mountains kept",
       "caption": "Lake Carezza, somewhere between emerald and reflection.",
-      "alt": "Lake Carezza, Italy：Gofish standing by a wooden fence beside a green mountain lake",
+      "alt": "Lake Carezza, Italy:Gofish standing by a wooden fence beside a green mountain lake",
       "position": "50% 62%"
     },
     {
       "image": "snow",
       "title": "Winter, almost weightless",
       "caption": "At Jungfrau, the clouds felt close enough to touch.",
-      "alt": "Jungfrau summit：Gofish on a snowy mountain holding a Jungfrau souvenir flag",
+      "alt": "Jungfrau summit:Gofish on a snowy mountain holding a Jungfrau souvenir flag",
       "position": "50% 68%"
     },
     {
       "image": "museum",
       "title": "Everyone came for her",
       "caption": "A quiet face, a noisy room—the Mona Lisa at the Louvre.",
-      "alt": "Mona Lisa, Louvre：Gofish taking a selfie inside a museum hall",
+      "alt": "Mona Lisa, Louvre:Gofish taking a selfie inside a museum hall",
       "position": "45% 50%"
     },
     {
       "image": "evening",
       "title": "Florence before nightfall",
       "caption": "From Piazzale Michelangelo, the city held on to the last light.",
-      "alt": "Piazzale Michelangelo：Gofish posing with a city skyline at dusk",
+      "alt": "Piazzale Michelangelo:Gofish posing with a city skyline at dusk",
       "position": "40% 55%"
     },
     {
       "image": "colosseum",
       "title": "Stone remembers",
       "caption": "At the Colosseum, two thousand years felt strangely near.",
-      "alt": "Roman Colosseum：Gofish taking a selfie outside the ancient Roman Colosseum",
+      "alt": "Roman Colosseum:Gofish taking a selfie outside the ancient Roman Colosseum",
       "position": "50% 57%"
     },
     {
       "image": "aircraft",
-      "title": "Childhood curiosity, full scale",
-      "caption": "The Y-20 made the idea of flight feel tangible.",
-      "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
+      "title": "The Y-20, up close",
+      "caption": "First time I stood next to something that big that could fly.",
+      "alt": "Y-20 transport aircraft:Gofish standing in front of an aircraft on outdoor display",
       "position": "50% 50%"
     },
     {
@@ -291,6 +291,8 @@
       "position": "50% 42%"
     }
   ],
-  "closing": "Stay curious, grow slowly.",
-  "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas."
+  "closing": "Let's talk about agents, mathematics, or where to eat in Shenzhen.",
+  "closingText": "I read every email and reply to research ones fastest.",
+  "metaTitle": "Gofish — Mathematics & AI",
+  "metaDescription": "Gofish (Yiming Zeng) is a master's student in mathematics at SUSTech, working on self-improving agents and physical AI. He also thinks too hard about fried chicken."
 }

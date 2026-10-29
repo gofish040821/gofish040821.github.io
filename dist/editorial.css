@@ -49,7 +49,7 @@ html:is(:lang(en),:lang(es),:lang(fr),:lang(de),:lang(pt),:lang(id)) .hero-figur
 .about-main{max-width:62ch}
 .about-main p,.about-main p:first-child{font-size:17px;line-height:1.85;margin-bottom:18px}
 .about-main p:last-child{margin-bottom:0}
-.aside-note{font-size:15px;line-height:1.8;max-width:27ch;margin-top:20px}
+
 .profile-note{font-size:13px;margin-top:22px}
 .section-top{margin-bottom:38px}
 .research-grid{gap:54px;align-items:start}
@@ -134,6 +134,12 @@ html{scrollbar-gutter:stable}
 .footer-signature{display:flex;align-items:center;gap:13px;max-width:100%}
 .fish-mark{display:block;width:38px;height:auto;flex-shrink:0;color:var(--ink)}
 .footer-separator{margin-inline:8px}
+
+/* Keep the static page usable if the interaction script cannot be fetched. */
+@media(max-width:1200px){
+  html[data-app-unavailable] .site-header{height:auto}
+  html[data-app-unavailable] .site-header #mobile-nav{position:static;width:auto;margin:0;padding:12px 20px;box-shadow:none}
+}
 
 /* Anthropic's fonts cover Latin, not these scripts. Preserve native fallbacks. */
 html:lang(zh){--serif:var(--latin-serif),"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,serif}
