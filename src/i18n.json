@@ -89,7 +89,7 @@
   "translations": {
     "en": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / ABOUT",
         "sectionResearch": "02 / RESEARCH INTERESTS",
         "sectionEducation": "03 / EDUCATION",
@@ -126,25 +126,26 @@
         "themeToLight": "Switch to light mode",
         "statsViews": "Total visits",
         "statsVisitors": "Visitors",
-        "profileNote": "{age} · Male · Notes of 2026",
+        "profileNote": "Shenzhen, CN · 2026",
         "headline": "Mathematics master's student exploring Agent RSI and Physical AI.",
-        "intro": "I turn to mathematics for clarity, and to mountains and daily life for perspective.",
-        "heroCaption": "Give my steps to the wild, and my curiosity to the world.",
-        "closing": "Stay curious, grow slowly.",
-        "closingText": "About mathematics, AI, or the next journey — I look forward to interesting ideas.",
+        "intro": "I do mathematics because I like problems that won't let me lie to myself. The rest of the time I'm on a mountain, in a kitchen, or on a badminton court.",
+        "heroCaption": "The Dolomites. The fog cleared for about four minutes.",
+        "closing": "Let's talk about agents, mathematics, or where to eat in Shenzhen.",
+        "closingText": "I read every email and reply to research ones fastest.",
         "skillsTitle": "Skills & Tools",
         "skillsExpand": "Show all skills",
         "skillsCollapse": "Show fewer skills",
         "researchMore": "Explore further",
         "researchLess": "Show less",
         "researchApproach": "Possible approach",
-        "researchEvaluation": "How I would evaluate it"
+        "researchEvaluation": "How I would evaluate it",
+        "metaDescription": "Gofish (Yiming Zeng) is a master's student in mathematics at SUSTech, working on self-improving agents and physical AI. He also thinks too hard about fried chicken."
       },
       "content": {
         "about": [
-          "Hi, I'm Gofish. I'm currently pursuing a master's in mathematics at Southern University of Science and Technology, after studying Mathematical Foundation Science at Dalian University of Technology. Mathematics is where I begin to understand problems, and AI keeps bringing me new ones.",
-          "What fascinates me most is how agents improve themselves through experience, and how intelligence can truly enter the physical world through perception and action. I hope to find my own research direction between solid mathematical thinking and concrete experiments.",
-          "Off screen, I love traveling, badminton, cooking, and movies. To me, studying a problem seriously and cooking a meal seriously are both worth the effort."
+          "Hi, I'm Gofish. I'm studying for a master's in mathematics at Southern University of Science and Technology. Before that, I studied Mathematical Foundation Science at Dalian University of Technology.",
+          "Two questions I keep coming back to: how does an agent get better from its own experience? What does a model need to act in the world instead of only describing it? I don't have a thesis yet — that's what the next three years are for.",
+          "Away from a screen: badminton, cooking, film, and any mountain with a trail. I take cooking far too seriously for my skill level."
         ],
         "research": [
           {
@@ -200,29 +201,29 @@
           {
             "symbol": "↗",
             "title": "Badminton",
-            "description": "Swing, run, sweat — a breath of fresh air for the mind."
+            "description": "Doubles, mostly. I'm usually the one who miscounts the score."
           },
           {
             "symbol": "⌁",
             "title": "Travel & wandering",
-            "description": "Leaving familiar routes, collecting different scenery."
+            "description": "I plan trips around one mountain and figure out the rest on the way."
           },
           {
             "symbol": "◡",
             "title": "Cooking",
-            "description": "Taking three meals a day seriously, in the warmth of the kitchen."
+            "description": "The only thing I do where the feedback is immediate."
           },
           {
             "symbol": "▷",
             "title": "Film & stories",
-            "description": "Living another life through a screen."
+            "description": "I keep a list. Most of it is rewatches."
           }
         ],
         "gallery": [
           {
             "image": "summit",
             "title": "Above the clouds, another sky",
-            "caption": "Tianchi left the wind to finish the sentence.",
+            "caption": "Wind at the rim. I sat there until my hands went numb.",
             "alt": "Changbai Mountain Tianchi：Gofish wearing sunglasses on a mountain viewpoint",
             "position": "50% 45%"
           },
@@ -305,8 +306,8 @@
           },
           {
             "image": "aircraft",
-            "title": "Childhood curiosity, full scale",
-            "caption": "The Y-20 made the idea of flight feel tangible.",
+            "title": "The Y-20, up close",
+            "caption": "First time I stood next to something that big that could fly.",
             "alt": "Y-20 transport aircraft：Gofish standing in front of an aircraft on outdoor display",
             "position": "50% 50%"
           },
@@ -322,7 +323,7 @@
     },
     "zh": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / 关于我",
         "sectionResearch": "02 / 研究兴趣",
         "sectionEducation": "03 / 求学经历",
@@ -359,25 +360,26 @@
         "themeToLight": "切换到亮色模式",
         "statsViews": "总访问量",
         "statsVisitors": "访客数",
-        "profileNote": "{age} 岁 · 男生 · 2026 年记",
+        "profileNote": "深圳 · 2026",
         "headline": "数学硕士生，关注 Agent RSI 与 Physical AI。",
-        "intro": "用数学梳理问题，也从山川与日常中获得新的视角。",
-        "heroCaption": "把脚步交给山野，把好奇留给世界。",
-        "closing": "保持好奇，慢慢生长。",
-        "closingText": "关于数学、AI，或者下一段旅程，期待遇见有趣的想法。",
+        "intro": "做数学，是因为喜欢那种骗不了自己的问题。剩下的时间，我在山上、在厨房，或者在羽毛球场上。",
+        "heroCaption": "多洛米蒂。雾散了大概四分钟。",
+        "closing": "聊聊智能体、数学，或者深圳哪儿好吃，都行。",
+        "closingText": "邮件我都会看，聊研究的回得最快。",
         "skillsTitle": "技能与工具",
         "skillsExpand": "展开全部技能",
         "skillsCollapse": "收起技能",
         "researchMore": "进一步了解",
         "researchLess": "收起内容",
         "researchApproach": "可能的探索方式",
-        "researchEvaluation": "如何判断是否有效"
+        "researchEvaluation": "如何判断是否有效",
+        "metaDescription": "Gofish（曾一鸣），南方科技大学数学系硕士在读，关注自我改进的智能体与具身智能。以及，想炸鸡想得有点多。"
       },
       "content": {
         "about": [
-          "你好，我是 Gofish。目前在南方科技大学攻读数学硕士，本科就读于大连理工大学数理基础科学专业。数学是我理解问题的起点，而人工智能让我不断遇见新的问题。",
-          "我尤其感兴趣的是：智能体如何从经验中改进自己，以及智能如何通过感知与行动，真正走进物理世界。希望在扎实的数学思考和具体的实验之间，找到自己的研究方向。",
-          "屏幕之外，我喜欢旅行、打羽毛球、炒菜做饭和看电影。对我来说，认真研究一个问题，和认真做好一顿饭，都值得投入。"
+          "你好，我是 Gofish。目前在南方科技大学攻读数学硕士。本科读的是大连理工大学的数理基础科学专业。",
+          "有两个问题我老是绕回来：智能体怎么从自己的经验里变好？一个模型要真的在世界里做事、而不是只会描述世界，还差什么？我眼下还没有答案，接下来三年就是用来找它的。",
+          "不面对屏幕的时候：羽毛球、做饭、电影，以及任何有路的山。我的厨艺配不上我对做饭的认真。"
         ],
         "research": [
           {
@@ -433,29 +435,29 @@
           {
             "symbol": "↗",
             "title": "羽毛球",
-            "description": "挥拍、跑动、流汗，给思绪换口气。"
+            "description": "主要打双打。比分一般是我记错。"
           },
           {
             "symbol": "⌁",
             "title": "旅行与漫游",
-            "description": "离开熟悉的路线，收藏不同的风景。"
+            "description": "旅行通常先定一座山，剩下的路上再说。"
           },
           {
             "symbol": "◡",
             "title": "炒菜与做饭",
-            "description": "在烟火气里，认真对待一日三餐。"
+            "description": "我唯一能立刻知道做得怎么样的事。"
           },
           {
             "symbol": "▷",
             "title": "电影与故事",
-            "description": "借一块银幕，体验另一种人生。"
+            "description": "有一个片单，大部分是重看。"
           }
         ],
         "gallery": [
           {
             "image": "summit",
             "title": "云上还有一片天",
-            "caption": "长白山天池把没说完的话交给了风。",
+            "caption": "风口很硬。坐到手冻麻了才走。",
             "alt": "长白山天池：Gofish 戴着墨镜站在山间观景台上",
             "position": "50% 45%"
           },
@@ -538,8 +540,8 @@
           },
           {
             "image": "aircraft",
-            "title": "童年的好奇，等比例放大",
-            "caption": "运-20让“飞行”忽然变得可以触摸。",
+            "title": "运-20，近距离",
+            "caption": "第一次站到那么大的、真的能飞的东西旁边。",
             "alt": "运-20运输机：Gofish 站在户外展出的飞机前",
             "position": "50% 50%"
           },
@@ -555,7 +557,7 @@
     },
     "fr": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / À PROPOS",
         "sectionResearch": "02 / RECHERCHE",
         "sectionEducation": "03 / FORMATION",
@@ -592,25 +594,26 @@
         "themeToLight": "Passer en mode clair",
         "statsViews": "Visites totales",
         "statsVisitors": "Visiteurs",
-        "profileNote": "{age} ans · Homme · Notes de 2026",
+        "profileNote": "Shenzhen, Chine · 2026",
         "headline": "Étudiant en master de mathématiques, intéressé par Agent RSI et Physical AI.",
-        "intro": "Les mathématiques m’aident à y voir clair ; la montagne et le quotidien m’offrent d’autres perspectives.",
-        "heroCaption": "Mes pas vers la montagne, ma curiosité vers le monde.",
-        "closing": "Rester curieux, grandir lentement.",
-        "closingText": "Sur les mathématiques, l'IA ou le prochain voyage — j'ai hâte d'échanger des idées intéressantes.",
+        "intro": "J’aime les maths parce qu’on ne peut pas se raconter d’histoires devant un problème. Sinon, je suis en montagne, en cuisine ou au badminton.",
+        "heroCaption": "Les Dolomites. Le brouillard s’est levé pendant quatre minutes environ.",
+        "closing": "Parlons d’agents, de maths ou d’une bonne adresse à Shenzhen.",
+        "closingText": "Je lis tous mes mails. Ceux qui parlent de recherche reçoivent une réponse plus vite.",
         "skillsTitle": "Compétences & outils",
         "skillsExpand": "Afficher toutes les compétences",
         "skillsCollapse": "Afficher moins de compétences",
         "researchMore": "En savoir plus",
         "researchLess": "Réduire",
         "researchApproach": "Piste à explorer",
-        "researchEvaluation": "Comment l'évaluer"
+        "researchEvaluation": "Comment l'évaluer",
+        "metaDescription": "Gofish (Yiming Zeng) prépare un master de mathématiques à SUSTech. Il travaille sur les agents qui apprennent de leur expérience et l’IA incarnée. Le poulet frit l’occupe aussi beaucoup."
       },
       "content": {
         "about": [
-          "Bonjour, je suis Gofish. Je prépare actuellement un master de mathématiques à la Southern University of Science and Technology, après une licence en sciences mathématiques fondamentales à la Dalian University of Technology. Les mathématiques sont mon point de départ pour comprendre les problèmes, et l'IA m'en apporte sans cesse de nouveaux.",
-          "Ce qui me fascine le plus, c'est comment les agents s'améliorent par l'expérience, et comment l'intelligence peut vraiment entrer dans le monde physique par la perception et l'action. J'espère trouver ma propre direction entre une pensée mathématique solide et des expériences concrètes.",
-          "Hors écran, j'aime voyager, le badminton, cuisiner et le cinéma. Pour moi, étudier sérieusement un problème et cuisiner sérieusement un repas méritent tous deux de l'attention."
+          "Moi, c’est Gofish. Je prépare un master de mathématiques à la Southern University of Science and Technology. J’ai étudié auparavant les sciences mathématiques fondamentales à l’université de technologie de Dalian.",
+          "Je reviens toujours à deux questions. Comment un agent progresse-t-il grâce à son expérience ? Que manque-t-il à un modèle pour agir dans le monde, au lieu de seulement le décrire ? Je n’ai pas encore de réponse. J’ai trois ans pour chercher.",
+          "Loin de l’écran : badminton, cuisine, cinéma et toute montagne avec un sentier. Je prends la cuisine bien trop au sérieux vu mon niveau."
         ],
         "research": [
           {
@@ -666,29 +669,29 @@
           {
             "symbol": "↗",
             "title": "Badminton",
-            "description": "Frapper, courir, transpirer — une bouffée d'air pour l'esprit."
+            "description": "Surtout en double. C’est généralement moi qui me trompe dans le score."
           },
           {
             "symbol": "⌁",
             "title": "Voyages & flâneries",
-            "description": "Quitter les routes familières, collectionner d'autres paysages."
+            "description": "Je choisis d’abord une montagne. Le reste du voyage se décide en route."
           },
           {
             "symbol": "◡",
             "title": "Cuisine",
-            "description": "Prendre au sérieux les repas, dans la chaleur de la cuisine."
+            "description": "La seule activité où je sais tout de suite si j’ai réussi."
           },
           {
             "symbol": "▷",
             "title": "Cinéma & histoires",
-            "description": "Vivre une autre vie à travers un écran."
+            "description": "J’ai une liste. Elle contient surtout des films déjà vus."
           }
         ],
         "gallery": [
           {
             "image": "summit",
             "title": "Au-dessus des nuages, un autre ciel",
-            "caption": "Au lac Tianchi, le vent a terminé la phrase.",
+            "caption": "Du vent au bord du cratère. Je suis resté assis jusqu’à ne plus sentir mes mains.",
             "alt": "Lac Tianchi, mont Changbai：Gofish portant des lunettes de soleil sur un belvédère de montagne",
             "position": "50% 45%"
           },
@@ -771,8 +774,8 @@
           },
           {
             "image": "aircraft",
-            "title": "La curiosité d’enfance, grandeur nature",
-            "caption": "Le Y-20 a rendu le vol presque tangible.",
+            "title": "Le Y-20 de près",
+            "caption": "Première fois que je me tenais près d’un engin aussi grand capable de voler.",
             "alt": "Avion de transport Y-20：Gofish debout devant un avion exposé en plein air",
             "position": "50% 50%"
           },
@@ -788,7 +791,7 @@
     },
     "de": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / ÜBER MICH",
         "sectionResearch": "02 / FORSCHUNG",
         "sectionEducation": "03 / AUSBILDUNG",
@@ -825,25 +828,26 @@
         "themeToLight": "Zum hellen Modus wechseln",
         "statsViews": "Seitenaufrufe gesamt",
         "statsVisitors": "Besucher",
-        "profileNote": "{age} · Männlich · Notizen von 2026",
+        "profileNote": "Shenzhen, China · 2026",
         "headline": "Mathematik-Masterstudent mit Interesse an Agent RSI und Physical AI.",
-        "intro": "Mathematik hilft mir, Fragen zu klären; in den Bergen und im Alltag finde ich neue Perspektiven.",
-        "heroCaption": "Meine Schritte der Wildnis, meine Neugier der Welt.",
-        "closing": "Neugierig bleiben, langsam wachsen.",
-        "closingText": "Über Mathematik, KI oder die nächste Reise — ich freue mich auf interessante Ideen.",
+        "intro": "Ich mag Mathematik, weil ich mir bei ihren Aufgaben nichts vormachen kann. Sonst bin ich am Berg, in der Küche oder beim Badminton.",
+        "heroCaption": "Die Dolomiten. Für etwa vier Minuten verzog sich der Nebel.",
+        "closing": "Schreib mir über Agenten, Mathematik oder gutes Essen in Shenzhen.",
+        "closingText": "Ich lese jede E-Mail. Auf Forschungsfragen antworte ich am schnellsten.",
         "skillsTitle": "Fähigkeiten & Werkzeuge",
         "skillsExpand": "Alle Skills anzeigen",
         "skillsCollapse": "Weniger Skills anzeigen",
         "researchMore": "Mehr erfahren",
         "researchLess": "Weniger anzeigen",
         "researchApproach": "Möglicher Ansatz",
-        "researchEvaluation": "So würde ich es prüfen"
+        "researchEvaluation": "So würde ich es prüfen",
+        "metaDescription": "Gofish (Yiming Zeng) studiert Mathematik im Master an der SUSTech. Er arbeitet an selbstlernenden Agenten und verkörperter KI. Über frittiertes Hähnchen denkt er auch zu viel nach."
       },
       "content": {
         "about": [
-          "Hallo, ich bin Gofish. Ich studiere gerade im Master Mathematik an der Southern University of Science and Technology, nach einem Bachelor in Mathematik und Physik (Grundlagenwissenschaften) an der Dalian University of Technology. Mathematik ist mein Ausgangspunkt, um Probleme zu verstehen, und KI bringt mir immer wieder neue.",
-          "Am meisten interessiert mich: Wie sich Agenten durch Erfahrung selbst verbessern und wie Intelligenz durch Wahrnehmung und Handeln wirklich in die physische Welt eintreten kann. Ich hoffe, meine eigene Forschungsrichtung zwischen solidem mathematischem Denken und konkreten Experimenten zu finden.",
-          "Abseits des Bildschirms mag ich Reisen, Badminton, Kochen und Filme. Für mich lohnt es sich gleichermaßen, ein Problem ernsthaft zu untersuchen wie eine Mahlzeit ernsthaft zu kochen."
+          "Ich bin Gofish und studiere Mathematik im Master an der Southern University of Science and Technology. Meinen Bachelor in mathematischen Grundlagenwissenschaften habe ich an der Technischen Universität Dalian gemacht.",
+          "Zwei Fragen lassen mich nicht los. Wie lernt ein Agent aus seinen eigenen Erfahrungen? Was braucht ein Modell, um in der Welt zu handeln, statt sie nur zu beschreiben? Eine Antwort habe ich noch nicht. Dafür sind die nächsten drei Jahre da.",
+          "Abseits vom Bildschirm: Badminton, Kochen, Filme und jeder Berg mit einem Wanderweg. Ich nehme das Kochen viel ernster, als es meine Kochkünste rechtfertigen."
         ],
         "research": [
           {
@@ -899,29 +903,29 @@
           {
             "symbol": "↗",
             "title": "Badminton",
-            "description": "Schwingen, bewegen, schwitzen — eine Atempause für den Kopf."
+            "description": "Meistens Doppel. Wenn jemand den Spielstand falsch zählt, bin ich es."
           },
           {
             "symbol": "⌁",
             "title": "Reisen & Streifzüge",
-            "description": "Vertraute Wege verlassen, andere Landschaften sammeln."
+            "description": "Zuerst suche ich mir einen Berg aus. Den Rest der Reise plane ich unterwegs."
           },
           {
             "symbol": "◡",
             "title": "Kochen",
-            "description": "Im Dampf der Küche die drei Mahlzeiten des Tages ernst nehmen."
+            "description": "Die einzige Sache, bei der ich sofort merke, ob sie gelungen ist."
           },
           {
             "symbol": "▷",
             "title": "Filme & Geschichten",
-            "description": "Auf einer Leinwand ein anderes Leben leben."
+            "description": "Ich führe eine Liste. Die meisten Filme darauf habe ich schon gesehen."
           }
         ],
         "gallery": [
           {
             "image": "summit",
             "title": "Über den Wolken ein weiterer Himmel",
-            "caption": "Am Tianchi-See ließ der Wind den Satz zu Ende sprechen.",
+            "caption": "Wind am Kraterrand. Ich blieb sitzen, bis meine Hände taub waren.",
             "alt": "Tianchi, Changbai-Gebirge：Gofish mit Sonnenbrille auf einer Bergaussichtsplattform",
             "position": "50% 45%"
           },
@@ -1004,8 +1008,8 @@
           },
           {
             "image": "aircraft",
-            "title": "Kindliche Neugier in voller Größe",
-            "caption": "Die Y-20 machte den Gedanken ans Fliegen greifbar.",
+            "title": "Die Y-20 aus der Nähe",
+            "caption": "Zum ersten Mal stand ich neben etwas so Großem, das tatsächlich fliegen kann.",
             "alt": "Transportflugzeug Y-20：Gofish vor einem im Freien ausgestellten Flugzeug",
             "position": "50% 50%"
           },
@@ -1021,7 +1025,7 @@
     },
     "es": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / SOBRE MÍ",
         "sectionResearch": "02 / INVESTIGACIÓN",
         "sectionEducation": "03 / FORMACIÓN",
@@ -1058,25 +1062,26 @@
         "themeToLight": "Cambiar a modo claro",
         "statsViews": "Visitas totales",
         "statsVisitors": "Visitantes",
-        "profileNote": "{age} · Hombre · Notas de 2026",
+        "profileNote": "Shenzhen, China · 2026",
         "headline": "Estudiante de máster en matemáticas, interesado en Agent RSI y Physical AI.",
-        "intro": "Las matemáticas me ayudan a aclarar ideas; las montañas y la vida cotidiana, a verlas de otra manera.",
-        "heroCaption": "Mis pasos a la montaña, mi curiosidad al mundo.",
-        "closing": "Sigue con curiosidad, crece despacio.",
-        "closingText": "Sobre matemáticas, IA o el próximo viaje, espero encontrar ideas interesantes.",
+        "intro": "Me gustan las matemáticas porque sus problemas no me dejan engañarme. El resto del tiempo estoy en la montaña, cocinando o jugando al bádminton.",
+        "heroCaption": "Los Dolomitas. La niebla se levantó unos cuatro minutos.",
+        "closing": "Hablemos de agentes, matemáticas o dónde comer en Shenzhen.",
+        "closingText": "Leo todos los correos. Los de investigación reciben respuesta antes.",
         "skillsTitle": "Habilidades y herramientas",
         "skillsExpand": "Mostrar todas las habilidades",
         "skillsCollapse": "Mostrar menos habilidades",
         "researchMore": "Explorar más",
         "researchLess": "Mostrar menos",
         "researchApproach": "Posible enfoque",
-        "researchEvaluation": "Cómo lo evaluaría"
+        "researchEvaluation": "Cómo lo evaluaría",
+        "metaDescription": "Gofish (Yiming Zeng) estudia un máster en matemáticas en SUSTech. Investiga agentes que aprenden de su experiencia e IA corpórea. También piensa demasiado en el pollo frito."
       },
       "content": {
         "about": [
-          "Hola, soy Gofish. Actualmente curso un máster en matemáticas en la Southern University of Science and Technology, tras estudiar Ciencias de Base Matemática en la Dalian University of Technology. Las matemáticas son mi punto de partida para entender los problemas, y la IA no deja de traerme otros nuevos.",
-          "Lo que más me fascina es cómo los agentes se mejoran a sí mismos a través de la experiencia, y cómo la inteligencia puede entrar de verdad en el mundo físico mediante la percepción y la acción. Espero encontrar mi propia dirección entre un pensamiento matemático sólido y experimentos concretos.",
-          "Fuera de la pantalla, me encantan los viajes, el bádminton, cocinar y el cine. Para mí, estudiar un problema en serio y cocinar una comida en serio merecen ambas la pena."
+          "Soy Gofish. Curso un máster en matemáticas en la Southern University of Science and Technology. Antes estudié Ciencias Matemáticas Fundamentales en la Universidad Tecnológica de Dalian.",
+          "Siempre vuelvo a dos preguntas. ¿Cómo mejora un agente a partir de su propia experiencia? ¿Qué necesita un modelo para actuar en el mundo, en vez de limitarse a describirlo? Todavía no tengo respuestas. Para buscarlas están los próximos tres años.",
+          "Fuera de la pantalla: bádminton, cocina, cine y cualquier montaña que tenga un sendero. Me tomo la cocina demasiado en serio para lo que sé cocinar."
         ],
         "research": [
           {
@@ -1132,29 +1137,29 @@
           {
             "symbol": "↗",
             "title": "Bádminton",
-            "description": "Golpear, correr, sudar: un respiro para la mente."
+            "description": "Casi siempre juego dobles. Suelo ser yo quien cuenta mal los puntos."
           },
           {
             "symbol": "⌁",
             "title": "Viajes y paseos",
-            "description": "Dejar rutas conocidas y coleccionar otros paisajes."
+            "description": "Elijo una montaña y luego improviso el resto del viaje."
           },
           {
             "symbol": "◡",
             "title": "Cocinar",
-            "description": "Tomarse en serio las comidas, en el calor de la cocina."
+            "description": "Lo único que hago cuyo resultado puedo comprobar al momento."
           },
           {
             "symbol": "▷",
             "title": "Cine e historias",
-            "description": "Vivir otra vida a través de una pantalla."
+            "description": "Tengo una lista. Casi todos son filmes que ya he visto."
           }
         ],
         "gallery": [
           {
             "image": "summit",
             "title": "Sobre las nubes, otro cielo",
-            "caption": "En Tianchi, el viento terminó la frase.",
+            "caption": "Viento al borde del cráter. Me quedé sentado hasta que se me entumecieron las manos.",
             "alt": "Lago Tianchi, monte Changbai：Gofish con gafas de sol en un mirador de montaña",
             "position": "50% 45%"
           },
@@ -1237,8 +1242,8 @@
           },
           {
             "image": "aircraft",
-            "title": "Curiosidad de infancia a tamaño real",
-            "caption": "El Y-20 volvió tangible la idea de volar.",
+            "title": "El Y-20 de cerca",
+            "caption": "Nunca había estado tan cerca de algo tan grande que pudiera volar.",
             "alt": "Avión de transporte Y-20：Gofish de pie ante un avión en exposición al aire libre",
             "position": "50% 50%"
           },
@@ -1254,7 +1259,7 @@
     },
     "ar": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "٠١ / نبذة عني",
         "sectionResearch": "٠٢ / اهتمامات البحث",
         "sectionEducation": "٠٣ / الدراسة",
@@ -1291,25 +1296,26 @@
         "themeToLight": "التبديل إلى الوضع الفاتح",
         "statsViews": "إجمالي الزيارات",
         "statsVisitors": "الزوار",
-        "profileNote": "{age} · ذكر · ملاحظات 2026",
+        "profileNote": "شنتشن، الصين · 2026",
         "headline": "طالب ماجستير في الرياضيات، مهتم بـ Agent RSI وPhysical AI.",
-        "intro": "أستعين بالرياضيات لتوضيح الأفكار، وأجد في الجبال والحياة اليومية زوايا جديدة للنظر.",
-        "heroCaption": "أمنح خطواتي للبرية، وفضولي للعالم.",
-        "closing": "ابقَ فضوليًا، وانهَم ببطء.",
-        "closingText": "عن الرياضيات أو الذكاء الاصطناعي أو الرحلة القادمة — أتطلع إلى أفكار مثيرة.",
+        "intro": "أحب الرياضيات لأن مسائلها لا تتركني أخدع نفسي. وفي بقية الوقت أكون على جبل، أو في المطبخ، أو في ملعب الريشة.",
+        "heroCaption": "جبال الدولوميت. انقشع الضباب لنحو أربع دقائق.",
+        "closing": "لنتحدث عن الوكلاء أو الرياضيات أو مكان نأكل فيه في شنتشن.",
+        "closingText": "أقرأ كل الرسائل. وأرد أسرع على رسائل البحث العلمي.",
         "skillsTitle": "المهارات والأدوات",
         "skillsExpand": "عرض كل المهارات",
         "skillsCollapse": "عرض مهارات أقل",
         "researchMore": "معرفة المزيد",
         "researchLess": "عرض أقل",
         "researchApproach": "نهج محتمل",
-        "researchEvaluation": "كيف يمكن تقييمه"
+        "researchEvaluation": "كيف يمكن تقييمه",
+        "metaDescription": "Gofish (تسنغ يي مينغ) طالب ماجستير في الرياضيات بجامعة العلوم والتكنولوجيا الجنوبية. يدرس الوكلاء الذين يتعلمون من خبراتهم والذكاء الاصطناعي المتجسد. ويفكر في الدجاج المقلي أكثر مما ينبغي."
       },
       "content": {
         "about": [
-          "مرحبًا، أنا Gofish. أدرس حاليًا للحصول على درجة الماجستير في الرياضيات في جامعة العلوم والتكنولوجيا الجنوبية، بعد أن درست العلوم الأساسية الرياضية في جامعة داليان للتكنولوجيا. الرياضيات هي نقطة انطلاقي لفهم المشكلات، والذكاء الاصطناعي يجلب لي مشكلات جديدة باستمرار.",
-          "أكثر ما يثير اهتمامي هو كيف تحسّن الوكلاء أنفسهم من خلال التجربة، وكيف يمكن للذكاء أن يدخل فعلًا إلى العالم الفيزيائي عبر الإدراك والفعل. أتمنى أن أجد اتجاهي البحثي الخاص بين التفكير الرياضي الراسخ والتجارب الملموسة.",
-          "بعيدًا عن الشاشات، أحب السفر وكرة الريشة والطبخ ومشاهدة الأفلام. بالنسبة لي، دراسة مشكلة بجدية وطهو وجبة بجدية يستحقان الاهتمام معًا."
+          "أنا Gofish. أدرس الماجستير في الرياضيات بجامعة العلوم والتكنولوجيا الجنوبية. درست قبل ذلك العلوم الرياضية الأساسية في جامعة داليان للتكنولوجيا.",
+          "أعود دائمًا إلى سؤالين. كيف يتحسن الوكيل من خلال خبرته؟ وماذا ينقص النموذج ليعمل في العالم بدلًا من الاكتفاء بوصفه؟ ليست لدي إجابة بعد. سأقضي السنوات الثلاث المقبلة في البحث عنها.",
+          "بعيدًا عن الشاشة: الريشة والطبخ والأفلام وأي جبل فيه مسار للمشي. آخذ الطبخ بجدية تفوق مهارتي فيه بكثير."
         ],
         "research": [
           {
@@ -1365,29 +1371,29 @@
           {
             "symbol": "↗",
             "title": "كرة الريشة",
-            "description": "ضرب وجري وتعرق — نَفَس من الهواء النقي للعقل."
+            "description": "ألعب الزوجي غالبًا. وعادةً أكون أنا من يخطئ في حساب النقاط."
           },
           {
             "symbol": "⌁",
             "title": "السفر والتجوال",
-            "description": "ترك الطرق المألوفة، وجمع مناظر مختلفة."
+            "description": "أختار جبلًا أولًا، ثم أقرر بقية الرحلة في الطريق."
           },
           {
             "symbol": "◡",
             "title": "الطبخ",
-            "description": "أخذ الوجبات على محمل الجد، في دفء المطبخ."
+            "description": "الشيء الوحيد الذي أعرف نتيجته فورًا."
           },
           {
             "symbol": "▷",
             "title": "الأفلام والقصص",
-            "description": "عيش حياة أخرى عبر شاشة."
+            "description": "لدي قائمة أفلام. أغلبها شاهدته من قبل."
           }
         ],
         "gallery": [
           {
             "image": "summit",
             "title": "فوق الغيوم سماء أخرى",
-            "caption": "عند بحيرة تيانتشي، تركت للريح إكمال الجملة.",
+            "caption": "ريح عند حافة الفوهة. بقيت جالسًا حتى خدرت يداي.",
             "alt": "بحيرة تيانتشي، جبل تشانغباي：Gofish يرتدي نظارة شمسية على منصة مشاهدة جبلية",
             "position": "50% 45%"
           },
@@ -1470,8 +1476,8 @@
           },
           {
             "image": "aircraft",
-            "title": "فضول الطفولة بالحجم الكامل",
-            "caption": "جعلت Y-20 فكرة الطيران قابلة للمس.",
+            "title": "طائرة Y-20 عن قرب",
+            "caption": "أول مرة أقف فيها بجانب شيء بهذا الحجم يستطيع الطيران.",
             "alt": "طائرة النقل Y-20：Gofish واقف أمام طائرة معروضة في الهواء الطلق",
             "position": "50% 50%"
           },
@@ -1487,7 +1493,7 @@
     },
     "ja": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / 私について",
         "sectionResearch": "02 / 研究分野",
         "sectionEducation": "03 / 学歴",
@@ -1524,25 +1530,26 @@
         "themeToLight": "ライトモードに切り替え",
         "statsViews": "総訪問数",
         "statsVisitors": "訪問者数",
-        "profileNote": "{age}歳 · 男性 · 2026年の記録",
+        "profileNote": "深圳、中国 · 2026",
         "headline": "数学の修士課程に在籍し、Agent RSI と Physical AI に関心があります。",
-        "intro": "数学で問いを整理し、山や日々の暮らしの中で新しい視点を見つけています。",
-        "heroCaption": "足は山野へ、好奇心は世界へ。",
-        "closing": "好奇心を持ち、ゆっくり育つ。",
-        "closingText": "数学や AI、あるいは次の旅について、面白いアイデアとの出会いを楽しみにしています。",
+        "intro": "数学が好きなのは、自分をごまかせない問題があるからです。それ以外は山か台所、あるいはバドミントンのコートにいます。",
+        "heroCaption": "ドロミーティ。霧が晴れたのは、たぶん4分ほど。",
+        "closing": "エージェントでも数学でも、深圳のおいしい店の話でも。",
+        "closingText": "メールは全部読みます。研究の話にはいちばん早く返事をします。",
         "skillsTitle": "スキルとツール",
         "skillsExpand": "すべてのスキルを表示",
         "skillsCollapse": "スキルを少なく表示",
         "researchMore": "詳しく見る",
         "researchLess": "閉じる",
         "researchApproach": "考えられる進め方",
-        "researchEvaluation": "有効性の確かめ方"
+        "researchEvaluation": "有効性の確かめ方",
+        "metaDescription": "Gofish（曾一鸣）は南方科技大学の数学専攻の修士学生です。経験から学ぶエージェントと実世界で動くAIを研究しています。フライドチキンについても考えすぎます。"
       },
       "content": {
         "about": [
-          "こんにちは、Gofish です。大連理工大学で数理基礎科学を学んだ後、現在は南方科技大学で数学の修士課程に在籍しています。数学は私が問題を理解するための出発点であり、人工知能は私に次々と新しい問いをもたらしてくれます。",
-          "特に興味があるのは、エージェントが経験を通じて自らをどう改善していくのか、そして知能が知覚と行動を通じて物理世界に本当に入り込めるのか、ということです。確かな数学的思考と具体的な実験のあいだで、自分なりの研究の方向を見つけたいと考えています。",
-          "画面の外では、旅行、バドミントン、料理、映画が好きです。私にとって、問題を真剣に考えることと、食事を真剣につくることは、どちらも同じくらい大切です。"
+          "Gofishです。南方科技大学の修士課程で数学を学んでいます。学部では大連理工大学で数理基礎科学を専攻しました。",
+          "何度も考える問いが二つあります。エージェントは自分の経験からどう上達するのか。モデルが世界を説明するだけでなく、そこで動くには何が足りないのか。答えはまだありません。これから3年かけて探します。",
+          "画面の外では、バドミントン、料理、映画、それから登山道のある山へ。料理への本気度に、腕が追いついていません。"
         ],
         "research": [
           {
@@ -1598,29 +1605,29 @@
           {
             "symbol": "↗",
             "title": "バドミントン",
-            "description": "振って、走って、汗をかいて、頭をリフレッシュ。"
+            "description": "主にダブルス。点数を間違えるのは、たいてい私です。"
           },
           {
             "symbol": "⌁",
             "title": "旅と散策",
-            "description": "慣れた道を離れて、別の風景を集める。"
+            "description": "まず登りたい山を一つ決めます。あとは旅先で考えます。"
           },
           {
             "symbol": "◡",
             "title": "料理",
-            "description": "台所の温もりのなかで、一日三食を大切に。"
+            "description": "出来がすぐにわかる、唯一の趣味です。"
           },
           {
             "symbol": "▷",
             "title": "映画と物語",
-            "description": "スクリーンを通して、もう一つの人生を味わう。"
+            "description": "リストはあります。ほとんどが、もう一度観る映画です。"
           }
         ],
         "gallery": [
           {
             "image": "summit",
             "title": "雲の上に、もう一つの空",
-            "caption": "長白山の天池では、風が言葉の続きを引き受けた。",
+            "caption": "火口の縁は風が強い。手がかじかむまで座っていました。",
             "alt": "長白山の天池：山の展望台でサングラスをかける Gofish",
             "position": "50% 45%"
           },
@@ -1703,8 +1710,8 @@
           },
           {
             "image": "aircraft",
-            "title": "子どもの好奇心を実物大で",
-            "caption": "Y-20が「飛ぶ」という考えを触れられるものにした。",
+            "title": "Y-20を間近で",
+            "caption": "これほど大きくて空を飛べるものの隣に立ったのは、初めてでした。",
             "alt": "Y-20輸送機：屋外展示の飛行機の前に立つ Gofish",
             "position": "50% 50%"
           },
@@ -1720,7 +1727,7 @@
     },
     "ko": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / 소개",
         "sectionResearch": "02 / 연구 관심사",
         "sectionEducation": "03 / 학력",
@@ -1757,25 +1764,26 @@
         "themeToLight": "라이트 모드로 전환",
         "statsViews": "총 방문수",
         "statsVisitors": "방문자 수",
-        "profileNote": "{age}세 · 남성 · 2026년 기록",
+        "profileNote": "선전, 중국 · 2026",
         "headline": "수학 석사과정생으로, Agent RSI와 Physical AI에 관심이 있습니다.",
-        "intro": "수학으로 생각을 정리하고, 산과 일상에서 새로운 관점을 얻습니다.",
-        "heroCaption": "발걸음은 산과 들로, 호기심은 세계로.",
-        "closing": "호기심을 갖고, 천천히 자라기.",
-        "closingText": "수학, AI, 그리고 다음 여행에 대해 — 흥미로운 아이디어를 만나기를 기대합니다.",
+        "intro": "수학이 좋은 이유는 문제 앞에서 스스로를 속일 수 없기 때문입니다. 나머지 시간에는 산이나 주방, 배드민턴 코트에 있습니다.",
+        "heroCaption": "돌로미티. 안개가 걷힌 건 아마 4분쯤.",
+        "closing": "에이전트, 수학, 선전에서 먹을 만한 곳. 어느 이야기든 좋습니다.",
+        "closingText": "메일은 모두 읽습니다. 연구 이야기에 가장 빨리 답합니다.",
         "skillsTitle": "기술과 도구",
         "skillsExpand": "모든 기술 보기",
         "skillsCollapse": "기술 줄이기",
         "researchMore": "더 알아보기",
         "researchLess": "접기",
         "researchApproach": "가능한 탐구 방법",
-        "researchEvaluation": "효과를 판단하는 방법"
+        "researchEvaluation": "효과를 판단하는 방법",
+        "metaDescription": "Gofish(쩡이밍)는 남방과학기술대학에서 수학 석사 과정을 밟고 있습니다. 경험으로 나아지는 에이전트와 실세계에서 행동하는 AI를 연구합니다. 프라이드치킨 생각도 좀 많이 합니다."
       },
       "content": {
         "about": [
-          "안녕하세요, Gofish입니다. 다롄이공대학에서 수리기초과학을 전공한 뒤, 현재 남방과학기술대학에서 수학 석사 과정에 재학 중입니다. 수학은 제가 문제를 이해하는 출발점이고, 인공지능은 저에게 계속 새로운 질문을 안겨줍니다.",
-          "특히 흥미로운 것은 에이전트가 경험을 통해 스스로를 어떻게 개선하는지, 그리고 지능이 지각과 행동을 통해 물리 세계에 진짜로 들어갈 수 있는지입니다. 탄탄한 수학적 사고와 구체적인 실험 사이에서 저만의 연구 방향을 찾고 싶습니다.",
-          "화면 밖에서는 여행, 배드민턴, 요리, 영화를 좋아합니다. 저에게는 문제를 진지하게 연구하는 것과 한 끼를 진지하게 만드는 것이 모두 가치 있는 일입니다."
+          "Gofish입니다. 남방과학기술대학에서 수학 석사 과정을 밟고 있습니다. 학부에서는 다롄이공대학의 수리기초과학을 전공했습니다.",
+          "자꾸 돌아오게 되는 질문이 두 가지 있습니다. 에이전트는 자신의 경험으로 어떻게 나아질까? 모델이 세상을 설명하는 데 그치지 않고 실제로 행동하려면 무엇이 더 필요할까? 아직 답은 없습니다. 앞으로 3년 동안 찾아볼 생각입니다.",
+          "화면 밖에서는 배드민턴, 요리, 영화, 그리고 등산로가 있는 산을 찾습니다. 요리에 쏟는 진지함을 요리 실력이 따라오지 못합니다."
         ],
         "research": [
           {
@@ -1831,29 +1839,29 @@
           {
             "symbol": "↗",
             "title": "배드민턴",
-            "description": "치고, 달리고, 땀 흘리며 머리를 환기하기."
+            "description": "주로 복식을 칩니다. 점수를 잘못 세는 쪽은 대개 저입니다."
           },
           {
             "symbol": "⌁",
             "title": "여행과 산책",
-            "description": "익숙한 길을 떠나 다른 풍경을 모으기."
+            "description": "먼저 산 하나를 고릅니다. 나머지 일정은 가면서 정합니다."
           },
           {
             "symbol": "◡",
             "title": "요리",
-            "description": "부엌의 온기 속에서 하루 세 끼를 소중히."
+            "description": "잘했는지 바로 알 수 있는 유일한 일입니다."
           },
           {
             "symbol": "▷",
             "title": "영화와 이야기",
-            "description": "스크린을 통해 또 다른 인생을 경험하기."
+            "description": "목록은 있습니다. 대부분 다시 볼 영화입니다."
           }
         ],
         "gallery": [
           {
             "image": "summit",
             "title": "구름 위의 또 다른 하늘",
-            "caption": "창바이산 천지에서는 바람이 말을 마저 이었다.",
+            "caption": "분화구 가장자리에 바람이 불었습니다. 손이 얼얼해질 때까지 앉아 있었습니다.",
             "alt": "창바이산 천지：산 전망대에서 선글라스를 쓴 Gofish",
             "position": "50% 45%"
           },
@@ -1936,8 +1944,8 @@
           },
           {
             "image": "aircraft",
-            "title": "어린 시절의 호기심, 실물 크기로",
-            "caption": "Y-20은 비행이라는 생각을 손에 잡히게 했다.",
+            "title": "가까이서 본 Y-20",
+            "caption": "저렇게 큰데 날 수도 있는 물체 옆에 선 건 처음이었습니다.",
             "alt": "Y-20 수송기：야외 전시된 비행기 앞에 선 Gofish",
             "position": "50% 50%"
           },
@@ -1953,7 +1961,7 @@
     },
     "ru": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / ОБО МНЕ",
         "sectionResearch": "02 / ИССЛЕДОВАНИЯ",
         "sectionEducation": "03 / ОБРАЗОВАНИЕ",
@@ -1990,25 +1998,26 @@
         "themeToLight": "Переключить на светлую тему",
         "statsViews": "Всего посещений",
         "statsVisitors": "Посетители",
-        "profileNote": "{age} · Мужчина · Заметки 2026",
+        "profileNote": "Шэньчжэнь, Китай · 2026",
         "headline": "Магистрант по математике, интересуюсь Agent RSI и Physical AI.",
-        "intro": "Математика помогает мне мыслить яснее, а горы и повседневная жизнь — смотреть на вещи иначе.",
-        "heroCaption": "Отдам шаги дикой природе, а любопытство — миру.",
-        "closing": "Оставайся любопытным, расти не спеша.",
-        "closingText": "О математике, ИИ или следующем путешествии — буду рад интересным идеям.",
+        "intro": "Люблю математику за задачи, в которых себя не обманешь. В остальное время я в горах, на кухне или на площадке для бадминтона.",
+        "heroCaption": "Доломиты. Туман рассеялся примерно на четыре минуты.",
+        "closing": "Давайте обсудим агентов, математику или где поесть в Шэньчжэне.",
+        "closingText": "Читаю все письма. Быстрее всего отвечаю на вопросы об исследованиях.",
         "skillsTitle": "Навыки и инструменты",
         "skillsExpand": "Показать все навыки",
         "skillsCollapse": "Показать меньше навыков",
         "researchMore": "Подробнее",
         "researchLess": "Свернуть",
         "researchApproach": "Возможный подход",
-        "researchEvaluation": "Как оценить результат"
+        "researchEvaluation": "Как оценить результат",
+        "metaDescription": "Gofish (Цзэн Имин) учится в магистратуре по математике в SUSTech. Занимается агентами, которые учатся на собственном опыте, и ИИ для физического мира. О жареной курице тоже думает слишком много."
       },
       "content": {
         "about": [
-          "Привет, я Gofish. Сейчас учусь в магистратуре по математике в Южном университете науки и технологий, а до этого изучал фундаментальную математику в Даляньском технологическом университете. Математика — то, с чего я начинаю понимать задачи, а ИИ постоянно подкидывает новые.",
-          "Больше всего меня увлекает то, как агенты совершенствуются через опыт и как интеллект по-настоящему выходит в физический мир через восприятие и действие. Надеюсь найти своё исследовательское направление между строгим математическим мышлением и конкретными экспериментами.",
-          "Вне экрана я люблю путешествия, бадминтон, готовку и кино. Для меня серьёзно разбираться в задаче и серьёзно готовить еду — одинаково стоящие усилия."
+          "Я Gofish. Учусь в магистратуре по математике в Южном университете науки и технологий. До этого изучал фундаментальные математические науки в Даляньском технологическом университете.",
+          "Постоянно возвращаюсь к двум вопросам. Как агент становится лучше благодаря собственному опыту? Чего не хватает модели, чтобы действовать в мире, а не только описывать его? Ответов пока нет. На их поиск у меня следующие три года.",
+          "Без экрана: бадминтон, готовка, кино и любая гора, где есть тропа. К готовке отношусь куда серьёзнее, чем позволяет мой кулинарный опыт."
         ],
         "research": [
           {
@@ -2064,29 +2073,29 @@
           {
             "symbol": "↗",
             "title": "Бадминтон",
-            "description": "Замах, бег, пот — глоток свежего воздуха для ума."
+            "description": "В основном играю в паре. Обычно именно я путаю счёт."
           },
           {
             "symbol": "⌁",
             "title": "Путешествия",
-            "description": "Уходить с привычных маршрутов, собирать другие пейзажи."
+            "description": "Сначала выбираю гору. Остальное решаю по дороге."
           },
           {
             "symbol": "◡",
             "title": "Готовка",
-            "description": "Относиться серьёзно к трём приёмам пищи в день, в тепле кухни."
+            "description": "Единственное занятие, где сразу понятно, получилось или нет."
           },
           {
             "symbol": "▷",
             "title": "Кино и истории",
-            "description": "Прожить другую жизнь через экран."
+            "description": "Веду список. Большую часть фильмов собираюсь пересмотреть."
           }
         ],
         "gallery": [
           {
             "image": "summit",
             "title": "Над облаками ещё одно небо",
-            "caption": "У Тяньчи ветер закончил недосказанную фразу.",
+            "caption": "Ветер на краю кратера. Сидел, пока не онемели руки.",
             "alt": "Озеро Тяньчи, гора Чанбайшань：Gofish в солнечных очках на горной смотровой площадке",
             "position": "50% 45%"
           },
@@ -2169,8 +2178,8 @@
           },
           {
             "image": "aircraft",
-            "title": "Детское любопытство в натуральную величину",
-            "caption": "Y-20 сделал идею полёта почти осязаемой.",
+            "title": "Y-20 вблизи",
+            "caption": "Впервые стоял рядом с чем-то настолько большим, что при этом умеет летать.",
             "alt": "Транспортный самолёт Y-20：Gofish стоит перед самолётом на открытой экспозиции",
             "position": "50% 50%"
           },
@@ -2186,7 +2195,7 @@
     },
     "it": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / CHI SONO",
         "sectionResearch": "02 / INTERESSI DI RICERCA",
         "sectionEducation": "03 / FORMAZIONE",
@@ -2223,25 +2232,26 @@
         "themeToLight": "Passa alla modalità chiara",
         "statsViews": "Visite totali",
         "statsVisitors": "Visitatori",
-        "profileNote": "{age} · Uomo · Note del 2026",
+        "profileNote": "Shenzhen, Cina · 2026",
         "headline": "Studente magistrale in matematica, interessato ad Agent RSI e Physical AI.",
-        "intro": "La matematica mi aiuta a fare chiarezza; la montagna e la vita quotidiana mi offrono nuove prospettive.",
-        "heroCaption": "Affido i miei passi alla natura e la mia curiosità al mondo.",
-        "closing": "Restare curiosi, crescere lentamente.",
-        "closingText": "Sulla matematica, sull’AI o sul prossimo viaggio — aspetto idee interessanti.",
+        "intro": "Mi piace la matematica perché davanti a un problema non posso raccontarmela. Altrimenti sono in montagna, in cucina o su un campo da badminton.",
+        "heroCaption": "Le Dolomiti. La nebbia si è aperta per circa quattro minuti.",
+        "closing": "Parliamo di agenti, matematica o di dove mangiare a Shenzhen.",
+        "closingText": "Leggo tutte le email. Rispondo prima a quelle sulla ricerca.",
         "skillsTitle": "Competenze e strumenti",
         "skillsExpand": "Mostra tutte le competenze",
         "skillsCollapse": "Mostra meno competenze",
         "researchMore": "Approfondisci",
         "researchLess": "Mostra meno",
         "researchApproach": "Possibile approccio",
-        "researchEvaluation": "Come valutarlo"
+        "researchEvaluation": "Come valutarlo",
+        "metaDescription": "Gofish (Yiming Zeng) studia matematica alla magistrale di SUSTech. Si occupa di agenti che imparano dall’esperienza e di IA incarnata. Pensa troppo anche al pollo fritto."
       },
       "content": {
         "about": [
-          "Ciao, sono Gofish. Sto frequentando un master in matematica alla Southern University of Science and Technology, dopo aver studiato Mathematical Foundation Science alla Dalian University of Technology. La matematica è il punto da cui parto per capire i problemi, e l’AI continua a portarmene di nuovi.",
-          "Mi affascina soprattutto il modo in cui gli agenti migliorano attraverso l’esperienza, e come l’intelligenza possa entrare davvero nel mondo fisico tramite percezione e azione. Vorrei trovare una mia direzione di ricerca tra pensiero matematico solido ed esperimenti concreti.",
-          "Fuori dallo schermo amo viaggiare, giocare a badminton, cucinare e guardare film. Per me studiare seriamente un problema e cucinare seriamente un pasto meritano entrambi attenzione."
+          "Sono Gofish. Studio matematica alla magistrale della Southern University of Science and Technology. Prima ho studiato scienze matematiche fondamentali all’Università di Tecnologia di Dalian.",
+          "Torno sempre a due domande. Come fa un agente a migliorare grazie alla propria esperienza? Cosa manca a un modello per agire nel mondo, invece di limitarsi a descriverlo? Non ho ancora una risposta. Ho tre anni per cercarla.",
+          "Lontano dallo schermo: badminton, cucina, cinema e qualunque montagna con un sentiero. Prendo la cucina troppo sul serio rispetto a quanto so cucinare."
         ],
         "research": [
           {
@@ -2297,22 +2307,22 @@
           {
             "symbol": "↗",
             "title": "Badminton",
-            "description": "Colpire, correre, sudare — una boccata d’aria per la mente."
+            "description": "Quasi sempre doppio. Di solito sono io a sbagliare il punteggio."
           },
           {
             "symbol": "⌁",
             "title": "Viaggi e vagabondaggi",
-            "description": "Uscire dai percorsi familiari e raccogliere paesaggi diversi."
+            "description": "Scelgo una montagna. Il resto del viaggio lo decido strada facendo."
           },
           {
             "symbol": "◡",
             "title": "Cucina",
-            "description": "Prendere sul serio i tre pasti quotidiani, nel calore della cucina."
+            "description": "L’unica cosa che faccio in cui capisco subito com’è andata."
           },
           {
             "symbol": "▷",
             "title": "Cinema e storie",
-            "description": "Vivere un’altra vita attraverso uno schermo."
+            "description": "Tengo una lista. Quasi tutti sono film che ho già visto."
           }
         ],
         "gallery": [
@@ -2320,7 +2330,7 @@
             "image": "summit",
             "position": "50% 45%",
             "title": "Sopra le nuvole, un altro cielo",
-            "caption": "Tianchi lasciò al vento il compito di finire la frase.",
+            "caption": "Vento sul bordo del cratere. Sono rimasto seduto finché non sentivo più le mani.",
             "alt": "Tianchi del Monte Changbai: Gofish con occhiali da sole su un punto panoramico"
           },
           {
@@ -2403,8 +2413,8 @@
           {
             "image": "aircraft",
             "position": "50% 50%",
-            "title": "Curiosità d’infanzia, a grandezza naturale",
-            "caption": "Lo Y-20 rese quasi tangibile l’idea del volo.",
+            "title": "Lo Y-20 da vicino",
+            "caption": "Non ero mai stato accanto a qualcosa di così grande capace di volare.",
             "alt": "Aereo da trasporto Y-20: Gofish davanti a un aereo in esposizione all’aperto"
           },
           {
@@ -2419,7 +2429,7 @@
     },
     "pt": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / SOBRE",
         "sectionResearch": "02 / INTERESSES DE PESQUISA",
         "sectionEducation": "03 / FORMAÇÃO",
@@ -2456,25 +2466,26 @@
         "themeToLight": "Mudar para modo claro",
         "statsViews": "Visitas totais",
         "statsVisitors": "Visitantes",
-        "profileNote": "{age} · Masculino · Notas de 2026",
+        "profileNote": "Shenzhen, China · 2026",
         "headline": "Mestrando em matemática, interessado em Agent RSI e Physical AI.",
-        "intro": "A matemática me ajuda a clarear ideias; as montanhas e a vida cotidiana me trazem novas perspectivas.",
-        "heroCaption": "Entrego meus passos à natureza e minha curiosidade ao mundo.",
-        "closing": "Mantenha a curiosidade, cresça devagar.",
-        "closingText": "Sobre matemática, IA ou a próxima viagem — espero ideias interessantes.",
+        "intro": "Gosto de matemática porque seus problemas não me deixam enganar a mim mesmo. No resto do tempo, estou na montanha, na cozinha ou jogando badminton.",
+        "heroCaption": "Dolomitas. A neblina abriu por uns quatro minutos.",
+        "closing": "Vamos falar de agentes, matemática ou de onde comer em Shenzhen.",
+        "closingText": "Leio todos os emails. Respondo mais rápido aos de pesquisa.",
         "skillsTitle": "Habilidades e ferramentas",
         "skillsExpand": "Mostrar todas as habilidades",
         "skillsCollapse": "Mostrar menos habilidades",
         "researchMore": "Saiba mais",
         "researchLess": "Mostrar menos",
         "researchApproach": "Possível abordagem",
-        "researchEvaluation": "Como eu avaliaria"
+        "researchEvaluation": "Como eu avaliaria",
+        "metaDescription": "Gofish (Yiming Zeng) faz mestrado em matemática na SUSTech. Pesquisa agentes que aprendem com a própria experiência e IA incorporada. Também pensa demais em frango frito."
       },
       "content": {
         "about": [
-          "Oi, eu sou Gofish. Atualmente faço mestrado em matemática na Southern University of Science and Technology, depois de estudar Mathematical Foundation Science na Dalian University of Technology. A matemática é meu ponto de partida para entender problemas, e a IA continua trazendo novos.",
-          "O que mais me fascina é como agentes melhoram por meio da experiência, e como a inteligência pode entrar de verdade no mundo físico pela percepção e pela ação. Quero encontrar minha própria direção entre pensamento matemático sólido e experimentos concretos.",
-          "Fora da tela, gosto de viajar, jogar badminton, cozinhar e ver filmes. Para mim, estudar um problema com seriedade e cozinhar uma refeição com seriedade valem o mesmo cuidado."
+          "Sou Gofish. Faço mestrado em matemática na Southern University of Science and Technology. Antes, estudei Ciências Matemáticas Fundamentais na Universidade de Tecnologia de Dalian.",
+          "Sempre volto a duas perguntas. Como um agente melhora com a própria experiência? O que falta para um modelo agir no mundo, em vez de apenas descrevê-lo? Ainda não tenho respostas. Os próximos três anos são para procurar.",
+          "Longe da tela: badminton, cozinha, cinema e qualquer montanha com uma trilha. Levo a cozinha a sério demais para o pouco que sei cozinhar."
         ],
         "research": [
           {
@@ -2530,22 +2541,22 @@
           {
             "symbol": "↗",
             "title": "Badminton",
-            "description": "Bater, correr, suar — ar fresco para a mente."
+            "description": "Quase sempre em duplas. Geralmente sou eu quem erra o placar."
           },
           {
             "symbol": "⌁",
             "title": "Viagens e caminhadas",
-            "description": "Sair de rotas familiares e colecionar paisagens diferentes."
+            "description": "Escolho uma montanha. O resto da viagem decido pelo caminho."
           },
           {
             "symbol": "◡",
             "title": "Cozinhar",
-            "description": "Levar a sério as três refeições do dia, no calor da cozinha."
+            "description": "A única coisa que faço em que sei na hora se deu certo."
           },
           {
             "symbol": "▷",
             "title": "Filmes e histórias",
-            "description": "Viver outra vida através de uma tela."
+            "description": "Tenho uma lista. A maioria é de filmes que já vi."
           }
         ],
         "gallery": [
@@ -2553,7 +2564,7 @@
             "image": "summit",
             "position": "50% 45%",
             "title": "Acima das nuvens, outro céu",
-            "caption": "Tianchi deixou o vento terminar a frase.",
+            "caption": "Vento na borda da cratera. Fiquei sentado até não sentir mais as mãos.",
             "alt": "Tianchi da Montanha Changbai: Gofish de óculos escuros em um mirante"
           },
           {
@@ -2636,8 +2647,8 @@
           {
             "image": "aircraft",
             "position": "50% 50%",
-            "title": "Curiosidade de infância em tamanho real",
-            "caption": "O Y-20 tornou a ideia de voar quase palpável.",
+            "title": "O Y-20 de perto",
+            "caption": "Nunca tinha ficado perto de algo tão grande que pudesse voar.",
             "alt": "Avião de transporte Y-20: Gofish diante de uma aeronave em exposição ao ar livre"
           },
           {
@@ -2652,7 +2663,7 @@
     },
     "hi": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / परिचय",
         "sectionResearch": "02 / शोध रुचियाँ",
         "sectionEducation": "03 / शिक्षा",
@@ -2689,25 +2700,26 @@
         "themeToLight": "लाइट मोड",
         "statsViews": "कुल विज़िट",
         "statsVisitors": "आगंतुक",
-        "profileNote": "{age} · पुरुष · 2026 के नोट्स",
+        "profileNote": "शेन्ज़ेन, चीन · 2026",
         "headline": "गणित में स्नातकोत्तर छात्र, Agent RSI और Physical AI में रुचि।",
-        "intro": "गणित से विचारों को स्पष्ट करता हूँ; पहाड़ों और रोज़मर्रा की ज़िंदगी में नए नज़रिए पाता हूँ।",
-        "heroCaption": "अपने कदम प्रकृति को, और अपनी जिज्ञासा दुनिया को।",
-        "closing": "जिज्ञासु रहें, धीरे-धीरे बढ़ें।",
-        "closingText": "गणित, AI या अगली यात्रा पर — रोचक विचारों की प्रतीक्षा है।",
+        "intro": "गणित इसलिए पसंद है कि उसके सवालों में खुद को धोखा देना नहीं चलता। बाकी समय पहाड़ पर, रसोई में या बैडमिंटन कोर्ट पर मिलता हूँ।",
+        "heroCaption": "डोलोमाइट्स। करीब चार मिनट के लिए कोहरा हटा था।",
+        "closing": "एजेंट, गणित या शेन्ज़ेन में कहाँ खाएँ—किसी पर भी बात कर सकते हैं।",
+        "closingText": "हर ईमेल पढ़ता हूँ। शोध वाले ईमेल का जवाब सबसे जल्दी देता हूँ।",
         "skillsTitle": "कौशल और उपकरण",
         "skillsExpand": "सभी कौशल दिखाएँ",
         "skillsCollapse": "कम कौशल दिखाएँ",
         "researchMore": "और जानें",
         "researchLess": "कम दिखाएँ",
         "researchApproach": "संभावित तरीका",
-        "researchEvaluation": "मूल्यांकन कैसे करूँगा"
+        "researchEvaluation": "मूल्यांकन कैसे करूँगा",
+        "metaDescription": "Gofish (यिमिंग ज़ेंग) SUSTech में गणित में मास्टर कर रहे हैं। उनका काम अनुभव से सीखने वाले एजेंट और भौतिक दुनिया में काम करने वाली AI पर है। फ्राइड चिकन के बारे में भी कुछ ज़्यादा सोचते हैं।"
       },
       "content": {
         "about": [
-          "नमस्ते, मैं Gofish हूँ। मैं अभी Southern University of Science and Technology में गणित में मास्टर कर रहा हूँ, इससे पहले Dalian University of Technology में Mathematical Foundation Science पढ़ा। गणित मेरे लिए समस्याओं को समझने की शुरुआत है, और AI लगातार नई समस्याएँ लाता रहता है।",
-          "मुझे सबसे अधिक यह आकर्षित करता है कि एजेंट अनुभव से खुद को कैसे बेहतर बनाते हैं, और बुद्धिमत्ता धारणा व क्रिया के माध्यम से भौतिक दुनिया में सचमुच कैसे प्रवेश कर सकती है। मैं ठोस गणितीय सोच और ठोस प्रयोगों के बीच अपनी शोध दिशा खोजना चाहता हूँ।",
-          "स्क्रीन से दूर मुझे यात्रा, बैडमिंटन, खाना बनाना और फिल्में पसंद हैं। मेरे लिए किसी समस्या को गंभीरता से पढ़ना और किसी भोजन को गंभीरता से पकाना दोनों ही मेहनत के योग्य हैं।"
+          "मैं Gofish हूँ। अभी सदर्न यूनिवर्सिटी ऑफ साइंस एंड टेक्नोलॉजी में गणित में मास्टर कर रहा हूँ। इससे पहले डालियान यूनिवर्सिटी ऑफ टेक्नोलॉजी में गणितीय आधार विज्ञान पढ़ा था।",
+          "दो सवालों पर बार-बार लौटता हूँ। कोई एजेंट अपने अनुभव से कैसे बेहतर होता है? किसी मॉडल को दुनिया का वर्णन करने के बजाय उसमें काम करने के लिए और क्या चाहिए? अभी जवाब नहीं हैं। अगले तीन साल इन्हीं की तलाश में लगेंगे।",
+          "स्क्रीन से दूर: बैडमिंटन, खाना बनाना, फिल्में और कोई भी पहाड़ जहाँ पगडंडी हो। खाना बनाने को जितनी गंभीरता से लेता हूँ, उतना अच्छा बनाता नहीं।"
         ],
         "research": [
           {
@@ -2763,22 +2775,22 @@
           {
             "symbol": "↗",
             "title": "बैडमिंटन",
-            "description": "स्विंग, दौड़, पसीना — मन के लिए ताज़ी हवा।"
+            "description": "ज़्यादातर डबल्स खेलता हूँ। स्कोर की गिनती आम तौर पर मैं ही भूलता हूँ।"
           },
           {
             "symbol": "⌁",
             "title": "यात्रा और भटकना",
-            "description": "परिचित रास्तों से बाहर निकलना, अलग-अलग दृश्य संजोना।"
+            "description": "पहले एक पहाड़ चुनता हूँ। बाकी सफर का फैसला रास्ते में होता है।"
           },
           {
             "symbol": "◡",
             "title": "खाना बनाना",
-            "description": "रसोई की गर्माहट में दिन के तीन भोजन को गंभीरता से लेना।"
+            "description": "यही एक काम है जिसका नतीजा तुरंत पता चल जाता है।"
           },
           {
             "symbol": "▷",
             "title": "फिल्में और कहानियाँ",
-            "description": "स्क्रीन के ज़रिये एक और जीवन जीना।"
+            "description": "एक सूची रखता हूँ। ज़्यादातर फिल्में दोबारा देखने के लिए हैं।"
           }
         ],
         "gallery": [
@@ -2786,7 +2798,7 @@
             "image": "summit",
             "position": "50% 45%",
             "title": "बादलों के ऊपर, एक और आसमान",
-            "caption": "Tianchi ने वाक्य पूरा करने के लिए हवा को छोड़ दिया।",
+            "caption": "गड्ढे के किनारे तेज़ हवा थी। हाथ सुन्न होने तक वहीं बैठा रहा।",
             "alt": "Changbai Mountain Tianchi: Gofish sunglasses में mountain viewpoint पर"
           },
           {
@@ -2869,8 +2881,8 @@
           {
             "image": "aircraft",
             "position": "50% 50%",
-            "title": "बचपन की जिज्ञासा, असली आकार में",
-            "caption": "Y-20 ने उड़ान के विचार को लगभग छूने लायक बना दिया।",
+            "title": "Y-20 को पास से देखना",
+            "caption": "पहली बार इतनी बड़ी, उड़ सकने वाली चीज़ के पास खड़ा था।",
             "alt": "Y-20 transport aircraft: Gofish outdoor display में aircraft के सामने"
           },
           {
@@ -2885,7 +2897,7 @@
     },
     "ur": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / تعارف",
         "sectionResearch": "02 / تحقیقی دلچسپیاں",
         "sectionEducation": "03 / تعلیم",
@@ -2922,25 +2934,26 @@
         "themeToLight": "لائٹ موڈ",
         "statsViews": "کل وزٹس",
         "statsVisitors": "زائرین",
-        "profileNote": "{age} · مرد · 2026 کے نوٹس",
+        "profileNote": "شینژن، چین · 2026",
         "headline": "ریاضی میں ماسٹرز کا طالب علم، Agent RSI اور Physical AI میں دلچسپی۔",
-        "intro": "ریاضی سے سوالوں کو سمجھتا ہوں، اور پہاڑوں اور روزمرہ کی زندگی میں نئے زاویے پاتا ہوں۔",
-        "heroCaption": "اپنے قدم فطرت کے حوالے، اور اپنا تجسس دنیا کے نام۔",
-        "closing": "متجسس رہیں، آہستہ آہستہ بڑھیں۔",
-        "closingText": "ریاضی، AI یا اگلے سفر کے بارے میں — دلچسپ خیالات کا منتظر ہوں۔",
+        "intro": "ریاضی اس لیے پسند ہے کہ اس کے سوالوں میں خود کو دھوکا نہیں دے سکتا۔ باقی وقت پہاڑ پر، باورچی خانے میں یا بیڈمنٹن کورٹ میں ملوں گا۔",
+        "heroCaption": "ڈولومائٹس۔ دھند تقریباً چار منٹ کے لیے چھٹی تھی۔",
+        "closing": "ایجنٹس، ریاضی یا شینژن میں کھانے کی جگہوں پر بات کرتے ہیں۔",
+        "closingText": "ہر ای میل پڑھتا ہوں۔ تحقیق والی ای میلز کا جواب سب سے جلد دیتا ہوں۔",
         "skillsTitle": "مہارتیں اور اوزار",
         "skillsExpand": "تمام مہارتیں دکھائیں",
         "skillsCollapse": "کم مہارتیں دکھائیں",
         "researchMore": "مزید جانیں",
         "researchLess": "کم دکھائیں",
         "researchApproach": "ممکنہ طریقہ",
-        "researchEvaluation": "اسے کیسے پرکھوں گا"
+        "researchEvaluation": "اسے کیسے پرکھوں گا",
+        "metaDescription": "Gofish (یی منگ زینگ) SUSTech میں ریاضی کے ماسٹر کے طالب علم ہیں۔ وہ تجربے سے سیکھنے والے ایجنٹس اور مادی دنیا میں کام کرنے والی AI پر کام کرتے ہیں۔ فرائیڈ چکن کے بارے میں بھی کچھ زیادہ سوچتے ہیں۔"
       },
       "content": {
         "about": [
-          "سلام، میں Gofish ہوں۔ میں اس وقت Southern University of Science and Technology میں ریاضی میں ماسٹر کر رہا ہوں، اس سے پہلے Dalian University of Technology میں Mathematical Foundation Science پڑھا۔ ریاضی میرے لیے مسائل کو سمجھنے کی ابتدا ہے، اور AI مسلسل نئے سوالات سامنے لاتا ہے۔",
-          "مجھے سب سے زیادہ یہ بات متوجہ کرتی ہے کہ ایجنٹس تجربے کے ذریعے خود کو کیسے بہتر بناتے ہیں، اور ذہانت ادراک اور عمل کے ذریعے مادی دنیا میں واقعی کیسے داخل ہو سکتی ہے۔ میں مضبوط ریاضیاتی سوچ اور ٹھوس تجربات کے درمیان اپنی تحقیقی سمت تلاش کرنا چاہتا ہوں۔",
-          "اسکرین سے دور مجھے سفر، بیڈمنٹن، کھانا پکانا اور فلمیں پسند ہیں۔ میرے لیے کسی مسئلے کو سنجیدگی سے پڑھنا اور ایک کھانا سنجیدگی سے پکانا دونوں قابل قدر ہیں۔"
+          "میں Gofish ہوں۔ سدرن یونیورسٹی آف سائنس اینڈ ٹیکنالوجی میں ریاضی کا ماسٹر کر رہا ہوں۔ اس سے پہلے دالیان یونیورسٹی آف ٹیکنالوجی میں بنیادی ریاضیاتی علوم پڑھے تھے۔",
+          "دو سوالوں کی طرف بار بار لوٹتا ہوں۔ ایک ایجنٹ اپنے تجربے سے کیسے بہتر ہوتا ہے؟ کسی ماڈل کو دنیا بیان کرنے کے بجائے اس میں کام کرنے کے لیے اور کیا چاہیے؟ ابھی جواب نہیں ملے۔ اگلے تین سال اسی تلاش کے لیے ہیں۔",
+          "اسکرین سے دور: بیڈمنٹن، کھانا پکانا، فلمیں اور ہر وہ پہاڑ جہاں پگڈنڈی ہو۔ کھانا پکانے کو جتنا سنجیدہ لیتا ہوں، اتنا اچھا پکاتا نہیں۔"
         ],
         "research": [
           {
@@ -2996,22 +3009,22 @@
           {
             "symbol": "↗",
             "title": "بیڈمنٹن",
-            "description": "سوئنگ، دوڑ، پسینہ — ذہن کے لیے تازہ ہوا۔"
+            "description": "زیادہ تر ڈبلز کھیلتا ہوں۔ اسکور گننے میں غلطی عموماً میری ہوتی ہے۔"
           },
           {
             "symbol": "⌁",
             "title": "سفر اور آوارگی",
-            "description": "مانوس راستوں سے نکلنا، مختلف مناظر جمع کرنا۔"
+            "description": "پہلے ایک پہاڑ چنتا ہوں۔ باقی سفر کا فیصلہ راستے میں ہوتا ہے۔"
           },
           {
             "symbol": "◡",
             "title": "کھانا پکانا",
-            "description": "باورچی خانے کی گرمی میں دن کے تین کھانوں کو سنجیدگی سے لینا۔"
+            "description": "یہی ایک کام ہے جس کا نتیجہ فوراً معلوم ہو جاتا ہے۔"
           },
           {
             "symbol": "▷",
             "title": "فلمیں اور کہانیاں",
-            "description": "اسکرین کے ذریعے ایک اور زندگی جینا۔"
+            "description": "ایک فہرست رکھتا ہوں۔ زیادہ تر فلمیں دوبارہ دیکھنے کے لیے ہیں۔"
           }
         ],
         "gallery": [
@@ -3019,7 +3032,7 @@
             "image": "summit",
             "position": "50% 45%",
             "title": "بادلوں کے اوپر، ایک اور آسمان",
-            "caption": "Tianchi نے جملہ مکمل کرنے کے لیے ہوا کو چھوڑ دیا۔",
+            "caption": "گڑھے کے کنارے تیز ہوا تھی۔ ہاتھ سن ہونے تک وہیں بیٹھا رہا۔",
             "alt": "Changbai Mountain Tianchi: Gofish sunglasses میں mountain viewpoint پر"
           },
           {
@@ -3102,8 +3115,8 @@
           {
             "image": "aircraft",
             "position": "50% 50%",
-            "title": "بچپن کا تجسس، اصل جسامت میں",
-            "caption": "Y-20 نے پرواز کے خیال کو تقریباً چھونے کے قابل بنا دیا۔",
+            "title": "Y-20 کو قریب سے دیکھنا",
+            "caption": "پہلی بار اتنی بڑی چیز کے پاس کھڑا تھا جو اڑ بھی سکتی تھی۔",
             "alt": "Y-20 transport aircraft: Gofish outdoor display میں aircraft کے سامنے"
           },
           {
@@ -3118,7 +3131,7 @@
     },
     "bn": {
       "strings": {
-        "metaTitle": "Homepage[Gofish]",
+        "metaTitle": "Gofish — Mathematics & AI",
         "sectionAbout": "01 / পরিচিতি",
         "sectionResearch": "02 / গবেষণার আগ্রহ",
         "sectionEducation": "03 / শিক্ষা",
@@ -3155,25 +3168,26 @@
         "themeToLight": "লাইট মোডে যান",
         "statsViews": "মোট ভিজিট",
         "statsVisitors": "ভিজিটর",
-        "profileNote": "{age} · পুরুষ · ২০২৬-এর নোট",
+        "profileNote": "শেনজেন, চীন · 2026",
         "headline": "গণিতে স্নাতকোত্তরের ছাত্র, Agent RSI ও Physical AI নিয়ে আগ্রহী।",
-        "intro": "গণিত দিয়ে ভাবনাকে স্পষ্ট করি; পাহাড় আর দৈনন্দিন জীবনে খুঁজে পাই নতুন দৃষ্টিভঙ্গি।",
-        "heroCaption": "আমার পদক্ষেপ প্রকৃতির কাছে, আর কৌতূহল পৃথিবীর কাছে।",
-        "closing": "কৌতূহলী থাকুন, ধীরে ধীরে বাড়ুন।",
-        "closingText": "গণিত, AI, অথবা পরের যাত্রা নিয়ে — আকর্ষণীয় ভাবনার অপেক্ষায়।",
+        "intro": "গণিত ভালো লাগে, কারণ তার সমস্যায় নিজেকে ফাঁকি দেওয়া চলে না। বাকি সময় পাহাড়ে, রান্নাঘরে বা ব্যাডমিন্টন কোর্টে থাকি।",
+        "heroCaption": "ডলোমাইটস। প্রায় চার মিনিটের জন্য কুয়াশা সরেছিল।",
+        "closing": "এজেন্ট, গণিত বা শেনজেনে কোথায় খাওয়া যায়, যেকোনোটা নিয়েই কথা হোক।",
+        "closingText": "সব ইমেল পড়ি। গবেষণার ইমেলের উত্তর সবচেয়ে তাড়াতাড়ি দিই।",
         "skillsTitle": "দক্ষতা ও সরঞ্জাম",
         "skillsExpand": "সব দক্ষতা দেখান",
         "skillsCollapse": "কম দক্ষতা দেখান",
         "researchMore": "আরও জানুন",
         "researchLess": "কম দেখান",
         "researchApproach": "সম্ভাব্য পদ্ধতি",
-        "researchEvaluation": "কীভাবে যাচাই করব"
+        "researchEvaluation": "কীভাবে যাচাই করব",
+        "metaDescription": "Gofish (ইমিং জেং) SUSTech-এ গণিতে মাস্টার্স করছেন। তাঁর কাজ নিজের অভিজ্ঞতা থেকে শেখা এজেন্ট আর বাস্তব জগতে কাজ করতে পারে এমন AI নিয়ে। ফ্রাইড চিকেন নিয়েও একটু বেশি ভাবেন।"
       },
       "content": {
         "about": [
-          "হাই, আমি Gofish। আমি এখন Southern University of Science and Technology-তে গণিতে মাস্টার্স করছি, এর আগে Dalian University of Technology-তে Mathematical Foundation Science পড়েছি। গণিত থেকেই আমি সমস্যা বোঝা শুরু করি, আর AI আমাকে বারবার নতুন প্রশ্ন এনে দেয়।",
-          "আমাকে সবচেয়ে বেশি টানে এজেন্টরা কীভাবে অভিজ্ঞতা থেকে নিজেদের উন্নত করে, এবং বুদ্ধিমত্তা কীভাবে উপলব্ধি ও কাজের মাধ্যমে বাস্তব জগতে সত্যিই প্রবেশ করতে পারে। শক্ত গণিতচিন্তা ও নির্দিষ্ট পরীক্ষার মাঝখানে আমি নিজের গবেষণার দিশা খুঁজতে চাই।",
-          "স্ক্রিনের বাইরে আমি ভ্রমণ, ব্যাডমিন্টন, রান্না আর সিনেমা ভালোবাসি। আমার কাছে কোনো সমস্যা মন দিয়ে পড়া আর কোনো খাবার মন দিয়ে রান্না করা দুটোই যত্নের যোগ্য।"
+          "আমি Gofish। সাদার্ন ইউনিভার্সিটি অব সায়েন্স অ্যান্ড টেকনোলজিতে গণিতে মাস্টার্স করছি। তার আগে দালিয়ান ইউনিভার্সিটি অব টেকনোলজিতে মৌলিক গাণিতিক বিজ্ঞান পড়েছি।",
+          "দুটো প্রশ্নে বারবার ফিরে আসি। একটা এজেন্ট নিজের অভিজ্ঞতা থেকে কীভাবে আরও ভালো হয়? শুধু দুনিয়ার বর্ণনা না দিয়ে সেখানে কাজ করতে একটা মডেলের আর কী দরকার? এখনও উত্তর পাইনি। পরের তিন বছর সেই খোঁজেই কাটবে।",
+          "স্ক্রিন থেকে দূরে: ব্যাডমিন্টন, রান্না, সিনেমা আর হাঁটার পথ আছে এমন যেকোনো পাহাড়। রান্না নিয়ে যতটা মাথা ঘামাই, ততটা ভালো রাঁধতে পারি না।"
         ],
         "research": [
           {
@@ -3229,22 +3243,22 @@
           {
             "symbol": "↗",
             "title": "ব্যাডমিন্টন",
-            "description": "সুইং, দৌড়, ঘাম — মনের জন্য একটুখানি তাজা হাওয়া।"
+            "description": "বেশির ভাগ সময় ডাবলস খেলি। স্কোর গুনতে ভুলটা সাধারণত আমিই করি।"
           },
           {
             "symbol": "⌁",
             "title": "ভ্রমণ ও ঘোরাঘুরি",
-            "description": "চেনা পথ ছেড়ে বের হওয়া, আলাদা দৃশ্য সংগ্রহ করা।"
+            "description": "আগে একটা পাহাড় বেছে নিই। বাকি সফর পথেই ঠিক হয়।"
           },
           {
             "symbol": "◡",
             "title": "রান্না",
-            "description": "রান্নাঘরের উষ্ণতায় প্রতিদিনের তিন বেলার খাবারকে গুরুত্ব দেওয়া।"
+            "description": "একমাত্র এই কাজটার ফল সঙ্গে সঙ্গে বুঝতে পারি।"
           },
           {
             "symbol": "▷",
             "title": "সিনেমা ও গল্প",
-            "description": "স্ক্রিনের মাধ্যমে আরেকটি জীবন বেঁচে দেখা।"
+            "description": "একটা তালিকা রাখি। বেশির ভাগই আবার দেখার জন্য।"
           }
         ],
         "gallery": [
@@ -3252,7 +3266,7 @@
             "image": "summit",
             "position": "50% 45%",
             "title": "মেঘের ওপরে, আরেক আকাশ",
-            "caption": "Tianchi বাকিটা বলার দায়িত্ব বাতাসকে দিয়েছিল।",
+            "caption": "জ্বালামুখের ধারে জোর হাওয়া। হাত অবশ হওয়া পর্যন্ত বসে ছিলাম।",
             "alt": "Changbai Mountain Tianchi: Gofish sunglasses পরে mountain viewpoint-এ"
           },
           {
@@ -3335,8 +3349,8 @@
           {
             "image": "aircraft",
             "position": "50% 50%",
-            "title": "শৈশবের কৌতূহল, পূর্ণ আকারে",
-            "caption": "Y-20 উড়ানের ধারণাকে প্রায় ছোঁয়ার মতো করে দিল।",
+            "title": "কাছ থেকে Y-20",
+            "caption": "এত বড় অথচ উড়তে পারে এমন কিছুর পাশে প্রথমবার দাঁড়ালাম।",
             "alt": "Y-20 transport aircraft: Gofish outdoor display-তে aircraft-এর সামনে"
           },
           {
