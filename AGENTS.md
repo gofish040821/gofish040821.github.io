@@ -17,3 +17,5 @@
 模板导出采用允许列表。新增资源或源文件时检查 scripts/create-template.mjs，验证导出项目能独立构建，并扫描它的源文件和 dist 中是否残留站主资料。默认不带访客统计、站主照片和专有字库。素材许可见 ASSET-LICENSES.md。
 
 发布仅按用户指定的仓库、分支和范围进行。完成后确认 Actions 和线上实际内容，并清理本次不再需要的临时脚本。
+
+每次个人主页有新变动上线时，同步更新 README.md 和 README.zh-CN.md 的相关说明与发布记录，并更新 content.json 的 updated。涉及设计或交互取舍时，同步更新 DESIGN.md 与 DESIGN.zh-CN.md。涉及模板能力时，也更新模板的说明和独立 template 分支，发布前检查双语文档与实际页面一致。

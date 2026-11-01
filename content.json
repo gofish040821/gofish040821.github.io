@@ -4,7 +4,7 @@
   "linkedin": "https://www.linkedin.com/in/yiming-zeng-641056440/",
   "email": "gofish0821@gmail.com",
   "siteUrl": "https://gofish040821.github.io",
-  "updated": "2026.10",
+  "updated": "2026.11",
   "profileNote": "{age} · Male · Notes of 2026",
   "headline": "Mathematics master's student exploring Agent RSI and Physical AI.",
   "intro": "I turn to mathematics for clarity, and to mountains and daily life for perspective.",
@@ -123,6 +123,26 @@
     {
       "name": "Vitest",
       "badge": "vitest"
+    },
+    {
+      "name": "Figma",
+      "badge": "figma"
+    },
+    {
+      "name": "Zotero",
+      "badge": "zotero"
+    },
+    {
+      "name": "Manim",
+      "badge": "manim"
+    },
+    {
+      "name": "DaVinci Resolve",
+      "badge": "davinci"
+    },
+    {
+      "name": "REAPER",
+      "badge": "reaper"
     }
   ],
   "agentSkills": [
