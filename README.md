@@ -1,27 +1,29 @@
-# Gofish 的个人主页
+[English](README.md) | [中文](README.zh-CN.md)
 
-我喜欢把在意的事讲具体，也愿意给听的人留一点余地。做这个主页时，我把这种分寸叫作“有体温的克制”。一些 AI 产品用深底、霓虹渐变和玻璃光晕表现未来感，我更想让这里像一册摊开的手记。一道研究问题能写得严谨，我和父母的毕业照也有自己的位置。
+# Gofish’s personal homepage
 
-访问主站可以读到研究笔记、求学经历和生活照片。想搭自己的主页，也可以直接取用中性模板。[中文主页](https://gofish040821.github.io/?lang=zh) · [English](https://gofish040821.github.io/?lang=en) · [设计说明](DESIGN.md)
+I like to be specific about the things I care about and leave some room for the person listening. I think of that balance as “warm restraint.” Some AI products use dark backgrounds, neon gradients and glassy glows to suggest the future. I wanted this site to feel like a notebook left open on a desk, with room for a carefully framed research question and a photo of my parents and me at graduation.
 
-## 预览作者主页
+The live site has my research notes, education and photos from everyday life. If you’re building a homepage of your own, there’s also a template with neutral sample content. [Homepage in English](https://gofish040821.github.io/?lang=en) · [中文主页](https://gofish040821.github.io/?lang=zh) · [Design notes](DESIGN.md)
 
-`main` 是线上主站的源码。页面支持 14 种语言、浅色与深色主题。第三版保留了 11 幅原有铅笔插画，为每幅画单独安排动作。例如，笔尖会分两次落在纸上，汉堡抽出中层后会斜着停一会儿。
+## Preview the personal site
 
-在仓库根目录用 Node.js 20 或以上版本构建和预览，无需安装第三方依赖。
+The `main` branch contains the source for the live site. It supports 14 languages and light and dark themes. The third version keeps all 11 original pencil illustrations and gives each its own movement. The pencil touches down twice to write a note. The burger’s middle layer slides out and pauses at an angle.
+
+From the repository root, build and preview with Node.js 20 or later. There are no third-party dependencies to install.
 
 ```sh
 npm run build
 npm run preview
 ```
 
-打开 [本地预览](http://127.0.0.1:4173)。修改源文件后重新构建，刷新浏览器即可看到变化。按 `Ctrl+C` 结束预览。
+Open the [local preview](http://127.0.0.1:4173). After editing a source file, rebuild and refresh the page. Press `Ctrl+C` to stop the preview server.
 
-## 用模板做自己的主页
+## Make your own homepage
 
-模板提供中英文、示例项目、示意图和可再分发的字体。新站主可以替换个人资料、头像和联系方式。
+The template includes English and Chinese, sample projects, placeholder illustrations and fonts licensed for redistribution. Replace the profile, avatar and contact details with your own.
 
-**从已有主仓库导出。** 在 `main` 的根目录执行以下命令，目标是一个新目录。
+**Export from an existing clone.** From the root of the `main` branch, export the template into a new directory.
 
 ```sh
 node scripts/create-template.mjs ../my-homepage
@@ -30,7 +32,7 @@ npm run build
 npm run preview
 ```
 
-**单独下载模板。** 直接克隆 `template` 分支即可。
+**Download just the template.** Clone the standalone `template` branch.
 
 ```sh
 git clone --branch template --single-branch https://github.com/gofish040821/gofish040821.github.io.git my-homepage
@@ -39,34 +41,34 @@ npm run build
 npm run preview
 ```
 
-两条路径得到的都是可独立构建的站点。主仓库内的 `template/` 目录只放导出时覆盖原内容的配置和素材。模板的维护规则见导出项目根目录的 `AGENTS.md`。
+Either route gives you a site that builds on its own. The `template/` directory on `main` holds only the settings and assets used to replace the personal content during export. See `AGENTS.md` at the root of the exported project for its maintenance guide.
 
-## 修改内容
+## Edit the content
 
-| 要改什么 | 从哪里改 |
+| What to change | Where to edit |
 | --- | --- |
-| 姓名、简介、联系方式、站点地址和更新标记 | `content.json` |
-| 研究或项目、学习经历、技能、兴趣与相册顺序 | `content.json` 中对应的数组 |
-| 界面用语与各语言译文 | `src/i18n.json` |
-| 页面结构、配色、控件和排版 | `src/index.html`、`src/style.css`、`src/controls.css`、`src/editorial.css` |
-| 场景插画与动作 | `scripts/illustrations.mjs`、`scripts/hobby-scenes.mjs`、`scripts/sketch-pencil.mjs`、`src/style.css` 和 `src/app.js` |
+| Name, introduction, contact details, site URL and last-updated label | `content.json` |
+| Research or projects, education, skills, interests and gallery order | The corresponding arrays in `content.json` |
+| Interface labels and translations | `src/i18n.json` |
+| Page structure, colors, controls and typography | `src/index.html`, `src/style.css`, `src/controls.css`, `src/editorial.css` |
+| Illustrations and their motion | `scripts/illustrations.mjs`, `scripts/hobby-scenes.mjs`, `scripts/sketch-pencil.mjs`, `src/style.css` and `src/app.js` |
 
-主站以 `content.json` 生成首屏和默认英文正文，切换语言时读取 `src/i18n.json`。改动可翻译的内容时，同步各语言的对应字段，包括主站英文词典。项目的 `className` 与兴趣项的 `symbol` 对应插画，翻译时保留它们。
+The personal site uses `content.json` to build the opening section and default English copy. The language switcher uses `src/i18n.json`. When you edit text that has translations, update the matching fields in each language, including the personal site’s English dictionary. Keep the project `className` and the hobby `symbol` unchanged across languages. They select the illustrations.
 
-相册照片放在 `dist/assets/photos/`。每张准备 `名称.webp` 和 `名称-small.webp` 两个版本，再将不带扩展名的名称填入 `gallery[].image`，补上标题、图注、替代文本和构图位置。译文通过 `image` 关联同一张图。导航头像同样使用 `avatar.webp` 和 `avatar-small.webp`。更新照片建议先移除不希望公开的 EXIF 信息。
+Store gallery photos in `dist/assets/photos/`. Supply both `name.webp` and `name-small.webp`, then set `gallery[].image` to the name without its extension. Add a title, caption, alt text and framing position. Each translation identifies the same photo by its `image` value. The navigation avatar follows the same convention with `avatar.webp` and `avatar-small.webp`. Before publishing a photo, remove any EXIF metadata you want to keep private.
 
-`dist/` 同时包含发布结果和构建输入。`dist/assets/` 中的照片、字体和徽章会在构建时读取或校验，请保留这些资源。页面与脚本从源文件生成。
+The `dist/` directory contains both published output and build inputs. Keep the photos, fonts and badges in `dist/assets/`. The build reads or validates them and generates the pages and scripts from source.
 
-## 发布
+## Publish
 
-主站在 `main` 收到相关页面、脚本或资源变更后，由 GitHub Actions 构建并发布 `dist/`。[主站工作流](.github/workflows/pages.yml)
+When changes to the relevant pages, scripts or assets reach `main`, GitHub Actions builds the personal site and deploys `dist/`. [Personal site workflow](.github/workflows/pages.yml)
 
-模板默认只做本地预览。要发布到自己的仓库，请依次完成以下设置。
+The template is set up for local preview. To publish it from your own repository, follow these steps.
 
-1. 把 `content.json` 的 `siteUrl` 改成自己的完整线上地址。使用项目站点时，地址要带仓库子路径。替换示例联系方式与图片，再把项目推送到自己的仓库。
-2. 在自己的仓库里，将模板附带的 `deploy/pages.yml.example` 复制为 `.github/workflows/pages.yml`，提交到默认分支。在 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。[GitHub Pages 发布设置](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-3. 打开 **Actions**，选择 Pages 工作流，点击 **Run workflow** 并选定要发布的分支。这个示例工作流仅在手动运行时构建并发布 `dist/`。
+1. Set `siteUrl` in `content.json` to your full public URL. For a GitHub Pages project site, include the repository path. Replace the sample contact details and images, then push the project to your own repository.
+2. In your repository, copy `deploy/pages.yml.example` to `.github/workflows/pages.yml` and commit it to the default branch. Under **Settings → Pages → Build and deployment → Source**, select **GitHub Actions**. [GitHub Pages publishing settings](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+3. Open **Actions**, select the Pages workflow, click **Run workflow** and choose the branch to publish. The example workflow builds and deploys `dist/` only when run manually.
 
-## 使用许可
+## License
 
-本站原创代码与原创插画按 MIT 许可提供。作者的个人照片、头像和个人文字不在模板复用许可内。主站的 Anthropic 字体有单独的网页使用授权，模板使用另有开放许可的字体。第三方素材的归属与许可分别列在素材说明中。[代码许可](LICENSE) · [素材说明](ASSET-LICENSES.md)
+The original code and illustrations are available under the MIT License. The author’s personal photos, avatar and writing are outside the scope of the template’s reuse license. The personal site has separate authorization to use the Anthropic fonts on the web. The template ships fonts under open licenses. The asset notes cover third-party credits and license terms. [Code license](LICENSE) · [Asset notes](ASSET-LICENSES.md)

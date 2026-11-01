@@ -1,25 +1,27 @@
-# 有体温的克制
+# Warm Restraint
 
-一些 AI 产品用深色背景、霓虹渐变、玻璃质感和蓝色光晕描绘未来。我写的是眼下在想的问题、走过的路和身边的人，所以希望这个主页更像一册摊开的手记。极简本身对我没有那么重要。一张毕业照、一句图注，或一次还没做完的实验，都值得留下。
+[English](DESIGN.md) | [中文](DESIGN.zh-CN.md)
 
-我愿意认真想一道题，也愿意认真做一顿饭。认真不必让人紧绷，表达自己的兴趣也不必占满别人的注意力。这是我说“有体温的克制”时想到的分寸。落实到页面上，就是该说清的地方留够篇幅，让来访的人自己决定读多深、在哪里停下。
+Some AI products picture the future in neon gradients, glass and blue halos against a dark background. I write about questions I’m working through, places I’ve been and people I know. I want this homepage to feel like a notebook left open. Minimalism matters less to me than having room for a graduation photo, a line beneath it or an experiment I haven’t finished.
 
-## 纸、墨和空白
+I can give a math problem my full attention and take just as much care over cooking dinner. I like that kind of seriousness when it leaves people at ease. I want to share my interests while leaving visitors some room of their own. That’s what I mean by warm restraint. On the page, I give an idea enough space to explain it and leave it to the reader to decide how far to read and where to pause.
 
-纸的感觉从底色开始。浅色背景用暖白 `#f7f5f0`，正文用墨灰 `#30302c`。陶土色 `#b75e43` 点在章节编号和少量提示上，插画里的蜡笔色块稍亮，为 `#cf7958`。细微的颗粒感留在笔迹里。同一根铅笔线有轻重，两侧边缘略微不对称，起笔和收笔会变细。大块阅读区域仍然干净。深色模式把底纸换成 `#191816`，正文换成 `#e9e5dd`，插画用较亮的 `#d78a65`，保留纸与墨的层次。[笔迹生成](scripts/sketch-pencil.mjs) · [配色](src/style.css)
+## Paper, ink and space
 
-空白用来交代主次。桌面首屏左边是名字和研究方向，右边是一张我在山里的照片。名字用 88–118px 的衬线字，介绍文字缩到 17px。首屏上下分别留出 88px 和 100px，让读者看清这一页，再进入下一节。内容区最宽 1160px，简介正文却只占约 62ch，也就是 62 个数字“0”的宽度。两篇研究卡片中间隔开 54px，图注则贴近自己的照片。同一页上，间距也告诉人哪些内容应该一起读。[排版](src/editorial.css)
+The sense of paper starts with the background. In light mode I use a warm off-white (`#f7f5f0`) with charcoal text (`#30302c`). A clay color (`#b75e43`) picks out the section numbers and a few small cues. The crayon fills in the illustrations use a brighter shade (`#cf7958`). I keep the grain in the marks themselves. The pressure varies along a pencil stroke, its two edges differ slightly, and its ends taper. The reading area stays clear. In dark mode the paper shifts to `#191816`, the text to `#e9e5dd` and the illustrated accents to `#d78a65`, so the ink still stands apart from the page. [How the pencil marks are drawn](scripts/sketch-pencil.mjs) · [Color palette](src/style.css)
 
-## 研究和生活可以放在一起
+On desktop, my name and research interests sit to the left of a photo of me in the mountains. I set my name in a serif face at 88–118px and the introduction at 17px. There’s 88px of space above this opening and 100px below it, giving it room before the next section begins. The content area is up to 1160px wide, but the text in the About section runs to about 62ch, roughly the width of 62 zeroes. I leave 54px between the two research cards and keep each caption close to its photo. The spacing helps readers see what belongs together. [Typography and layout](src/editorial.css)
 
-研究卡片先写一个能复述的问题，再把方法和评价标准放进可展开的笔记。拿掉巨无霸的中层面包，改变的是面包的用量，还是它在结构里的位置？写出“从外层减去等量面包”这组对照，比单列一个“消融实验”的标签更能说明我在想什么。它目前是研究设想，页面也写到这一步为止。
+## Room for research and daily life
 
-相册里的文字可以少些。毕业照下面只有一句“一张毕业照，和陪我走到这里的两个人。”照片已经说清了关系。山顶、家人、小狗和海边是相册开头的四张图，想继续看的访客再展开余下十张。生活在这里有自己的篇幅，不必给每张照片找一个与技术有关的理由。
+Each research card starts with a question you could put in your own words. An expandable note explains how I might test it and what I’d measure. If I remove the middle bun from a Big Mac, how much of the change comes from having less bread, and how much from where the bread sat? Describing a comparison with the same amount taken from the outer buns says more about my thinking than the label “ablation study” could on its own. It’s still an idea for an experiment, so the card stops at the plan.
 
-## 动作有落点，也有结束
+The gallery needs fewer words. Under my graduation photo I wrote, “A graduation photo, and the two people who made the long road possible.” The photograph says the rest. The first four images show a summit, my family, a puppy and the seaside. Visitors can open the remaining ten if they want to see more. Daily life has a place here in its own right. I don’t need a technical reason to include a picture.
 
-第三版保留了五幅章节或工具图、两幅研究图、四幅爱好图的静止造型。动作从画里的实物出发。写字时，第一笔较快，笔尖离纸时墨迹停住，第二笔才接着写。汉堡夹层先受阻，上层卸力后才斜着滑出，在约 −9° 处停一下。羽毛球先碰到拍线，羽毛才跟着转向。笔压让局部的线条稍微加宽、弯曲，传力的先后把动作连起来。[场景插画](scripts/illustrations.mjs) · [爱好插画](scripts/hobby-scenes.mjs)
+## How a gesture comes to rest
 
-插画进入视野时播放一次，结束后回到纸面。想重看可以移入鼠标或触摸，指针停着不会触发循环。开启系统的减少动态效果后，读者仍能从静帧和正文读懂内容。手机上图文改为单列，横竖照片保留完整构图，图注跟随照片。让人能按自己的速度读下去，也是这套设计的一部分。[交互实现](src/app.js)
+The third version keeps the original drawings for the five section and tool illustrations, the two research illustrations and the four hobby illustrations. Each gesture comes from the object in the drawing. The pencil makes its first stroke quickly. When the tip lifts, the ink stops, and only then does the second stroke begin. The burger’s middle layer catches at first. As the weight above it lifts, it slides out at an angle and pauses at about −9°. The shuttlecock meets the racket strings before its feathers turn. A little pressure widens and bends part of a line. The small delay between one part taking the force and the next part moving makes them feel connected. [Scene illustrations](scripts/illustrations.mjs) · [Hobby illustrations](scripts/hobby-scenes.mjs)
 
-暖纸色与编辑式排版受到 Anthropic 设计的部分启发，本站由我独立制作，与 Anthropic 没有官方隶属关系。主站的拉丁标题、正文和编号分别使用 Anthropic Serif、Sans、Mono。中文标题与正文回退到系统中的宋体和黑体，阿拉伯语、乌尔都语也有相应字形并从右向左排版。个人站点的字体授权不随模板转让，模板改用允许再分发的开放字体。[素材与许可](ASSET-LICENSES.md)
+An illustration plays once when it comes into view, then returns to its resting pose. Hovering or tapping plays it again. Leaving the pointer in place keeps it still. With reduced motion enabled, the drawings and text tell the same story at rest. On a phone, text and images fall into one column. Portrait and landscape photos keep their full composition, each followed by its caption. I want people to be able to read at their own pace. [Interaction code](src/app.js)
+
+Anthropic’s design partly inspired the warm paper tones and editorial layout. I made the site independently and have no official affiliation with Anthropic. On my own site, I use Anthropic Serif for Latin-script headings, Anthropic Sans for body text and Anthropic Mono for numbering. Chinese headings and body text fall back to the system’s Song-style serif and Hei-style sans-serif fonts. Arabic and Urdu use script-appropriate fonts and read from right to left. The permission covering the Anthropic fonts on my site does not transfer to template users. The template ships with open fonts that allow redistribution and leaves out my photos and personal details. [Asset and font licenses](ASSET-LICENSES.md)

@@ -95,7 +95,10 @@ async function exportSite(target) {
   await copy('template/content.json', 'content.json');
   await copy('template/pages.yml', 'deploy/pages.yml.example');
   await copy('template/README.md', 'README.md');
-  for (const name of ['AGENTS.md', 'LICENSE', 'DESIGN.md', 'ASSET-LICENSES.md']) {
+  await copy('template/README.zh-CN.md', 'README.zh-CN.md');
+  await copy('template/DESIGN.md', 'DESIGN.md');
+  await copy('template/DESIGN.zh-CN.md', 'DESIGN.zh-CN.md');
+  for (const name of ['AGENTS.md', 'LICENSE', 'ASSET-LICENSES.md']) {
     const override = await stat(resolve(root, 'template', name)).catch(error => {
       if (error.code === 'ENOENT') return null;
       throw error;
