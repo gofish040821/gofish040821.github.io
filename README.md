@@ -8,6 +8,8 @@ The live site has my research notes, education and photos from everyday life. If
 
 ## Preview the personal site
 
+Updated 2026-11-02. The hobby heading now reads “Sports,” while keeping the badminton illustration. A subtle paper-fiber texture extends across the closing section and footer, with separate settings for light and dark themes.
+
 Updated 2026-11-01. Skills & Tools now includes Figma, Zotero, Manim, DaVinci Resolve and REAPER alongside the development and research tools. Each uses the same monochrome pencil sketch and label style. Expand the list to see all 30 tools.
 
 The `main` branch contains the source for the live site. It supports 14 languages and light and dark themes. The third version keeps all 11 original pencil illustrations and gives each its own movement. The pencil touches down twice to write a note. The burger’s middle layer slides out and pauses at an angle.
