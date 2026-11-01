@@ -17,7 +17,7 @@ const assetVersions = Object.fromEntries(await Promise.all(
 ));
 const allSkills = [...data.skills, ...data.agentSkills];
 const skillIcons = await loadSkillIcons(root, allSkills);
-const skillOrder = ['python','pytorch','numpy','huggingface','transformers','langchain','langgraph','rag','mcp','git','latex','docker','cpp','java','golang','springboot','typescript','javascript','react','nodejs','html','css','socketio','vite','vitest'];
+const skillOrder = ['python','pytorch','numpy','huggingface','transformers','langchain','langgraph','rag','mcp','git','latex','docker','cpp','java','golang','springboot','typescript','javascript','react','nodejs','html','css','socketio','vite','vitest','figma','zotero','manim','davinci','reaper'];
 const orderedSkills = [...allSkills].sort((a,b) => skillOrder.indexOf(a.badge)-skillOrder.indexOf(b.badge));
 const escape = (value) => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const paragraphs = value => escape(value).replace(/&lt;br\s*\/?&gt;/g, '<br>');

@@ -1,9 +1,13 @@
 // Pressure-shaped SVG ink. Every stroke is a filled ribbon, not a uniform outline.
 // Coordinates are deliberately drawn by hand; no filters or random runtime noise.
 const fmt = n => Number(n.toFixed(2));
-let strokeNumber = 0;
-export function pen(points, weight = 3.1, opacity = 1) {
-  const phase = ++strokeNumber * 1.73;
+export function createPen() {
+  let strokeNumber = 0;
+  return (points, weight = 3.1, opacity = 1) => stroke(points, weight, opacity, ++strokeNumber * 1.73);
+}
+export const pen = createPen();
+
+function stroke(points, weight, opacity, phase) {
   const samples = [];
   for (let i = 0; i < points.length - 1; i++) {
     const a = points[Math.max(0, i - 1)], b = points[i];

@@ -21,6 +21,8 @@ npm run preview
 
 模板有两项示例项目。chicken 和 burger 是它们采用的插画名称，可以保留或改为 scripts/illustrations.mjs 中已有的其他名称。图标的笔压与局部变化在 src/app.js，整体动作在 src/style.css。
 
+可选的技能图标还包括 Figma、Zotero、Manim、DaVinci Resolve 和 REAPER。需要列出自己使用的工具时，在 content.json 的 skills 中加入工具名称与对应的 badge 键 figma、zotero、manim、davinci 或 reaper，然后重新构建。
+
 相册图片在 dist/assets/photos/。每个 image 对应 name.webp 和 name-small.webp，两张图片应有相同的构图与比例。封面默认 sample-01，头像文件为 avatar.webp / avatar-small.webp。替换图片后维护标题、图注和 alt，重新构建。模板图片是抽象占位插画。
 
 ## 修改设计

@@ -21,6 +21,8 @@ When editing Chinese, update the zh section in src/i18n.json and keep each image
 
 The two sample projects use the chicken and burger illustrations. Keep those names or choose other illustrations defined in scripts/illustrations.mjs. Local changes in line shape and pressure are in src/app.js. Whole-object motion is in src/style.css.
 
+Optional skill illustrations also include Figma, Zotero, Manim, DaVinci Resolve and REAPER. To list a tool you use, add its name and badge key (figma, zotero, manim, davinci or reaper) to skills in content.json, then rebuild.
+
 Gallery images live in dist/assets/photos/. Each image needs both name.webp and name-small.webp with the same framing and aspect ratio. The default cover is sample-01, and the avatar uses avatar.webp and avatar-small.webp. Update each title, caption, and alt text when replacing images, then rebuild. The supplied images are abstract placeholders.
 
 ## Adjust the design
