@@ -235,3 +235,101 @@ html:is(:lang(ar),:lang(ur)) .hero-copy,html:is(:lang(ar),:lang(ur)) .hero-figur
   .photo-card{break-inside:avoid}
   .photo-link img{opacity:1}
 }
+
+.fb-paper-host{
+  position: relative;
+  overflow: visible;
+  /* 严禁在此写 isolation / transform / filter / will-change / opacity<1，
+     否则纹理层会被锁在本区块内，伸不到下面的 footer */
+}
+
+.fb-paper{
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  bottom: -240px;      /* 向下盖住 footer.site-footer，后面按实测微调 */
+  z-index: -1;         /* 关键：穿透到根层叠上下文，压在内容之下 */
+  pointer-events: none;
+}
+
+.fb-paper::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: var(--fb-blend);
+  opacity: var(--fb-tex);
+  background-image: var(--fb-noise);
+  background-size: 180px 180px, 600px 600px, 600px 600px, 340px 340px;
+  background-repeat: repeat;
+}
+
+.fb-paper::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: var(--fb-vig);
+  background: var(--fb-vig-bg);
+}
+
+/* ============ 浅色（默认） ============ */
+:root{
+  --fb-blend: multiply;
+  --fb-tex: .45;
+  --fb-vig: .6;
+
+  --fb-noise:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='lg' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='0.22' intercept='0.78'/%3E%3CfeFuncG type='linear' slope='0.22' intercept='0.78'/%3E%3CfeFuncB type='linear' slope='0.22' intercept='0.78'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23lg)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='lfh' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.006 0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='0.22' intercept='0.78'/%3E%3CfeFuncG type='linear' slope='0.22' intercept='0.78'/%3E%3CfeFuncB type='linear' slope='0.22' intercept='0.78'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='600' height='600' filter='url(%23lfh)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='lfv' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9 0.006' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='0.22' intercept='0.78'/%3E%3CfeFuncG type='linear' slope='0.22' intercept='0.78'/%3E%3CfeFuncB type='linear' slope='0.22' intercept='0.78'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='600' height='600' filter='url(%23lfv)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='340'%3E%3Cfilter id='lm' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.008' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='0.55' intercept='0.50'/%3E%3CfeFuncG type='linear' slope='0.55' intercept='0.50'/%3E%3CfeFuncB type='linear' slope='0.55' intercept='0.50'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='340' height='340' filter='url(%23lm)'/%3E%3C/svg%3E");
+
+  --fb-vig-bg:
+    radial-gradient(130% 105% at 50% -10%,
+      rgba(255,255,255,.22) 0%, transparent 46%),
+    radial-gradient(125% 100% at 50% 40%,
+      transparent 34%, rgba(118,92,58,.14) 100%);
+}
+
+/* ============ 深色 ============ */
+/* ↓↓↓ 把下面这个选择器换成第一步查到的真实主题开关 ↓↓↓ */
+:root[data-theme="dark"]{
+  --fb-blend: overlay;
+  --fb-tex: .55;
+  --fb-vig: 1;
+
+  --fb-noise:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='dg' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23dg)' opacity='.9'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='dfh' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.006 0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='600' height='600' filter='url(%23dfh)' opacity='.34'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='dfv' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9 0.006' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='600' height='600' filter='url(%23dfv)' opacity='.26'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='340'%3E%3Cfilter id='dm' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.008' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='340' height='340' filter='url(%23dm)' opacity='.85'/%3E%3C/svg%3E");
+
+  --fb-vig-bg:
+    radial-gradient(130% 105% at 50% -10%,
+      rgba(255,255,255,.03) 0%, transparent 44%),
+    radial-gradient(125% 100% at 50% 40%,
+      transparent 30%, rgba(0,0,0,.72) 100%),
+    linear-gradient(180deg,
+      rgba(126,92,56,.055) 0%,
+      rgba(126,92,56,.012) 60%,
+      rgba(126,92,56,.03) 100%);
+}
+
+/* Keep older browsers on the original background. */
+.fb-paper{ display: none; }
+
+@supports ((contain: layout) and (mix-blend-mode: overlay)){
+  /* Paint below the host without extending the scrollable page. The same-color
+     backdrop confines fiber blending to this new layer. */
+  .fb-paper{
+    display: block;
+    bottom: 0;
+    contain: layout;
+    background: var(--paper);
+    box-shadow: 0 240px 0 var(--paper);
+  }
+
+  .fb-paper::before,
+  .fb-paper::after{
+    bottom: -240px;
+  }
+
+}
