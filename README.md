@@ -1,10 +1,12 @@
 # Gofish 的个人主页
 
-这里有两种用法。想看作者的研究兴趣、求学经历和生活照片，可以直接访问主站。想搭自己的主页，可以从中性模板开始。[中文主页](https://gofish040821.github.io/?lang=zh) · [English](https://gofish040821.github.io/?lang=en)
+我喜欢把在意的事讲具体，也愿意给听的人留一点余地。做这个主页时，我把这种分寸叫作“有体温的克制”。一些 AI 产品用深底、霓虹渐变和玻璃光晕表现未来感，我更想让这里像一册摊开的手记。一道研究问题能写得严谨，我和父母的毕业照也有自己的位置。
+
+访问主站可以读到研究笔记、求学经历和生活照片。想搭自己的主页，也可以直接取用中性模板。[中文主页](https://gofish040821.github.io/?lang=zh) · [English](https://gofish040821.github.io/?lang=en) · [设计说明](DESIGN.md)
 
 ## 预览作者主页
 
-`main` 是线上主站的源码。页面支持 14 种语言、浅色与深色主题。第三版保留了 11 幅原有铅笔插画，为每幅画单独安排动作。例如，笔尖会分两次落在纸上，汉堡抽出中层后会斜着停一会儿。[设计说明](DESIGN.md)
+`main` 是线上主站的源码。页面支持 14 种语言、浅色与深色主题。第三版保留了 11 幅原有铅笔插画，为每幅画单独安排动作。例如，笔尖会分两次落在纸上，汉堡抽出中层后会斜着停一会儿。
 
 在仓库根目录用 Node.js 20 或以上版本构建和预览，无需安装第三方依赖。
 
@@ -62,8 +64,8 @@ npm run preview
 模板默认只做本地预览。要发布到自己的仓库，请依次完成以下设置。
 
 1. 把 `content.json` 的 `siteUrl` 改成自己的完整线上地址。使用项目站点时，地址要带仓库子路径。替换示例联系方式与图片，再把项目推送到自己的仓库。
-2. 在自己仓库的 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。[GitHub Pages 发布设置](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-3. 打开 **Actions**，选择 Pages 工作流，点 **Run workflow** 并选择要发布的分支。模板中的 `.github/workflows/pages.yml` 来自主仓库的 `template/pages.yml`，仅在手动运行时构建并发布 `dist/`。
+2. 在自己的仓库里，将模板附带的 `deploy/pages.yml.example` 复制为 `.github/workflows/pages.yml`，提交到默认分支。在 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。[GitHub Pages 发布设置](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+3. 打开 **Actions**，选择 Pages 工作流，点击 **Run workflow** 并选定要发布的分支。这个示例工作流仅在手动运行时构建并发布 `dist/`。
 
 ## 使用许可
 

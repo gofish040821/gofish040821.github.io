@@ -31,6 +31,6 @@ dist/ 既有生成文件，也包含构建需要的图片、字库和技能图�
 
 先修改 content.json 的 siteUrl，并把项目推送到自己的仓库。用户名主页通常使用 https://your-username.github.io，项目站点使用 https://your-username.github.io/repository-name。路径资源使用相对地址，404、canonical、robots 与 sitemap 会跟随 siteUrl。
 
-如果使用 GitHub Pages，在仓库 Settings → Pages 中把 Source 设为 GitHub Actions，然后到 Actions 手动运行 Deploy homepage。随附工作流只支持手动触发。也可以把构建后的 dist 上传到自己的静态服务器。
+如果使用 GitHub Pages，先把 deploy/pages.yml.example 复制为自己仓库中的 .github/workflows/pages.yml。在仓库 Settings → Pages 中把 Source 设为 GitHub Actions，然后到 Actions 手动运行 Deploy homepage。这个配置只支持手动触发。也可以把构建后的 dist 上传到自己的静态服务器。
 
 导出项目不带原站的 Git 历史、个人资料、访问统计和专有字体。代码与原创模板插画使用 MIT，Source 字体使用各自附带的 SIL OFL。新增素材时保留来源和许可。

@@ -93,7 +93,7 @@ async function exportSite(target) {
     await copy(`template/src/${file}`, `src/${file}`);
   }
   await copy('template/content.json', 'content.json');
-  await copy('template/pages.yml', '.github/workflows/pages.yml');
+  await copy('template/pages.yml', 'deploy/pages.yml.example');
   await copy('template/README.md', 'README.md');
   for (const name of ['AGENTS.md', 'LICENSE', 'DESIGN.md', 'ASSET-LICENSES.md']) {
     const override = await stat(resolve(root, 'template', name)).catch(error => {
