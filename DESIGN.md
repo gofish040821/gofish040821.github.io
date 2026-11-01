@@ -1,17 +1,19 @@
-# 页面设计与修改原则
+# Design principles
 
-这套设计追求“有体温的克制”。暖纸色、笔压有轻重的铅笔线和留白让页面像一页可以停留的纸。清楚的主次维持秩序，具体的文字、自己的照片和少量手绘痕迹让它带着站主的生活。替换内容时，也保留这种具体与节制。
+English | [中文](DESIGN.zh-CN.md)
 
-浅色页面使用暖米白 #f7f5f0、深灰 #30302c 与陶土橙 #b75e43。正文与背景需要保持足够对比，强调色留给章节标记、图标色块和少量交互。深色主题有独立的墨线、纸色和色块变量。
+This design aims for “warm restraint.” Paper tones, pencil lines with varied pressure, and open space give the page the feel of a sheet of paper worth spending time with. Clear hierarchy keeps it orderly. Specific writing, personal photographs, and a few hand-drawn marks give it the character of its owner.
 
-标题使用 Source Serif 4，正文使用 Source Sans 3，编号与日期使用系统等宽字体。中文由系统宋体和黑体补足。字体文件随模板附带开放许可，替换字体时保留许可证并核查页面换行。
+The light theme uses warm white #f7f5f0, dark gray #30302c, and terracotta #b75e43. Reserve the accent for section markers, illustration fills, and selected controls. The dark theme has its own ink, paper, and accent colors.
 
-桌面左右并排介绍与封面，手机改为单列。内容最大宽度约 1160px，简介栏宽最多 62ch。用空白、字号和少量分隔线区分章节。研究与项目卡片先给读者一个具体问题，再展开过程和结果。相册先显示四张，更多图片由读者主动展开。
+Headings use Source Serif 4, body text uses Source Sans 3, and numbers and dates use the system monospace font. Chinese text falls back to system serif and sans-serif fonts. The bundled fonts have open licenses. Keep the license notices and check line wrapping if you change fonts.
 
-这套暖纸色、衬线标题与铅笔标记的组合受编辑设计启发。空白给内容腾出阅读距离，细线承担分段，强调色留出余地。可以借用它的分工与阅读节奏，按站主的内容选色、换字和调整图片，形成自己的表达。
+The introduction and cover sit side by side on desktop and stack on mobile. The content area is at most about 1160px wide, with the introduction limited to 62ch. Spacing, type size, and a few dividing rules separate sections. Project cards lead with a concrete question and reveal process and results on request. The gallery initially shows four images.
 
-11 幅插画的静止路径固定。动作把起势、接触、受力和收势分别安排，局部笔画会弯曲、加宽，再沿笔画传递变化。例子包括先触网再回弹的羽毛球、落下两次的笔尖和拍合后稍晚回应的场记板边线。动作控制在一次短过程里，悬停或触摸可以重播。
+The warm paper palette, serif headings, and pencil marks draw on editorial design. Space gives content room to breathe, fine rules separate sections, and accents remain selective. Adapt the colors, type, and images to the owner's own work.
 
-修改动效时，从动作发生的位置和时间入手。配对调整 src/style.css 的整体动作与 src/app.js 的笔触变化，检查首尾静帧、手机尺寸和减少动态效果设置。更大摆幅适合大图，章节标题旁的小图需要控制出界与遮挡。
+The 11 illustrations retain their resting outlines. Each gesture has a beginning, a point of contact, a response, and a finish. Individual strokes bend or widen as movement passes through them. A shuttlecock meets the racket before rebounding, a pencil touches down twice, and the edge of a clapperboard responds after it closes. Each gesture plays once and can be replayed by hovering or touching.
 
-通用控件保持清楚的用途。按钮和语言菜单有可见焦点，照片预览支持方向键、Esc 和触摸切换。内容应在 JavaScript 不可用或系统减少动态效果时仍然可读。
+When editing motion, start with where and when an action occurs. Adjust the whole-object animation in src/style.css and the local stroke motion in src/app.js together. Check the resting frames, mobile sizes, and reduced-motion settings. Larger movements suit larger illustrations; small section icons need extra care around their boundaries.
+
+Controls should communicate their purpose. Buttons and the language menu have visible focus states. The gallery supports arrow keys, Escape, and touch. Content remains readable with JavaScript disabled or reduced motion enabled.
