@@ -1,0 +1,4 @@
+* text=auto
+# Keep the reviewed animation resources byte-identical on Windows and Pages.
+src/app.js text eol=crlf
+src/style.css text eol=crlf

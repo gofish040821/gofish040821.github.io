@@ -98,6 +98,168 @@
   const activeScenes = new Map();
   const introducedScenes = new WeakSet();
 
+  // Zones use the original 120×120 drawing coordinates. Each beat gives a time
+  // and one strength per zone. A second zone lets a crease travel along a mark.
+  const zone = (x, y, rx, ry, dx, dy) => ({ x, y, rx, ry, dx, dy });
+  const pencilBends = {
+    writing: {
+      zones: [zone(48,75,9,9,-.5,3.0), zone(58,76,9,9,.8,2.7)], pressure: .42,
+      beats: [[.17,0,0],[.26,.62,0],[.34,1,0],[.42,-.12,0],[.49,.36,.08],[.61,.12,.64],[.68,0,1],[.78,0,0]]
+    },
+    lens: {
+      zones: [zone(48,44,11,11,-4.6,3.2)],
+      beats: [[.12,0],[.24,.78],[.32,1],[.43,-.74],[.62,.36],[.74,.12],[.88,0]]
+    },
+    discovery: {
+      zones: [zone(47,55,10,14,-3.4,.8), zone(67,54,12,13,4.3,-1.1)],
+      beats: [[.32,0,0],[.47,-.42,-.23],[.56,1,.28],[.63,.38,1],[.75,-.18,.26],[.89,0,0]]
+    },
+    'book-page': {
+      zones: [zone(99,32,42,54,-8,-6), zone(99,84,36,48,5,-4)],
+      beats: [[.04,0,0],[.13,.72,0],[.21,-.16,.14],[.34,1,.27],[.44,.38,1],[.57,-.40,.64],[.70,-.17,-.53],[.88,.16,-.09],[.98,0,0]]
+    },
+    'leaf-left': {
+      zones: [zone(43,53,17,16,-1.5,3.7), zone(30,42,21,20,-2.8,6)],
+      beats: [[.06,0,0],[.17,.85,.18],[.27,.32,1],[.46,-.22,.13],[.56,-.68,-.26],[.64,-.12,-.64],[.80,.12,.20],[.94,0,0]]
+    },
+    'leaf-right': {
+      zones: [zone(88,47,24,25,1.8,-4.7)],
+      beats: [[.14,0],[.31,.68],[.48,.47],[.67,-.82],[.83,.22],[.95,0]]
+    },
+    flower: {
+      zones: [zone(51,20,15,18,-3.7,-1.9), zone(73,20,14,17,3.4,-2.8)],
+      beats: [[.12,0,0],[.29,-.50,-.41],[.40,.42,.05],[.49,1,.67],[.55,.48,1],[.72,-.19,.22],[.93,0,0]]
+    },
+    'code-line': {
+      zones: [zone(49,86,13,9,.6,3.3), zone(67,86,12,8,1.4,-2.8)], pressure: .32,
+      beats: [[.48,0,0],[.59,1,0],[.67,.16,.14],[.77,0,1],[.85,0,-.16],[.94,0,0]]
+    },
+    'chicken-piece': {
+      zones: [zone(90,53,29,35,3.1,4.8), zone(73,68,28,22,-.7,3.1)],
+      beats: [[.12,0,0],[.28,.82,.10],[.35,1,.72],[.48,-.42,.40],[.60,.40,-.32],[.74,0,0],[.83,.50,.78],[.91,-.12,.14]]
+    },
+    'burger-middle': {
+      zones: [zone(58,68,32,24,-1.6,3.7), zone(27,68,38,24,-3.0,6.8)],
+      beats: [[.08,0,0],[.17,-.42,-.18],[.31,.72,-.22],[.43,.95,.56],[.52,.38,1],[.60,.17,.95],[.76,-.35,.22],[.84,.08,-.41],[.95,0,0]]
+    },
+    'burger-top': {
+      zones: [zone(53,25,43,26,0,3.7), zone(87,44,19,20,1.8,2.4)],
+      beats: [[.04,0,0],[.17,.91,.19],[.34,-.25,.66],[.50,0,0],[.76,0,0],[.86,.74,.30],[.93,-.15,.27]]
+    },
+    racket: {
+      zones: [zone(63,48,18,18,-4.8,6.8), zone(48,51,17,17,-2.1,4.0)],
+      beats: [[.42,0,0],[.45,1,.18],[.48,.07,.93],[.52,-.55,.12],[.56,.17,-.38],[.69,0,0]]
+    },
+    shuttle: {
+      zones: [zone(83,21,12,17,4.2,5.3), zone(101,24,13,16,-3.6,5.6)],
+      beats: [[.42,0,0],[.46,.85,.20],[.50,1,.96],[.55,-.46,-.15],[.61,-.16,-.42],[.72,0,0]]
+    },
+    flag: {
+      zones: [zone(88,30,10,14,-.7,-4.6), zone(101,32,14,14,-.7,-6.8)],
+      beats: [[.08,0,0],[.21,-.35,-.5],[.32,1,-.35],[.43,-.31,1],[.57,-.77,.08],[.65,.24,-.79],[.78,-.13,.34],[.94,0,0]]
+    },
+    'steam-a': {
+      zones: [zone(42,46,13,13,5.6,-1), zone(44,29,16,15,-7.0,-2.1)],
+      beats: [[.06,0,0],[.23,.93,-.25],[.40,.16,1],[.57,-.68,.24],[.76,.16,-.54],[.94,0,0]]
+    },
+    'steam-b': {
+      zones: [zone(58,42,14,14,5.1,-2.2)],
+      beats: [[.10,0],[.37,1],[.58,-.60],[.83,.16],[.96,0]]
+    },
+    clapper: {
+      zones: [zone(66,38,25,17,0,-2.6), zone(92,34,26,21,0,-4.4)],
+      beats: [[.12,0,0],[.24,-.26,-.62],[.34,0,.18],[.47,0,0],[.54,.68,1],[.56,.08,.16],[.58,-.48,-.84],[.62,.19,.32],[.68,0,0]],
+      // Only the receiving edge and its chalk marks give. The bottom stays on the table.
+      body: {
+        zones: [zone(91,54,37,27,-.6,4.2), zone(68,71,35,24,-.8,2.4)],
+        beats: [[.55,0,0],[.573,1,.15],[.61,-.38,.84],[.66,.16,-.35],[.74,0,.10],[.81,0,0]]
+      }
+    },
+    'film-light': {
+      zones: [zone(104,51,12,13,1.4,-4.2), zone(108,69,12,10,4.6,3.3)],
+      beats: [[.54,0,0],[.575,.94,0],[.62,.40,1],[.69,-.28,.68],[.81,0,-.12],[.91,0,0]]
+    }
+  };
+  const bendCache = new WeakMap();
+  function bendFrames(path, bend) {
+    const rest = path.getAttribute('d');
+    // Pencil outlines are sampled M/L polygons. Apply the same smooth field to
+    // adjacent graphite fragments and crayon fill so their shared edges stay together.
+    const vertices = [...rest.matchAll(/([ML])(-?[\d.]+) (-?[\d.]+)/g)].map(match => {
+      const x = Number(match[2]), y = Number(match[3]);
+      const weights = bend.zones.map(zone => {
+        const distance = ((x - zone.x) / zone.rx) ** 2 + ((y - zone.y) / zone.ry) ** 2;
+        return Math.max(0, 1 - distance) ** 2;
+      });
+      return { command: match[1], x, y, weights, affected: weights.some(w => w > 0), original: match[0] };
+    });
+    if (!vertices.some(point => point.affected)) return null;
+    const end = rest.endsWith('Z') ? 'Z' : '';
+    // A future illustration can use curves without having them flattened to lines.
+    if (vertices.map(point => point.original).join('') + end !== rest) return null;
+    // The brush generator walks out on one edge of a stroke and back on the
+    // other. Paired samples recover its original width, including at chunk seams.
+    // Pressure widens the two edges; the smaller sideways slip shifts both
+    // together, as if the same stroke had been traced by hand a second time.
+    const graphite = path.classList.contains('illustration-ink');
+    const crayon = path.classList.contains('illustration-accent');
+    if (end && (graphite || crayon) && vertices.length % 2 === 0) {
+      vertices.forEach((point, i) => {
+        const opposite = vertices[vertices.length - 1 - i];
+        const midX = (point.x + opposite.x) / 2, midY = (point.y + opposite.y) / 2;
+        const side = i < vertices.length / 2 ? 1 : -1;
+        const slip = Math.sin(midX * .17 + midY * .11) * side;
+        const nib = graphite ? .48 + .56 * slip : .17 + .22 * slip;
+        point.nibX = (point.x - midX) * nib;
+        point.nibY = (point.y - midY) * nib;
+      });
+    }
+    const restWeights = bend.zones.map(() => 0);
+    const poses = [[0, ...restWeights], ...bend.beats, [1, ...restWeights]];
+    return poses.map(([offset, ...strengths]) => {
+      const d = strengths.every(strength => strength === 0) ? rest : vertices.map(point => {
+        if (!point.affected) return point.original;
+        let x = point.x, y = point.y, load = 0;
+        bend.zones.forEach((zone, i) => {
+          const amount = point.weights[i] * strengths[i];
+          load += amount;
+          x += zone.dx * amount;
+          y += zone.dy * amount;
+        });
+        if (point.nibX !== undefined) {
+          const pressure = Math.max(-1, Math.min(1, load));
+          x += pressure * point.nibX;
+          y += pressure * point.nibY;
+        }
+        return point.command + x.toFixed(2) + ' ' + y.toFixed(2);
+      }).join('') + end;
+      const frame = { offset, d: 'path("' + d + '")', easing: 'cubic-bezier(.29,.18,.38,.98)' };
+      if (bend.pressure) frame.strokeWidth = Number(path.getAttribute('stroke-width')) * (1 + bend.pressure * Math.max(0, ...strengths));
+      return frame;
+    });
+  }
+
+  function playStrokes(paths, bend, timing) {
+    for (const path of paths) {
+      if (!bendCache.has(path)) bendCache.set(path, bendFrames(path, bend));
+      const frames = bendCache.get(path);
+      if (frames) path.animate(frames, timing);
+    }
+  }
+
+  function playPencilBends(scene) {
+    if (!window.CSS?.supports('d', 'path("M0 0L1 1")')) return;
+    for (const part of scene.querySelectorAll('[data-scene-part]')) {
+      const bend = pencilBends[part.dataset.scenePart];
+      if (!bend) continue;
+      const gesture = part.getAnimations()[0];
+      if (!gesture) continue;
+      const { duration, delay } = gesture.effect.getTiming();
+      playStrokes(part.querySelectorAll('path'), bend, { duration, delay });
+      if (bend.body) playStrokes(scene.querySelectorAll(':scope > path'), bend.body, { duration, delay });
+    }
+  }
+
   function playScene(scene) {
     if (reducedMotion.matches || activeScenes.has(scene) || !scene.getClientRects().length || typeof scene.getAnimations !== 'function') return;
     // Local parts keep every scene independent of the shared SVG sprite.
@@ -110,6 +272,7 @@
     const token = {};
     activeScenes.set(scene, token);
     scene.classList.add('is-scene-playing');
+    playPencilBends(scene);
     Promise.all(scene.getAnimations({ subtree: true }).map(animation => animation.finished.catch(() => {})))
       .then(() => {
         if (activeScenes.get(scene) !== token) return;
@@ -119,7 +282,10 @@
   }
 
   function settleScenes() {
-    activeScenes.forEach((_, scene) => scene.classList.remove('is-scene-playing'));
+    activeScenes.forEach((_, scene) => {
+      scene.getAnimations({ subtree: true }).forEach(animation => animation.cancel());
+      scene.classList.remove('is-scene-playing');
+    });
     activeScenes.clear();
   }
   const sceneObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
@@ -611,6 +777,7 @@
     root.setAttribute('dir', meta.dir || 'ltr');
     strings = entry.strings || {};
     if (langCurrent) langCurrent.textContent = meta.label || code;
+    settleScenes();
     translateStatic(entry);
     if (strings.metaTitle) document.title = strings.metaTitle;
     if (dialog.open) dialog.close();

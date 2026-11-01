@@ -1,0 +1,134 @@
+{
+  "name": "Your Name",
+  "github": "https://github.com/your-username",
+  "linkedin": "https://www.linkedin.com/in/your-name/",
+  "email": "hello@example.com",
+  "siteUrl": "https://your-username.github.io",
+  "updated": "YYYY-MM",
+  "profileNote": "Personal homepage",
+  "headline": "Your role or field of study",
+  "intro": "Projects, working notes and interests beyond the desk.",
+  "heroImage": "sample-01",
+  "heroCaption": "A place for an image of your own.",
+  "about": [
+    "Use this space to introduce your work. Pick one question you keep returning to and explain what drew you to it.",
+    "Give one concrete detail about what you are learning, making or testing now."
+  ],
+  "research": [
+    {
+      "title": "Sample project 01 · Testing an idea",
+      "subtitle": "Example project · Small experiment",
+      "description": "Start with a question another person can understand. What did you want to learn, and what observation would count as an answer?",
+      "tags": [
+        "Question",
+        "Experiment"
+      ],
+      "details": {
+        "approach": "Describe the smallest test you actually ran. Include one design choice and why you made it.",
+        "evaluation": "Replace this paragraph with a result from the test. Give a comparison, an observation or a link to the evidence."
+      },
+      "className": "chicken"
+    },
+    {
+      "title": "Sample project 02 · Making a tool",
+      "subtitle": "Example project · Build notes",
+      "description": "Show a task that was awkward to do by hand. Describe who would use the tool and what a successful run should produce.",
+      "tags": [
+        "Prototype",
+        "Usability"
+      ],
+      "details": {
+        "approach": "Outline the path from the first sketch to a working version. Name the part you built and a trade-off you had to make.",
+        "evaluation": "Show one real use of the tool. Explain what changed for its user and which limitation is still open."
+      },
+      "className": "burger"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "badge": "html"
+    },
+    {
+      "name": "CSS",
+      "badge": "css"
+    },
+    {
+      "name": "JavaScript",
+      "badge": "javascript"
+    },
+    {
+      "name": "Node.js",
+      "badge": "nodejs"
+    },
+    {
+      "name": "Git",
+      "badge": "git"
+    }
+  ],
+  "agentSkills": [],
+  "education": [
+    {
+      "dates": "Start year — End year",
+      "degree": "Your subject or qualification",
+      "school": "Your institution or program",
+      "abbr": "",
+      "note": "Add a course, group or independent project that mattered to your work.",
+      "current": false
+    }
+  ],
+  "hobbies": [
+    {
+      "symbol": "↗",
+      "title": "Sport",
+      "description": "A practice, a match or a small skill you enjoy learning."
+    },
+    {
+      "symbol": "⌁",
+      "title": "Places",
+      "description": "A walk you remember or a detail you noticed on the way."
+    },
+    {
+      "symbol": "◡",
+      "title": "Food",
+      "description": "One recipe, ingredient or kitchen experiment worth sharing."
+    },
+    {
+      "symbol": "▷",
+      "title": "Film",
+      "description": "A scene you remember and what made it stay with you."
+    }
+  ],
+  "gallery": [
+    {
+      "image": "sample-01",
+      "title": "A place",
+      "caption": "Introduce a place in your own words.",
+      "alt": "Sample illustration 1",
+      "position": "50% 50%"
+    },
+    {
+      "image": "sample-02",
+      "title": "A detail",
+      "caption": "Pick one detail the picture brings into focus.",
+      "alt": "Sample illustration 2",
+      "position": "50% 50%"
+    },
+    {
+      "image": "sample-03",
+      "title": "A work in progress",
+      "caption": "Show one stage of making something.",
+      "alt": "Sample illustration 3",
+      "position": "50% 50%"
+    },
+    {
+      "image": "sample-04",
+      "title": "An everyday moment",
+      "caption": "Add a short note about why you kept this image.",
+      "alt": "Sample illustration 4",
+      "position": "50% 50%"
+    }
+  ],
+  "closing": "Get in touch",
+  "closingText": "Add the projects, questions or collaborations you would like to hear about."
+}
