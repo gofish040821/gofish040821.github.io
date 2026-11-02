@@ -8,7 +8,7 @@ The live site has my research notes, education and photos from everyday life. If
 
 ## Preview the personal site
 
-Updated 2026-11-02. The hobby heading now reads “Sports,” while keeping the badminton illustration. A subtle paper-fiber texture extends across the closing section and footer, with separate settings for light and dark themes.
+Updated 2026-11-02. The hobby heading now reads “Sports,” while keeping the badminton illustration. The header and page ending use a clearer four-layer paper-fiber texture and vignette: dark paper frames the light theme, and light paper frames the dark theme. The surfaces adapt to the available width and height, with matching text, controls and borders.
 
 Updated 2026-11-01. Skills & Tools now includes Figma, Zotero, Manim, DaVinci Resolve and REAPER alongside the development and research tools. Each uses the same monochrome pencil sketch and label style. Expand the list to see all 30 tools.
 
