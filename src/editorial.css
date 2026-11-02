@@ -17,7 +17,7 @@
 body{font-size:17px;line-height:1.75;font-optical-sizing:auto;font-synthesis:none}
 .wrap{width:min(1160px,calc(100% - 96px))}
 .brand{font-family:var(--serif);font-weight:400;letter-spacing:-.03em;line-height:1.1}
-.desktop-nav a,.site-header .header-github,.site-header .lang-toggle{font-size:15px}
+.desktop-nav a,.site-header .lang-toggle{font-size:15px}
 .hero{
   direction:ltr;grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);
   gap:clamp(42px,5vw,76px);min-height:0;padding-block:88px 100px;

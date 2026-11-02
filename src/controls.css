@@ -23,7 +23,6 @@
 .desktop-nav a:after { inset-inline: 12px; bottom: 5px; background: var(--accent); }
 .desktop-nav a[aria-current="location"] { color: var(--ink); }
 .header-tools { display: flex; align-items: center; gap: 4px; flex-shrink: 0; padding-inline-start: 16px; border-inline-start: 1px solid var(--line); }
-.site-header .header-github,
 .site-header .theme-toggle,
 .site-header .lang-toggle,
 .site-header .menu-toggle {
@@ -34,8 +33,6 @@
   background: transparent;
   color: var(--ink);
 }
-.site-header .header-github { padding: 0 11px; gap: 8px; font-size: 14px; line-height: 1; }
-.header-github .control-icon { width: 16px; height: 16px; color: var(--muted); }
 .site-header .theme-toggle,
 .site-header .menu-toggle { width: 36px; min-width: 36px; padding: 0; }
 .theme-icon { display: grid; place-items: center; }
@@ -85,14 +82,13 @@
 .closing-links { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; width: min(660px,100%); margin: 30px auto 0; align-items: stretch; }
 .contact-link { justify-content: space-between; padding-inline: 18px; text-align: start; }
 .action-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-.site-header :is(.header-github,.theme-toggle,.lang-toggle,.menu-toggle,.desktop-nav a):focus-visible { background: var(--control-surface); outline: 2px solid var(--accent); outline-offset: 3px; }
+.site-header :is(.theme-toggle,.lang-toggle,.menu-toggle,.desktop-nav a):focus-visible { background: var(--control-surface); outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* Small state changes, with no delay to clicks or keyboard navigation. */
 @media (prefers-reduced-motion:no-preference) {
   .action-link,
-  .site-header :is(.header-github,.theme-toggle,.lang-toggle,.menu-toggle,.desktop-nav a,.lang-option,.mobile-nav a) { transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 140ms ease; }
+  .site-header :is(.theme-toggle,.lang-toggle,.menu-toggle,.desktop-nav a,.lang-option,.mobile-nav a) { transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 140ms ease; }
   .action-link .control-icon,
-  .header-github .control-icon,
   .lang-caret { transition: transform 180ms ease, opacity 180ms ease; }
   .site-header .lang-menu:not([hidden]) { animation: control-menu-in 160ms ease-out both; }
   .site-header .mobile-nav:not([hidden]) { animation: control-menu-in 160ms ease-out both; }
@@ -102,7 +98,7 @@
 @keyframes control-icon-in { from { opacity: .3; transform: rotate(-12deg) scale(.9); } to { opacity: 1; transform: rotate(0) scale(1); } }
 @media (hover:hover) and (pointer:fine) {
   .desktop-nav a:hover,
-  .site-header :is(.header-github,.theme-toggle,.lang-toggle,.menu-toggle):hover { background: var(--control-surface); color: var(--ink); }
+  .site-header :is(.theme-toggle,.lang-toggle,.menu-toggle):hover { background: var(--control-surface); color: var(--ink); }
   .site-header .lang-option:hover,
   .site-header .mobile-nav a:hover { background: var(--control-surface); color: var(--ink); }
   .action-secondary:hover,
@@ -112,15 +108,13 @@
 }
 @media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
   .hero-actions .action-link:hover .control-icon { transform: translateY(2px); }
-  .contact-link:hover [data-ui-icon="external"],
-  .header-github:hover .control-icon { transform: translate(2px,-2px); }
+  .contact-link:hover [data-ui-icon="external"] { transform: translate(2px,-2px); }
   .contact-link:hover [data-ui-icon="mail"] { transform: translateY(-1px); }
   .action-link:active { transform: translateY(1px); }
 }
 @media(max-width:1200px) {
   .site-header .header-inner { gap: 12px; }
   .header-tools { padding-inline-start: 0; border: 0; margin-inline-start: auto; }
-  .site-header .header-github { display: none; }
   .site-header .mobile-nav {
     position: absolute;
     top: calc(100% + 8px);
