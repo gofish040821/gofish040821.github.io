@@ -10,6 +10,8 @@ The live site has my research notes, education and photos from everyday life. If
 
 Updated 2026-11-02. The hobby heading now reads “Sports,” while keeping the badminton illustration. The header and page ending use a clearer four-layer paper-fiber texture and vignette: dark paper frames the light theme, and light paper frames the dark theme. The surfaces adapt to the available width and height, with matching text, controls and borders.
 
+The paper header now stays at the top while reading. Once you leave the opening area, its controls fade away and the complete `Gofish.` wordmark moves smoothly to the center of the viewport. Return to the top to restore the full navigation. The transition supports reduced motion and keeps hidden controls out of keyboard navigation.
+
 Updated 2026-11-01. Skills & Tools now includes Figma, Zotero, Manim, DaVinci Resolve and REAPER alongside the development and research tools. Each uses the same monochrome pencil sketch and label style. Expand the list to see all 30 tools.
 
 The `main` branch contains the source for the live site. It supports 14 languages and light and dark themes. The third version keeps all 11 original pencil illustrations and gives each its own movement. The pencil touches down twice to write a note. The burger’s middle layer slides out and pauses at an angle.

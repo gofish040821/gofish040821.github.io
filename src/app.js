@@ -10,20 +10,25 @@
   const BIRTH_DATE = '2004-08-21';
   const progressBar = document.querySelector('#reading-progress');
   let progressQueued = false;
+  let headerController = null;
 
   function scheduleProgress() {
-    if (progressQueued || !progressBar) return;
+    if (progressQueued) return;
     progressQueued = true;
     requestAnimationFrame(() => {
       const scrollable = Math.max(root.scrollHeight, document.body.scrollHeight) - root.clientHeight;
       const progress = scrollable > 0 ? Math.max(0, Math.min(1, window.scrollY / scrollable)) : 0;
-      progressBar.style.setProperty('--reading-progress', String(progress));
+      progressBar?.style.setProperty('--reading-progress', String(progress));
+      headerController?.update();
       progressQueued = false;
     });
   }
 
   window.addEventListener('scroll', scheduleProgress, { passive: true });
-  window.addEventListener('resize', scheduleProgress, { passive: true });
+  window.addEventListener('resize', () => {
+    headerController?.scheduleMeasure();
+    scheduleProgress();
+  }, { passive: true });
   if ('ResizeObserver' in window) new ResizeObserver(scheduleProgress).observe(document.body);
   scheduleProgress();
 
@@ -871,6 +876,95 @@
     themeToggle.addEventListener('click', () => applyTheme(currentTheme() === 'dark' ? 'light' : 'dark'));
   }
 
+  /* ---------------- quiet sticky header ---------------- */
+  function createHeaderController() {
+    const header = document.querySelector('.site-header');
+    const brand = header.querySelector('.brand');
+    const wordmark = brand.querySelector('.brand-wordmark');
+    // Older exported templates retain their original, non-collapsing header.
+    if (!wordmark) return null;
+    const avatar = brand.querySelector('img');
+    const controls = [header.querySelector('.desktop-nav'), header.querySelector('.header-tools'), menu];
+    const enterAt = 128, leaveAt = 40;
+    let compact = null;
+    let measureFrame = 0, readyFrame = 0;
+
+    function measure() {
+      // Subtract the current interpolated translation: measuring during a
+      // reversal must not treat the moving wordmark as its own starting point.
+      const transform = getComputedStyle(wordmark).transform;
+      const translated = transform === 'none' ? 0 : new DOMMatrixReadOnly(transform).m41;
+      const rect = wordmark.getBoundingClientRect();
+      const originCenter = rect.left + rect.width / 2 - translated;
+      const moving = wordmark.getAnimations().some(animation => animation.playState === 'running');
+      // A settled, centered wordmark tracks a resized viewport immediately.
+      // An in-flight transition instead retargets from its current position.
+      if (compact && !moving) wordmark.style.transition = 'none';
+      header.style.setProperty('--header-brand-x', `${window.innerWidth / 2 - originCenter}px`);
+      root.style.setProperty('--sticky-header-offset', `${header.getBoundingClientRect().height + 16}px`);
+      if (compact && !moving) {
+        wordmark.getBoundingClientRect();
+        wordmark.style.removeProperty('transition');
+      }
+    }
+
+    function update(reset = false) {
+      const next = reset || compact === null
+        ? window.scrollY > enterAt
+        : compact ? window.scrollY > leaveAt : window.scrollY > enterAt;
+      if (next === compact) return;
+      if (next) {
+        const moveFocus = controls.some(control => control.contains(document.activeElement));
+        closeMenu();
+        closeLangMenu();
+        if (moveFocus) brand.focus({ preventScroll: true });
+      }
+      compact = next;
+      controls.forEach(control => {
+        control.inert = compact;
+        if (compact) control.setAttribute('aria-hidden', 'true');
+        else control.removeAttribute('aria-hidden');
+      });
+      if (avatar) {
+        if (compact) avatar.setAttribute('aria-hidden', 'true');
+        else avatar.removeAttribute('aria-hidden');
+      }
+      header.dataset.headerCompact = String(compact);
+    }
+
+    function scheduleMeasure() {
+      if (measureFrame) return;
+      measureFrame = requestAnimationFrame(() => {
+        measureFrame = 0;
+        measure();
+        update();
+      });
+    }
+
+    function initialize() {
+      cancelAnimationFrame(readyFrame);
+      header.classList.remove('header-motion-ready');
+      measure();
+      update(true);
+      // Native history restoration can happen after the deferred script. Sync
+      // again before enabling transitions, rather than animating an initial state.
+      readyFrame = requestAnimationFrame(() => {
+        measure();
+        update(true);
+        wordmark.getBoundingClientRect();
+        readyFrame = requestAnimationFrame(() => header.classList.add('header-motion-ready'));
+      });
+    }
+
+    if ('ResizeObserver' in window) {
+      const observer = new ResizeObserver(scheduleMeasure);
+      [header, header.querySelector('.header-inner'), wordmark].forEach(el => observer.observe(el));
+    }
+    document.fonts?.ready.then(scheduleMeasure);
+    window.addEventListener('pageshow', initialize);
+    return { update, scheduleMeasure, initialize };
+  }
+
   /* ---------------- init ---------------- */
   // English is the default; only an explicit earlier choice overrides it.
   // Priority: ?lang= in the URL  >  a previously chosen language  >  English.
@@ -888,4 +982,6 @@
   buildLangMenu();
   applyLanguage(initial || I18N.default);
   initReveals();
+  headerController = createHeaderController();
+  headerController?.initialize();
 })();
