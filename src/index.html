@@ -39,6 +39,8 @@
     .gate-input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
     .gate-submit{min-height:44px;padding:10px 18px;font:inherit;font-size:16px;color:#fff;background:var(--accent);border:1px solid var(--accent);border-radius:6px}
     .gate-error{color:var(--accent);font-size:14px;margin:12px 0 0}
+    .gate-success{font-family:var(--serif);font-size:clamp(26px,6vw,34px);font-weight:400;letter-spacing:2px;color:var(--accent);margin:20px 0 0;animation:gate-pop .5s ease}
+    @keyframes gate-pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
   </style>
   <link rel="stylesheet" href="./style.css?v={{styleVersion}}">
   <link rel="stylesheet" href="./controls.css?v={{controlsVersion}}">
@@ -92,11 +94,14 @@
         for (var i = 0; i < value.length; i++) hash = ((hash * 33) ^ value.charCodeAt(i)) >>> 0;
         if (hash === KEY_HASH) {
           errorEl.textContent = '哇真的是你呀';
+          errorEl.className = 'gate-success';
           errorEl.hidden = false;
           input.disabled = true;
+          var form = document.getElementById('gate-form');
+          if (form) form.style.display = 'none';
           setTimeout(function () {
             unlock();
-          }, 700);
+          }, 1800);
         } else {
           attempts += 1;
           var msg;
@@ -170,8 +175,8 @@
     </section>
     <div class="page-end paper-surface">
       <div class="fb-paper" aria-hidden="true"></div>
-      <section class="closing wrap" aria-labelledby="closing-title"><h2 id="closing-title" data-i18n="closing">{{closing}}</h2><p data-i18n="closingText">{{closingText}}</p><div class="closing-links"><a class="action-link contact-link" href="{{github}}" target="_blank" rel="noopener noreferrer"><span data-i18n="closingCta">Find me on GitHub</span> {{controlExternalIcon}}</a><a class="action-link contact-link" href="{{linkedin}}" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span> {{controlExternalIcon}}</a>{{emailLink}}</div></section>
-      <footer class="wrap site-footer" role="contentinfo"><span class="footer-signature">{{fishMark}}<span>© <span id="year">2026</span> {{name}}<span class="footer-separator">/</span><span data-i18n="footerTag">Stay curious, keep exploring.</span></span></span><span class="visit-stats"><span id="busuanzi_container_site_pv" class="visit-stat"><span data-i18n="statsViews">Total visits</span> <span id="busuanzi_value_site_pv" class="visit-value"></span></span><span id="busuanzi_container_site_uv" class="visit-stat"><span class="visit-sep" aria-hidden="true">&middot;</span> <span data-i18n="statsVisitors">Visitors</span> <span id="busuanzi_value_site_uv" class="visit-value"></span></span></span><span><span data-i18n="footerUpdated">Updated</span> {{updated}} <a href="#home" aria-label="Back to top" data-i18n-aria="backToTop"><span data-i18n="backToTop">Back to top</span> {{upIcon}}</a></span></footer>
+      <section class="closing wrap" aria-labelledby="closing-title"><h2 id="closing-title" data-i18n="closing">{{closing}}</h2><p data-i18n="closingText">{{closingText}}</p></section>
+      <footer class="wrap site-footer" role="contentinfo"><span class="footer-signature">{{fishMark}}<span>© <span id="year">2026</span> {{name}}<span class="footer-separator">/</span><span data-i18n="footerTag">Stay curious, keep exploring.</span></span></span><span class="visit-stats"><span id="busuanzi_container_site_pv" class="visit-stat"><span data-i18n="statsViews">Total visits</span> <span id="busuanzi_value_site_pv" class="visit-value"></span></span><span id="busuanzi_container_site_uv" class="visit-stat"><span class="visit-sep" aria-hidden="true">&middot;</span> <span data-i18n="statsVisitors">Visitors</span> <span id="busuanzi_value_site_uv" class="visit-value"></span></span></span><span><span data-i18n="footerUpdated">Updated</span> {{updated}} <a href="#home" aria-label="Back to top" data-i18n-aria="backToTop"><span data-i18n="backToTop">Back to top</span> {{upIcon}}</a></span>{{socialLinks}}</footer>
     </div>
   </main>
   <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-toolbar"><span id="lightbox-count" aria-live="polite"></span><button type="button" class="icon-button" id="lightbox-close" aria-label="Close photo" data-i18n-aria="lightboxClose">{{closeIcon}}</button></div><div class="lightbox-stage"><button type="button" class="icon-button lightbox-prev" id="lightbox-prev" aria-label="Previous photo" data-i18n-aria="lightboxPrev">{{leftIcon}}</button><div class="lightbox-visual" role="img" aria-label=""><img id="lightbox-preview" alt="" aria-hidden="true" decoding="async"><img id="lightbox-image" alt="" aria-hidden="true" decoding="async" hidden></div><button type="button" class="icon-button lightbox-next" id="lightbox-next" aria-label="Next photo" data-i18n-aria="lightboxNext">{{rightIcon}}</button></div><div class="lightbox-caption"><h2 id="lightbox-title"></h2><p id="lightbox-description"></p></div></dialog>
