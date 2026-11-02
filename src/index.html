@@ -64,7 +64,6 @@
     // Front-end key gate: casual visitors only, not a security boundary.
     (function () {
       var KEY_HASH = 193440491; // djb2 of the expected key, lowercased
-      var STORE = 'gofish-gate';
       var gate = document.getElementById('gate');
       function unlock() {
         gate.remove();
@@ -74,10 +73,7 @@
         if (header) header.inert = false;
         if (main) main.inert = false;
       }
-      var passed = false;
       var attempts = 0;
-      try { passed = localStorage.getItem(STORE) === '1'; } catch (error) { /* private mode */ }
-      if (passed) { unlock(); return; }
       function lockBehind() {
         var header = document.querySelector('.site-header');
         var main = document.getElementById('main');
@@ -99,7 +95,6 @@
           errorEl.hidden = false;
           input.disabled = true;
           setTimeout(function () {
-            try { localStorage.setItem(STORE, '1'); } catch (error) { /* private mode */ }
             unlock();
           }, 700);
         } else {
