@@ -8,6 +8,8 @@ The live site has my research notes, education and photos from everyday life. If
 
 ## Preview the personal site
 
+Updated 2026-11-02. A lightweight front-end key gate now opens the site: visitors answer “只因名？” with the right key before the homepage appears. It only deters casual visitors and is not a security boundary. The markup, styles and check script are inlined in `src/index.html` for easy redesign.
+
 Updated 2026-11-02. Chinese headings now use a self-hosted Noto Serif SC subset instead of the system Song-style font. The light clay accent is adjusted for contrast, and the italic serif used in the opening caption is preloaded.
 
 Updated 2026-11-02. The hobby heading now reads “Sports,” while keeping the badminton illustration. The header and page ending use a clearer four-layer paper-fiber texture and vignette: dark paper frames the light theme, and light paper frames the dark theme. The surfaces adapt to the available width and height, with matching text, controls and borders.
