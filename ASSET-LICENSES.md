@@ -8,4 +8,6 @@ dist/assets/fonts/ 下的 Anthropic 字体按该目录 Anthropic-FONTS.md 中记
 
 模板附带 Source Serif 4 与 Source Sans 3 的普通体。两者按随附的 SIL Open Font License 1.1 使用，分发时保留各自的 Source-Serif-LICENSE.md 和 Source-Sans-LICENSE.md。许可正文和字体作者声明保存在字体目录中。
 
+dist/assets/fonts/noto-serif-sc-subset.woff2 是 Noto Serif SC 的子集，© The Noto Project Authors，SIL OFL 1.1。许可证在 dist/assets/fonts/Noto-Serif-SC-OFL.txt。该子集只用于主站中文标题，不进入匿名模板。
+
 技能标签中的软件名称、标记和商标仍归各自权利人。这里的手绘表现用于识别相应工具，不表示这些项目支持或认可本站。

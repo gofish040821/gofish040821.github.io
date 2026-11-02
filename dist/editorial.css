@@ -4,17 +4,19 @@
 @font-face{font-family:"Anthropic Sans";src:url("./assets/fonts/anthropic-sans-roman.woff2") format("woff2");font-style:normal;font-weight:300 800;font-display:swap}
 @font-face{font-family:"Anthropic Sans";src:url("./assets/fonts/anthropic-sans-italic.woff2") format("woff2");font-style:italic;font-weight:300 800;font-display:swap}
 @font-face{font-family:"Anthropic Mono";src:url("./assets/fonts/anthropic-mono-roman.woff2") format("woff2");font-style:normal;font-weight:300 800;font-display:swap}
+/* Self-hosted CJK subset for headings. Latin stays on Anthropic Serif via unicode-range. */
+@font-face{font-family:"Noto Serif SC";src:url("./assets/fonts/noto-serif-sc-subset.woff2") format("woff2");font-style:normal;font-weight:300 900;font-display:swap;unicode-range:U+2E80-2EFF,U+3000-303F,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FF00-FFEF}
 :root{
   --latin-serif:"Anthropic Serif";
   --latin-sans:"Anthropic Sans";
-  --serif:var(--latin-serif),Georgia,"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,serif;
-  --sans:var(--latin-sans),"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --serif:var(--latin-serif),Georgia,"Noto Serif SC","Source Han Serif SC","Noto Serif CJK SC","Source Han Serif CN","Songti SC",SimSun,serif;
+  --sans:var(--latin-sans),"Segoe UI",system-ui,-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
   --mono:"Anthropic Mono",var(--sans);
   --reading-width:62ch;
 }
 body{font-size:17px;line-height:1.75;font-optical-sizing:auto;font-synthesis:none}
 .wrap{width:min(1160px,calc(100% - 96px))}
-.brand{font-family:var(--serif);font-weight:400;letter-spacing:-.03em}
+.brand{font-family:var(--serif);font-weight:400;letter-spacing:-.03em;line-height:1.1}
 .desktop-nav a,.site-header .header-github,.site-header .lang-toggle{font-size:15px}
 .hero{
   direction:ltr;grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);
@@ -25,7 +27,7 @@ body{font-size:17px;line-height:1.75;font-optical-sizing:auto;font-synthesis:non
 .hello{font:400 17px/1.6 var(--sans);letter-spacing:0;color:var(--muted);margin-bottom:10px}
 .name{display:inline-block;direction:ltr;unicode-bidi:isolate;font:400 clamp(88px,8vw,118px)/1.06 var(--serif);letter-spacing:.01em;font-kerning:normal;font-variant-ligatures:none;white-space:nowrap}
 .hero-headline{
-  font:300 clamp(24px,2.1vw,28px)/1.45 var(--serif);letter-spacing:-.015em;
+  font:350 clamp(24px,2.1vw,28px)/1.45 var(--serif);letter-spacing:-.015em;
   margin-top:28px;max-width:29ch;text-wrap:pretty;overflow-wrap:normal;
 }
 .hero-description{font-size:17px;line-height:1.8;max-width:43ch;margin-top:18px;text-wrap:pretty;overflow-wrap:break-word}
@@ -37,11 +39,11 @@ body{font-size:17px;line-height:1.75;font-optical-sizing:auto;font-synthesis:non
 .photo-mat img{object-position:43% 65%}
 .hero-figure figcaption{font:400 15px/1.7 var(--serif);padding:16px 5px 17px;text-wrap:pretty}
 html:is(:lang(en),:lang(es),:lang(fr),:lang(de),:lang(pt),:lang(id)) .hero-figure figcaption{font-style:italic}
-.photo-label{font-size:10px;letter-spacing:.12em;left:14px;top:14px}
+.photo-label{font-size:11px;letter-spacing:.12em;left:14px;top:14px}
 
 /* Sections have distinct rhythms, with rules reserved for major boundaries. */
 .section{padding-block:76px}
-.section-number{font-family:var(--mono);font-size:11px;letter-spacing:.065em;margin-bottom:17px;line-height:1.5}
+.section-number{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.065em;margin-bottom:17px;line-height:1.5}
 .section h2,.life-section h2{font:300 clamp(30px,2.7vw,37px)/1.25 var(--serif);letter-spacing:-.025em}
 .illustrated-heading{grid-template-columns:36px minmax(0,1fr);column-gap:13px}
 .illustrated-heading>.section-illustration{width:36px;height:36px}
@@ -57,7 +59,7 @@ html:is(:lang(en),:lang(es),:lang(fr),:lang(de),:lang(pt),:lang(id)) .hero-figur
 .research-card-top{min-height:80px;margin-bottom:18px;align-items:center;justify-content:flex-end}
 .research-illustration{width:88px;height:88px;margin:0 8px 0 0}
 
-.research-card h3{font:300 30px/1.3 var(--serif);letter-spacing:-.02em;text-wrap:balance}
+.research-card h3{font:350 30px/1.3 var(--serif);letter-spacing:-.02em;text-wrap:balance}
 .research-subtitle{font-size:14px;line-height:1.7;margin-top:7px}
 .research-description{font-size:17px;line-height:1.8;margin-top:20px;max-width:55ch;text-wrap:pretty}
 .research-card .tags{margin-top:20px;gap:7px 16px;margin-bottom:24px}
@@ -136,7 +138,7 @@ html{scrollbar-gutter:stable}
 .footer-separator{margin-inline:8px}
 
 /* Anthropic's fonts cover Latin, not these scripts. Preserve native fallbacks. */
-html:lang(zh){--serif:var(--latin-serif),"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,serif}
+html:lang(zh){--serif:var(--latin-serif),"Noto Serif SC","Source Han Serif SC","Noto Serif CJK SC","Source Han Serif CN","Songti SC",SimSun,serif}
 html:lang(ja){--serif:var(--latin-serif),"Noto Serif JP","Yu Mincho","Hiragino Mincho ProN",serif;--sans:var(--latin-sans),"Yu Gothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif}
 html:lang(ko){--serif:var(--latin-serif),"Noto Serif KR","Batang",serif;--sans:var(--latin-sans),"Malgun Gothic","Apple SD Gothic Neo",sans-serif;word-break:keep-all}
 html:lang(ar){--serif:var(--latin-serif),"Noto Naskh Arabic","Traditional Arabic","Geeza Pro",serif;--sans:var(--latin-sans),"Segoe UI","Noto Sans Arabic",Tahoma,sans-serif}
@@ -177,7 +179,7 @@ html:is(:lang(ar),:lang(ur)) .hero-copy,html:is(:lang(ar),:lang(ur)) .hero-figur
   .photo-mat{aspect-ratio:1.15}
   .hero-figure figcaption{font-size:14px;padding:13px 4px 14px}
   .section{padding-block:48px}
-  .section-number{font-size:11px;margin-bottom:13px}
+  .section-number{font-size:12px;margin-bottom:13px}
   .section h2,.life-section h2{font-size:30px}
   .illustrated-heading{grid-template-columns:32px minmax(0,1fr);column-gap:11px}
   .illustrated-heading>.section-illustration{width:32px;height:32px}
