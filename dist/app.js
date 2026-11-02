@@ -8,7 +8,6 @@
   const STORAGE_KEY = 'gofish-language';
   const root = document.documentElement;
   const BIRTH_DATE = '2004-08-21';
-  const progressBar = document.querySelector('#reading-progress');
   let progressQueued = false;
   let headerController = null;
 
@@ -16,9 +15,6 @@
     if (progressQueued) return;
     progressQueued = true;
     requestAnimationFrame(() => {
-      const scrollable = Math.max(root.scrollHeight, document.body.scrollHeight) - root.clientHeight;
-      const progress = scrollable > 0 ? Math.max(0, Math.min(1, window.scrollY / scrollable)) : 0;
-      progressBar?.style.setProperty('--reading-progress', String(progress));
       headerController?.update();
       progressQueued = false;
     });

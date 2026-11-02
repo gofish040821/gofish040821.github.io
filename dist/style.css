@@ -272,10 +272,6 @@ html[lang^="zh"] .heading-text,html[lang="ja"] .heading-text,html[lang="ko"] .he
 .icon-button .ui-icon{width:22px;height:22px}
 
 /* Quiet interactions: each effect follows the existing paper-and-ink palette. */
-.reading-progress{position:fixed;inset:0 0 auto;height:2px;z-index:50;pointer-events:none}
-.reading-progress::before{content:"";display:block;width:100%;height:100%;background:var(--accent);transform:scaleX(var(--reading-progress,0));transform-origin:left center}
-[dir="rtl"] .reading-progress::before{transform-origin:right center}
-
 .research-more{display:inline-flex;align-items:center;align-self:flex-start;justify-content:space-between;gap:22px;width:auto;max-width:100%;min-height:44px;margin-top:0;padding:10px 15px 10px 18px;border:1px solid var(--control-border,var(--line));border-radius:999px;background:transparent;color:var(--ink);font-size:14px;line-height:1.5;text-align:start}
 .research-more [data-research-label]{min-width:0;overflow-wrap:anywhere}
 .research-more:hover,.research-more[aria-expanded="true"]{border-color:var(--accent);background:var(--control-surface,var(--soft));color:var(--accent)}
@@ -303,7 +299,6 @@ html[lang^="zh"] .heading-text,html[lang="ja"] .heading-text,html[lang="ko"] .he
   .hero-figure:hover{transform:rotate(0deg) translateY(-3px);box-shadow:0 14px 30px #4a3e2220,0 0 0 1px var(--line)}
   [data-theme="dark"] .hero-figure:hover{box-shadow:0 14px 30px #0009,0 0 0 1px var(--line)}
 }
-@media print{.reading-progress{display:none!important}}
 
 /* Each illustration tells one short story inside a stable, touchable canvas. */
 .illustration[data-illustration]{pointer-events:all}
