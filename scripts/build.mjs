@@ -8,6 +8,7 @@ import { uiIcon, uiIllustrationSprite } from './ui-icons.mjs';
 import { controlIcon } from './control-icons.mjs';
 import { fishMark } from './fish-mark.mjs';
 import { buildGateAssets } from './build-gate-assets.mjs';
+import { generateTemplatePreviewAndZip } from './create-template.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const data = JSON.parse(await readFile(resolve(root, 'content.json'), 'utf8'));
@@ -219,3 +220,9 @@ await writeFile(resolve(root, 'dist/sitemap.xml'), `<?xml version="1.0" encoding
 const notFound = (await readFile(resolve(root, 'src/404.html'), 'utf8')).replace(/__SITE_URL__/g, data.siteUrl);
 await writeFile(resolve(root, 'dist/404.html'), notFound);
 console.log(`Built Gofish homepage: ${data.gallery.length} photos, ${data.research.length} research interests, ${Object.keys(translations).length} languages.`);
+
+// Regenerate the public template (preview + download) from the current design so
+// it stays in sync automatically. Skipped while building the template itself.
+if (!process.env.TEMPLATE_BUILD) {
+  await generateTemplatePreviewAndZip(resolve(root, 'dist'));
+}

@@ -7,9 +7,9 @@ I like to be specific about the things I care about and leave some room for the 
 The live site has my research notes, education and photos from everyday life. If you’re building a homepage of your own, there’s also a template with neutral sample content. [Homepage in English](https://DolomitiAugust.github.io/?lang=en) · [中文主页](https://DolomitiAugust.github.io/?lang=zh) · [Design notes](DESIGN.md)
 
 [![Preview the template](https://img.shields.io/badge/Preview-template-8a5a44?style=for-the-badge)](https://DolomitiAugust.github.io/template-preview/)
-[![Clone the template](https://img.shields.io/badge/Clone-template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DolomitiAugust/DolomitiAugust.github.io/archive/refs/heads/template.zip)
+[![Clone the template](https://img.shields.io/badge/Clone-template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://DolomitiAugust.github.io/template.zip)
 
-**Start your own copy:** [preview the template live](https://DolomitiAugust.github.io/template-preview/) — sample content only, with no personal text, photos or links — or [download the template ZIP](https://github.com/DolomitiAugust/DolomitiAugust.github.io/archive/refs/heads/template.zip) and run `npm run build && npm run preview`.
+**Start your own copy:** [preview the template live](https://DolomitiAugust.github.io/template-preview/) — sample content only, with no personal text, photos or links — or [download the template ZIP](https://DolomitiAugust.github.io/template.zip) and run `npm run build && npm run preview`.
 
 ## Design approach
 
@@ -40,7 +40,7 @@ Use `python tests/mascot_dynamics.py --url http://127.0.0.1:4173 --evidence ../m
 
 ## Make your own homepage
 
-The template includes English and Chinese, sample projects, placeholder illustrations and fonts licensed for redistribution. None of the personal text, photos or links from this site appear in it — every contact link is a placeholder you replace. [Preview it live](https://DolomitiAugust.github.io/template-preview/) or [download the ZIP](https://github.com/DolomitiAugust/DolomitiAugust.github.io/archive/refs/heads/template.zip).
+The template includes English and Chinese, sample projects, placeholder illustrations and fonts licensed for redistribution. None of the personal text, photos or links from this site appear in it — every contact link is a placeholder you replace. [Preview it live](https://DolomitiAugust.github.io/template-preview/) or [download the ZIP](https://DolomitiAugust.github.io/template.zip).
 
 **Export from an existing clone.** From the root of the `main` branch, export the template into a new directory.
 
@@ -51,16 +51,9 @@ npm run build
 npm run preview
 ```
 
-**Download just the template.** Clone the standalone `template` branch.
+**How the template stays current.** The template is rebuilt automatically on every deploy from this site's design and structure, so it always reflects the latest homepage — including new sections, layout and styling. Only the personal content layer is held back: the entry key, all photos, your real links and every piece of personal writing stay out, and every contact link is a placeholder you replace. If you add a UI label or a new section to the homepage, the export fails loudly until the template's neutral copy is updated, so nothing personal can leak by accident.
 
-```sh
-git clone --branch template --single-branch https://github.com/DolomitiAugust/DolomitiAugust.github.io.git my-homepage
-cd my-homepage
-npm run build
-npm run preview
-```
-
-Either route gives you a site that builds on its own. The `template/` directory on `main` holds only the settings and assets used to replace the personal content during export. See `AGENTS.md` at the root of the exported project for its maintenance guide.
+Either route above gives you a site that builds on its own. The `template/` directory on `main` holds only the neutral settings and sample assets used to replace the personal content during export. See `AGENTS.md` at the root of the exported project for its maintenance guide.
 
 ## Edit the content
 

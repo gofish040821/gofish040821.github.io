@@ -7,9 +7,9 @@
 访问主站可以读到研究笔记、求学经历和生活照片。想搭自己的主页，也可以直接取用中性模板。[中文主页](https://DolomitiAugust.github.io/?lang=zh) · [English](https://DolomitiAugust.github.io/?lang=en) · [设计说明](DESIGN.zh-CN.md)
 
 [![Preview template](https://img.shields.io/badge/Preview-template-8a5a44?style=for-the-badge)](https://DolomitiAugust.github.io/template-preview/)
-[![Clone template](https://img.shields.io/badge/Clone-template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DolomitiAugust/DolomitiAugust.github.io/archive/refs/heads/template.zip)
+[![Clone template](https://img.shields.io/badge/Clone-template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://DolomitiAugust.github.io/template.zip)
 
-**一键使用：** [在线预览模板](https://DolomitiAugust.github.io/template-preview/)（仅示例内容，不含任何个人文字、照片或链接），或 [下载模板 ZIP](https://github.com/DolomitiAugust/DolomitiAugust.github.io/archive/refs/heads/template.zip)，然后运行 `npm run build && npm run preview`。
+**一键使用：** [在线预览模板](https://DolomitiAugust.github.io/template-preview/)（仅示例内容，不含任何个人文字、照片或链接），或 [下载模板 ZIP](https://DolomitiAugust.github.io/template.zip)，然后运行 `npm run build && npm run preview`。
 
 ## 设计方法
 
@@ -40,7 +40,7 @@ npm run preview
 
 ## 用模板做自己的主页
 
-模板提供中英文、示例项目、示意图和可再分发的字体。模板中不含本站任何个人文字、照片或链接，所有联系方式均为占位符。[在线预览](https://DolomitiAugust.github.io/template-preview/) · [下载 ZIP](https://github.com/DolomitiAugust/DolomitiAugust.github.io/archive/refs/heads/template.zip)。
+模板提供中英文、示例项目、示意图和可再分发的字体。模板中不含本站任何个人文字、照片或链接，所有联系方式均为占位符。[在线预览](https://DolomitiAugust.github.io/template-preview/) · [下载 ZIP](https://DolomitiAugust.github.io/template.zip)。
 
 **从已有主仓库导出。** 在 `main` 的根目录执行以下命令，目标是一个新目录。
 
@@ -51,16 +51,9 @@ npm run build
 npm run preview
 ```
 
-**单独下载模板。** 直接克隆 `template` 分支即可。
+**模板如何保持最新。** 模板在每次发布时都会根据本站的“设计层”和“结构层”自动重新生成，因此始终与主站最新的主页一致——新增的板块、布局和样式都会同步过来。被隔离的只有“内容层”：入口密钥、全部照片、你的真实链接以及所有个人文字都不会进入模板，每个联系方式都是待替换的占位符。如果你给主页新增了界面用语或新板块，导出会在模板的中性文案补齐前主动报错，杜绝个人内容意外泄露。
 
-```sh
-git clone --branch template --single-branch https://github.com/DolomitiAugust/DolomitiAugust.github.io.git my-homepage
-cd my-homepage
-npm run build
-npm run preview
-```
-
-两条路径得到的都是可独立构建的站点。主仓库内的 `template/` 目录只放导出时覆盖原内容的配置和素材。模板的维护规则见导出项目根目录的 `AGENTS.md`。
+两条路径得到的都是可独立构建的站点。主仓库内的 `template/` 目录只放导出时覆盖原内容的中性配置与示例素材。模板的维护规则见导出项目根目录的 `AGENTS.md`。
 
 ## 修改内容
 
