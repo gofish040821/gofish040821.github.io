@@ -6,25 +6,19 @@ I like to be specific about the things I care about and leave some room for the 
 
 The live site has my research notes, education and photos from everyday life. If you’re building a homepage of your own, there’s also a template with neutral sample content. [Homepage in English](https://gofish040821.github.io/?lang=en) · [中文主页](https://gofish040821.github.io/?lang=zh) · [Design notes](DESIGN.md)
 
-## Preview the personal site
+## Design approach
 
-Updated 2026-11-03. The header now uses the illustrated Gofish mascot as its round avatar.
+**Warm restraint** is the balance I look for between clarity and personality. The site borrows the feel of paper and ink: warm neutrals, clay accents, readable type and enough space for the content to breathe. Fine grain, directional fibers and broad pulp variation give the header and footer their paper texture. Light and dark themes use contrasting paper frames while keeping the reading area comfortable.
 
-Updated 2026-11-03, motion review. The gate now lands an interrupted hop on its original baseline and keeps the privacy gesture through a rejected visible key. Editing the field clears the old rejection sequence, and the one-time initialization listener removes itself after running. The redundant gate wordmark is removed, and “哇真的是你呀” uses a larger 36–52 px success treatment. Reduced motion also disables its entrance animation. [Motion QA](docs/mascot-qa.md)
+The layout treats research and everyday life as parts of the same person. Questions and projects get room for detail; photographs and short captions make space for family, travel and other interests. The aim is to communicate carefully without making the page feel formal or distant.
 
-Updated 2026-11-03. Three visitors share the space around the key card. The explorer wanders, the player practices with a basketball, and the performer alternates between small shows and rests. Tap a character or focus the key field to get a response. Showing the key prompts a privacy gesture. A correct answer brings the group together for a brief celebration before entry. Tablets and phones use fewer characters. Reduced motion shows a still character. [Action and asset inventory](docs/mascot-actions.md)
+Motion follows the thing being drawn. A pencil touches paper to write, a burger layer slides out, and a shuttlecock responds to a racket. Gestures have a beginning and a rest, with small variations in pressure and timing. The header settles into a centered wordmark while reading, then returns to full navigation near the top. Reduced-motion settings keep the interface usable at rest.
 
-Updated 2026-11-02. A lightweight front-end key gate now opens the site: visitors answer “只因名？” with the right key before the homepage appears. It only deters casual visitors and is not a security boundary. The markup, styles and check script are inlined in `src/index.html` for easy redesign.
+The key page brings three Gofish characters into a shared space. Their different habits and reactions add playfulness around the form, while the form remains easy to use. The key is a front-end access gate, not an authentication security boundary. [Design notes](DESIGN.md) · [Mascot motion](docs/mascot-actions.md)
 
-Updated 2026-11-02. Chinese headings now use a self-hosted Noto Serif SC subset instead of the system Song-style font. The light clay accent is adjusted for contrast, and the italic serif used in the opening caption is preloaded.
+## Build and preview
 
-Updated 2026-11-02. The hobby heading now reads “Sports,” while keeping the badminton illustration. The header and page ending use a clearer four-layer paper-fiber texture and vignette: dark paper frames the light theme, and light paper frames the dark theme. The surfaces adapt to the available width and height, with matching text, controls and borders.
-
-The paper header now stays at the top while reading. Once you leave the opening area, its controls fade away and the complete `Gofish.` wordmark moves smoothly to the center of the viewport. Return to the top to restore the full navigation. The transition supports reduced motion and keeps hidden controls out of keyboard navigation.
-
-Updated 2026-11-01. Skills & Tools now includes Figma, Zotero, Manim, DaVinci Resolve and REAPER alongside the development and research tools. Each uses the same monochrome pencil sketch and label style. Expand the list to see all 30 tools.
-
-The `main` branch contains the source for the live site. It supports 14 languages and light and dark themes. The third version keeps all 11 original pencil illustrations and gives each its own movement. The pencil touches down twice to write a note. The burger’s middle layer slides out and pauses at an angle.
+The personal site uses native HTML, CSS and JavaScript, supports 14 languages and includes light and dark themes. Node.js 20 or later is required; the site build has no third-party dependencies.
 
 From the repository root, build and preview with Node.js 20 or later. There are no third-party dependencies to install.
 
@@ -75,7 +69,7 @@ Either route gives you a site that builds on its own. The `template/` directory 
 
 The personal site uses `content.json` to build the opening section and default English copy. The language switcher uses `src/i18n.json`. When you edit text that has translations, update the matching fields in each language, including the personal site’s English dictionary. Keep the project `className` and the hobby `symbol` unchanged across languages. They select the illustrations.
 
-Store gallery photos in `dist/assets/photos/`. Supply both `name.webp` and `name-small.webp`, then set `gallery[].image` to the name without its extension. Add a title, caption, alt text and framing position. Each translation identifies the same photo by its `image` value. The navigation avatar follows the same convention with `avatar.webp` and `avatar-small.webp`. Before publishing a photo, remove any EXIF metadata you want to keep private.
+Store gallery photos in `dist/assets/photos/`. Supply both `name.webp` and `name-small.webp`, then set `gallery[].image` to the name without its extension. Add a title, caption, alt text and framing position. Each translation identifies the same photo by its `image` value. The personal site’s header avatar is referenced directly from `src/index.html` as `dist/assets/photos/header-mascot.webp`. The standalone template uses its own avatar assets. Before publishing a photo, remove any EXIF metadata you want to keep private.
 
 The `dist/` directory contains both published output and build inputs. Keep the photos, fonts and badges in `dist/assets/`. The build reads or validates them and generates the pages and scripts from source.
 

@@ -18,4 +18,4 @@
 
 发布仅按用户指定的仓库、分支和范围进行。完成后确认 Actions 和线上实际内容，并清理本次不再需要的临时脚本。
 
-每次个人主页有新变动上线时，同步更新 README.md 和 README.zh-CN.md 的相关说明与发布记录，并更新 content.json 的 updated。涉及设计或交互取舍时，同步更新 DESIGN.md 与 DESIGN.zh-CN.md。涉及模板能力时，也更新模板的说明和独立 template 分支，发布前检查双语文档与实际页面一致。
+每次个人主页有新变动上线时，按需同步更新 README.md 和 README.zh-CN.md 的概括性项目说明，并更新 content.json 的 updated。README 以设计理念、使用方法和当前功能为主，不逐条记录修改日志；变更历史以 Git 提交为准。涉及设计或交互取舍时，同步更新 DESIGN.md 与 DESIGN.zh-CN.md。涉及模板能力时，也更新模板的说明和独立 template 分支，发布前检查双语文档与实际页面一致。
