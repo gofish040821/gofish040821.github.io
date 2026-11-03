@@ -31,7 +31,6 @@
     body.gate-locked{overflow:hidden}
     .gate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;background:var(--paper);color:var(--ink);font-family:var(--sans)}
     .gate-card{width:min(340px,100%);text-align:center}
-    .gate-brand{font-family:var(--serif);font-size:28px;letter-spacing:-.03em;margin:0 0 26px}
     .gate-title{font-family:var(--sans);font-size:30px;font-weight:400;margin:0 0 20px}
     .gate-title .gate-key{color:var(--accent)}
     .gate-form{display:flex;gap:10px}
@@ -45,14 +44,15 @@
     .gate-input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
     .gate-submit{min-height:44px;padding:10px 18px;font:inherit;font-size:16px;color:#fff;background:var(--accent);border:1px solid var(--accent);border-radius:6px}
     .gate-error{color:var(--accent);font-size:14px;margin:12px 0 0}
-    .gate-success{font-family:var(--serif);font-size:clamp(26px,6vw,34px);font-weight:400;letter-spacing:2px;color:var(--accent);margin:20px 0 0;animation:gate-pop .5s ease}
+    .gate-success{font-family:var(--serif);font-size:clamp(36px,7vw,52px);font-weight:500;line-height:1.25;letter-spacing:.035em;color:var(--accent);margin:24px 0 0;animation:gate-pop .5s ease}
     .gate-success:focus{outline:none}
     @keyframes gate-pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+    @media(prefers-reduced-motion:reduce){.gate-success{animation:none}}
   </style>
   <link rel="stylesheet" href="./style.css?v=fb595dd4bac5">
   <link rel="stylesheet" href="./controls.css?v=b6283b04848d">
   <link rel="stylesheet" href="./editorial.css?v=803905b80f97">
-  <link rel="stylesheet" href="./assets/gate/cad2fb5db625/gate-mascots.css">
+  <link rel="stylesheet" href="./assets/gate/f9b1169a6c53/gate-mascots.css">
   <noscript><style>.research-more{display:none!important}.research-details[hidden]{display:block!important}</style></noscript>
   <script src="./app.js?v=8c2e5ab46d7f" defer></script>
   <script src="./busuanzi.pure.mini.js" defer></script>
@@ -60,7 +60,6 @@
 <body class="gate-locked">
   <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
     <div class="gate-card">
-      <p class="gate-brand">Gofish<span class="accent">.</span></p>
       <p class="gate-title" id="gate-title">只因<span class="gate-key">名</span>？</p>
       <form class="gate-form" id="gate-form" autocomplete="off">
         <div class="gate-field">
@@ -89,7 +88,7 @@
       var accepted = false;
       var finishing = false;
       var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-      var loading = import('./assets/gate/cad2fb5db625/gate-mascots.js').then(function (module) {
+      var loading = import('./assets/gate/f9b1169a6c53/gate-mascots.js').then(function (module) {
         if (finishing || !gate.isConnected) return;
         ensemble = new module.MascotBehaviorController({
           gate: gate, card: card, input: input, enter: form.querySelector('.gate-submit'), root: stage
@@ -100,7 +99,7 @@
         if (!gate.isConnected || finishing) return;
         var still = document.createElement('img');
         still.className = 'gate-fallback';
-        still.src = './assets/gate/cad2fb5db625/mascot-art/still.webp';
+        still.src = './assets/gate/f9b1169a6c53/mascot-art/still.webp';
         still.alt = '';
         card.style.position = 'relative';
         card.prepend(still);

@@ -138,7 +138,7 @@ export class MascotStage {
       art.className = 'gate-mascot-art';
       turn.append(art); button.append(turn); root.append(button);
       return { id, speed, button, art, x: 0, y: 0, size: 0, visible: false,
-        route: null, lift: null, liftY: 0, destination: null };
+        route: null, lift: null, liftY: 0, settle: null, destination: null };
     });
     this.scheduleLayout = () => {
       if (this.layoutFrame) return;
@@ -207,6 +207,7 @@ export class MascotStage {
       s.visible = i < this.count;
       s.button.hidden = !s.visible;
       if (!s.visible) return;
+      s.settle = null; s.liftY = 0;
       s.x = positions[i].x; s.y = positions[i].y; s.size = size;
       s.button.style.setProperty('--mascot-size', size + 'px');
       if (!wasVisible) this.face(i, box.left + box.width / 2);
@@ -222,7 +223,7 @@ export class MascotStage {
       if (index === i || !s.visible) return;
       const padding = (this.slots[index].size + s.size) / 2 + neighborGap;
       let previous = { x:s.x, y:s.y };
-      obstacles.push(inflate(span(previous, { x:s.x, y:s.y - (s.lift?.height || 0) }), padding));
+      obstacles.push(inflate(span(previous, { x:s.x, y:s.y - Math.max(s.lift?.height || 0, s.liftY) }), padding));
       if (!s.route) return;
       for (const leg of s.route.path.slice(s.route.index)) {
         obstacles.push(inflate(span(previous, leg.to), padding));
@@ -236,6 +237,7 @@ export class MascotStage {
     const s = this.slots[index];
     if (!s?.visible || this.reduced.matches || duration <= 0) return false;
     this.stop(index);
+    if (s.settle) return false;
     const start = { x:s.x, y:s.y }, bounds = this.bounds;
     const obstacles = this.reservations(index);
     const budget = s.speed * speedFactor * (this.count === 1 ? .72 : 1) * duration / 1000;
@@ -265,6 +267,7 @@ export class MascotStage {
     const s = this.slots[index];
     if (!s?.visible || this.reduced.matches || duration <= 0) return false;
     this.stop(index);
+    if (s.settle) return false;
     const height = Math.min(random(4, s.size * .065), s.y - this.bounds.top);
     if (height < 2) return false;
     const top = { x:s.x, y:s.y - height };
@@ -277,9 +280,9 @@ export class MascotStage {
     const s = this.slots[index];
     if (!s) return;
     s.route = null; s.lift = null;
-    // A reaction may cut in mid-hop. Keep the currently painted position as
-    // the new baseline instead of snapping back down to the old landing point.
-    if (s.liftY) { s.y -= s.liftY; s.liftY = 0; this.paint(s); }
+    // Keep the first interrupted frame continuous, then land on the original
+    // baseline. Repeated reactions cannot leave the actor floating higher.
+    if (s.liftY && !s.settle) s.settle = { from:s.liftY, elapsed:0, duration:180 };
   }
 
   face(index, clientX) {
@@ -308,7 +311,7 @@ export class MascotStage {
 
   tick(dt) {
     this.slots.forEach((s, index) => {
-      if (!s.visible || (!s.route && !s.lift)) return;
+      if (!s.visible || (!s.route && !s.lift && !s.settle)) return;
       if (s.route) {
         const r = s.route;
         r.elapsed = Math.min(r.duration, r.elapsed + dt);
@@ -331,6 +334,12 @@ export class MascotStage {
         const airborne = clamp((t - .18) / .66, 0, 1);
         s.liftY = s.lift.height * Math.sin(airborne * Math.PI) ** 2;
         if (t === 1) { s.lift = null; s.liftY = 0; }
+      }
+      if (s.settle) {
+        s.settle.elapsed = Math.min(s.settle.duration, s.settle.elapsed + dt);
+        const t = s.settle.elapsed / s.settle.duration;
+        s.liftY = s.settle.from * (1 - t * t * (3 - 2 * t));
+        if (t === 1) { s.settle = null; s.liftY = 0; }
       }
       this.paint(s);
     });

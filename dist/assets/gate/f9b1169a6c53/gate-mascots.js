@@ -363,6 +363,9 @@ export class MascotBehaviorController {
   error(attempts) {
     this.errorCount = Number.isInteger(attempts) && attempts > 0 ? attempts : this.errorCount + 1;
     if (!this.canReact()) return;
+    // The form still reports the rejection, while showing a key keeps the
+    // higher-priority privacy pose intact until the visitor hides it again.
+    if (this.revealed) return;
     const actor = this.activeActor();
     if (!actor) return;
     this.lastContact = this.clock;

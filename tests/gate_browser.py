@@ -68,6 +68,7 @@ def run(url, evidence):
                     '(n)=>document.querySelectorAll("#gate-stage button:not([hidden]) canvas:not([hidden])").length===n',
                     arg=expected)
                 assert actors.count() == expected
+                assert page.locator('.gate-brand').count() == 0
                 assert page.locator('#main').evaluate('(e)=>e.inert')
                 assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
                 page.screenshot(path=str(evidence / f'gate-{width}-{theme}.png'))
@@ -125,11 +126,19 @@ def run(url, evidence):
             }""")
             field.press('Enter')
             assert page.locator('#gate-error').inner_text() == '哇真的是你呀'
+            assert page.locator('.gate-success').evaluate('(e)=>parseFloat(getComputedStyle(e).fontSize)>=36')
+            if mode == 'reduced':
+                assert page.locator('.gate-success').evaluate('(e)=>getComputedStyle(e).animationName') == 'none'
+            # Duplicate submissions during celebration cannot restart the
+            # timeline, append another success message, or unlock early.
+            page.evaluate('document.querySelector("#gate-form").requestSubmit()')
+            assert page.locator('.gate-success').count() == 1
             assert page.locator('main').evaluate('(e)=>e.inert')
             if mode == 'normal':
                 page.wait_for_timeout(1000)
                 page.screenshot(path=str(evidence / 'celebration.png'))
             page.locator('#gate').wait_for(state='detached', timeout=6500)
+            assert page.locator('.gate-mascot, #gate-stage, .gate-fallback').count() == 0
             timeline = page.evaluate('window.gateReview')
             if mode == 'normal':
                 assert [b['actions'] for b in timeline['beats']] == [
