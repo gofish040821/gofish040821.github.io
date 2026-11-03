@@ -6,6 +6,13 @@ Thumbs.db
 .env.*
 .sites-runtime/
 
+# local gate hash (never commit; CI injects GATE_HASH from a secret)
+.gate-hash
+# built page contains the injected hash and is rebuilt by CI
+dist/index.html
+# template preview is built by CI from the template source
+dist/template-preview/
+
 # local scratch: per-language page dumps and a throwaway static server
 .dump-*.html
 .serve.mjs

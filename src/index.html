@@ -76,7 +76,7 @@
   <script>
     // Front-end key gate: casual visitors only, not a security boundary.
     (function () {
-      var KEY_HASH = 193440491; // djb2 of the expected key, lowercased
+      var GATE_HASH = "{{gateHash}}"; // SHA-256 hex, injected at build time
       var gate = document.getElementById('gate');
       var card = gate.querySelector('.gate-card');
       var form = document.getElementById('gate-form');
@@ -158,10 +158,16 @@
       form.addEventListener('submit', function (event) {
         event.preventDefault();
         if (accepted) return;
-        var hash = 5381;
         var value = input.value.trim().toLowerCase();
-        for (var i = 0; i < value.length; i++) hash = ((hash * 33) ^ value.charCodeAt(i)) >>> 0;
-        if (hash === KEY_HASH) {
+        var digest = (window.crypto && window.crypto.subtle && window.TextEncoder)
+          ? window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(value)).then(function (buffer) {
+              return Array.prototype.map.call(new Uint8Array(buffer), function (byte) {
+                return ('0' + byte.toString(16)).slice(-2);
+              }).join('');
+            })
+          : Promise.reject(new Error('unsupported'));
+        digest.then(function (hash) {
+        if (hash === GATE_HASH) {
           accepted = true;
           input.value = '';
           input.removeAttribute('aria-invalid');
@@ -199,6 +205,11 @@
           if (ensemble) ensemble.error(attempts);
           input.select();
         }
+        }).catch(function () {
+          errorEl.textContent = '不对，再想想。';
+          errorEl.hidden = false;
+          input.setAttribute('aria-invalid', 'true');
+        });
       });
     })();
   </script>

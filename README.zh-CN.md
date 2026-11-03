@@ -6,6 +6,11 @@
 
 访问主站可以读到研究笔记、求学经历和生活照片。想搭自己的主页，也可以直接取用中性模板。[中文主页](https://gofish040821.github.io/?lang=zh) · [English](https://gofish040821.github.io/?lang=en) · [设计说明](DESIGN.zh-CN.md)
 
+[![Preview template](https://img.shields.io/badge/Preview-template-8a5a44?style=for-the-badge)](https://gofish040821.github.io/template-preview/)
+[![Clone template](https://img.shields.io/badge/Clone-template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gofish040821/gofish040821.github.io/archive/refs/heads/template.zip)
+
+**一键使用：** [在线预览模板](https://gofish040821.github.io/template-preview/)（仅示例内容，不含任何个人文字、照片或链接），或 [下载模板 ZIP](https://github.com/gofish040821/gofish040821.github.io/archive/refs/heads/template.zip)，然后运行 `npm run build && npm run preview`。
+
 ## 设计方法
 
 **有体温的克制**，是我想在清晰与个性之间找到的分寸。页面借用纸和墨的感觉：暖色中性色、陶土色点缀、易读的文字和足够的留白。页眉与页脚叠加细颗粒、横纵纤维和大尺度纸浆斑块，形成纸面质感；明暗主题用深浅相反的纸面框住阅读区域。
@@ -35,7 +40,7 @@ npm run preview
 
 ## 用模板做自己的主页
 
-模板提供中英文、示例项目、示意图和可再分发的字体。新站主可以替换个人资料、头像和联系方式。
+模板提供中英文、示例项目、示意图和可再分发的字体。模板中不含本站任何个人文字、照片或链接，所有联系方式均为占位符。[在线预览](https://gofish040821.github.io/template-preview/) · [下载 ZIP](https://github.com/gofish040821/gofish040821.github.io/archive/refs/heads/template.zip)。
 
 **从已有主仓库导出。** 在 `main` 的根目录执行以下命令，目标是一个新目录。
 

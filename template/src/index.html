@@ -42,7 +42,6 @@
         <a href="#about"><span data-i18n="navAbout">About</span></a><a href="#research"><span data-i18n="navResearch">Research</span></a><a href="#education"><span data-i18n="navEducation">Education</span></a><a href="#life"><span data-i18n="navLife">Life</span></a>
       </nav>
       <div class="header-tools">
-        <a class="header-github" href="{{github}}" target="_blank" rel="noopener noreferrer">GitHub {{controlExternalIcon}}</a>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode"><span class="theme-icon" aria-hidden="true">{{controlMoonIcon}}{{controlSunIcon}}</span></button>
         <div class="lang-switch" id="lang-switch">
           <button class="lang-toggle" type="button" aria-expanded="false" aria-haspopup="listbox" aria-label="Switch language" data-i18n-aria="langLabel">
@@ -54,7 +53,7 @@
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">{{controlMenuIcon}}{{controlCloseIcon}}</button>
       </div>
     </div>
-    <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Mobile navigation" hidden><a href="#about"><span data-i18n="navAbout">About</span></a><a href="#research"><span data-i18n="navResearch">Research</span></a><a href="#education"><span data-i18n="navEducation">Education</span></a><a href="#life"><span data-i18n="navLife">Life</span></a><a href="{{github}}" target="_blank" rel="noopener noreferrer">GitHub {{controlExternalIcon}}</a><a href="{{linkedin}}" target="_blank" rel="noopener noreferrer">LinkedIn {{controlExternalIcon}}</a></nav>
+    <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Mobile navigation" hidden><a href="#about"><span data-i18n="navAbout">About</span></a><a href="#research"><span data-i18n="navResearch">Research</span></a><a href="#education"><span data-i18n="navEducation">Education</span></a><a href="#life"><span data-i18n="navLife">Life</span></a></nav>
   </header>
   <main id="main">
     <section class="hero wrap" id="home" aria-labelledby="hero-title">
@@ -90,11 +89,12 @@
         <button id="gallery-toggle" class="button gallery-toggle" type="button" aria-expanded="false" aria-controls="gallery" hidden>Show all photos {{plusIcon}}</button>
       </div>
     </section>
-    <section class="closing wrap" aria-labelledby="closing-title"><h2 id="closing-title" data-i18n="closing">{{closing}}</h2><p data-i18n="closingText">{{closingText}}</p><div class="closing-links"><a class="action-link contact-link" href="{{github}}" target="_blank" rel="noopener noreferrer"><span data-i18n="closingCta">GitHub</span> {{controlExternalIcon}}</a><a class="action-link contact-link" href="{{linkedin}}" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span> {{controlExternalIcon}}</a>{{emailLink}}</div></section>
+    <section class="closing wrap" aria-labelledby="closing-title"><h2 id="closing-title" data-i18n="closing">{{closing}}</h2><p data-i18n="closingText">{{closingText}}</p></section>
   </main>
   <footer class="wrap site-footer">
     <span class="footer-signature"><span>© <span id="year"></span> {{name}}<span class="footer-separator">/</span><span data-i18n="footerTag">Portfolio</span></span></span>
     <span><span data-i18n="footerUpdated">Updated</span> {{updated}} <a href="#home" aria-label="Back to top" data-i18n-aria="backToTop"><span data-i18n="backToTop">Back to top</span> {{upIcon}}</a></span>
+    {{socialLinks}}
   </footer>
   <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-toolbar"><span id="lightbox-count" aria-live="polite"></span><button type="button" class="icon-button" id="lightbox-close" aria-label="Close photo" data-i18n-aria="lightboxClose">{{closeIcon}}</button></div><div class="lightbox-stage"><button type="button" class="icon-button lightbox-prev" id="lightbox-prev" aria-label="Previous photo" data-i18n-aria="lightboxPrev">{{leftIcon}}</button><div class="lightbox-visual" role="img" aria-label=""><img id="lightbox-preview" alt="" aria-hidden="true" decoding="async"><img id="lightbox-image" alt="" aria-hidden="true" decoding="async" hidden></div><button type="button" class="icon-button lightbox-next" id="lightbox-next" aria-label="Next photo" data-i18n-aria="lightboxNext">{{rightIcon}}</button></div><div class="lightbox-caption"><h2 id="lightbox-title"></h2><p id="lightbox-description"></p></div></dialog>
 </body>

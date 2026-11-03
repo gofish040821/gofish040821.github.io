@@ -125,7 +125,12 @@ function socialLinks(data) {
   }).filter(Boolean).join("");
   return `<nav class="footer-social" aria-label="Social media" data-i18n-aria="footerSocial"><ul>${items}</ul></nav>`;
 }
+// The gate hash is never committed. CI supplies GATE_HASH from a repository
+// secret; local builds may keep it in the gitignored .gate-hash file.
+const localGateHash = await readFile(resolve(root, '.gate-hash'), 'utf8').catch(() => '');
+const gateHash = (process.env.GATE_HASH || localGateHash).trim();
 const values = {
+  gateHash,
   gateAssets: await buildGateAssets(root),
   ...assetVersions,
   fishMark: fishMark(),

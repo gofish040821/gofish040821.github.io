@@ -6,6 +6,11 @@ I like to be specific about the things I care about and leave some room for the 
 
 The live site has my research notes, education and photos from everyday life. If you’re building a homepage of your own, there’s also a template with neutral sample content. [Homepage in English](https://gofish040821.github.io/?lang=en) · [中文主页](https://gofish040821.github.io/?lang=zh) · [Design notes](DESIGN.md)
 
+[![Preview the template](https://img.shields.io/badge/Preview-template-8a5a44?style=for-the-badge)](https://gofish040821.github.io/template-preview/)
+[![Clone the template](https://img.shields.io/badge/Clone-template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gofish040821/gofish040821.github.io/archive/refs/heads/template.zip)
+
+**Start your own copy:** [preview the template live](https://gofish040821.github.io/template-preview/) — sample content only, with no personal text, photos or links — or [download the template ZIP](https://github.com/gofish040821/gofish040821.github.io/archive/refs/heads/template.zip) and run `npm run build && npm run preview`.
+
 ## Design approach
 
 **Warm restraint** is the balance I look for between clarity and personality. The site borrows the feel of paper and ink: warm neutrals, clay accents, readable type and enough space for the content to breathe. Fine grain, directional fibers and broad pulp variation give the header and footer their paper texture. Light and dark themes use contrasting paper frames while keeping the reading area comfortable.
@@ -35,7 +40,7 @@ Use `python tests/mascot_dynamics.py --url http://127.0.0.1:4173 --evidence ../m
 
 ## Make your own homepage
 
-The template includes English and Chinese, sample projects, placeholder illustrations and fonts licensed for redistribution. Replace the profile, avatar and contact details with your own.
+The template includes English and Chinese, sample projects, placeholder illustrations and fonts licensed for redistribution. None of the personal text, photos or links from this site appear in it — every contact link is a placeholder you replace. [Preview it live](https://gofish040821.github.io/template-preview/) or [download the ZIP](https://github.com/gofish040821/gofish040821.github.io/archive/refs/heads/template.zip).
 
 **Export from an existing clone.** From the root of the `main` branch, export the template into a new directory.
 
