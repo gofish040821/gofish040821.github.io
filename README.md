@@ -13,6 +13,8 @@ The live site has my research notes, education and photos from everyday life. If
 
 ## Design approach
 
+The typography pairs serif headings with readable sans-serif body text. Research notes begin with a quiet rule and their original hand-drawn illustrations; light and dark palettes keep a warm, legible contrast.
+
 **Warm restraint** is the balance I look for between clarity and personality. The site borrows the feel of paper and ink: warm neutrals, clay accents, readable type and enough space for the content to breathe. Fine grain, directional fibers and broad pulp variation give the header and footer their paper texture. Light and dark themes use contrasting paper frames while keeping the reading area comfortable.
 
 The layout treats research and everyday life as parts of the same person. Questions and projects get room for detail; photographs and short captions make space for family, travel and other interests. The aim is to communicate carefully without making the page feel formal or distant.

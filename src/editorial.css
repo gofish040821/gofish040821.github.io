@@ -355,3 +355,103 @@ html{scroll-padding-top:var(--sticky-header-offset,106px)}
   .site-header.header-motion-ready :is(.desktop-nav,.header-tools),
   .site-header.header-motion-ready .brand img{transition:none}
 }
+
+
+/* Typography, spacing and palette refinement, based on the reviewed layout. */
+/* Local design study. The current site, drawings and inverse paper frames are retained. */
+:root {
+  --paper:#faf9f5; --ink:#272823; --muted:#62635b;
+  --accent:#a14f38; --line:#d9d8ce; --soft:#f0eee6;
+  --control-primary:#a14f38; --control-primary-hover:#88412e;
+  --control-on-primary:#fffdf8; --control-border:#c9c8bd;
+}
+:root[data-theme="dark"] {
+  --paper:#1d1e1b; --ink:#efeee7; --muted:#b5b6aa;
+  --accent:#e3a183; --line:#414239; --soft:#272822;
+  --control-primary:#e3a183; --control-primary-hover:#edb397;
+  --control-on-primary:#24231e; --control-border:#54564a;
+}
+.wrap{width:min(1120px,calc(100% - 96px))}
+body{font-size:18px;line-height:1.8}
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;padding-block:80px 92px}
+.hello{font-size:16px;margin-bottom:14px}
+.name{font-size:clamp(82px,7.3vw,108px);letter-spacing:-.035em;line-height:1.04}
+.hero-headline{font-size:clamp(25px,2.1vw,30px);font-weight:400;line-height:1.4;max-width:28ch;margin-top:26px}
+.hero-description{font-size:18px;line-height:1.75;max-width:40ch;color:var(--muted)}
+.hero-actions{gap:10px;margin-top:28px;align-items:center}
+.action-link{font-size:15px;border-radius:6px}
+.hero-figure{transform:none;padding:8px 8px 0;box-shadow:0 0 0 1px var(--line)}
+.hero-figure figcaption{font-size:15px;padding-block:15px 17px}
+.section{padding-block:88px}
+.section-number{font-size:12px;letter-spacing:.075em;margin-bottom:15px;color:var(--accent)}
+.section h2,.life-section h2{font-size:clamp(32px,3vw,40px);font-weight:400;line-height:1.2;letter-spacing:-.025em}
+.about,.education{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:64px}
+.about-main{max-width:58ch}
+.about-main p,.about-main p:first-child{font-size:18px;line-height:1.8;margin-bottom:22px}
+.aside-note{font-size:16px;line-height:1.8;max-width:24ch}
+.profile-note{font-size:13px;line-height:1.7}
+.research-grid{gap:56px}
+.research-card,.research-card.physical{background:transparent;border-top:1px solid var(--line);padding-top:22px}
+:root[data-theme="dark"] .research-card,:root[data-theme="dark"] .research-card.physical{background:transparent}
+:root[data-theme="dark"] .hero-figure{box-shadow:0 0 0 1px var(--line)}
+.research-card-top{min-height:74px;justify-content:flex-start;margin-bottom:20px}
+.research-illustration{width:76px;height:76px;margin:0}
+.research-card h3{font-size:32px;font-weight:400;line-height:1.25;letter-spacing:-.025em}
+.research-subtitle{font-size:14px;line-height:1.6;margin-top:12px;color:var(--muted)}
+.research-description{font-size:18px;line-height:1.75;margin-top:22px;max-width:48ch;color:var(--ink)}
+.research-card .tags{margin-top:22px;gap:8px 16px}
+.research-card .tags span{font-size:13px}
+.research-detail p{font-size:16px;line-height:1.8}
+.research-skills{margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
+.research-skills h3{font-size:18px;color:var(--ink)}
+.skill-badges{gap:10px}
+.skill-badges .skill-badge{min-height:38px;padding:7px 11px;font-size:14px}
+.education-item h3{font-size:26px;font-weight:400;line-height:1.4}
+.education-meta{margin-bottom:10px}
+.education-dates{font-size:14px}
+.education-note,.education-degree{font-size:15px}
+.school-abbr{font-size:13px}
+.life-section{padding-block:88px;background:var(--soft);border-top:1px solid var(--line)}
+.hobbies{margin-block:40px 64px;gap:36px}
+.hobby h3{font-size:24px;font-weight:400}
+.hobby p{font-size:16px;line-height:1.8}
+.gallery{gap:48px 36px}
+.photo-title{font-size:24px;font-weight:400;line-height:1.3}
+.photo-caption{font-size:15px;line-height:1.8;max-width:52ch}
+.photo-number{font-size:12px}
+.closing{padding-block:88px 80px}
+.closing h2{font-size:clamp(30px,3.3vw,46px);font-weight:400;line-height:1.2}
+.closing>p{font-size:17px;line-height:1.8}
+html:lang(zh) :is(.hero-headline,.section h2,.life-section h2,.research-card h3,.hobby h3,.photo-title,.closing h2){font-weight:500;letter-spacing:0;line-height:1.5}
+html:lang(zh) :is(.hero-description,.about-main p,.research-description,.hobby p,.photo-caption){line-height:1.9}
+@media(max-width:1100px){
+  .wrap{width:calc(100% - 64px)}
+  .hero{gap:40px;padding-block:64px 72px}
+  .about,.education{gap:40px}
+}
+@media(max-width:760px){
+  body{font-size:17px}
+  .wrap{width:calc(100% - 40px)}
+  .hero{display:flex;gap:32px;padding-block:44px 56px}
+  .name{font-size:clamp(76px,20vw,96px)}
+  .hero-headline{font-size:25px;margin-top:22px}
+  .hero-description,.about-main p,.about-main p:first-child,.research-description{font-size:17px;line-height:1.8}
+  .hero-actions{gap:10px}
+  .section,.life-section{padding-block:56px}
+  .about,.education{display:block}
+  .section h2,.life-section h2{font-size:32px}
+  .research-grid{gap:36px}
+  .research-card h3{font-size:29px}
+  .research-card+.research-card{padding-top:24px}
+  .research-skills{margin-top:36px;padding-top:24px}
+  .hobbies{gap:32px 24px;margin-block:32px 44px}
+  .hobby h3{font-size:22px}
+  .hobby p,.photo-caption{font-size:15px}
+  .photo-title{font-size:22px}
+  .closing{padding-block:60px}
+}
+@media(max-width:360px){.wrap{width:calc(100% - 32px)}.hobby h3{font-size:20px}.hobbies{gap:26px 16px}}
+
+/* The key page keeps its existing palette and type scale. */
+.gate{--paper:#f7f5f0;--ink:#30302c;--muted:#6e6c65;--accent:#ad553c;--line:#dcd8cf;--soft:#efede6;font-size:17px;line-height:1.75}
+:root[data-theme="dark"] .gate{--paper:#191816;--ink:#e9e5dd;--muted:#9c968b;--accent:#e08a5f;--line:#33312c;--soft:#232220}
