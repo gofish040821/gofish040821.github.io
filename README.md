@@ -8,6 +8,8 @@ The live site has my research notes, education and photos from everyday life. If
 
 ## Preview the personal site
 
+Updated 2026-11-03. Three visitors share the space around the key card. The explorer wanders, the player practices with a basketball, and the performer alternates between small shows and rests. Tap a character or focus the key field to get a response. Showing the key prompts a privacy gesture. A correct answer brings the group together for a brief celebration before entry. Tablets and phones use fewer characters. Reduced motion shows a still character. [Action and asset inventory](docs/mascot-actions.md)
+
 Updated 2026-11-02. A lightweight front-end key gate now opens the site: visitors answer “只因名？” with the right key before the homepage appears. It only deters casual visitors and is not a security boundary. The markup, styles and check script are inlined in `src/index.html` for easy redesign.
 
 Updated 2026-11-02. Chinese headings now use a self-hosted Noto Serif SC subset instead of the system Song-style font. The light clay accent is adjusted for contrast, and the italic serif used in the opening caption is preloaded.
@@ -28,6 +30,8 @@ npm run preview
 ```
 
 Open the [local preview](http://127.0.0.1:4173). After editing a source file, rebuild and refresh the page. Press `Ctrl+C` to stop the preview server.
+
+With Chrome and Python Playwright available, keep the preview running and use `python tests/gate_browser.py --evidence ../gate-review` to exercise the gate locally. The success test substitutes a temporary digest in one isolated browser response.
 
 ## Make your own homepage
 

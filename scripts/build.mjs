@@ -7,6 +7,7 @@ import { loadSkillIcons, skillIllustrationSprite } from './skill-icons.mjs';
 import { uiIcon, uiIllustrationSprite } from './ui-icons.mjs';
 import { controlIcon } from './control-icons.mjs';
 import { fishMark } from './fish-mark.mjs';
+import { buildGateAssets } from './build-gate-assets.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const data = JSON.parse(await readFile(resolve(root, 'content.json'), 'utf8'));
@@ -125,6 +126,7 @@ function socialLinks(data) {
   return `<nav class="footer-social" aria-label="Social media" data-i18n-aria="footerSocial"><ul>${items}</ul></nav>`;
 }
 const values = {
+  gateAssets: await buildGateAssets(root),
   ...assetVersions,
   fishMark: fishMark(),
   ...Object.fromEntries(['external','down','chevron','moon','sun','menu','close','mail'].map(name => ['control' + name[0].toUpperCase() + name.slice(1) + 'Icon', controlIcon(name)])),

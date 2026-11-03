@@ -35,16 +35,24 @@
     .gate-title{font-family:var(--sans);font-size:30px;font-weight:400;margin:0 0 20px}
     .gate-title .gate-key{color:var(--accent)}
     .gate-form{display:flex;gap:10px}
-    .gate-input{flex:1;min-width:0;min-height:44px;padding:10px 12px;font:inherit;font-size:16px;text-align:center;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:6px}
+    .gate-field{position:relative;flex:1;min-width:0}
+    .gate-input{width:100%;min-height:44px;padding:10px 46px 10px 12px;font:inherit;font-size:16px;text-align:center;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:6px}
+    .gate-visibility{position:absolute;inset:1px 1px 1px auto;min-width:43px;padding:0 6px;border-radius:5px;font:500 12px var(--sans);color:var(--muted);background:transparent}
+    .gate-visibility:hover,.gate-visibility:focus-visible{color:var(--ink);background:var(--soft)}
+    .gate-fallback{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);width:auto;height:clamp(0px,calc((100dvh - 290px)/2),100px);pointer-events:none}
+    .gate.is-leaving{opacity:0;transition:opacity 240ms ease;pointer-events:none}
+    @media(prefers-reduced-motion:reduce){.gate.is-leaving{transition:none}}
     .gate-input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
     .gate-submit{min-height:44px;padding:10px 18px;font:inherit;font-size:16px;color:#fff;background:var(--accent);border:1px solid var(--accent);border-radius:6px}
     .gate-error{color:var(--accent);font-size:14px;margin:12px 0 0}
     .gate-success{font-family:var(--serif);font-size:clamp(26px,6vw,34px);font-weight:400;letter-spacing:2px;color:var(--accent);margin:20px 0 0;animation:gate-pop .5s ease}
+    .gate-success:focus{outline:none}
     @keyframes gate-pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
   </style>
   <link rel="stylesheet" href="./style.css?v={{styleVersion}}">
   <link rel="stylesheet" href="./controls.css?v={{controlsVersion}}">
   <link rel="stylesheet" href="./editorial.css?v={{editorialVersion}}">
+  <link rel="stylesheet" href="{{gateAssets}}/gate-mascots.css">
   <noscript><style>.research-more{display:none!important}.research-details[hidden]{display:block!important}</style></noscript>
   <script src="./app.js?v={{appVersion}}" defer></script>
   <script src="./busuanzi.pure.mini.js" defer></script>
@@ -55,53 +63,131 @@
       <p class="gate-brand">Gofish<span class="accent">.</span></p>
       <p class="gate-title" id="gate-title">只因<span class="gate-key">名</span>？</p>
       <form class="gate-form" id="gate-form" autocomplete="off">
-        <input class="gate-input" id="gate-input" type="password" aria-label="key" autocomplete="off" autofocus>
+        <div class="gate-field">
+          <input class="gate-input" id="gate-input" type="password" aria-label="key" aria-describedby="gate-error" autocomplete="off" autofocus>
+          <button type="button" class="gate-visibility" id="gate-visibility" aria-label="Show key" aria-controls="gate-input" aria-pressed="false">Show</button>
+        </div>
         <button class="gate-submit" type="submit">Enter</button>
       </form>
       <p class="gate-error" id="gate-error" role="alert" hidden>不对，再想想。</p>
       <noscript><p class="gate-error">需要启用 JavaScript 才能进入。</p></noscript>
     </div>
+    <div id="gate-stage"></div>
   </div>
   <script>
     // Front-end key gate: casual visitors only, not a security boundary.
     (function () {
       var KEY_HASH = 193440491; // djb2 of the expected key, lowercased
       var gate = document.getElementById('gate');
+      var card = gate.querySelector('.gate-card');
+      var form = document.getElementById('gate-form');
+      var input = document.getElementById('gate-input');
+      var errorEl = document.getElementById('gate-error');
+      var visibility = document.getElementById('gate-visibility');
+      var stage = document.getElementById('gate-stage');
+      var ensemble;
+      var accepted = false;
+      var finishing = false;
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var loading = import('{{gateAssets}}/gate-mascots.js').then(function (module) {
+        if (finishing || !gate.isConnected) return;
+        ensemble = new module.MascotBehaviorController({
+          gate: gate, card: card, input: input, enter: form.querySelector('.gate-submit'), root: stage
+        });
+        if (input.type === 'text') ensemble.reveal(true);
+        return ensemble;
+      }).catch(function () {
+        if (!gate.isConnected || finishing) return;
+        var still = document.createElement('img');
+        still.className = 'gate-fallback';
+        still.src = '{{gateAssets}}/mascot-art/still.webp';
+        still.alt = '';
+        card.style.position = 'relative';
+        card.prepend(still);
+      });
       function unlock() {
-        gate.remove();
-        document.body.classList.remove('gate-locked');
-        var header = document.querySelector('.site-header');
-        var main = document.getElementById('main');
-        if (header) header.inert = false;
-        if (main) main.inert = false;
+        try { if (ensemble) ensemble.destroy(); }
+        finally {
+          gate.remove();
+          document.body.classList.remove('gate-locked');
+          var header = document.querySelector('.site-header');
+          var main = document.getElementById('main');
+          if (header) header.inert = false;
+          if (main) main.inert = false;
+          document.querySelector('.skip-link').inert = false;
+          if (header) header.querySelector('.brand').focus({ preventScroll: true });
+        }
       }
       var attempts = 0;
       function lockBehind() {
+        if (!gate.isConnected || accepted) return;
         var header = document.querySelector('.site-header');
         var main = document.getElementById('main');
         if (header) header.inert = true;
         if (main) main.inert = true;
+        document.querySelector('.skip-link').inert = true;
         document.getElementById('gate-input').focus();
       }
       if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', lockBehind);
       else lockBehind();
-      document.getElementById('gate-form').addEventListener('submit', function (event) {
+      visibility.addEventListener('click', function () {
+        var show = input.type === 'password';
+        input.type = show ? 'text' : 'password';
+        visibility.setAttribute('aria-pressed', String(show));
+        visibility.textContent = show ? 'Hide' : 'Show';
+        if (ensemble) ensemble.reveal(show);
+      });
+      input.addEventListener('input', function () {
+        if (!accepted) {
+          errorEl.hidden = true;
+          input.removeAttribute('aria-invalid');
+        }
+      });
+      gate.addEventListener('keydown', function (event) {
+        if (event.key !== 'Tab') return;
+        var items = Array.from(gate.querySelectorAll('input,button')).filter(function (el) {
+          return !el.disabled && !el.closest('[inert]') && el.tabIndex >= 0 && el.getClientRects().length;
+        });
+        var first = items[0], last = items[items.length - 1];
+        if (!first) { event.preventDefault(); return; }
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault(); last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault(); first.focus();
+        }
+      });
+      form.addEventListener('submit', function (event) {
         event.preventDefault();
-        var input = document.getElementById('gate-input');
-        var errorEl = document.getElementById('gate-error');
+        if (accepted) return;
         var hash = 5381;
         var value = input.value.trim().toLowerCase();
         for (var i = 0; i < value.length; i++) hash = ((hash * 33) ^ value.charCodeAt(i)) >>> 0;
         if (hash === KEY_HASH) {
+          accepted = true;
+          input.value = '';
+          input.removeAttribute('aria-invalid');
           errorEl.textContent = '哇真的是你呀';
           errorEl.className = 'gate-success';
           errorEl.hidden = false;
           input.disabled = true;
-          var form = document.getElementById('gate-form');
-          if (form) form.style.display = 'none';
-          setTimeout(function () {
-            unlock();
-          }, 1800);
+          form.hidden = true;
+          stage.inert = true;
+          errorEl.tabIndex = -1;
+          errorEl.focus({ preventScroll: true });
+          // Only this verified branch can schedule entry. Artwork failure or a
+          // backgrounded animation must never strand an already accepted visitor.
+          function finish() {
+            if (finishing) return;
+            finishing = true;
+            clearTimeout(deadline);
+            gate.classList.add('is-leaving');
+            setTimeout(unlock, reduced.matches ? 0 : 240);
+          }
+          var deadline = setTimeout(finish, reduced.matches ? 650 : 4500);
+          loading.then(function (actors) {
+            if (!finishing && actors) return actors.celebrate().then(finish);
+            if (!finishing) { clearTimeout(deadline); deadline = setTimeout(finish, 450); }
+          }).catch(finish);
         } else {
           attempts += 1;
           var msg;
@@ -110,14 +196,16 @@
           else msg = '再练两年半吧';
           errorEl.textContent = msg;
           errorEl.hidden = false;
+          input.setAttribute('aria-invalid', 'true');
+          if (ensemble) ensemble.error(attempts);
           input.select();
         }
       });
     })();
   </script>
   {{illustrationLibrary}}
-  <a class="skip-link" href="#main"><span data-i18n="skipLink">Skip to content</span></a>
-  <header class="site-header paper-surface">
+  <a class="skip-link" href="#main" inert><span data-i18n="skipLink">Skip to content</span></a>
+  <header class="site-header paper-surface" inert>
     <div class="fb-paper" aria-hidden="true"></div>
     <div class="header-inner wrap">
       <a class="brand" href="#home" aria-label="Gofish home" data-i18n-aria="brandHome"><img src="./assets/photos/avatar-small.webp" alt="Gofish avatar" width="38" height="38"><span class="brand-wordmark">{{name}}<span class="brand-dot">.</span></span></a>
@@ -138,7 +226,7 @@
     </div>
     <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Mobile navigation" hidden><a href="#about"><span data-i18n="navAbout">About</span></a><a href="#research"><span data-i18n="navResearch">Research</span></a><a href="#education"><span data-i18n="navEducation">Education</span></a><a href="#life"><span data-i18n="navLife">Life</span></a></nav>
   </header>
-  <main id="main">
+  <main id="main" inert>
     <section class="hero wrap" id="home" aria-labelledby="hero-title">
       <div class="hero-copy">
         <h1 id="hero-title"><span class="hello" data-i18n="heroHello">Hi, I'm</span><span class="name">{{name}}<span class="accent">.</span></span></h1>

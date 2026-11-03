@@ -1,0 +1,45 @@
+// Timings from manifest.json v9; crop rectangles enclose every nonzero alpha pixel.
+export const ACTIONS = Object.freeze({
+  idle: {"name": "待机呼吸", "sourceDurationMs": 10000, "durationMs": 5556},
+  wave: {"name": "挥翅招手", "sourceDurationMs": 5200, "durationMs": 2889},
+  blink: {"name": "歪头眨眼", "sourceDurationMs": 4400, "durationMs": 2444},
+  jump: {"name": "开心跳跃", "sourceDurationMs": 6000, "durationMs": 3333},
+  dribble: {"name": "拍拍篮球", "sourceDurationMs": 6800, "durationMs": 3778},
+  toss: {"name": "抛球接球", "sourceDurationMs": 6400, "durationMs": 3556},
+  dance: {"name": "左右舞步", "sourceDurationMs": 7200, "durationMs": 4000},
+  cheer: {"name": "庆祝欢呼", "sourceDurationMs": 5200, "durationMs": 2889},
+  think: {"name": "托腮思考", "sourceDurationMs": 5600, "durationMs": 3111},
+  surprise: {"name": "惊讶后仰", "sourceDurationMs": 4800, "durationMs": 2667},
+  sleep: {"name": "打个瞌睡", "sourceDurationMs": 10000, "durationMs": 5556},
+  bow: {"name": "鞠躬致意", "sourceDurationMs": 5200, "durationMs": 2889},
+  walk: {"name": "慢慢走路", "sourceDurationMs": 6400, "durationMs": 3556},
+  jog: {"name": "小步奔跑", "sourceDurationMs": 6000, "durationMs": 3333},
+  peek: {"name": "探头张望", "sourceDurationMs": 5200, "durationMs": 2889},
+  point: {"name": "指路介绍", "sourceDurationMs": 5200, "durationMs": 2889},
+  stretch: {"name": "伸个懒腰", "sourceDurationMs": 8000, "durationMs": 4444},
+  yawn: {"name": "打个哈欠", "sourceDurationMs": 7200, "durationMs": 4000},
+  laugh: {"name": "开心大笑", "sourceDurationMs": 7000, "durationMs": 3889},
+  shy: {"name": "害羞捂脸", "sourceDurationMs": 6400, "durationMs": 3556},
+  highfive: {"name": "击掌回应", "sourceDurationMs": 6000, "durationMs": 3333},
+  nod: {"name": "点头回应", "sourceDurationMs": 5200, "durationMs": 2889},
+  shake: {"name": "摇头回应", "sourceDurationMs": 5200, "durationMs": 2889},
+  groom: {"name": "整理发型", "sourceDurationMs": 6800, "durationMs": 3778}
+});
+
+export const PARTS = {
+  'ball': [170, 403, 162, 162],
+  'foot-left': [224, 630, 134, 65],
+  'foot-right': [451, 634, 131, 58],
+  'head-base': [155, 63, 470, 341],
+  'head-blink': [155, 63, 470, 341],
+  'head-laugh': [155, 63, 470, 341],
+  'head-sleep': [155, 63, 470, 341],
+  'head-surprise': [155, 63, 470, 341],
+  'leg-left': [231, 538, 171, 124],
+  'leg-right': [398, 538, 177, 124],
+  'torso': [198, 358, 404, 216],
+  'wing-left-open': [83, 321, 205, 169],
+  'wing-left': [121, 383, 155, 171],
+  'wing-right-open': [497, 319, 187, 170],
+  'wing-right': [517, 312, 163, 188]
+};

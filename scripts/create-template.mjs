@@ -22,6 +22,8 @@ for (const entry of Object.values(i18n.translations)) {
 
 function genericBuild(source) {
   return source
+    .replace("import { buildGateAssets } from './build-gate-assets.mjs';\n", '')
+    .replace('  gateAssets: await buildGateAssets(root),\n', '')
     .replace(/^import \{ fishMark \} from '\.\/fish-mark\.mjs';\n/m, '')
     .replace(/^  fishMark: fishMark\(\),\n/m, '')
     .replace(/^await copyFile\(resolve\(root, 'src\/assets\/fish\.svg'\)[^\n]*\n/m, '')
