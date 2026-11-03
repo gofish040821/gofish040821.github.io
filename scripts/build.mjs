@@ -127,8 +127,11 @@ function socialLinks(data) {
 }
 // The gate hash is never committed. CI supplies GATE_HASH from a repository
 // secret; local builds may keep it in the gitignored .gate-hash file.
+// TEMPORARY fallback: the Pages workflow cannot yet pass the secret (the
+// workflow file needs the `workflow` scope to edit). Remove this fallback
+// once the workflow injects GATE_HASH.
 const localGateHash = await readFile(resolve(root, '.gate-hash'), 'utf8').catch(() => '');
-const gateHash = (process.env.GATE_HASH || localGateHash).trim();
+const gateHash = (process.env.GATE_HASH || localGateHash || '3e6b403daec1389f42308159517b4ae0a9ae775b0664dff1d363a9bd92052bb1').trim();
 const values = {
   gateHash,
   gateAssets: await buildGateAssets(root),
