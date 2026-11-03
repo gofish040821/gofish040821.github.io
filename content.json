@@ -4,6 +4,17 @@
   "linkedin": "https://www.linkedin.com/in/your-name/",
   "email": "hello@example.com",
   "siteUrl": "https://your-username.github.io",
+  "socialLinks": [
+    { "platform": "facebook", "label": "Facebook", "href": "https://www.facebook.com" },
+    { "platform": "instagram", "label": "Instagram", "href": "https://www.instagram.com" },
+    { "platform": "youtube", "label": "YouTube", "href": "https://www.youtube.com" },
+    { "platform": "x", "label": "X", "href": "https://x.com" },
+    { "platform": "xiaohongshu", "label": "Xiaohongshu", "href": "https://www.xiaohongshu.com" },
+    { "platform": "bilibili", "label": "Bilibili", "href": "https://www.bilibili.com" },
+    { "platform": "linkedin", "label": "LinkedIn", "href": "https://www.linkedin.com/in/your-name/" },
+    { "platform": "github", "label": "GitHub", "href": "https://github.com/your-username" },
+    { "platform": "email", "label": "Email", "href": "mailto:hello@example.com" }
+  ],
   "updated": "YYYY-MM",
   "profileNote": "Personal homepage",
   "headline": "Your role or field of study",
