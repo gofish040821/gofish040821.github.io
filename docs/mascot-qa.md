@@ -7,6 +7,7 @@ This second review follows the initial v9 ensemble release. It keeps the supplie
 - A rejected key could interrupt the closed-eye gesture while the key was visible. Privacy now remains the higher-priority state. The existing form rejection still appears.
 - Cutting off a hop kept its elevated position as a new baseline. A 180 ms landing now returns it to the original baseline, preserving the first interrupted frame. Three consecutive interruptions returned to the same ground position without drift. Nearby actors reserve the landing space, and another walk waits for landing to finish.
 - Reduced motion now disables the success text's entrance animation.
+- The gate's already-fired `DOMContentLoaded` initialization listener was still attached to the document. It now removes itself after one invocation. Browser listener inspection verifies that no `lockBehind` callback remains after initialization.
 - The gate's redundant `Gofish.` wordmark is removed. “哇真的是你呀” uses 36–52 px type with a slightly stronger weight. The homepage wordmark remains in its header.
 
 Both behavioral faults were reproduced in browser responses serving the previous controller and stage before checking the corrected code. Fresh input already canceled old error sequences; this behavior now has an explicit regression test.
@@ -54,7 +55,7 @@ Fresh-context local HTTP traces measured requests begun in the first five second
 | Phone 390 × 844 | 339,160 B · 331.2 KiB | 2,315,278 B |
 | Reduced-motion desktop | 81,089 B · 79.2 KiB | 2,144,210 B |
 
-All mascot requests stayed below the 512 KiB budget. There were no duplicate mascot URLs in the loading/interaction trace. The shared in-memory bank continues to coalesce part requests across actors. Content-versioned URLs preserve browser-cache eligibility on deployment. Local preview serves uncompressed bodies with `no-cache`; the public host may transfer fewer compressed bytes.
+All mascot requests stayed below the 512 KiB budget. There were no duplicate mascot URLs in the loading/interaction trace. The shared in-memory bank continues to coalesce part requests across actors. A warm reload on the deployed site reused eleven part images from disk cache. Local preview serves uncompressed bodies with `no-cache`; the public host may transfer fewer compressed bytes.
 
 A separate run without video encoding measured browser process CPU time at 19.4–22.5% of one CPU core during movement, and 1.2% while privacy poses rested. Main-thread busy time was 4.5–6.2% during movement. Under a controlled hidden-document event, the controller clock stopped for 1.2 s and resumed without advancing through the pause; a separate 10 s hidden interval measured 0.16% of one core. The controlled event tests the handler while leaving browser timers observable. Video recording adds encoding work and is excluded from these CPU figures.
 

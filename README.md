@@ -8,7 +8,7 @@ The live site has my research notes, education and photos from everyday life. If
 
 ## Preview the personal site
 
-Updated 2026-11-03, motion review. The gate now lands an interrupted hop on its original baseline and keeps the privacy gesture through a rejected visible key. Editing the field clears the old rejection sequence. The redundant gate wordmark is removed, and “哇真的是你呀” uses a larger 36–52 px success treatment. Reduced motion also disables its entrance animation. [Motion QA](docs/mascot-qa.md)
+Updated 2026-11-03, motion review. The gate now lands an interrupted hop on its original baseline and keeps the privacy gesture through a rejected visible key. Editing the field clears the old rejection sequence, and the one-time initialization listener removes itself after running. The redundant gate wordmark is removed, and “哇真的是你呀” uses a larger 36–52 px success treatment. Reduced motion also disables its entrance animation. [Motion QA](docs/mascot-qa.md)
 
 Updated 2026-11-03. Three visitors share the space around the key card. The explorer wanders, the player practices with a basketball, and the performer alternates between small shows and rests. Tap a character or focus the key field to get a response. Showing the key prompts a privacy gesture. A correct answer brings the group together for a brief celebration before entry. Tablets and phones use fewer characters. Reduced motion shows a still character. [Action and asset inventory](docs/mascot-actions.md)
 

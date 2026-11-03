@@ -9,6 +9,17 @@ from urllib.parse import urlparse
 from playwright.sync_api import sync_playwright
 
 
+def check_initialization_cleanup(page):
+    session = page.context.new_cdp_session(page)
+    handle = session.send('Runtime.evaluate', {
+        'expression': 'document', 'objectGroup': 'gate-cleanup-review'
+    })['result']['objectId']
+    listeners = session.send('DOMDebugger.getEventListeners', {'objectId': handle})['listeners']
+    assert not any('lockBehind' in item.get('handler', {}).get('description', '') for item in listeners)
+    session.send('Runtime.releaseObjectGroup', {'objectGroup': 'gate-cleanup-review'})
+    session.detach()
+
+
 def check_denials(page):
     field = page.locator('#gate-input')
     for i, message in enumerate(['你干嘛哈哈哎哟', '哦呀哈哈Amagi', '再练两年半吧']):
@@ -72,6 +83,7 @@ def run(url, evidence):
                 assert page.locator('#main').evaluate('(e)=>e.inert')
                 assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
                 page.screenshot(path=str(evidence / f'gate-{width}-{theme}.png'))
+                check_initialization_cleanup(page)
                 check_denials(page)
                 assert not errors, errors
                 report.append(dict(width=width, height=height, theme=theme, actors=expected))
@@ -91,6 +103,7 @@ def run(url, evidence):
             document_url = url + '?lang=en'
             fixture = success_fixture(page, document_url)
             page.goto(document_url)
+            check_initialization_cleanup(page)
             if mode == 'module-offline':
                 page.locator('.gate-fallback').wait_for(state='visible')
             elif mode in ('reduced', 'part-offline'):

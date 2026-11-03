@@ -127,7 +127,7 @@
         document.querySelector('.skip-link').inert = true;
         document.getElementById('gate-input').focus();
       }
-      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', lockBehind);
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', lockBehind, { once: true });
       else lockBehind();
       visibility.addEventListener('click', function () {
         var show = input.type === 'password';
