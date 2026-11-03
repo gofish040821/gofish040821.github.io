@@ -4,12 +4,12 @@
 
 我喜欢把在意的事讲具体，也愿意给听的人留一点余地。做这个主页时，我把这种分寸叫作“有体温的克制”。一些 AI 产品用深底、霓虹渐变和玻璃光晕表现未来感，我更想让这里像一册摊开的手记。一道研究问题能写得严谨，我和父母的毕业照也有自己的位置。
 
-访问主站可以读到研究笔记、求学经历和生活照片。想搭自己的主页，也可以直接取用中性模板。[中文主页](https://gofish040821.github.io/?lang=zh) · [English](https://gofish040821.github.io/?lang=en) · [设计说明](DESIGN.zh-CN.md)
+访问主站可以读到研究笔记、求学经历和生活照片。想搭自己的主页，也可以直接取用中性模板。[中文主页](https://DolomitiAugust.github.io/?lang=zh) · [English](https://DolomitiAugust.github.io/?lang=en) · [设计说明](DESIGN.zh-CN.md)
 
-[![Preview template](https://img.shields.io/badge/Preview-template-8a5a44?style=for-the-badge)](https://gofish040821.github.io/template-preview/)
-[![Clone template](https://img.shields.io/badge/Clone-template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gofish040821/gofish040821.github.io/archive/refs/heads/template.zip)
+[![Preview template](https://img.shields.io/badge/Preview-template-8a5a44?style=for-the-badge)](https://DolomitiAugust.github.io/template-preview/)
+[![Clone template](https://img.shields.io/badge/Clone-template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DolomitiAugust/DolomitiAugust.github.io/archive/refs/heads/template.zip)
 
-**一键使用：** [在线预览模板](https://gofish040821.github.io/template-preview/)（仅示例内容，不含任何个人文字、照片或链接），或 [下载模板 ZIP](https://github.com/gofish040821/gofish040821.github.io/archive/refs/heads/template.zip)，然后运行 `npm run build && npm run preview`。
+**一键使用：** [在线预览模板](https://DolomitiAugust.github.io/template-preview/)（仅示例内容，不含任何个人文字、照片或链接），或 [下载模板 ZIP](https://github.com/DolomitiAugust/DolomitiAugust.github.io/archive/refs/heads/template.zip)，然后运行 `npm run build && npm run preview`。
 
 ## 设计方法
 
@@ -40,7 +40,7 @@ npm run preview
 
 ## 用模板做自己的主页
 
-模板提供中英文、示例项目、示意图和可再分发的字体。模板中不含本站任何个人文字、照片或链接，所有联系方式均为占位符。[在线预览](https://gofish040821.github.io/template-preview/) · [下载 ZIP](https://github.com/gofish040821/gofish040821.github.io/archive/refs/heads/template.zip)。
+模板提供中英文、示例项目、示意图和可再分发的字体。模板中不含本站任何个人文字、照片或链接，所有联系方式均为占位符。[在线预览](https://DolomitiAugust.github.io/template-preview/) · [下载 ZIP](https://github.com/DolomitiAugust/DolomitiAugust.github.io/archive/refs/heads/template.zip)。
 
 **从已有主仓库导出。** 在 `main` 的根目录执行以下命令，目标是一个新目录。
 
@@ -54,7 +54,7 @@ npm run preview
 **单独下载模板。** 直接克隆 `template` 分支即可。
 
 ```sh
-git clone --branch template --single-branch https://github.com/gofish040821/gofish040821.github.io.git my-homepage
+git clone --branch template --single-branch https://github.com/DolomitiAugust/DolomitiAugust.github.io.git my-homepage
 cd my-homepage
 npm run build
 npm run preview

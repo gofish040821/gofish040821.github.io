@@ -4,12 +4,12 @@
 
 I like to be specific about the things I care about and leave some room for the person listening. I think of that balance as “warm restraint.” Some AI products use dark backgrounds, neon gradients and glassy glows to suggest the future. I wanted this site to feel like a notebook left open on a desk, with room for a carefully framed research question and a photo of my parents and me at graduation.
 
-The live site has my research notes, education and photos from everyday life. If you’re building a homepage of your own, there’s also a template with neutral sample content. [Homepage in English](https://gofish040821.github.io/?lang=en) · [中文主页](https://gofish040821.github.io/?lang=zh) · [Design notes](DESIGN.md)
+The live site has my research notes, education and photos from everyday life. If you’re building a homepage of your own, there’s also a template with neutral sample content. [Homepage in English](https://DolomitiAugust.github.io/?lang=en) · [中文主页](https://DolomitiAugust.github.io/?lang=zh) · [Design notes](DESIGN.md)
 
-[![Preview the template](https://img.shields.io/badge/Preview-template-8a5a44?style=for-the-badge)](https://gofish040821.github.io/template-preview/)
-[![Clone the template](https://img.shields.io/badge/Clone-template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gofish040821/gofish040821.github.io/archive/refs/heads/template.zip)
+[![Preview the template](https://img.shields.io/badge/Preview-template-8a5a44?style=for-the-badge)](https://DolomitiAugust.github.io/template-preview/)
+[![Clone the template](https://img.shields.io/badge/Clone-template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DolomitiAugust/DolomitiAugust.github.io/archive/refs/heads/template.zip)
 
-**Start your own copy:** [preview the template live](https://gofish040821.github.io/template-preview/) — sample content only, with no personal text, photos or links — or [download the template ZIP](https://github.com/gofish040821/gofish040821.github.io/archive/refs/heads/template.zip) and run `npm run build && npm run preview`.
+**Start your own copy:** [preview the template live](https://DolomitiAugust.github.io/template-preview/) — sample content only, with no personal text, photos or links — or [download the template ZIP](https://github.com/DolomitiAugust/DolomitiAugust.github.io/archive/refs/heads/template.zip) and run `npm run build && npm run preview`.
 
 ## Design approach
 
@@ -40,7 +40,7 @@ Use `python tests/mascot_dynamics.py --url http://127.0.0.1:4173 --evidence ../m
 
 ## Make your own homepage
 
-The template includes English and Chinese, sample projects, placeholder illustrations and fonts licensed for redistribution. None of the personal text, photos or links from this site appear in it — every contact link is a placeholder you replace. [Preview it live](https://gofish040821.github.io/template-preview/) or [download the ZIP](https://github.com/gofish040821/gofish040821.github.io/archive/refs/heads/template.zip).
+The template includes English and Chinese, sample projects, placeholder illustrations and fonts licensed for redistribution. None of the personal text, photos or links from this site appear in it — every contact link is a placeholder you replace. [Preview it live](https://DolomitiAugust.github.io/template-preview/) or [download the ZIP](https://github.com/DolomitiAugust/DolomitiAugust.github.io/archive/refs/heads/template.zip).
 
 **Export from an existing clone.** From the root of the `main` branch, export the template into a new directory.
 
@@ -54,7 +54,7 @@ npm run preview
 **Download just the template.** Clone the standalone `template` branch.
 
 ```sh
-git clone --branch template --single-branch https://github.com/gofish040821/gofish040821.github.io.git my-homepage
+git clone --branch template --single-branch https://github.com/DolomitiAugust/DolomitiAugust.github.io.git my-homepage
 cd my-homepage
 npm run build
 npm run preview
