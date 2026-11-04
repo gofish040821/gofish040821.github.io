@@ -22,7 +22,7 @@ The gallery needs fewer words. Under my graduation photo I wrote, “A graduatio
 
 ## How a gesture comes to rest
 
-The key card gives the mascots somewhere to gather. Each character can finish a gesture, pause, and give a neighbor room to pass. When someone starts typing, the nearest character takes an interest. A successful answer draws them into the same beat. They share a moment of surprise, then celebrate in their own ways. A single set of jointed parts keeps the basketball, wings and feet attached to the same figure as one gesture gives way to the next.
+The key card gives the mascots somewhere to gather. A welcoming wave and pointing gesture accompany a small bilingual prompt, which stays readable when motion is reduced or space is tight. Each character can finish a gesture, pause, and give a neighbor room to pass. When someone starts typing, the nearest character takes an interest. A successful answer draws them into the same beat. They share a moment of surprise, then celebrate in their own ways. A single set of jointed parts keeps the basketball, wings and feet attached to the same figure as one gesture gives way to the next.
 
 Interruptions need a landing too. A hop interrupted by a click settles onto its original baseline over 180 ms. Showing a key keeps the closed-eye pose through a rejection; fresh input cancels an old error response. The gate's redundant wordmark is removed so the question keeps its space. On acceptance, “哇真的是你呀” grows to 36–52 px while the three characters share their celebration. Reduced motion keeps that larger message at rest. [Motion QA](docs/mascot-qa.md)
 

@@ -33,6 +33,9 @@
     .gate-card{width:min(340px,100%);text-align:center}
     .gate-title{font-family:var(--sans);font-size:30px;font-weight:400;margin:0 0 20px}
     .gate-title .gate-key{color:var(--accent)}
+    .gate-guide{display:inline-block;max-width:100%;box-sizing:border-box;margin:0 0 18px;padding:10px 16px;border:1px solid var(--line);border-radius:15px 15px 15px 4px;background:var(--soft);color:var(--ink);font-size:14px;line-height:1.55;text-align:left}
+    .gate-guide[hidden]{display:none}
+    .gate-guide-en{display:block;color:var(--muted);font-size:12px;line-height:1.5}
     .gate-form{display:flex;gap:10px}
     .gate-field{position:relative;flex:1;min-width:0}
     .gate-input{width:100%;min-height:44px;padding:10px 46px 10px 12px;font:inherit;font-size:16px;text-align:center;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:6px}
@@ -61,9 +64,10 @@
   <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
     <div class="gate-card">
       <p class="gate-title" id="gate-title">只因<span class="gate-key">名</span>？</p>
+      <p class="gate-guide" id="gate-guide">输入正确的 Key，一起进去看看吧。<span class="gate-guide-en" lang="en">Enter the right key to come in.</span></p>
       <form class="gate-form" id="gate-form" autocomplete="off">
         <div class="gate-field">
-          <input class="gate-input" id="gate-input" type="password" aria-label="key" aria-describedby="gate-error" autocomplete="off" autofocus>
+          <input class="gate-input" id="gate-input" type="password" aria-label="key" aria-describedby="gate-guide gate-error" autocomplete="off" autofocus>
           <button type="button" class="gate-visibility" id="gate-visibility" aria-label="Show key" aria-controls="gate-input" aria-pressed="false">Show</button>
         </div>
         <button class="gate-submit" type="submit">Enter</button>
@@ -172,6 +176,7 @@
           input.value = '';
           input.removeAttribute('aria-invalid');
           errorEl.textContent = '哇真的是你呀';
+          document.getElementById('gate-guide').hidden = true;
           errorEl.className = 'gate-success';
           errorEl.hidden = false;
           input.disabled = true;

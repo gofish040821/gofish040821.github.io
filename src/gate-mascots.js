@@ -83,6 +83,7 @@ export class MascotBehaviorController {
     this.revealed = false;
     this.finale = null;
     this.disposed = false;
+    this.greeted = false;
     this.actors = this.stage.slots.map((slot, index) => ({
       index, slot, renderer: createMascotRenderer(slot.art), history: [],
       source: 'rest', mood: 'at ease', priority: 0, interruptible: true,
@@ -160,7 +161,11 @@ export class MascotBehaviorController {
       if (!actor.visible) {
         actor.visible = true;
         if (this.revealed) this.coverEyes(actor);
-        else this.rest(actor, 250 + actor.index * 590 + random(60, 360));
+        else if (actor.index === 0 && !this.greeted && actor.source === 'rest') {
+          this.greeted = true;
+          this.toward(actor, this.input);
+          this.run(actor, 'story', 'welcoming', ['wave', 'point', 'nod']);
+        } else if (actor.source === 'rest') this.rest(actor, 250 + actor.index * 590 + random(60, 360));
       }
       if (this.clock >= actor.next) this.advance(actor);
       const elapsed = Math.min(actor.span, Math.max(0, this.clock - actor.start));
