@@ -5,28 +5,28 @@ import { MascotStage } from './gate-stage.js';
 // stories, are separate from the original animation's playback speed.
 const CAST = [
   {
-    speed: 1.15, wait: [700, 2100], click: ['wave', 'laugh', 'highfive'],
+    speed: 1.5, wait: [500, 1650], click: ['wave', 'laugh', 'highfive'],
     stories: [
       [5, ['walk', 'peek', 'think', 'nod']],
       [4, ['walk', 'wave', 'bow']],
       [3, ['walk', 'peek', 'surprise', 'jump', 'laugh']],
       [3, ['walk', 'point', 'nod']],
-      [2, ['think', 'shake', 'blink']],
+      [2, ['walk', 'think', 'shake', 'blink']],
       [2, ['stretch', 'walk', 'peek']],
     ],
   },
   {
-    speed: 1.35, wait: [800, 2400], click: ['highfive', 'jump', 'laugh', 'dance'],
+    speed: 1.75, wait: [600, 1900], click: ['highfive', 'jump', 'laugh', 'dance'],
     stories: [
       [5, ['walk', 'dribble', 'toss', 'bow']], // toss includes the catch
       [4, ['walk', 'dribble', 'jump']],
-      [3, ['highfive', 'laugh', 'dance']],
+      [3, ['walk', 'highfive', 'laugh', 'dance']],
       [3, ['jog', 'stretch', 'dribble']],
-      [3, ['toss', 'jump', 'cheer']],
+      [3, ['jog', 'toss', 'jump', 'cheer']],
     ],
   },
   {
-    speed: .9, wait: [1300, 3300], click: ['groom', 'shy', 'wave', 'dance'],
+    speed: 1.2, wait: [900, 2600], click: ['groom', 'shy', 'wave', 'dance'],
     stories: [
       [5, ['walk', 'groom', 'blink', 'shy']],
       [4, ['walk', 'dance', 'laugh', 'bow']],
@@ -167,7 +167,7 @@ export class MascotBehaviorController {
         else if (actor.index === 0 && !this.greeted && actor.source === 'rest') {
           this.greeted = true;
           this.toward(actor, this.input);
-          this.run(actor, 'story', 'welcoming', ['wave', 'point', 'nod']);
+          this.run(actor, 'story', 'welcoming', ['wave', 'walk', 'point', 'nod']);
         } else if (actor.source === 'rest') this.rest(actor, 250 + actor.index * 590 + random(60, 360));
       }
       if (this.clock >= actor.next) this.advance(actor);

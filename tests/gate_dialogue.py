@@ -27,11 +27,13 @@ def run(url, evidence):
             count = page.locator('#gate-stage .gate-mascot:visible').count()
             assert count == (1 if reduced else (3 if width >= 1024 else 2))
             assert '输入正确的key才能查看哦' in page.locator('#gate-guide').inner_text()
-            assert page.locator('#gate-title').count() == 0
+            assert page.locator('#gate-title').is_visible()
+            assert page.locator('#gate-title').inner_text() == '只因名？'
             for attempt in range(3):
                 page.locator('#gate-input').fill('incorrect-' + str(attempt))
                 page.locator('#gate-input').press('Enter')
                 page.wait_for_function('!document.querySelector("#gate-error").hidden')
+                assert page.locator('#gate-title').is_visible()
                 bubble = page.locator('.gate-mascot-dialogue')
                 bubble.wait_for(state='visible')
                 speaker = page.locator('#gate-stage .gate-mascot:visible').nth(attempt % count)
@@ -42,6 +44,7 @@ def run(url, evidence):
                     page.screenshot(path=str(evidence / f'error-{width}.png'))
                 page.locator('#gate-input').fill('next attempt')
                 assert bubble.is_hidden() and page.locator('#gate-error').is_hidden()
+                assert page.locator('#gate-title').is_visible()
             assert not errors, errors
             context.close()
 
@@ -62,6 +65,7 @@ def run(url, evidence):
         page.locator('.gate-submit').click()
         page.locator('.gate-success').wait_for(state='visible')
         assert page.locator('.gate-success').inner_text() == '哇真的是你呀'
+        assert page.locator('#gate-title').is_hidden()
         assert page.locator('#gate-guide').is_hidden()
         page.wait_for_timeout(800)
         page.screenshot(path=str(evidence / 'success-390.png'))

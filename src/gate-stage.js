@@ -243,7 +243,7 @@ export class MascotStage {
     if (s.settle) return false;
     const start = { x:s.x, y:s.y }, bounds = this.bounds;
     const obstacles = this.reservations(index);
-    const budget = s.speed * speedFactor * (this.count === 1 ? .9 : 1) * duration / 1000;
+    const budget = s.speed * speedFactor * duration / 1000;
     for (let attempt = 0; attempt < 22; attempt++) {
       let end;
       if (!attempt && s.destination && distance(start, s.destination) > 20) end = s.destination;
@@ -258,7 +258,7 @@ export class MascotStage {
       const route = truncate(points, budget);
       // Prefer a visible journey over tiny back-and-forth steps. In a crowded
       // or keyboard-constrained stage, accept a shorter safe path as fallback.
-      if (route.length < Math.min(attempt < 14 ? s.size * .35 : 18, budget * .6)) continue;
+      if (route.length < Math.min(attempt < 14 ? s.size * .5 : 18, budget * .6)) continue;
       s.destination = end;
       s.route = { ...route, index: 0, elapsed: 0, duration };
       this.face(index, this.frame.left + s.route.path[0].to.x);
