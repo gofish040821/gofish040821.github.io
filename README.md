@@ -21,7 +21,7 @@ The layout treats research and everyday life as parts of the same person. Questi
 
 Motion follows the thing being drawn. A pencil touches paper to write, a burger layer slides out, and a shuttlecock responds to a racket. Gestures have a beginning and a rest, with small variations in pressure and timing. The header settles into a centered wordmark while reading, then returns to full navigation near the top. Reduced-motion settings keep the interface usable at rest.
 
-The key page brings three Gofish characters into a shared space. They welcome visitors, take turns responding to an incorrect key and celebrate a correct one. Their movements leave room for the form; on smaller screens the cast adapts to the available space. The key is a front-end access gate, not an authentication security boundary. [Design notes](DESIGN.md) · [Mascot motion](docs/mascot-actions.md)
+The key page brings three Gofish characters into a shared space. They welcome visitors, take turns responding to an incorrect key and celebrate a correct one, with short voice clips for the supplied responses. Their movements leave room for the form; on smaller screens the cast adapts to the available space. The key is a front-end access gate, not an authentication security boundary. [Design notes](DESIGN.md) · [Mascot motion](docs/mascot-actions.md)
 
 ## Build and preview
 

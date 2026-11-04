@@ -11,16 +11,17 @@ export async function buildGateAssets(root) {
     for (const entry of await readdir(resolve(source, folder), { withFileTypes: true })) {
       const relative = folder + '/' + entry.name;
       if (entry.isDirectory()) await collect(relative);
-      else if (entry.isFile() && /\.(js|json|webp)$/.test(relative)) files.push(relative);
+      else if (entry.isFile() && /\.(js|json|webp|mp3)$/.test(relative)) files.push(relative);
       else throw new Error('Unexpected file in mascot runtime: ' + relative);
     }
   }
   await collect('mascot-art');
+  await collect('gate-audio');
   const hash = createHash('sha256');
   const contents = new Map();
   for (const name of files.sort()) {
     let bytes = await readFile(resolve(source, name));
-    if (!name.endsWith('.webp')) bytes = Buffer.from(bytes.toString().replace(/\r\n/g, '\n'));
+    if (!/\.(webp|mp3)$/.test(name)) bytes = Buffer.from(bytes.toString().replace(/\r\n/g, '\n'));
     hash.update(name).update('\0').update(bytes);
     contents.set(name, bytes);
   }
