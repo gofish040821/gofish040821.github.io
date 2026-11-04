@@ -93,11 +93,11 @@ function generic404(source) {
 const SOURCE_FONT_FACES = `@font-face{font-family:"Source Serif 4";src:url("./assets/fonts/source-serif-4-regular.woff2") format("woff2");font-style:normal;font-weight:200 900;font-display:swap}\n@font-face{font-family:"Source Sans 3";src:url("./assets/fonts/source-sans-3-regular.woff2") format("woff2");font-style:normal;font-weight:200 900;font-display:swap}\n`;
 function genericEditorialCss(source) {
   return source.replace(/\r\n/g, '\n')
-    .replace(/@font-face\{[^}]*font-family:"(?:Anthropic|Noto Serif SC)"[^}]*\}\n?/g, '')
+    .replace(/@font-face\{[^}]*font-family:"(?:Anthropic|Noto Serif SC)[^"]*"[^}]*\}\n?/g, '')
     .replace(/"Anthropic Serif"/g, '"Source Serif 4"')
     .replace(/"Anthropic Sans"/g, '"Source Sans 3"')
     .replace(/"Anthropic Mono"/g, '"Source Sans 3"')
-    .replace(/\/\*[^]*?Anthropic[^]*?\*\/\n?/g, '')
+    .replace(/\/\*[\s\S]*?\*\/\n?/g, m => (/Anthropic/.test(m) ? '' : m))
     .replace(/^/, SOURCE_FONT_FACES);
 }
 
@@ -332,6 +332,23 @@ export async function generateTemplatePreviewAndZip(distDir = resolve(root, 'dis
     throw new Error(`Template build failed:\n${result.stderr || result.stdout || 'unknown error'}`);
   }
   await copyDir(resolve(scratch, 'dist'), resolve(distDir, 'template-preview'));
+
+  // The live preview mirrors the personal site's Anthropic typography, while the
+  // downloadable ZIP keeps the open-source fonts that are safe to redistribute.
+  const previewDir = resolve(distDir, 'template-preview');
+  for (const font of ['anthropic-serif-roman', 'anthropic-serif-italic', 'anthropic-sans-roman', 'anthropic-sans-italic', 'anthropic-mono-roman', 'noto-serif-sc-subset']) {
+    await copyFile(resolve(distDir, 'assets/fonts', `${font}.woff2`), resolve(previewDir, 'assets/fonts', `${font}.woff2`));
+  }
+  for (const css of ['editorial.css', 'style.css', 'controls.css']) {
+    await copyFile(resolve(distDir, css), resolve(previewDir, css));
+  }
+  const previewIndex = resolve(previewDir, 'index.html');
+  const previewHtml = await readFile(previewIndex, 'utf8');
+  await writeFile(previewIndex, previewHtml.replace(
+    /<link rel="preload" href="\.\/assets\/fonts\/source-serif-4-regular\.woff2"[^>]*>\s*<link rel="preload" href="\.\/assets\/fonts\/source-sans-3-regular\.woff2"[^>]*>/,
+    '<link rel="preload" href="./assets/fonts/anthropic-serif-roman.woff2" as="font" type="font/woff2" crossorigin> <link rel="preload" href="./assets/fonts/anthropic-sans-roman.woff2" as="font" type="font/woff2" crossorigin> <link rel="preload" href="./assets/fonts/anthropic-serif-italic.woff2" as="font" type="font/woff2" crossorigin>'
+  ));
+
   await zipDir(scratch, resolve(distDir, 'template.zip'));
   await rm(scratch, { recursive: true, force: true });
   console.log('Built template preview and downloadable ZIP from the current site design.');
