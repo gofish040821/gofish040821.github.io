@@ -5,20 +5,20 @@ import { MascotStage } from './gate-stage.js';
 // stories, are separate from the original animation's playback speed.
 const CAST = [
   {
-    speed: 1, wait: [1000, 3000], click: ['wave', 'laugh', 'highfive'],
+    speed: 1.15, wait: [700, 2100], click: ['wave', 'laugh', 'highfive'],
     stories: [
       [5, ['walk', 'peek', 'think', 'nod']],
       [4, ['walk', 'wave', 'bow']],
-      [3, ['peek', 'surprise', 'jump', 'laugh']],
+      [3, ['walk', 'peek', 'surprise', 'jump', 'laugh']],
       [3, ['walk', 'point', 'nod']],
       [2, ['think', 'shake', 'blink']],
       [2, ['stretch', 'walk', 'peek']],
     ],
   },
   {
-    speed: 1.2, wait: [1100, 3400], click: ['highfive', 'jump', 'laugh', 'dance'],
+    speed: 1.35, wait: [800, 2400], click: ['highfive', 'jump', 'laugh', 'dance'],
     stories: [
-      [5, ['dribble', 'toss', 'bow']], // toss includes the catch
+      [5, ['walk', 'dribble', 'toss', 'bow']], // toss includes the catch
       [4, ['walk', 'dribble', 'jump']],
       [3, ['highfive', 'laugh', 'dance']],
       [3, ['jog', 'stretch', 'dribble']],
@@ -26,18 +26,21 @@ const CAST = [
     ],
   },
   {
-    speed: .72, wait: [1800, 4700], click: ['groom', 'shy', 'wave', 'dance'],
+    speed: .9, wait: [1300, 3300], click: ['groom', 'shy', 'wave', 'dance'],
     stories: [
-      [5, ['groom', 'blink', 'shy']],
-      [4, ['dance', 'laugh', 'bow']],
-      [2, ['yawn', 'sleep', 'stretch', 'groom']],
+      [5, ['walk', 'groom', 'blink', 'shy']],
+      [4, ['walk', 'dance', 'laugh', 'bow']],
+      [2, ['walk', 'yawn', 'sleep', 'stretch', 'groom']],
       [3, ['walk', 'wave', 'peek']],
-      [2, ['blink', 'groom', 'highfive']],
+      [2, ['walk', 'blink', 'groom', 'highfive']],
     ],
   },
 ];
 
 const PRIORITY = { rest: 0, story: 1, peer: 2, nearby: 2, focus: 3, typing: 3, click: 3, enter: 4, error: 5, privacy: 6 };
+// The jointed artwork already plays at 1.8×. A modest additional increase is
+// applied only to ordinary gestures, not precisely timed reactions or finales.
+const GESTURE_PACE = 1.12;
 const PROTECTED = new Set(['jump', 'toss', 'dribble', 'highfive', 'bow']);
 const SURPRISE_MS = 400;
 const PHRASE_MS = 1000;
@@ -170,7 +173,7 @@ export class MascotBehaviorController {
       if (this.clock >= actor.next) this.advance(actor);
       const elapsed = Math.min(actor.span, Math.max(0, this.clock - actor.start));
       if (elapsed !== actor.painted) {
-        if (actor.renderer.tick(elapsed, dt) !== false) actor.painted = elapsed;
+        if (actor.renderer.tick(elapsed * actor.playbackRate, dt) !== false) actor.painted = elapsed;
       }
     }
     const eyesCovered = this.revealed && !this.finale && this.actors.slice(0, count)
@@ -212,17 +215,20 @@ export class MascotBehaviorController {
   play(actor, beat) {
     const item = typeof beat === 'string' ? { id: beat } : beat;
     let id = item.id;
+    const playbackRate = item.span === undefined && id !== 'idle' ? GESTURE_PACE : 1;
+    const duration = item.span ?? ACTIONS[id].durationMs / playbackRate;
     this.stage.stop(actor.index);
     if (id === 'walk' || id === 'jog') {
       const speed = CAST[actor.index].speed * (id === 'jog' ? 1.2 : 1);
-      if (!this.stage.walk(actor.index, ACTIONS[id].durationMs, speed)) id = 'peek';
+      if (!this.stage.walk(actor.index, duration, speed)) id = 'peek';
     }
-    if (id === 'jump') this.stage.jump(actor.index, ACTIONS[id].durationMs);
+    if (id === 'jump') this.stage.jump(actor.index, duration);
     actor.visible = actor.slot.visible;
     actor.action = id;
     actor.start = this.clock;
-    actor.span = item.span ?? ACTIONS[id].durationMs;
-    actor.next = this.clock + actor.span + (item.hold ?? random(120, 440));
+    actor.playbackRate = playbackRate;
+    actor.span = id === item.id ? duration : ACTIONS[id].durationMs / playbackRate;
+    actor.next = this.clock + actor.span + (item.hold ?? random(100, 320));
     actor.painted = -1;
     actor.interruptible = !PROTECTED.has(id);
     if (id !== 'idle') {
@@ -367,18 +373,26 @@ export class MascotBehaviorController {
 
   error(attempts) {
     this.errorCount = Number.isInteger(attempts) && attempts > 0 ? attempts : this.errorCount + 1;
-    if (!this.canReact()) return;
+    const index = this.stage.count ? (this.errorCount - 1) % this.stage.count : -1;
+    if (index >= 0) this.active = index;
+    if (!this.canReact()) return index;
     // The form still reports the rejection, while showing a key keeps the
     // higher-priority privacy pose intact until the visitor hides it again.
-    if (this.revealed) return;
+    if (this.revealed) return index;
     const actor = this.activeActor();
-    if (!actor) return;
+    if (!actor) return index;
+    // New feedback replaces any earlier rejection rather than leaving two
+    // characters acting out an obsolete response at the same time.
+    for (const other of this.actors) {
+      if (other !== actor && other.source === 'error') this.rest(other, 300);
+    }
     this.lastContact = this.clock;
     this.toward(actor, this.input);
     this.run(actor, 'error', 'puzzled', [
       { id: 'surprise', offset: 250, span: 650, face: 'surprise', hold: 80 },
       this.errorCount % 2 ? 'shake' : 'think',
     ]);
+    return index;
   }
 
   // Called only by the gate's existing successful-validation branch.

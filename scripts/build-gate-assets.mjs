@@ -6,7 +6,7 @@ import { dirname, resolve } from 'node:path';
 export async function buildGateAssets(root) {
   const source = resolve(root, 'src');
   const output = resolve(root, 'dist/assets/gate');
-  const files = ['gate-mascots.css', 'gate-mascots.js', 'gate-stage.js'];
+  const files = ['gate-mascots.css', 'gate-mascots.js', 'gate-stage.js', 'gate-dialogue.css', 'gate-dialogue.js'];
   async function collect(folder) {
     for (const entry of await readdir(resolve(source, folder), { withFileTypes: true })) {
       const relative = folder + '/' + entry.name;

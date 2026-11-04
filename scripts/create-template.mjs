@@ -60,6 +60,7 @@ function genericIndexHtml(source) {
   let html = source.replace(/\r\n/g, '\n');
   html = html.replace(/<style>\s*\/\* Simple front-end key gate[\s\S]*?<\/style>\n?/, '');
   html = html.replace(/<link rel="stylesheet" href="\{\{gateAssets\}\}\/gate-mascots\.css">\n?/, '');
+  html = html.replace(/<link rel="stylesheet" href="\{\{gateAssets\}\}\/gate-dialogue\.css">\n?/, '');
   html = html.replace(/<link rel="preload" href="\.\/assets\/fonts\/anthropic-serif-roman\.woff2"[^>]*>\n?\s*<link rel="preload" href="\.\/assets\/fonts\/anthropic-sans-roman\.woff2"[^>]*>\n?\s*<link rel="preload" href="\.\/assets\/fonts\/anthropic-serif-italic\.woff2"[^>]*>\n?/,
     '<link rel="preload" href="./assets/fonts/source-serif-4-regular.woff2" as="font" type="font/woff2" crossorigin>\n  <link rel="preload" href="./assets/fonts/source-sans-3-regular.woff2" as="font" type="font/woff2" crossorigin>\n');
   html = html.replace(/<script src="\.\/busuanzi\.pure\.mini\.js" defer><\/script>\n?/, '');

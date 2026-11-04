@@ -1,5 +1,6 @@
 """Run against npm run preview with Python Playwright and Chrome installed."""
 import argparse
+import hashlib
 import json
 import re
 import secrets
@@ -44,13 +45,11 @@ def success_fixture(page, url):
     # Change only the expected digest in an intercepted LOCAL document. The
     # random fixture credential never goes into a file or a production build.
     value = secrets.token_hex(16)
-    digest = 5381
-    for char in value:
-        digest = ((digest * 33) ^ ord(char)) & 0xffffffff
+    digest = hashlib.sha256(value.encode()).hexdigest()
 
     def serve_fixture(route):
         response = route.fetch()
-        html, count = re.subn(r'var KEY_HASH = \d+;', f'var KEY_HASH = {digest};', response.text())
+        html, count = re.subn(r'var GATE_HASH = "[0-9a-f]{64}";', f'var GATE_HASH = "{digest}";', response.text())
         assert count == 1
         route.fulfill(response=response, body=html)
 
@@ -74,7 +73,7 @@ def run(url, evidence):
                 page.on('pageerror', lambda error: errors.append(str(error)))
                 page.goto(url + ('?lang=en' if theme == 'light' else '?lang=zh'))
                 actors = page.locator('#gate-stage button:visible')
-                expected = 3 if width >= 1024 else 2 if width >= 620 else 1
+                expected = 3 if width >= 1024 else 2
                 page.wait_for_function(
                     '(n)=>document.querySelectorAll("#gate-stage button:not([hidden]) canvas:not([hidden])").length===n',
                     arg=expected)

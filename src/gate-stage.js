@@ -172,8 +172,11 @@ export class MascotStage {
     if (this.signature === signature) return;
     this.signature = signature;
     this.frame = frame;
-    const wanted = this.reduced.matches || w < 620 ? 1 : w < 1024 ? 2 : 3;
+    // A small pair can take turns welcoming visitors on phones; the placement
+    // search below falls back to one (or none) when the keyboard leaves no room.
+    const wanted = this.reduced.matches ? 1 : w < 1024 ? 2 : 3;
     let preferred = wanted === 3 ? Math.min(268, w * .205, h * .34) :
+      wanted === 2 && w < 620 ? Math.min(136, w * .34, h * .24) :
       wanted === 2 ? Math.min(208, w * .24, h * .32) : Math.min(158, w * .42, h * .30);
     // On a short laptop screen, keep a traversable band around the card so
     // actors can cross between wings. Do not miniaturize them on squat screens.
@@ -240,7 +243,7 @@ export class MascotStage {
     if (s.settle) return false;
     const start = { x:s.x, y:s.y }, bounds = this.bounds;
     const obstacles = this.reservations(index);
-    const budget = s.speed * speedFactor * (this.count === 1 ? .72 : 1) * duration / 1000;
+    const budget = s.speed * speedFactor * (this.count === 1 ? .9 : 1) * duration / 1000;
     for (let attempt = 0; attempt < 22; attempt++) {
       let end;
       if (!attempt && s.destination && distance(start, s.destination) > 20) end = s.destination;
@@ -253,7 +256,9 @@ export class MascotStage {
       const points = routeBetween(start, end, bounds, this.safe, obstacles);
       if (!points) continue;
       const route = truncate(points, budget);
-      if (route.length < Math.min(18, budget * .6)) continue;
+      // Prefer a visible journey over tiny back-and-forth steps. In a crowded
+      // or keyboard-constrained stage, accept a shorter safe path as fallback.
+      if (route.length < Math.min(attempt < 14 ? s.size * .35 : 18, budget * .6)) continue;
       s.destination = end;
       s.route = { ...route, index: 0, elapsed: 0, duration };
       this.face(index, this.frame.left + s.route.path[0].to.x);
@@ -268,7 +273,7 @@ export class MascotStage {
     if (!s?.visible || this.reduced.matches || duration <= 0) return false;
     this.stop(index);
     if (s.settle) return false;
-    const height = Math.min(random(4, s.size * .065), s.y - this.bounds.top);
+    const height = Math.min(random(s.size * .055, s.size * .11), s.y - this.bounds.top);
     if (height < 2) return false;
     const top = { x:s.x, y:s.y - height };
     if (this.reservations(index).some(r => crosses(s, top, r))) return false;
