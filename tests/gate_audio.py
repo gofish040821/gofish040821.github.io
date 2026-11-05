@@ -17,6 +17,7 @@ def run(url):
             context.route('**/*busuanzi*', lambda route: route.abort())
             context.add_init_script("""(() => {
               window.feedbackStarts = 0;
+              window.voiceTestNext = 0;
               const start = AudioBufferSourceNode.prototype.start;
               AudioBufferSourceNode.prototype.start = function(...args) {
                 window.feedbackStarts++; return start.apply(this, args);
@@ -30,6 +31,11 @@ def run(url):
                 html, count = re.subn(r'var GATE_HASH = "[0-9a-f]{64}";',
                                       f'var GATE_HASH = "{digest}";', response.text())
                 assert count == 1
+                # Exercise each choice in a local response without changing the
+                # production random picker or the homepage's actual key.
+                html, count = re.subn(r'Math\.floor\(Math\.random\(\) \* laterErrorSounds\.length\)',
+                                      '(window.voiceTestNext++ % laterErrorSounds.length)', html)
+                assert count == 1
                 route.fulfill(response=response, body=html)
             page.route(url, route_page)
             requests = []
@@ -42,14 +48,16 @@ def run(url):
                 page.locator('#gate-input').press('Enter')
                 page.wait_for_function('(n) => window.feedbackStarts === n', arg=attempt + 1)
                 assert requests[-1].endswith(filename), requests
-            page.locator('#gate-input').fill('incorrect-third')
-            page.locator('#gate-input').press('Enter')
-            page.wait_for_function('document.querySelector("#gate-error").textContent.includes("\u518d\u7ec3")')
-            assert page.evaluate('window.feedbackStarts') == 2
-            assert len(requests) == 2
+            for index, filename in enumerate(['late-kunge.mp3', 'late-practice.mp3',
+                                               'late-annoyed.mp3', 'late-surprised.mp3']):
+                page.locator('#gate-input').fill('incorrect-later-' + str(index))
+                page.locator('#gate-input').press('Enter')
+                page.wait_for_function('(n) => window.feedbackStarts === n', arg=index + 3)
+                assert requests[-1].endswith(filename), requests
+                assert page.locator('#gate-error').inner_text() == '再练两年半吧'
             page.locator('#gate-input').fill(fixture)
             page.locator('#gate-input').press('Enter')
-            page.wait_for_function('window.feedbackStarts === 3')
+            page.wait_for_function('window.feedbackStarts === 7')
             assert requests[-1].endswith('success.mp3'), requests
             page.locator('#gate').wait_for(state='detached', timeout=8000)
             context.close()
