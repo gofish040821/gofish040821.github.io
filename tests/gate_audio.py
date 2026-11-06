@@ -18,6 +18,8 @@ def run(url):
             context.add_init_script("""(() => {
               window.feedbackStarts = 0;
               window.voiceTestNext = 0;
+              window.voiceTestValues = [0, 0, .5, .9, .9, .9];
+              window.voiceTestPicks = [];
               const start = AudioBufferSourceNode.prototype.start;
               AudioBufferSourceNode.prototype.start = function(...args) {
                 window.feedbackStarts++; return start.apply(this, args);
@@ -33,8 +35,11 @@ def run(url):
                 assert count == 1
                 # Exercise each choice in a local response without changing the
                 # production random picker or the homepage's actual key.
-                html, count = re.subn(r'Math\.floor\(Math\.random\(\) \* laterErrorSounds\.length\)',
-                                      '(window.voiceTestNext++ % laterErrorSounds.length)', html)
+                html, count = re.subn(r'Math\.random\(\) \* eligible\.length',
+                                      'window.voiceTestValues[window.voiceTestNext++ % window.voiceTestValues.length] * eligible.length', html)
+                assert count == 1
+                html, count = re.subn(r'function playFeedbackAudio\(name, revision\) \{',
+                                      'function playFeedbackAudio(name, revision) { window.voiceTestPicks.push(name);', html)
                 assert count == 1
                 route.fulfill(response=response, body=html)
             page.route(url, route_page)
@@ -48,16 +53,19 @@ def run(url):
                 page.locator('#gate-input').press('Enter')
                 page.wait_for_function('(n) => window.feedbackStarts === n', arg=attempt + 1)
                 assert requests[-1].endswith(filename), requests
-            for index, filename in enumerate(['late-kunge.mp3', 'late-practice.mp3',
-                                               'late-annoyed.mp3', 'late-surprised.mp3']):
+            expected = ['lateKunge', 'latePractice', 'lateAnnoyed', 'lateSurprised', 'lateAnnoyed', 'lateSurprised']
+            for index, name in enumerate(expected):
                 page.locator('#gate-input').fill('incorrect-later-' + str(index))
                 page.locator('#gate-input').press('Enter')
                 page.wait_for_function('(n) => window.feedbackStarts === n', arg=index + 3)
-                assert requests[-1].endswith(filename), requests
+                assert page.evaluate('window.voiceTestPicks.at(-1)') == name
                 assert page.locator('#gate-error').inner_text() == '再练两年半吧'
+            assert len({request.rsplit('/', 1)[-1] for request in requests if '/late-' in request}) == 4
+            picks = page.evaluate('window.voiceTestPicks.slice(2)')
+            assert all(a != b for a, b in zip(picks, picks[1:])), picks
             page.locator('#gate-input').fill(fixture)
             page.locator('#gate-input').press('Enter')
-            page.wait_for_function('window.feedbackStarts === 7')
+            page.wait_for_function('window.feedbackStarts === 9')
             assert requests[-1].endswith('success.mp3'), requests
             page.locator('#gate').wait_for(state='detached', timeout=8000)
             context.close()

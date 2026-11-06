@@ -109,6 +109,13 @@
         success: ['success.mp3', .32]
       };
       var laterErrorSounds = ['lateKunge', 'latePractice', 'lateAnnoyed', 'lateSurprised'];
+      var lastLaterErrorSound = null;
+      function chooseLaterErrorSound() {
+        var eligible = laterErrorSounds.filter(function (name) { return name !== lastLaterErrorSound; });
+        var chosen = eligible[Math.floor(Math.random() * eligible.length)];
+        lastLaterErrorSound = chosen;
+        return chosen;
+      }
       // Resume while the submit gesture is active; decoding and playback wait
       // until the result is known. Audio never determines the access result.
       function prepareFeedbackAudio() {
@@ -314,7 +321,7 @@
           else if (attempts === 2) msg = '哦呀哈哈Amagi';
           else msg = '再练两年半吧';
           playFeedbackAudio(attempts === 1 ? 'first' : attempts === 2 ? 'second' :
-            laterErrorSounds[Math.floor(Math.random() * laterErrorSounds.length)], revision);
+            chooseLaterErrorSound(), revision);
           errorEl.textContent = msg;
           errorEl.hidden = false;
           input.setAttribute('aria-invalid', 'true');
