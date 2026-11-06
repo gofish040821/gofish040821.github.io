@@ -24,7 +24,7 @@ const skillOrder = ['python','pytorch','numpy','huggingface','transformers','lan
 const orderedSkills = [...allSkills].sort((a,b) => skillOrder.indexOf(a.badge)-skillOrder.indexOf(b.badge));
 const escape = (value) => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const paragraphs = value => escape(value).replace(/&lt;br\s*\/?&gt;/g, '<br>');
-const heroHeadline = value => escape(value).replace(/\b(Agent RSI|Physical AI)\b/g, '<bdi class="research-name" dir="ltr" lang="en">$1</bdi>');
+const heroHeadline = value => escape(value).replace(/\b(LLMs?|Agents?)\b/g, '<bdi class="research-name" dir="ltr" lang="en">$1</bdi>');
 const currentAge = () => {
   const today = new Date();
   const birth = new Date('2004-08-21T00:00:00');

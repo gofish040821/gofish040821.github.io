@@ -17,13 +17,13 @@
   "siteUrl": "https://DolomitiAugust.github.io",
   "updated": "2026.11.06",
   "profileNote": "{age} · Male · Notes of 2026",
-  "headline": "Mathematics master's student exploring Agent RSI and Physical AI.",
+  "headline": "Mathematics master's student working on language models and agents.",
   "intro": "I turn to mathematics for clarity, and to mountains and daily life for perspective.",
   "heroImage": "mountains",
   "heroCaption": "Give my steps to the wild, and my curiosity to the world.",
   "about": [
     "Hi, I'm Gofish. I'm currently pursuing a master's in mathematics at Southern University of Science and Technology, after studying Mathematical Foundation Science at Dalian University of Technology. Mathematics is where I begin to understand problems, and AI keeps bringing me new ones.",
-    "What fascinates me most is how agents improve themselves through experience, and how intelligence can truly enter the physical world through perception and action. I hope to find my own research direction between solid mathematical thinking and concrete experiments.",
+    "What fascinates me most is how language models become agents that actually get things done, and how they improve through experience and feedback. I hope to find my own research direction between solid mathematical thinking and concrete experiments.",
     "Off screen, I love traveling, badminton, cooking, and movies. To me, studying a problem seriously and cooking a meal seriously are both worth the effort."
   ],
   "research": [
@@ -188,7 +188,7 @@
       "degree": "Mathematics · Master's",
       "school": "Southern University of Science and Technology",
       "abbr": "SUSTech",
-      "note": "Enrolled · Expected to graduate in 2029",
+      "note": "Now working on LLMs and agents, bringing the habits of mathematics along.",
       "current": true
     },
     {
@@ -196,7 +196,7 @@
       "degree": "Mathematical Foundation Science · Bachelor's",
       "school": "Dalian University of Technology",
       "abbr": "DUT",
-      "note": "Between mathematics and physics, building the foundation for understanding the world.",
+      "note": "Four years of pure mathematics, learning to think a problem through.",
       "current": false
     }
   ],

@@ -754,7 +754,7 @@
       if (value !== undefined) {
         const text = renderText(value);
         el.innerHTML = el.dataset.i18n === 'headline'
-          ? text.replace(/\b(Agent RSI|Physical AI)\b/g, '<bdi class="research-name" dir="ltr" lang="en">$1</bdi>')
+          ? text.replace(/\b(LLMs?|Agents?)\b/g, '<bdi class="research-name" dir="ltr" lang="en">$1</bdi>')
           : text;
       }
     });
