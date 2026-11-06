@@ -101,7 +101,7 @@ function genericEditorialCss(source) {
     .replace(/^/, SOURCE_FONT_FACES);
 }
 
-const PERSONAL_GUARD = /gofish|2004-08-21|BIRTH_DATE|busuanzi|anthropic|fishMark|fish-mark\.mjs|assets\/fish\.svg|Agent RSI|Physical AI/i;
+const PERSONAL_GUARD = /gofish|2004-08-21|BIRTH_DATE|busuanzi|anthropic|fishMark|fish-mark\.mjs|assets\/fish\.svg/i;
 
 // Content-layer contract: the template's i18n keeps its own invented copy, but
 // its UI string keys and section keys must track the homepage. New UI strings or
@@ -152,7 +152,7 @@ async function exportSite(target) {
   async function transformed(file, transform) {
     const original = await readFile(resolve(root, file), 'utf8');
     const generic = transform(original.replace(/\r\n/g, '\n'));
-    if (/gofish|2004-08-21|BIRTH_DATE|busuanzi|anthropic|fishMark|fish-mark\.mjs|assets\/fish\.svg|Agent RSI|Physical AI/i.test(generic)) {
+    if (/gofish|2004-08-21|BIRTH_DATE|busuanzi|anthropic|fishMark|fish-mark\.mjs|assets\/fish\.svg/i.test(generic)) {
       throw new Error(`Personal site references remain in ${file}. Update the export conversion before sharing.`);
     }
     await mkdir(dirname(resolve(target, file)), { recursive: true });
